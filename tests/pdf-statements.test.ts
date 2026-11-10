@@ -1,9 +1,11 @@
 import { describe, expect, it, vi } from 'vitest';
 import { PDFDocument, StandardFonts } from 'pdf-lib';
 import type { Problem, Tournament } from '../src/lib/types';
-import { buildStatementCover, createStatementsPdf, uniqueStatementProblems } from '../src/lib/pdf-statements';
+import { createStatementsPdf, uniqueStatementProblems } from '../src/lib/pdf-statements';
 
-const tournament = { id: 'test-tournament', title: 'Regional de prueba' } as Tournament;
+import { buildStatementIndex } from '../src/lib/statement-index';
+
+const tournament = { id: 'regional-2025', title: 'Regional South America/South 2025', year: 2025 } as Tournament;
 const problem = (id = 'test-H', judgeUrl: string | null = 'https://codeforces.com/gym/123456/problem/H') => ({
   id, tournamentId: tournament.id, letter: 'H', title: 'Problema de prueba',
   judgeUrl, sourceUrl: 'https://example.org/contest.pdf', statementUrl: '/statements/test-H.pdf',
@@ -33,19 +35,19 @@ describe('paquetes de enunciados', () => {
   });
 
   it('el QR usa el juez verificado o la fuente sin inventar un juez', () => {
-    const withJudge = JSON.stringify(buildStatementCover(problem(), tournament));
+    const withJudge = JSON.stringify(buildStatementIndex([{problem: problem(), tournament, page: 2}]));
     expect(withJudge).toContain('https://codeforces.com/gym/123456/problem/H');
-    const withoutJudge = JSON.stringify(buildStatementCover(problem('test-J', null), tournament));
+    const withoutJudge = JSON.stringify(buildStatementIndex([{problem: problem('test-J', null), tournament, page: 2}]));
     expect(withoutJudge).toContain('https://example.org/contest.pdf');
     expect(withoutJudge).not.toContain('codeforces');
   });
 
-  it('un solo problema conserva todas sus páginas originales y no añade índice', async () => {
+  it('un solo problema tiene índice y conserva todas sus páginas originales', async () => {
     const source = await originalPdf(2);
     const loader = vi.fn(async () => source);
     const bytes = await createStatementsPdf([problem(), problem()], [tournament], loader);
     const pdf = await PDFDocument.load(bytes);
-    expect(pdf.getPageCount()).toBe(3); // One identification page and two originals.
+    expect(pdf.getPageCount()).toBe(3); // Un índice y dos páginas originales.
     expect(loader).toHaveBeenCalledTimes(1);
     expect(pdf.getPage(2).getSize()).toEqual({ width: 595.28, height: 841.89 });
   }, 20_000);
@@ -57,7 +59,7 @@ describe('paquetes de enunciados', () => {
     const second = { ...problem('test-J'), statementUrl: '/statements/test-J.pdf' };
     const loader = vi.fn(async (url: string) => url === first.statementUrl ? firstSource : secondSource);
     const pdf = await PDFDocument.load(await createStatementsPdf([first, second], [tournament], loader));
-    expect(pdf.getPageCount()).toBe(6); // Index + two covers + three originals.
+    expect(pdf.getPageCount()).toBe(4); // Un índice y tres páginas originales, sin portadas intermedias.
     expect(loader.mock.calls.map(([url]) => url)).toEqual([first.statementUrl, second.statementUrl]);
   }, 20_000);
 });

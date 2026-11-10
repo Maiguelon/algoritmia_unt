@@ -43,7 +43,7 @@ test('descarga los enunciados elegidos de Regional 2025 desde el navegador', asy
   await page.goto('/enunciados/');
   await expect(page.getByRole('link', { name: 'H · Harder Horizons', exact: true })).toBeVisible();
   await expect(page.getByRole('link', { name: 'J · Judgmental Crowd', exact: true })).toBeVisible();
-  await expect(page.getByText('Incluye índice de problemas.', { exact: false })).toBeVisible();
+  await expect(page.getByText('Incluye índice de problemas con enlaces, QR y páginas.', { exact: false })).toBeVisible();
 
   const downloading = page.waitForEvent('download', { timeout: 45_000 });
   await page.getByRole('button', { name: /Descargar PDF de enunciados/ }).click();
@@ -56,9 +56,8 @@ test('descarga los enunciados elegidos de Regional 2025 desde el navegador', asy
   expect(bytes.subarray(0, 5).toString()).toBe('%PDF-');
   const document = await PDFDocument.load(bytes);
   expect(document.getTitle()).toContain('Enunciados de práctica');
-  // Both published statements are one page; the package also identifies each
-  // problem and provides a single index. This verifies the visible PDF contract.
-  expect(document.getPageCount()).toBe(5);
+  // Un índice con enlaces y QR, seguido de los dos originales.
+  expect(document.getPageCount()).toBe(3);
   await expect(page.getByRole('button', { name: /Descargar PDF de enunciados/ })).toBeEnabled();
   await expect(page.getByRole('alert')).toHaveCount(0);
   expect(errors).toEqual([]);
