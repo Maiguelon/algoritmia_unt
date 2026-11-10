@@ -36,8 +36,16 @@ export interface Tournament {
   year: number;
   season: string;
   setName: string;
+  judgeUrl?: string;
   population: string;
   totalTeams: number | null;
+  qualification?: {
+    count: number;
+    kind: 'cupos' | 'clasificados';
+    scope: string;
+    target: string;
+    sourceUrl: string;
+  };
   status: VerificationStatus | 'pendiente';
   sources: Array<{ label: string; url: string }>;
   distribution: Array<{ solved: number; teams: number }>;

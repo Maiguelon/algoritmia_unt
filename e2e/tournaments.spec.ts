@@ -10,4 +10,15 @@ test('torneo con población, curva y fuentes; Regional 2026 pendiente',async({pa
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
  await page.goto('/torneos/');
  await expect(page.getByText('Regional 2026 pendiente de publicación de problemas.',{exact:true})).toBeVisible();
+ await page.goto('/torneos/tap-2026/');
+ await expect(page.locator('.page-heading .eyebrow')).toHaveCount(0);
+ await expect(page.locator('.tournament-judge')).toContainText('Gym 106682 · 14 problemas');
+ await expect(page.getByRole('link',{name:'Abrir Gym 106682 en Codeforces (nueva pestaña)'})).toHaveAttribute('href','https://codeforces.com/gym/106682');
+ await expect(page.locator('.stat').nth(1)).toContainText('55');
+ await expect(page.locator('.stat').nth(1)).toContainText('cupos argentinos al Regional');
+ await expect(page.locator('.stat').nth(2)).toContainText('4');
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+ await page.goto('/torneos/regional-2026/');
+ await expect(page.locator('.tournament-judge')).toHaveCount(0);
+ await expect(page.locator('.stat').nth(1)).toContainText('—');
 });

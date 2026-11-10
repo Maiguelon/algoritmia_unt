@@ -4,10 +4,22 @@
   "year": 2026,
   "season": "2026–2027 (inscripción ICPC TAP-2027)",
   "setName": "2026 Argentinian Programming Tournament · Gym 106682 · 14 problemas",
+  "judgeUrl": "https://codeforces.com/gym/106682",
   "population": "Tabla nacional publicada por AAPC: 186 equipos de 15 sedes. Incluye las entradas Extra que conserva ese tablero; no es una lista de elegibilidad para cupos.",
   "totalTeams": 186,
+  "qualification": {
+    "count": 55,
+    "kind": "cupos",
+    "scope": "argentinos",
+    "target": "Regional",
+    "sourceUrl": "https://aapc.org.ar/wp-content/uploads/2026/08/reglamento-tap-2026.pdf"
+  },
   "status": "verificado",
   "sources": [
+    {
+      "label": "Reglamento y 55 cupos argentinos al Regional",
+      "url": "https://aapc.org.ar/wp-content/uploads/2026/08/reglamento-tap-2026.pdf"
+    },
     {
       "label": "Organización, fecha y acceso al juez",
       "url": "https://aapc.org.ar/tap/"

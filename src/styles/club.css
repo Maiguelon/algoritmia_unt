@@ -133,6 +133,9 @@ input[type=checkbox] { accent-color: var(--blue); width: 17px; height: 17px; ver
 .page-heading { max-width: 850px; margin-bottom: 30px; }
 .page-heading .eyebrow { display: inline-block; padding: 3px 9px; border-radius: 5px; background: #e3eaff; color: #344b9a; }
 .page-heading h1 { font-size: clamp(2.3rem, 4.5vw, 3.6rem); }
+.tournament-judge { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
+.external-link { display: inline-flex; align-items: center; justify-content: center; width: 36px; height: 36px; flex: 0 0 auto; border: 1.5px solid var(--ink); border-radius: 7px; background: white; color: var(--blue); box-shadow: 2px 2px 0 var(--line); }
+.external-link:hover { background: var(--soft); color: var(--blue); box-shadow: 2px 2px 0 var(--ink); }
 .prose { overflow-wrap: anywhere; }
 .prose h3 { margin-top: 30px; }
 .prose table { display: block; overflow: auto; margin: 20px 0; }

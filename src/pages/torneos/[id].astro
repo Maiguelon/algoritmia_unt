@@ -15,17 +15,18 @@ const institutionNames: Record<string, string> = {
   UNSTA: 'Universidad del Norte Santo Tomás de Aquino',
 };
 const qualified = t.tucumanResults.filter(result => result.qualifiedTo);
+const gym = t.judgeUrl?.match(/^https:\/\/codeforces\.com\/gym\/(\d+)\/?$/);
+const qualification = t.qualification;
 ---
 <Layout title={t.title}>
   <div class="breadcrumb"><a href="/torneos/">Torneos</a> / {t.year}</div>
   <div class="page-heading">
-    <span class="eyebrow">{t.season} / Datos {t.status === 'verificado' ? 'verificados' : t.status}</span>
     <h1>{t.title}</h1>
-    <p class="muted">{t.setName}</p>
+    {gym && <p class="muted tournament-judge"><span>Gym {gym[1]} · {set.length} problemas</span><a class="external-link" href={t.judgeUrl} target="_blank" rel="noreferrer" aria-label={`Abrir Gym ${gym[1]} en Codeforces (nueva pestaña)`} title="Abrir en Codeforces"><svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M14 3h7v7M21 3 10 14"/><path d="M10 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-5"/></svg></a></p>}
   </div>
   <div class="stats-row">
     <div class="stat" title={t.population}><strong>{t.totalTeams ?? '—'}</strong><span>equipos participantes</span></div>
-    <div class="stat"><strong>{set.length}</strong><span>problemas</span></div>
+    <div class="stat"><strong>{qualification?.count ?? '—'}</strong><span>{qualification ? `${qualification.kind} ${qualification.scope} al ${qualification.target}` : 'clasificados totales por verificar'}</span></div>
     <div class="stat"><strong>{qualified.length || '—'}</strong><span>clasificados de Tucumán{t.id.startsWith('tap-') ? ' al Regional' : ' a la siguiente instancia'}</span></div>
   </div>
 

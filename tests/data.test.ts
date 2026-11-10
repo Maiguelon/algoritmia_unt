@@ -55,6 +55,16 @@ describe('contratos del contenido editorial', () => {
     expect(() => validateDataset(problems, list)).toThrow(/distribución no coincide/);
   });
 
+  it('exige cantidad y fuente para los cupos o clasificados del torneo', () => {
+    const list = copyTournaments();
+    const tap = list.find(t => t.id === 'tap-2026')!;
+    tap.qualification!.count = -1;
+    expect(() => validateDataset(problems, list)).toThrow(/Clasificación sin datos o fuente válidos/);
+    tap.qualification!.count = 55;
+    tap.qualification!.sourceUrl = 'https://ejemplo.org/sin-respaldo';
+    expect(() => validateDataset(problems, list)).toThrow(/Clasificación sin datos o fuente válidos/);
+  });
+
   it('admite información desconocida como null y no como cero', () => {
     const unknown: Tournament = { ...tournaments[0], id: 'torneo-pendiente', totalTeams: null, status: 'pendiente', distribution: [] };
     const problem: Problem = { ...problems[0], id: 'problema-provisorio', tournamentId: unknown.id, status: 'provisorio', ac: null, total: null, judgeUrl: null, statementUrl: null, statementPages: undefined };

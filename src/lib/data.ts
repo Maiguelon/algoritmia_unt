@@ -27,6 +27,11 @@ export function validateDataset(
     if (tournament.totalTeams !== null && (!isCount(tournament.totalTeams) || tournament.totalTeams === 0)) errors.push(`Total de equipos inválido: ${tournament.id}`);
     if (!['verificado', 'provisorio', 'pendiente'].includes(tournament.status)) errors.push(`Estado inválido: ${tournament.id}`);
     if (tournament.sources.some(source => !source.label || !isWebUrl(source.url))) errors.push(`Fuente inválida: ${tournament.id}`);
+    if (tournament.judgeUrl !== undefined && !isWebUrl(tournament.judgeUrl)) errors.push(`Juez inválido: ${tournament.id}`);
+    if (tournament.qualification) {
+      const qualification = tournament.qualification;
+      if (!isCount(qualification.count) || qualification.count === 0 || !['cupos', 'clasificados'].includes(qualification.kind) || !qualification.scope || !qualification.target || !isWebUrl(qualification.sourceUrl) || !tournament.sources.some(source => source.url === qualification.sourceUrl)) errors.push(`Clasificación sin datos o fuente válidos: ${tournament.id}`);
+    }
     if (tournament.distribution.some(row => !isCount(row.solved) || !isCount(row.teams))) errors.push(`Distribución inválida: ${tournament.id}`);
     if (new Set(tournament.distribution.map(row => row.solved)).size !== tournament.distribution.length) errors.push(`Distribución repetida: ${tournament.id}`);
     if (tournament.distribution.length && tournament.distribution.reduce((sum, row) => sum + row.teams, 0) !== tournament.totalTeams) errors.push(`La distribución no coincide con el total: ${tournament.id}`);
