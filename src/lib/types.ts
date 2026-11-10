@@ -62,12 +62,12 @@ export interface Tournament {
       solved: number;
       combinations: Array<{ teams: number; solvedProblems: string[] }>;
     };
-    editorialSummary: string;
+    indirectQualification: string;
+    cutoffContext: string[];
+    requiredLevel: Difficulty;
     preparation: Array<{
       title: string;
-      solvedProblems: string[];
-      tools: string;
-      description: string;
+      items: Array<{ solvedProblems: string[]; tools: string }>;
     }>;
     evidenceSourceUrls: string[];
   };

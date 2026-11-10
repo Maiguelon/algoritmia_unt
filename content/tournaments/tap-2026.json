@@ -233,34 +233,37 @@
         }
       ]
     },
-    "editorialSummary": "La ruta predominante al top 20 combinó la base de implementación de A, B, I y K con DP de juegos en C. Para llegar a 6 AC, lo más habitual fue sumar L: greedy sobre secuencias y búsqueda de posiciones.",
     "preparation": [
       {
         "title": "Asegurar el piso",
-        "solvedProblems": [
-          "A",
-          "B",
-          "I",
-          "K"
-        ],
-        "tools": "Implementación, strings y aritmética",
-        "description": "Condicionales, recorridos, búsqueda de caracteres y pertenencia a conjuntos; cuentas enteras y observaciones sencillas."
+        "items": [
+          {
+            "solvedProblems": [
+              "A",
+              "B",
+              "I",
+              "K"
+            ],
+            "tools": "Implementación, strings y aritmética"
+          }
+        ]
       },
       {
-        "title": "Sumar el quinto AC",
-        "solvedProblems": [
-          "C"
-        ],
-        "tools": "DP de juegos y decisiones óptimas",
-        "description": "Modelar estados, distinguir qué busca cada jugador y reutilizar resultados. Saber escribir una DP ayuda; encontrar el estado y la recurrencia es el salto conceptual."
-      },
-      {
-        "title": "Construir la ruta de 6 AC",
-        "solvedProblems": [
-          "L"
-        ],
-        "tools": "Greedy de secuencias y búsqueda binaria",
-        "description": "Trabajar con el orden de aparición y las posiciones de valores repetidos, contemplando ambas orientaciones. Un enfoque usa listas de ocurrencias y búsquedas ordenadas."
+        "title": "Buscar el quinto y sexto AC",
+        "items": [
+          {
+            "solvedProblems": [
+              "C"
+            ],
+            "tools": "DP de juegos y decisiones óptimas"
+          },
+          {
+            "solvedProblems": [
+              "L"
+            ],
+            "tools": "Greedy de secuencias y búsqueda binaria"
+          }
+        ]
       }
     ],
     "evidenceSourceUrls": [
@@ -268,6 +271,12 @@
       "https://aapc.org.ar/resultados-tap-2026/",
       "https://storage.googleapis.com/tap-resultados-2026/index.html"
     ],
-    "ruleSourceUrl": "https://aapc.org.ar/wp-content/uploads/2026/08/reglamento-tap-2026.pdf"
+    "ruleSourceUrl": "https://aapc.org.ar/wp-content/uploads/2026/08/reglamento-tap-2026.pdf",
+    "indirectQualification": "cupos por facultad (1.º, 2.º y siguientes, según disponibilidad).",
+    "cutoffContext": [
+      "Con 6 AC entrabas al top 20 sin depender de la penalidad.",
+      "Con 5 AC necesitabas una excelente penalidad: el corte fue 242, como Testing."
+    ],
+    "requiredLevel": "Salto regional"
   }
 }

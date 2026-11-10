@@ -23,6 +23,8 @@ Revisión del 10 de noviembre de 2026. El análisis publicado es manual y se lim
 
 Así, 8 de los 9 equipos con exactamente 6 AC hicieron A, B, C, I, K y L. El restante cambió L por N. Todos los primeros 20 hicieron A, B, C, I y K. Esto describe resultados, no una garantía de clasificación: por ejemplo, tres quintos era el quinto equipo de UBA y quedaba fuera de la primera prioridad por el límite institucional.
 
+La presentación del sitio se compactó en una revisión posterior: vías directa e indirecta debajo del título, corte con contexto breve y dos grupos de preparación. Las combinaciones anteriores se conservan como respaldo en esta nota y en el JSON, sin un bloque adicional en la página. Cada grupo puede contener varias filas de problemas y temas; otras ediciones pueden usar más grupos. Para TAP 2026 se cierra con Salto regional como nivel editorial de la ruta directa.
+
 Los 242 son el corte observado de esta edición. Una igualdad de AC y penalidad se desempata por el momento del último AC según el reglamento; no se formula una garantía universal con `penalidad <= 242`.
 
 ## Técnicas: revisión editorial
