@@ -17,6 +17,16 @@ test('torneo con población, curva y fuentes; Regional 2026 pendiente',async({pa
  await expect(page.locator('.stat').nth(1)).toContainText('55');
  await expect(page.locator('.stat').nth(1)).toContainText('cupos argentinos al Regional');
  await expect(page.locator('.stat').nth(2)).toContainText('4');
+ const qualification=page.getByRole('region',{name:'Qué hacía falta para clasificar'});
+ await expect(qualification).toBeVisible();
+ await expect(qualification.getByRole('article',{name:'Último equipo en el corte directo'})).toContainText('Testing');
+ await expect(qualification).toContainText('14 equipos terminaron con 5 AC');
+ await expect(qualification).toContainText('242');
+ await expect(qualification).toContainText('DP de juegos');
+ await expect(qualification).toContainText('Greedy de secuencias');
+ await expect(qualification.locator('.qualification-routes li').first()).toContainText('8 de 9');
+ await expect(qualification.locator('.qualification-routes li').first().getByRole('link')).toHaveText(['A','B','C','I','K','L']);
+ await expect(qualification.getByRole('link',{name:'L. Luana\'s Album'})).toHaveAttribute('href','/problemas/tap-2026-l/');
  const navigation=page.getByRole('navigation',{name:'Secciones del torneo'});
  for(const [name,id] of [['Estadísticas','estadisticas'],['Problemas','problemas'],['Tucumán','tucuman']]) {
    await navigation.getByRole('link',{name,exact:true}).click();
@@ -27,4 +37,5 @@ test('torneo con población, curva y fuentes; Regional 2026 pendiente',async({pa
  await page.goto('/torneos/regional-2026/');
  await expect(page.locator('.tournament-judge')).toHaveCount(0);
  await expect(page.locator('.stat').nth(1)).toContainText('—');
+ await expect(page.locator('.qualification-analysis')).toHaveCount(0);
 });

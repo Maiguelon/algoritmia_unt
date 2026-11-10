@@ -1,6 +1,7 @@
 ---
 import Layout from '../../layouts/Layout.astro';
 import TournamentProblems from '../../components/TournamentProblems';
+import QualificationAnalysis from '../../components/QualificationAnalysis.astro';
 import { problems, tournaments } from '../../lib/data';
 export function getStaticPaths() {
   return tournaments.map(tournament => ({ params: { id: tournament.id }, props: { tournament } }));
@@ -35,6 +36,8 @@ const qualification = t.qualification;
     <div class="stat"><strong>{qualification?.count ?? '—'}</strong><span>{qualification ? `${qualification.kind} ${qualification.scope} al ${qualification.target}` : 'clasificados totales por verificar'}</span></div>
     <div class="stat"><strong>{qualified.length || '—'}</strong><span>clasificados de Tucumán{t.id.startsWith('tap-') ? ' al Regional' : ' a la siguiente instancia'}</span></div>
   </div>
+
+  {t.qualificationAnalysis && <QualificationAnalysis tournament={t} problems={set}/>}
 
   <section class="panel">
     <span class="eyebrow">Standings / Distribución</span>

@@ -35,6 +35,19 @@ export function validateDataset(
     if (tournament.distribution.some(row => !isCount(row.solved) || !isCount(row.teams))) errors.push(`Distribución inválida: ${tournament.id}`);
     if (new Set(tournament.distribution.map(row => row.solved)).size !== tournament.distribution.length) errors.push(`Distribución repetida: ${tournament.id}`);
     if (tournament.distribution.length && tournament.distribution.reduce((sum, row) => sum + row.teams, 0) !== tournament.totalTeams) errors.push(`La distribución no coincide con el total: ${tournament.id}`);
+    if (tournament.qualificationAnalysis) {
+      const analysis = tournament.qualificationAnalysis;
+      const validLetters = (letters: string[]) => letters.length > 0 && new Set(letters).size === letters.length && letters.every(letter => problemList.some(problem => problem.tournamentId === tournament.id && problem.letter === letter));
+      const cutoff = analysis.cutoff;
+      const higherTeams = tournament.distribution.filter(row => row.solved > cutoff.solved).reduce((sum, row) => sum + row.teams, 0);
+      const tiedTeams = tournament.distribution.find(row => row.solved === cutoff.solved)?.teams ?? 0;
+      if (!isCount(analysis.rankLimit) || analysis.rankLimit === 0 || !isCount(analysis.institutionLimit) || analysis.institutionLimit === 0 || !cutoff.team || !cutoff.institution || !isCount(cutoff.rank) || cutoff.rank <= higherTeams || cutoff.rank > higherTeams + tiedTeams || cutoff.rank > analysis.rankLimit || !isCount(cutoff.solved) || !isCount(cutoff.penalty) || !validLetters(cutoff.solvedProblems) || cutoff.solvedProblems.length !== cutoff.solved) errors.push(`Corte de clasificación inválido: ${tournament.id}`);
+      const cohort = analysis.cohort;
+      const cohortTeams = tournament.distribution.find(row => row.solved === cohort.solved)?.teams;
+      if (!isCount(cohort.solved) || !cohort.combinations.length || cohort.combinations.some(combination => !isCount(combination.teams) || combination.teams === 0 || !validLetters(combination.solvedProblems) || combination.solvedProblems.length !== cohort.solved) || cohort.combinations.reduce((sum, combination) => sum + combination.teams, 0) !== cohortTeams || new Set(cohort.combinations.map(combination => [...combination.solvedProblems].sort().join(''))).size !== cohort.combinations.length) errors.push(`Rutas de clasificación inconsistentes: ${tournament.id}`);
+      if (!analysis.editorialSummary || !analysis.preparation.length || analysis.preparation.some(step => !step.title || !step.tools || !step.description || !validLetters(step.solvedProblems))) errors.push(`Preparación editorial inválida: ${tournament.id}`);
+      if (!analysis.evidenceSourceUrls.length || !analysis.evidenceSourceUrls.includes(analysis.ruleSourceUrl) || analysis.evidenceSourceUrls.some(url => !tournament.sources.some(source => source.url === url))) errors.push(`Análisis de clasificación sin fuentes: ${tournament.id}`);
+    }
     for (const result of tournament.tucumanResults) {
       if (result.penalty !== undefined && !isCount(result.penalty)) errors.push(`Penalidad inválida: ${tournament.id}/${result.team}`);
       if (result.solvedProblems && (new Set(result.solvedProblems).size !== result.solvedProblems.length || result.solvedProblems.length !== result.solved || result.solvedProblems.some(letter => !problemList.some(problem => problem.tournamentId === tournament.id && problem.letter === letter)))) errors.push(`Problemas resueltos inconsistentes: ${tournament.id}/${result.team}`);

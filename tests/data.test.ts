@@ -65,6 +65,22 @@ describe('contratos del contenido editorial', () => {
     expect(() => validateDataset(problems, list)).toThrow(/Clasificación sin datos o fuente válidos/);
   });
 
+  it('contrasta las rutas con la distribución y las letras del torneo', () => {
+    const list = copyTournaments();
+    const analysis = list.find(t => t.id === 'tap-2026')!.qualificationAnalysis!;
+    analysis.cohort.combinations[0].teams += 1;
+    expect(() => validateDataset(problems, list)).toThrow(/Rutas de clasificación inconsistentes/);
+    analysis.cohort.combinations[0].teams -= 1;
+    analysis.cutoff.solvedProblems[0] = 'Z';
+    expect(() => validateDataset(problems, list)).toThrow(/Corte de clasificación inválido/);
+    analysis.cutoff.solvedProblems[0] = 'A';
+    analysis.cutoff.rank = 19;
+    expect(() => validateDataset(problems, list)).toThrow(/Corte de clasificación inválido/);
+    analysis.cutoff.rank = 20;
+    analysis.ruleSourceUrl = 'https://ejemplo.org/reglas-sin-respaldo';
+    expect(() => validateDataset(problems, list)).toThrow(/Análisis de clasificación sin fuentes/);
+  });
+
   it('admite información desconocida como null y no como cero', () => {
     const unknown: Tournament = { ...tournaments[0], id: 'torneo-pendiente', totalTeams: null, status: 'pendiente', distribution: [] };
     const problem: Problem = { ...problems[0], id: 'problema-provisorio', tournamentId: unknown.id, status: 'provisorio', ac: null, total: null, judgeUrl: null, statementUrl: null, statementPages: undefined };

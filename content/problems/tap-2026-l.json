@@ -5,8 +5,9 @@
   "title": "Luana's Album",
   "summary": "Maximizar cuántas figuritas se pegan en orden creciente y minimizar los sobres comprados, sabiendo que todos traen la misma secuencia y pueden abrirse al revés.",
   "topics": [
+    "Greedy",
     "Secuencias",
-    "Optimización"
+    "Búsqueda binaria"
   ],
   "difficulty": "Salto regional",
   "difficultyReason": "Clasificación editorial provisional por revisar con solución de referencia. Fue resuelto por 21/186 equipos; ese dato empírico no determina por sí solo su dificultad conceptual.",
@@ -20,17 +21,17 @@
   "chunkIds": [
     "cpp-vectores",
     "cpp-ordenacion",
-    "cpp-pares"
+    "cpp-busqueda-ordenada"
   ],
   "coverage": "parcial",
   "missingTools": [
-    "Optimización de la cantidad de sobres y tratamiento de ambas orientaciones; solución pendiente de contrastar."
+    "Justificación del greedy y combinación de listas de ocurrencias con búsquedas en ambas orientaciones; no hay bloque específico de esta estrategia."
   ],
   "hints": [],
   "status": "verificado",
-  "approach": "Selección editorial de herramientas de base. El enfoque completo está pendiente o requiere técnicas aún no incluidas en el apunte.",
+  "approach": "Enfoque editorial: greedy sobre secuencias con listas de posiciones y búsqueda binaria. Los bloques cubren operaciones de base; la observación y su justificación no están incluidas en el apunte.",
   "editorialUrl": null,
-  "classificationConfidence": "Baja sobre la técnica y la banda conceptual: se cuenta con enunciado y AC oficiales, pero falta contrastar una solución de referencia.",
+  "classificationConfidence": "Media sobre el enfoque: análisis propio del enunciado, argumento greedy y contraste exhaustivo en instancias pequeñas. No se localizó editorial oficial. La valoración de dificultad sigue provisional.",
   "firstSolve": {
     "minute": 37,
     "teams": [

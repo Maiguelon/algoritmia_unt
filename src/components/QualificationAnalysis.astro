@@ -1,0 +1,48 @@
+---
+import type { Problem, Tournament } from '../lib/types';
+interface Props { tournament: Tournament; problems: Problem[] }
+const { tournament, problems } = Astro.props;
+const analysis = tournament.qualificationAnalysis!;
+const { cutoff, cohort } = analysis;
+const tiedTeams = tournament.distribution.find(row => row.solved === cutoff.solved)?.teams;
+const cohortTeams = tournament.distribution.find(row => row.solved === cohort.solved)?.teams;
+const moreSolvedTeams = tournament.distribution.filter(row => row.solved > cutoff.solved).reduce((sum, row) => sum + row.teams, 0);
+const problemLink = (letter: string) => `/problemas/${tournament.id}-${letter.toLowerCase()}/`;
+const problemTitle = (letter: string) => `${letter}. ${problems.find(problem => problem.letter === letter)?.title ?? ''}`;
+---
+<section class="panel qualification-analysis" aria-labelledby="qualification-title">
+  <span class="eyebrow">Clasificación directa · top {analysis.rankLimit}</span>
+  <h2 id="qualification-title">Qué hacía falta para clasificar</h2>
+  <p class="qualification-lead">{analysis.editorialSummary}</p>
+
+  <div class="qualification-overview">
+    <article class="qualification-cutoff" aria-label="Último equipo en el corte directo">
+      <span class="eyebrow">Último en el corte directo</span>
+      <h3>{cutoff.team} <span class="chip">{cutoff.institution}</span></h3>
+      <p class="result-metrics"><span>Puesto: <strong>{cutoff.rank}</strong></span><span>AC: <strong>{cutoff.solved}</strong></span><span>Penalidad: <strong>{cutoff.penalty}</strong></span></p>
+      <div class="solved-problems"><span>Resolvió:</span>{cutoff.solvedProblems.map(letter => <a href={problemLink(letter)} title={problemTitle(letter)}>{letter}</a>)}</div>
+    </article>
+    <div class="qualification-context">
+      <p><strong>{tiedTeams} equipos terminaron con {cutoff.solved} AC.</strong> Para alcanzar el corte del top {analysis.rankLimit} con {cutoff.solved}, la referencia fue {cutoff.penalty} de penalidad, como {cutoff.team}.</p>
+      <p>Los {moreSolvedTeams} equipos con más AC ocuparon los puestos anteriores.</p>
+      <p class="qualification-rule">La vía directa incluía los primeros {analysis.rankLimit}, salvo equipos con {analysis.institutionLimit} de su misma institución por delante. <a href={analysis.ruleSourceUrl} target="_blank" rel="noreferrer">Ver reglamento ↗</a></p>
+    </div>
+  </div>
+
+  <h3>Herramientas para esa ruta</h3>
+  <div class="preparation-grid">
+    {analysis.preparation.map((step, index) => <article class="preparation-step">
+      <span class="preparation-number" aria-hidden="true">{index + 1}</span>
+      <h4>{step.title}</h4>
+      <div class="solved-problems">{step.solvedProblems.map(letter => <a href={problemLink(letter)} title={problemTitle(letter)} aria-label={problemTitle(letter)}>{letter}</a>)}</div>
+      <p class="preparation-tools">{step.tools}</p>
+      <p class="muted">{step.description}</p>
+    </article>)}
+  </div>
+
+  <div class="qualification-routes">
+    <h3>Qué resolvieron los equipos con {cohort.solved} AC</h3>
+    <ul>{cohort.combinations.map(combination => <li><strong>{combination.teams} de {cohortTeams}</strong><div class="solved-problems">{combination.solvedProblems.map(letter => <a href={problemLink(letter)} title={problemTitle(letter)}>{letter}</a>)}</div></li>)}</ul>
+  </div>
+  <p class="editorial-caption">Las herramientas son un análisis editorial de los enunciados. Las cantidades y combinaciones provienen del tablero oficial.</p>
+</section>

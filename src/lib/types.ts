@@ -46,6 +46,31 @@ export interface Tournament {
     target: string;
     sourceUrl: string;
   };
+  qualificationAnalysis?: {
+    rankLimit: number;
+    institutionLimit: number;
+    ruleSourceUrl: string;
+    cutoff: {
+      team: string;
+      institution: string;
+      rank: number;
+      solved: number;
+      penalty: number;
+      solvedProblems: string[];
+    };
+    cohort: {
+      solved: number;
+      combinations: Array<{ teams: number; solvedProblems: string[] }>;
+    };
+    editorialSummary: string;
+    preparation: Array<{
+      title: string;
+      solvedProblems: string[];
+      tools: string;
+      description: string;
+    }>;
+    evidenceSourceUrls: string[];
+  };
   status: VerificationStatus | 'pendiente';
   sources: Array<{ label: string; url: string }>;
   distribution: Array<{ solved: number; teams: number }>;

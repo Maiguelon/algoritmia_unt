@@ -188,5 +188,86 @@
       "penalty": 0,
       "solvedProblems": []
     }
-  ]
+  ],
+  "qualificationAnalysis": {
+    "rankLimit": 20,
+    "institutionLimit": 4,
+    "cutoff": {
+      "team": "Testing",
+      "institution": "Universidad Nacional de Jujuy",
+      "rank": 20,
+      "solved": 5,
+      "penalty": 242,
+      "solvedProblems": [
+        "A",
+        "B",
+        "C",
+        "I",
+        "K"
+      ]
+    },
+    "cohort": {
+      "solved": 6,
+      "combinations": [
+        {
+          "teams": 8,
+          "solvedProblems": [
+            "A",
+            "B",
+            "C",
+            "I",
+            "K",
+            "L"
+          ]
+        },
+        {
+          "teams": 1,
+          "solvedProblems": [
+            "A",
+            "B",
+            "C",
+            "I",
+            "K",
+            "N"
+          ]
+        }
+      ]
+    },
+    "editorialSummary": "La ruta predominante al top 20 combinó la base de implementación de A, B, I y K con DP de juegos en C. Para llegar a 6 AC, lo más habitual fue sumar L: greedy sobre secuencias y búsqueda de posiciones.",
+    "preparation": [
+      {
+        "title": "Asegurar el piso",
+        "solvedProblems": [
+          "A",
+          "B",
+          "I",
+          "K"
+        ],
+        "tools": "Implementación, strings y aritmética",
+        "description": "Condicionales, recorridos, búsqueda de caracteres y pertenencia a conjuntos; cuentas enteras y observaciones sencillas."
+      },
+      {
+        "title": "Sumar el quinto AC",
+        "solvedProblems": [
+          "C"
+        ],
+        "tools": "DP de juegos y decisiones óptimas",
+        "description": "Modelar estados, distinguir qué busca cada jugador y reutilizar resultados. Saber escribir una DP ayuda; encontrar el estado y la recurrencia es el salto conceptual."
+      },
+      {
+        "title": "Construir la ruta de 6 AC",
+        "solvedProblems": [
+          "L"
+        ],
+        "tools": "Greedy de secuencias y búsqueda binaria",
+        "description": "Trabajar con el orden de aparición y las posiciones de valores repetidos, contemplando ambas orientaciones. Un enfoque usa listas de ocurrencias y búsquedas ordenadas."
+      }
+    ],
+    "evidenceSourceUrls": [
+      "https://aapc.org.ar/wp-content/uploads/2026/08/reglamento-tap-2026.pdf",
+      "https://aapc.org.ar/resultados-tap-2026/",
+      "https://storage.googleapis.com/tap-resultados-2026/index.html"
+    ],
+    "ruleSourceUrl": "https://aapc.org.ar/wp-content/uploads/2026/08/reglamento-tap-2026.pdf"
+  }
 }
