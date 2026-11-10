@@ -40,6 +40,14 @@ El chunk 11 se cerró en `d3c3fd7`: 33 pruebas y 12 recorridos aprobados, compro
 
 Recopilación dividida entre dos agentes GPT-6 Luna con esfuerzo bajo, sin edición del catálogo. Root revisó las fuentes, reconstruyó las penalidades por celda, concilió poblaciones y asignó bandas, puntuaciones y herramientas. Se integran 28 fichas, 28 enunciados individuales y dos cuadernillos completos: 92 problemas y siete torneos en total.
 
-Los inventarios y evidencia están en `investigacion/tap-2024.md` y `investigacion/tap-2025.md`. Los AC suman 667 y 678 respectivamente. Se conservan las discrepancias de participación del Gym 2025 y del resultado local atribuido a La tupla del gordo silla en 2024, sin rellenarlas con suposiciones. Se distingue clasificación local desconocida de cero clasificados.
+Los inventarios y evidencia están en `investigacion/tap-2024.md` y `investigacion/tap-2025.md`. Los AC suman 667 y 678 respectivamente. Se conserva la discrepancia de población del Gym 2025; la identidad de La tupla del gordo silla de 2024 se resolvió con ICPC en la revisión posterior. Se distingue clasificación local desconocida de cero clasificados.
 
 Validación de la ampliación: 42 pruebas unitarias, 22 recorridos de navegador, tipos sin errores y comparación visual de las 42 páginas de problemas exportadas. El paquete mixto TAP 2024/TAP 2025 descargado desde el navegador conserva sus cuatro páginas y los enlaces a ambos Gym.
+
+## Revisión de promoción TAP 2024–2025 — 10 de noviembre
+
+Se verifican en navegador real las tablas oficiales ICPC. TAP 2024: La tupla del gordo silla, 76.º, 4 AC, penalidad 339, último AC al minuto 210; se reconcilia con el alias del Gym sin cambiar los contadores globales. La regla contemporánea hallada reporta cuatro cupos por universidad y uno femenino adicional; el total nacional y las bases completas siguen sin localizar. Invitaciones y asistencia UNT no confirmadas. Se retira TuringBot de Tucumán por país PE en el tablero oficial.
+
+TAP 2025: tres UNT aceptados en el Regional según el registro oficial (Milanguchito, Chat con Grandes Problemas Tecnicos y while(so serious)). Solo Milanguchito tiene resultado regional identificado. El contador y los badges dicen aceptados, separados de asistencia. Fuentes, transcripción y límites en `investigacion/tap-promocion-2024-2025-evidencia.json`.
+
+Validación de esta revisión: 44 pruebas unitarias, 22 recorridos de navegador y comprobación de tipos sin errores. Se comprueban la identidad conciliada, las letras y penalidad, los tres aceptados, el cupo por universidad y la eliminación de la atribución peruana, además del funcionamiento de selección y descargas.

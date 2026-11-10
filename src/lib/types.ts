@@ -42,6 +42,8 @@ export interface Tournament {
   population: string;
   totalTeams: number | null;
   tucumanQualificationVerified?: boolean;
+  tucumanQualificationKind?: 'aceptados';
+  tucumanResultsNote?: string;
   qualification?: {
     count: number;
     kind: 'cupos' | 'clasificados';
@@ -49,6 +51,7 @@ export interface Tournament {
     target: string;
     sourceUrl: string;
     provisional?: boolean;
+    context?: string;
   };
   qualificationAnalysis?: {
     rankLimit: number;

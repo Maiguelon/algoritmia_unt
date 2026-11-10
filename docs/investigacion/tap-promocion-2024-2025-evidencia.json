@@ -1,0 +1,135 @@
+{
+  "schemaVersion": 1,
+  "reviewedBy": "root",
+  "reviewedAt": "2026-11-10",
+  "method": "Transcripción de tablas visibles en navegador real sin iniciar sesión; páginas JavaScript de ICPC. Se revisaron todas las filas con 100 filas por página. No se consultaron datos privados de miembros.",
+  "calendarYears": {
+    "TAP-2025": 2024,
+    "TAP-2026": 2025
+  },
+  "tap2024OfficialStandings": {
+    "sourceUrl": "https://icpc.global/regionals/finder/TAP-2025/standings",
+    "filteredUrl": "https://icpc.global/regionals/finder/TAP-2025/standings?table_1OHm_filter=institution%23Tucum%C3%A1n",
+    "institution": "Universidad Nacional de Tucumán",
+    "teams": [
+      {
+        "name": "Sanguchito",
+        "rank": 30,
+        "solved": 6,
+        "penalty": 900,
+        "lastAcceptedMinute": 252
+      },
+      {
+        "name": "Tucumonos",
+        "rank": 60,
+        "solved": 4,
+        "penalty": 203,
+        "lastAcceptedMinute": 113
+      },
+      {
+        "name": "La tupla del gordo silla",
+        "rank": 76,
+        "solved": 4,
+        "penalty": 339,
+        "lastAcceptedMinute": 210
+      },
+      {
+        "name": "Pij",
+        "rank": 89,
+        "solved": 4,
+        "penalty": 467,
+        "lastAcceptedMinute": 181
+      }
+    ],
+    "reconciliation": {
+      "rank": 76,
+      "gymName": "Extra Soartu 1",
+      "gymInstitution": "SOARTU",
+      "acceptedMinutes": {
+        "D": 23,
+        "F": 33,
+        "G": 53,
+        "N": 210
+      },
+      "penaltyRecomputed": "23+33+53+210+20 = 339",
+      "identityConclusion": "Registro canónico La tupla del gordo silla; causa del nombre divergente desconocida."
+    }
+  },
+  "regional2024Accepted": {
+    "sourceUrl": "https://icpc.global/regionals/finder/SouthAmerica-South-2025/teams/argentina",
+    "site": "Argentina",
+    "totalSiteTeams": 56,
+    "examinedRows": 56,
+    "tucumanTeams": [],
+    "institutions": [
+      "Instituto Balseiro",
+      "Universidad de Buenos Aires",
+      "Universidad de la República",
+      "Universidad de San Andres",
+      "Universidad Nacional de Chilecito",
+      "Universidad Nacional de Córdoba",
+      "Universidad Nacional de General Sarmiento",
+      "Universidad Nacional de Jujuy",
+      "Universidad Nacional de La Matanza",
+      "Universidad Nacional de La Plata",
+      "Universidad Nacional de Río Negro",
+      "Universidad Nacional de Rosario",
+      "Universidad Nacional de Salta - Facultad Regional Orán",
+      "Universidad ORT Uruguay",
+      "Universidad Tecnológica Nacional - Facultad Regional Rosario",
+      "Universidad Tecnológica Nacional - Facultad Regional Santa Fe",
+      "Universidad Torcuato Di Tella"
+    ],
+    "limit": "Sede Argentina incluye Uruguay: 56 no es un total de cupos argentinos. Ausencia en este registro no demuestra ausencia de invitación."
+  },
+  "regional2025Accepted": {
+    "sourceUrl": "https://icpc.global/regionals/finder/SouthAmerica-South-2026/teams/argentina",
+    "site": "Argentina",
+    "totalSiteTeams": 61,
+    "examinedRows": 61,
+    "institution": "Universidad Nacional de Tucumán",
+    "tucumanTeams": [
+      "Milanguchito",
+      "Chat con Grandes Problemas Tecnicos",
+      "while(so serious)"
+    ],
+    "limit": "Sede Argentina incluye instituciones uruguayas: 61 no sustituye los 55 cupos argentinos del reglamento. Aceptado no acredita por sí solo participación efectiva."
+  },
+  "regionalFinalCrossChecks": [
+    {
+      "year": 2024,
+      "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2024/",
+      "team": "[UNT] TuringBot",
+      "login": "teamsope001/PE",
+      "country": "PE",
+      "solved": 4,
+      "penalty": 254,
+      "conclusion": "No atribuir a Universidad Nacional de Tucumán; sigla ambigua y país Perú."
+    },
+    {
+      "year": 2025,
+      "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2025/Score.html",
+      "team": "[UNT] Milanguchito",
+      "login": "teamsoar024/AR",
+      "country": "AR",
+      "solved": 2,
+      "penalty": 55,
+      "solvedProblems": [
+        "H",
+        "J"
+      ],
+      "conclusion": "Participación efectiva acreditada. No se identificó resultado de los otros dos UNT aceptados; no se infiere motivo."
+    }
+  ],
+  "quota2024": {
+    "ordinaryPerUniversity": 4,
+    "femaleExtraPerUniversity": 1,
+    "nationalTotal": null,
+    "completeRulesLocated": false,
+    "sourceUrls": [
+      "https://desdeelconocimiento.com.ar/la-unlam-fue-sede-del-torneo-argentino-de-programacion-2024/",
+      "https://groups.google.com/g/icpc-rosario/c/g6WgjtDzMJg"
+    ],
+    "status": "Criterio publicado en noticia institucional y anuncio de ICPC Rosario; no se presenta como un reglamento completo."
+  }
+}

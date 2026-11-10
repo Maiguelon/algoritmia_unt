@@ -25,6 +25,7 @@ export function validateDataset(
     tournamentMap.set(tournament.id, tournament);
     if (!tournament.id || !tournament.title || !Number.isInteger(tournament.year)) errors.push(`Torneo inválido: ${tournament.id}`);
     if (tournament.tucumanQualificationVerified !== undefined && typeof tournament.tucumanQualificationVerified !== 'boolean') errors.push(`Verificación de clasificación local inválida: ${tournament.id}`);
+    if (tournament.tucumanQualificationKind !== undefined && (tournament.tucumanQualificationKind !== 'aceptados' || tournament.tucumanQualificationVerified !== true)) errors.push(`Base de clasificación local inválida: ${tournament.id}`);
     if (tournament.totalTeams !== null && (!isCount(tournament.totalTeams) || tournament.totalTeams === 0)) errors.push(`Total de equipos inválido: ${tournament.id}`);
     if (!['verificado', 'provisorio', 'pendiente'].includes(tournament.status)) errors.push(`Estado inválido: ${tournament.id}`);
     if (tournament.sources.some(source => !source.label || !isWebUrl(source.url))) errors.push(`Fuente inválida: ${tournament.id}`);

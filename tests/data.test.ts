@@ -6,6 +6,7 @@ import type { Problem, Tournament } from '../src/lib/types';
 import regional2026Evidence from '../docs/investigacion/regional-2026-evidencia.json';
 import tap2024Evidence from '../docs/investigacion/tap-2024-evidencia.json';
 import tap2025Evidence from '../docs/investigacion/tap-2025-evidencia.json';
+import promotionEvidence from '../docs/investigacion/tap-promocion-2024-2025-evidencia.json';
 
 const copyProblems = () => structuredClone(problems);
 const copyTournaments = () => structuredClone(tournaments);
@@ -163,7 +164,7 @@ describe('contratos del contenido editorial', () => {
     }
   });
 
-  it('excluye los dos AC ajenos de TAP 2025 y no inventa cifras para el resultado UNT en conflicto', () => {
+  it('excluye los dos AC ajenos de TAP 2025 y reconcilia la identidad de La tupla con ICPC', () => {
     const set = problems.filter(p => p.tournamentId === 'tap-2025');
     expect(set.find(p => p.letter === 'A')?.ac).toBe(175);
     expect(set.find(p => p.letter === 'G')?.ac).toBe(181);
@@ -171,10 +172,36 @@ describe('contratos del contenido editorial', () => {
     expect(tap2025Evidence.teams.find(team => team.name === 'Root')?.solvedProblems).toEqual([]);
     const conflicting = tournaments.find(t => t.id === 'tap-2024')!.tucumanResults.find(team => team.team === 'La tupla del gordo silla')!;
     expect(conflicting.rank).toBe(76);
-    expect(conflicting.solved).toBeNull();
-    expect(conflicting.solvedProblems).toBeUndefined();
-    expect(tournaments.find(t => t.id === 'tap-2025')?.tucumanQualificationVerified).toBe(false);
+    expect(conflicting.solved).toBe(4);
+    expect(conflicting.penalty).toBe(339);
+    expect(conflicting.solvedProblems).toEqual(['D', 'F', 'G', 'N']);
+    const reconciled = tap2024Evidence.teams.find(team => team.rank === 76)!;
+    expect(reconciled.name).toBe(conflicting.team);
+    expect('gymName' in reconciled && reconciled.gymName).toBe('Extra Soartu 1');
+    expect(promotionEvidence.tap2024OfficialStandings.teams.find(team => team.rank === 76)?.lastAcceptedMinute).toBe(210);
     expect(tournaments.find(t => t.id === 'tap-2025')?.qualificationAnalysis?.cutoff.team).toBe('TAPires');
     expect(tournaments.find(t => t.id === 'tap-2025')?.qualificationAnalysis?.cutoff.rank).toBe(19);
+  });
+
+  it('separa cupos por universidad, aceptados y participación sin atribuir la sigla UNT de Perú a Tucumán', () => {
+    const tap24 = tournaments.find(t => t.id === 'tap-2024')!;
+    expect(tap24.qualification?.count).toBe(4);
+    expect(tap24.qualification?.scope).toBe('ordinarios por universidad');
+    expect(promotionEvidence.quota2024.nationalTotal).toBeNull();
+    expect(promotionEvidence.quota2024.femaleExtraPerUniversity).toBe(1);
+    expect(tap24.tucumanQualificationVerified).toBe(false);
+    expect(tap24.tucumanResults.some(team => team.qualifiedTo)).toBe(false);
+    const tap25 = tournaments.find(t => t.id === 'tap-2025')!;
+    expect(tap25.tucumanQualificationVerified).toBe(true);
+    expect(tap25.tucumanQualificationKind).toBe('aceptados');
+    expect(tap25.tucumanResults.filter(team => team.qualifiedTo).map(team => team.team)).toEqual(promotionEvidence.regional2025Accepted.tucumanTeams);
+    expect(tournaments.find(t => t.id === 'regional-2024')!.tucumanResults).toEqual([]);
+    expect(promotionEvidence.regionalFinalCrossChecks.find(team => team.team.includes('TuringBot'))?.country).toBe('PE');
+  });
+
+  it('no permite presentar equipos aceptados sin verificar el registro local', () => {
+    const list = copyTournaments();
+    list.find(t => t.id === 'tap-2025')!.tucumanQualificationVerified = false;
+    expect(() => validateDataset(problems, list)).toThrow(/Base de clasificación local inválida/);
   });
 });

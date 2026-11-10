@@ -4185,6 +4185,10 @@
       {
         "claim": "El criterio 6 garantiza al menos cuatro cupos para equipos femeninos (tres integrantes femeninas), con máximo dos equipos femeninos por institución; el criterio 7 completa hasta 55 aplicando criterios 2–5. ICPC Argentina se reserva continuar invitando equipos si se liberan cupos.",
         "sourceUrl": "https://icpc.com.ar/wp-content/uploads/2025/08/criterioclasificacionregionalicpc2025.pdf"
+      },
+      {
+        "claim": "La lista oficial ICPC registra Milanguchito, Chat con Grandes Problemas Tecnicos y while(so serious) aceptados para el Regional 2025.",
+        "sourceUrl": "https://icpc.global/regionals/finder/SouthAmerica-South-2026/teams/argentina"
       }
     ],
     "uncertainties": []
@@ -4237,12 +4241,28 @@
       "kind": "official",
       "localPath": "fuentes/standings_ghost_rows.jsonl",
       "accessedAt": "2026-11-10"
+    },
+    {
+      "id": "regional-accepted",
+      "label": "ICPC Global: equipos aceptados del Regional 2025",
+      "url": "https://icpc.global/regionals/finder/SouthAmerica-South-2026/teams/argentina",
+      "kind": "official",
+      "localPath": "tap-promocion-2024-2025-evidencia.json",
+      "accessedAt": "2026-11-10"
+    },
+    {
+      "id": "regional-final",
+      "label": "ScoreLatam: participación efectiva de Milanguchito",
+      "url": "https://scorelatam.naquadah.com.br/latam-2025/Score.html",
+      "kind": "official",
+      "localPath": null,
+      "accessedAt": "2026-11-10"
     }
   ],
   "unknowns": [
     "No se dispone de una fila del Gym para Root; AAPC publica cero AC, por lo que root normalizó sus letras a [] sin afectar ningún conteo.",
     "El Gym contiene CCL Soarch 4, ausente de AAPC; sus dos AC se excluyen de la población nacional. La discrepancia de participantes queda documentada.",
-    "Clasificación efectiva al Regional de los equipos de Tucumán no confirmada."
+    "No se localizó la nómina de invitaciones o reasignaciones ni la vía exacta de while(so serious). Tres equipos UNT constan aceptados en ICPC; solo Milanguchito tiene resultado regional identificado."
   ],
   "rawStandingsRows": [
     {

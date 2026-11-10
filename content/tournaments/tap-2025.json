@@ -36,6 +36,14 @@
     {
       "label": "Standings finales Codeforces del Gym TAP 2025 (183 Ghost participants, filas coincidentes con AAPC)",
       "url": "https://codeforces.com/gym/106054/standings"
+    },
+    {
+      "label": "ICPC Global: equipos aceptados en el Regional 2025, sede Argentina",
+      "url": "https://icpc.global/regionals/finder/SouthAmerica-South-2026/teams/argentina"
+    },
+    {
+      "label": "Tablero final Regional 2025: participación de Milanguchito",
+      "url": "https://scorelatam.naquadah.com.br/latam-2025/Score.html"
     }
   ],
   "distribution": [
@@ -101,7 +109,8 @@
         "I",
         "N"
       ],
-      "note": "Resultado publicado; clasificación al Regional pendiente de confirmar."
+      "note": "Aceptado en la lista oficial ICPC del Regional 2025. Participación confirmada en el tablero final: 2 AC, penalidad 55, H y J.",
+      "qualifiedTo": "Regional 2025"
     },
     {
       "team": "Chat con Grandes Problemas Tecnicos",
@@ -115,7 +124,8 @@
         "I",
         "N"
       ],
-      "note": "Resultado publicado; clasificación al Regional pendiente de confirmar."
+      "note": "Aceptado en la lista oficial ICPC del Regional 2025. Participación efectiva no acreditada en el tablero final con ese nombre.",
+      "qualifiedTo": "Regional 2025"
     },
     {
       "team": "while(so serious)",
@@ -129,7 +139,8 @@
         "I",
         "N"
       ],
-      "note": "Resultado publicado; clasificación al Regional pendiente de confirmar."
+      "note": "Aceptado en la lista oficial ICPC del Regional 2025. Participación efectiva no acreditada en el tablero final con ese nombre.",
+      "qualifiedTo": "Regional 2025"
     },
     {
       "team": "TUCUmancos",
@@ -143,7 +154,7 @@
         "I",
         "N"
       ],
-      "note": "Resultado publicado; clasificación al Regional pendiente de confirmar."
+      "note": "No figura con ese nombre en la lista oficial de aceptados; no se deduce si recibió o rechazó una invitación."
     },
     {
       "team": "SpreadF",
@@ -157,7 +168,7 @@
         "I",
         "N"
       ],
-      "note": "Resultado publicado; clasificación al Regional pendiente de confirmar."
+      "note": "No figura con ese nombre en la lista oficial de aceptados; no se deduce si recibió o rechazó una invitación."
     },
     {
       "team": "Csquid",
@@ -170,14 +181,14 @@
         "I",
         "N"
       ],
-      "note": "Resultado publicado; clasificación al Regional pendiente de confirmar."
+      "note": "No figura con ese nombre en la lista oficial de aceptados; no se deduce si recibió o rechazó una invitación."
     }
   ],
-  "tucumanQualificationVerified": false,
+  "tucumanQualificationVerified": true,
   "notes": [
     "AC reconstruidos a partir de equipos de la población publicada; los contadores de práctica no intervienen.",
     "Bandas y herramientas revisadas por root; no equivalen a una editorial oficial.",
-    "Promoción efectiva de equipos locales pendiente de confirmar; un dato desconocido no se representa como cero."
+    "Tres equipos UNT aceptados según ICPC Global. Aceptación, invitación y participación efectiva son hechos distintos; solo Milanguchito tiene resultado regional identificado."
   ],
   "qualification": {
     "count": 55,
@@ -283,5 +294,7 @@
       "https://aapc.org.ar/resultados-tap-2025/",
       "https://codeforces.com/gym/106054/standings"
     ]
-  }
+  },
+  "tucumanQualificationKind": "aceptados",
+  "tucumanResultsNote": "ICPC registra tres equipos UNT aceptados en el Regional: Milanguchito, Chat con Grandes Problemas Tecnicos y while(so serious). El tablero final confirma la participación de Milanguchito (2 AC, 55 de penalidad); no se identificó un resultado de los otros dos."
 }

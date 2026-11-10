@@ -40,6 +40,22 @@
     {
       "label": "Enlaces históricos a juez y enunciados TAP 2024 publicados por AAPC",
       "url": "https://aapc.org.ar/tap-2025/"
+    },
+    {
+      "label": "ICPC Global: resultados oficiales TAP 2024 (inscripción TAP-2025)",
+      "url": "https://icpc.global/regionals/finder/TAP-2025/standings"
+    },
+    {
+      "label": "UNLaM: criterio publicado de cuatro equipos por universidad",
+      "url": "https://desdeelconocimiento.com.ar/la-unlam-fue-sede-del-torneo-argentino-de-programacion-2024/"
+    },
+    {
+      "label": "ICPC Rosario: cupo femenino adicional en 2024",
+      "url": "https://groups.google.com/g/icpc-rosario/c/g6WgjtDzMJg"
+    },
+    {
+      "label": "ICPC Global: equipos aceptados en el Regional 2024, sede Argentina",
+      "url": "https://icpc.global/regionals/finder/SouthAmerica-South-2025/teams/argentina"
     }
   ],
   "distribution": [
@@ -103,7 +119,7 @@
         "L",
         "N"
       ],
-      "note": "Resultado publicado; clasificación al Regional pendiente de confirmar."
+      "note": "Dentro de los cuatro lugares UNT según el criterio publicado; invitación y participación regional no confirmadas."
     },
     {
       "team": "Tucumonos",
@@ -117,14 +133,21 @@
         "G",
         "N"
       ],
-      "note": "Resultado publicado; clasificación al Regional pendiente de confirmar."
+      "note": "Dentro de los cuatro lugares UNT según el criterio publicado; invitación y participación regional no confirmadas."
     },
     {
       "team": "La tupla del gordo silla",
       "institution": "UNT",
       "rank": 76,
-      "solved": null,
-      "note": "FACET informa puesto 76; esa fila del Gym corresponde a Extra Soartu 1. AC y letras no atribuidos por esta discrepancia."
+      "solved": 4,
+      "note": "Dentro de los cuatro lugares UNT según el criterio publicado; invitación y participación regional no confirmadas. ICPC confirma puesto 76, 4 AC, 339 de penalidad y último AC al minuto 210; el Gym usa la etiqueta Extra Soartu 1 para esa fila.",
+      "penalty": 339,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "N"
+      ]
     },
     {
       "team": "Pij",
@@ -138,7 +161,7 @@
         "G",
         "N"
       ],
-      "note": "Resultado publicado; clasificación al Regional pendiente de confirmar."
+      "note": "Dentro de los cuatro lugares UNT según el criterio publicado; invitación y participación regional no confirmadas."
     }
   ],
   "tucumanQualificationVerified": false,
@@ -146,5 +169,14 @@
     "AC reconstruidos a partir de equipos de la población publicada; los contadores de práctica no intervienen.",
     "Bandas y herramientas revisadas por root; no equivalen a una editorial oficial.",
     "Promoción efectiva de equipos locales pendiente de confirmar; un dato desconocido no se representa como cero."
-  ]
+  ],
+  "qualification": {
+    "count": 4,
+    "kind": "cupos",
+    "scope": "ordinarios por universidad",
+    "target": "Regional",
+    "sourceUrl": "https://desdeelconocimiento.com.ar/la-unlam-fue-sede-del-torneo-argentino-de-programacion-2024/",
+    "context": "Criterio publicado por UNLaM: cuatro equipos por universidad, más un cupo femenino adicional anunciado por ICPC Rosario. No se localizó un total nacional ni el reglamento completo de 2024."
+  },
+  "tucumanResultsNote": "Por posición, los cuatro equipos UNT podían acceder a los cupos anunciados. No figuran en la lista oficial de aceptados del Regional; su invitación y participación no se pudieron confirmar."
 }

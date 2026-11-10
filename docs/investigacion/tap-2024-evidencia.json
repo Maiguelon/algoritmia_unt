@@ -2222,8 +2222,8 @@
     },
     {
       "id": "tap-2024-076",
-      "name": "Extra Soartu 1",
-      "institution": "SOARTU",
+      "name": "La tupla del gordo silla",
+      "institution": "Universidad Nacional de Tucumán",
       "rank": 76,
       "solved": 4,
       "penalty": 339,
@@ -2239,7 +2239,11 @@
         "F": 33,
         "G": 53,
         "N": 210
-      }
+      },
+      "gymName": "Extra Soartu 1",
+      "gymInstitution": "SOARTU",
+      "identitySourceUrl": "https://icpc.global/regionals/finder/TAP-2025/standings",
+      "identityReconciliation": "Coinciden puesto 76, 4 AC, penalidad 339 y último AC al minuto 210. El registro oficial ICPC y FACET prevalece para el nombre; las letras y minutos se conservan de Gym."
     },
     {
       "id": "tap-2024-077",
@@ -3808,10 +3812,23 @@
     }
   ],
   "qualification": {
-    "ruleUrls": [],
-    "facts": [],
+    "ruleUrls": [
+      "https://desdeelconocimiento.com.ar/la-unlam-fue-sede-del-torneo-argentino-de-programacion-2024/",
+      "https://groups.google.com/g/icpc-rosario/c/g6WgjtDzMJg"
+    ],
+    "facts": [
+      {
+        "claim": "UNLaM publica cuatro equipos por universidad para el Regional 2024; es una noticia institucional contemporánea, no el reglamento completo.",
+        "sourceUrl": "https://desdeelconocimiento.com.ar/la-unlam-fue-sede-del-torneo-argentino-de-programacion-2024/"
+      },
+      {
+        "claim": "ICPC Rosario anuncia un cupo femenino adicional por universidad (tres integrantes mujeres).",
+        "sourceUrl": "https://groups.google.com/g/icpc-rosario/c/g6WgjtDzMJg"
+      }
+    ],
     "uncertainties": [
-      "Reglamento/regla de clasificación específica de TAP 2024 no verificada en fuente recuperable."
+      "No se localizó el reglamento completo ni un total nacional de cupos. No se trasladan las 55 plazas o la vía top 20 de 2025 a 2024.",
+      "La lista oficial Regional 2024 de sede Argentina no contiene instituciones de Tucumán. No demuestra que los equipos no recibieran invitación."
     ]
   },
   "sources": [
@@ -3878,12 +3895,43 @@
       "kind": "official",
       "localPath": null,
       "accessedAt": "2026-11-10"
+    },
+    {
+      "id": "promotion-review-8",
+      "label": "ICPC Global: resultados oficiales TAP 2024 (inscripción TAP-2025)",
+      "url": "https://icpc.global/regionals/finder/TAP-2025/standings",
+      "kind": "official",
+      "localPath": "tap-promocion-2024-2025-evidencia.json",
+      "accessedAt": "2026-11-10"
+    },
+    {
+      "id": "promotion-review-9",
+      "label": "UNLaM: criterio publicado de cuatro equipos por universidad",
+      "url": "https://desdeelconocimiento.com.ar/la-unlam-fue-sede-del-torneo-argentino-de-programacion-2024/",
+      "kind": "institutional",
+      "localPath": "tap-promocion-2024-2025-evidencia.json",
+      "accessedAt": "2026-11-10"
+    },
+    {
+      "id": "promotion-review-10",
+      "label": "ICPC Rosario: cupo femenino adicional en 2024",
+      "url": "https://groups.google.com/g/icpc-rosario/c/g6WgjtDzMJg",
+      "kind": "official",
+      "localPath": "tap-promocion-2024-2025-evidencia.json",
+      "accessedAt": "2026-11-10"
+    },
+    {
+      "id": "promotion-review-11",
+      "label": "ICPC Global: equipos aceptados en el Regional 2024, sede Argentina",
+      "url": "https://icpc.global/regionals/finder/SouthAmerica-South-2025/teams/argentina",
+      "kind": "official",
+      "localPath": "tap-promocion-2024-2025-evidencia.json",
+      "accessedAt": "2026-11-10"
     }
   ],
   "unknowns": [
-    "Reglamento de promoción de TAP 2024 no confirmado.",
-    "FACET atribuye el puesto 76 a La tupla del gordo silla; el Gym muestra Extra Soartu 1. No se atribuyen AC, penalidad o letras a La tupla sin otra fuente.",
-    "Clasificación efectiva al Regional de los equipos de Tucumán no confirmada."
+    "Reglamento completo y total nacional de cupos TAP 2024 no localizados.",
+    "Invitación y participación regional de los cuatro equipos UNT no confirmadas."
   ],
   "rawStandingsRows": [
     {
@@ -5646,6 +5694,20 @@
     "sumSolved": 667,
     "populationCount": 155,
     "rowPenaltiesRecomputed": true,
-    "editorialClassification": "Reviewed separately by root; collector agents did not edit the catalog."
+    "editorialClassification": "Reviewed separately by root; collector agents did not edit the catalog.",
+    "identityReconciliations": [
+      {
+        "rank": 76,
+        "officialName": "La tupla del gordo silla",
+        "gymName": "Extra Soartu 1",
+        "matchedFields": [
+          "rank",
+          "solved",
+          "penalty",
+          "lastAcceptedMinute"
+        ],
+        "sourceUrl": "https://icpc.global/regionals/finder/TAP-2025/standings"
+      }
+    ]
   }
 }

@@ -24,6 +24,10 @@
     {
       "label": "ICPC Global: identidad y temporada",
       "url": "https://icpc.global/regionals/finder/SouthAmerica-South-2025/standings"
+    },
+    {
+      "label": "ICPC Global: equipos aceptados, sede Argentina",
+      "url": "https://icpc.global/regionals/finder/SouthAmerica-South-2025/teams/argentina"
     }
   ],
   "distribution": [
@@ -63,26 +67,14 @@
   "notes": [
     "AC cuenta equipos distintos con al menos una resolución aceptada; no es el número de envíos aceptados.",
     "Año de competencia y temporada se muestran separados. La dificultad y los requisitos son estimaciones editoriales.",
-    "Los puestos y la cantidad de AC no determinan por sí solos los cupos: también importan elegibilidad, institución y penalidad."
+    "Los puestos y la cantidad de AC no determinan por sí solos los cupos: también importan elegibilidad, institución y penalidad.",
+    "Corrección del 10-11-2026: [UNT] TuringBot tiene login teamsope001/PE y bandera peruana; se retiró su atribución errónea a Tucumán. La sigla UNT no identifica por sí sola la universidad."
   ],
-  "tucumanResults": [
-    {
-      "team": "[UNT] TuringBot",
-      "solved": 4,
-      "rank": 19,
-      "note": "Puesto 19 en South oficial; penalidad 254; problemas A, F, J, K. No implica clasificación.",
-      "institution": "UNT",
-      "penalty": 254,
-      "solvedProblems": [
-        "A",
-        "F",
-        "J",
-        "K"
-      ]
-    }
-  ],
+  "tucumanResults": [],
   "statementBooklet": {
     "url": "/statements/regional-2024-completo.pdf",
     "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2024/contest.pdf"
-  }
+  },
+  "tucumanQualificationVerified": false,
+  "tucumanResultsNote": "No se identificaron equipos de Tucumán en la lista oficial de aceptados ni en el tablero final de esta edición."
 }
