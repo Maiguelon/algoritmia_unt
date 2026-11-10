@@ -1,6 +1,7 @@
-export type Difficulty = 'Inicial' | 'Consolidación' | 'Salto regional' | 'Avanzado';
+export const DIFFICULTIES = ['Inicial', 'Consolidación', 'Salto regional', 'Avanzado', 'Top global'] as const;
+export type Difficulty = (typeof DIFFICULTIES)[number];
 export type VerificationStatus = 'verificado' | 'provisorio';
-export type Coverage = 'completa' | 'parcial' | 'pendiente';
+export type Coverage = 'completa' | 'parcial' | 'pendiente' | 'fuera de alcance';
 
 export interface Problem {
   id: string;

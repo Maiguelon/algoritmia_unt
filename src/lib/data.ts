@@ -1,4 +1,4 @@
-import type { Problem, Tournament } from './types';
+import { DIFFICULTIES, type Problem, type Tournament } from './types';
 import catalog from '../../content/apuntes/cpp/catalogo.json';
 
 const problemFiles = import.meta.glob<Problem>('../../content/problems/*.json', { eager: true, import: 'default' });
@@ -7,7 +7,7 @@ const tournamentFiles = import.meta.glob<Tournament>('../../content/tournaments/
 export const problems: Problem[] = Object.values(problemFiles).sort((a, b) => a.id.localeCompare(b.id));
 export const tournaments: Tournament[] = Object.values(tournamentFiles).sort((a, b) => b.year - a.year || a.id.localeCompare(b.id));
 
-const difficulties = ['Inicial', 'Consolidación', 'Salto regional', 'Avanzado'];
+const difficulties: readonly string[] = DIFFICULTIES;
 const isCount = (value: unknown): value is number => typeof value === 'number' && Number.isInteger(value) && value >= 0;
 const isWebUrl = (value: unknown): value is string => typeof value === 'string' && /^https:\/\//.test(value);
 
@@ -68,7 +68,8 @@ export function validateDataset(
     if (!problem.id || !/^[A-Z]$/.test(problem.letter) || !problem.title || !problem.summary || !problem.difficultyReason || !problem.approach) errors.push(`Ficha incompleta: ${label}`);
     if (!difficulties.includes(problem.difficulty)) errors.push(`Dificultad inválida: ${label}`);
     if (!['verificado', 'provisorio'].includes(problem.status)) errors.push(`Estado inválido: ${label}`);
-    if (!['completa', 'parcial', 'pendiente'].includes(problem.coverage)) errors.push(`Cobertura inválida: ${label}`);
+    if (!['completa', 'parcial', 'pendiente', 'fuera de alcance'].includes(problem.coverage)) errors.push(`Cobertura inválida: ${label}`);
+    if ((problem.difficulty === 'Top global' || problem.coverage === 'fuera de alcance') && (problem.coverage !== 'fuera de alcance' || problem.chunkIds.length)) errors.push(`Problema fuera de alcance con apuntes sugeridos: ${label}`);
     if (problem.coverage === 'completa' && problem.missingTools.length) errors.push(`Cobertura contradictoria: ${label}`);
     if (problem.ac !== null && !isCount(problem.ac)) errors.push(`AC inválido: ${label}`);
     if (problem.total !== null && (!isCount(problem.total) || problem.total === 0)) errors.push(`Denominador inválido: ${label}`);

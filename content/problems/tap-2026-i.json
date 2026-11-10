@@ -8,8 +8,8 @@
     "Observación",
     "Aritmética"
   ],
-  "difficulty": "Consolidación",
-  "difficultyReason": "Conceptual 2/5 e implementación 1/5, estimaciones editoriales. Fue resuelto por 146/186 equipos; ese dato empírico no determina por sí solo su dificultad conceptual.",
+  "difficulty": "Inicial",
+  "difficultyReason": "Observación elemental y condicionales, sin una técnica especializada. Conceptual 2/5 e implementación 1/5 como valoración editorial; estadísticas del tablero oficial conservadas por separado.",
   "implementation": "1/5 (estimación editorial)",
   "conceptual": "2/5 (estimación editorial)",
   "ac": 146,

@@ -31,6 +31,15 @@ describe('contratos del contenido editorial', () => {
     expect(() => validateDataset(problems, [...tournaments, tournaments[0]])).toThrow(/Torneo repetido/);
   });
 
+  it('mantiene Top global fuera de las sugerencias de apuntes', () => {
+    const list = copyProblems();
+    list[0].difficulty = 'Top global';
+    expect(() => validateDataset(list, tournaments)).toThrow(/fuera de alcance con apuntes/);
+    list[0].coverage = 'fuera de alcance';
+    list[0].chunkIds = [];
+    expect(() => validateDataset(list, tournaments)).not.toThrow();
+  });
+
   it('rechaza referencias rotas a torneos y bloques', () => {
     const list = copyProblems();
     list[0].tournamentId = 'inexistente';

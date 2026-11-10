@@ -103,6 +103,7 @@ main { min-height: 75vh; padding: 42px 0 80px; }
 .chip[data-level=Consolidación] { background: #fff0b6; color: #755413; }
 .chip[data-level="Salto regional"] { background: #ffe5cf; color: #8a461c; }
 .chip[data-level=Avanzado] { background: #ffe1e5; color: #a52d44; }
+.chip[data-level="Top global"] { background: #eadbff; color: #642397; }
 
 /* Las superficies de consulta mantienen contraste y lectura tranquila. */
 .table-wrap { overflow: auto; border: 1.5px solid var(--ink); border-radius: 10px; background: white; }
