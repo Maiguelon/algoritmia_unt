@@ -166,10 +166,31 @@ summary { cursor: pointer; font-weight: 800; }
 .info-list dt { font-size: .75rem; color: var(--muted); margin-top: 18px; text-transform: uppercase; letter-spacing: .06em; }
 .info-list dd { margin: 5px 0; }
 .status-pending { color: #795117; background: #fff5d1; padding: 12px 16px; border-radius: 8px; font-size: .9rem; }
-.local-result { border-top: 1px solid var(--line); padding: 18px 0; }
-.local-result h3 { margin: 8px 0; }
-.local-result.qualified { border: 2px solid var(--blue); border-radius: 9px; padding: 16px; margin: 16px 0; background: #f5f7ff; }
-.qualification-badge { display: inline-block; background: var(--yellow); color: var(--ink); border-radius: 5px; padding: 4px 9px; font-size: .8rem; font-weight: 800; }
+.local-results-section { margin-top: 38px; }
+.university-results { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 18px; align-items: start; }
+.university-group.panel { margin: 0; padding: 18px; min-width: 0; }
+.university-group header h3 { margin: 0; }
+.university-group header p { font-size: .8rem; margin: 7px 0 18px; }
+.local-result { border-top: 1px solid var(--line); padding: 15px 0; }
+.result-heading { display: flex; flex-wrap: wrap; align-items: center; gap: 6px 9px; }
+.result-heading h4 { font-family: 'Bricolage Grotesque', sans-serif; font-size: 1rem; margin: 0; }
+.qualification-badge { display: inline-block; background: var(--yellow); color: var(--ink); border-radius: 5px; padding: 3px 7px; font-size: .72rem; font-weight: 800; }
+.result-metrics { display: flex; flex-wrap: wrap; gap: 4px 12px; font-size: .79rem; margin: 9px 0; }
+.result-metrics span { white-space: nowrap; }
+.solved-problems { display: flex; flex-wrap: wrap; align-items: center; gap: 5px; font-size: .79rem; }
+.solved-problems > span:first-child { margin-right: 3px; }
+.solved-problems a { font-size: .75rem; font-weight: 800; display: inline-flex; padding: 1px 6px; border: 1px solid var(--line); border-radius: 4px; text-decoration: none; }
+.solved-problems a:hover { background: var(--soft); }
+.tournament-sources { margin-top: 32px; }
+.tournament-sources .note-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 24px; }
+@media (max-width: 950px) { .university-results { grid-template-columns: 1fr; } }
+@media (max-width: 600px) { .tournament-sources .note-list { grid-template-columns: 1fr; } }
+@media (max-width: 600px) {
+  .global-cart .selection-bar { padding: 11px 13px; gap: 8px; }
+  .global-cart .actions { width: 100%; display: grid; grid-template-columns: auto minmax(0, 1fr) minmax(0, 1fr); gap: 8px; }
+  .global-cart .button { min-width: 0; font-size: .75rem; padding: 8px 6px; white-space: nowrap; }
+}
+
 
 @media (max-width: 950px) {
   .hero { gap: 24px; }
@@ -222,10 +243,4 @@ summary { cursor: pointer; font-weight: 800; }
   .container { max-width: none; }
   .panel { border: 0; }
   .prose pre { white-space: pre-wrap; background: #f4f4f4; color: black; }
-}
-
-@media (max-width: 600px) {
-  .global-cart .selection-bar { padding: 11px 13px; gap: 8px; }
-  .global-cart .actions { width: 100%; display: grid; grid-template-columns: auto minmax(0, 1fr) minmax(0, 1fr); gap: 8px; }
-  .global-cart .button { min-width: 0; font-size: .75rem; padding: 8px 6px; white-space: nowrap; }
 }

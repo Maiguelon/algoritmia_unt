@@ -78,14 +78,24 @@
       "solved": 5,
       "rank": 15,
       "note": "Puesto 15 en South oficial; penalidad 688; problemas B, D, F, I, M. No implica clasificación.",
-      "institution": "UNT"
+      "institution": "UNT",
+      "penalty": 688,
+      "solvedProblems": [
+        "B",
+        "D",
+        "F",
+        "I",
+        "M"
+      ]
     },
     {
       "team": "[UNT] Tres Acordes",
       "solved": 0,
       "rank": 124,
       "note": "Puesto 124 en South oficial; penalidad 0; problemas ninguno. No implica clasificación.",
-      "institution": "UNT"
+      "institution": "UNT",
+      "penalty": 0,
+      "solvedProblems": []
     }
   ]
 }

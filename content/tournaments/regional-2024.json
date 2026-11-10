@@ -70,7 +70,14 @@
       "solved": 4,
       "rank": 19,
       "note": "Puesto 19 en South oficial; penalidad 254; problemas A, F, J, K. No implica clasificación.",
-      "institution": "UNT"
+      "institution": "UNT",
+      "penalty": 254,
+      "solvedProblems": [
+        "A",
+        "F",
+        "J",
+        "K"
+      ]
     }
   ]
 }

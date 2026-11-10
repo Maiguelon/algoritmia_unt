@@ -75,7 +75,12 @@
       "solved": 2,
       "rank": 98,
       "note": "Puesto 98 en South oficial; penalidad 55; problemas H, J. No implica clasificación.",
-      "institution": "UNT"
+      "institution": "UNT",
+      "penalty": 55,
+      "solvedProblems": [
+        "H",
+        "J"
+      ]
     }
   ]
 }

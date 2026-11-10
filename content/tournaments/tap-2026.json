@@ -92,7 +92,14 @@
       "solved": 4,
       "rank": 55,
       "note": "Puesto nacional publicado; penalidad 460; problemas A, B, I, K.",
-      "qualifiedTo": "Regional 2026"
+      "qualifiedTo": "Regional 2026",
+      "penalty": 460,
+      "solvedProblems": [
+        "A",
+        "B",
+        "I",
+        "K"
+      ]
     },
     {
       "team": "Mono Pollo NP++ 18",
@@ -100,42 +107,74 @@
       "solved": 3,
       "rank": 99,
       "note": "Puesto nacional publicado; penalidad 343; problemas A, I, K.",
-      "qualifiedTo": "Regional 2026"
+      "qualifiedTo": "Regional 2026",
+      "penalty": 343,
+      "solvedProblems": [
+        "A",
+        "I",
+        "K"
+      ]
     },
     {
       "team": "Achilata",
       "institution": "UNT",
       "solved": 3,
       "rank": 101,
-      "note": "Puesto nacional publicado; penalidad 347; problemas A, B, K."
+      "note": "Puesto nacional publicado; penalidad 347; problemas A, B, K.",
+      "penalty": 347,
+      "solvedProblems": [
+        "A",
+        "B",
+        "K"
+      ]
     },
     {
       "team": "Pandas",
       "institution": "UNSTA",
       "solved": 3,
       "rank": 123,
-      "note": "Puesto nacional publicado; penalidad 571; problemas A, I, K."
+      "note": "Puesto nacional publicado; penalidad 571; problemas A, I, K.",
+      "penalty": 571,
+      "solvedProblems": [
+        "A",
+        "I",
+        "K"
+      ],
+      "qualifiedTo": "Regional 2026"
     },
     {
       "team": "las divinas",
       "institution": "UNT",
       "solved": 2,
       "rank": 134,
-      "note": "Puesto nacional publicado; penalidad 104; problemas A, I."
+      "note": "Puesto nacional publicado; penalidad 104; problemas A, I.",
+      "penalty": 104,
+      "solvedProblems": [
+        "A",
+        "I"
+      ]
     },
     {
       "team": "Noxus",
       "institution": "UTN-FRT",
       "solved": 2,
       "rank": 163,
-      "note": "Puesto nacional publicado; penalidad 690; problemas A, I."
+      "note": "Puesto nacional publicado; penalidad 690; problemas A, I.",
+      "penalty": 690,
+      "solvedProblems": [
+        "A",
+        "I"
+      ],
+      "qualifiedTo": "Regional 2026"
     },
     {
       "team": "GSE",
       "institution": "UTN-FRT",
       "solved": 0,
       "rank": 183,
-      "note": "Puesto nacional publicado; penalidad 0; sin problemas resueltos."
+      "note": "Puesto nacional publicado; penalidad 0; sin problemas resueltos.",
+      "penalty": 0,
+      "solvedProblems": []
     }
   ]
 }

@@ -48,6 +48,8 @@ export interface Tournament {
     solved: number;
     rank: number | null;
     note: string;
+    penalty?: number;
+    solvedProblems?: string[];
     qualifiedTo?: string;
   }>;
 }

@@ -30,6 +30,10 @@ export function validateDataset(
     if (tournament.distribution.some(row => !isCount(row.solved) || !isCount(row.teams))) errors.push(`Distribución inválida: ${tournament.id}`);
     if (new Set(tournament.distribution.map(row => row.solved)).size !== tournament.distribution.length) errors.push(`Distribución repetida: ${tournament.id}`);
     if (tournament.distribution.length && tournament.distribution.reduce((sum, row) => sum + row.teams, 0) !== tournament.totalTeams) errors.push(`La distribución no coincide con el total: ${tournament.id}`);
+    for (const result of tournament.tucumanResults) {
+      if (result.penalty !== undefined && !isCount(result.penalty)) errors.push(`Penalidad inválida: ${tournament.id}/${result.team}`);
+      if (result.solvedProblems && (new Set(result.solvedProblems).size !== result.solvedProblems.length || result.solvedProblems.length !== result.solved || result.solvedProblems.some(letter => !problemList.some(problem => problem.tournamentId === tournament.id && problem.letter === letter)))) errors.push(`Problemas resueltos inconsistentes: ${tournament.id}/${result.team}`);
+    }
   }
   const seen = new Set<string>();
   const seenLetters = new Set<string>();
