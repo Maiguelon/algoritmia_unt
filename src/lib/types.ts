@@ -37,6 +37,7 @@ export interface Tournament {
   season: string;
   setName: string;
   judgeUrl?: string;
+  statementBooklet?: { url: string; sourceUrl: string };
   population: string;
   totalTeams: number | null;
   qualification?: {

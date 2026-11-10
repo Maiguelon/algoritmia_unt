@@ -83,5 +83,9 @@
         "J"
       ]
     }
-  ]
+  ],
+  "statementBooklet": {
+    "url": "/statements/regional-2025-completo.pdf",
+    "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2025/contest.pdf"
+  }
 }

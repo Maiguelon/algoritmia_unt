@@ -98,5 +98,9 @@
       "penalty": 0,
       "solvedProblems": []
     }
-  ]
+  ],
+  "statementBooklet": {
+    "url": "/statements/regional-2023-completo.pdf",
+    "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2023/contest.pdf"
+  }
 }

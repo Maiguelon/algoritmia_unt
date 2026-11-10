@@ -50,6 +50,7 @@ const qualification = t.qualification;
 
   <section class="tournament-section" id="problemas">
     <div class="section-title"><h2>La curva del set</h2><span class="eyebrow">De más a menos equipos con AC</span></div>
+    {t.statementBooklet && <div class="actions"><a class="button secondary" href={t.statementBooklet.url} download={`${t.id}-enunciados.pdf`}>Descargar todos los enunciados ↓</a></div>}
     <TournamentProblems problems={set} allowed={problems.map(problem => problem.id)} client:load/>
   </section>
 

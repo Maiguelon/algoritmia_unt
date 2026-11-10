@@ -278,5 +278,9 @@
       "Con 5 AC necesitabas una excelente penalidad: el corte fue 242, como Testing."
     ],
     "requiredLevel": "Salto regional"
+  },
+  "statementBooklet": {
+    "url": "/statements/tap-2026-completo.pdf",
+    "sourceUrl": "https://codeforces.com/gym/106682/attachments/download/39252/TAP-2026.pdf"
   }
 }

@@ -56,6 +56,8 @@ Las fichas A, B, I y K tienen una selección de herramientas de base completa pa
 
 Los 51 archivos de `public/statements/` conservan páginas de los cuadernillos originales. Los regionales están en inglés y TAP 2026 en español. Los nombres de TAP en el catálogo coinciden con Codeforces y pueden diferir del título español impreso.
 
+Además se conservan los cuatro cuadernillos completos como `*-completo.pdf`, accesibles desde la página de cada torneo mediante una descarga local. Son copias sin modificaciones de las fuentes ya archivadas: Regional 2023 tiene 30 páginas, Regional 2024 y 2025 tienen 19 cada uno y TAP 2026 tiene 20. Se contrastaron estos recuentos con los metadatos de los enunciados individuales y se comprobó igualdad binaria con los archivos fuente. `statementBooklet` relaciona cada descarga con su URL oficial en las fuentes del torneo. Regional 2026 continúa sin cuadernillo incorporado.
+
 Cada problema guarda `statementPages` con páginas físicas inclusivas del PDF de origen, empezando en uno. El rango termina antes del inicio del siguiente problema. Las páginas en blanco intencionales de 2023 se conservan como parte del original; no son contenido perdido.
 
 Se comprobaron cantidad de páginas, igualdad del texto extraído y dimensiones respecto del original. Además se renderizaron e inspeccionaron las 80 páginas de los 51 archivos, incluidos ejemplos, diagramas y fórmulas. No se reescribieron los enunciados ni se incorporaron soluciones en esos PDFs.

@@ -80,5 +80,9 @@
         "K"
       ]
     }
-  ]
+  ],
+  "statementBooklet": {
+    "url": "/statements/regional-2024-completo.pdf",
+    "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2024/contest.pdf"
+  }
 }

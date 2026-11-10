@@ -17,6 +17,7 @@ test('torneo con población, curva y fuentes; Regional 2026 pendiente',async({pa
  await expect(page.locator('.stat').nth(1)).toContainText('55');
  await expect(page.locator('.stat').nth(1)).toContainText('cupos argentinos al Regional');
  await expect(page.locator('.stat').nth(2)).toContainText('4');
+ await expect(page.getByRole('link',{name:'Descargar todos los enunciados'})).toHaveAttribute('download','tap-2026-enunciados.pdf');
  const qualification=page.getByRole('region',{name:'Qué hacía falta para clasificar'});
  await expect(qualification).toBeVisible();
  await expect(qualification.getByRole('article',{name:'Último equipo en el corte directo'})).toContainText('Testing');

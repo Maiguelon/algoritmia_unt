@@ -100,6 +100,9 @@ describe('contratos del contenido editorial', () => {
     for (const problem of problems) {
       if (problem.statementUrl) expect(existsSync(resolve('public', problem.statementUrl.slice(1)))).toBe(true);
     }
+    for (const tournament of tournaments) {
+      if (tournament.statementBooklet) expect(existsSync(resolve('public', tournament.statementBooklet.url.slice(1)))).toBe(true);
+    }
   });
 
   it('TAP usa el tablero del torneo y no el contador del Gym de práctica', () => {

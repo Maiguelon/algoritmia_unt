@@ -28,6 +28,7 @@ export function validateDataset(
     if (!['verificado', 'provisorio', 'pendiente'].includes(tournament.status)) errors.push(`Estado inválido: ${tournament.id}`);
     if (tournament.sources.some(source => !source.label || !isWebUrl(source.url))) errors.push(`Fuente inválida: ${tournament.id}`);
     if (tournament.judgeUrl !== undefined && !isWebUrl(tournament.judgeUrl)) errors.push(`Juez inválido: ${tournament.id}`);
+    if (tournament.statementBooklet && (!/^\/statements\/[a-z0-9-]+\.pdf$/.test(tournament.statementBooklet.url) || !tournament.sources.some(source => source.url === tournament.statementBooklet!.sourceUrl))) errors.push(`Cuadernillo sin archivo o fuente válidos: ${tournament.id}`);
     if (tournament.qualification) {
       const qualification = tournament.qualification;
       if (!isCount(qualification.count) || qualification.count === 0 || !['cupos', 'clasificados'].includes(qualification.kind) || !qualification.scope || !qualification.target || !isWebUrl(qualification.sourceUrl) || !tournament.sources.some(source => source.url === qualification.sourceUrl)) errors.push(`Clasificación sin datos o fuente válidos: ${tournament.id}`);
