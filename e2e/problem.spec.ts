@@ -13,4 +13,15 @@ test('ficha directa, selección y pistas cerradas',async({page})=>{
  await expect(page.getByRole('button',{name:'＋ Seleccionar problema'})).toBeVisible();
  await page.setViewportSize({width:390,height:844});
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+ await page.goto('/problemas/tap-2026-b/');
+ await expect(page.locator('.page-heading .eyebrow')).toHaveCount(0);
+ await expect(page.getByRole('link',{name:'Enunciado y fuente'})).toHaveCount(0);
+ const overview=page.getByRole('region',{name:'Qué pide este desafío'});
+ await expect(overview).toContainText('Resumen:');
+ await expect(overview.getByRole('listitem')).toHaveText(['Conceptual: 2/5','Implementación: 2/5']);
+ await expect(page.locator('.problem-completions')).toHaveText('69/186 completados');
+ await expect(page.getByRole('heading',{name:'Fuentes y revisión'})).toHaveCount(0);
+ await expect(page.getByRole('heading',{name:'Herramientas sugeridas'})).toBeVisible();
+ await expect(page.getByText('Cobertura del apunte:',{exact:false})).toHaveText('Cobertura del apunte: completa');
+ expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
 });

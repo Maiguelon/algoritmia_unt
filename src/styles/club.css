@@ -133,6 +133,8 @@ input[type=checkbox] { accent-color: var(--blue); width: 17px; height: 17px; ver
 .page-heading { max-width: 850px; margin-bottom: 30px; }
 .page-heading .eyebrow { display: inline-block; padding: 3px 9px; border-radius: 5px; background: #e3eaff; color: #344b9a; }
 .page-heading h1 { font-size: clamp(2.3rem, 4.5vw, 3.6rem); }
+.problem-completions { display: flex; gap: 9px; align-items: baseline; flex-wrap: wrap; }
+.problem-completions span { font: 650 .95rem 'Nunito Sans', sans-serif; color: var(--muted); letter-spacing: normal; }
 .tournament-judge { display: flex; align-items: center; gap: 10px; flex-wrap: wrap; }
 .tournament-nav { display: flex; gap: 10px; flex-wrap: wrap; margin: 24px 0; }
 .tournament-section { scroll-margin-top: 24px; }

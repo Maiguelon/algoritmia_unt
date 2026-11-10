@@ -3,9 +3,53 @@ import Layout from '../../layouts/Layout.astro';
 import ProblemSelect from '../../components/ProblemSelect';
 import { problems, tournaments } from '../../lib/data';
 import { chunks } from '../../lib/chunks';
+import { tournamentLabel } from '../../lib/tournament-label';
 export function getStaticPaths(){return problems.map(problem=>({params:{id:problem.id},props:{problem}}));}
 const {problem:p}=Astro.props;
 const tournament=tournaments.find(t=>t.id===p.tournamentId)!;
+const estimate = (value: string) => value.replace(/\s*\(estimación editorial\)/i, '');
 ---
-<Layout title={p.title}><div class="breadcrumb"><a href="/problemas/">Problemas</a> / <a href={`/torneos/${tournament.id}/`}>{tournament.title}</a> / {p.letter}</div><div class="page-heading"><span class="eyebrow">{tournament.title} / Problema {p.letter}</span><h1>{p.title}</h1><span class="chip" data-level={p.difficulty}>{p.difficulty}</span>{p.topics.map(topic=><span class="chip">{topic}</span>)}<p>{p.summary}</p><div class="actions"><ProblemSelect id={p.id} allowed={problems.map(p=>p.id)} client:load/>{p.judgeUrl&&<a class="button secondary" href={p.judgeUrl} target="_blank" rel="noreferrer">Practicar en el juez ↗</a>}<a href={p.sourceUrl} target="_blank" rel="noreferrer">Enunciado y fuente ↗</a></div></div>
-<div class="grid-two"><div><section class="panel"><span class="eyebrow">Valoración editorial</span><h2>Qué pide este desafío</h2><p>{p.difficultyReason}</p><dl class="info-list"><dt>Exigencia conceptual estimada</dt><dd>{p.conceptual}</dd><dt>Carga de implementación estimada</dt><dd>{p.implementation}</dd><dt>Enfoque de referencia para los apuntes</dt><dd>{p.approach}</dd></dl>{p.classificationConfidence&&<p class="muted"><small>{p.classificationConfidence}</small></p>}</section><section class="panel"><h2>Herramientas para consultar</h2><p class="muted">Cobertura del apunte: <strong>{p.coverage}</strong>. Consultar las herramientas acompaña la práctica; todavía hace falta construir el razonamiento.</p><ul>{p.chunkIds.map(id=><li><a href={`/apuntes/${id}/`}>{chunks.find(c=>c.id===id)?.title}</a></li>)}</ul>{p.missingTools.length>0&&<div class="notice"><strong>Falta cubrir en la biblioteca:</strong><ul>{p.missingTools.map(tool=><li>{tool}</li>)}</ul></div>}<div class="actions"><a class="button secondary" href="/armar/">Ir al armador ↗</a>{p.statementUrl&&<a href={p.statementUrl} download>Descargar enunciado original ↓</a>}</div></section>{p.hints.length>0&&<section class="panel"><h2>Pistas opcionales</h2><p class="muted">Abrí solo lo que necesites. Estas pistas no se agregan al apunte.</p>{p.hints.map((hint,i)=><details><summary>Pista {i+1}</summary><p>{hint}</p></details>)}</section>}</div><aside><section class="panel"><span class="eyebrow">Estadísticas del torneo</span><h2>{p.ac===null?'Sin dato':`${p.ac} / ${p.total}`}</h2><p class="muted">equipos con al menos un AC en este problema</p><p><small>{tournament.population}</small></p><span class="chip">Datos {p.status === 'verificado' ? 'verificados' : 'provisorios'}</span>{p.firstSolve&&<p><strong>Primera resolución:</strong> minuto {p.firstSolve.minute}<br/><small>{p.firstSolve.teams.join(', ')}</small></p>}<a href={`/torneos/${tournament.id}/`}>Ver el torneo y sus fuentes ↗</a></section><section class="panel"><h3>Fuentes y revisión</h3><p><a href={p.sourceUrl} target="_blank" rel="noreferrer">Fuente del problema ↗</a></p>{p.editorialUrl&&<details><summary>Editorial / solución (spoilers)</summary><a href={p.editorialUrl} target="_blank" rel="noreferrer">Abrir editorial ↗</a></details>}</section></aside></div></Layout>
+<Layout title={p.title}>
+  <div class="breadcrumb"><a href="/problemas/">Problemas</a> / <a href={`/torneos/${tournament.id}/`}>{tournamentLabel(tournament)}</a> / {p.letter}</div>
+  <div class="page-heading">
+    <h1>{p.title}</h1>
+    <span class="chip" data-level={p.difficulty}>{p.difficulty}</span>{p.topics.map(topic => <span class="chip">{topic}</span>)}
+    <div class="actions">
+      <ProblemSelect id={p.id} allowed={problems.map(problem => problem.id)} client:load/>
+      {p.judgeUrl && <a class="button secondary" href={p.judgeUrl} target="_blank" rel="noreferrer">Practicar en el juez ↗</a>}
+    </div>
+  </div>
+
+  <div class="grid-two">
+    <div>
+      <section class="panel" aria-labelledby="problem-overview-title">
+        <h2 id="problem-overview-title">Qué pide este desafío</h2>
+        <p><strong>Resumen:</strong> {p.summary}</p>
+        <h3>Dificultad estimada</h3>
+        <ul>
+          <li><strong>Conceptual:</strong> {estimate(p.conceptual)}</li>
+          <li><strong>Implementación:</strong> {estimate(p.implementation)}</li>
+        </ul>
+      </section>
+      <section class="panel">
+        <h2>Herramientas sugeridas</h2>
+        <p class="muted">Cobertura del apunte: <strong>{p.coverage}</strong></p>
+        <ul>{p.chunkIds.map(id => <li><a href={`/apuntes/${id}/`}>{chunks.find(chunk => chunk.id === id)?.title}</a></li>)}</ul>
+        {p.missingTools.length > 0 && <div class="notice"><strong>Falta cubrir en la biblioteca:</strong><ul>{p.missingTools.map(tool => <li>{tool}</li>)}</ul></div>}
+        <div class="actions">
+          <a class="button secondary" href="/armar/">Ir al armador ↗</a>
+          {p.statementUrl && <a href={p.statementUrl} download>Descargar enunciado ↓</a>}
+        </div>
+      </section>
+      {p.hints.length > 0 && <section class="panel"><h2>Pistas opcionales</h2><p class="muted">Abrí solo lo que necesites. Estas pistas no se agregan al apunte.</p>{p.hints.map((hint, i) => <details><summary>Pista {i + 1}</summary><p>{hint}</p></details>)}</section>}
+    </div>
+    <aside>
+      <section class="panel">
+        <span class="eyebrow">Estadísticas del torneo</span>
+        <h2 class="problem-completions">{p.ac === null ? 'Sin dato' : `${p.ac}/${p.total}`} {p.ac !== null && <span>completados</span>}</h2>
+        {p.firstSolve && <p><strong>Primera resolución:</strong> minuto {p.firstSolve.minute}<br/><small>{p.firstSolve.teams.join(', ')}</small></p>}
+        <a href={`/torneos/${tournament.id}/#estadisticas`}>Ver torneo ↗</a>
+      </section>
+    </aside>
+  </div>
+</Layout>
