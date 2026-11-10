@@ -1,0 +1,42 @@
+{
+  "id": "tap-2025-g",
+  "tournamentId": "tap-2025",
+  "letter": "G",
+  "title": "Going to the kiosk",
+  "summary": "Decidir si el vuelto de una compra puede entregarse exactamente mediante caramelos de precio fijo.",
+  "difficulty": "Inicial",
+  "conceptual": "1/5 (estimación editorial)",
+  "implementation": "1/5 (estimación editorial)",
+  "topics": [
+    "Aritmética",
+    "Divisibilidad"
+  ],
+  "chunkIds": [
+    "cpp-cuentas-enteras",
+    "cpp-condiciones"
+  ],
+  "coverage": "completa",
+  "missingTools": [],
+  "hints": [],
+  "classificationConfidence": "Alta: valoración propia del enunciado. No se localizó una editorial oficial de esta edición; las técnicas avanzadas requieren contraste con una solución de referencia.",
+  "difficultyReason": "Lectura editorial del enunciado: inicial. La banda no se calcula a partir de un umbral de AC.",
+  "approach": "Herramientas de un enfoque editorial de referencia; no incluye la observación ni la solución.",
+  "ac": 181,
+  "total": 183,
+  "judgeUrl": "https://codeforces.com/gym/106054/problem/G",
+  "sourceUrl": "https://icpc.com.ar/wp-content/uploads/2025/08/tap2025.pdf#page=11",
+  "statementUrl": "/statements/tap-2025-g.pdf",
+  "statementPages": {
+    "start": 11,
+    "end": 11,
+    "sourcePageCount": 24
+  },
+  "firstSolve": {
+    "minute": 2,
+    "teams": [
+      "Undefined"
+    ]
+  },
+  "editorialUrl": null,
+  "status": "verificado"
+}

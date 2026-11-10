@@ -1,0 +1,45 @@
+{
+  "id": "tap-2024-l",
+  "tournamentId": "tap-2024",
+  "letter": "L",
+  "title": "Games",
+  "summary": "Responder quién gana juegos sobre subarreglos cuando un jugador puede tomar potencias de dos y el otro valores impares.",
+  "difficulty": "Salto regional",
+  "conceptual": "3/5 (estimación editorial)",
+  "implementation": "2/5 (estimación editorial)",
+  "topics": [
+    "Juegos",
+    "Sumas prefijas",
+    "Observación"
+  ],
+  "chunkIds": [
+    "cpp-prefijos",
+    "cpp-divisibilidad",
+    "cpp-frecuencias",
+    "cpp-cuentas-enteras"
+  ],
+  "coverage": "completa",
+  "missingTools": [],
+  "hints": [],
+  "classificationConfidence": "Media: valoración propia del enunciado. No se localizó una editorial oficial de esta edición; las técnicas avanzadas requieren contraste con una solución de referencia.",
+  "difficultyReason": "Hay que reducir el juego óptimo antes de responder muchas consultas; la implementación del enfoque usa clasificación aritmética y prefijos.",
+  "approach": "Herramientas de un enfoque editorial de referencia; no incluye la observación ni la solución.",
+  "ac": 38,
+  "total": 155,
+  "judgeUrl": "https://codeforces.com/gym/105321/problem/L",
+  "sourceUrl": "https://codeforces.com/gym/105321/attachments/download/26905/tap_2024.pdf#page=19",
+  "statementUrl": "/statements/tap-2024-l.pdf",
+  "statementPages": {
+    "start": 19,
+    "end": 19,
+    "sourcePageCount": 21
+  },
+  "firstSolve": {
+    "minute": 20,
+    "teams": [
+      "Gracias Mateo"
+    ]
+  },
+  "editorialUrl": null,
+  "status": "verificado"
+}

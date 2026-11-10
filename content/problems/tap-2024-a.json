@@ -1,0 +1,46 @@
+{
+  "id": "tap-2024-a",
+  "tournamentId": "tap-2024",
+  "letter": "A",
+  "title": "Advanced tic-tac-toe",
+  "summary": "Determinar el resultado del ta-te-ti con restricciones de precedencia entre casillas, suponiendo que ambos jugadores eligen de forma óptima.",
+  "difficulty": "Salto regional",
+  "conceptual": "3/5 (estimación editorial)",
+  "implementation": "3/5 (estimación editorial)",
+  "topics": [
+    "Juegos",
+    "Minimax",
+    "Estados pequeños"
+  ],
+  "chunkIds": [
+    "cpp-matrices",
+    "cpp-vectores",
+    "cpp-condiciones"
+  ],
+  "coverage": "parcial",
+  "missingTools": [
+    "Búsqueda de estados de juego, minimax y representación de restricciones; faltan sus módulos de referencia."
+  ],
+  "hints": [],
+  "classificationConfidence": "Media: valoración propia del enunciado. No se localizó una editorial oficial de esta edición; las técnicas avanzadas requieren contraste con una solución de referencia.",
+  "difficultyReason": "Lectura editorial del enunciado: salto regional. La banda no se calcula a partir de un umbral de AC.",
+  "approach": "Cobertura de operaciones de base. Requisito pendiente: Búsqueda de estados de juego, minimax y representación de restricciones; faltan sus módulos de referencia.",
+  "ac": 8,
+  "total": 155,
+  "judgeUrl": "https://codeforces.com/gym/105321/problem/A",
+  "sourceUrl": "https://codeforces.com/gym/105321/attachments/download/26905/tap_2024.pdf#page=3",
+  "statementUrl": "/statements/tap-2024-a.pdf",
+  "statementPages": {
+    "start": 3,
+    "end": 4,
+    "sourcePageCount": 21
+  },
+  "firstSolve": {
+    "minute": 92,
+    "teams": [
+      "arch btw"
+    ]
+  },
+  "editorialUrl": null,
+  "status": "verificado"
+}

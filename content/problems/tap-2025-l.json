@@ -1,0 +1,47 @@
+{
+  "id": "tap-2025-l",
+  "tournamentId": "tap-2025",
+  "letter": "L",
+  "title": "Lakes",
+  "summary": "Maximizar la ganancia al ubicar barcos de longitudes distintas y crecientes en una franja de agua y tierra, pudiendo pagar excavaciones.",
+  "difficulty": "Salto regional",
+  "conceptual": "3/5 (estimación editorial)",
+  "implementation": "3/5 (estimación editorial)",
+  "topics": [
+    "DP",
+    "Secuencias",
+    "Sumas de intervalos"
+  ],
+  "chunkIds": [
+    "cpp-vectores",
+    "cpp-prefijos",
+    "cpp-extremos-sumas",
+    "cpp-cuentas-enteras"
+  ],
+  "coverage": "parcial",
+  "missingTools": [
+    "Modelo de DP, transiciones y cota de cantidad de barcos; no existe todavía un bloque de programación dinámica en la biblioteca."
+  ],
+  "hints": [],
+  "classificationConfidence": "Media: valoración propia del enunciado. No se localizó una editorial oficial de esta edición; las técnicas avanzadas requieren contraste con una solución de referencia.",
+  "difficultyReason": "Lectura editorial del enunciado: salto regional. La banda no se calcula a partir de un umbral de AC.",
+  "approach": "Cobertura de operaciones de base. Requisito pendiente: Modelo de DP, transiciones y cota de cantidad de barcos; no existe todavía un bloque de programación dinámica en la biblioteca.",
+  "ac": 22,
+  "total": 183,
+  "judgeUrl": "https://codeforces.com/gym/106054/problem/L",
+  "sourceUrl": "https://icpc.com.ar/wp-content/uploads/2025/08/tap2025.pdf#page=19",
+  "statementUrl": "/statements/tap-2025-l.pdf",
+  "statementPages": {
+    "start": 19,
+    "end": 20,
+    "sourcePageCount": 24
+  },
+  "firstSolve": {
+    "minute": 28,
+    "teams": [
+      "Tiramos CV"
+    ]
+  },
+  "editorialUrl": null,
+  "status": "verificado"
+}

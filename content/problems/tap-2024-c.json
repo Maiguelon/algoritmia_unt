@@ -1,0 +1,46 @@
+{
+  "id": "tap-2024-c",
+  "tournamentId": "tap-2024",
+  "letter": "C",
+  "title": "Discovering Ngipto",
+  "summary": "Decidir si la sombra de una pirámide con base poligonal deja algún punto protegido del sol fuera de su base.",
+  "difficulty": "Avanzado",
+  "conceptual": "4/5 (estimación editorial)",
+  "implementation": "3/5 (estimación editorial)",
+  "topics": [
+    "Geometría",
+    "Proyección",
+    "Predicados geométricos"
+  ],
+  "chunkIds": [
+    "cpp-pares",
+    "cpp-reales",
+    "cpp-vectores"
+  ],
+  "coverage": "parcial",
+  "missingTools": [
+    "Reducción geométrica, proyección y predicados para una base no necesariamente convexa; no basta con recorrer sus vértices."
+  ],
+  "hints": [],
+  "classificationConfidence": "Media: valoración propia del enunciado. No se localizó una editorial oficial de esta edición; las técnicas avanzadas requieren contraste con una solución de referencia.",
+  "difficultyReason": "Lectura editorial del enunciado: avanzado. La banda no se calcula a partir de un umbral de AC.",
+  "approach": "Cobertura de operaciones de base. Requisito pendiente: Reducción geométrica, proyección y predicados para una base no necesariamente convexa; no basta con recorrer sus vértices.",
+  "ac": 2,
+  "total": 155,
+  "judgeUrl": "https://codeforces.com/gym/105321/problem/C",
+  "sourceUrl": "https://codeforces.com/gym/105321/attachments/download/26905/tap_2024.pdf#page=6",
+  "statementUrl": "/statements/tap-2024-c.pdf",
+  "statementPages": {
+    "start": 6,
+    "end": 7,
+    "sourcePageCount": 21
+  },
+  "firstSolve": {
+    "minute": 169,
+    "teams": [
+      "Gracias Mateo"
+    ]
+  },
+  "editorialUrl": null,
+  "status": "verificado"
+}

@@ -1,0 +1,45 @@
+{
+  "id": "tap-2025-b",
+  "tournamentId": "tap-2025",
+  "letter": "B",
+  "title": "Block sum array",
+  "summary": "Contar los arreglos de enteros no negativos compatibles con una lista de sumas de ventanas de tamaño fijo, módulo 998244353.",
+  "difficulty": "Avanzado",
+  "conceptual": "4/5 (estimación editorial)",
+  "implementation": "3/5 (estimación editorial)",
+  "topics": [
+    "Conteo",
+    "Combinatoria modular",
+    "Arreglos"
+  ],
+  "chunkIds": [
+    "cpp-vectores",
+    "cpp-cuentas-enteras"
+  ],
+  "coverage": "parcial",
+  "missingTools": [
+    "Reducción del sistema de sumas y combinatoria modular eficiente; faltan inversos y combinaciones."
+  ],
+  "hints": [],
+  "classificationConfidence": "Media: valoración propia del enunciado. No se localizó una editorial oficial de esta edición; las técnicas avanzadas requieren contraste con una solución de referencia.",
+  "difficultyReason": "Combina restricciones entre ventanas con conteo modular para N de hasta 200000; no alcanza con calcular sumas prefijas.",
+  "approach": "Cobertura de operaciones de base. Requisito pendiente: Reducción del sistema de sumas y combinatoria modular eficiente; faltan inversos y combinaciones.",
+  "ac": 6,
+  "total": 183,
+  "judgeUrl": "https://codeforces.com/gym/106054/problem/B",
+  "sourceUrl": "https://icpc.com.ar/wp-content/uploads/2025/08/tap2025.pdf#page=3",
+  "statementUrl": "/statements/tap-2025-b.pdf",
+  "statementPages": {
+    "start": 3,
+    "end": 3,
+    "sourcePageCount": 24
+  },
+  "firstSolve": {
+    "minute": 55,
+    "teams": [
+      "Helicóptero"
+    ]
+  },
+  "editorialUrl": null,
+  "status": "verificado"
+}

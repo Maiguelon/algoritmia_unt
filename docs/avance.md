@@ -35,3 +35,11 @@ El chunk 11 se cerró en `d3c3fd7`: 33 pruebas y 12 recorridos aprobados, compro
 - Recomendado, Completo y Solo funciones se recalculan al cambiar los problemas. El borrador personalizado conserva sus exclusiones y partes.
 - Se conserva la cobertura por problema, el índice condicional y la plantilla única. No se modificó el contenido de los apuntes.
 - Comprobación: 40 pruebas unitarias, tipos sin errores y 20 recorridos de navegador, incluidas descargas reales, migración, dos pestañas, reintento de conexión y pantallas de 320 y 390 px. Revisión visual de escritorio y celular.
+
+## Ampliación TAP 2024–2025 — 10 de noviembre
+
+Recopilación dividida entre dos agentes GPT-6 Luna con esfuerzo bajo, sin edición del catálogo. Root revisó las fuentes, reconstruyó las penalidades por celda, concilió poblaciones y asignó bandas, puntuaciones y herramientas. Se integran 28 fichas, 28 enunciados individuales y dos cuadernillos completos: 92 problemas y siete torneos en total.
+
+Los inventarios y evidencia están en `investigacion/tap-2024.md` y `investigacion/tap-2025.md`. Los AC suman 667 y 678 respectivamente. Se conservan las discrepancias de participación del Gym 2025 y del resultado local atribuido a La tupla del gordo silla en 2024, sin rellenarlas con suposiciones. Se distingue clasificación local desconocida de cero clasificados.
+
+Validación de la ampliación: 42 pruebas unitarias, 22 recorridos de navegador, tipos sin errores y comparación visual de las 42 páginas de problemas exportadas. El paquete mixto TAP 2024/TAP 2025 descargado desde el navegador conserva sus cuatro páginas y los enlaces a ambos Gym.

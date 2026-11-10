@@ -1,0 +1,47 @@
+{
+  "id": "tap-2025-h",
+  "tournamentId": "tap-2025",
+  "letter": "H",
+  "title": "Hidden divisor",
+  "summary": "Recuperar un entero y el único divisor omitido de su lista completa de divisores, o detectar que la información no determina una respuesta única.",
+  "difficulty": "Salto regional",
+  "conceptual": "3/5 (estimación editorial)",
+  "implementation": "3/5 (estimación editorial)",
+  "topics": [
+    "Divisores",
+    "Teoría de números",
+    "Observación"
+  ],
+  "chunkIds": [
+    "cpp-vectores",
+    "cpp-ordenacion",
+    "cpp-divisibilidad",
+    "cpp-cuentas-enteras"
+  ],
+  "coverage": "parcial",
+  "missingTools": [
+    "Caracterización de los casos de unicidad y validación segura de productos de hasta 10^18; no se ofrece una receta completa para este problema."
+  ],
+  "hints": [],
+  "classificationConfidence": "Media: valoración propia del enunciado. No se localizó una editorial oficial de esta edición; las técnicas avanzadas requieren contraste con una solución de referencia.",
+  "difficultyReason": "Lectura editorial del enunciado: salto regional. La banda no se calcula a partir de un umbral de AC.",
+  "approach": "Cobertura de operaciones de base. Requisito pendiente: Caracterización de los casos de unicidad y validación segura de productos de hasta 10^18; no se ofrece una receta completa para este problema.",
+  "ac": 18,
+  "total": 183,
+  "judgeUrl": "https://codeforces.com/gym/106054/problem/H",
+  "sourceUrl": "https://icpc.com.ar/wp-content/uploads/2025/08/tap2025.pdf#page=12",
+  "statementUrl": "/statements/tap-2025-h.pdf",
+  "statementPages": {
+    "start": 12,
+    "end": 12,
+    "sourcePageCount": 24
+  },
+  "firstSolve": {
+    "minute": 56,
+    "teams": [
+      "Helicóptero"
+    ]
+  },
+  "editorialUrl": null,
+  "status": "verificado"
+}

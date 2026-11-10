@@ -73,3 +73,15 @@ Se comprobaron cantidad de páginas, igualdad del texto extraído y dimensiones 
 - Para revisar el contenido se ejecuta `npm exec vitest run tests/data.test.ts`. La importación de datos también ejecuta `validateDataset()` y detiene la construcción si encuentra inconsistencias.
 
 Queda pendiente la revisión humana con integrantes del club y el contraste de los enfoques avanzados que están marcados con confianza baja o media. La revisión de técnicas avanzadas del Regional 2026 y la incorporación de su futuro Gym requieren nuevas comprobaciones y commit.
+
+## TAP 2024 y 2025
+
+La ampliación del 10 de noviembre suma 28 problemas: [TAP 2024](investigacion/tap-2024.md) y [TAP 2025](investigacion/tap-2025.md). Dos recolectores entregaron fuentes en un [formato común](investigacion/recopilacion-tap.md); root revisó las cifras y decidió dificultad y herramientas.
+
+TAP 2024 usa 155 filas nacionales de la réplica final del evento en Gym 105321, excluyendo la fila extranjera 156. Sus AC suman 667, como los problemas resueltos de esos equipos. TAP 2025 usa las 183 filas nacionales AAPC y la réplica en Gym 106054 tras reconciliar sus diferencias de participación. CCL Soarch 4 se excluye y se conserva el cero de Root: A=175 y G=181; la suma correcta es 678, no los 680 AC del pie sin filtrar.
+
+Las primeras resoluciones se reconstruyen al minuto desde las celdas de esa población. Se verificaron también las penalidades a partir de tiempos y fallos. Las capturas completas permanecen en el trabajo del chat y el repositorio conserva los dos archivos de evidencia.
+
+El resultado UNT de La tupla del gordo silla en TAP 2024 tiene una discrepancia entre FACET y la fila 76 del Gym. Se informa el puesto atribuido por FACET y quedan sin atribuir AC/penalidad/letras. La promoción efectiva local de ambas ediciones no está confirmada; se representa como desconocida. El reglamento de 2025 verifica 55 cupos argentinos y la vía del top 20 con límite institucional: el último elegible de esa vía fue TAPires (19.º, 5 AC, 328).
+
+Se suman 28 PDFs individuales y dos cuadernillos completos. Texto, dimensiones y flujos de dibujo coinciden con el original; los renders de sus 42 páginas de problemas resultaron idénticos píxel a píxel. Hay 92 fichas y siete torneos. No se modificaron los textos de los apuntes ni se publicaron soluciones nuevas. Las técnicas avanzadas de estos TAP conservan valoración editorial provisional sin editorial oficial localizada.

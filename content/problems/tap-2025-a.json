@@ -1,0 +1,43 @@
+{
+  "id": "tap-2025-a",
+  "tournamentId": "tap-2025",
+  "letter": "A",
+  "title": "Artifact to print",
+  "summary": "Determinar si al borrar letras de una cadena, sin reordenarlas, se puede obtener la palabra TAP.",
+  "difficulty": "Inicial",
+  "conceptual": "1/5 (estimación editorial)",
+  "implementation": "1/5 (estimación editorial)",
+  "topics": [
+    "Strings",
+    "Recorridos"
+  ],
+  "chunkIds": [
+    "cpp-strings",
+    "cpp-recorridos",
+    "cpp-apariciones"
+  ],
+  "coverage": "completa",
+  "missingTools": [],
+  "hints": [],
+  "classificationConfidence": "Alta: valoración propia del enunciado. No se localizó una editorial oficial de esta edición; las técnicas avanzadas requieren contraste con una solución de referencia.",
+  "difficultyReason": "Lectura editorial del enunciado: inicial. La banda no se calcula a partir de un umbral de AC.",
+  "approach": "Herramientas de un enfoque editorial de referencia; no incluye la observación ni la solución.",
+  "ac": 175,
+  "total": 183,
+  "judgeUrl": "https://codeforces.com/gym/106054/problem/A",
+  "sourceUrl": "https://icpc.com.ar/wp-content/uploads/2025/08/tap2025.pdf#page=2",
+  "statementUrl": "/statements/tap-2025-a.pdf",
+  "statementPages": {
+    "start": 2,
+    "end": 2,
+    "sourcePageCount": 24
+  },
+  "firstSolve": {
+    "minute": 2,
+    "teams": [
+      "Tiramos CV"
+    ]
+  },
+  "editorialUrl": null,
+  "status": "verificado"
+}

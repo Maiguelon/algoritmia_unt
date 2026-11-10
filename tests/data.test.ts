@@ -4,6 +4,8 @@ import { resolve } from 'node:path';
 import { problems, tournaments, validateDataset } from '../src/lib/data';
 import type { Problem, Tournament } from '../src/lib/types';
 import regional2026Evidence from '../docs/investigacion/regional-2026-evidencia.json';
+import tap2024Evidence from '../docs/investigacion/tap-2024-evidencia.json';
+import tap2025Evidence from '../docs/investigacion/tap-2025-evidencia.json';
 
 const copyProblems = () => structuredClone(problems);
 const copyTournaments = () => structuredClone(tournaments);
@@ -140,5 +142,39 @@ describe('contratos del contenido editorial', () => {
       expect(problem.ac).toBe(accepted.length);
       expect(problem.total).toBe(regional2026Evidence.totalSouth);
     }
+  });
+
+  it('TAP 2024 y 2025 reconcilian cada AC y primera resolución con sus equipos publicados', () => {
+    for (const evidence of [tap2024Evidence, tap2025Evidence]) {
+      const tournament = tournaments.find(t => t.id === evidence.id)!;
+      const set = problems.filter(p => p.tournamentId === evidence.id);
+      expect(set).toHaveLength(14);
+      expect(evidence.teams).toHaveLength(tournament.totalTeams!);
+      expect(evidence.distribution.reduce((sum, row) => sum + row.teams, 0)).toBe(tournament.totalTeams);
+      expect(set.reduce((sum, problem) => sum + problem.ac!, 0)).toBe(evidence.teams.reduce((sum, team) => sum + team.solved, 0));
+      for (const team of evidence.teams) expect(team.solvedProblems).toHaveLength(team.solved);
+      for (const problem of set) {
+        const accepted = evidence.teams.filter(team => (team.solvedProblems as string[]).includes(problem.letter));
+        expect(problem.ac).toBe(accepted.length);
+        expect(problem.total).toBe(tournament.totalTeams);
+        const times = accepted.map(team => (team.acceptedMinutes as Record<string, number>)[problem.letter]);
+        expect(problem.firstSolve?.minute ?? null).toBe(times.length ? Math.min(...times) : null);
+      }
+    }
+  });
+
+  it('excluye los dos AC ajenos de TAP 2025 y no inventa cifras para el resultado UNT en conflicto', () => {
+    const set = problems.filter(p => p.tournamentId === 'tap-2025');
+    expect(set.find(p => p.letter === 'A')?.ac).toBe(175);
+    expect(set.find(p => p.letter === 'G')?.ac).toBe(181);
+    expect(tap2025Evidence.teams.some(team => team.name === 'CCL Soarch 4')).toBe(false);
+    expect(tap2025Evidence.teams.find(team => team.name === 'Root')?.solvedProblems).toEqual([]);
+    const conflicting = tournaments.find(t => t.id === 'tap-2024')!.tucumanResults.find(team => team.team === 'La tupla del gordo silla')!;
+    expect(conflicting.rank).toBe(76);
+    expect(conflicting.solved).toBeNull();
+    expect(conflicting.solvedProblems).toBeUndefined();
+    expect(tournaments.find(t => t.id === 'tap-2025')?.tucumanQualificationVerified).toBe(false);
+    expect(tournaments.find(t => t.id === 'tap-2025')?.qualificationAnalysis?.cutoff.team).toBe('TAPires');
+    expect(tournaments.find(t => t.id === 'tap-2025')?.qualificationAnalysis?.cutoff.rank).toBe(19);
   });
 });

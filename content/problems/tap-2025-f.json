@@ -1,0 +1,35 @@
+{
+  "id": "tap-2025-f",
+  "tournamentId": "tap-2025",
+  "letter": "F",
+  "title": "Feeding the goat",
+  "summary": "Calcular el área de pastoreo de una cabra atada a un vértice de una cerca convexa, para muchas longitudes de cuerda.",
+  "difficulty": "Top global",
+  "conceptual": "Sin valorar",
+  "implementation": "Sin valorar",
+  "topics": [
+    "Geometría",
+    "Polígonos convexos",
+    "Precisión numérica"
+  ],
+  "chunkIds": [],
+  "coverage": "fuera de alcance",
+  "missingTools": [],
+  "hints": [],
+  "classificationConfidence": "Baja: valoración propia del enunciado. No se localizó una editorial oficial de esta edición; las técnicas avanzadas requieren contraste con una solución de referencia.",
+  "difficultyReason": "Fuera del recorrido actual por la combinación de geometría de áreas, cambios de régimen y muchas consultas. No se etiqueta así solo por sus cero AC.",
+  "approach": "Herramientas de un enfoque editorial de referencia; no incluye la observación ni la solución.",
+  "ac": 0,
+  "total": 183,
+  "judgeUrl": "https://codeforces.com/gym/106054/problem/F",
+  "sourceUrl": "https://icpc.com.ar/wp-content/uploads/2025/08/tap2025.pdf#page=9",
+  "statementUrl": "/statements/tap-2025-f.pdf",
+  "statementPages": {
+    "start": 9,
+    "end": 10,
+    "sourcePageCount": 24
+  },
+  "firstSolve": null,
+  "editorialUrl": null,
+  "status": "verificado"
+}

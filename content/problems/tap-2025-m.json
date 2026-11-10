@@ -1,0 +1,45 @@
+{
+  "id": "tap-2025-m",
+  "tournamentId": "tap-2025",
+  "letter": "M",
+  "title": "March and Conquer",
+  "summary": "Contar los viajes que usan el mínimo número de días en un grafo, permitiendo hasta K aristas por día y repeticiones de ciudades.",
+  "difficulty": "Avanzado",
+  "conceptual": "4/5 (estimación editorial)",
+  "implementation": "3/5 (estimación editorial)",
+  "topics": [
+    "Grafos",
+    "DP de conteo",
+    "Combinatoria modular"
+  ],
+  "chunkIds": [
+    "cpp-vectores",
+    "cpp-cuentas-enteras"
+  ],
+  "coverage": "parcial",
+  "missingTools": [
+    "BFS, conteo de caminatas y distribución de pasos en días con aritmética modular; faltan los módulos correspondientes."
+  ],
+  "hints": [],
+  "classificationConfidence": "Media: valoración propia del enunciado. No se localizó una editorial oficial de esta edición; las técnicas avanzadas requieren contraste con una solución de referencia.",
+  "difficultyReason": "Lectura editorial del enunciado: avanzado. La banda no se calcula a partir de un umbral de AC.",
+  "approach": "Cobertura de operaciones de base. Requisito pendiente: BFS, conteo de caminatas y distribución de pasos en días con aritmética modular; faltan los módulos correspondientes.",
+  "ac": 5,
+  "total": 183,
+  "judgeUrl": "https://codeforces.com/gym/106054/problem/M",
+  "sourceUrl": "https://icpc.com.ar/wp-content/uploads/2025/08/tap2025.pdf#page=21",
+  "statementUrl": "/statements/tap-2025-m.pdf",
+  "statementPages": {
+    "start": 21,
+    "end": 22,
+    "sourcePageCount": 24
+  },
+  "firstSolve": {
+    "minute": 160,
+    "teams": [
+      "Corman"
+    ]
+  },
+  "editorialUrl": null,
+  "status": "verificado"
+}

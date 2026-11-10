@@ -41,6 +41,7 @@ export interface Tournament {
   statementBooklet?: { url: string; sourceUrl: string };
   population: string;
   totalTeams: number | null;
+  tucumanQualificationVerified?: boolean;
   qualification?: {
     count: number;
     kind: 'cupos' | 'clasificados';
@@ -87,7 +88,7 @@ export interface Tournament {
   tucumanResults: Array<{
     team: string;
     institution: string;
-    solved: number;
+    solved: number | null;
     rank: number | null;
     note: string;
     penalty?: number;

@@ -1,0 +1,44 @@
+{
+  "id": "tap-2024-b",
+  "tournamentId": "tap-2024",
+  "letter": "B",
+  "title": "Period Search",
+  "summary": "Construir el menor conjunto de preguntas que garantiza decidir si una palabra desconocida de longitud N es periódica.",
+  "difficulty": "Salto regional",
+  "conceptual": "3/5 (estimación editorial)",
+  "implementation": "2/5 (estimación editorial)",
+  "topics": [
+    "Teoría de números",
+    "Divisibilidad",
+    "Observación"
+  ],
+  "chunkIds": [
+    "cpp-divisibilidad",
+    "cpp-vectores",
+    "cpp-cuentas-enteras"
+  ],
+  "coverage": "completa",
+  "missingTools": [],
+  "hints": [],
+  "classificationConfidence": "Media: valoración propia del enunciado. No se localizó una editorial oficial de esta edición; las técnicas avanzadas requieren contraste con una solución de referencia.",
+  "difficultyReason": "El contexto es de strings, pero el algoritmo de referencia se basa en divisibilidad y factorización; hay que justificar qué preguntas bastan.",
+  "approach": "Herramientas de un enfoque editorial de referencia; no incluye la observación ni la solución.",
+  "ac": 41,
+  "total": 155,
+  "judgeUrl": "https://codeforces.com/gym/105321/problem/B",
+  "sourceUrl": "https://codeforces.com/gym/105321/attachments/download/26905/tap_2024.pdf#page=5",
+  "statementUrl": "/statements/tap-2024-b.pdf",
+  "statementPages": {
+    "start": 5,
+    "end": 5,
+    "sourcePageCount": 21
+  },
+  "firstSolve": {
+    "minute": 19,
+    "teams": [
+      "Thinking Limit Exceeded"
+    ]
+  },
+  "editorialUrl": null,
+  "status": "verificado"
+}

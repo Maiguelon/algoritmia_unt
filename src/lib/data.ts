@@ -24,6 +24,7 @@ export function validateDataset(
     if (tournamentMap.has(tournament.id)) errors.push(`Torneo repetido: ${tournament.id}`);
     tournamentMap.set(tournament.id, tournament);
     if (!tournament.id || !tournament.title || !Number.isInteger(tournament.year)) errors.push(`Torneo inválido: ${tournament.id}`);
+    if (tournament.tucumanQualificationVerified !== undefined && typeof tournament.tucumanQualificationVerified !== 'boolean') errors.push(`Verificación de clasificación local inválida: ${tournament.id}`);
     if (tournament.totalTeams !== null && (!isCount(tournament.totalTeams) || tournament.totalTeams === 0)) errors.push(`Total de equipos inválido: ${tournament.id}`);
     if (!['verificado', 'provisorio', 'pendiente'].includes(tournament.status)) errors.push(`Estado inválido: ${tournament.id}`);
     if (tournament.sources.some(source => !source.label || !isWebUrl(source.url))) errors.push(`Fuente inválida: ${tournament.id}`);
@@ -50,6 +51,7 @@ export function validateDataset(
       if (!analysis.evidenceSourceUrls.length || !analysis.evidenceSourceUrls.includes(analysis.ruleSourceUrl) || analysis.evidenceSourceUrls.some(url => !tournament.sources.some(source => source.url === url))) errors.push(`Análisis de clasificación sin fuentes: ${tournament.id}`);
     }
     for (const result of tournament.tucumanResults) {
+      if (result.solved !== null && !isCount(result.solved)) errors.push(`AC locales inválidos: ${tournament.id}/${result.team}`);
       if (result.penalty !== undefined && !isCount(result.penalty)) errors.push(`Penalidad inválida: ${tournament.id}/${result.team}`);
       if (result.solvedProblems && (new Set(result.solvedProblems).size !== result.solvedProblems.length || result.solvedProblems.length !== result.solved || result.solvedProblems.some(letter => !problemList.some(problem => problem.tournamentId === tournament.id && problem.letter === letter)))) errors.push(`Problemas resueltos inconsistentes: ${tournament.id}/${result.team}`);
     }

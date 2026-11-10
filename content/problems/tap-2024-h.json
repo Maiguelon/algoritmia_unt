@@ -1,0 +1,47 @@
+{
+  "id": "tap-2024-h",
+  "tournamentId": "tap-2024",
+  "letter": "H",
+  "title": "Electric Fence for Livestock",
+  "summary": "Calcular cuántos cercos rectangulares se espera cruzar para reunir dos paracaidistas que aterrizan en puntos elegidos al azar.",
+  "difficulty": "Avanzado",
+  "conceptual": "4/5 (estimación editorial)",
+  "implementation": "3/5 (estimación editorial)",
+  "topics": [
+    "Geometría",
+    "Valor esperado",
+    "Consultas de conteo"
+  ],
+  "chunkIds": [
+    "cpp-pares",
+    "cpp-ordenacion",
+    "cpp-reales",
+    "cpp-cuentas-enteras"
+  ],
+  "coverage": "parcial",
+  "missingTools": [
+    "Linealidad de la esperanza y conteo eficiente de puntos en rectángulos; faltan barrido y estructuras de consultas."
+  ],
+  "hints": [],
+  "classificationConfidence": "Media: valoración propia del enunciado. No se localizó una editorial oficial de esta edición; las técnicas avanzadas requieren contraste con una solución de referencia.",
+  "difficultyReason": "Lectura editorial del enunciado: avanzado. La banda no se calcula a partir de un umbral de AC.",
+  "approach": "Cobertura de operaciones de base. Requisito pendiente: Linealidad de la esperanza y conteo eficiente de puntos en rectángulos; faltan barrido y estructuras de consultas.",
+  "ac": 3,
+  "total": 155,
+  "judgeUrl": "https://codeforces.com/gym/105321/problem/H",
+  "sourceUrl": "https://codeforces.com/gym/105321/attachments/download/26905/tap_2024.pdf#page=12",
+  "statementUrl": "/statements/tap-2024-h.pdf",
+  "statementPages": {
+    "start": 12,
+    "end": 13,
+    "sourcePageCount": 21
+  },
+  "firstSolve": {
+    "minute": 203,
+    "teams": [
+      "Corman et al."
+    ]
+  },
+  "editorialUrl": null,
+  "status": "verificado"
+}

@@ -1,0 +1,150 @@
+{
+  "id": "tap-2024",
+  "title": "Torneo Argentino de Programación 2024",
+  "year": 2024,
+  "season": "2024–2025 (inscripción ICPC TAP-2025)",
+  "setName": "2024 Argentinian Programming Tournament · Gym 105321 · 14 problemas",
+  "judgeUrl": "https://codeforces.com/gym/105321",
+  "statementBooklet": {
+    "url": "/statements/tap-2024-completo.pdf",
+    "sourceUrl": "https://codeforces.com/gym/105321/attachments/download/26905/tap_2024.pdf"
+  },
+  "totalTeams": 155,
+  "population": "Filas nacionales del standings final del Gym 105321: 155 filas; los rangos 72 y 133 tienen empates. La fila ghost extranjera #156 se excluye.",
+  "status": "verificado",
+  "sources": [
+    {
+      "label": "AAPC TAP; enlaza enunciados y juez 2024",
+      "url": "https://aapc.org.ar/tap/"
+    },
+    {
+      "label": "Codeforces Gym standings final",
+      "url": "https://codeforces.com/gym/105321/standings"
+    },
+    {
+      "label": "Cuadernillo oficial en Gym",
+      "url": "https://codeforces.com/gym/105321/attachments/download/26905/tap_2024.pdf"
+    },
+    {
+      "label": "FACET UNT: sede, población y equipos UNT",
+      "url": "https://www.facet.unt.edu.ar/facetinforma/2024/08/27/14-edicion-del-torneo-argentino-de-programacion/"
+    },
+    {
+      "label": "Anuncio Codeforces, periodo ICPC 2024–2025",
+      "url": "https://codeforces.com/blog/entry/133298"
+    },
+    {
+      "label": "Juez de práctica enlazado por AAPC",
+      "url": "https://codeforces.com/gym/105321"
+    },
+    {
+      "label": "Enlaces históricos a juez y enunciados TAP 2024 publicados por AAPC",
+      "url": "https://aapc.org.ar/tap-2025/"
+    }
+  ],
+  "distribution": [
+    {
+      "solved": 1,
+      "teams": 2
+    },
+    {
+      "solved": 2,
+      "teams": 14
+    },
+    {
+      "solved": 3,
+      "teams": 36
+    },
+    {
+      "solved": 4,
+      "teams": 55
+    },
+    {
+      "solved": 5,
+      "teams": 17
+    },
+    {
+      "solved": 6,
+      "teams": 14
+    },
+    {
+      "solved": 7,
+      "teams": 8
+    },
+    {
+      "solved": 8,
+      "teams": 3
+    },
+    {
+      "solved": 9,
+      "teams": 2
+    },
+    {
+      "solved": 10,
+      "teams": 2
+    },
+    {
+      "solved": 11,
+      "teams": 2
+    }
+  ],
+  "tucumanResults": [
+    {
+      "team": "Sanguchito",
+      "institution": "UNT",
+      "rank": 30,
+      "solved": 6,
+      "penalty": 900,
+      "solvedProblems": [
+        "B",
+        "D",
+        "F",
+        "G",
+        "L",
+        "N"
+      ],
+      "note": "Resultado publicado; clasificación al Regional pendiente de confirmar."
+    },
+    {
+      "team": "Tucumonos",
+      "institution": "UNT",
+      "rank": 60,
+      "solved": 4,
+      "penalty": 203,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "note": "Resultado publicado; clasificación al Regional pendiente de confirmar."
+    },
+    {
+      "team": "La tupla del gordo silla",
+      "institution": "UNT",
+      "rank": 76,
+      "solved": null,
+      "note": "FACET informa puesto 76; esa fila del Gym corresponde a Extra Soartu 1. AC y letras no atribuidos por esta discrepancia."
+    },
+    {
+      "team": "Pij",
+      "institution": "UNT",
+      "rank": 89,
+      "solved": 4,
+      "penalty": 467,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "note": "Resultado publicado; clasificación al Regional pendiente de confirmar."
+    }
+  ],
+  "tucumanQualificationVerified": false,
+  "notes": [
+    "AC reconstruidos a partir de equipos de la población publicada; los contadores de práctica no intervienen.",
+    "Bandas y herramientas revisadas por root; no equivalen a una editorial oficial.",
+    "Promoción efectiva de equipos locales pendiente de confirmar; un dato desconocido no se representa como cero."
+  ]
+}

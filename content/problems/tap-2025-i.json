@@ -1,0 +1,45 @@
+{
+  "id": "tap-2025-i",
+  "tournamentId": "tap-2025",
+  "letter": "I",
+  "title": "Inés and her compitas",
+  "summary": "Elegir la mejor opción de reparto de oro en cada ronda y calcular cuánto obtiene cada jugador al incorporar esa elección.",
+  "difficulty": "Consolidación",
+  "conceptual": "2/5 (estimación editorial)",
+  "implementation": "2/5 (estimación editorial)",
+  "topics": [
+    "Simulación",
+    "Conteo",
+    "Aritmética"
+  ],
+  "chunkIds": [
+    "cpp-vectores",
+    "cpp-recorridos",
+    "cpp-cuentas-enteras",
+    "cpp-condiciones"
+  ],
+  "coverage": "completa",
+  "missingTools": [],
+  "hints": [],
+  "classificationConfidence": "Alta: valoración propia del enunciado. No se localizó una editorial oficial de esta edición; las técnicas avanzadas requieren contraste con una solución de referencia.",
+  "difficultyReason": "Lectura editorial del enunciado: consolidación. La banda no se calcula a partir de un umbral de AC.",
+  "approach": "Herramientas de un enfoque editorial de referencia; no incluye la observación ni la solución.",
+  "ac": 121,
+  "total": 183,
+  "judgeUrl": "https://codeforces.com/gym/106054/problem/I",
+  "sourceUrl": "https://icpc.com.ar/wp-content/uploads/2025/08/tap2025.pdf#page=13",
+  "statementUrl": "/statements/tap-2025-i.pdf",
+  "statementPages": {
+    "start": 13,
+    "end": 14,
+    "sourcePageCount": 24
+  },
+  "firstSolve": {
+    "minute": 21,
+    "teams": [
+      "Champán en lata"
+    ]
+  },
+  "editorialUrl": null,
+  "status": "verificado"
+}

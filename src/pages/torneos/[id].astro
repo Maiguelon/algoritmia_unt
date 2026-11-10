@@ -34,7 +34,7 @@ const qualification = t.qualification;
   <div class="stats-row">
     <div class="stat" title={t.population}><strong>{t.totalTeams ?? '—'}</strong><span>equipos participantes</span></div>
     <div class="stat" title={qualification?.provisional ? 'Lista provisoria del reporte oficial al 10 de noviembre de 2026.' : undefined}><strong>{qualification?.count ?? '—'}</strong><span>{qualification ? `${qualification.kind} ${qualification.scope} al ${qualification.target}${qualification.provisional ? ' · provisorios' : ''}` : 'clasificados totales por verificar'}</span></div>
-    <div class="stat"><strong>{qualified.length || (qualification ? 0 : '—')}</strong><span>clasificados de Tucumán{t.id.startsWith('tap-') ? ' al Regional' : ' a la siguiente instancia'}</span></div>
+    <div class="stat" title={t.tucumanQualificationVerified === false ? 'Clasificación local pendiente de verificar.' : undefined}><strong>{t.tucumanQualificationVerified === false ? '—' : qualified.length || (qualification ? 0 : '—')}</strong><span>clasificados de Tucumán{t.id.startsWith('tap-') ? ' al Regional' : ' a la siguiente instancia'}</span></div>
   </div>
 
   {t.qualificationAnalysis && <QualificationAnalysis tournament={t} problems={set}/>}
@@ -62,8 +62,9 @@ const qualification = t.qualification;
         {t.tucumanResults.filter(result => result.institution === institution).map(result =>
           <article class:list={['local-result', { qualified: !!result.qualifiedTo }]}>
             <div class="result-heading"><h4>{result.team}</h4>{result.qualifiedTo && <span class="qualification-badge" title={result.qualifiedTo} aria-label={`Clasificó a ${result.qualifiedTo}`}>✓ Clasificó</span>}</div>
-            <p class="result-metrics"><span>Puesto: <strong>{result.rank ?? '—'}</strong></span><span>AC: <strong>{result.solved}</strong></span><span>Penalidad: <strong>{result.penalty ?? '—'}</strong></span></p>
+            <p class="result-metrics"><span>Puesto: <strong>{result.rank ?? '—'}</strong></span><span>AC: <strong>{result.solved ?? '—'}</strong></span><span>Penalidad: <strong>{result.penalty ?? '—'}</strong></span></p>
             <div class="solved-problems"><span>Problemas resueltos:</span>{result.solvedProblems?.length ? result.solvedProblems.map(letter => <a href={`/problemas/${t.id}-${letter.toLowerCase()}/`}>{letter}</a>) : <span class="muted">{result.solved === 0 ? 'Ninguno' : 'Por verificar'}</span>}</div>
+            {result.solved === null && <p class="muted" style="font-size:.8rem">{result.note}</p>}
           </article>
         )}
       </section>

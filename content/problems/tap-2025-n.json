@@ -1,0 +1,44 @@
+{
+  "id": "tap-2025-n",
+  "tournamentId": "tap-2025",
+  "letter": "N",
+  "title": "Nothofagus antarctica",
+  "summary": "Hallar la menor longitud de una cerca con lados paralelos a los ejes que contenga todos los árboles y mantenga una distancia de seguridad.",
+  "difficulty": "Consolidación",
+  "conceptual": "2/5 (estimación editorial)",
+  "implementation": "1/5 (estimación editorial)",
+  "topics": [
+    "Geometría",
+    "Extremos",
+    "Observación"
+  ],
+  "chunkIds": [
+    "cpp-extremos-sumas",
+    "cpp-pares",
+    "cpp-cuentas-enteras"
+  ],
+  "coverage": "completa",
+  "missingTools": [],
+  "hints": [],
+  "classificationConfidence": "Alta: valoración propia del enunciado. No se localizó una editorial oficial de esta edición; las técnicas avanzadas requieren contraste con una solución de referencia.",
+  "difficultyReason": "La reducción geométrica es corta y la implementación requiere solo extremos y cuentas; no hace falta una biblioteca de geometría.",
+  "approach": "Herramientas de un enfoque editorial de referencia; no incluye la observación ni la solución.",
+  "ac": 121,
+  "total": 183,
+  "judgeUrl": "https://codeforces.com/gym/106054/problem/N",
+  "sourceUrl": "https://icpc.com.ar/wp-content/uploads/2025/08/tap2025.pdf#page=23",
+  "statementUrl": "/statements/tap-2025-n.pdf",
+  "statementPages": {
+    "start": 23,
+    "end": 24,
+    "sourcePageCount": 24
+  },
+  "firstSolve": {
+    "minute": 9,
+    "teams": [
+      "Helicóptero"
+    ]
+  },
+  "editorialUrl": null,
+  "status": "verificado"
+}

@@ -1,0 +1,47 @@
+{
+  "id": "tap-2025-e",
+  "tournamentId": "tap-2025",
+  "letter": "E",
+  "title": "Execution",
+  "summary": "Elegir dónde y cuándo atacar soldados que avanzan por un árbol hacia un refugio, maximizando las bajas y minimizando después el turno.",
+  "difficulty": "Salto regional",
+  "conceptual": "3/5 (estimación editorial)",
+  "implementation": "3/5 (estimación editorial)",
+  "topics": [
+    "Árboles",
+    "Recorridos",
+    "Conteo por profundidad"
+  ],
+  "chunkIds": [
+    "cpp-vectores",
+    "cpp-map",
+    "cpp-frecuencias",
+    "cpp-cuentas-enteras"
+  ],
+  "coverage": "parcial",
+  "missingTools": [
+    "Recorrido de árboles y agrupación por rama/profundidad; la biblioteca no incluye DFS/BFS de grafos."
+  ],
+  "hints": [],
+  "classificationConfidence": "Media: valoración propia del enunciado. No se localizó una editorial oficial de esta edición; las técnicas avanzadas requieren contraste con una solución de referencia.",
+  "difficultyReason": "Lectura editorial del enunciado: salto regional. La banda no se calcula a partir de un umbral de AC.",
+  "approach": "Cobertura de operaciones de base. Requisito pendiente: Recorrido de árboles y agrupación por rama/profundidad; la biblioteca no incluye DFS/BFS de grafos.",
+  "ac": 9,
+  "total": 183,
+  "judgeUrl": "https://codeforces.com/gym/106054/problem/E",
+  "sourceUrl": "https://icpc.com.ar/wp-content/uploads/2025/08/tap2025.pdf#page=7",
+  "statementUrl": "/statements/tap-2025-e.pdf",
+  "statementPages": {
+    "start": 7,
+    "end": 8,
+    "sourcePageCount": 24
+  },
+  "firstSolve": {
+    "minute": 85,
+    "teams": [
+      "Corman"
+    ]
+  },
+  "editorialUrl": null,
+  "status": "verificado"
+}

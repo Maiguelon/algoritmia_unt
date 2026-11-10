@@ -1,0 +1,43 @@
+{
+  "id": "tap-2024-g",
+  "tournamentId": "tap-2024",
+  "letter": "G",
+  "title": "Garlands",
+  "summary": "Contar cuántas guirnaldas TAP o TUP pueden formarse al reordenar las letras disponibles.",
+  "difficulty": "Inicial",
+  "conceptual": "1/5 (estimación editorial)",
+  "implementation": "1/5 (estimación editorial)",
+  "topics": [
+    "Strings",
+    "Frecuencias"
+  ],
+  "chunkIds": [
+    "cpp-strings",
+    "cpp-busqueda-conteo",
+    "cpp-extremos-sumas"
+  ],
+  "coverage": "completa",
+  "missingTools": [],
+  "hints": [],
+  "classificationConfidence": "Alta: valoración propia del enunciado. No se localizó una editorial oficial de esta edición; las técnicas avanzadas requieren contraste con una solución de referencia.",
+  "difficultyReason": "Lectura editorial del enunciado: inicial. La banda no se calcula a partir de un umbral de AC.",
+  "approach": "Herramientas de un enfoque editorial de referencia; no incluye la observación ni la solución.",
+  "ac": 140,
+  "total": 155,
+  "judgeUrl": "https://codeforces.com/gym/105321/problem/G",
+  "sourceUrl": "https://codeforces.com/gym/105321/attachments/download/26905/tap_2024.pdf#page=11",
+  "statementUrl": "/statements/tap-2024-g.pdf",
+  "statementPages": {
+    "start": 11,
+    "end": 11,
+    "sourcePageCount": 21
+  },
+  "firstSolve": {
+    "minute": 5,
+    "teams": [
+      "NaN"
+    ]
+  },
+  "editorialUrl": null,
+  "status": "verificado"
+}

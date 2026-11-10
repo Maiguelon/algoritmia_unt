@@ -1,0 +1,47 @@
+{
+  "id": "tap-2025-j",
+  "tournamentId": "tap-2025",
+  "letter": "J",
+  "title": "Jaimito's blocks",
+  "summary": "Decidir si una disposición estable de torres de bloques puede transformarse en otra mediante movimientos legales de sus bloques superiores.",
+  "difficulty": "Salto regional",
+  "conceptual": "3/5 (estimación editorial)",
+  "implementation": "3/5 (estimación editorial)",
+  "topics": [
+    "Invariantes",
+    "Pilas",
+    "Casos especiales"
+  ],
+  "chunkIds": [
+    "cpp-vectores",
+    "cpp-ordenacion",
+    "cpp-frecuencias",
+    "cpp-pila"
+  ],
+  "coverage": "parcial",
+  "missingTools": [
+    "Caracterización de la alcanzabilidad según la cantidad de torres; el modelo de movimientos todavía no se contrastó con una solución de referencia."
+  ],
+  "hints": [],
+  "classificationConfidence": "Media: valoración propia del enunciado. No se localizó una editorial oficial de esta edición; las técnicas avanzadas requieren contraste con una solución de referencia.",
+  "difficultyReason": "Lectura editorial del enunciado: salto regional. La banda no se calcula a partir de un umbral de AC.",
+  "approach": "Cobertura de operaciones de base. Requisito pendiente: Caracterización de la alcanzabilidad según la cantidad de torres; el modelo de movimientos todavía no se contrastó con una solución de referencia.",
+  "ac": 8,
+  "total": 183,
+  "judgeUrl": "https://codeforces.com/gym/106054/problem/J",
+  "sourceUrl": "https://icpc.com.ar/wp-content/uploads/2025/08/tap2025.pdf#page=15",
+  "statementUrl": "/statements/tap-2025-j.pdf",
+  "statementPages": {
+    "start": 15,
+    "end": 16,
+    "sourcePageCount": 24
+  },
+  "firstSolve": {
+    "minute": 120,
+    "teams": [
+      "Red-Black Tree"
+    ]
+  },
+  "editorialUrl": null,
+  "status": "verificado"
+}

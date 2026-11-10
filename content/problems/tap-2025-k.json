@@ -1,0 +1,40 @@
+{
+  "id": "tap-2025-k",
+  "tournamentId": "tap-2025",
+  "letter": "K",
+  "title": "Kuantum",
+  "summary": "Responder consultas sobre el tiempo mínimo entre grupos de frecuencias en un árbol, respetando un protocolo de tres fases.",
+  "difficulty": "Avanzado",
+  "conceptual": "5/5 (estimación editorial)",
+  "implementation": "4/5 (estimación editorial)",
+  "topics": [
+    "Árboles",
+    "Consultas de distancia",
+    "Optimización"
+  ],
+  "chunkIds": [
+    "cpp-vectores",
+    "cpp-pares"
+  ],
+  "coverage": "parcial",
+  "missingTools": [
+    "Consultas eficientes de distancia entre conjuntos de vértices y estructuras para árboles; estrategia completa pendiente."
+  ],
+  "hints": [],
+  "classificationConfidence": "Baja: valoración propia del enunciado. No se localizó una editorial oficial de esta edición; las técnicas avanzadas requieren contraste con una solución de referencia.",
+  "difficultyReason": "Las consultas masivas entre grupos requieren optimización de árboles. Se mantiene dentro de Avanzado aunque no tuvo AC; cero AC no implica automáticamente Top global.",
+  "approach": "Cobertura de operaciones de base. Requisito pendiente: Consultas eficientes de distancia entre conjuntos de vértices y estructuras para árboles; estrategia completa pendiente.",
+  "ac": 0,
+  "total": 183,
+  "judgeUrl": "https://codeforces.com/gym/106054/problem/K",
+  "sourceUrl": "https://icpc.com.ar/wp-content/uploads/2025/08/tap2025.pdf#page=17",
+  "statementUrl": "/statements/tap-2025-k.pdf",
+  "statementPages": {
+    "start": 17,
+    "end": 18,
+    "sourcePageCount": 24
+  },
+  "firstSolve": null,
+  "editorialUrl": null,
+  "status": "verificado"
+}

@@ -1,0 +1,6219 @@
+{
+  "schemaVersion": 1,
+  "id": "tap-2025",
+  "calendarYear": 2025,
+  "date": "2025-08-23",
+  "season": {
+    "value": "2025–2026",
+    "sourceUrl": "https://codeforces.com/blog/entry/145893"
+  },
+  "booklet": {
+    "url": "https://icpc.com.ar/wp-content/uploads/2025/08/tap2025.pdf",
+    "localPath": "fuentes/tap2025_oficial.pdf",
+    "pages": 24,
+    "language": "es"
+  },
+  "gym": {
+    "id": "106054",
+    "url": "https://codeforces.com/gym/106054",
+    "sourceUrls": [
+      "https://codeforces.com/blog/entry/145893"
+    ]
+  },
+  "population": {
+    "description": "Tabla nacional completa de resultados finales publicada por AAPC: 183 filas de equipos, incluyendo los equipos rotulados Extra. Puntaje mostrado como resueltos (penalidad). La fuente no da los problemas resueltos por equipo.",
+    "totalTeams": 183,
+    "status": "final",
+    "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+    "includes": [
+      "Todas las 183 filas de la tabla oficial, incluidos Extra Soarre 1 (puesto 96) y Extra Soarib 1 (puesto 139)."
+    ],
+    "excludes": []
+  },
+  "problems": [
+    {
+      "letter": "A",
+      "title": "Artifact to print",
+      "originalTitle": "Armando la palabra TAP",
+      "sourceUrl": "https://icpc.com.ar/wp-content/uploads/2025/08/tap2025.pdf",
+      "judgeUrl": "https://codeforces.com/gym/106054/problem/A",
+      "statementPages": {
+        "start": 2,
+        "end": 2,
+        "sourcePageCount": 24
+      },
+      "ac": 175,
+      "total": 183,
+      "firstSolve": {
+        "minute": 2,
+        "teams": [
+          "Tiramos CV"
+        ]
+      },
+      "editorialUrl": null,
+      "evidenceTechniques": [],
+      "sourceIds": [
+        "booklet",
+        "gym-standings"
+      ]
+    },
+    {
+      "letter": "B",
+      "title": "Block sum array",
+      "originalTitle": "Bloques de sumas",
+      "sourceUrl": "https://icpc.com.ar/wp-content/uploads/2025/08/tap2025.pdf",
+      "judgeUrl": "https://codeforces.com/gym/106054/problem/B",
+      "statementPages": {
+        "start": 3,
+        "end": 3,
+        "sourcePageCount": 24
+      },
+      "ac": 6,
+      "total": 183,
+      "firstSolve": {
+        "minute": 55,
+        "teams": [
+          "Helicóptero"
+        ]
+      },
+      "editorialUrl": null,
+      "evidenceTechniques": [],
+      "sourceIds": [
+        "booklet",
+        "gym-standings"
+      ]
+    },
+    {
+      "letter": "C",
+      "title": "Circularly",
+      "originalTitle": "Circularmente",
+      "sourceUrl": "https://icpc.com.ar/wp-content/uploads/2025/08/tap2025.pdf",
+      "judgeUrl": "https://codeforces.com/gym/106054/problem/C",
+      "statementPages": {
+        "start": 4,
+        "end": 4,
+        "sourcePageCount": 24
+      },
+      "ac": 10,
+      "total": 183,
+      "firstSolve": {
+        "minute": 61,
+        "teams": [
+          "Red-Black Tree"
+        ]
+      },
+      "editorialUrl": null,
+      "evidenceTechniques": [],
+      "sourceIds": [
+        "booklet",
+        "gym-standings"
+      ]
+    },
+    {
+      "letter": "D",
+      "title": "Day of rain",
+      "originalTitle": "Días de lluvia",
+      "sourceUrl": "https://icpc.com.ar/wp-content/uploads/2025/08/tap2025.pdf",
+      "judgeUrl": "https://codeforces.com/gym/106054/problem/D",
+      "statementPages": {
+        "start": 5,
+        "end": 6,
+        "sourcePageCount": 24
+      },
+      "ac": 2,
+      "total": 183,
+      "firstSolve": {
+        "minute": 283,
+        "teams": [
+          "Corman"
+        ]
+      },
+      "editorialUrl": null,
+      "evidenceTechniques": [],
+      "sourceIds": [
+        "booklet",
+        "gym-standings"
+      ]
+    },
+    {
+      "letter": "E",
+      "title": "Execution",
+      "originalTitle": "Estrategia",
+      "sourceUrl": "https://icpc.com.ar/wp-content/uploads/2025/08/tap2025.pdf",
+      "judgeUrl": "https://codeforces.com/gym/106054/problem/E",
+      "statementPages": {
+        "start": 7,
+        "end": 8,
+        "sourcePageCount": 24
+      },
+      "ac": 9,
+      "total": 183,
+      "firstSolve": {
+        "minute": 85,
+        "teams": [
+          "Corman"
+        ]
+      },
+      "editorialUrl": null,
+      "evidenceTechniques": [],
+      "sourceIds": [
+        "booklet",
+        "gym-standings"
+      ]
+    },
+    {
+      "letter": "F",
+      "title": "Feeding the goat",
+      "originalTitle": "Festín limitado",
+      "sourceUrl": "https://icpc.com.ar/wp-content/uploads/2025/08/tap2025.pdf",
+      "judgeUrl": "https://codeforces.com/gym/106054/problem/F",
+      "statementPages": {
+        "start": 9,
+        "end": 10,
+        "sourcePageCount": 24
+      },
+      "ac": 0,
+      "total": 183,
+      "firstSolve": null,
+      "editorialUrl": null,
+      "evidenceTechniques": [],
+      "sourceIds": [
+        "booklet",
+        "gym-standings"
+      ]
+    },
+    {
+      "letter": "G",
+      "title": "Going to the kiosk",
+      "originalTitle": "Golosinas",
+      "sourceUrl": "https://icpc.com.ar/wp-content/uploads/2025/08/tap2025.pdf",
+      "judgeUrl": "https://codeforces.com/gym/106054/problem/G",
+      "statementPages": {
+        "start": 11,
+        "end": 11,
+        "sourcePageCount": 24
+      },
+      "ac": 181,
+      "total": 183,
+      "firstSolve": {
+        "minute": 2,
+        "teams": [
+          "Undefined"
+        ]
+      },
+      "editorialUrl": null,
+      "evidenceTechniques": [],
+      "sourceIds": [
+        "booklet",
+        "gym-standings"
+      ]
+    },
+    {
+      "letter": "H",
+      "title": "Hidden divisor",
+      "originalTitle": "Hallando el divisor perdido",
+      "sourceUrl": "https://icpc.com.ar/wp-content/uploads/2025/08/tap2025.pdf",
+      "judgeUrl": "https://codeforces.com/gym/106054/problem/H",
+      "statementPages": {
+        "start": 12,
+        "end": 12,
+        "sourcePageCount": 24
+      },
+      "ac": 18,
+      "total": 183,
+      "firstSolve": {
+        "minute": 56,
+        "teams": [
+          "Helicóptero"
+        ]
+      },
+      "editorialUrl": null,
+      "evidenceTechniques": [],
+      "sourceIds": [
+        "booklet",
+        "gym-standings"
+      ]
+    },
+    {
+      "letter": "I",
+      "title": "Inés and her compitas",
+      "originalTitle": "Interacciones sociales",
+      "sourceUrl": "https://icpc.com.ar/wp-content/uploads/2025/08/tap2025.pdf",
+      "judgeUrl": "https://codeforces.com/gym/106054/problem/I",
+      "statementPages": {
+        "start": 13,
+        "end": 14,
+        "sourcePageCount": 24
+      },
+      "ac": 121,
+      "total": 183,
+      "firstSolve": {
+        "minute": 21,
+        "teams": [
+          "Champán en lata"
+        ]
+      },
+      "editorialUrl": null,
+      "evidenceTechniques": [],
+      "sourceIds": [
+        "booklet",
+        "gym-standings"
+      ]
+    },
+    {
+      "letter": "J",
+      "title": "Jaimito's blocks",
+      "originalTitle": "Jugando con bloques",
+      "sourceUrl": "https://icpc.com.ar/wp-content/uploads/2025/08/tap2025.pdf",
+      "judgeUrl": "https://codeforces.com/gym/106054/problem/J",
+      "statementPages": {
+        "start": 15,
+        "end": 16,
+        "sourcePageCount": 24
+      },
+      "ac": 8,
+      "total": 183,
+      "firstSolve": {
+        "minute": 120,
+        "teams": [
+          "Red-Black Tree"
+        ]
+      },
+      "editorialUrl": null,
+      "evidenceTechniques": [],
+      "sourceIds": [
+        "booklet",
+        "gym-standings"
+      ]
+    },
+    {
+      "letter": "K",
+      "title": "Kuantum",
+      "originalTitle": "Kuantum",
+      "sourceUrl": "https://icpc.com.ar/wp-content/uploads/2025/08/tap2025.pdf",
+      "judgeUrl": "https://codeforces.com/gym/106054/problem/K",
+      "statementPages": {
+        "start": 17,
+        "end": 18,
+        "sourcePageCount": 24
+      },
+      "ac": 0,
+      "total": 183,
+      "firstSolve": null,
+      "editorialUrl": null,
+      "evidenceTechniques": [],
+      "sourceIds": [
+        "booklet",
+        "gym-standings"
+      ]
+    },
+    {
+      "letter": "L",
+      "title": "Lakes",
+      "originalTitle": "Lagunas",
+      "sourceUrl": "https://icpc.com.ar/wp-content/uploads/2025/08/tap2025.pdf",
+      "judgeUrl": "https://codeforces.com/gym/106054/problem/L",
+      "statementPages": {
+        "start": 19,
+        "end": 20,
+        "sourcePageCount": 24
+      },
+      "ac": 22,
+      "total": 183,
+      "firstSolve": {
+        "minute": 28,
+        "teams": [
+          "Tiramos CV"
+        ]
+      },
+      "editorialUrl": null,
+      "evidenceTechniques": [],
+      "sourceIds": [
+        "booklet",
+        "gym-standings"
+      ]
+    },
+    {
+      "letter": "M",
+      "title": "March and Conquer",
+      "originalTitle": "Marcha y vencerás",
+      "sourceUrl": "https://icpc.com.ar/wp-content/uploads/2025/08/tap2025.pdf",
+      "judgeUrl": "https://codeforces.com/gym/106054/problem/M",
+      "statementPages": {
+        "start": 21,
+        "end": 22,
+        "sourcePageCount": 24
+      },
+      "ac": 5,
+      "total": 183,
+      "firstSolve": {
+        "minute": 160,
+        "teams": [
+          "Corman"
+        ]
+      },
+      "editorialUrl": null,
+      "evidenceTechniques": [],
+      "sourceIds": [
+        "booklet",
+        "gym-standings"
+      ]
+    },
+    {
+      "letter": "N",
+      "title": "Nothofagus antarctica",
+      "originalTitle": "Nothofagus antarctica",
+      "sourceUrl": "https://icpc.com.ar/wp-content/uploads/2025/08/tap2025.pdf",
+      "judgeUrl": "https://codeforces.com/gym/106054/problem/N",
+      "statementPages": {
+        "start": 23,
+        "end": 24,
+        "sourcePageCount": 24
+      },
+      "ac": 121,
+      "total": 183,
+      "firstSolve": {
+        "minute": 9,
+        "teams": [
+          "Helicóptero"
+        ]
+      },
+      "editorialUrl": null,
+      "evidenceTechniques": [],
+      "sourceIds": [
+        "booklet",
+        "gym-standings"
+      ]
+    }
+  ],
+  "teams": [
+    {
+      "id": "tap-2025-rank-1",
+      "name": "Corman",
+      "institution": "Universidad de Buenos Aires",
+      "rank": 1,
+      "solved": 12,
+      "penalty": 1239,
+      "solvedProblems": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "G",
+        "H",
+        "I",
+        "J",
+        "L",
+        "M",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 3,
+        "B": 102,
+        "C": 115,
+        "D": 283,
+        "E": 85,
+        "G": 6,
+        "H": 71,
+        "I": 42,
+        "J": 125,
+        "L": 67,
+        "M": 160,
+        "N": 20
+      }
+    },
+    {
+      "id": "tap-2025-rank-2",
+      "name": "Red-Black Tree",
+      "institution": "Universidad Nacional de Rosario",
+      "rank": 2,
+      "solved": 12,
+      "penalty": 1405,
+      "solvedProblems": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "E",
+        "G",
+        "H",
+        "I",
+        "J",
+        "L",
+        "M",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 3,
+        "B": 58,
+        "C": 61,
+        "D": 291,
+        "E": 172,
+        "G": 7,
+        "H": 83,
+        "I": 68,
+        "J": 120,
+        "L": 111,
+        "M": 203,
+        "N": 28
+      }
+    },
+    {
+      "id": "tap-2025-rank-3",
+      "name": "Helicóptero",
+      "institution": "Universidad Nacional de Córdoba",
+      "rank": 3,
+      "solved": 11,
+      "penalty": 913,
+      "solvedProblems": [
+        "A",
+        "B",
+        "C",
+        "E",
+        "G",
+        "H",
+        "I",
+        "J",
+        "L",
+        "M",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 5,
+        "B": 55,
+        "C": 83,
+        "E": 107,
+        "G": 11,
+        "H": 56,
+        "I": 36,
+        "J": 123,
+        "L": 66,
+        "M": 222,
+        "N": 9
+      }
+    },
+    {
+      "id": "tap-2025-rank-4",
+      "name": "Champán en lata",
+      "institution": "Universidad Tecnológica Nacional – Facultad Regional Santa Fe",
+      "rank": 4,
+      "solved": 10,
+      "penalty": 994,
+      "solvedProblems": [
+        "A",
+        "C",
+        "E",
+        "G",
+        "H",
+        "I",
+        "J",
+        "L",
+        "M",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 5,
+        "C": 160,
+        "E": 146,
+        "G": 18,
+        "H": 100,
+        "I": 21,
+        "J": 186,
+        "L": 53,
+        "M": 233,
+        "N": 32
+      }
+    },
+    {
+      "id": "tap-2025-rank-5",
+      "name": "NaN (Need a Name)",
+      "institution": "Universidad Nacional de La Plata",
+      "rank": 5,
+      "solved": 10,
+      "penalty": 1015,
+      "solvedProblems": [
+        "A",
+        "B",
+        "C",
+        "G",
+        "H",
+        "I",
+        "J",
+        "L",
+        "M",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 17,
+        "B": 104,
+        "C": 146,
+        "G": 3,
+        "H": 68,
+        "I": 31,
+        "J": 184,
+        "L": 91,
+        "M": 268,
+        "N": 23
+      }
+    },
+    {
+      "id": "tap-2025-rank-6",
+      "name": "para el regional elegimos nombre",
+      "institution": "Universidad Nacional de Rosario",
+      "rank": 6,
+      "solved": 10,
+      "penalty": 1206,
+      "solvedProblems": [
+        "A",
+        "B",
+        "C",
+        "E",
+        "G",
+        "H",
+        "I",
+        "J",
+        "L",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 14,
+        "B": 125,
+        "C": 253,
+        "E": 263,
+        "G": 10,
+        "H": 105,
+        "I": 37,
+        "J": 169,
+        "L": 70,
+        "N": 20
+      }
+    },
+    {
+      "id": "tap-2025-rank-7",
+      "name": "Los Catastróficos",
+      "institution": "Universidad de Buenos Aires",
+      "rank": 7,
+      "solved": 10,
+      "penalty": 1314,
+      "solvedProblems": [
+        "A",
+        "B",
+        "C",
+        "E",
+        "G",
+        "H",
+        "I",
+        "J",
+        "L",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 5,
+        "B": 154,
+        "C": 86,
+        "E": 288,
+        "G": 10,
+        "H": 172,
+        "I": 61,
+        "J": 198,
+        "L": 107,
+        "N": 33
+      }
+    },
+    {
+      "id": "tap-2025-rank-8",
+      "name": "Tiramos CV",
+      "institution": "Universidad Nacional de Jujuy",
+      "rank": 8,
+      "solved": 9,
+      "penalty": 1200,
+      "solvedProblems": [
+        "A",
+        "C",
+        "E",
+        "G",
+        "H",
+        "I",
+        "J",
+        "L",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 2,
+        "C": 206,
+        "E": 211,
+        "G": 6,
+        "H": 155,
+        "I": 47,
+        "J": 252,
+        "L": 28,
+        "N": 33
+      }
+    },
+    {
+      "id": "tap-2025-rank-9",
+      "name": "Gracias Ma",
+      "institution": "Universidad Nacional de Córdoba",
+      "rank": 9,
+      "solved": 8,
+      "penalty": 724,
+      "solvedProblems": [
+        "A",
+        "C",
+        "E",
+        "G",
+        "H",
+        "I",
+        "L",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 5,
+        "C": 150,
+        "E": 223,
+        "G": 8,
+        "H": 176,
+        "I": 34,
+        "L": 48,
+        "N": 20
+      }
+    },
+    {
+      "id": "tap-2025-rank-10",
+      "name": "Los Tiburones Cuánticos",
+      "institution": "Universidad de Buenos Aires",
+      "rank": 10,
+      "solved": 6,
+      "penalty": 401,
+      "solvedProblems": [
+        "A",
+        "G",
+        "H",
+        "I",
+        "L",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 10,
+        "G": 14,
+        "H": 117,
+        "I": 25,
+        "L": 161,
+        "N": 34
+      }
+    },
+    {
+      "id": "tap-2025-rank-11",
+      "name": "El boca de Kikelli",
+      "institution": "Universidad de Buenos Aires",
+      "rank": 11,
+      "solved": 6,
+      "penalty": 417,
+      "solvedProblems": [
+        "A",
+        "G",
+        "H",
+        "I",
+        "L",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 4,
+        "G": 5,
+        "H": 248,
+        "I": 32,
+        "L": 67,
+        "N": 21
+      }
+    },
+    {
+      "id": "tap-2025-rank-12",
+      "name": "Marco Ventola",
+      "institution": "Universidad de Buenos Aires",
+      "rank": 12,
+      "solved": 6,
+      "penalty": 435,
+      "solvedProblems": [
+        "A",
+        "E",
+        "G",
+        "I",
+        "L",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 4,
+        "E": 277,
+        "G": 7,
+        "I": 50,
+        "L": 73,
+        "N": 24
+      }
+    },
+    {
+      "id": "tap-2025-rank-13",
+      "name": "El pabellón",
+      "institution": "Universidad Nacional de Córdoba",
+      "rank": 13,
+      "solved": 6,
+      "penalty": 491,
+      "solvedProblems": [
+        "A",
+        "G",
+        "H",
+        "I",
+        "L",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 5,
+        "G": 9,
+        "H": 276,
+        "I": 23,
+        "L": 124,
+        "N": 14
+      }
+    },
+    {
+      "id": "tap-2025-rank-14",
+      "name": "Sale con dp y fritas 2.71",
+      "institution": "Universidad de Buenos Aires",
+      "rank": 14,
+      "solved": 6,
+      "penalty": 560,
+      "solvedProblems": [
+        "A",
+        "G",
+        "H",
+        "I",
+        "L",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 11,
+        "G": 14,
+        "H": 174,
+        "I": 71,
+        "L": 139,
+        "N": 31
+      }
+    },
+    {
+      "id": "tap-2025-rank-15",
+      "name": "ALKA",
+      "institution": "Universidad Nacional de Rosario",
+      "rank": 15,
+      "solved": 6,
+      "penalty": 602,
+      "solvedProblems": [
+        "A",
+        "G",
+        "H",
+        "I",
+        "L",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 4,
+        "G": 13,
+        "H": 226,
+        "I": 70,
+        "L": 158,
+        "N": 11
+      }
+    },
+    {
+      "id": "tap-2025-rank-16",
+      "name": "Super Greeditos",
+      "institution": "Universidad de Buenos Aires",
+      "rank": 16,
+      "solved": 6,
+      "penalty": 665,
+      "solvedProblems": [
+        "A",
+        "G",
+        "H",
+        "I",
+        "L",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 7,
+        "G": 9,
+        "H": 230,
+        "I": 103,
+        "L": 157,
+        "N": 79
+      }
+    },
+    {
+      "id": "tap-2025-rank-17",
+      "name": "ChichuMerge",
+      "institution": "Universidad Tecnológica Nacional – Facultad Regional Santa Fe",
+      "rank": 17,
+      "solved": 6,
+      "penalty": 672,
+      "solvedProblems": [
+        "A",
+        "G",
+        "H",
+        "I",
+        "L",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 4,
+        "G": 6,
+        "H": 270,
+        "I": 39,
+        "L": 192,
+        "N": 21
+      }
+    },
+    {
+      "id": "tap-2025-rank-18",
+      "name": "Nombre del grupo",
+      "institution": "Universidad Tecnológica Nacional – Facultad Regional Santa Fe",
+      "rank": 18,
+      "solved": 5,
+      "penalty": 315,
+      "solvedProblems": [
+        "A",
+        "C",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 9,
+        "C": 180,
+        "G": 12,
+        "I": 49,
+        "N": 25
+      }
+    },
+    {
+      "id": "tap-2025-rank-19",
+      "name": "TAPires",
+      "institution": "Universidad de San Andrés",
+      "rank": 19,
+      "solved": 5,
+      "penalty": 328,
+      "solvedProblems": [
+        "A",
+        "G",
+        "H",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 11,
+        "G": 15,
+        "H": 173,
+        "I": 46,
+        "N": 23
+      }
+    },
+    {
+      "id": "tap-2025-rank-20",
+      "name": "La eterna cuestión",
+      "institution": "Universidad de Buenos Aires",
+      "rank": 20,
+      "solved": 5,
+      "penalty": 360,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "L",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 4,
+        "G": 7,
+        "I": 58,
+        "L": 142,
+        "N": 69
+      }
+    },
+    {
+      "id": "tap-2025-rank-21",
+      "name": "hola",
+      "institution": "Universidad Tecnológica Nacional – Facultad Regional Rosario",
+      "rank": 21,
+      "solved": 5,
+      "penalty": 376,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "L",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 7,
+        "G": 4,
+        "I": 70,
+        "L": 149,
+        "N": 26
+      }
+    },
+    {
+      "id": "tap-2025-rank-22",
+      "name": "icom_helpers.h",
+      "institution": "Instituto Balseiro",
+      "rank": 22,
+      "solved": 5,
+      "penalty": 392,
+      "solvedProblems": [
+        "A",
+        "G",
+        "H",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 7,
+        "G": 10,
+        "H": 245,
+        "I": 47,
+        "N": 23
+      }
+    },
+    {
+      "id": "tap-2025-rank-23",
+      "name": "Cooperativa Los Trapitos",
+      "institution": "Universidad de Buenos Aires",
+      "rank": 23,
+      "solved": 5,
+      "penalty": 404,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "L",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 3,
+        "G": 7,
+        "I": 68,
+        "L": 273,
+        "N": 33
+      }
+    },
+    {
+      "id": "tap-2025-rank-24",
+      "name": "Melón Térmico",
+      "institution": "Universidad Nacional de Córdoba",
+      "rank": 24,
+      "solved": 5,
+      "penalty": 416,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "L",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 20,
+        "G": 8,
+        "I": 73,
+        "L": 221,
+        "N": 34
+      }
+    },
+    {
+      "id": "tap-2025-rank-25",
+      "name": "Sé–",
+      "institution": "Instituto Balseiro",
+      "rank": 25,
+      "solved": 5,
+      "penalty": 576,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "L",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 15,
+        "G": 3,
+        "I": 106,
+        "L": 247,
+        "N": 25
+      }
+    },
+    {
+      "id": "tap-2025-rank-26",
+      "name": "dr. Pancho",
+      "institution": "Universidad de Buenos Aires",
+      "rank": 26,
+      "solved": 4,
+      "penalty": 65,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 3,
+        "G": 6,
+        "I": 38,
+        "N": 18
+      }
+    },
+    {
+      "id": "tap-2025-rank-27",
+      "name": "#include<UNNE>",
+      "institution": "Universidad Nacional del Nordeste",
+      "rank": 27,
+      "solved": 4,
+      "penalty": 67,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 3,
+        "G": 6,
+        "I": 25,
+        "N": 33
+      }
+    },
+    {
+      "id": "tap-2025-rank-28",
+      "name": "Los lacayos de Fede Pizarro",
+      "institution": "Universidad de San Andrés",
+      "rank": 28,
+      "solved": 4,
+      "penalty": 72,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 5,
+        "G": 7,
+        "I": 39,
+        "N": 21
+      }
+    },
+    {
+      "id": "tap-2025-rank-29",
+      "name": "BEE",
+      "institution": "Universidad de San Andrés",
+      "rank": 29,
+      "solved": 4,
+      "penalty": 76,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 5,
+        "G": 8,
+        "I": 44,
+        "N": 19
+      }
+    },
+    {
+      "id": "tap-2025-rank-30",
+      "name": "deportivo_muela",
+      "institution": "Universidad Nacional de Córdoba",
+      "rank": 30,
+      "solved": 4,
+      "penalty": 104,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 30,
+        "G": 6,
+        "I": 49,
+        "N": 19
+      }
+    },
+    {
+      "id": "tap-2025-rank-31",
+      "name": "Peligro sin codificar",
+      "institution": "Universidad Tecnológica Nacional – Facultad Regional Santa Fe",
+      "rank": 31,
+      "solved": 4,
+      "penalty": 112,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 9,
+        "G": 11,
+        "I": 51,
+        "N": 21
+      }
+    },
+    {
+      "id": "tap-2025-rank-32",
+      "name": "Holaaaa",
+      "institution": "Universidad de Buenos Aires",
+      "rank": 32,
+      "solved": 4,
+      "penalty": 119,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 8,
+        "G": 12,
+        "I": 67,
+        "N": 32
+      }
+    },
+    {
+      "id": "tap-2025-rank-33",
+      "name": "VaCa MaLa",
+      "institution": "Universidad Nacional de La Plata",
+      "rank": 33,
+      "solved": 4,
+      "penalty": 122,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 4,
+        "G": 8,
+        "I": 67,
+        "N": 23
+      }
+    },
+    {
+      "id": "tap-2025-rank-34",
+      "name": "HOT TO CODE!",
+      "institution": "Instituto Balseiro",
+      "rank": 34,
+      "solved": 4,
+      "penalty": 128,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 12,
+        "G": 15,
+        "I": 37,
+        "N": 24
+      }
+    },
+    {
+      "id": "tap-2025-rank-35",
+      "name": "Cerebros Binarios",
+      "institution": "Universidad Nacional de Rio Cuarto",
+      "rank": 35,
+      "solved": 4,
+      "penalty": 128,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 10,
+        "G": 12,
+        "I": 56,
+        "N": 30
+      }
+    },
+    {
+      "id": "tap-2025-rank-36",
+      "name": "Segfault",
+      "institution": "Universidad de San Andrés",
+      "rank": 36,
+      "solved": 4,
+      "penalty": 137,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 7,
+        "G": 15,
+        "I": 73,
+        "N": 42
+      }
+    },
+    {
+      "id": "tap-2025-rank-37",
+      "name": "CAR: chori, albahaca y rúcula",
+      "institution": "Universidad Nacional de La Plata",
+      "rank": 37,
+      "solved": 4,
+      "penalty": 149,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 23,
+        "G": 19,
+        "I": 55,
+        "N": 52
+      }
+    },
+    {
+      "id": "tap-2025-rank-38",
+      "name": "Milanguchito",
+      "institution": "Universidad Nacional de Tucumán",
+      "rank": 38,
+      "solved": 4,
+      "penalty": 156,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 11,
+        "G": 15,
+        "I": 37,
+        "N": 73
+      }
+    },
+    {
+      "id": "tap-2025-rank-39",
+      "name": "Ed, Edd y Eddy v1.2",
+      "institution": "Universidad Nacional de La Matanza",
+      "rank": 39,
+      "solved": 4,
+      "penalty": 172,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 17,
+        "G": 15,
+        "I": 89,
+        "N": 31
+      }
+    },
+    {
+      "id": "tap-2025-rank-40",
+      "name": "McDuck",
+      "institution": "Universidad Tecnológica Nacional – Facultad Regional Córdoba",
+      "rank": 40,
+      "solved": 4,
+      "penalty": 177,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 17,
+        "G": 10,
+        "I": 74,
+        "N": 56
+      }
+    },
+    {
+      "id": "tap-2025-rank-41",
+      "name": "The Sliders",
+      "institution": "Universidad Nacional de Rio Cuarto",
+      "rank": 41,
+      "solved": 4,
+      "penalty": 177,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 11,
+        "G": 15,
+        "I": 95,
+        "N": 36
+      }
+    },
+    {
+      "id": "tap-2025-rank-42",
+      "name": "UPD",
+      "institution": "Universidad Nacional de La Plata",
+      "rank": 42,
+      "solved": 4,
+      "penalty": 178,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 7,
+        "G": 9,
+        "I": 106,
+        "N": 16
+      }
+    },
+    {
+      "id": "tap-2025-rank-43",
+      "name": "ElPuerro",
+      "institution": "Universidad Tecnológica Nacional – Facultad Regional Santa Fe",
+      "rank": 43,
+      "solved": 4,
+      "penalty": 179,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 20,
+        "G": 24,
+        "I": 75,
+        "N": 40
+      }
+    },
+    {
+      "id": "tap-2025-rank-44",
+      "name": "Pan’t con manteca",
+      "institution": "Universidad Tecnológica Nacional – Facultad Regional Rosario",
+      "rank": 44,
+      "solved": 4,
+      "penalty": 182,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 8,
+        "G": 12,
+        "I": 95,
+        "N": 47
+      }
+    },
+    {
+      "id": "tap-2025-rank-45",
+      "name": "Falta Para El Envido",
+      "institution": "Universidad Nacional de La Plata",
+      "rank": 45,
+      "solved": 4,
+      "penalty": 187,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 60,
+        "G": 4,
+        "I": 69,
+        "N": 14
+      }
+    },
+    {
+      "id": "tap-2025-rank-46",
+      "name": "Chapin Devs",
+      "institution": "Universidad Tecnológica Nacional – Facultad Regional Rosario",
+      "rank": 46,
+      "solved": 4,
+      "penalty": 193,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 29,
+        "G": 23,
+        "I": 68,
+        "N": 33
+      }
+    },
+    {
+      "id": "tap-2025-rank-47",
+      "name": "Profilo",
+      "institution": "Universidad Nacional de Rio Cuarto",
+      "rank": 47,
+      "solved": 4,
+      "penalty": 201,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 10,
+        "G": 13,
+        "I": 141,
+        "N": 37
+      }
+    },
+    {
+      "id": "tap-2025-rank-48",
+      "name": "Teamless",
+      "institution": "Instituto Universitario Aeronáutico",
+      "rank": 48,
+      "solved": 4,
+      "penalty": 207,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 27,
+        "G": 32,
+        "I": 70,
+        "N": 78
+      }
+    },
+    {
+      "id": "tap-2025-rank-49",
+      "name": "Skippy",
+      "institution": "Universidad de San Andrés",
+      "rank": 49,
+      "solved": 4,
+      "penalty": 210,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 13,
+        "G": 7,
+        "I": 104,
+        "N": 66
+      }
+    },
+    {
+      "id": "tap-2025-rank-50",
+      "name": "Ni Compila",
+      "institution": "Universidad Nacional de Rio Cuarto",
+      "rank": 50,
+      "solved": 4,
+      "penalty": 212,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 14,
+        "G": 18,
+        "I": 72,
+        "N": 68
+      }
+    },
+    {
+      "id": "tap-2025-rank-51",
+      "name": "Chat con Grandes Problemas Tecnicos",
+      "institution": "Universidad Nacional de Tucumán",
+      "rank": 51,
+      "solved": 4,
+      "penalty": 214,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 18,
+        "G": 9,
+        "I": 100,
+        "N": 87
+      }
+    },
+    {
+      "id": "tap-2025-rank-52",
+      "name": "SanMorto",
+      "institution": "Universidad Torcuato Di Tella",
+      "rank": 52,
+      "solved": 4,
+      "penalty": 218,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 31,
+        "G": 28,
+        "I": 81,
+        "N": 58
+      }
+    },
+    {
+      "id": "tap-2025-rank-53",
+      "name": "while(so serious)",
+      "institution": "Universidad Nacional de Tucumán",
+      "rank": 53,
+      "solved": 4,
+      "penalty": 219,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 10,
+        "G": 21,
+        "I": 107,
+        "N": 41
+      }
+    },
+    {
+      "id": "tap-2025-rank-54",
+      "name": "M.E.R.Y.",
+      "institution": "Universidad de San Andrés",
+      "rank": 54,
+      "solved": 4,
+      "penalty": 219,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 6,
+        "G": 10,
+        "I": 122,
+        "N": 61
+      }
+    },
+    {
+      "id": "tap-2025-rank-55",
+      "name": "los pro_magadores",
+      "institution": "Universidad Nacional de Jujuy",
+      "rank": 55,
+      "solved": 4,
+      "penalty": 220,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 19,
+        "G": 24,
+        "I": 137,
+        "N": 40
+      }
+    },
+    {
+      "id": "tap-2025-rank-56",
+      "name": "Byters",
+      "institution": "Universidad Nacional de Chilecito",
+      "rank": 56,
+      "solved": 4,
+      "penalty": 232,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 31,
+        "G": 8,
+        "I": 80,
+        "N": 53
+      }
+    },
+    {
+      "id": "tap-2025-rank-57",
+      "name": "TUCUmancos",
+      "institution": "Universidad Nacional de Tucumán",
+      "rank": 57,
+      "solved": 4,
+      "penalty": 232,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 11,
+        "G": 42,
+        "I": 102,
+        "N": 77
+      }
+    },
+    {
+      "id": "tap-2025-rank-58",
+      "name": "entro la balubi? (〜￣▽￣)〜",
+      "institution": "Universidad Nacional de Rosario",
+      "rank": 58,
+      "solved": 4,
+      "penalty": 234,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 10,
+        "G": 7,
+        "I": 41,
+        "N": 156
+      }
+    },
+    {
+      "id": "tap-2025-rank-59",
+      "name": "VersionFinalFINAL (1)",
+      "institution": "Universidad de Buenos Aires",
+      "rank": 59,
+      "solved": 4,
+      "penalty": 235,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 15,
+        "G": 19,
+        "I": 103,
+        "N": 78
+      }
+    },
+    {
+      "id": "tap-2025-rank-60",
+      "name": "LMN",
+      "institution": "Universidad Nacional de Rosario",
+      "rank": 60,
+      "solved": 4,
+      "penalty": 247,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 20,
+        "G": 12,
+        "I": 155,
+        "N": 60
+      }
+    },
+    {
+      "id": "tap-2025-rank-61",
+      "name": "UTN-FRD-3",
+      "institution": "Universidad Tecnológica Nacional – Facultad Regional Delta",
+      "rank": 61,
+      "solved": 4,
+      "penalty": 251,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 8,
+        "G": 22,
+        "I": 120,
+        "N": 61
+      }
+    },
+    {
+      "id": "tap-2025-rank-62",
+      "name": "nos va a ir bien tranqui",
+      "institution": "Universidad de San Andrés",
+      "rank": 62,
+      "solved": 4,
+      "penalty": 255,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 7,
+        "G": 11,
+        "I": 83,
+        "N": 34
+      }
+    },
+    {
+      "id": "tap-2025-rank-63",
+      "name": "Limit Tested",
+      "institution": "Universidad Nacional de La Matanza",
+      "rank": 63,
+      "solved": 4,
+      "penalty": 263,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 15,
+        "G": 15,
+        "I": 123,
+        "N": 70
+      }
+    },
+    {
+      "id": "tap-2025-rank-64",
+      "name": "En mí máquina funciona",
+      "institution": "Universidad de San Andrés",
+      "rank": 64,
+      "solved": 4,
+      "penalty": 269,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 11,
+        "G": 17,
+        "I": 170,
+        "N": 31
+      }
+    },
+    {
+      "id": "tap-2025-rank-65",
+      "name": "Marcos – Lotar",
+      "institution": "Universidad Tecnológica Nacional – Facultad Regional Rosario",
+      "rank": 65,
+      "solved": 4,
+      "penalty": 270,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 21,
+        "G": 14,
+        "I": 98,
+        "N": 117
+      }
+    },
+    {
+      "id": "tap-2025-rank-66",
+      "name": "PodadoraSexy?!",
+      "institution": "Universidad Tecnológica Nacional – Facultad Regional Santa Fe",
+      "rank": 66,
+      "solved": 4,
+      "penalty": 271,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 40,
+        "G": 6,
+        "I": 136,
+        "N": 49
+      }
+    },
+    {
+      "id": "tap-2025-rank-67",
+      "name": "Fuera De La Caja",
+      "institution": "Universidad Torcuato Di Tella",
+      "rank": 67,
+      "solved": 4,
+      "penalty": 279,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 11,
+        "G": 22,
+        "I": 85,
+        "N": 141
+      }
+    },
+    {
+      "id": "tap-2025-rank-68",
+      "name": "team ZER0",
+      "institution": "Universidad Nacional de Jujuy",
+      "rank": 68,
+      "solved": 4,
+      "penalty": 279,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 15,
+        "G": 5,
+        "I": 92,
+        "N": 167
+      }
+    },
+    {
+      "id": "tap-2025-rank-69",
+      "name": "Cubito Imaginario",
+      "institution": "Universidad Nacional de Chilecito",
+      "rank": 69,
+      "solved": 4,
+      "penalty": 284,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 7,
+        "G": 12,
+        "I": 197,
+        "N": 28
+      }
+    },
+    {
+      "id": "tap-2025-rank-70",
+      "name": "-WAall",
+      "institution": "Universidad Nacional de La Plata",
+      "rank": 70,
+      "solved": 4,
+      "penalty": 289,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 13,
+        "G": 16,
+        "I": 101,
+        "N": 139
+      }
+    },
+    {
+      "id": "tap-2025-rank-71",
+      "name": "Syntax Terror",
+      "institution": "Universidad Nacional de Rio Cuarto",
+      "rank": 71,
+      "solved": 4,
+      "penalty": 293,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 5,
+        "G": 8,
+        "I": 79,
+        "N": 201
+      }
+    },
+    {
+      "id": "tap-2025-rank-72",
+      "name": "Los Mini Goats",
+      "institution": "Universidad Nacional de Jujuy",
+      "rank": 72,
+      "solved": 4,
+      "penalty": 294,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 7,
+        "G": 13,
+        "I": 145,
+        "N": 89
+      }
+    },
+    {
+      "id": "tap-2025-rank-73",
+      "name": "Labubu sin laburu",
+      "institution": "Universidad Nacional de Córdoba",
+      "rank": 73,
+      "solved": 4,
+      "penalty": 300,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 9,
+        "G": 11,
+        "I": 120,
+        "N": 60
+      }
+    },
+    {
+      "id": "tap-2025-rank-74",
+      "name": "Los Mejores Al Final",
+      "institution": "Universidad Nacional de La Plata",
+      "rank": 74,
+      "solved": 4,
+      "penalty": 304,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 27,
+        "G": 22,
+        "I": 95,
+        "N": 160
+      }
+    },
+    {
+      "id": "tap-2025-rank-75",
+      "name": "programadoreros",
+      "institution": "Universidad de San Andrés",
+      "rank": 75,
+      "solved": 4,
+      "penalty": 305,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 7,
+        "G": 22,
+        "I": 68,
+        "N": 188
+      }
+    },
+    {
+      "id": "tap-2025-rank-76",
+      "name": "UTN-FRD-2-DropDataBase",
+      "institution": "Universidad Tecnológica Nacional – Facultad Regional Delta",
+      "rank": 76,
+      "solved": 4,
+      "penalty": 328,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 38,
+        "G": 39,
+        "I": 144,
+        "N": 87
+      }
+    },
+    {
+      "id": "tap-2025-rank-77",
+      "name": "Centauro?",
+      "institution": "Universidad Nacional de Rio Negro",
+      "rank": 77,
+      "solved": 4,
+      "penalty": 335,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 4,
+        "G": 9,
+        "I": 190,
+        "N": 132
+      }
+    },
+    {
+      "id": "tap-2025-rank-78",
+      "name": "ci_plas_plas",
+      "institution": "Universidad Nacional de Rio Cuarto",
+      "rank": 78,
+      "solved": 4,
+      "penalty": 350,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 12,
+        "G": 17,
+        "I": 170,
+        "N": 131
+      }
+    },
+    {
+      "id": "tap-2025-rank-79",
+      "name": "SpreadF",
+      "institution": "Universidad Nacional de Tucumán",
+      "rank": 79,
+      "solved": 4,
+      "penalty": 359,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 35,
+        "G": 16,
+        "I": 154,
+        "N": 134
+      }
+    },
+    {
+      "id": "tap-2025-rank-80",
+      "name": "CHIPITIPUMBA",
+      "institution": "Universidad Nacional de Rosario",
+      "rank": 80,
+      "solved": 4,
+      "penalty": 404,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 10,
+        "G": 5,
+        "I": 132,
+        "N": 157
+      }
+    },
+    {
+      "id": "tap-2025-rank-81",
+      "name": "Sapucay",
+      "institution": "Universidad Tecnológica Nacional – Facultad Regional Santa Fe",
+      "rank": 81,
+      "solved": 4,
+      "penalty": 430,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 9,
+        "G": 13,
+        "I": 191,
+        "N": 197
+      }
+    },
+    {
+      "id": "tap-2025-rank-82",
+      "name": "Mein Cöde",
+      "institution": "Universidad Tecnológica Nacional – Facultad Regional Rosario",
+      "rank": 82,
+      "solved": 4,
+      "penalty": 462,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 164,
+        "G": 25,
+        "I": 158,
+        "N": 35
+      }
+    },
+    {
+      "id": "tap-2025-rank-83",
+      "name": "Undefined",
+      "institution": "Universidad Tecnológica Nacional – Facultad Regional Resistencia",
+      "rank": 83,
+      "solved": 4,
+      "penalty": 474,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 15,
+        "G": 2,
+        "I": 238,
+        "N": 199
+      }
+    },
+    {
+      "id": "tap-2025-rank-84",
+      "name": "Godhead",
+      "institution": "Universidad Tecnológica Nacional – Facultad Regional Resistencia",
+      "rank": 84,
+      "solved": 4,
+      "penalty": 475,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 11,
+        "G": 18,
+        "I": 135,
+        "N": 291
+      }
+    },
+    {
+      "id": "tap-2025-rank-85",
+      "name": "Chaco",
+      "institution": "Universidad Tecnológica Nacional – Facultad Regional Resistencia",
+      "rank": 85,
+      "solved": 4,
+      "penalty": 487,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 55,
+        "G": 26,
+        "I": 226,
+        "N": 120
+      }
+    },
+    {
+      "id": "tap-2025-rank-86",
+      "name": "AATGB",
+      "institution": "Universidad Nacional de Jujuy",
+      "rank": 86,
+      "solved": 4,
+      "penalty": 499,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 109,
+        "G": 34,
+        "I": 225,
+        "N": 91
+      }
+    },
+    {
+      "id": "tap-2025-rank-87",
+      "name": "Ctrl+Alt+Tres",
+      "institution": "Universidad Nacional del Litoral",
+      "rank": 87,
+      "solved": 4,
+      "penalty": 507,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 61,
+        "G": 70,
+        "I": 132,
+        "N": 244
+      }
+    },
+    {
+      "id": "tap-2025-rank-88",
+      "name": "Trío 200",
+      "institution": "Universidad Nacional de Rio Cuarto",
+      "rank": 88,
+      "solved": 4,
+      "penalty": 540,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 6,
+        "G": 9,
+        "I": 265,
+        "N": 200
+      }
+    },
+    {
+      "id": "tap-2025-rank-89",
+      "name": "Complejidad cero",
+      "institution": "Universidad Tecnológica Nacional – Facultad Regional Resistencia",
+      "rank": 89,
+      "solved": 4,
+      "penalty": 553,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 4,
+        "G": 9,
+        "I": 276,
+        "N": 244
+      }
+    },
+    {
+      "id": "tap-2025-rank-90",
+      "name": "Solo C que no C nada",
+      "institution": "Instituto Balseiro",
+      "rank": 90,
+      "solved": 4,
+      "penalty": 564,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 8,
+        "G": 29,
+        "I": 231,
+        "N": 196
+      }
+    },
+    {
+      "id": "tap-2025-rank-91",
+      "name": "ChadGPT",
+      "institution": "Universidad Nacional de Rio Negro",
+      "rank": 91,
+      "solved": 4,
+      "penalty": 576,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 35,
+        "G": 24,
+        "I": 209,
+        "N": 248
+      }
+    },
+    {
+      "id": "tap-2025-rank-92",
+      "name": "Team Sangre",
+      "institution": "Universidad Nacional de Salta – Sede Regional Orán",
+      "rank": 92,
+      "solved": 4,
+      "penalty": 577,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 122,
+        "G": 28,
+        "I": 86,
+        "N": 281
+      }
+    },
+    {
+      "id": "tap-2025-rank-93",
+      "name": "Mate.py",
+      "institution": "Universidad Tecnológica Nacional – Facultad Regional Resistencia",
+      "rank": 93,
+      "solved": 4,
+      "penalty": 599,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 216,
+        "G": 15,
+        "I": 208,
+        "N": 60
+      }
+    },
+    {
+      "id": "tap-2025-rank-94",
+      "name": "RETURN 3",
+      "institution": "Universidad Tecnológica Nacional – Facultad Regional Santa Fe",
+      "rank": 94,
+      "solved": 4,
+      "penalty": 749,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 9,
+        "G": 30,
+        "I": 291,
+        "N": 259
+      }
+    },
+    {
+      "id": "tap-2025-rank-95",
+      "name": "Big Brain",
+      "institution": "Universidad Tecnológica Nacional – Facultad Regional Resistencia",
+      "rank": 95,
+      "solved": 3,
+      "penalty": 81,
+      "solvedProblems": [
+        "A",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 16,
+        "G": 24,
+        "N": 41
+      }
+    },
+    {
+      "id": "tap-2025-rank-96",
+      "name": "Extra Soarre 1",
+      "institution": "Universidad Tecnológica Nacional – Facultad Regional Resistencia",
+      "rank": 96,
+      "solved": 3,
+      "penalty": 96,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 6,
+        "G": 9,
+        "I": 81
+      }
+    },
+    {
+      "id": "tap-2025-rank-97",
+      "name": "RuntimeTerrors",
+      "institution": "Universidad Torcuato Di Tella",
+      "rank": 97,
+      "solved": 3,
+      "penalty": 113,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 26,
+        "G": 18,
+        "I": 69
+      }
+    },
+    {
+      "id": "tap-2025-rank-98",
+      "name": "Con 15 líneas me armo alto código",
+      "institution": "Universidad Nacional de La Matanza",
+      "rank": 98,
+      "solved": 3,
+      "penalty": 157,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 9,
+        "G": 16,
+        "I": 112
+      }
+    },
+    {
+      "id": "tap-2025-rank-99",
+      "name": "Alejandro – Maximiliano",
+      "institution": "Universidad Tecnológica Nacional – Facultad Regional Rosario",
+      "rank": 99,
+      "solved": 3,
+      "penalty": 161,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 12,
+        "G": 8,
+        "I": 141
+      }
+    },
+    {
+      "id": "tap-2025-rank-100",
+      "name": "printf(“Rose Everdeen”);",
+      "institution": "Universidad Nacional de Salta – Sede Regional Orán",
+      "rank": 100,
+      "solved": 3,
+      "penalty": 172,
+      "solvedProblems": [
+        "A",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 42,
+        "G": 8,
+        "N": 122
+      }
+    },
+    {
+      "id": "tap-2025-rank-101",
+      "name": "Los Terrabusi",
+      "institution": "Universidad Torcuato Di Tella",
+      "rank": 101,
+      "solved": 3,
+      "penalty": 184,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 13,
+        "G": 7,
+        "I": 144
+      }
+    },
+    {
+      "id": "tap-2025-rank-102",
+      "name": "Fecha Libre",
+      "institution": "Instituto Balseiro",
+      "rank": 102,
+      "solved": 3,
+      "penalty": 189,
+      "solvedProblems": [
+        "A",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 24,
+        "G": 21,
+        "N": 104
+      }
+    },
+    {
+      "id": "tap-2025-rank-103",
+      "name": "Mali",
+      "institution": "Universidad Nacional de Chilecito",
+      "rank": 103,
+      "solved": 3,
+      "penalty": 190,
+      "solvedProblems": [
+        "A",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 38,
+        "G": 53,
+        "N": 79
+      }
+    },
+    {
+      "id": "tap-2025-rank-104",
+      "name": "Los Desconocidos",
+      "institution": "Universidad Nacional de Salta – Sede Regional Orán",
+      "rank": 104,
+      "solved": 3,
+      "penalty": 195,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 30,
+        "G": 38,
+        "I": 127
+      }
+    },
+    {
+      "id": "tap-2025-rank-105",
+      "name": "def torneo()",
+      "institution": "Universidad Nacional de Chilecito",
+      "rank": 105,
+      "solved": 3,
+      "penalty": 201,
+      "solvedProblems": [
+        "A",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 40,
+        "G": 49,
+        "N": 92
+      }
+    },
+    {
+      "id": "tap-2025-rank-106",
+      "name": "PPP",
+      "institution": "Universidad de San Andrés",
+      "rank": 106,
+      "solved": 3,
+      "penalty": 208,
+      "solvedProblems": [
+        "A",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 13,
+        "G": 21,
+        "N": 154
+      }
+    },
+    {
+      "id": "tap-2025-rank-107",
+      "name": "Cod-E",
+      "institution": "Universidad Tecnológica Nacional – Facultad Regional Santa Fe",
+      "rank": 107,
+      "solved": 3,
+      "penalty": 215,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 9,
+        "G": 14,
+        "I": 192
+      }
+    },
+    {
+      "id": "tap-2025-rank-108",
+      "name": "No de nuevo",
+      "institution": "Universidad Tecnológica Nacional – Facultad Regional Santa Fe",
+      "rank": 108,
+      "solved": 3,
+      "penalty": 220,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 9,
+        "G": 14,
+        "I": 197
+      }
+    },
+    {
+      "id": "tap-2025-rank-109",
+      "name": "404_Team_Not_Found",
+      "institution": "Universidad de San Andrés",
+      "rank": 109,
+      "solved": 3,
+      "penalty": 228,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 13,
+        "G": 17,
+        "I": 198
+      }
+    },
+    {
+      "id": "tap-2025-rank-110",
+      "name": "Csquid",
+      "institution": "Universidad Nacional de Tucumán",
+      "rank": 110,
+      "solved": 3,
+      "penalty": 240,
+      "solvedProblems": [
+        "G",
+        "I",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "G": 20,
+        "I": 136,
+        "N": 84
+      }
+    },
+    {
+      "id": "tap-2025-rank-111",
+      "name": "Error_404",
+      "institution": "Universidad Nacional de Chilecito",
+      "rank": 111,
+      "solved": 3,
+      "penalty": 244,
+      "solvedProblems": [
+        "A",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 67,
+        "G": 25,
+        "N": 132
+      }
+    },
+    {
+      "id": "tap-2025-rank-112",
+      "name": "Los tilines",
+      "institution": "Universidad Nacional de Chilecito",
+      "rank": 112,
+      "solved": 3,
+      "penalty": 244,
+      "solvedProblems": [
+        "A",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 148,
+        "G": 39,
+        "N": 57
+      }
+    },
+    {
+      "id": "tap-2025-rank-113",
+      "name": "ExecutionTimeTerror",
+      "institution": "Universidad Nacional de Rio Cuarto",
+      "rank": 113,
+      "solved": 3,
+      "penalty": 252,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 9,
+        "G": 13,
+        "I": 210
+      }
+    },
+    {
+      "id": "tap-2025-rank-114",
+      "name": "Código Amistad",
+      "institution": "Universidad de San Andrés",
+      "rank": 114,
+      "solved": 3,
+      "penalty": 255,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 40,
+        "G": 26,
+        "I": 169
+      }
+    },
+    {
+      "id": "tap-2025-rank-115",
+      "name": "Code Queens",
+      "institution": "Universidad Nacional de Jujuy",
+      "rank": 115,
+      "solved": 3,
+      "penalty": 268,
+      "solvedProblems": [
+        "A",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 16,
+        "G": 96,
+        "N": 136
+      }
+    },
+    {
+      "id": "tap-2025-rank-116",
+      "name": "UTN-FRD-1",
+      "institution": "Universidad Tecnológica Nacional – Facultad Regional Delta",
+      "rank": 116,
+      "solved": 3,
+      "penalty": 270,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 21,
+        "G": 31,
+        "I": 178
+      }
+    },
+    {
+      "id": "tap-2025-rank-117",
+      "name": "Guns and Rozas",
+      "institution": "Universidad Tecnológica Nacional – Facultad Regional Rosario",
+      "rank": 117,
+      "solved": 3,
+      "penalty": 271,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 50,
+        "G": 16,
+        "I": 185
+      }
+    },
+    {
+      "id": "tap-2025-rank-118",
+      "name": "IAL",
+      "institution": "Universidad Tecnológica Nacional – Facultad Regional Rosario",
+      "rank": 118,
+      "solved": 3,
+      "penalty": 275,
+      "solvedProblems": [
+        "A",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 68,
+        "G": 25,
+        "N": 162
+      }
+    },
+    {
+      "id": "tap-2025-rank-119",
+      "name": "The Last Bit",
+      "institution": "Universidad Nacional de Rio Cuarto",
+      "rank": 119,
+      "solved": 3,
+      "penalty": 281,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 24,
+        "G": 23,
+        "I": 214
+      }
+    },
+    {
+      "id": "tap-2025-rank-120",
+      "name": "Java Padawans",
+      "institution": "Universidad Nacional de Salta",
+      "rank": 120,
+      "solved": 3,
+      "penalty": 284,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 15,
+        "G": 104,
+        "I": 165
+      }
+    },
+    {
+      "id": "tap-2025-rank-121",
+      "name": "Pablo",
+      "institution": "Universidad Tecnológica Nacional – Facultad Regional Resistencia",
+      "rank": 121,
+      "solved": 3,
+      "penalty": 286,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 16,
+        "G": 16,
+        "I": 214
+      }
+    },
+    {
+      "id": "tap-2025-rank-122",
+      "name": "SJG.Compile()",
+      "institution": "Universidad Nacional de Jujuy",
+      "rank": 122,
+      "solved": 3,
+      "penalty": 294,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 65,
+        "G": 31,
+        "I": 118
+      }
+    },
+    {
+      "id": "tap-2025-rank-123",
+      "name": "El Coleccionista, El Villano y Lord Dona",
+      "institution": "Universidad Nacional de Salta – Sede Regional Orán",
+      "rank": 123,
+      "solved": 3,
+      "penalty": 294,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 25,
+        "G": 26,
+        "I": 243
+      }
+    },
+    {
+      "id": "tap-2025-rank-124",
+      "name": "While(True) SSJ",
+      "institution": "Universidad Tecnológica Nacional – Facultad Regional Rosario",
+      "rank": 124,
+      "solved": 3,
+      "penalty": 304,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 13,
+        "G": 17,
+        "I": 274
+      }
+    },
+    {
+      "id": "tap-2025-rank-125",
+      "name": "Sin nombre",
+      "institution": "Universidad Nacional de Chilecito",
+      "rank": 125,
+      "solved": 3,
+      "penalty": 305,
+      "solvedProblems": [
+        "A",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 37,
+        "G": 78,
+        "N": 130
+      }
+    },
+    {
+      "id": "tap-2025-rank-126",
+      "name": "Tridente",
+      "institution": "Universidad Nacional de Salta",
+      "rank": 126,
+      "solved": 3,
+      "penalty": 305,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 10,
+        "G": 15,
+        "I": 240
+      }
+    },
+    {
+      "id": "tap-2025-rank-127",
+      "name": "Py3k",
+      "institution": "Universidad Tecnológica Nacional – Facultad Regional Resistencia",
+      "rank": 127,
+      "solved": 3,
+      "penalty": 306,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 117,
+        "G": 17,
+        "I": 132
+      }
+    },
+    {
+      "id": "tap-2025-rank-128",
+      "name": "Uno Cero",
+      "institution": "Universidad Nacional de Salta – Sede Regional Orán",
+      "rank": 128,
+      "solved": 3,
+      "penalty": 308,
+      "solvedProblems": [
+        "A",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 74,
+        "G": 10,
+        "N": 224
+      }
+    },
+    {
+      "id": "tap-2025-rank-129",
+      "name": "Los Inmutables",
+      "institution": "Universidad Nacional de Chilecito",
+      "rank": 129,
+      "solved": 3,
+      "penalty": 312,
+      "solvedProblems": [
+        "A",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 34,
+        "G": 69,
+        "N": 169
+      }
+    },
+    {
+      "id": "tap-2025-rank-130",
+      "name": "EIF++",
+      "institution": "Universidad Nacional de Jujuy",
+      "rank": 130,
+      "solved": 3,
+      "penalty": 312,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 32,
+        "G": 13,
+        "I": 247
+      }
+    },
+    {
+      "id": "tap-2025-rank-131",
+      "name": "Cacho",
+      "institution": "Universidad Tecnológica Nacional – Facultad Regional Resistencia",
+      "rank": 131,
+      "solved": 3,
+      "penalty": 314,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 8,
+        "G": 14,
+        "I": 252
+      }
+    },
+    {
+      "id": "tap-2025-rank-132",
+      "name": "Desigualdad triangular",
+      "institution": "Instituto Balseiro",
+      "rank": 132,
+      "solved": 3,
+      "penalty": 326,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 13,
+        "G": 18,
+        "I": 275
+      }
+    },
+    {
+      "id": "tap-2025-rank-133",
+      "name": "Los brancacitos",
+      "institution": "Universidad Nacional de Salta – Sede Regional Orán",
+      "rank": 133,
+      "solved": 3,
+      "penalty": 328,
+      "solvedProblems": [
+        "A",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 83,
+        "G": 10,
+        "N": 235
+      }
+    },
+    {
+      "id": "tap-2025-rank-134",
+      "name": "TheConcept",
+      "institution": "Universidad Nacional de Chilecito",
+      "rank": 134,
+      "solved": 3,
+      "penalty": 346,
+      "solvedProblems": [
+        "A",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 50,
+        "G": 31,
+        "N": 185
+      }
+    },
+    {
+      "id": "tap-2025-rank-135",
+      "name": "Los Compi-ladores",
+      "institution": "Universidad Nacional de Chilecito",
+      "rank": 135,
+      "solved": 3,
+      "penalty": 347,
+      "solvedProblems": [
+        "A",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 74,
+        "G": 15,
+        "N": 198
+      }
+    },
+    {
+      "id": "tap-2025-rank-136",
+      "name": "PuntoyComa.exe",
+      "institution": "Universidad Nacional de Chilecito",
+      "rank": 136,
+      "solved": 3,
+      "penalty": 363,
+      "solvedProblems": [
+        "A",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 88,
+        "G": 32,
+        "N": 203
+      }
+    },
+    {
+      "id": "tap-2025-rank-137",
+      "name": "ds3",
+      "institution": "Universidad Nacional de Chilecito",
+      "rank": 137,
+      "solved": 3,
+      "penalty": 364,
+      "solvedProblems": [
+        "A",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 55,
+        "G": 4,
+        "N": 205
+      }
+    },
+    {
+      "id": "tap-2025-rank-138",
+      "name": "Code Sisters",
+      "institution": "Universidad Nacional de Chilecito",
+      "rank": 138,
+      "solved": 3,
+      "penalty": 369,
+      "solvedProblems": [
+        "A",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 66,
+        "G": 54,
+        "N": 229
+      }
+    },
+    {
+      "id": "tap-2025-rank-139",
+      "name": "Extra Soarib 1",
+      "institution": "Universidad Nacional del Comahue",
+      "rank": 139,
+      "solved": 3,
+      "penalty": 405,
+      "solvedProblems": [
+        "A",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 152,
+        "G": 90,
+        "N": 143
+      }
+    },
+    {
+      "id": "tap-2025-rank-140",
+      "name": "Exceso 127",
+      "institution": "Universidad Nacional de Chilecito",
+      "rank": 140,
+      "solved": 3,
+      "penalty": 405,
+      "solvedProblems": [
+        "A",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 54,
+        "G": 37,
+        "N": 274
+      }
+    },
+    {
+      "id": "tap-2025-rank-141",
+      "name": "CodeBusters",
+      "institution": "Universidad Nacional de Chilecito",
+      "rank": 141,
+      "solved": 3,
+      "penalty": 412,
+      "solvedProblems": [
+        "A",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 137,
+        "G": 86,
+        "N": 169
+      }
+    },
+    {
+      "id": "tap-2025-rank-142",
+      "name": "boca predio",
+      "institution": "Universidad Nacional de Chilecito",
+      "rank": 142,
+      "solved": 3,
+      "penalty": 417,
+      "solvedProblems": [
+        "A",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 88,
+        "G": 73,
+        "N": 196
+      }
+    },
+    {
+      "id": "tap-2025-rank-143",
+      "name": "devs^3",
+      "institution": "Universidad de San Andrés",
+      "rank": 143,
+      "solved": 3,
+      "penalty": 433,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 159,
+        "G": 19,
+        "I": 215
+      }
+    },
+    {
+      "id": "tap-2025-rank-144",
+      "name": "HuillinCODE",
+      "institution": "Universidad Nacional de Rio Negro",
+      "rank": 144,
+      "solved": 3,
+      "penalty": 440,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 70,
+        "G": 16,
+        "I": 294
+      }
+    },
+    {
+      "id": "tap-2025-rank-145",
+      "name": "Mechabyte 2.0",
+      "institution": "Universidad Nacional de Chilecito",
+      "rank": 145,
+      "solved": 3,
+      "penalty": 444,
+      "solvedProblems": [
+        "A",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 96,
+        "G": 92,
+        "N": 236
+      }
+    },
+    {
+      "id": "tap-2025-rank-146",
+      "name": "SyntaxError:",
+      "institution": "Universidad Nacional de Chilecito",
+      "rank": 146,
+      "solved": 3,
+      "penalty": 689,
+      "solvedProblems": [
+        "A",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 137,
+        "G": 38,
+        "N": 274
+      }
+    },
+    {
+      "id": "tap-2025-rank-147",
+      "name": "Capa de Densos",
+      "institution": "Universidad de San Andrés",
+      "rank": 147,
+      "solved": 2,
+      "penalty": 15,
+      "solvedProblems": [
+        "A",
+        "G"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 6,
+        "G": 9
+      }
+    },
+    {
+      "id": "tap-2025-rank-148",
+      "name": "Xi, Jin y Ping",
+      "institution": "Universidad Nacional de Rosario",
+      "rank": 148,
+      "solved": 2,
+      "penalty": 26,
+      "solvedProblems": [
+        "A",
+        "G"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 9,
+        "G": 17
+      }
+    },
+    {
+      "id": "tap-2025-rank-149",
+      "name": "gordito code",
+      "institution": "Universidad Nacional de Rio Cuarto",
+      "rank": 149,
+      "solved": 2,
+      "penalty": 31,
+      "solvedProblems": [
+        "A",
+        "G"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 21,
+        "G": 10
+      }
+    },
+    {
+      "id": "tap-2025-rank-150",
+      "name": "Las últimas 3 masitas",
+      "institution": "Universidad Nacional de Rio Cuarto",
+      "rank": 150,
+      "solved": 2,
+      "penalty": 32,
+      "solvedProblems": [
+        "A",
+        "G"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 23,
+        "G": 9
+      }
+    },
+    {
+      "id": "tap-2025-rank-151",
+      "name": "Los backend boys",
+      "institution": "Universidad Tecnológica Nacional – Facultad Regional Rosario",
+      "rank": 151,
+      "solved": 2,
+      "penalty": 38,
+      "solvedProblems": [
+        "A",
+        "G"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 29,
+        "G": 9
+      }
+    },
+    {
+      "id": "tap-2025-rank-152",
+      "name": "StackOverflowed",
+      "institution": "Universidad Nacional de La Matanza",
+      "rank": 152,
+      "solved": 2,
+      "penalty": 39,
+      "solvedProblems": [
+        "A",
+        "G"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 16,
+        "G": 23
+      }
+    },
+    {
+      "id": "tap-2025-rank-153",
+      "name": "Sherlock Codes",
+      "institution": "Universidad Tecnológica Nacional – Facultad Regional Resistencia",
+      "rank": 153,
+      "solved": 2,
+      "penalty": 54,
+      "solvedProblems": [
+        "A",
+        "G"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 29,
+        "G": 25
+      }
+    },
+    {
+      "id": "tap-2025-rank-154",
+      "name": "Testing",
+      "institution": "Universidad Nacional de Jujuy",
+      "rank": 154,
+      "solved": 2,
+      "penalty": 69,
+      "solvedProblems": [
+        "A",
+        "G"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 46,
+        "G": 23
+      }
+    },
+    {
+      "id": "tap-2025-rank-155",
+      "name": "Innovacode",
+      "institution": "Universidad Nacional de Chilecito",
+      "rank": 155,
+      "solved": 2,
+      "penalty": 84,
+      "solvedProblems": [
+        "A",
+        "G"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 34,
+        "G": 50
+      }
+    },
+    {
+      "id": "tap-2025-rank-156",
+      "name": "CompiladoresX",
+      "institution": "Universidad Nacional de Salta",
+      "rank": 156,
+      "solved": 2,
+      "penalty": 97,
+      "solvedProblems": [
+        "A",
+        "G"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 55,
+        "G": 42
+      }
+    },
+    {
+      "id": "tap-2025-rank-157",
+      "name": "AK47",
+      "institution": "Universidad Nacional de Salta – Sede Regional Orán",
+      "rank": 157,
+      "solved": 2,
+      "penalty": 102,
+      "solvedProblems": [
+        "A",
+        "G"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 39,
+        "G": 23
+      }
+    },
+    {
+      "id": "tap-2025-rank-158",
+      "name": "B.I.T",
+      "institution": "Universidad de San Andrés",
+      "rank": 158,
+      "solved": 2,
+      "penalty": 110,
+      "solvedProblems": [
+        "A",
+        "G"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 14,
+        "G": 76
+      }
+    },
+    {
+      "id": "tap-2025-rank-159",
+      "name": "Marioneta",
+      "institution": "Universidad Nacional de Rio Cuarto",
+      "rank": 159,
+      "solved": 2,
+      "penalty": 112,
+      "solvedProblems": [
+        "A",
+        "G"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 54,
+        "G": 18
+      }
+    },
+    {
+      "id": "tap-2025-rank-160",
+      "name": "printf(“Equipo para T.A.P”);",
+      "institution": "Universidad Nacional de Chilecito",
+      "rank": 160,
+      "solved": 2,
+      "penalty": 126,
+      "solvedProblems": [
+        "A",
+        "G"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 107,
+        "G": 19
+      }
+    },
+    {
+      "id": "tap-2025-rank-161",
+      "name": "Codigo Raiz",
+      "institution": "Universidad Nacional de Chilecito",
+      "rank": 161,
+      "solved": 2,
+      "penalty": 168,
+      "solvedProblems": [
+        "A",
+        "G"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 107,
+        "G": 61
+      }
+    },
+    {
+      "id": "tap-2025-rank-162",
+      "name": "SMS",
+      "institution": "Universidad de San Andrés",
+      "rank": 162,
+      "solved": 2,
+      "penalty": 183,
+      "solvedProblems": [
+        "A",
+        "G"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 73,
+        "G": 30
+      }
+    },
+    {
+      "id": "tap-2025-rank-163",
+      "name": "TeamUNLaM03",
+      "institution": "Universidad Nacional de La Matanza",
+      "rank": 163,
+      "solved": 2,
+      "penalty": 192,
+      "solvedProblems": [
+        "A",
+        "G"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 83,
+        "G": 69
+      }
+    },
+    {
+      "id": "tap-2025-rank-164",
+      "name": "Nikola",
+      "institution": "Universidad Nacional de Chilecito",
+      "rank": 164,
+      "solved": 2,
+      "penalty": 201,
+      "solvedProblems": [
+        "A",
+        "G"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 143,
+        "G": 58
+      }
+    },
+    {
+      "id": "tap-2025-rank-165",
+      "name": "Codecraft",
+      "institution": "Universidad Tecnológica Nacional – Facultad Regional Resistencia",
+      "rank": 165,
+      "solved": 2,
+      "penalty": 203,
+      "solvedProblems": [
+        "A",
+        "G"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 159,
+        "G": 4
+      }
+    },
+    {
+      "id": "tap-2025-rank-166",
+      "name": "KiNoTo",
+      "institution": "Universidad Nacional de Rio Cuarto",
+      "rank": 166,
+      "solved": 2,
+      "penalty": 216,
+      "solvedProblems": [
+        "A",
+        "G"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 196,
+        "G": 20
+      }
+    },
+    {
+      "id": "tap-2025-rank-167",
+      "name": "Speed",
+      "institution": "Universidad Nacional de Córdoba",
+      "rank": 167,
+      "solved": 2,
+      "penalty": 222,
+      "solvedProblems": [
+        "A",
+        "G"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 37,
+        "G": 125
+      }
+    },
+    {
+      "id": "tap-2025-rank-168",
+      "name": "OnlyJava",
+      "institution": "Universidad Nacional de Rio Cuarto",
+      "rank": 168,
+      "solved": 2,
+      "penalty": 237,
+      "solvedProblems": [
+        "A",
+        "G"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 161,
+        "G": 16
+      }
+    },
+    {
+      "id": "tap-2025-rank-169",
+      "name": "ALT+F4",
+      "institution": "Universidad Nacional de Chilecito",
+      "rank": 169,
+      "solved": 2,
+      "penalty": 276,
+      "solvedProblems": [
+        "A",
+        "G"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 118,
+        "G": 98
+      }
+    },
+    {
+      "id": "tap-2025-rank-170",
+      "name": "Leveling",
+      "institution": "Universidad Nacional de Chilecito",
+      "rank": 170,
+      "solved": 2,
+      "penalty": 276,
+      "solvedProblems": [
+        "A",
+        "G"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 184,
+        "G": 72
+      }
+    },
+    {
+      "id": "tap-2025-rank-171",
+      "name": "Código 3",
+      "institution": "Universidad Nacional de Chilecito",
+      "rank": 171,
+      "solved": 2,
+      "penalty": 279,
+      "solvedProblems": [
+        "A",
+        "G"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 177,
+        "G": 102
+      }
+    },
+    {
+      "id": "tap-2025-rank-172",
+      "name": "Team TOR",
+      "institution": "Universidad Nacional del Litoral",
+      "rank": 172,
+      "solved": 2,
+      "penalty": 282,
+      "solvedProblems": [
+        "A",
+        "G"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 229,
+        "G": 13
+      }
+    },
+    {
+      "id": "tap-2025-rank-173",
+      "name": "Los yin y yang 2: La venganza de Momo",
+      "institution": "Universidad Nacional de Chilecito",
+      "rank": 173,
+      "solved": 2,
+      "penalty": 300,
+      "solvedProblems": [
+        "A",
+        "G"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 170,
+        "G": 50
+      }
+    },
+    {
+      "id": "tap-2025-rank-174",
+      "name": "E.A.B.M.O.D.E.L.",
+      "institution": "Universidad Nacional de La Matanza",
+      "rank": 174,
+      "solved": 2,
+      "penalty": 320,
+      "solvedProblems": [
+        "A",
+        "G"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 132,
+        "G": 48
+      }
+    },
+    {
+      "id": "tap-2025-rank-175",
+      "name": "CJ",
+      "institution": "Universidad Nacional de Chilecito",
+      "rank": 175,
+      "solved": 2,
+      "penalty": 402,
+      "solvedProblems": [
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "G": 81,
+        "N": 281
+      }
+    },
+    {
+      "id": "tap-2025-rank-176",
+      "name": "Code Hunters",
+      "institution": "Universidad Nacional de Jujuy",
+      "rank": 176,
+      "solved": 2,
+      "penalty": 408,
+      "solvedProblems": [
+        "A",
+        "G"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 272,
+        "G": 56
+      }
+    },
+    {
+      "id": "tap-2025-rank-177",
+      "name": "casi_ejecuta",
+      "institution": "Universidad Nacional del Litoral",
+      "rank": 177,
+      "solved": 2,
+      "penalty": 478,
+      "solvedProblems": [
+        "A",
+        "G"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "A": 167,
+        "G": 151
+      }
+    },
+    {
+      "id": "tap-2025-rank-178",
+      "name": "baiteadores",
+      "institution": "Universidad Nacional de Chilecito",
+      "rank": 178,
+      "solved": 1,
+      "penalty": 9,
+      "solvedProblems": [
+        "G"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "G": 9
+      }
+    },
+    {
+      "id": "tap-2025-rank-179",
+      "name": "Panchito gang",
+      "institution": "Universidad Nacional de Chilecito",
+      "rank": 179,
+      "solved": 1,
+      "penalty": 10,
+      "solvedProblems": [
+        "G"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "G": 10
+      }
+    },
+    {
+      "id": "tap-2025-rank-180",
+      "name": "syntax error",
+      "institution": "Universidad Nacional de Chilecito",
+      "rank": 180,
+      "solved": 1,
+      "penalty": 62,
+      "solvedProblems": [
+        "G"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "G": 42
+      }
+    },
+    {
+      "id": "tap-2025-rank-181",
+      "name": "TOONS",
+      "institution": "Universidad Tecnológica Nacional – Facultad Regional Resistencia",
+      "rank": 181,
+      "solved": 1,
+      "penalty": 159,
+      "solvedProblems": [
+        "G"
+      ],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {
+        "G": 119
+      }
+    },
+    {
+      "id": "tap-2025-rank-182",
+      "name": "Root",
+      "institution": "Universidad Tecnológica Nacional – Facultad Regional Resistencia",
+      "rank": 182,
+      "solved": 0,
+      "penalty": 0,
+      "solvedProblems": [],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {}
+    },
+    {
+      "id": "tap-2025-rank-183",
+      "name": "Code Breakers",
+      "institution": "Universidad Nacional de Jujuy",
+      "rank": 183,
+      "solved": 0,
+      "penalty": 0,
+      "solvedProblems": [],
+      "sourceUrl": "https://aapc.org.ar/resultados-tap-2025/",
+      "acceptedMinutes": {}
+    }
+  ],
+  "distribution": [
+    {
+      "solved": 0,
+      "teams": 2
+    },
+    {
+      "solved": 1,
+      "teams": 4
+    },
+    {
+      "solved": 2,
+      "teams": 31
+    },
+    {
+      "solved": 3,
+      "teams": 52
+    },
+    {
+      "solved": 4,
+      "teams": 69
+    },
+    {
+      "solved": 5,
+      "teams": 8
+    },
+    {
+      "solved": 6,
+      "teams": 8
+    },
+    {
+      "solved": 8,
+      "teams": 1
+    },
+    {
+      "solved": 9,
+      "teams": 1
+    },
+    {
+      "solved": 10,
+      "teams": 4
+    },
+    {
+      "solved": 11,
+      "teams": 1
+    },
+    {
+      "solved": 12,
+      "teams": 2
+    }
+  ],
+  "qualification": {
+    "ruleUrls": [
+      "https://icpc.com.ar/wp-content/uploads/2025/08/criterioclasificacionregionalicpc2025.pdf"
+    ],
+    "facts": [
+      {
+        "claim": "El TAP 2025 es la instancia clasificatoria para la Regional Latinoamericana del 8 de noviembre de 2025 en UTN Facultad Regional Santa Fe.",
+        "sourceUrl": "https://icpc.com.ar/wp-content/uploads/2025/08/criterioclasificacionregionalicpc2025.pdf"
+      },
+      {
+        "claim": "El documento anuncia 55 cupos disponibles para equipos de Argentina; los criterios 1 a 5 priorizan posiciones 1–20 con restricción institucional (se exceptúa a equipos con cuatro o más de la misma institución en posiciones superiores) y luego los mejores equipos por institución hasta 51 cupos.",
+        "sourceUrl": "https://icpc.com.ar/wp-content/uploads/2025/08/criterioclasificacionregionalicpc2025.pdf"
+      },
+      {
+        "claim": "El criterio 6 garantiza al menos cuatro cupos para equipos femeninos (tres integrantes femeninas), con máximo dos equipos femeninos por institución; el criterio 7 completa hasta 55 aplicando criterios 2–5. ICPC Argentina se reserva continuar invitando equipos si se liberan cupos.",
+        "sourceUrl": "https://icpc.com.ar/wp-content/uploads/2025/08/criterioclasificacionregionalicpc2025.pdf"
+      }
+    ],
+    "uncertainties": []
+  },
+  "sources": [
+    {
+      "id": "official-event",
+      "url": "https://aapc.org.ar/tap-2025/",
+      "label": "Edición TAP 2025 AAPC",
+      "kind": "official",
+      "localPath": "fuentes/tap_2025.html",
+      "accessedAt": "2026-11-10"
+    },
+    {
+      "id": "official-results",
+      "url": "https://aapc.org.ar/resultados-tap-2025/",
+      "label": "Resultados oficiales AAPC TAP 2025",
+      "kind": "official",
+      "localPath": "fuentes/resultados_tap_2025.html",
+      "accessedAt": "2026-11-10"
+    },
+    {
+      "id": "booklet",
+      "url": "https://icpc.com.ar/wp-content/uploads/2025/08/tap2025.pdf",
+      "label": "Cuaderno oficial",
+      "kind": "official",
+      "localPath": "fuentes/tap2025_oficial.pdf",
+      "accessedAt": "2026-11-10"
+    },
+    {
+      "id": "qualification",
+      "url": "https://icpc.com.ar/wp-content/uploads/2025/08/criterioclasificacionregionalicpc2025.pdf",
+      "label": "Criterio de clasificación ICPC 2025",
+      "kind": "official",
+      "localPath": "fuentes/criterio_clasificacion_2025.pdf",
+      "accessedAt": "2026-11-10"
+    },
+    {
+      "id": "gym-linked",
+      "url": "https://codeforces.com/gym/106054",
+      "label": "Juez online enlazado desde la página AAPC TAP 2025",
+      "kind": "official",
+      "localPath": null,
+      "accessedAt": "2026-11-10"
+    },
+    {
+      "id": "gym-standings",
+      "url": "https://codeforces.com/gym/106054/standings",
+      "label": "Réplica de resultados del evento en Gym; reconciliada con AAPC antes de contar AC",
+      "kind": "official",
+      "localPath": "fuentes/standings_ghost_rows.jsonl",
+      "accessedAt": "2026-11-10"
+    }
+  ],
+  "unknowns": [
+    "El Gym contiene una fila extra (CCL Soarch 4) que no aparece en la tabla AAPC y no tiene a Root de AAPC; métricas por problema usan solo los 182 equipos reconciliados por nombre, problemas y penalidad. Root queda con solvedProblems null. La discrepancia de memberships está documentada en notas."
+  ],
+  "rawStandingsRows": [
+    {
+      "name": "programadoreros",
+      "solved": 4,
+      "penalty": 305,
+      "acceptedMinutes": {
+        "A": 7,
+        "G": 22,
+        "I": 68,
+        "N": 188
+      }
+    },
+    {
+      "name": "UTN-FRD-2-DropDataBase",
+      "solved": 4,
+      "penalty": 328,
+      "acceptedMinutes": {
+        "A": 38,
+        "G": 39,
+        "I": 144,
+        "N": 87
+      }
+    },
+    {
+      "name": "Centauro?",
+      "solved": 4,
+      "penalty": 335,
+      "acceptedMinutes": {
+        "A": 4,
+        "G": 9,
+        "I": 190,
+        "N": 132
+      }
+    },
+    {
+      "name": "ci_plas_plas",
+      "solved": 4,
+      "penalty": 350,
+      "acceptedMinutes": {
+        "A": 12,
+        "G": 17,
+        "I": 170,
+        "N": 131
+      }
+    },
+    {
+      "name": "SpreadF",
+      "solved": 4,
+      "penalty": 359,
+      "acceptedMinutes": {
+        "A": 35,
+        "G": 16,
+        "I": 154,
+        "N": 134
+      }
+    },
+    {
+      "name": "CHIPITIPUMBA",
+      "solved": 4,
+      "penalty": 404,
+      "acceptedMinutes": {
+        "A": 10,
+        "G": 5,
+        "I": 132,
+        "N": 157
+      }
+    },
+    {
+      "name": "Sapucay",
+      "solved": 4,
+      "penalty": 430,
+      "acceptedMinutes": {
+        "A": 9,
+        "G": 13,
+        "I": 191,
+        "N": 197
+      }
+    },
+    {
+      "name": "Mein Cöde",
+      "solved": 4,
+      "penalty": 462,
+      "acceptedMinutes": {
+        "A": 164,
+        "G": 25,
+        "I": 158,
+        "N": 35
+      }
+    },
+    {
+      "name": "Undefined",
+      "solved": 4,
+      "penalty": 474,
+      "acceptedMinutes": {
+        "A": 15,
+        "G": 2,
+        "I": 238,
+        "N": 199
+      }
+    },
+    {
+      "name": "Godhead",
+      "solved": 4,
+      "penalty": 475,
+      "acceptedMinutes": {
+        "A": 11,
+        "G": 18,
+        "I": 135,
+        "N": 291
+      }
+    },
+    {
+      "name": "Chaco",
+      "solved": 4,
+      "penalty": 487,
+      "acceptedMinutes": {
+        "A": 55,
+        "G": 26,
+        "I": 226,
+        "N": 120
+      }
+    },
+    {
+      "name": "AATGB",
+      "solved": 4,
+      "penalty": 499,
+      "acceptedMinutes": {
+        "A": 109,
+        "G": 34,
+        "I": 225,
+        "N": 91
+      }
+    },
+    {
+      "name": "Ctrl+Alt+Tres",
+      "solved": 4,
+      "penalty": 507,
+      "acceptedMinutes": {
+        "A": 61,
+        "G": 70,
+        "I": 132,
+        "N": 244
+      }
+    },
+    {
+      "name": "Trío 200",
+      "solved": 4,
+      "penalty": 540,
+      "acceptedMinutes": {
+        "A": 6,
+        "G": 9,
+        "I": 265,
+        "N": 200
+      }
+    },
+    {
+      "name": "Complejidad cero",
+      "solved": 4,
+      "penalty": 553,
+      "acceptedMinutes": {
+        "A": 4,
+        "G": 9,
+        "I": 276,
+        "N": 244
+      }
+    },
+    {
+      "name": "Solo C que no C nada",
+      "solved": 4,
+      "penalty": 564,
+      "acceptedMinutes": {
+        "A": 8,
+        "G": 29,
+        "I": 231,
+        "N": 196
+      }
+    },
+    {
+      "name": "ChadGPT",
+      "solved": 4,
+      "penalty": 576,
+      "acceptedMinutes": {
+        "A": 35,
+        "G": 24,
+        "I": 209,
+        "N": 248
+      }
+    },
+    {
+      "name": "Team Sangre ��",
+      "solved": 4,
+      "penalty": 577,
+      "acceptedMinutes": {
+        "A": 122,
+        "G": 28,
+        "I": 86,
+        "N": 281
+      }
+    },
+    {
+      "name": "Mate.py",
+      "solved": 4,
+      "penalty": 599,
+      "acceptedMinutes": {
+        "A": 216,
+        "G": 15,
+        "I": 208,
+        "N": 60
+      }
+    },
+    {
+      "name": "RETURN 3",
+      "solved": 4,
+      "penalty": 749,
+      "acceptedMinutes": {
+        "A": 9,
+        "G": 30,
+        "I": 291,
+        "N": 259
+      }
+    },
+    {
+      "name": "Big Brain",
+      "solved": 3,
+      "penalty": 81,
+      "acceptedMinutes": {
+        "A": 16,
+        "G": 24,
+        "N": 41
+      }
+    },
+    {
+      "name": "Extra Soarre 1",
+      "solved": 3,
+      "penalty": 96,
+      "acceptedMinutes": {
+        "A": 6,
+        "G": 9,
+        "I": 81
+      }
+    },
+    {
+      "name": "RuntimeTerrors",
+      "solved": 3,
+      "penalty": 113,
+      "acceptedMinutes": {
+        "A": 26,
+        "G": 18,
+        "I": 69
+      }
+    },
+    {
+      "name": "Con 15 líneas me armo alto código",
+      "solved": 3,
+      "penalty": 157,
+      "acceptedMinutes": {
+        "A": 9,
+        "G": 16,
+        "I": 112
+      }
+    },
+    {
+      "name": "Alejandro - Maximiliano",
+      "solved": 3,
+      "penalty": 161,
+      "acceptedMinutes": {
+        "A": 12,
+        "G": 8,
+        "I": 141
+      }
+    },
+    {
+      "name": "printf(\"Rose Everdeen\");",
+      "solved": 3,
+      "penalty": 172,
+      "acceptedMinutes": {
+        "A": 42,
+        "G": 8,
+        "N": 122
+      }
+    },
+    {
+      "name": "Los Terrabusi",
+      "solved": 3,
+      "penalty": 184,
+      "acceptedMinutes": {
+        "A": 13,
+        "G": 7,
+        "I": 144
+      }
+    },
+    {
+      "name": "Fecha Libre",
+      "solved": 3,
+      "penalty": 189,
+      "acceptedMinutes": {
+        "A": 24,
+        "G": 21,
+        "N": 104
+      }
+    },
+    {
+      "name": "Mali",
+      "solved": 3,
+      "penalty": 190,
+      "acceptedMinutes": {
+        "A": 38,
+        "G": 53,
+        "N": 79
+      }
+    },
+    {
+      "name": "Los Desconocidos",
+      "solved": 3,
+      "penalty": 195,
+      "acceptedMinutes": {
+        "A": 30,
+        "G": 38,
+        "I": 127
+      }
+    },
+    {
+      "name": "def torneo()",
+      "solved": 3,
+      "penalty": 201,
+      "acceptedMinutes": {
+        "A": 40,
+        "G": 49,
+        "N": 92
+      }
+    },
+    {
+      "name": "PPP",
+      "solved": 3,
+      "penalty": 208,
+      "acceptedMinutes": {
+        "A": 13,
+        "G": 21,
+        "N": 154
+      }
+    },
+    {
+      "name": "Cod-E",
+      "solved": 3,
+      "penalty": 215,
+      "acceptedMinutes": {
+        "A": 9,
+        "G": 14,
+        "I": 192
+      }
+    },
+    {
+      "name": "No de nuevo",
+      "solved": 3,
+      "penalty": 220,
+      "acceptedMinutes": {
+        "A": 9,
+        "G": 14,
+        "I": 197
+      }
+    },
+    {
+      "name": "404_Team_Not_Found",
+      "solved": 3,
+      "penalty": 228,
+      "acceptedMinutes": {
+        "A": 13,
+        "G": 17,
+        "I": 198
+      }
+    },
+    {
+      "name": "Csquid",
+      "solved": 3,
+      "penalty": 240,
+      "acceptedMinutes": {
+        "G": 20,
+        "I": 136,
+        "N": 84
+      }
+    },
+    {
+      "name": "Error_404",
+      "solved": 3,
+      "penalty": 244,
+      "acceptedMinutes": {
+        "A": 67,
+        "G": 25,
+        "N": 132
+      }
+    },
+    {
+      "name": "Los tilines",
+      "solved": 3,
+      "penalty": 244,
+      "acceptedMinutes": {
+        "A": 148,
+        "G": 39,
+        "N": 57
+      }
+    },
+    {
+      "name": "ExecutionTimeTerror",
+      "solved": 3,
+      "penalty": 252,
+      "acceptedMinutes": {
+        "A": 9,
+        "G": 13,
+        "I": 210
+      }
+    },
+    {
+      "name": "Código Amistad",
+      "solved": 3,
+      "penalty": 255,
+      "acceptedMinutes": {
+        "A": 40,
+        "G": 26,
+        "I": 169
+      }
+    },
+    {
+      "name": "Code Queens",
+      "solved": 3,
+      "penalty": 268,
+      "acceptedMinutes": {
+        "A": 16,
+        "G": 96,
+        "N": 136
+      }
+    },
+    {
+      "name": "UTN-FRD-1",
+      "solved": 3,
+      "penalty": 270,
+      "acceptedMinutes": {
+        "A": 21,
+        "G": 31,
+        "I": 178
+      }
+    },
+    {
+      "name": "Guns and Rozas",
+      "solved": 3,
+      "penalty": 271,
+      "acceptedMinutes": {
+        "A": 50,
+        "G": 16,
+        "I": 185
+      }
+    },
+    {
+      "name": "IAL",
+      "solved": 3,
+      "penalty": 275,
+      "acceptedMinutes": {
+        "A": 68,
+        "G": 25,
+        "N": 162
+      }
+    },
+    {
+      "name": "The Last Bit",
+      "solved": 3,
+      "penalty": 281,
+      "acceptedMinutes": {
+        "A": 24,
+        "G": 23,
+        "I": 214
+      }
+    },
+    {
+      "name": "Java Padawans",
+      "solved": 3,
+      "penalty": 284,
+      "acceptedMinutes": {
+        "A": 15,
+        "G": 104,
+        "I": 165
+      }
+    },
+    {
+      "name": "Pablo",
+      "solved": 3,
+      "penalty": 286,
+      "acceptedMinutes": {
+        "A": 16,
+        "G": 16,
+        "I": 214
+      }
+    },
+    {
+      "name": "SJG.Compile()",
+      "solved": 3,
+      "penalty": 294,
+      "acceptedMinutes": {
+        "A": 65,
+        "G": 31,
+        "I": 118
+      }
+    },
+    {
+      "name": "El Coleccionista, El Villano y Lord Dona",
+      "solved": 3,
+      "penalty": 294,
+      "acceptedMinutes": {
+        "A": 25,
+        "G": 26,
+        "I": 243
+      }
+    },
+    {
+      "name": "While(True) SSJ",
+      "solved": 3,
+      "penalty": 304,
+      "acceptedMinutes": {
+        "A": 13,
+        "G": 17,
+        "I": 274
+      }
+    },
+    {
+      "name": "Sin nombre",
+      "solved": 3,
+      "penalty": 305,
+      "acceptedMinutes": {
+        "A": 37,
+        "G": 78,
+        "N": 130
+      }
+    },
+    {
+      "name": "Tridente",
+      "solved": 3,
+      "penalty": 305,
+      "acceptedMinutes": {
+        "A": 10,
+        "G": 15,
+        "I": 240
+      }
+    },
+    {
+      "name": "Py3k",
+      "solved": 3,
+      "penalty": 306,
+      "acceptedMinutes": {
+        "A": 117,
+        "G": 17,
+        "I": 132
+      }
+    },
+    {
+      "name": "Uno Cero",
+      "solved": 3,
+      "penalty": 308,
+      "acceptedMinutes": {
+        "A": 74,
+        "G": 10,
+        "N": 224
+      }
+    },
+    {
+      "name": "EIF++",
+      "solved": 3,
+      "penalty": 312,
+      "acceptedMinutes": {
+        "A": 32,
+        "G": 13,
+        "I": 247
+      }
+    },
+    {
+      "name": "Los Inmutables",
+      "solved": 3,
+      "penalty": 312,
+      "acceptedMinutes": {
+        "A": 34,
+        "G": 69,
+        "N": 169
+      }
+    },
+    {
+      "name": "Cacho",
+      "solved": 3,
+      "penalty": 314,
+      "acceptedMinutes": {
+        "A": 8,
+        "G": 14,
+        "I": 252
+      }
+    },
+    {
+      "name": "Desigualdad triangular",
+      "solved": 3,
+      "penalty": 326,
+      "acceptedMinutes": {
+        "A": 13,
+        "G": 18,
+        "I": 275
+      }
+    },
+    {
+      "name": "Los brancacitos",
+      "solved": 3,
+      "penalty": 328,
+      "acceptedMinutes": {
+        "A": 83,
+        "G": 10,
+        "N": 235
+      }
+    },
+    {
+      "name": "TheConcept",
+      "solved": 3,
+      "penalty": 346,
+      "acceptedMinutes": {
+        "A": 50,
+        "G": 31,
+        "N": 185
+      }
+    },
+    {
+      "name": "Los Compi-ladores",
+      "solved": 3,
+      "penalty": 347,
+      "acceptedMinutes": {
+        "A": 74,
+        "G": 15,
+        "N": 198
+      }
+    },
+    {
+      "name": "PuntoyComa.exe",
+      "solved": 3,
+      "penalty": 363,
+      "acceptedMinutes": {
+        "A": 88,
+        "G": 32,
+        "N": 203
+      }
+    },
+    {
+      "name": "ds3",
+      "solved": 3,
+      "penalty": 364,
+      "acceptedMinutes": {
+        "A": 55,
+        "G": 4,
+        "N": 205
+      }
+    },
+    {
+      "name": "Code Sisters",
+      "solved": 3,
+      "penalty": 369,
+      "acceptedMinutes": {
+        "A": 66,
+        "G": 54,
+        "N": 229
+      }
+    },
+    {
+      "name": "Exceso 127",
+      "solved": 3,
+      "penalty": 405,
+      "acceptedMinutes": {
+        "A": 54,
+        "G": 37,
+        "N": 274
+      }
+    },
+    {
+      "name": "Extra Soarib 1",
+      "solved": 3,
+      "penalty": 405,
+      "acceptedMinutes": {
+        "A": 152,
+        "G": 90,
+        "N": 143
+      }
+    },
+    {
+      "name": "CodeBusters",
+      "solved": 3,
+      "penalty": 412,
+      "acceptedMinutes": {
+        "A": 137,
+        "G": 86,
+        "N": 169
+      }
+    },
+    {
+      "name": "boca predio",
+      "solved": 3,
+      "penalty": 417,
+      "acceptedMinutes": {
+        "A": 88,
+        "G": 73,
+        "N": 196
+      }
+    },
+    {
+      "name": "devs^3",
+      "solved": 3,
+      "penalty": 433,
+      "acceptedMinutes": {
+        "A": 159,
+        "G": 19,
+        "I": 215
+      }
+    },
+    {
+      "name": "HuillinCODE",
+      "solved": 3,
+      "penalty": 440,
+      "acceptedMinutes": {
+        "A": 70,
+        "G": 16,
+        "I": 294
+      }
+    },
+    {
+      "name": "Mechabyte 2.0",
+      "solved": 3,
+      "penalty": 444,
+      "acceptedMinutes": {
+        "A": 96,
+        "G": 92,
+        "N": 236
+      }
+    },
+    {
+      "name": "SyntaxError:",
+      "solved": 3,
+      "penalty": 689,
+      "acceptedMinutes": {
+        "A": 137,
+        "G": 38,
+        "N": 274
+      }
+    },
+    {
+      "name": "Capa de Densos",
+      "solved": 2,
+      "penalty": 15,
+      "acceptedMinutes": {
+        "A": 6,
+        "G": 9
+      }
+    },
+    {
+      "name": "Xi, Jin y Ping",
+      "solved": 2,
+      "penalty": 26,
+      "acceptedMinutes": {
+        "A": 9,
+        "G": 17
+      }
+    },
+    {
+      "name": "gordito code",
+      "solved": 2,
+      "penalty": 31,
+      "acceptedMinutes": {
+        "A": 21,
+        "G": 10
+      }
+    },
+    {
+      "name": "CCL Soarch 4",
+      "solved": 2,
+      "penalty": 32,
+      "acceptedMinutes": {
+        "A": 14,
+        "G": 18
+      }
+    },
+    {
+      "name": "Las últimas 3 masitas",
+      "solved": 2,
+      "penalty": 32,
+      "acceptedMinutes": {
+        "A": 23,
+        "G": 9
+      }
+    },
+    {
+      "name": "Los backend boys",
+      "solved": 2,
+      "penalty": 38,
+      "acceptedMinutes": {
+        "A": 29,
+        "G": 9
+      }
+    },
+    {
+      "name": "StackOverflowed",
+      "solved": 2,
+      "penalty": 39,
+      "acceptedMinutes": {
+        "A": 16,
+        "G": 23
+      }
+    },
+    {
+      "name": "Sherlock Codes",
+      "solved": 2,
+      "penalty": 54,
+      "acceptedMinutes": {
+        "A": 29,
+        "G": 25
+      }
+    },
+    {
+      "name": "Testing",
+      "solved": 2,
+      "penalty": 69,
+      "acceptedMinutes": {
+        "A": 46,
+        "G": 23
+      }
+    },
+    {
+      "name": "Innovacode",
+      "solved": 2,
+      "penalty": 84,
+      "acceptedMinutes": {
+        "A": 34,
+        "G": 50
+      }
+    },
+    {
+      "name": "CompiladoresX",
+      "solved": 2,
+      "penalty": 97,
+      "acceptedMinutes": {
+        "A": 55,
+        "G": 42
+      }
+    },
+    {
+      "name": "AK47",
+      "solved": 2,
+      "penalty": 102,
+      "acceptedMinutes": {
+        "A": 39,
+        "G": 23
+      }
+    },
+    {
+      "name": "B.I.T",
+      "solved": 2,
+      "penalty": 110,
+      "acceptedMinutes": {
+        "A": 14,
+        "G": 76
+      }
+    },
+    {
+      "name": "Marioneta",
+      "solved": 2,
+      "penalty": 112,
+      "acceptedMinutes": {
+        "A": 54,
+        "G": 18
+      }
+    },
+    {
+      "name": "printf(\"Equipo para T.A.P\");",
+      "solved": 2,
+      "penalty": 126,
+      "acceptedMinutes": {
+        "A": 107,
+        "G": 19
+      }
+    },
+    {
+      "name": "Codigo Raiz",
+      "solved": 2,
+      "penalty": 168,
+      "acceptedMinutes": {
+        "A": 107,
+        "G": 61
+      }
+    },
+    {
+      "name": "SMS",
+      "solved": 2,
+      "penalty": 183,
+      "acceptedMinutes": {
+        "A": 73,
+        "G": 30
+      }
+    },
+    {
+      "name": "TeamUNLaM03",
+      "solved": 2,
+      "penalty": 192,
+      "acceptedMinutes": {
+        "A": 83,
+        "G": 69
+      }
+    },
+    {
+      "name": "Nikola",
+      "solved": 2,
+      "penalty": 201,
+      "acceptedMinutes": {
+        "A": 143,
+        "G": 58
+      }
+    },
+    {
+      "name": "Codecraft",
+      "solved": 2,
+      "penalty": 203,
+      "acceptedMinutes": {
+        "A": 159,
+        "G": 4
+      }
+    },
+    {
+      "name": "KiNoTo",
+      "solved": 2,
+      "penalty": 216,
+      "acceptedMinutes": {
+        "A": 196,
+        "G": 20
+      }
+    },
+    {
+      "name": "Speed",
+      "solved": 2,
+      "penalty": 222,
+      "acceptedMinutes": {
+        "A": 37,
+        "G": 125
+      }
+    },
+    {
+      "name": "OnlyJava",
+      "solved": 2,
+      "penalty": 237,
+      "acceptedMinutes": {
+        "A": 161,
+        "G": 16
+      }
+    },
+    {
+      "name": "ALT+F4",
+      "solved": 2,
+      "penalty": 276,
+      "acceptedMinutes": {
+        "A": 118,
+        "G": 98
+      }
+    },
+    {
+      "name": "Leveling",
+      "solved": 2,
+      "penalty": 276,
+      "acceptedMinutes": {
+        "A": 184,
+        "G": 72
+      }
+    },
+    {
+      "name": "Código 3",
+      "solved": 2,
+      "penalty": 279,
+      "acceptedMinutes": {
+        "A": 177,
+        "G": 102
+      }
+    },
+    {
+      "name": "Team TOR",
+      "solved": 2,
+      "penalty": 282,
+      "acceptedMinutes": {
+        "A": 229,
+        "G": 13
+      }
+    },
+    {
+      "name": "Los yin y yang 2: La venganza de Momo",
+      "solved": 2,
+      "penalty": 300,
+      "acceptedMinutes": {
+        "A": 170,
+        "G": 50
+      }
+    },
+    {
+      "name": "E.A.B.M.O.D.E.L.",
+      "solved": 2,
+      "penalty": 320,
+      "acceptedMinutes": {
+        "A": 132,
+        "G": 48
+      }
+    },
+    {
+      "name": "CJ",
+      "solved": 2,
+      "penalty": 402,
+      "acceptedMinutes": {
+        "G": 81,
+        "N": 281
+      }
+    },
+    {
+      "name": "Code Hunters",
+      "solved": 2,
+      "penalty": 408,
+      "acceptedMinutes": {
+        "A": 272,
+        "G": 56
+      }
+    },
+    {
+      "name": "casi_ejecuta",
+      "solved": 2,
+      "penalty": 478,
+      "acceptedMinutes": {
+        "A": 167,
+        "G": 151
+      }
+    },
+    {
+      "name": "baiteadores",
+      "solved": 1,
+      "penalty": 9,
+      "acceptedMinutes": {
+        "G": 9
+      }
+    },
+    {
+      "name": "Panchito gang",
+      "solved": 1,
+      "penalty": 10,
+      "acceptedMinutes": {
+        "G": 10
+      }
+    },
+    {
+      "name": "syntax error",
+      "solved": 1,
+      "penalty": 62,
+      "acceptedMinutes": {
+        "G": 42
+      }
+    },
+    {
+      "name": "TOONS",
+      "solved": 1,
+      "penalty": 159,
+      "acceptedMinutes": {
+        "G": 119
+      }
+    },
+    {
+      "name": "Code Breakers",
+      "solved": 0,
+      "penalty": 0,
+      "acceptedMinutes": {}
+    },
+    {
+      "name": "Corman",
+      "solved": 12,
+      "penalty": 1239,
+      "acceptedMinutes": {
+        "A": 3,
+        "B": 102,
+        "C": 115,
+        "D": 283,
+        "E": 85,
+        "G": 6,
+        "H": 71,
+        "I": 42,
+        "J": 125,
+        "L": 67,
+        "M": 160,
+        "N": 20
+      }
+    },
+    {
+      "name": "Red-Black Tree",
+      "solved": 12,
+      "penalty": 1405,
+      "acceptedMinutes": {
+        "A": 3,
+        "B": 58,
+        "C": 61,
+        "D": 291,
+        "E": 172,
+        "G": 7,
+        "H": 83,
+        "I": 68,
+        "J": 120,
+        "L": 111,
+        "M": 203,
+        "N": 28
+      }
+    },
+    {
+      "name": "Helicóptero",
+      "solved": 11,
+      "penalty": 913,
+      "acceptedMinutes": {
+        "A": 5,
+        "B": 55,
+        "C": 83,
+        "E": 107,
+        "G": 11,
+        "H": 56,
+        "I": 36,
+        "J": 123,
+        "L": 66,
+        "M": 222,
+        "N": 9
+      }
+    },
+    {
+      "name": "Champán en lata",
+      "solved": 10,
+      "penalty": 994,
+      "acceptedMinutes": {
+        "A": 5,
+        "C": 160,
+        "E": 146,
+        "G": 18,
+        "H": 100,
+        "I": 21,
+        "J": 186,
+        "L": 53,
+        "M": 233,
+        "N": 32
+      }
+    },
+    {
+      "name": "NaN (Need a Name)",
+      "solved": 10,
+      "penalty": 1015,
+      "acceptedMinutes": {
+        "A": 17,
+        "B": 104,
+        "C": 146,
+        "G": 3,
+        "H": 68,
+        "I": 31,
+        "J": 184,
+        "L": 91,
+        "M": 268,
+        "N": 23
+      }
+    },
+    {
+      "name": "para el regional elegimos nombre",
+      "solved": 10,
+      "penalty": 1206,
+      "acceptedMinutes": {
+        "A": 14,
+        "B": 125,
+        "C": 253,
+        "E": 263,
+        "G": 10,
+        "H": 105,
+        "I": 37,
+        "J": 169,
+        "L": 70,
+        "N": 20
+      }
+    },
+    {
+      "name": "Los Catastróficos",
+      "solved": 10,
+      "penalty": 1314,
+      "acceptedMinutes": {
+        "A": 5,
+        "B": 154,
+        "C": 86,
+        "E": 288,
+        "G": 10,
+        "H": 172,
+        "I": 61,
+        "J": 198,
+        "L": 107,
+        "N": 33
+      }
+    },
+    {
+      "name": "Tiramos CV",
+      "solved": 9,
+      "penalty": 1200,
+      "acceptedMinutes": {
+        "A": 2,
+        "C": 206,
+        "E": 211,
+        "G": 6,
+        "H": 155,
+        "I": 47,
+        "J": 252,
+        "L": 28,
+        "N": 33
+      }
+    },
+    {
+      "name": "Gracias Ma",
+      "solved": 8,
+      "penalty": 724,
+      "acceptedMinutes": {
+        "A": 5,
+        "C": 150,
+        "E": 223,
+        "G": 8,
+        "H": 176,
+        "I": 34,
+        "L": 48,
+        "N": 20
+      }
+    },
+    {
+      "name": "Los Tiburones Cuánticos",
+      "solved": 6,
+      "penalty": 401,
+      "acceptedMinutes": {
+        "A": 10,
+        "G": 14,
+        "H": 117,
+        "I": 25,
+        "L": 161,
+        "N": 34
+      }
+    },
+    {
+      "name": "El boca de Kikelli",
+      "solved": 6,
+      "penalty": 417,
+      "acceptedMinutes": {
+        "A": 4,
+        "G": 5,
+        "H": 248,
+        "I": 32,
+        "L": 67,
+        "N": 21
+      }
+    },
+    {
+      "name": "Marco Ventola",
+      "solved": 6,
+      "penalty": 435,
+      "acceptedMinutes": {
+        "A": 4,
+        "E": 277,
+        "G": 7,
+        "I": 50,
+        "L": 73,
+        "N": 24
+      }
+    },
+    {
+      "name": "El pabellón",
+      "solved": 6,
+      "penalty": 491,
+      "acceptedMinutes": {
+        "A": 5,
+        "G": 9,
+        "H": 276,
+        "I": 23,
+        "L": 124,
+        "N": 14
+      }
+    },
+    {
+      "name": "Sale con dp y fritas 2.71",
+      "solved": 6,
+      "penalty": 560,
+      "acceptedMinutes": {
+        "A": 11,
+        "G": 14,
+        "H": 174,
+        "I": 71,
+        "L": 139,
+        "N": 31
+      }
+    },
+    {
+      "name": "ALKA",
+      "solved": 6,
+      "penalty": 602,
+      "acceptedMinutes": {
+        "A": 4,
+        "G": 13,
+        "H": 226,
+        "I": 70,
+        "L": 158,
+        "N": 11
+      }
+    },
+    {
+      "name": "Super Greeditos",
+      "solved": 6,
+      "penalty": 665,
+      "acceptedMinutes": {
+        "A": 7,
+        "G": 9,
+        "H": 230,
+        "I": 103,
+        "L": 157,
+        "N": 79
+      }
+    },
+    {
+      "name": "ChichuMerge",
+      "solved": 6,
+      "penalty": 672,
+      "acceptedMinutes": {
+        "A": 4,
+        "G": 6,
+        "H": 270,
+        "I": 39,
+        "L": 192,
+        "N": 21
+      }
+    },
+    {
+      "name": "Nombre del grupo",
+      "solved": 5,
+      "penalty": 315,
+      "acceptedMinutes": {
+        "A": 9,
+        "C": 180,
+        "G": 12,
+        "I": 49,
+        "N": 25
+      }
+    },
+    {
+      "name": "TAPires",
+      "solved": 5,
+      "penalty": 328,
+      "acceptedMinutes": {
+        "A": 11,
+        "G": 15,
+        "H": 173,
+        "I": 46,
+        "N": 23
+      }
+    },
+    {
+      "name": "La eterna cuestión",
+      "solved": 5,
+      "penalty": 360,
+      "acceptedMinutes": {
+        "A": 4,
+        "G": 7,
+        "I": 58,
+        "L": 142,
+        "N": 69
+      }
+    },
+    {
+      "name": "hola",
+      "solved": 5,
+      "penalty": 376,
+      "acceptedMinutes": {
+        "A": 7,
+        "G": 4,
+        "I": 70,
+        "L": 149,
+        "N": 26
+      }
+    },
+    {
+      "name": "\"icom_helpers.h\"",
+      "solved": 5,
+      "penalty": 392,
+      "acceptedMinutes": {
+        "A": 7,
+        "G": 10,
+        "H": 245,
+        "I": 47,
+        "N": 23
+      }
+    },
+    {
+      "name": "Cooperativa Los Trapitos",
+      "solved": 5,
+      "penalty": 404,
+      "acceptedMinutes": {
+        "A": 3,
+        "G": 7,
+        "I": 68,
+        "L": 273,
+        "N": 33
+      }
+    },
+    {
+      "name": "Melón Térmico",
+      "solved": 5,
+      "penalty": 416,
+      "acceptedMinutes": {
+        "A": 20,
+        "G": 8,
+        "I": 73,
+        "L": 221,
+        "N": 34
+      }
+    },
+    {
+      "name": "Sé--",
+      "solved": 5,
+      "penalty": 576,
+      "acceptedMinutes": {
+        "A": 15,
+        "G": 3,
+        "I": 106,
+        "L": 247,
+        "N": 25
+      }
+    },
+    {
+      "name": "dr. Pancho",
+      "solved": 4,
+      "penalty": 65,
+      "acceptedMinutes": {
+        "A": 3,
+        "G": 6,
+        "I": 38,
+        "N": 18
+      }
+    },
+    {
+      "name": "#include<UNNE>",
+      "solved": 4,
+      "penalty": 67,
+      "acceptedMinutes": {
+        "A": 3,
+        "G": 6,
+        "I": 25,
+        "N": 33
+      }
+    },
+    {
+      "name": "Los lacayos de Fede Pizarro",
+      "solved": 4,
+      "penalty": 72,
+      "acceptedMinutes": {
+        "A": 5,
+        "G": 7,
+        "I": 39,
+        "N": 21
+      }
+    },
+    {
+      "name": "BEE",
+      "solved": 4,
+      "penalty": 76,
+      "acceptedMinutes": {
+        "A": 5,
+        "G": 8,
+        "I": 44,
+        "N": 19
+      }
+    },
+    {
+      "name": "deportivo_muela",
+      "solved": 4,
+      "penalty": 104,
+      "acceptedMinutes": {
+        "A": 30,
+        "G": 6,
+        "I": 49,
+        "N": 19
+      }
+    },
+    {
+      "name": "Peligro sin codificar",
+      "solved": 4,
+      "penalty": 112,
+      "acceptedMinutes": {
+        "A": 9,
+        "G": 11,
+        "I": 51,
+        "N": 21
+      }
+    },
+    {
+      "name": "Holaaaa",
+      "solved": 4,
+      "penalty": 119,
+      "acceptedMinutes": {
+        "A": 8,
+        "G": 12,
+        "I": 67,
+        "N": 32
+      }
+    },
+    {
+      "name": "VaCa MaLa",
+      "solved": 4,
+      "penalty": 122,
+      "acceptedMinutes": {
+        "A": 4,
+        "G": 8,
+        "I": 67,
+        "N": 23
+      }
+    },
+    {
+      "name": "Cerebros Binarios",
+      "solved": 4,
+      "penalty": 128,
+      "acceptedMinutes": {
+        "A": 10,
+        "G": 12,
+        "I": 56,
+        "N": 30
+      }
+    },
+    {
+      "name": "HOT TO CODE!",
+      "solved": 4,
+      "penalty": 128,
+      "acceptedMinutes": {
+        "A": 12,
+        "G": 15,
+        "I": 37,
+        "N": 24
+      }
+    },
+    {
+      "name": "Segfault",
+      "solved": 4,
+      "penalty": 137,
+      "acceptedMinutes": {
+        "A": 7,
+        "G": 15,
+        "I": 73,
+        "N": 42
+      }
+    },
+    {
+      "name": "CAR: chori, albahaca y rúcula",
+      "solved": 4,
+      "penalty": 149,
+      "acceptedMinutes": {
+        "A": 23,
+        "G": 19,
+        "I": 55,
+        "N": 52
+      }
+    },
+    {
+      "name": "Milanguchito",
+      "solved": 4,
+      "penalty": 156,
+      "acceptedMinutes": {
+        "A": 11,
+        "G": 15,
+        "I": 37,
+        "N": 73
+      }
+    },
+    {
+      "name": "Ed, Edd y Eddy v1.2",
+      "solved": 4,
+      "penalty": 172,
+      "acceptedMinutes": {
+        "A": 17,
+        "G": 15,
+        "I": 89,
+        "N": 31
+      }
+    },
+    {
+      "name": "The Sliders",
+      "solved": 4,
+      "penalty": 177,
+      "acceptedMinutes": {
+        "A": 11,
+        "G": 15,
+        "I": 95,
+        "N": 36
+      }
+    },
+    {
+      "name": "McDuck",
+      "solved": 4,
+      "penalty": 177,
+      "acceptedMinutes": {
+        "A": 17,
+        "G": 10,
+        "I": 74,
+        "N": 56
+      }
+    },
+    {
+      "name": "UPD",
+      "solved": 4,
+      "penalty": 178,
+      "acceptedMinutes": {
+        "A": 7,
+        "G": 9,
+        "I": 106,
+        "N": 16
+      }
+    },
+    {
+      "name": "ElPuerro",
+      "solved": 4,
+      "penalty": 179,
+      "acceptedMinutes": {
+        "A": 20,
+        "G": 24,
+        "I": 75,
+        "N": 40
+      }
+    },
+    {
+      "name": "Pan't con manteca",
+      "solved": 4,
+      "penalty": 182,
+      "acceptedMinutes": {
+        "A": 8,
+        "G": 12,
+        "I": 95,
+        "N": 47
+      }
+    },
+    {
+      "name": "Falta Para El Envido",
+      "solved": 4,
+      "penalty": 187,
+      "acceptedMinutes": {
+        "A": 60,
+        "G": 4,
+        "I": 69,
+        "N": 14
+      }
+    },
+    {
+      "name": "Chapin Devs",
+      "solved": 4,
+      "penalty": 193,
+      "acceptedMinutes": {
+        "A": 29,
+        "G": 23,
+        "I": 68,
+        "N": 33
+      }
+    },
+    {
+      "name": "Profilo",
+      "solved": 4,
+      "penalty": 201,
+      "acceptedMinutes": {
+        "A": 10,
+        "G": 13,
+        "I": 141,
+        "N": 37
+      }
+    },
+    {
+      "name": "Teamless",
+      "solved": 4,
+      "penalty": 207,
+      "acceptedMinutes": {
+        "A": 27,
+        "G": 32,
+        "I": 70,
+        "N": 78
+      }
+    },
+    {
+      "name": "Skippy",
+      "solved": 4,
+      "penalty": 210,
+      "acceptedMinutes": {
+        "A": 13,
+        "G": 7,
+        "I": 104,
+        "N": 66
+      }
+    },
+    {
+      "name": "Ni Compila",
+      "solved": 4,
+      "penalty": 212,
+      "acceptedMinutes": {
+        "A": 14,
+        "G": 18,
+        "I": 72,
+        "N": 68
+      }
+    },
+    {
+      "name": "Chat con Grandes Problemas Tecnicos",
+      "solved": 4,
+      "penalty": 214,
+      "acceptedMinutes": {
+        "A": 18,
+        "G": 9,
+        "I": 100,
+        "N": 87
+      }
+    },
+    {
+      "name": "SanMorto",
+      "solved": 4,
+      "penalty": 218,
+      "acceptedMinutes": {
+        "A": 31,
+        "G": 28,
+        "I": 81,
+        "N": 58
+      }
+    },
+    {
+      "name": "while(so serious)",
+      "solved": 4,
+      "penalty": 219,
+      "acceptedMinutes": {
+        "A": 10,
+        "G": 21,
+        "I": 107,
+        "N": 41
+      }
+    },
+    {
+      "name": "M.E.R.Y.",
+      "solved": 4,
+      "penalty": 219,
+      "acceptedMinutes": {
+        "A": 6,
+        "G": 10,
+        "I": 122,
+        "N": 61
+      }
+    },
+    {
+      "name": "los pro_magadores",
+      "solved": 4,
+      "penalty": 220,
+      "acceptedMinutes": {
+        "A": 19,
+        "G": 24,
+        "I": 137,
+        "N": 40
+      }
+    },
+    {
+      "name": "TUCUmancos",
+      "solved": 4,
+      "penalty": 232,
+      "acceptedMinutes": {
+        "A": 11,
+        "G": 42,
+        "I": 102,
+        "N": 77
+      }
+    },
+    {
+      "name": "Byters",
+      "solved": 4,
+      "penalty": 232,
+      "acceptedMinutes": {
+        "A": 31,
+        "G": 8,
+        "I": 80,
+        "N": 53
+      }
+    },
+    {
+      "name": "entro la balubi? (〜￣▽￣)〜",
+      "solved": 4,
+      "penalty": 234,
+      "acceptedMinutes": {
+        "A": 10,
+        "G": 7,
+        "I": 41,
+        "N": 156
+      }
+    },
+    {
+      "name": "VersionFinalFINAL (1)",
+      "solved": 4,
+      "penalty": 235,
+      "acceptedMinutes": {
+        "A": 15,
+        "G": 19,
+        "I": 103,
+        "N": 78
+      }
+    },
+    {
+      "name": "LMN",
+      "solved": 4,
+      "penalty": 247,
+      "acceptedMinutes": {
+        "A": 20,
+        "G": 12,
+        "I": 155,
+        "N": 60
+      }
+    },
+    {
+      "name": "UTN-FRD-3",
+      "solved": 4,
+      "penalty": 251,
+      "acceptedMinutes": {
+        "A": 8,
+        "G": 22,
+        "I": 120,
+        "N": 61
+      }
+    },
+    {
+      "name": "nos va a ir bien tranqui",
+      "solved": 4,
+      "penalty": 255,
+      "acceptedMinutes": {
+        "A": 7,
+        "G": 11,
+        "I": 83,
+        "N": 34
+      }
+    },
+    {
+      "name": "Limit Tested",
+      "solved": 4,
+      "penalty": 263,
+      "acceptedMinutes": {
+        "A": 15,
+        "G": 15,
+        "I": 123,
+        "N": 70
+      }
+    },
+    {
+      "name": "En mí máquina funciona",
+      "solved": 4,
+      "penalty": 269,
+      "acceptedMinutes": {
+        "A": 11,
+        "G": 17,
+        "I": 170,
+        "N": 31
+      }
+    },
+    {
+      "name": "Marcos - Lotar",
+      "solved": 4,
+      "penalty": 270,
+      "acceptedMinutes": {
+        "A": 21,
+        "G": 14,
+        "I": 98,
+        "N": 117
+      }
+    },
+    {
+      "name": "PodadoraSexy?!",
+      "solved": 4,
+      "penalty": 271,
+      "acceptedMinutes": {
+        "A": 40,
+        "G": 6,
+        "I": 136,
+        "N": 49
+      }
+    },
+    {
+      "name": "Fuera De La Caja",
+      "solved": 4,
+      "penalty": 279,
+      "acceptedMinutes": {
+        "A": 11,
+        "G": 22,
+        "I": 85,
+        "N": 141
+      }
+    },
+    {
+      "name": "team ZER0",
+      "solved": 4,
+      "penalty": 279,
+      "acceptedMinutes": {
+        "A": 15,
+        "G": 5,
+        "I": 92,
+        "N": 167
+      }
+    },
+    {
+      "name": "Cubito Imaginario",
+      "solved": 4,
+      "penalty": 284,
+      "acceptedMinutes": {
+        "A": 7,
+        "G": 12,
+        "I": 197,
+        "N": 28
+      }
+    },
+    {
+      "name": "-WAall",
+      "solved": 4,
+      "penalty": 289,
+      "acceptedMinutes": {
+        "A": 13,
+        "G": 16,
+        "I": 101,
+        "N": 139
+      }
+    },
+    {
+      "name": "Syntax Terror",
+      "solved": 4,
+      "penalty": 293,
+      "acceptedMinutes": {
+        "A": 5,
+        "G": 8,
+        "I": 79,
+        "N": 201
+      }
+    },
+    {
+      "name": "Los Mini Goats",
+      "solved": 4,
+      "penalty": 294,
+      "acceptedMinutes": {
+        "A": 7,
+        "G": 13,
+        "I": 145,
+        "N": 89
+      }
+    },
+    {
+      "name": "Labubu sin laburu",
+      "solved": 4,
+      "penalty": 300,
+      "acceptedMinutes": {
+        "A": 9,
+        "G": 11,
+        "I": 120,
+        "N": 60
+      }
+    },
+    {
+      "name": "Los Mejores Al Final",
+      "solved": 4,
+      "penalty": 304,
+      "acceptedMinutes": {
+        "A": 27,
+        "G": 22,
+        "I": 95,
+        "N": 160
+      }
+    }
+  ],
+  "audit": {
+    "reviewedBy": "root",
+    "reviewedAt": "2026-11-10",
+    "sumAccepted": 678,
+    "sumSolved": 678,
+    "populationCount": 183,
+    "rowPenaltiesRecomputed": true,
+    "editorialClassification": "Reviewed separately by root; collector agents did not edit the catalog.",
+    "textLimitations": [
+      "La captura web muestra dos caracteres de reemplazo después del nombre Team Sangre. Se emparejó por nombre normalizado, 3 AC y penalidad 577 con AAPC; las celdas numéricas no están afectadas."
+    ]
+  }
+}

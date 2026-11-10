@@ -1,0 +1,42 @@
+{
+  "id": "tap-2024-m",
+  "tournamentId": "tap-2024",
+  "letter": "M",
+  "title": "Balloon Market",
+  "summary": "Maximizar la ganancia de vender globos durante un itinerario, considerando capacidad y aranceles por excedente en cada escala.",
+  "difficulty": "Avanzado",
+  "conceptual": "5/5 (estimación editorial)",
+  "implementation": "4/5 (estimación editorial)",
+  "topics": [
+    "Optimización",
+    "Costos por tramos",
+    "Greedy"
+  ],
+  "chunkIds": [
+    "cpp-vectores",
+    "cpp-pares",
+    "cpp-ordenacion",
+    "cpp-cuentas-enteras"
+  ],
+  "coverage": "parcial",
+  "missingTools": [
+    "Modelo de optimización y estructura eficiente para costos por tramos; enfoque completo pendiente de validar."
+  ],
+  "hints": [],
+  "classificationConfidence": "Baja: valoración propia del enunciado. No se localizó una editorial oficial de esta edición; las técnicas avanzadas requieren contraste con una solución de referencia.",
+  "difficultyReason": "Capacidad de hasta 10^9 y hasta 200000 escalas exigen optimizar por tramos. Se conserva Avanzado provisional; sus cero AC no bastan para otra banda.",
+  "approach": "Cobertura de operaciones de base. Requisito pendiente: Modelo de optimización y estructura eficiente para costos por tramos; enfoque completo pendiente de validar.",
+  "ac": 0,
+  "total": 155,
+  "judgeUrl": "https://codeforces.com/gym/105321/problem/M",
+  "sourceUrl": "https://codeforces.com/gym/105321/attachments/download/26905/tap_2024.pdf#page=20",
+  "statementUrl": "/statements/tap-2024-m.pdf",
+  "statementPages": {
+    "start": 20,
+    "end": 20,
+    "sourcePageCount": 21
+  },
+  "firstSolve": null,
+  "editorialUrl": null,
+  "status": "verificado"
+}

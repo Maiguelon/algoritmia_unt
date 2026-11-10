@@ -1,0 +1,44 @@
+{
+  "id": "tap-2025-c",
+  "tournamentId": "tap-2025",
+  "letter": "C",
+  "title": "Circularly",
+  "summary": "Sumar, para todas las rotaciones de una permutación, cuántos índices vuelven a sí mismos al aplicar la permutación dos veces.",
+  "difficulty": "Salto regional",
+  "conceptual": "3/5 (estimación editorial)",
+  "implementation": "2/5 (estimación editorial)",
+  "topics": [
+    "Permutaciones",
+    "Conteo",
+    "Observación"
+  ],
+  "chunkIds": [
+    "cpp-vectores",
+    "cpp-frecuencias",
+    "cpp-cuentas-enteras"
+  ],
+  "coverage": "completa",
+  "missingTools": [],
+  "hints": [],
+  "classificationConfidence": "Media: valoración propia del enunciado. No se localizó una editorial oficial de esta edición; las técnicas avanzadas requieren contraste con una solución de referencia.",
+  "difficultyReason": "La enumeración de rotaciones no cabe en la cota. El salto es encontrar un conteo global; la implementación posterior usa frecuencias y enteros amplios.",
+  "approach": "Herramientas de un enfoque editorial de referencia; no incluye la observación ni la solución.",
+  "ac": 10,
+  "total": 183,
+  "judgeUrl": "https://codeforces.com/gym/106054/problem/C",
+  "sourceUrl": "https://icpc.com.ar/wp-content/uploads/2025/08/tap2025.pdf#page=4",
+  "statementUrl": "/statements/tap-2025-c.pdf",
+  "statementPages": {
+    "start": 4,
+    "end": 4,
+    "sourcePageCount": 24
+  },
+  "firstSolve": {
+    "minute": 61,
+    "teams": [
+      "Red-Black Tree"
+    ]
+  },
+  "editorialUrl": null,
+  "status": "verificado"
+}

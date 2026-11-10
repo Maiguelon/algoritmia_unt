@@ -1,0 +1,47 @@
+{
+  "id": "tap-2024-e",
+  "tournamentId": "tap-2024",
+  "letter": "E",
+  "title": "Final Showdown",
+  "summary": "Elegir y ordenar armas que consumen poder con reglas diferentes para infligir el máximo daño total.",
+  "difficulty": "Avanzado",
+  "conceptual": "4/5 (estimación editorial)",
+  "implementation": "3/5 (estimación editorial)",
+  "topics": [
+    "Optimización",
+    "DP",
+    "Orden de operaciones"
+  ],
+  "chunkIds": [
+    "cpp-vectores",
+    "cpp-ordenacion",
+    "cpp-extremos-sumas",
+    "cpp-cuentas-enteras"
+  ],
+  "coverage": "parcial",
+  "missingTools": [
+    "Justificación del orden de las armas y DP sobre recursos; solución eficiente pendiente de contraste."
+  ],
+  "hints": [],
+  "classificationConfidence": "Media: valoración propia del enunciado. No se localizó una editorial oficial de esta edición; las técnicas avanzadas requieren contraste con una solución de referencia.",
+  "difficultyReason": "Lectura editorial del enunciado: avanzado. La banda no se calcula a partir de un umbral de AC.",
+  "approach": "Cobertura de operaciones de base. Requisito pendiente: Justificación del orden de las armas y DP sobre recursos; solución eficiente pendiente de contraste.",
+  "ac": 3,
+  "total": 155,
+  "judgeUrl": "https://codeforces.com/gym/105321/problem/E",
+  "sourceUrl": "https://codeforces.com/gym/105321/attachments/download/26905/tap_2024.pdf#page=9",
+  "statementUrl": "/statements/tap-2024-e.pdf",
+  "statementPages": {
+    "start": 9,
+    "end": 9,
+    "sourcePageCount": 21
+  },
+  "firstSolve": {
+    "minute": 92,
+    "teams": [
+      "Helicóptero"
+    ]
+  },
+  "editorialUrl": null,
+  "status": "verificado"
+}

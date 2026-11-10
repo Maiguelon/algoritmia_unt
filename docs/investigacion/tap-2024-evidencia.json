@@ -1,0 +1,5647 @@
+{
+  "schemaVersion": 1,
+  "id": "tap-2024",
+  "calendarYear": 2024,
+  "date": "2024-08-24",
+  "season": {
+    "value": "2024-2025",
+    "sourceUrl": "https://codeforces.com/blog/entry/133298"
+  },
+  "booklet": {
+    "url": "https://codeforces.com/gym/105321/attachments/download/26905/tap_2024.pdf",
+    "localPath": "fuentes/tap_2024.pdf",
+    "pages": 21,
+    "language": "es"
+  },
+  "gym": {
+    "id": "105321",
+    "url": "https://codeforces.com/gym/105321",
+    "sourceUrls": [
+      "https://codeforces.com/gym/105321/standings",
+      "https://codeforces.com/blog/entry/133298"
+    ]
+  },
+  "population": {
+    "description": "Filas nacionales del standings final del Gym 105321: 155 filas; los rangos 72 y 133 tienen empates. La fila ghost extranjera #156 se excluye.",
+    "totalTeams": 155,
+    "status": "final",
+    "sourceUrl": "https://codeforces.com/gym/105321/standings",
+    "includes": [
+      "Las 155 filas nacionales del tablero final (#1–#155), inclusive el equipo cuyo nombre visible es Extra Soartu 1 (#76), porque el tablero no lo marca como ghost/no oficial."
+    ],
+    "excludes": [
+      "Fila adicional #156 ADA U1: Unintended, institución Azerbaijan; figura después de la población argentina y está marcada como ghost."
+    ]
+  },
+  "problems": [
+    {
+      "letter": "A",
+      "title": "Advanced tic-tac-toe",
+      "originalTitle": "Alto ta-te-ti",
+      "sourceUrl": "https://codeforces.com/gym/105321/problem/A",
+      "judgeUrl": "https://codeforces.com/gym/105321/problem/A",
+      "statementPages": {
+        "start": 3,
+        "end": 4,
+        "sourcePageCount": 21
+      },
+      "ac": 8,
+      "total": 155,
+      "firstSolve": {
+        "minute": 92,
+        "teams": [
+          "arch btw"
+        ]
+      },
+      "editorialUrl": null,
+      "evidenceTechniques": [],
+      "sourceIds": [
+        "booklet",
+        "gym",
+        "standings"
+      ]
+    },
+    {
+      "letter": "B",
+      "title": "Period Search",
+      "originalTitle": "Búsqueda del periodo",
+      "sourceUrl": "https://codeforces.com/gym/105321/problem/B",
+      "judgeUrl": "https://codeforces.com/gym/105321/problem/B",
+      "statementPages": {
+        "start": 5,
+        "end": 5,
+        "sourcePageCount": 21
+      },
+      "ac": 41,
+      "total": 155,
+      "firstSolve": {
+        "minute": 19,
+        "teams": [
+          "Thinking Limit Exceeded"
+        ]
+      },
+      "editorialUrl": null,
+      "evidenceTechniques": [],
+      "sourceIds": [
+        "booklet",
+        "gym",
+        "standings"
+      ]
+    },
+    {
+      "letter": "C",
+      "title": "Discovering Ngipto",
+      "originalTitle": "Conociendo Ngipto",
+      "sourceUrl": "https://codeforces.com/gym/105321/problem/C",
+      "judgeUrl": "https://codeforces.com/gym/105321/problem/C",
+      "statementPages": {
+        "start": 6,
+        "end": 7,
+        "sourcePageCount": 21
+      },
+      "ac": 2,
+      "total": 155,
+      "firstSolve": {
+        "minute": 169,
+        "teams": [
+          "Gracias Mateo"
+        ]
+      },
+      "editorialUrl": null,
+      "evidenceTechniques": [],
+      "sourceIds": [
+        "booklet",
+        "gym",
+        "standings"
+      ]
+    },
+    {
+      "letter": "D",
+      "title": "Duo",
+      "originalTitle": "Dupla",
+      "sourceUrl": "https://codeforces.com/gym/105321/problem/D",
+      "judgeUrl": "https://codeforces.com/gym/105321/problem/D",
+      "statementPages": {
+        "start": 8,
+        "end": 8,
+        "sourcePageCount": 21
+      },
+      "ac": 155,
+      "total": 155,
+      "firstSolve": {
+        "minute": 3,
+        "teams": [
+          "Corman et al.",
+          "Suplentes sin Gloria",
+          "Ñubel Carajo"
+        ]
+      },
+      "editorialUrl": null,
+      "evidenceTechniques": [],
+      "sourceIds": [
+        "booklet",
+        "gym",
+        "standings"
+      ]
+    },
+    {
+      "letter": "E",
+      "title": "Final Showdown",
+      "originalTitle": "Enfrentamiento final",
+      "sourceUrl": "https://codeforces.com/gym/105321/problem/E",
+      "judgeUrl": "https://codeforces.com/gym/105321/problem/E",
+      "statementPages": {
+        "start": 9,
+        "end": 9,
+        "sourcePageCount": 21
+      },
+      "ac": 3,
+      "total": 155,
+      "firstSolve": {
+        "minute": 92,
+        "teams": [
+          "Helicóptero"
+        ]
+      },
+      "editorialUrl": null,
+      "evidenceTechniques": [],
+      "sourceIds": [
+        "booklet",
+        "gym",
+        "standings"
+      ]
+    },
+    {
+      "letter": "F",
+      "title": "Fixture",
+      "originalTitle": "Fixture",
+      "sourceUrl": "https://codeforces.com/gym/105321/problem/F",
+      "judgeUrl": "https://codeforces.com/gym/105321/problem/F",
+      "statementPages": {
+        "start": 10,
+        "end": 10,
+        "sourcePageCount": 21
+      },
+      "ac": 152,
+      "total": 155,
+      "firstSolve": {
+        "minute": 2,
+        "teams": [
+          "The Greedies"
+        ]
+      },
+      "editorialUrl": null,
+      "evidenceTechniques": [],
+      "sourceIds": [
+        "booklet",
+        "gym",
+        "standings"
+      ]
+    },
+    {
+      "letter": "G",
+      "title": "Garlands",
+      "originalTitle": "Guirnaldas",
+      "sourceUrl": "https://codeforces.com/gym/105321/problem/G",
+      "judgeUrl": "https://codeforces.com/gym/105321/problem/G",
+      "statementPages": {
+        "start": 11,
+        "end": 11,
+        "sourcePageCount": 21
+      },
+      "ac": 140,
+      "total": 155,
+      "firstSolve": {
+        "minute": 5,
+        "teams": [
+          "NaN"
+        ]
+      },
+      "editorialUrl": null,
+      "evidenceTechniques": [],
+      "sourceIds": [
+        "booklet",
+        "gym",
+        "standings"
+      ]
+    },
+    {
+      "letter": "H",
+      "title": "Electric Fence for Livestock",
+      "originalTitle": "Hilo eléctrico para ganado",
+      "sourceUrl": "https://codeforces.com/gym/105321/problem/H",
+      "judgeUrl": "https://codeforces.com/gym/105321/problem/H",
+      "statementPages": {
+        "start": 12,
+        "end": 13,
+        "sourcePageCount": 21
+      },
+      "ac": 3,
+      "total": 155,
+      "firstSolve": {
+        "minute": 203,
+        "teams": [
+          "Corman et al."
+        ]
+      },
+      "editorialUrl": null,
+      "evidenceTechniques": [],
+      "sourceIds": [
+        "booklet",
+        "gym",
+        "standings"
+      ]
+    },
+    {
+      "letter": "I",
+      "title": "Innovations in Robotics",
+      "originalTitle": "Innovaciones robóticas",
+      "sourceUrl": "https://codeforces.com/gym/105321/problem/I",
+      "judgeUrl": "https://codeforces.com/gym/105321/problem/I",
+      "statementPages": {
+        "start": 14,
+        "end": 15,
+        "sourcePageCount": 21
+      },
+      "ac": 1,
+      "total": 155,
+      "firstSolve": {
+        "minute": 179,
+        "teams": [
+          "Helicóptero"
+        ]
+      },
+      "editorialUrl": null,
+      "evidenceTechniques": [],
+      "sourceIds": [
+        "booklet",
+        "gym",
+        "standings"
+      ]
+    },
+    {
+      "letter": "J",
+      "title": "Never Add Up to X",
+      "originalTitle": "Jamás suman X",
+      "sourceUrl": "https://codeforces.com/gym/105321/problem/J",
+      "judgeUrl": "https://codeforces.com/gym/105321/problem/J",
+      "statementPages": {
+        "start": 16,
+        "end": 16,
+        "sourcePageCount": 21
+      },
+      "ac": 10,
+      "total": 155,
+      "firstSolve": {
+        "minute": 53,
+        "teams": [
+          "Ñubel Carajo"
+        ]
+      },
+      "editorialUrl": null,
+      "evidenceTechniques": [],
+      "sourceIds": [
+        "booklet",
+        "gym",
+        "standings"
+      ]
+    },
+    {
+      "letter": "K",
+      "title": "Typographic Kaleidoscope",
+      "originalTitle": "Kaleidoscopio tipográfico",
+      "sourceUrl": "https://codeforces.com/gym/105321/problem/K",
+      "judgeUrl": "https://codeforces.com/gym/105321/problem/K",
+      "statementPages": {
+        "start": 17,
+        "end": 18,
+        "sourcePageCount": 21
+      },
+      "ac": 13,
+      "total": 155,
+      "firstSolve": {
+        "minute": 26,
+        "teams": [
+          "Corman et al."
+        ]
+      },
+      "editorialUrl": null,
+      "evidenceTechniques": [],
+      "sourceIds": [
+        "booklet",
+        "gym",
+        "standings"
+      ]
+    },
+    {
+      "letter": "L",
+      "title": "Games",
+      "originalTitle": "Logística lúdica",
+      "sourceUrl": "https://codeforces.com/gym/105321/problem/L",
+      "judgeUrl": "https://codeforces.com/gym/105321/problem/L",
+      "statementPages": {
+        "start": 19,
+        "end": 19,
+        "sourcePageCount": 21
+      },
+      "ac": 38,
+      "total": 155,
+      "firstSolve": {
+        "minute": 20,
+        "teams": [
+          "Gracias Mateo"
+        ]
+      },
+      "editorialUrl": null,
+      "evidenceTechniques": [],
+      "sourceIds": [
+        "booklet",
+        "gym",
+        "standings"
+      ]
+    },
+    {
+      "letter": "M",
+      "title": "Balloon Market",
+      "originalTitle": "Mercado de globos",
+      "sourceUrl": "https://codeforces.com/gym/105321/problem/M",
+      "judgeUrl": "https://codeforces.com/gym/105321/problem/M",
+      "statementPages": {
+        "start": 20,
+        "end": 20,
+        "sourcePageCount": 21
+      },
+      "ac": 0,
+      "total": 155,
+      "firstSolve": null,
+      "editorialUrl": null,
+      "evidenceTechniques": [],
+      "sourceIds": [
+        "booklet",
+        "gym",
+        "standings"
+      ]
+    },
+    {
+      "letter": "N",
+      "title": "New Dimensions",
+      "originalTitle": "Nuevas dimensiones",
+      "sourceUrl": "https://codeforces.com/gym/105321/problem/N",
+      "judgeUrl": "https://codeforces.com/gym/105321/problem/N",
+      "statementPages": {
+        "start": 21,
+        "end": 21,
+        "sourcePageCount": 21
+      },
+      "ac": 101,
+      "total": 155,
+      "firstSolve": {
+        "minute": 10,
+        "teams": [
+          "Ñubel Carajo"
+        ]
+      },
+      "editorialUrl": null,
+      "evidenceTechniques": [],
+      "sourceIds": [
+        "booklet",
+        "gym",
+        "standings"
+      ]
+    }
+  ],
+  "teams": [
+    {
+      "id": "tap-2024-001",
+      "name": "Helicóptero",
+      "institution": "FAMAF - UNC",
+      "rank": 1,
+      "solved": 11,
+      "penalty": 997,
+      "solvedProblems": [
+        "A",
+        "B",
+        "D",
+        "E",
+        "F",
+        "G",
+        "I",
+        "J",
+        "K",
+        "L",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "A": 244,
+        "B": 20,
+        "D": 9,
+        "E": 92,
+        "F": 6,
+        "G": 16,
+        "I": 179,
+        "J": 195,
+        "K": 95,
+        "L": 47,
+        "N": 14
+      }
+    },
+    {
+      "id": "tap-2024-002",
+      "name": "Ñubel Carajo",
+      "institution": "UNR",
+      "rank": 2,
+      "solved": 11,
+      "penalty": 1294,
+      "solvedProblems": [
+        "A",
+        "B",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "J",
+        "K",
+        "L",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "A": 213,
+        "B": 172,
+        "D": 3,
+        "E": 165,
+        "F": 41,
+        "G": 48,
+        "H": 273,
+        "J": 53,
+        "K": 112,
+        "L": 44,
+        "N": 10
+      }
+    },
+    {
+      "id": "tap-2024-003",
+      "name": "Corman et al.",
+      "institution": "UBA - FCEN",
+      "rank": 3,
+      "solved": 10,
+      "penalty": 747,
+      "solvedProblems": [
+        "A",
+        "B",
+        "D",
+        "F",
+        "G",
+        "H",
+        "J",
+        "K",
+        "L",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "A": 139,
+        "B": 62,
+        "D": 3,
+        "F": 7,
+        "G": 10,
+        "H": 203,
+        "J": 153,
+        "K": 26,
+        "L": 50,
+        "N": 14
+      }
+    },
+    {
+      "id": "tap-2024-004",
+      "name": "Gracias Mateo",
+      "institution": "FAMAF - UNC",
+      "rank": 4,
+      "solved": 10,
+      "penalty": 993,
+      "solvedProblems": [
+        "A",
+        "B",
+        "C",
+        "D",
+        "F",
+        "G",
+        "J",
+        "K",
+        "L",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "A": 245,
+        "B": 43,
+        "C": 169,
+        "D": 8,
+        "F": 5,
+        "G": 17,
+        "J": 93,
+        "K": 192,
+        "L": 20,
+        "N": 41
+      }
+    },
+    {
+      "id": "tap-2024-005",
+      "name": "Thinking Limit Exceeded",
+      "institution": "UNR",
+      "rank": 5,
+      "solved": 9,
+      "penalty": 972,
+      "solvedProblems": [
+        "B",
+        "D",
+        "E",
+        "F",
+        "G",
+        "H",
+        "J",
+        "L",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "B": 19,
+        "D": 20,
+        "E": 127,
+        "F": 8,
+        "G": 33,
+        "H": 274,
+        "J": 209,
+        "L": 85,
+        "N": 37
+      }
+    },
+    {
+      "id": "tap-2024-006",
+      "name": "Champán en lata",
+      "institution": "UTN Argentina - Santa Fe",
+      "rank": 6,
+      "solved": 9,
+      "penalty": 1294,
+      "solvedProblems": [
+        "A",
+        "B",
+        "D",
+        "F",
+        "G",
+        "J",
+        "K",
+        "L",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "A": 292,
+        "B": 108,
+        "D": 12,
+        "F": 17,
+        "G": 10,
+        "J": 252,
+        "K": 178,
+        "L": 102,
+        "N": 43
+      }
+    },
+    {
+      "id": "tap-2024-007",
+      "name": "MyRoomIsRandomSorted",
+      "institution": "UNR",
+      "rank": 7,
+      "solved": 8,
+      "penalty": 580,
+      "solvedProblems": [
+        "B",
+        "D",
+        "F",
+        "G",
+        "J",
+        "K",
+        "L",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "B": 75,
+        "D": 8,
+        "F": 14,
+        "G": 17,
+        "J": 131,
+        "K": 172,
+        "L": 84,
+        "N": 39
+      }
+    },
+    {
+      "id": "tap-2024-008",
+      "name": "Julián Masliah",
+      "institution": "UBA - FCEN",
+      "rank": 8,
+      "solved": 8,
+      "penalty": 601,
+      "solvedProblems": [
+        "A",
+        "B",
+        "D",
+        "F",
+        "G",
+        "J",
+        "L",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "A": 202,
+        "B": 55,
+        "D": 8,
+        "F": 12,
+        "G": 22,
+        "J": 133,
+        "L": 46,
+        "N": 43
+      }
+    },
+    {
+      "id": "tap-2024-009",
+      "name": "NaN",
+      "institution": "ING UNLP",
+      "rank": 9,
+      "solved": 8,
+      "penalty": 620,
+      "solvedProblems": [
+        "A",
+        "B",
+        "D",
+        "F",
+        "G",
+        "K",
+        "L",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "A": 255,
+        "B": 52,
+        "D": 7,
+        "F": 13,
+        "G": 5,
+        "K": 112,
+        "L": 72,
+        "N": 44
+      }
+    },
+    {
+      "id": "tap-2024-010",
+      "name": "Incidentes Catastróficos en la Práctica del Caos",
+      "institution": "UBA - FCEN",
+      "rank": 10,
+      "solved": 7,
+      "penalty": 269,
+      "solvedProblems": [
+        "B",
+        "D",
+        "F",
+        "G",
+        "K",
+        "L",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "B": 40,
+        "D": 4,
+        "F": 12,
+        "G": 19,
+        "K": 86,
+        "L": 59,
+        "N": 29
+      }
+    },
+    {
+      "id": "tap-2024-011",
+      "name": "Suplentes sin Gloria",
+      "institution": "UBA - FCEN",
+      "rank": 11,
+      "solved": 7,
+      "penalty": 271,
+      "solvedProblems": [
+        "B",
+        "D",
+        "F",
+        "G",
+        "J",
+        "L",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "B": 60,
+        "D": 3,
+        "F": 7,
+        "G": 11,
+        "J": 126,
+        "L": 47,
+        "N": 17
+      }
+    },
+    {
+      "id": "tap-2024-012",
+      "name": "Yo, él y Joel",
+      "institution": "FAMAF - UNC",
+      "rank": 12,
+      "solved": 7,
+      "penalty": 368,
+      "solvedProblems": [
+        "B",
+        "D",
+        "F",
+        "G",
+        "K",
+        "L",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "B": 88,
+        "D": 6,
+        "F": 9,
+        "G": 14,
+        "K": 127,
+        "L": 37,
+        "N": 47
+      }
+    },
+    {
+      "id": "tap-2024-013",
+      "name": "La mala nave de beto",
+      "institution": "UBA - FCEN",
+      "rank": 13,
+      "solved": 7,
+      "penalty": 441,
+      "solvedProblems": [
+        "B",
+        "D",
+        "F",
+        "G",
+        "K",
+        "L",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "B": 42,
+        "D": 18,
+        "F": 10,
+        "G": 23,
+        "K": 205,
+        "L": 84,
+        "N": 59
+      }
+    },
+    {
+      "id": "tap-2024-014",
+      "name": "Entró el P",
+      "institution": "FAMAF - UNC",
+      "rank": 14,
+      "solved": 7,
+      "penalty": 647,
+      "solvedProblems": [
+        "B",
+        "D",
+        "F",
+        "G",
+        "J",
+        "L",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "B": 74,
+        "D": 12,
+        "F": 9,
+        "G": 16,
+        "J": 226,
+        "L": 141,
+        "N": 49
+      }
+    },
+    {
+      "id": "tap-2024-015",
+      "name": "Sale con dp y fritas",
+      "institution": "UBA - FCEN",
+      "rank": 15,
+      "solved": 7,
+      "penalty": 669,
+      "solvedProblems": [
+        "B",
+        "D",
+        "F",
+        "G",
+        "K",
+        "L",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "B": 166,
+        "D": 7,
+        "F": 15,
+        "G": 26,
+        "K": 226,
+        "L": 113,
+        "N": 76
+      }
+    },
+    {
+      "id": "tap-2024-016",
+      "name": "Glistering Melon",
+      "institution": "FAMAF - UNC",
+      "rank": 16,
+      "solved": 7,
+      "penalty": 853,
+      "solvedProblems": [
+        "B",
+        "D",
+        "F",
+        "G",
+        "K",
+        "L",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "B": 125,
+        "D": 12,
+        "F": 20,
+        "G": 33,
+        "K": 240,
+        "L": 201,
+        "N": 142
+      }
+    },
+    {
+      "id": "tap-2024-017",
+      "name": "Pasta Térmica",
+      "institution": "FAMAF - UNC",
+      "rank": 17,
+      "solved": 7,
+      "penalty": 967,
+      "solvedProblems": [
+        "B",
+        "D",
+        "F",
+        "G",
+        "K",
+        "L",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "B": 273,
+        "D": 14,
+        "F": 9,
+        "G": 19,
+        "K": 218,
+        "L": 284,
+        "N": 30
+      }
+    },
+    {
+      "id": "tap-2024-018",
+      "name": "The Greedies",
+      "institution": "FI UNJU",
+      "rank": 18,
+      "solved": 6,
+      "penalty": 361,
+      "solvedProblems": [
+        "B",
+        "D",
+        "F",
+        "G",
+        "L",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "B": 47,
+        "D": 19,
+        "F": 2,
+        "G": 13,
+        "L": 66,
+        "N": 194
+      }
+    },
+    {
+      "id": "tap-2024-019",
+      "name": "Magnisidio de magnisimios",
+      "institution": "FAMAF - UNC",
+      "rank": 19,
+      "solved": 6,
+      "penalty": 382,
+      "solvedProblems": [
+        "B",
+        "D",
+        "F",
+        "G",
+        "L",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "B": 136,
+        "D": 10,
+        "F": 25,
+        "G": 50,
+        "L": 80,
+        "N": 41
+      }
+    },
+    {
+      "id": "tap-2024-020",
+      "name": "hola",
+      "institution": "UTN-Rosario",
+      "rank": 20,
+      "solved": 6,
+      "penalty": 453,
+      "solvedProblems": [
+        "B",
+        "D",
+        "F",
+        "G",
+        "L",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "B": 141,
+        "D": 7,
+        "F": 22,
+        "G": 33,
+        "L": 120,
+        "N": 90
+      }
+    },
+    {
+      "id": "tap-2024-021",
+      "name": "Null?",
+      "institution": "UBA - FCEN",
+      "rank": 21,
+      "solved": 6,
+      "penalty": 484,
+      "solvedProblems": [
+        "B",
+        "D",
+        "F",
+        "G",
+        "L",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "B": 126,
+        "D": 6,
+        "F": 16,
+        "G": 23,
+        "L": 163,
+        "N": 70
+      }
+    },
+    {
+      "id": "tap-2024-022",
+      "name": "backtrackeame esta",
+      "institution": "UNR",
+      "rank": 22,
+      "solved": 6,
+      "penalty": 509,
+      "solvedProblems": [
+        "B",
+        "D",
+        "F",
+        "G",
+        "L",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "B": 116,
+        "D": 15,
+        "F": 8,
+        "G": 22,
+        "L": 164,
+        "N": 64
+      }
+    },
+    {
+      "id": "tap-2024-023",
+      "name": "los tarches",
+      "institution": "UDESA",
+      "rank": 23,
+      "solved": 6,
+      "penalty": 521,
+      "solvedProblems": [
+        "B",
+        "D",
+        "F",
+        "G",
+        "L",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "B": 192,
+        "D": 15,
+        "F": 18,
+        "G": 6,
+        "L": 163,
+        "N": 27
+      }
+    },
+    {
+      "id": "tap-2024-024",
+      "name": "Chirimbolo",
+      "institution": "UDESA",
+      "rank": 24,
+      "solved": 6,
+      "penalty": 564,
+      "solvedProblems": [
+        "B",
+        "D",
+        "F",
+        "G",
+        "L",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "B": 120,
+        "D": 20,
+        "F": 15,
+        "G": 7,
+        "L": 248,
+        "N": 34
+      }
+    },
+    {
+      "id": "tap-2024-025",
+      "name": "PatenteFobia",
+      "institution": "UTN Argentina - Santa Fe",
+      "rank": 25,
+      "solved": 6,
+      "penalty": 572,
+      "solvedProblems": [
+        "B",
+        "D",
+        "F",
+        "G",
+        "L",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "B": 227,
+        "D": 24,
+        "F": 32,
+        "G": 18,
+        "L": 110,
+        "N": 41
+      }
+    },
+    {
+      "id": "tap-2024-026",
+      "name": "__",
+      "institution": "UNR",
+      "rank": 26,
+      "solved": 6,
+      "penalty": 576,
+      "solvedProblems": [
+        "B",
+        "D",
+        "F",
+        "G",
+        "L",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "B": 247,
+        "D": 11,
+        "F": 15,
+        "G": 19,
+        "L": 167,
+        "N": 77
+      }
+    },
+    {
+      "id": "tap-2024-027",
+      "name": "Turing Completo",
+      "institution": "INFO UNLP",
+      "rank": 27,
+      "solved": 6,
+      "penalty": 614,
+      "solvedProblems": [
+        "B",
+        "D",
+        "F",
+        "G",
+        "L",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "B": 169,
+        "D": 5,
+        "F": 22,
+        "G": 13,
+        "L": 149,
+        "N": 96
+      }
+    },
+    {
+      "id": "tap-2024-028",
+      "name": "arch btw",
+      "institution": "FCEIA",
+      "rank": 28,
+      "solved": 6,
+      "penalty": 635,
+      "solvedProblems": [
+        "A",
+        "B",
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "A": 92,
+        "B": 209,
+        "D": 5,
+        "F": 25,
+        "G": 37,
+        "N": 227
+      }
+    },
+    {
+      "id": "tap-2024-029",
+      "name": "SPARKIANOS",
+      "institution": "EscM-UNJu",
+      "rank": 29,
+      "solved": 6,
+      "penalty": 769,
+      "solvedProblems": [
+        "B",
+        "D",
+        "F",
+        "G",
+        "L",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "B": 283,
+        "D": 4,
+        "F": 17,
+        "G": 22,
+        "L": 160,
+        "N": 103
+      }
+    },
+    {
+      "id": "tap-2024-030",
+      "name": "Sanguchito",
+      "institution": "UNT",
+      "rank": 30,
+      "solved": 6,
+      "penalty": 900,
+      "solvedProblems": [
+        "B",
+        "D",
+        "F",
+        "G",
+        "L",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "B": 252,
+        "D": 151,
+        "F": 140,
+        "G": 17,
+        "L": 124,
+        "N": 176
+      }
+    },
+    {
+      "id": "tap-2024-031",
+      "name": "AlaIzquierdaDelPozo",
+      "institution": "UTN Argentina - Santa Fe",
+      "rank": 31,
+      "solved": 6,
+      "penalty": 911,
+      "solvedProblems": [
+        "B",
+        "D",
+        "F",
+        "G",
+        "L",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "B": 295,
+        "D": 24,
+        "F": 16,
+        "G": 35,
+        "L": 255,
+        "N": 206
+      }
+    },
+    {
+      "id": "tap-2024-032",
+      "name": "Ed, Edd y Eddy",
+      "institution": "UNLaM",
+      "rank": 32,
+      "solved": 5,
+      "penalty": 235,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "L",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 11,
+        "F": 21,
+        "G": 29,
+        "L": 116,
+        "N": 58
+      }
+    },
+    {
+      "id": "tap-2024-033",
+      "name": "Nombre del grupo",
+      "institution": "UTN Argentina - Santa Fe",
+      "rank": 33,
+      "solved": 5,
+      "penalty": 245,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "L",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 8,
+        "F": 13,
+        "G": 21,
+        "L": 100,
+        "N": 63
+      }
+    },
+    {
+      "id": "tap-2024-034",
+      "name": "Sergio corta la luz",
+      "institution": "UTN Rosario",
+      "rank": 34,
+      "solved": 5,
+      "penalty": 281,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "L",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 33,
+        "F": 19,
+        "G": 30,
+        "L": 141,
+        "N": 38
+      }
+    },
+    {
+      "id": "tap-2024-035",
+      "name": "Truco sucio #3",
+      "institution": "FAMAF - UNC",
+      "rank": 35,
+      "solved": 5,
+      "penalty": 319,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "L",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 7,
+        "F": 31,
+        "G": 24,
+        "L": 170,
+        "N": 47
+      }
+    },
+    {
+      "id": "tap-2024-036",
+      "name": "SÉ--",
+      "institution": "IB",
+      "rank": 36,
+      "solved": 5,
+      "penalty": 348,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "L",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 8,
+        "F": 20,
+        "G": 29,
+        "L": 165,
+        "N": 126
+      }
+    },
+    {
+      "id": "tap-2024-037",
+      "name": "VaCa MaLa",
+      "institution": "INFO UNLP",
+      "rank": 37,
+      "solved": 5,
+      "penalty": 394,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "L",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 23,
+        "F": 16,
+        "G": 31,
+        "L": 212,
+        "N": 92
+      }
+    },
+    {
+      "id": "tap-2024-038",
+      "name": "Cooperativa Los Trapitos",
+      "institution": "UBA - FCEN",
+      "rank": 38,
+      "solved": 5,
+      "penalty": 411,
+      "solvedProblems": [
+        "B",
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "B": 132,
+        "D": 7,
+        "F": 22,
+        "G": 18,
+        "N": 212
+      }
+    },
+    {
+      "id": "tap-2024-039",
+      "name": "Falta (para el) envido",
+      "institution": "FCE - UNLP",
+      "rank": 39,
+      "solved": 5,
+      "penalty": 456,
+      "solvedProblems": [
+        "B",
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "B": 286,
+        "D": 9,
+        "F": 16,
+        "G": 38,
+        "N": 47
+      }
+    },
+    {
+      "id": "tap-2024-040",
+      "name": "+CAN",
+      "institution": "IB",
+      "rank": 40,
+      "solved": 5,
+      "penalty": 487,
+      "solvedProblems": [
+        "B",
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "B": 205,
+        "D": 14,
+        "F": 35,
+        "G": 34,
+        "N": 99
+      }
+    },
+    {
+      "id": "tap-2024-041",
+      "name": "Los Dhampiros",
+      "institution": "FI UNJU",
+      "rank": 41,
+      "solved": 5,
+      "penalty": 493,
+      "solvedProblems": [
+        "B",
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "B": 157,
+        "D": 41,
+        "F": 30,
+        "G": 57,
+        "N": 68
+      }
+    },
+    {
+      "id": "tap-2024-042",
+      "name": "Los Panzas del Pytón",
+      "institution": "UBA",
+      "rank": 42,
+      "solved": 5,
+      "penalty": 507,
+      "solvedProblems": [
+        "B",
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "B": 230,
+        "D": 8,
+        "F": 14,
+        "G": 32,
+        "N": 103
+      }
+    },
+    {
+      "id": "tap-2024-043",
+      "name": "MILF (Man I Love Famaf)",
+      "institution": "FAMAF - UNC",
+      "rank": 43,
+      "solved": 5,
+      "penalty": 508,
+      "solvedProblems": [
+        "B",
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "B": 264,
+        "D": 17,
+        "F": 25,
+        "G": 42,
+        "N": 120
+      }
+    },
+    {
+      "id": "tap-2024-044",
+      "name": "MathreeX",
+      "institution": "EscM-UNJu",
+      "rank": 44,
+      "solved": 5,
+      "penalty": 583,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "L",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 14,
+        "F": 27,
+        "G": 34,
+        "L": 270,
+        "N": 118
+      }
+    },
+    {
+      "id": "tap-2024-045",
+      "name": "JAT GPT (Grupo de Programación Tranqui)",
+      "institution": "UNRN",
+      "rank": 45,
+      "solved": 5,
+      "penalty": 591,
+      "solvedProblems": [
+        "C",
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "C": 229,
+        "D": 21,
+        "F": 29,
+        "G": 35,
+        "N": 257
+      }
+    },
+    {
+      "id": "tap-2024-046",
+      "name": "Grafo te la debo",
+      "institution": "UNR",
+      "rank": 46,
+      "solved": 5,
+      "penalty": 599,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "L",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 21,
+        "F": 15,
+        "G": 56,
+        "L": 250,
+        "N": 157
+      }
+    },
+    {
+      "id": "tap-2024-047",
+      "name": "Chipa",
+      "institution": "UTN-Rosario",
+      "rank": 47,
+      "solved": 5,
+      "penalty": 616,
+      "solvedProblems": [
+        "B",
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "B": 154,
+        "D": 11,
+        "F": 21,
+        "G": 35,
+        "N": 195
+      }
+    },
+    {
+      "id": "tap-2024-048",
+      "name": "Bee",
+      "institution": "UDESA",
+      "rank": 48,
+      "solved": 5,
+      "penalty": 734,
+      "solvedProblems": [
+        "B",
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "B": 247,
+        "D": 7,
+        "F": 18,
+        "G": 26,
+        "N": 276
+      }
+    },
+    {
+      "id": "tap-2024-049",
+      "name": "Los Bonomos",
+      "institution": "UBA - FCEN",
+      "rank": 49,
+      "solved": 4,
+      "penalty": 115,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 17,
+        "F": 11,
+        "G": 25,
+        "N": 62
+      }
+    },
+    {
+      "id": "tap-2024-050",
+      "name": "Ophyucus",
+      "institution": "UDESA",
+      "rank": 50,
+      "solved": 4,
+      "penalty": 119,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 13,
+        "F": 22,
+        "G": 29,
+        "N": 55
+      }
+    },
+    {
+      "id": "tap-2024-051",
+      "name": "Bug Abstract Factory",
+      "institution": "UNRN",
+      "rank": 51,
+      "solved": 4,
+      "penalty": 130,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 14,
+        "F": 21,
+        "G": 27,
+        "N": 68
+      }
+    },
+    {
+      "id": "tap-2024-052",
+      "name": "return nombre",
+      "institution": "UNRC",
+      "rank": 52,
+      "solved": 4,
+      "penalty": 161,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 10,
+        "F": 17,
+        "G": 37,
+        "N": 77
+      }
+    },
+    {
+      "id": "tap-2024-053",
+      "name": "Chapin Devs",
+      "institution": "UTN-Rosario",
+      "rank": 53,
+      "solved": 4,
+      "penalty": 169,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 24,
+        "F": 21,
+        "G": 46,
+        "N": 38
+      }
+    },
+    {
+      "id": "tap-2024-054",
+      "name": "Gombeens of AFIP",
+      "institution": "FCEIA-UNR",
+      "rank": 54,
+      "solved": 4,
+      "penalty": 173,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 17,
+        "F": 48,
+        "G": 40,
+        "N": 68
+      }
+    },
+    {
+      "id": "tap-2024-055",
+      "name": "Lovelace",
+      "institution": "UNR",
+      "rank": 55,
+      "solved": 4,
+      "penalty": 179,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 13,
+        "F": 20,
+        "G": 31,
+        "N": 75
+      }
+    },
+    {
+      "id": "tap-2024-056",
+      "name": "Tres Patitos",
+      "institution": "UNR",
+      "rank": 56,
+      "solved": 4,
+      "penalty": 182,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 24,
+        "F": 40,
+        "G": 66,
+        "N": 52
+      }
+    },
+    {
+      "id": "tap-2024-057",
+      "name": "Grupo Silicio",
+      "institution": "FCEIA-UNR",
+      "rank": 57,
+      "solved": 4,
+      "penalty": 185,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 20,
+        "F": 36,
+        "G": 52,
+        "N": 77
+      }
+    },
+    {
+      "id": "tap-2024-058",
+      "name": "ExecutionTimeTerror",
+      "institution": "U.N.R.C.",
+      "rank": 58,
+      "solved": 4,
+      "penalty": 191,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 13,
+        "F": 21,
+        "G": 32,
+        "N": 105
+      }
+    },
+    {
+      "id": "tap-2024-059",
+      "name": "CS++ 1.6 no steam full mediafire",
+      "institution": "UTN-Rosario",
+      "rank": 59,
+      "solved": 4,
+      "penalty": 192,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 12,
+        "F": 44,
+        "G": 37,
+        "N": 99
+      }
+    },
+    {
+      "id": "tap-2024-060",
+      "name": "Tucumonos",
+      "institution": "UNT",
+      "rank": 60,
+      "solved": 4,
+      "penalty": 203,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 42,
+        "F": 19,
+        "G": 29,
+        "N": 113
+      }
+    },
+    {
+      "id": "tap-2024-061",
+      "name": "Almas Mineras",
+      "institution": "EscM-UNJu",
+      "rank": 61,
+      "solved": 4,
+      "penalty": 221,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 12,
+        "F": 22,
+        "G": 66,
+        "N": 101
+      }
+    },
+    {
+      "id": "tap-2024-062",
+      "name": "FFF",
+      "institution": "IB",
+      "rank": 62,
+      "solved": 4,
+      "penalty": 226,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 24,
+        "F": 32,
+        "G": 50,
+        "N": 100
+      }
+    },
+    {
+      "id": "tap-2024-063",
+      "name": "Dijkstra-idos",
+      "institution": "INFO UNLP",
+      "rank": 63,
+      "solved": 4,
+      "penalty": 235,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 29,
+        "F": 60,
+        "G": 50,
+        "N": 96
+      }
+    },
+    {
+      "id": "tap-2024-064",
+      "name": "Los Papas Fritas",
+      "institution": "SROUNSA",
+      "rank": 64,
+      "solved": 4,
+      "penalty": 236,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 18,
+        "F": 40,
+        "G": 72,
+        "N": 106
+      }
+    },
+    {
+      "id": "tap-2024-065",
+      "name": "Kingsman's",
+      "institution": "UDESA",
+      "rank": 65,
+      "solved": 4,
+      "penalty": 271,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 25,
+        "F": 32,
+        "G": 55,
+        "N": 159
+      }
+    },
+    {
+      "id": "tap-2024-066",
+      "name": "Es lo que hay",
+      "institution": "FAMAF - UNC",
+      "rank": 66,
+      "solved": 4,
+      "penalty": 273,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 11,
+        "F": 32,
+        "G": 72,
+        "N": 158
+      }
+    },
+    {
+      "id": "tap-2024-067",
+      "name": "TeamUNLaM04",
+      "institution": "UNLaM",
+      "rank": 67,
+      "solved": 4,
+      "penalty": 274,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 23,
+        "F": 39,
+        "G": 47,
+        "N": 165
+      }
+    },
+    {
+      "id": "tap-2024-068",
+      "name": "Centauro",
+      "institution": "UNRN",
+      "rank": 68,
+      "solved": 4,
+      "penalty": 280,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 9,
+        "F": 17,
+        "G": 42,
+        "N": 132
+      }
+    },
+    {
+      "id": "tap-2024-069",
+      "name": "Algoritmo Criollo",
+      "institution": "UTN Argentina - Santa Fe",
+      "rank": 69,
+      "solved": 4,
+      "penalty": 296,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 12,
+        "F": 35,
+        "G": 59,
+        "N": 150
+      }
+    },
+    {
+      "id": "tap-2024-070",
+      "name": "DP_esta_OP",
+      "institution": "UBA - FCEN",
+      "rank": 70,
+      "solved": 4,
+      "penalty": 297,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 25,
+        "F": 30,
+        "G": 48,
+        "N": 194
+      }
+    },
+    {
+      "id": "tap-2024-071",
+      "name": "Pan't Con Manteca",
+      "institution": "UTN-Rosario",
+      "rank": 71,
+      "solved": 4,
+      "penalty": 302,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 10,
+        "F": 17,
+        "G": 25,
+        "N": 150
+      }
+    },
+    {
+      "id": "tap-2024-072",
+      "name": "Skip List",
+      "institution": "UDESA",
+      "rank": 72,
+      "solved": 4,
+      "penalty": 320,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 12,
+        "F": 25,
+        "G": 139,
+        "N": 144
+      }
+    },
+    {
+      "id": "tap-2024-073",
+      "name": "Sān Kâi",
+      "institution": "UNRN",
+      "rank": 72,
+      "solved": 4,
+      "penalty": 320,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 20,
+        "F": 30,
+        "G": 171,
+        "N": 79
+      }
+    },
+    {
+      "id": "tap-2024-074",
+      "name": "Limit Testing",
+      "institution": "UNLaM",
+      "rank": 74,
+      "solved": 4,
+      "penalty": 321,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 7,
+        "F": 16,
+        "G": 38,
+        "N": 240
+      }
+    },
+    {
+      "id": "tap-2024-075",
+      "name": "Byters",
+      "institution": "Universidad Nacional",
+      "rank": 75,
+      "solved": 4,
+      "penalty": 322,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 12,
+        "F": 25,
+        "G": 88,
+        "N": 137
+      }
+    },
+    {
+      "id": "tap-2024-076",
+      "name": "Extra Soartu 1",
+      "institution": "SOARTU",
+      "rank": 76,
+      "solved": 4,
+      "penalty": 339,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 23,
+        "F": 33,
+        "G": 53,
+        "N": 210
+      }
+    },
+    {
+      "id": "tap-2024-077",
+      "name": "Cod3rs",
+      "institution": "UTN Argentina - Santa Fe",
+      "rank": 77,
+      "solved": 4,
+      "penalty": 359,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 11,
+        "F": 14,
+        "G": 44,
+        "N": 270
+      }
+    },
+    {
+      "id": "tap-2024-078",
+      "name": "SegFault Survivors",
+      "institution": "UDESA",
+      "rank": 78,
+      "solved": 4,
+      "penalty": 374,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 92,
+        "F": 110,
+        "G": 52,
+        "N": 100
+      }
+    },
+    {
+      "id": "tap-2024-079",
+      "name": "THE BOYS",
+      "institution": "UTN Argentina - Santa Fe",
+      "rank": 79,
+      "solved": 4,
+      "penalty": 378,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 17,
+        "F": 34,
+        "G": 142,
+        "N": 165
+      }
+    },
+    {
+      "id": "tap-2024-080",
+      "name": "VML Coders",
+      "institution": "U.N.R.C.",
+      "rank": 80,
+      "solved": 4,
+      "penalty": 383,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 20,
+        "F": 25,
+        "G": 34,
+        "N": 284
+      }
+    },
+    {
+      "id": "tap-2024-081",
+      "name": "Snack Overflow",
+      "institution": "UNLaM",
+      "rank": 81,
+      "solved": 4,
+      "penalty": 401,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 32,
+        "F": 47,
+        "G": 59,
+        "N": 203
+      }
+    },
+    {
+      "id": "tap-2024-082",
+      "name": "Cerebros Binarios",
+      "institution": "UNRC",
+      "rank": 82,
+      "solved": 4,
+      "penalty": 409,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 7,
+        "F": 18,
+        "G": 36,
+        "N": 288
+      }
+    },
+    {
+      "id": "tap-2024-083",
+      "name": "No teníamos nombre",
+      "institution": "EscM-UNJu",
+      "rank": 83,
+      "solved": 4,
+      "penalty": 410,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 35,
+        "F": 22,
+        "G": 191,
+        "N": 102
+      }
+    },
+    {
+      "id": "tap-2024-084",
+      "name": "Ctrl + Alt + T",
+      "institution": "INFO UNLP",
+      "rank": 84,
+      "solved": 4,
+      "penalty": 422,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 42,
+        "F": 52,
+        "G": 43,
+        "N": 265
+      }
+    },
+    {
+      "id": "tap-2024-085",
+      "name": "Brogrammers",
+      "institution": "UTN Argentina - Santa Fe",
+      "rank": 85,
+      "solved": 4,
+      "penalty": 446,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 13,
+        "F": 22,
+        "G": 115,
+        "N": 236
+      }
+    },
+    {
+      "id": "tap-2024-086",
+      "name": "Mali",
+      "institution": "Universidad Nacional",
+      "rank": 86,
+      "solved": 4,
+      "penalty": 449,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 12,
+        "F": 29,
+        "G": 102,
+        "N": 266
+      }
+    },
+    {
+      "id": "tap-2024-087",
+      "name": "variable indefinida",
+      "institution": "Universidad Nacional",
+      "rank": 87,
+      "solved": 4,
+      "penalty": 457,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 48,
+        "F": 40,
+        "G": 95,
+        "N": 214
+      }
+    },
+    {
+      "id": "tap-2024-088",
+      "name": "Estadio Obras Sanitarias",
+      "institution": "UDESA",
+      "rank": 88,
+      "solved": 4,
+      "penalty": 459,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 21,
+        "F": 36,
+        "G": 63,
+        "N": 259
+      }
+    },
+    {
+      "id": "tap-2024-089",
+      "name": "Pij",
+      "institution": "UNT",
+      "rank": 89,
+      "solved": 4,
+      "penalty": 467,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 83,
+        "F": 124,
+        "G": 59,
+        "N": 181
+      }
+    },
+    {
+      "id": "tap-2024-090",
+      "name": "SyntaxError",
+      "institution": "Universidad Nacional",
+      "rank": 90,
+      "solved": 4,
+      "penalty": 468,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 43,
+        "F": 61,
+        "G": 120,
+        "N": 224
+      }
+    },
+    {
+      "id": "tap-2024-091",
+      "name": "Cin>>return",
+      "institution": "FI UNJU",
+      "rank": 91,
+      "solved": 4,
+      "penalty": 493,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 37,
+        "F": 46,
+        "G": 93,
+        "N": 297
+      }
+    },
+    {
+      "id": "tap-2024-092",
+      "name": "Codigo Santo",
+      "institution": "Universidad Nacional",
+      "rank": 92,
+      "solved": 4,
+      "penalty": 496,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 35,
+        "F": 74,
+        "G": 125,
+        "N": 242
+      }
+    },
+    {
+      "id": "tap-2024-093",
+      "name": "Re Nenas",
+      "institution": "Universidad Nacional",
+      "rank": 93,
+      "solved": 4,
+      "penalty": 563,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 89,
+        "F": 43,
+        "G": 141,
+        "N": 250
+      }
+    },
+    {
+      "id": "tap-2024-094",
+      "name": "Ctrl+Z",
+      "institution": "UTN Argentina - Santa Fe",
+      "rank": 94,
+      "solved": 4,
+      "penalty": 577,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 13,
+        "F": 61,
+        "G": 44,
+        "N": 299
+      }
+    },
+    {
+      "id": "tap-2024-095",
+      "name": "Mechabyte",
+      "institution": "Universidad Nacional",
+      "rank": 95,
+      "solved": 4,
+      "penalty": 587,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 30,
+        "F": 95,
+        "G": 190,
+        "N": 272
+      }
+    },
+    {
+      "id": "tap-2024-096",
+      "name": "!OpenAI",
+      "institution": "FCEIA",
+      "rank": 96,
+      "solved": 4,
+      "penalty": 615,
+      "solvedProblems": [
+        "B",
+        "D",
+        "F",
+        "G"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "B": 268,
+        "D": 72,
+        "F": 81,
+        "G": 34
+      }
+    },
+    {
+      "id": "tap-2024-097",
+      "name": "M.E.R.Y.",
+      "institution": "UDESA",
+      "rank": 97,
+      "solved": 4,
+      "penalty": 624,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 94,
+        "F": 135,
+        "G": 119,
+        "N": 276
+      }
+    },
+    {
+      "id": "tap-2024-098",
+      "name": "Beta",
+      "institution": "Universidad Nacional",
+      "rank": 98,
+      "solved": 4,
+      "penalty": 625,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 82,
+        "F": 99,
+        "G": 117,
+        "N": 267
+      }
+    },
+    {
+      "id": "tap-2024-099",
+      "name": "Ghosts",
+      "institution": "Universidad Nacional",
+      "rank": 99,
+      "solved": 4,
+      "penalty": 628,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 23,
+        "F": 79,
+        "G": 218,
+        "N": 288
+      }
+    },
+    {
+      "id": "tap-2024-100",
+      "name": "Zenta",
+      "institution": "SROUNSA",
+      "rank": 100,
+      "solved": 4,
+      "penalty": 645,
+      "solvedProblems": [
+        "B",
+        "D",
+        "F",
+        "G"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "B": 294,
+        "D": 93,
+        "F": 67,
+        "G": 131
+      }
+    },
+    {
+      "id": "tap-2024-101",
+      "name": "Servicio_técnico_para_abuelitas",
+      "institution": "UDESA",
+      "rank": 101,
+      "solved": 4,
+      "penalty": 816,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 37,
+        "F": 255,
+        "G": 198,
+        "N": 286
+      }
+    },
+    {
+      "id": "tap-2024-102",
+      "name": "Programación-CFL",
+      "institution": "Universidad Nacional",
+      "rank": 102,
+      "solved": 4,
+      "penalty": 853,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 73,
+        "F": 193,
+        "G": 262,
+        "N": 285
+      }
+    },
+    {
+      "id": "tap-2024-103",
+      "name": "OnlyJava",
+      "institution": "UNRC",
+      "rank": 103,
+      "solved": 4,
+      "penalty": 967,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "N"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 172,
+        "F": 189,
+        "G": 212,
+        "N": 294
+      }
+    },
+    {
+      "id": "tap-2024-104",
+      "name": "Ing^-1",
+      "institution": "UDESA",
+      "rank": 104,
+      "solved": 3,
+      "penalty": 46,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 6,
+        "F": 12,
+        "G": 28
+      }
+    },
+    {
+      "id": "tap-2024-105",
+      "name": "pizza y pollo",
+      "institution": "ING UNLP",
+      "rank": 105,
+      "solved": 3,
+      "penalty": 67,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 14,
+        "F": 20,
+        "G": 33
+      }
+    },
+    {
+      "id": "tap-2024-106",
+      "name": "nenasDeGoma",
+      "institution": "UDESA",
+      "rank": 106,
+      "solved": 3,
+      "penalty": 72,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 12,
+        "F": 20,
+        "G": 40
+      }
+    },
+    {
+      "id": "tap-2024-107",
+      "name": "Silver Interactive",
+      "institution": "INFO UNLP",
+      "rank": 107,
+      "solved": 3,
+      "penalty": 78,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 12,
+        "F": 27,
+        "G": 39
+      }
+    },
+    {
+      "id": "tap-2024-108",
+      "name": "Coderraria",
+      "institution": "UTN Argentina - Santa Fe",
+      "rank": 108,
+      "solved": 3,
+      "penalty": 79,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 16,
+        "F": 26,
+        "G": 37
+      }
+    },
+    {
+      "id": "tap-2024-109",
+      "name": "playadito29",
+      "institution": "UTN Rosario",
+      "rank": 109,
+      "solved": 3,
+      "penalty": 91,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 18,
+        "F": 42,
+        "G": 31
+      }
+    },
+    {
+      "id": "tap-2024-110",
+      "name": "NULL POINTERS",
+      "institution": "U.N.R.C.",
+      "rank": 110,
+      "solved": 3,
+      "penalty": 97,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 12,
+        "F": 38,
+        "G": 47
+      }
+    },
+    {
+      "id": "tap-2024-111",
+      "name": "Los trajavadores",
+      "institution": "UNGS-IC",
+      "rank": 111,
+      "solved": 3,
+      "penalty": 104,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 18,
+        "F": 33,
+        "G": 53
+      }
+    },
+    {
+      "id": "tap-2024-112",
+      "name": "Codigo:500",
+      "institution": "UNRC",
+      "rank": 112,
+      "solved": 3,
+      "penalty": 114,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 15,
+        "F": 25,
+        "G": 54
+      }
+    },
+    {
+      "id": "tap-2024-113",
+      "name": "Mandarina",
+      "institution": "UTN Argentina - Santa Fe",
+      "rank": 113,
+      "solved": 3,
+      "penalty": 115,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 17,
+        "F": 27,
+        "G": 51
+      }
+    },
+    {
+      "id": "tap-2024-114",
+      "name": "Triple T",
+      "institution": "UDESA",
+      "rank": 114,
+      "solved": 3,
+      "penalty": 127,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 27,
+        "F": 19,
+        "G": 81
+      }
+    },
+    {
+      "id": "tap-2024-115",
+      "name": "TresTristesTecnologicos",
+      "institution": "UTN Argentina - Santa Fe",
+      "rank": 115,
+      "solved": 3,
+      "penalty": 134,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 36,
+        "F": 43,
+        "G": 35
+      }
+    },
+    {
+      "id": "tap-2024-116",
+      "name": "Inserte nombre del equipo",
+      "institution": "UNRC",
+      "rank": 116,
+      "solved": 3,
+      "penalty": 139,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 25,
+        "F": 67,
+        "G": 47
+      }
+    },
+    {
+      "id": "tap-2024-117",
+      "name": "Piramix",
+      "institution": "FI UNJU",
+      "rank": 117,
+      "solved": 3,
+      "penalty": 141,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 28,
+        "F": 50,
+        "G": 63
+      }
+    },
+    {
+      "id": "tap-2024-118",
+      "name": "NullNameException()",
+      "institution": "UNRC",
+      "rank": 118,
+      "solved": 3,
+      "penalty": 148,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 34,
+        "F": 27,
+        "G": 47
+      }
+    },
+    {
+      "id": "tap-2024-119",
+      "name": "MelodyBytes",
+      "institution": "UDESA",
+      "rank": 119,
+      "solved": 3,
+      "penalty": 165,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 28,
+        "F": 46,
+        "G": 71
+      }
+    },
+    {
+      "id": "tap-2024-120",
+      "name": "Tuia Team",
+      "institution": "UNR",
+      "rank": 120,
+      "solved": 3,
+      "penalty": 186,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 25,
+        "F": 52,
+        "G": 109
+      }
+    },
+    {
+      "id": "tap-2024-121",
+      "name": "Tadeistas",
+      "institution": "INFO UNLP",
+      "rank": 121,
+      "solved": 3,
+      "penalty": 205,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 14,
+        "F": 80,
+        "G": 111
+      }
+    },
+    {
+      "id": "tap-2024-122",
+      "name": "MFM",
+      "institution": "FRC - UTN",
+      "rank": 122,
+      "solved": 3,
+      "penalty": 207,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 94,
+        "F": 27,
+        "G": 66
+      }
+    },
+    {
+      "id": "tap-2024-123",
+      "name": "J.U.L.U",
+      "institution": "UNR",
+      "rank": 123,
+      "solved": 3,
+      "penalty": 218,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 24,
+        "F": 69,
+        "G": 105
+      }
+    },
+    {
+      "id": "tap-2024-124",
+      "name": "Matrices de Bolsas",
+      "institution": "UNGS-IC",
+      "rank": 124,
+      "solved": 3,
+      "penalty": 251,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 53,
+        "F": 82,
+        "G": 116
+      }
+    },
+    {
+      "id": "tap-2024-125",
+      "name": "DreamTeam",
+      "institution": "UNRC",
+      "rank": 125,
+      "solved": 3,
+      "penalty": 259,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 44,
+        "F": 78,
+        "G": 137
+      }
+    },
+    {
+      "id": "tap-2024-126",
+      "name": "Error404",
+      "institution": "SROUNSA",
+      "rank": 126,
+      "solved": 3,
+      "penalty": 324,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 39,
+        "F": 78,
+        "G": 187
+      }
+    },
+    {
+      "id": "tap-2024-127",
+      "name": "While(Alive)",
+      "institution": "UNLaM",
+      "rank": 127,
+      "solved": 3,
+      "penalty": 352,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 23,
+        "F": 48,
+        "G": 221
+      }
+    },
+    {
+      "id": "tap-2024-128",
+      "name": "Uno cero",
+      "institution": "SROUNSA",
+      "rank": 128,
+      "solved": 3,
+      "penalty": 387,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 56,
+        "F": 94,
+        "G": 157
+      }
+    },
+    {
+      "id": "tap-2024-129",
+      "name": "Binary Search",
+      "institution": "UDESA",
+      "rank": 129,
+      "solved": 3,
+      "penalty": 389,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 84,
+        "F": 123,
+        "G": 142
+      }
+    },
+    {
+      "id": "tap-2024-130",
+      "name": "TheCodeCrews",
+      "institution": "Universidad Nacional",
+      "rank": 130,
+      "solved": 3,
+      "penalty": 400,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 42,
+        "F": 107,
+        "G": 231
+      }
+    },
+    {
+      "id": "tap-2024-131",
+      "name": "TeamUNLaM07",
+      "institution": "UNLaM",
+      "rank": 131,
+      "solved": 3,
+      "penalty": 403,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 50,
+        "F": 70,
+        "G": 183
+      }
+    },
+    {
+      "id": "tap-2024-132",
+      "name": "CCC",
+      "institution": "INFO UNLP",
+      "rank": 132,
+      "solved": 3,
+      "penalty": 413,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 179,
+        "F": 61,
+        "G": 133
+      }
+    },
+    {
+      "id": "tap-2024-133",
+      "name": "N-1",
+      "institution": "Universidad Nacional",
+      "rank": 133,
+      "solved": 3,
+      "penalty": 421,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 29,
+        "F": 19,
+        "G": 153
+      }
+    },
+    {
+      "id": "tap-2024-134",
+      "name": "Sin nombre",
+      "institution": "Universidad Nacional",
+      "rank": 133,
+      "solved": 3,
+      "penalty": 421,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 62,
+        "F": 94,
+        "G": 225
+      }
+    },
+    {
+      "id": "tap-2024-135",
+      "name": "Cyber-Coders",
+      "institution": "Universidad Nacional",
+      "rank": 135,
+      "solved": 3,
+      "penalty": 452,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 39,
+        "F": 104,
+        "G": 249
+      }
+    },
+    {
+      "id": "tap-2024-136",
+      "name": "Null Pointers",
+      "institution": "UNGS-IC",
+      "rank": 136,
+      "solved": 3,
+      "penalty": 467,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 123,
+        "F": 140,
+        "G": 164
+      }
+    },
+    {
+      "id": "tap-2024-137",
+      "name": "Los Yin y Yang",
+      "institution": "Universidad Nacional",
+      "rank": 137,
+      "solved": 3,
+      "penalty": 522,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 41,
+        "F": 88,
+        "G": 273
+      }
+    },
+    {
+      "id": "tap-2024-138",
+      "name": "Ctrl+Z",
+      "institution": "Universidad Nacional",
+      "rank": 138,
+      "solved": 3,
+      "penalty": 548,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 90,
+        "F": 124,
+        "G": 214
+      }
+    },
+    {
+      "id": "tap-2024-139",
+      "name": "a P-dazos",
+      "institution": "SROUNSA",
+      "rank": 139,
+      "solved": 3,
+      "penalty": 561,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 18,
+        "F": 244,
+        "G": 159
+      }
+    },
+    {
+      "id": "tap-2024-140",
+      "name": "Trivago 3.0",
+      "institution": "UTN Argentina - Santa Fe",
+      "rank": 140,
+      "solved": 2,
+      "penalty": 29,
+      "solvedProblems": [
+        "D",
+        "F"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 17,
+        "F": 12
+      }
+    },
+    {
+      "id": "tap-2024-141",
+      "name": "Oozma Kappa",
+      "institution": "UTN Argentina - Santa Fe",
+      "rank": 141,
+      "solved": 2,
+      "penalty": 55,
+      "solvedProblems": [
+        "D",
+        "F"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 8,
+        "F": 27
+      }
+    },
+    {
+      "id": "tap-2024-142",
+      "name": "unNamed",
+      "institution": "UNRC",
+      "rank": 142,
+      "solved": 2,
+      "penalty": 65,
+      "solvedProblems": [
+        "D",
+        "F"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 19,
+        "F": 26
+      }
+    },
+    {
+      "id": "tap-2024-143",
+      "name": "LeoEmiJhon",
+      "institution": "U.N.R.C.",
+      "rank": 143,
+      "solved": 2,
+      "penalty": 66,
+      "solvedProblems": [
+        "D",
+        "F"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 47,
+        "F": 19
+      }
+    },
+    {
+      "id": "tap-2024-144",
+      "name": "Dijkstra y los pibes",
+      "institution": "SROUNSA",
+      "rank": 144,
+      "solved": 2,
+      "penalty": 81,
+      "solvedProblems": [
+        "D",
+        "F"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 13,
+        "F": 68
+      }
+    },
+    {
+      "id": "tap-2024-145",
+      "name": "La chispa",
+      "institution": "IES",
+      "rank": 145,
+      "solved": 2,
+      "penalty": 180,
+      "solvedProblems": [
+        "D",
+        "F"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 41,
+        "F": 139
+      }
+    },
+    {
+      "id": "tap-2024-146",
+      "name": "TripleC",
+      "institution": "Universidad Nacional",
+      "rank": 146,
+      "solved": 2,
+      "penalty": 198,
+      "solvedProblems": [
+        "D",
+        "F"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 78,
+        "F": 100
+      }
+    },
+    {
+      "id": "tap-2024-147",
+      "name": "programming team",
+      "institution": "Universidad Nacional",
+      "rank": 147,
+      "solved": 2,
+      "penalty": 292,
+      "solvedProblems": [
+        "D",
+        "F"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 46,
+        "F": 226
+      }
+    },
+    {
+      "id": "tap-2024-148",
+      "name": "TeamUNLaM05",
+      "institution": "UNLaM",
+      "rank": 148,
+      "solved": 2,
+      "penalty": 295,
+      "solvedProblems": [
+        "D",
+        "F"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 72,
+        "F": 223
+      }
+    },
+    {
+      "id": "tap-2024-149",
+      "name": "Team Code",
+      "institution": "SROUNSA",
+      "rank": 149,
+      "solved": 2,
+      "penalty": 306,
+      "solvedProblems": [
+        "D",
+        "F"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 13,
+        "F": 153
+      }
+    },
+    {
+      "id": "tap-2024-150",
+      "name": "FACTOS",
+      "institution": "Universidad Nacional",
+      "rank": 150,
+      "solved": 2,
+      "penalty": 316,
+      "solvedProblems": [
+        "D",
+        "G"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 74,
+        "G": 222
+      }
+    },
+    {
+      "id": "tap-2024-151",
+      "name": "Los tecnicos en Python",
+      "institution": "Universidad Nacional",
+      "rank": 151,
+      "solved": 2,
+      "penalty": 389,
+      "solvedProblems": [
+        "D",
+        "F"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 120,
+        "F": 189
+      }
+    },
+    {
+      "id": "tap-2024-152",
+      "name": "LAD",
+      "institution": "Universidad Nacional",
+      "rank": 152,
+      "solved": 2,
+      "penalty": 485,
+      "solvedProblems": [
+        "D",
+        "F"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 124,
+        "F": 281
+      }
+    },
+    {
+      "id": "tap-2024-153",
+      "name": "Los hermanoides",
+      "institution": "EscM-UNJu",
+      "rank": 153,
+      "solved": 2,
+      "penalty": 638,
+      "solvedProblems": [
+        "D",
+        "F"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 166,
+        "F": 212
+      }
+    },
+    {
+      "id": "tap-2024-154",
+      "name": "solo C",
+      "institution": "SROUNSA",
+      "rank": 154,
+      "solved": 1,
+      "penalty": 65,
+      "solvedProblems": [
+        "D"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 65
+      }
+    },
+    {
+      "id": "tap-2024-155",
+      "name": "Testing",
+      "institution": "FI UNJU",
+      "rank": 155,
+      "solved": 1,
+      "penalty": 83,
+      "solvedProblems": [
+        "D"
+      ],
+      "sourceUrl": "https://codeforces.com/gym/105321/standings",
+      "acceptedMinutes": {
+        "D": 83
+      }
+    }
+  ],
+  "distribution": [
+    {
+      "solved": 1,
+      "teams": 2
+    },
+    {
+      "solved": 2,
+      "teams": 14
+    },
+    {
+      "solved": 3,
+      "teams": 36
+    },
+    {
+      "solved": 4,
+      "teams": 55
+    },
+    {
+      "solved": 5,
+      "teams": 17
+    },
+    {
+      "solved": 6,
+      "teams": 14
+    },
+    {
+      "solved": 7,
+      "teams": 8
+    },
+    {
+      "solved": 8,
+      "teams": 3
+    },
+    {
+      "solved": 9,
+      "teams": 2
+    },
+    {
+      "solved": 10,
+      "teams": 2
+    },
+    {
+      "solved": 11,
+      "teams": 2
+    }
+  ],
+  "qualification": {
+    "ruleUrls": [],
+    "facts": [],
+    "uncertainties": [
+      "Reglamento/regla de clasificación específica de TAP 2024 no verificada en fuente recuperable."
+    ]
+  },
+  "sources": [
+    {
+      "id": "aapc",
+      "url": "https://aapc.org.ar/tap/",
+      "label": "AAPC TAP; enlaza enunciados y juez 2024",
+      "kind": "official",
+      "localPath": null,
+      "accessedAt": "2026-11-10"
+    },
+    {
+      "id": "gym",
+      "url": "https://codeforces.com/gym/105321/standings",
+      "label": "Codeforces Gym standings final",
+      "kind": "official",
+      "localPath": null,
+      "accessedAt": "2026-11-10"
+    },
+    {
+      "id": "booklet",
+      "url": "https://codeforces.com/gym/105321/attachments/download/26905/tap_2024.pdf",
+      "label": "Cuadernillo oficial en Gym",
+      "kind": "official",
+      "localPath": "fuentes/tap_2024.pdf",
+      "accessedAt": "2026-11-10"
+    },
+    {
+      "id": "facet",
+      "url": "https://www.facet.unt.edu.ar/facetinforma/2024/08/27/14-edicion-del-torneo-argentino-de-programacion/",
+      "label": "FACET UNT: sede, población y equipos UNT",
+      "kind": "official",
+      "localPath": null,
+      "accessedAt": "2026-11-10"
+    },
+    {
+      "id": "announcement",
+      "url": "https://codeforces.com/blog/entry/133298",
+      "label": "Anuncio Codeforces, periodo ICPC 2024–2025",
+      "kind": "official",
+      "localPath": null,
+      "accessedAt": "2026-11-10"
+    },
+    {
+      "id": "standings-extract",
+      "url": "https://codeforces.com/gym/105321/standings",
+      "label": "Extracto parcial manual del tablero web",
+      "kind": "official",
+      "localPath": "fuentes/codeforces-standings-extract.txt",
+      "accessedAt": "2026-11-10"
+    },
+    {
+      "id": "standings-raw",
+      "url": "https://codeforces.com/gym/105321/standings",
+      "label": "Extractos textuales del tablero final, consultados por lector web",
+      "kind": "official",
+      "localPath": "fuentes/standings-web-45.txt; fuentes/standings-web-140.txt",
+      "accessedAt": "2026-11-10"
+    },
+    {
+      "id": "historical-aapc",
+      "url": "https://aapc.org.ar/tap-2025/",
+      "label": "Enlaces históricos a juez y enunciados TAP 2024 publicados por AAPC",
+      "kind": "official",
+      "localPath": null,
+      "accessedAt": "2026-11-10"
+    }
+  ],
+  "unknowns": [],
+  "rawStandingsRows": [
+    {
+      "name": "Sanguchito",
+      "solved": 6,
+      "penalty": 900,
+      "acceptedMinutes": {
+        "B": 252,
+        "D": 151,
+        "F": 140,
+        "G": 17,
+        "L": 124,
+        "N": 176
+      }
+    },
+    {
+      "name": "AlaIzquierdaDelPozo",
+      "solved": 6,
+      "penalty": 911,
+      "acceptedMinutes": {
+        "B": 295,
+        "D": 24,
+        "F": 16,
+        "G": 35,
+        "L": 255,
+        "N": 206
+      }
+    },
+    {
+      "name": "Ed, Edd y Eddy",
+      "solved": 5,
+      "penalty": 235,
+      "acceptedMinutes": {
+        "D": 11,
+        "F": 21,
+        "G": 29,
+        "L": 116,
+        "N": 58
+      }
+    },
+    {
+      "name": "Nombre del grupo",
+      "solved": 5,
+      "penalty": 245,
+      "acceptedMinutes": {
+        "D": 8,
+        "F": 13,
+        "G": 21,
+        "L": 100,
+        "N": 63
+      }
+    },
+    {
+      "name": "Sergio corta la luz",
+      "solved": 5,
+      "penalty": 281,
+      "acceptedMinutes": {
+        "D": 33,
+        "F": 19,
+        "G": 30,
+        "L": 141,
+        "N": 38
+      }
+    },
+    {
+      "name": "Truco sucio #3",
+      "solved": 5,
+      "penalty": 319,
+      "acceptedMinutes": {
+        "D": 7,
+        "F": 31,
+        "G": 24,
+        "L": 170,
+        "N": 47
+      }
+    },
+    {
+      "name": "SÉ--",
+      "solved": 5,
+      "penalty": 348,
+      "acceptedMinutes": {
+        "D": 8,
+        "F": 20,
+        "G": 29,
+        "L": 165,
+        "N": 126
+      }
+    },
+    {
+      "name": "VaCa MaLa",
+      "solved": 5,
+      "penalty": 394,
+      "acceptedMinutes": {
+        "D": 23,
+        "F": 16,
+        "G": 31,
+        "L": 212,
+        "N": 92
+      }
+    },
+    {
+      "name": "Cooperativa Los Trapitos",
+      "solved": 5,
+      "penalty": 411,
+      "acceptedMinutes": {
+        "B": 132,
+        "D": 7,
+        "F": 22,
+        "G": 18,
+        "N": 212
+      }
+    },
+    {
+      "name": "Falta (para el) envido",
+      "solved": 5,
+      "penalty": 456,
+      "acceptedMinutes": {
+        "B": 286,
+        "D": 9,
+        "F": 16,
+        "G": 38,
+        "N": 47
+      }
+    },
+    {
+      "name": "+CAN",
+      "solved": 5,
+      "penalty": 487,
+      "acceptedMinutes": {
+        "B": 205,
+        "D": 14,
+        "F": 35,
+        "G": 34,
+        "N": 99
+      }
+    },
+    {
+      "name": "Los Dhampiros",
+      "solved": 5,
+      "penalty": 493,
+      "acceptedMinutes": {
+        "B": 157,
+        "D": 41,
+        "F": 30,
+        "G": 57,
+        "N": 68
+      }
+    },
+    {
+      "name": "Los Panzas del Pytón",
+      "solved": 5,
+      "penalty": 507,
+      "acceptedMinutes": {
+        "B": 230,
+        "D": 8,
+        "F": 14,
+        "G": 32,
+        "N": 103
+      }
+    },
+    {
+      "name": "MILF (Man I Love Famaf)",
+      "solved": 5,
+      "penalty": 508,
+      "acceptedMinutes": {
+        "B": 264,
+        "D": 17,
+        "F": 25,
+        "G": 42,
+        "N": 120
+      }
+    },
+    {
+      "name": "MathreeX",
+      "solved": 5,
+      "penalty": 583,
+      "acceptedMinutes": {
+        "D": 14,
+        "F": 27,
+        "G": 34,
+        "L": 270,
+        "N": 118
+      }
+    },
+    {
+      "name": "JAT GPT (Grupo de Programación Tranqui)",
+      "solved": 5,
+      "penalty": 591,
+      "acceptedMinutes": {
+        "C": 229,
+        "D": 21,
+        "F": 29,
+        "G": 35,
+        "N": 257
+      }
+    },
+    {
+      "name": "Grafo te la debo",
+      "solved": 5,
+      "penalty": 599,
+      "acceptedMinutes": {
+        "D": 21,
+        "F": 15,
+        "G": 56,
+        "L": 250,
+        "N": 157
+      }
+    },
+    {
+      "name": "Chipa",
+      "solved": 5,
+      "penalty": 616,
+      "acceptedMinutes": {
+        "B": 154,
+        "D": 11,
+        "F": 21,
+        "G": 35,
+        "N": 195
+      }
+    },
+    {
+      "name": "Bee",
+      "solved": 5,
+      "penalty": 734,
+      "acceptedMinutes": {
+        "B": 247,
+        "D": 7,
+        "F": 18,
+        "G": 26,
+        "N": 276
+      }
+    },
+    {
+      "name": "Los Bonomos",
+      "solved": 4,
+      "penalty": 115,
+      "acceptedMinutes": {
+        "D": 17,
+        "F": 11,
+        "G": 25,
+        "N": 62
+      }
+    },
+    {
+      "name": "Ophyucus",
+      "solved": 4,
+      "penalty": 119,
+      "acceptedMinutes": {
+        "D": 13,
+        "F": 22,
+        "G": 29,
+        "N": 55
+      }
+    },
+    {
+      "name": "Bug Abstract Factory",
+      "solved": 4,
+      "penalty": 130,
+      "acceptedMinutes": {
+        "D": 14,
+        "F": 21,
+        "G": 27,
+        "N": 68
+      }
+    },
+    {
+      "name": "return nombre",
+      "solved": 4,
+      "penalty": 161,
+      "acceptedMinutes": {
+        "D": 10,
+        "F": 17,
+        "G": 37,
+        "N": 77
+      }
+    },
+    {
+      "name": "Chapin Devs",
+      "solved": 4,
+      "penalty": 169,
+      "acceptedMinutes": {
+        "D": 24,
+        "F": 21,
+        "G": 46,
+        "N": 38
+      }
+    },
+    {
+      "name": "Gombeens of AFIP",
+      "solved": 4,
+      "penalty": 173,
+      "acceptedMinutes": {
+        "D": 17,
+        "F": 48,
+        "G": 40,
+        "N": 68
+      }
+    },
+    {
+      "name": "Lovelace",
+      "solved": 4,
+      "penalty": 179,
+      "acceptedMinutes": {
+        "D": 13,
+        "F": 20,
+        "G": 31,
+        "N": 75
+      }
+    },
+    {
+      "name": "Tres Patitos",
+      "solved": 4,
+      "penalty": 182,
+      "acceptedMinutes": {
+        "D": 24,
+        "F": 40,
+        "G": 66,
+        "N": 52
+      }
+    },
+    {
+      "name": "Grupo Silicio",
+      "solved": 4,
+      "penalty": 185,
+      "acceptedMinutes": {
+        "D": 20,
+        "F": 36,
+        "G": 52,
+        "N": 77
+      }
+    },
+    {
+      "name": "ExecutionTimeTerror",
+      "solved": 4,
+      "penalty": 191,
+      "acceptedMinutes": {
+        "D": 13,
+        "F": 21,
+        "G": 32,
+        "N": 105
+      }
+    },
+    {
+      "name": "CS++ 1.6 no steam full mediafire",
+      "solved": 4,
+      "penalty": 192,
+      "acceptedMinutes": {
+        "D": 12,
+        "F": 44,
+        "G": 37,
+        "N": 99
+      }
+    },
+    {
+      "name": "Tucumonos",
+      "solved": 4,
+      "penalty": 203,
+      "acceptedMinutes": {
+        "D": 42,
+        "F": 19,
+        "G": 29,
+        "N": 113
+      }
+    },
+    {
+      "name": "Almas Mineras",
+      "solved": 4,
+      "penalty": 221,
+      "acceptedMinutes": {
+        "D": 12,
+        "F": 22,
+        "G": 66,
+        "N": 101
+      }
+    },
+    {
+      "name": "FFF",
+      "solved": 4,
+      "penalty": 226,
+      "acceptedMinutes": {
+        "D": 24,
+        "F": 32,
+        "G": 50,
+        "N": 100
+      }
+    },
+    {
+      "name": "Dijkstra-idos",
+      "solved": 4,
+      "penalty": 235,
+      "acceptedMinutes": {
+        "D": 29,
+        "F": 60,
+        "G": 50,
+        "N": 96
+      }
+    },
+    {
+      "name": "Los Papas Fritas",
+      "solved": 4,
+      "penalty": 236,
+      "acceptedMinutes": {
+        "D": 18,
+        "F": 40,
+        "G": 72,
+        "N": 106
+      }
+    },
+    {
+      "name": "Kingsman's",
+      "solved": 4,
+      "penalty": 271,
+      "acceptedMinutes": {
+        "D": 25,
+        "F": 32,
+        "G": 55,
+        "N": 159
+      }
+    },
+    {
+      "name": "Es lo que hay",
+      "solved": 4,
+      "penalty": 273,
+      "acceptedMinutes": {
+        "D": 11,
+        "F": 32,
+        "G": 72,
+        "N": 158
+      }
+    },
+    {
+      "name": "TeamUNLaM04",
+      "solved": 4,
+      "penalty": 274,
+      "acceptedMinutes": {
+        "D": 23,
+        "F": 39,
+        "G": 47,
+        "N": 165
+      }
+    },
+    {
+      "name": "Centauro",
+      "solved": 4,
+      "penalty": 280,
+      "acceptedMinutes": {
+        "D": 9,
+        "F": 17,
+        "G": 42,
+        "N": 132
+      }
+    },
+    {
+      "name": "Algoritmo Criollo",
+      "solved": 4,
+      "penalty": 296,
+      "acceptedMinutes": {
+        "D": 12,
+        "F": 35,
+        "G": 59,
+        "N": 150
+      }
+    },
+    {
+      "name": "DP_esta_OP",
+      "solved": 4,
+      "penalty": 297,
+      "acceptedMinutes": {
+        "D": 25,
+        "F": 30,
+        "G": 48,
+        "N": 194
+      }
+    },
+    {
+      "name": "Pan't Con Manteca",
+      "solved": 4,
+      "penalty": 302,
+      "acceptedMinutes": {
+        "D": 10,
+        "F": 17,
+        "G": 25,
+        "N": 150
+      }
+    },
+    {
+      "name": "Skip List",
+      "solved": 4,
+      "penalty": 320,
+      "acceptedMinutes": {
+        "D": 12,
+        "F": 25,
+        "G": 139,
+        "N": 144
+      }
+    },
+    {
+      "name": "Sān Kâi",
+      "solved": 4,
+      "penalty": 320,
+      "acceptedMinutes": {
+        "D": 20,
+        "F": 30,
+        "G": 171,
+        "N": 79
+      }
+    },
+    {
+      "name": "Limit Testing",
+      "solved": 4,
+      "penalty": 321,
+      "acceptedMinutes": {
+        "D": 7,
+        "F": 16,
+        "G": 38,
+        "N": 240
+      }
+    },
+    {
+      "name": "Byters",
+      "solved": 4,
+      "penalty": 322,
+      "acceptedMinutes": {
+        "D": 12,
+        "F": 25,
+        "G": 88,
+        "N": 137
+      }
+    },
+    {
+      "name": "Extra Soartu 1",
+      "solved": 4,
+      "penalty": 339,
+      "acceptedMinutes": {
+        "D": 23,
+        "F": 33,
+        "G": 53,
+        "N": 210
+      }
+    },
+    {
+      "name": "Cod3rs",
+      "solved": 4,
+      "penalty": 359,
+      "acceptedMinutes": {
+        "D": 11,
+        "F": 14,
+        "G": 44,
+        "N": 270
+      }
+    },
+    {
+      "name": "SegFault Survivors",
+      "solved": 4,
+      "penalty": 374,
+      "acceptedMinutes": {
+        "D": 92,
+        "F": 110,
+        "G": 52,
+        "N": 100
+      }
+    },
+    {
+      "name": "THE BOYS",
+      "solved": 4,
+      "penalty": 378,
+      "acceptedMinutes": {
+        "D": 17,
+        "F": 34,
+        "G": 142,
+        "N": 165
+      }
+    },
+    {
+      "name": "VML Coders",
+      "solved": 4,
+      "penalty": 383,
+      "acceptedMinutes": {
+        "D": 20,
+        "F": 25,
+        "G": 34,
+        "N": 284
+      }
+    },
+    {
+      "name": "Snack Overflow",
+      "solved": 4,
+      "penalty": 401,
+      "acceptedMinutes": {
+        "D": 32,
+        "F": 47,
+        "G": 59,
+        "N": 203
+      }
+    },
+    {
+      "name": "Cerebros Binarios",
+      "solved": 4,
+      "penalty": 409,
+      "acceptedMinutes": {
+        "D": 7,
+        "F": 18,
+        "G": 36,
+        "N": 288
+      }
+    },
+    {
+      "name": "No teníamos nombre",
+      "solved": 4,
+      "penalty": 410,
+      "acceptedMinutes": {
+        "D": 35,
+        "F": 22,
+        "G": 191,
+        "N": 102
+      }
+    },
+    {
+      "name": "Ctrl + Alt + T",
+      "solved": 4,
+      "penalty": 422,
+      "acceptedMinutes": {
+        "D": 42,
+        "F": 52,
+        "G": 43,
+        "N": 265
+      }
+    },
+    {
+      "name": "Brogrammers",
+      "solved": 4,
+      "penalty": 446,
+      "acceptedMinutes": {
+        "D": 13,
+        "F": 22,
+        "G": 115,
+        "N": 236
+      }
+    },
+    {
+      "name": "Mali",
+      "solved": 4,
+      "penalty": 449,
+      "acceptedMinutes": {
+        "D": 12,
+        "F": 29,
+        "G": 102,
+        "N": 266
+      }
+    },
+    {
+      "name": "variable indefinida",
+      "solved": 4,
+      "penalty": 457,
+      "acceptedMinutes": {
+        "D": 48,
+        "F": 40,
+        "G": 95,
+        "N": 214
+      }
+    },
+    {
+      "name": "Estadio Obras Sanitarias",
+      "solved": 4,
+      "penalty": 459,
+      "acceptedMinutes": {
+        "D": 21,
+        "F": 36,
+        "G": 63,
+        "N": 259
+      }
+    },
+    {
+      "name": "Pij",
+      "solved": 4,
+      "penalty": 467,
+      "acceptedMinutes": {
+        "D": 83,
+        "F": 124,
+        "G": 59,
+        "N": 181
+      }
+    },
+    {
+      "name": "SyntaxError",
+      "solved": 4,
+      "penalty": 468,
+      "acceptedMinutes": {
+        "D": 43,
+        "F": 61,
+        "G": 120,
+        "N": 224
+      }
+    },
+    {
+      "name": "Cin>>return",
+      "solved": 4,
+      "penalty": 493,
+      "acceptedMinutes": {
+        "D": 37,
+        "F": 46,
+        "G": 93,
+        "N": 297
+      }
+    },
+    {
+      "name": "Codigo Santo",
+      "solved": 4,
+      "penalty": 496,
+      "acceptedMinutes": {
+        "D": 35,
+        "F": 74,
+        "G": 125,
+        "N": 242
+      }
+    },
+    {
+      "name": "Re Nenas",
+      "solved": 4,
+      "penalty": 563,
+      "acceptedMinutes": {
+        "D": 89,
+        "F": 43,
+        "G": 141,
+        "N": 250
+      }
+    },
+    {
+      "name": "Ctrl+Z",
+      "solved": 4,
+      "penalty": 577,
+      "acceptedMinutes": {
+        "D": 13,
+        "F": 61,
+        "G": 44,
+        "N": 299
+      }
+    },
+    {
+      "name": "Mechabyte",
+      "solved": 4,
+      "penalty": 587,
+      "acceptedMinutes": {
+        "D": 30,
+        "F": 95,
+        "G": 190,
+        "N": 272
+      }
+    },
+    {
+      "name": "!OpenAI",
+      "solved": 4,
+      "penalty": 615,
+      "acceptedMinutes": {
+        "B": 268,
+        "D": 72,
+        "F": 81,
+        "G": 34
+      }
+    },
+    {
+      "name": "M.E.R.Y.",
+      "solved": 4,
+      "penalty": 624,
+      "acceptedMinutes": {
+        "D": 94,
+        "F": 135,
+        "G": 119,
+        "N": 276
+      }
+    },
+    {
+      "name": "Beta",
+      "solved": 4,
+      "penalty": 625,
+      "acceptedMinutes": {
+        "D": 82,
+        "F": 99,
+        "G": 117,
+        "N": 267
+      }
+    },
+    {
+      "name": "Ghosts",
+      "solved": 4,
+      "penalty": 628,
+      "acceptedMinutes": {
+        "D": 23,
+        "F": 79,
+        "G": 218,
+        "N": 288
+      }
+    },
+    {
+      "name": "Zenta",
+      "solved": 4,
+      "penalty": 645,
+      "acceptedMinutes": {
+        "B": 294,
+        "D": 93,
+        "F": 67,
+        "G": 131
+      }
+    },
+    {
+      "name": "Servicio_técnico_para_abuelitas",
+      "solved": 4,
+      "penalty": 816,
+      "acceptedMinutes": {
+        "D": 37,
+        "F": 255,
+        "G": 198,
+        "N": 286
+      }
+    },
+    {
+      "name": "Programación-CFL",
+      "solved": 4,
+      "penalty": 853,
+      "acceptedMinutes": {
+        "D": 73,
+        "F": 193,
+        "G": 262,
+        "N": 285
+      }
+    },
+    {
+      "name": "OnlyJava",
+      "solved": 4,
+      "penalty": 967,
+      "acceptedMinutes": {
+        "D": 172,
+        "F": 189,
+        "G": 212,
+        "N": 294
+      }
+    },
+    {
+      "name": "Ing^-1",
+      "solved": 3,
+      "penalty": 46,
+      "acceptedMinutes": {
+        "D": 6,
+        "F": 12,
+        "G": 28
+      }
+    },
+    {
+      "name": "pizza y pollo",
+      "solved": 3,
+      "penalty": 67,
+      "acceptedMinutes": {
+        "D": 14,
+        "F": 20,
+        "G": 33
+      }
+    },
+    {
+      "name": "nenasDeGoma",
+      "solved": 3,
+      "penalty": 72,
+      "acceptedMinutes": {
+        "D": 12,
+        "F": 20,
+        "G": 40
+      }
+    },
+    {
+      "name": "Silver Interactive",
+      "solved": 3,
+      "penalty": 78,
+      "acceptedMinutes": {
+        "D": 12,
+        "F": 27,
+        "G": 39
+      }
+    },
+    {
+      "name": "Coderraria",
+      "solved": 3,
+      "penalty": 79,
+      "acceptedMinutes": {
+        "D": 16,
+        "F": 26,
+        "G": 37
+      }
+    },
+    {
+      "name": "playadito29",
+      "solved": 3,
+      "penalty": 91,
+      "acceptedMinutes": {
+        "D": 18,
+        "F": 42,
+        "G": 31
+      }
+    },
+    {
+      "name": "NULL POINTERS",
+      "solved": 3,
+      "penalty": 97,
+      "acceptedMinutes": {
+        "D": 12,
+        "F": 38,
+        "G": 47
+      }
+    },
+    {
+      "name": "Los trajavadores",
+      "solved": 3,
+      "penalty": 104,
+      "acceptedMinutes": {
+        "D": 18,
+        "F": 33,
+        "G": 53
+      }
+    },
+    {
+      "name": "Codigo:500",
+      "solved": 3,
+      "penalty": 114,
+      "acceptedMinutes": {
+        "D": 15,
+        "F": 25,
+        "G": 54
+      }
+    },
+    {
+      "name": "Mandarina",
+      "solved": 3,
+      "penalty": 115,
+      "acceptedMinutes": {
+        "D": 17,
+        "F": 27,
+        "G": 51
+      }
+    },
+    {
+      "name": "Triple T",
+      "solved": 3,
+      "penalty": 127,
+      "acceptedMinutes": {
+        "D": 27,
+        "F": 19,
+        "G": 81
+      }
+    },
+    {
+      "name": "TresTristesTecnologicos",
+      "solved": 3,
+      "penalty": 134,
+      "acceptedMinutes": {
+        "D": 36,
+        "F": 43,
+        "G": 35
+      }
+    },
+    {
+      "name": "Inserte nombre del equipo",
+      "solved": 3,
+      "penalty": 139,
+      "acceptedMinutes": {
+        "D": 25,
+        "F": 67,
+        "G": 47
+      }
+    },
+    {
+      "name": "Piramix",
+      "solved": 3,
+      "penalty": 141,
+      "acceptedMinutes": {
+        "D": 28,
+        "F": 50,
+        "G": 63
+      }
+    },
+    {
+      "name": "NullNameException()",
+      "solved": 3,
+      "penalty": 148,
+      "acceptedMinutes": {
+        "D": 34,
+        "F": 27,
+        "G": 47
+      }
+    },
+    {
+      "name": "MelodyBytes",
+      "solved": 3,
+      "penalty": 165,
+      "acceptedMinutes": {
+        "D": 28,
+        "F": 46,
+        "G": 71
+      }
+    },
+    {
+      "name": "Tuia Team",
+      "solved": 3,
+      "penalty": 186,
+      "acceptedMinutes": {
+        "D": 25,
+        "F": 52,
+        "G": 109
+      }
+    },
+    {
+      "name": "Tadeistas",
+      "solved": 3,
+      "penalty": 205,
+      "acceptedMinutes": {
+        "D": 14,
+        "F": 80,
+        "G": 111
+      }
+    },
+    {
+      "name": "MFM",
+      "solved": 3,
+      "penalty": 207,
+      "acceptedMinutes": {
+        "D": 94,
+        "F": 27,
+        "G": 66
+      }
+    },
+    {
+      "name": "J.U.L.U",
+      "solved": 3,
+      "penalty": 218,
+      "acceptedMinutes": {
+        "D": 24,
+        "F": 69,
+        "G": 105
+      }
+    },
+    {
+      "name": "Matrices de Bolsas",
+      "solved": 3,
+      "penalty": 251,
+      "acceptedMinutes": {
+        "D": 53,
+        "F": 82,
+        "G": 116
+      }
+    },
+    {
+      "name": "DreamTeam",
+      "solved": 3,
+      "penalty": 259,
+      "acceptedMinutes": {
+        "D": 44,
+        "F": 78,
+        "G": 137
+      }
+    },
+    {
+      "name": "Error404",
+      "solved": 3,
+      "penalty": 324,
+      "acceptedMinutes": {
+        "D": 39,
+        "F": 78,
+        "G": 187
+      }
+    },
+    {
+      "name": "While(Alive)",
+      "solved": 3,
+      "penalty": 352,
+      "acceptedMinutes": {
+        "D": 23,
+        "F": 48,
+        "G": 221
+      }
+    },
+    {
+      "name": "Uno cero",
+      "solved": 3,
+      "penalty": 387,
+      "acceptedMinutes": {
+        "D": 56,
+        "F": 94,
+        "G": 157
+      }
+    },
+    {
+      "name": "Binary Search",
+      "solved": 3,
+      "penalty": 389,
+      "acceptedMinutes": {
+        "D": 84,
+        "F": 123,
+        "G": 142
+      }
+    },
+    {
+      "name": "TheCodeCrews",
+      "solved": 3,
+      "penalty": 400,
+      "acceptedMinutes": {
+        "D": 42,
+        "F": 107,
+        "G": 231
+      }
+    },
+    {
+      "name": "TeamUNLaM07",
+      "solved": 3,
+      "penalty": 403,
+      "acceptedMinutes": {
+        "D": 50,
+        "F": 70,
+        "G": 183
+      }
+    },
+    {
+      "name": "CCC",
+      "solved": 3,
+      "penalty": 413,
+      "acceptedMinutes": {
+        "D": 179,
+        "F": 61,
+        "G": 133
+      }
+    },
+    {
+      "name": "N-1",
+      "solved": 3,
+      "penalty": 421,
+      "acceptedMinutes": {
+        "D": 29,
+        "F": 19,
+        "G": 153
+      }
+    },
+    {
+      "name": "Sin nombre",
+      "solved": 3,
+      "penalty": 421,
+      "acceptedMinutes": {
+        "D": 62,
+        "F": 94,
+        "G": 225
+      }
+    },
+    {
+      "name": "Cyber-Coders",
+      "solved": 3,
+      "penalty": 452,
+      "acceptedMinutes": {
+        "D": 39,
+        "F": 104,
+        "G": 249
+      }
+    },
+    {
+      "name": "Null Pointers",
+      "solved": 3,
+      "penalty": 467,
+      "acceptedMinutes": {
+        "D": 123,
+        "F": 140,
+        "G": 164
+      }
+    },
+    {
+      "name": "Los Yin y Yang",
+      "solved": 3,
+      "penalty": 522,
+      "acceptedMinutes": {
+        "D": 41,
+        "F": 88,
+        "G": 273
+      }
+    },
+    {
+      "name": "Ctrl+Z",
+      "solved": 3,
+      "penalty": 548,
+      "acceptedMinutes": {
+        "D": 90,
+        "F": 124,
+        "G": 214
+      }
+    },
+    {
+      "name": "a P-dazos",
+      "solved": 3,
+      "penalty": 561,
+      "acceptedMinutes": {
+        "D": 18,
+        "F": 244,
+        "G": 159
+      }
+    },
+    {
+      "name": "Trivago 3.0",
+      "solved": 2,
+      "penalty": 29,
+      "acceptedMinutes": {
+        "D": 17,
+        "F": 12
+      }
+    },
+    {
+      "name": "Oozma Kappa",
+      "solved": 2,
+      "penalty": 55,
+      "acceptedMinutes": {
+        "D": 8,
+        "F": 27
+      }
+    },
+    {
+      "name": "unNamed",
+      "solved": 2,
+      "penalty": 65,
+      "acceptedMinutes": {
+        "D": 19,
+        "F": 26
+      }
+    },
+    {
+      "name": "LeoEmiJhon",
+      "solved": 2,
+      "penalty": 66,
+      "acceptedMinutes": {
+        "D": 47,
+        "F": 19
+      }
+    },
+    {
+      "name": "Dijkstra y los pibes",
+      "solved": 2,
+      "penalty": 81,
+      "acceptedMinutes": {
+        "D": 13,
+        "F": 68
+      }
+    },
+    {
+      "name": "La chispa",
+      "solved": 2,
+      "penalty": 180,
+      "acceptedMinutes": {
+        "D": 41,
+        "F": 139
+      }
+    },
+    {
+      "name": "TripleC",
+      "solved": 2,
+      "penalty": 198,
+      "acceptedMinutes": {
+        "D": 78,
+        "F": 100
+      }
+    },
+    {
+      "name": "programming team",
+      "solved": 2,
+      "penalty": 292,
+      "acceptedMinutes": {
+        "D": 46,
+        "F": 226
+      }
+    },
+    {
+      "name": "TeamUNLaM05",
+      "solved": 2,
+      "penalty": 295,
+      "acceptedMinutes": {
+        "D": 72,
+        "F": 223
+      }
+    },
+    {
+      "name": "Team Code",
+      "solved": 2,
+      "penalty": 306,
+      "acceptedMinutes": {
+        "D": 13,
+        "F": 153
+      }
+    },
+    {
+      "name": "FACTOS",
+      "solved": 2,
+      "penalty": 316,
+      "acceptedMinutes": {
+        "D": 74,
+        "G": 222
+      }
+    },
+    {
+      "name": "Los tecnicos en Python",
+      "solved": 2,
+      "penalty": 389,
+      "acceptedMinutes": {
+        "D": 120,
+        "F": 189
+      }
+    },
+    {
+      "name": "LAD",
+      "solved": 2,
+      "penalty": 485,
+      "acceptedMinutes": {
+        "D": 124,
+        "F": 281
+      }
+    },
+    {
+      "name": "Los hermanoides",
+      "solved": 2,
+      "penalty": 638,
+      "acceptedMinutes": {
+        "D": 166,
+        "F": 212
+      }
+    },
+    {
+      "name": "solo C",
+      "solved": 1,
+      "penalty": 65,
+      "acceptedMinutes": {
+        "D": 65
+      }
+    },
+    {
+      "name": "Testing",
+      "solved": 1,
+      "penalty": 83,
+      "acceptedMinutes": {
+        "D": 83
+      }
+    },
+    {
+      "name": "Helicóptero",
+      "solved": 11,
+      "penalty": 997,
+      "acceptedMinutes": {
+        "A": 244,
+        "B": 20,
+        "D": 9,
+        "E": 92,
+        "F": 6,
+        "G": 16,
+        "I": 179,
+        "J": 195,
+        "K": 95,
+        "L": 47,
+        "N": 14
+      }
+    },
+    {
+      "name": "Ñubel Carajo",
+      "solved": 11,
+      "penalty": 1294,
+      "acceptedMinutes": {
+        "A": 213,
+        "B": 172,
+        "D": 3,
+        "E": 165,
+        "F": 41,
+        "G": 48,
+        "H": 273,
+        "J": 53,
+        "K": 112,
+        "L": 44,
+        "N": 10
+      }
+    },
+    {
+      "name": "Corman et al.",
+      "solved": 10,
+      "penalty": 747,
+      "acceptedMinutes": {
+        "A": 139,
+        "B": 62,
+        "D": 3,
+        "F": 7,
+        "G": 10,
+        "H": 203,
+        "J": 153,
+        "K": 26,
+        "L": 50,
+        "N": 14
+      }
+    },
+    {
+      "name": "Gracias Mateo",
+      "solved": 10,
+      "penalty": 993,
+      "acceptedMinutes": {
+        "A": 245,
+        "B": 43,
+        "C": 169,
+        "D": 8,
+        "F": 5,
+        "G": 17,
+        "J": 93,
+        "K": 192,
+        "L": 20,
+        "N": 41
+      }
+    },
+    {
+      "name": "Thinking Limit Exceeded",
+      "solved": 9,
+      "penalty": 972,
+      "acceptedMinutes": {
+        "B": 19,
+        "D": 20,
+        "E": 127,
+        "F": 8,
+        "G": 33,
+        "H": 274,
+        "J": 209,
+        "L": 85,
+        "N": 37
+      }
+    },
+    {
+      "name": "Champán en lata",
+      "solved": 9,
+      "penalty": 1294,
+      "acceptedMinutes": {
+        "A": 292,
+        "B": 108,
+        "D": 12,
+        "F": 17,
+        "G": 10,
+        "J": 252,
+        "K": 178,
+        "L": 102,
+        "N": 43
+      }
+    },
+    {
+      "name": "MyRoomIsRandomSorted",
+      "solved": 8,
+      "penalty": 580,
+      "acceptedMinutes": {
+        "B": 75,
+        "D": 8,
+        "F": 14,
+        "G": 17,
+        "J": 131,
+        "K": 172,
+        "L": 84,
+        "N": 39
+      }
+    },
+    {
+      "name": "Julián Masliah",
+      "solved": 8,
+      "penalty": 601,
+      "acceptedMinutes": {
+        "A": 202,
+        "B": 55,
+        "D": 8,
+        "F": 12,
+        "G": 22,
+        "J": 133,
+        "L": 46,
+        "N": 43
+      }
+    },
+    {
+      "name": "NaN",
+      "solved": 8,
+      "penalty": 620,
+      "acceptedMinutes": {
+        "A": 255,
+        "B": 52,
+        "D": 7,
+        "F": 13,
+        "G": 5,
+        "K": 112,
+        "L": 72,
+        "N": 44
+      }
+    },
+    {
+      "name": "Incidentes Catastróficos en la Práctica del Caos",
+      "solved": 7,
+      "penalty": 269,
+      "acceptedMinutes": {
+        "B": 40,
+        "D": 4,
+        "F": 12,
+        "G": 19,
+        "K": 86,
+        "L": 59,
+        "N": 29
+      }
+    },
+    {
+      "name": "Suplentes sin Gloria",
+      "solved": 7,
+      "penalty": 271,
+      "acceptedMinutes": {
+        "B": 60,
+        "D": 3,
+        "F": 7,
+        "G": 11,
+        "J": 126,
+        "L": 47,
+        "N": 17
+      }
+    },
+    {
+      "name": "Yo, él y Joel",
+      "solved": 7,
+      "penalty": 368,
+      "acceptedMinutes": {
+        "B": 88,
+        "D": 6,
+        "F": 9,
+        "G": 14,
+        "K": 127,
+        "L": 37,
+        "N": 47
+      }
+    },
+    {
+      "name": "La mala nave de beto",
+      "solved": 7,
+      "penalty": 441,
+      "acceptedMinutes": {
+        "B": 42,
+        "D": 18,
+        "F": 10,
+        "G": 23,
+        "K": 205,
+        "L": 84,
+        "N": 59
+      }
+    },
+    {
+      "name": "Entró el P",
+      "solved": 7,
+      "penalty": 647,
+      "acceptedMinutes": {
+        "B": 74,
+        "D": 12,
+        "F": 9,
+        "G": 16,
+        "J": 226,
+        "L": 141,
+        "N": 49
+      }
+    },
+    {
+      "name": "Sale con dp y fritas",
+      "solved": 7,
+      "penalty": 669,
+      "acceptedMinutes": {
+        "B": 166,
+        "D": 7,
+        "F": 15,
+        "G": 26,
+        "K": 226,
+        "L": 113,
+        "N": 76
+      }
+    },
+    {
+      "name": "Glistering Melon",
+      "solved": 7,
+      "penalty": 853,
+      "acceptedMinutes": {
+        "B": 125,
+        "D": 12,
+        "F": 20,
+        "G": 33,
+        "K": 240,
+        "L": 201,
+        "N": 142
+      }
+    },
+    {
+      "name": "Pasta Térmica",
+      "solved": 7,
+      "penalty": 967,
+      "acceptedMinutes": {
+        "B": 273,
+        "D": 14,
+        "F": 9,
+        "G": 19,
+        "K": 218,
+        "L": 284,
+        "N": 30
+      }
+    },
+    {
+      "name": "The Greedies",
+      "solved": 6,
+      "penalty": 361,
+      "acceptedMinutes": {
+        "B": 47,
+        "D": 19,
+        "F": 2,
+        "G": 13,
+        "L": 66,
+        "N": 194
+      }
+    },
+    {
+      "name": "Magnisidio de magnisimios",
+      "solved": 6,
+      "penalty": 382,
+      "acceptedMinutes": {
+        "B": 136,
+        "D": 10,
+        "F": 25,
+        "G": 50,
+        "L": 80,
+        "N": 41
+      }
+    },
+    {
+      "name": "hola",
+      "solved": 6,
+      "penalty": 453,
+      "acceptedMinutes": {
+        "B": 141,
+        "D": 7,
+        "F": 22,
+        "G": 33,
+        "L": 120,
+        "N": 90
+      }
+    },
+    {
+      "name": "Null?",
+      "solved": 6,
+      "penalty": 484,
+      "acceptedMinutes": {
+        "B": 126,
+        "D": 6,
+        "F": 16,
+        "G": 23,
+        "L": 163,
+        "N": 70
+      }
+    },
+    {
+      "name": "backtrackeame esta",
+      "solved": 6,
+      "penalty": 509,
+      "acceptedMinutes": {
+        "B": 116,
+        "D": 15,
+        "F": 8,
+        "G": 22,
+        "L": 164,
+        "N": 64
+      }
+    },
+    {
+      "name": "los tarches",
+      "solved": 6,
+      "penalty": 521,
+      "acceptedMinutes": {
+        "B": 192,
+        "D": 15,
+        "F": 18,
+        "G": 6,
+        "L": 163,
+        "N": 27
+      }
+    },
+    {
+      "name": "Chirimbolo",
+      "solved": 6,
+      "penalty": 564,
+      "acceptedMinutes": {
+        "B": 120,
+        "D": 20,
+        "F": 15,
+        "G": 7,
+        "L": 248,
+        "N": 34
+      }
+    },
+    {
+      "name": "PatenteFobia",
+      "solved": 6,
+      "penalty": 572,
+      "acceptedMinutes": {
+        "B": 227,
+        "D": 24,
+        "F": 32,
+        "G": 18,
+        "L": 110,
+        "N": 41
+      }
+    },
+    {
+      "name": "__",
+      "solved": 6,
+      "penalty": 576,
+      "acceptedMinutes": {
+        "B": 247,
+        "D": 11,
+        "F": 15,
+        "G": 19,
+        "L": 167,
+        "N": 77
+      }
+    },
+    {
+      "name": "Turing Completo",
+      "solved": 6,
+      "penalty": 614,
+      "acceptedMinutes": {
+        "B": 169,
+        "D": 5,
+        "F": 22,
+        "G": 13,
+        "L": 149,
+        "N": 96
+      }
+    },
+    {
+      "name": "arch btw",
+      "solved": 6,
+      "penalty": 635,
+      "acceptedMinutes": {
+        "A": 92,
+        "B": 209,
+        "D": 5,
+        "F": 25,
+        "G": 37,
+        "N": 227
+      }
+    },
+    {
+      "name": "SPARKIANOS",
+      "solved": 6,
+      "penalty": 769,
+      "acceptedMinutes": {
+        "B": 283,
+        "D": 4,
+        "F": 17,
+        "G": 22,
+        "L": 160,
+        "N": 103
+      }
+    }
+  ],
+  "audit": {
+    "reviewedBy": "root",
+    "reviewedAt": "2026-11-10",
+    "sumAccepted": 667,
+    "sumSolved": 667,
+    "populationCount": 155,
+    "rowPenaltiesRecomputed": true,
+    "editorialClassification": "Reviewed separately by root; collector agents did not edit the catalog."
+  }
+}

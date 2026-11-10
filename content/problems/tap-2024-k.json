@@ -1,0 +1,46 @@
+{
+  "id": "tap-2024-k",
+  "tournamentId": "tap-2024",
+  "letter": "K",
+  "title": "Typographic Kaleidoscope",
+  "summary": "Contar las letras T, A y P que componen una imagen de caracteres, sin superposiciones y con formas fijas.",
+  "difficulty": "Salto regional",
+  "conceptual": "3/5 (estimación editorial)",
+  "implementation": "3/5 (estimación editorial)",
+  "topics": [
+    "Grillas",
+    "Reconocimiento de patrones",
+    "Observación"
+  ],
+  "chunkIds": [
+    "cpp-strings",
+    "cpp-matrices",
+    "cpp-recorridos"
+  ],
+  "coverage": "parcial",
+  "missingTools": [
+    "Algoritmo de descomposición y tratamiento de letras adyacentes; no se presupone correcto un reconocimiento local voraz."
+  ],
+  "hints": [],
+  "classificationConfidence": "Baja: valoración propia del enunciado. No se localizó una editorial oficial de esta edición; las técnicas avanzadas requieren contraste con una solución de referencia.",
+  "difficultyReason": "Lectura editorial del enunciado: salto regional. La banda no se calcula a partir de un umbral de AC.",
+  "approach": "Cobertura de operaciones de base. Requisito pendiente: Algoritmo de descomposición y tratamiento de letras adyacentes; no se presupone correcto un reconocimiento local voraz.",
+  "ac": 13,
+  "total": 155,
+  "judgeUrl": "https://codeforces.com/gym/105321/problem/K",
+  "sourceUrl": "https://codeforces.com/gym/105321/attachments/download/26905/tap_2024.pdf#page=17",
+  "statementUrl": "/statements/tap-2024-k.pdf",
+  "statementPages": {
+    "start": 17,
+    "end": 18,
+    "sourcePageCount": 21
+  },
+  "firstSolve": {
+    "minute": 26,
+    "teams": [
+      "Corman et al."
+    ]
+  },
+  "editorialUrl": null,
+  "status": "verificado"
+}

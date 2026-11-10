@@ -1,0 +1,287 @@
+{
+  "id": "tap-2025",
+  "title": "Torneo Argentino de Programación 2025",
+  "year": 2025,
+  "season": "2025–2026 (inscripción ICPC TAP-2026)",
+  "setName": "2025 Argentinian Programming Tournament · Gym 106054 · 14 problemas",
+  "judgeUrl": "https://codeforces.com/gym/106054",
+  "statementBooklet": {
+    "url": "/statements/tap-2025-completo.pdf",
+    "sourceUrl": "https://icpc.com.ar/wp-content/uploads/2025/08/tap2025.pdf"
+  },
+  "totalTeams": 183,
+  "population": "Tabla nacional completa de resultados finales publicada por AAPC: 183 filas de equipos, incluyendo los equipos rotulados Extra. Puntaje mostrado como resueltos (penalidad). La fuente no da los problemas resueltos por equipo.",
+  "status": "verificado",
+  "sources": [
+    {
+      "label": "Edición TAP 2025 AAPC",
+      "url": "https://aapc.org.ar/tap-2025/"
+    },
+    {
+      "label": "Resultados oficiales AAPC TAP 2025",
+      "url": "https://aapc.org.ar/resultados-tap-2025/"
+    },
+    {
+      "label": "Cuaderno oficial",
+      "url": "https://icpc.com.ar/wp-content/uploads/2025/08/tap2025.pdf"
+    },
+    {
+      "label": "Criterio de clasificación ICPC 2025",
+      "url": "https://icpc.com.ar/wp-content/uploads/2025/08/criterioclasificacionregionalicpc2025.pdf"
+    },
+    {
+      "label": "Juez online enlazado desde la página AAPC TAP 2025",
+      "url": "https://codeforces.com/gym/106054"
+    },
+    {
+      "label": "Standings finales Codeforces del Gym TAP 2025 (183 Ghost participants, filas coincidentes con AAPC)",
+      "url": "https://codeforces.com/gym/106054/standings"
+    }
+  ],
+  "distribution": [
+    {
+      "solved": 0,
+      "teams": 2
+    },
+    {
+      "solved": 1,
+      "teams": 4
+    },
+    {
+      "solved": 2,
+      "teams": 31
+    },
+    {
+      "solved": 3,
+      "teams": 52
+    },
+    {
+      "solved": 4,
+      "teams": 69
+    },
+    {
+      "solved": 5,
+      "teams": 8
+    },
+    {
+      "solved": 6,
+      "teams": 8
+    },
+    {
+      "solved": 8,
+      "teams": 1
+    },
+    {
+      "solved": 9,
+      "teams": 1
+    },
+    {
+      "solved": 10,
+      "teams": 4
+    },
+    {
+      "solved": 11,
+      "teams": 1
+    },
+    {
+      "solved": 12,
+      "teams": 2
+    }
+  ],
+  "tucumanResults": [
+    {
+      "team": "Milanguchito",
+      "institution": "UNT",
+      "rank": 38,
+      "solved": 4,
+      "penalty": 156,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "note": "Resultado publicado; clasificación al Regional pendiente de confirmar."
+    },
+    {
+      "team": "Chat con Grandes Problemas Tecnicos",
+      "institution": "UNT",
+      "rank": 51,
+      "solved": 4,
+      "penalty": 214,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "note": "Resultado publicado; clasificación al Regional pendiente de confirmar."
+    },
+    {
+      "team": "while(so serious)",
+      "institution": "UNT",
+      "rank": 53,
+      "solved": 4,
+      "penalty": 219,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "note": "Resultado publicado; clasificación al Regional pendiente de confirmar."
+    },
+    {
+      "team": "TUCUmancos",
+      "institution": "UNT",
+      "rank": 57,
+      "solved": 4,
+      "penalty": 232,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "note": "Resultado publicado; clasificación al Regional pendiente de confirmar."
+    },
+    {
+      "team": "SpreadF",
+      "institution": "UNT",
+      "rank": 79,
+      "solved": 4,
+      "penalty": 359,
+      "solvedProblems": [
+        "A",
+        "G",
+        "I",
+        "N"
+      ],
+      "note": "Resultado publicado; clasificación al Regional pendiente de confirmar."
+    },
+    {
+      "team": "Csquid",
+      "institution": "UNT",
+      "rank": 110,
+      "solved": 3,
+      "penalty": 240,
+      "solvedProblems": [
+        "G",
+        "I",
+        "N"
+      ],
+      "note": "Resultado publicado; clasificación al Regional pendiente de confirmar."
+    }
+  ],
+  "tucumanQualificationVerified": false,
+  "notes": [
+    "AC reconstruidos a partir de equipos de la población publicada; los contadores de práctica no intervienen.",
+    "Bandas y herramientas revisadas por root; no equivalen a una editorial oficial.",
+    "Promoción efectiva de equipos locales pendiente de confirmar; un dato desconocido no se representa como cero."
+  ],
+  "qualification": {
+    "count": 55,
+    "kind": "cupos",
+    "scope": "argentinos",
+    "target": "Regional",
+    "sourceUrl": "https://icpc.com.ar/wp-content/uploads/2025/08/criterioclasificacionregionalicpc2025.pdf"
+  },
+  "qualificationAnalysis": {
+    "rankLimit": 20,
+    "institutionLimit": 4,
+    "ruleSourceUrl": "https://icpc.com.ar/wp-content/uploads/2025/08/criterioclasificacionregionalicpc2025.pdf",
+    "directQualification": "top 20, excluyendo equipos con cuatro de su institución por delante.",
+    "indirectQualification": "cupos por orden institucional y cupos femeninos, según prioridad del reglamento.",
+    "cutoff": {
+      "team": "TAPires",
+      "institution": "Universidad de San Andrés",
+      "rank": 19,
+      "solved": 5,
+      "penalty": 328,
+      "solvedProblems": [
+        "A",
+        "G",
+        "H",
+        "I",
+        "N"
+      ]
+    },
+    "cohort": {
+      "solved": 6,
+      "combinations": [
+        {
+          "teams": 7,
+          "solvedProblems": [
+            "A",
+            "G",
+            "H",
+            "I",
+            "L",
+            "N"
+          ]
+        },
+        {
+          "teams": 1,
+          "solvedProblems": [
+            "A",
+            "E",
+            "G",
+            "I",
+            "L",
+            "N"
+          ]
+        }
+      ]
+    },
+    "cutoffContext": [
+      "6 AC te ubicaban entre los primeros 17; también debías cumplir el límite por institución.",
+      "Con 5 AC, el último elegible fue TAPires: 328 de penalidad. El puesto 20 quedó fuera de la vía directa por el límite institucional."
+    ],
+    "requiredLevel": "Salto regional",
+    "preparation": [
+      {
+        "title": "Asegurar el piso",
+        "items": [
+          {
+            "solvedProblems": [
+              "A",
+              "G",
+              "I",
+              "N"
+            ],
+            "tools": "Strings, simulación, aritmética y extremos"
+          }
+        ]
+      },
+      {
+        "title": "Buscar el quinto y sexto AC",
+        "items": [
+          {
+            "solvedProblems": [
+              "H"
+            ],
+            "tools": "Divisores y observación"
+          },
+          {
+            "solvedProblems": [
+              "L"
+            ],
+            "tools": "DP de secuencias"
+          },
+          {
+            "solvedProblems": [
+              "C",
+              "E"
+            ],
+            "tools": "Alternativas: conteo en permutaciones y recorridos de árboles"
+          }
+        ]
+      }
+    ],
+    "evidenceSourceUrls": [
+      "https://icpc.com.ar/wp-content/uploads/2025/08/criterioclasificacionregionalicpc2025.pdf",
+      "https://aapc.org.ar/resultados-tap-2025/",
+      "https://codeforces.com/gym/106054/standings"
+    ]
+  }
+}

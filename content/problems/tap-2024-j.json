@@ -1,0 +1,47 @@
+{
+  "id": "tap-2024-j",
+  "tournamentId": "tap-2024",
+  "letter": "J",
+  "title": "Never Add Up to X",
+  "summary": "Reordenar una colección de valores evitando que dos vecinos sumen X, o determinar que no es posible.",
+  "difficulty": "Salto regional",
+  "conceptual": "3/5 (estimación editorial)",
+  "implementation": "3/5 (estimación editorial)",
+  "topics": [
+    "Construcción",
+    "Frecuencias",
+    "Ordenación"
+  ],
+  "chunkIds": [
+    "cpp-vectores",
+    "cpp-ordenacion",
+    "cpp-frecuencias",
+    "cpp-pares"
+  ],
+  "coverage": "parcial",
+  "missingTools": [
+    "Construcción válida con valores repetidos y detección de imposibilidad; no se ha validado un enfoque completo."
+  ],
+  "hints": [],
+  "classificationConfidence": "Media: valoración propia del enunciado. No se localizó una editorial oficial de esta edición; las técnicas avanzadas requieren contraste con una solución de referencia.",
+  "difficultyReason": "Lectura editorial del enunciado: salto regional. La banda no se calcula a partir de un umbral de AC.",
+  "approach": "Cobertura de operaciones de base. Requisito pendiente: Construcción válida con valores repetidos y detección de imposibilidad; no se ha validado un enfoque completo.",
+  "ac": 10,
+  "total": 155,
+  "judgeUrl": "https://codeforces.com/gym/105321/problem/J",
+  "sourceUrl": "https://codeforces.com/gym/105321/attachments/download/26905/tap_2024.pdf#page=16",
+  "statementUrl": "/statements/tap-2024-j.pdf",
+  "statementPages": {
+    "start": 16,
+    "end": 16,
+    "sourcePageCount": 21
+  },
+  "firstSolve": {
+    "minute": 53,
+    "teams": [
+      "Ñubel Carajo"
+    ]
+  },
+  "editorialUrl": null,
+  "status": "verificado"
+}

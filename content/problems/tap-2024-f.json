@@ -1,0 +1,43 @@
+{
+  "id": "tap-2024-f",
+  "tournamentId": "tap-2024",
+  "letter": "F",
+  "title": "Fixture",
+  "summary": "Calcular un puntaje por victorias y derrotas, incluyendo un bonus por cada victoria que prolonga una racha de al menos tres.",
+  "difficulty": "Inicial",
+  "conceptual": "1/5 (estimación editorial)",
+  "implementation": "1/5 (estimación editorial)",
+  "topics": [
+    "Simulación",
+    "Rachas"
+  ],
+  "chunkIds": [
+    "cpp-recorridos",
+    "cpp-rachas",
+    "cpp-cuentas-enteras"
+  ],
+  "coverage": "completa",
+  "missingTools": [],
+  "hints": [],
+  "classificationConfidence": "Alta: valoración propia del enunciado. No se localizó una editorial oficial de esta edición; las técnicas avanzadas requieren contraste con una solución de referencia.",
+  "difficultyReason": "Lectura editorial del enunciado: inicial. La banda no se calcula a partir de un umbral de AC.",
+  "approach": "Herramientas de un enfoque editorial de referencia; no incluye la observación ni la solución.",
+  "ac": 152,
+  "total": 155,
+  "judgeUrl": "https://codeforces.com/gym/105321/problem/F",
+  "sourceUrl": "https://codeforces.com/gym/105321/attachments/download/26905/tap_2024.pdf#page=10",
+  "statementUrl": "/statements/tap-2024-f.pdf",
+  "statementPages": {
+    "start": 10,
+    "end": 10,
+    "sourcePageCount": 21
+  },
+  "firstSolve": {
+    "minute": 2,
+    "teams": [
+      "The Greedies"
+    ]
+  },
+  "editorialUrl": null,
+  "status": "verificado"
+}

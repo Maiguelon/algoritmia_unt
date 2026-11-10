@@ -1,0 +1,45 @@
+{
+  "id": "tap-2024-d",
+  "tournamentId": "tap-2024",
+  "letter": "D",
+  "title": "Duo",
+  "summary": "Decidir si alguno de tres jugadores puede ganar solo frente a la alianza de los otros dos, dados sus puntajes.",
+  "difficulty": "Inicial",
+  "conceptual": "1/5 (estimación editorial)",
+  "implementation": "1/5 (estimación editorial)",
+  "topics": [
+    "Aritmética",
+    "Condicionales"
+  ],
+  "chunkIds": [
+    "cpp-variables",
+    "cpp-condiciones",
+    "cpp-cuentas-enteras"
+  ],
+  "coverage": "completa",
+  "missingTools": [],
+  "hints": [],
+  "classificationConfidence": "Alta: valoración propia del enunciado. No se localizó una editorial oficial de esta edición; las técnicas avanzadas requieren contraste con una solución de referencia.",
+  "difficultyReason": "Lectura editorial del enunciado: inicial. La banda no se calcula a partir de un umbral de AC.",
+  "approach": "Herramientas de un enfoque editorial de referencia; no incluye la observación ni la solución.",
+  "ac": 155,
+  "total": 155,
+  "judgeUrl": "https://codeforces.com/gym/105321/problem/D",
+  "sourceUrl": "https://codeforces.com/gym/105321/attachments/download/26905/tap_2024.pdf#page=8",
+  "statementUrl": "/statements/tap-2024-d.pdf",
+  "statementPages": {
+    "start": 8,
+    "end": 8,
+    "sourcePageCount": 21
+  },
+  "firstSolve": {
+    "minute": 3,
+    "teams": [
+      "Corman et al.",
+      "Suplentes sin Gloria",
+      "Ñubel Carajo"
+    ]
+  },
+  "editorialUrl": null,
+  "status": "verificado"
+}
