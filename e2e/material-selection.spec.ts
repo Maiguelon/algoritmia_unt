@@ -29,6 +29,8 @@ test('entra con las recomendaciones actuales, muestra el resumen arriba y descar
   await other.getByRole('button', {name:'＋ Seleccionar problema'}).click();
   await expect(page.getByRole('radio', {name:'Recomendado',exact:true})).toBeChecked();
   await expect(page.getByTestId('notes-content-count')).toHaveText('6');
+  await expect(page.getByRole('region', {name:'Descarga al final del apunte'})).toHaveCount(0);
+  await page.getByRole('radio', {name:'Personalizado',exact:true}).check();
   const bottom = page.getByRole('region', {name:'Descarga al final del apunte'});
   const downloading = page.waitForEvent('download');
   await bottom.getByRole('button', {name:'Descargar apunte PDF'}).click();
@@ -38,10 +40,10 @@ test('entra con las recomendaciones actuales, muestra el resumen arriba y descar
   await download.saveAs(path);
   expect((await PDFDocument.load(await fs.readFile(path))).getPageCount()).toBeGreaterThan(1);
   await page.getByRole('radio', {name:'Personalizado',exact:true}).check();
-  await page.locator('#apuntes').scrollIntoViewIfNeeded();
+  await page.getByRole('navigation', {name:'Material de tu selección'}).getByRole('link', {name:'Apuntes ↓',exact:true}).click();
   await page.screenshot({path:'test-results-material/apunte-resumen-arriba.png'});
   await page.setViewportSize({width:390,height:844});
-  await page.locator('#apuntes').scrollIntoViewIfNeeded();
+  await page.getByRole('navigation', {name:'Material de tu selección'}).getByRole('link', {name:'Apuntes ↓',exact:true}).click();
   await expect(summary.getByRole('button', {name:'Descargar apunte PDF'})).toBeInViewport();
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
   await page.screenshot({path:'test-results-material/apunte-resumen-mobile.png'});
@@ -53,6 +55,7 @@ test('los modos automáticos reúnen herramientas y se actualizan al quitar prob
   await expect(page.getByTestId('notes-content-count')).toHaveText('6');
   await expect(page.getByRole('region', { name: 'Herramientas incluidas' }).getByRole('link', { name: 'Strings ↗', exact: true })).toHaveCount(1);
   await page.getByRole('radio', { name: 'Completo', exact: true }).check();
+  await expect(page.getByRole('region', {name:'Descarga al final del apunte'})).toHaveCount(0);
   await expect(page.getByTestId('notes-content-count')).toHaveText('6');
   await page.getByRole('link', { name: 'Revisar vista previa ↓', exact: true }).click();
   await expect(page.locator('#preview-cpp-strings').getByRole('heading', { name: 'Ejemplos', exact: true })).toHaveCount(1);

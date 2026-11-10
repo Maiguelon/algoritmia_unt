@@ -202,12 +202,12 @@ export default function NotesBuilder({ chunks, problems, tournaments }: { chunks
       </div> : null}
     </div>
     {custom && supports.length > 0 && <section className="panel builder-supports"><h3>Apoyos que podés sumar</h3><p className="muted">Si ya los conocés o tenés impresos, dejalos fuera.</p><div>{supports.map((chunk) => <button key={chunk.id} type="button" className="chip" onClick={() => change((previous) => addSuggestedSelection(previous, [chunk.id], chunks))}>+ {chunk.title}</button>)}</div></section>}
-    <section className="panel builder-download-bottom" aria-label="Descarga al final del apunte">
+    {custom && <section className="panel builder-download-bottom" aria-label="Descarga al final del apunte">
       <p><strong>{content.length} {content.length === 1 ? 'bloque' : 'bloques'} + plantilla de C++17</strong><br/><span className="muted">Descargá el apunte con el contenido que elegiste.</span></p>
       <button type="button" className="button" disabled={!ready || working || content.length === 0} onClick={() => download('bottom')}>{working ? 'Preparando PDF…' : 'Descargar apunte PDF'}</button>
       {downloadOrigin === 'bottom' && message && <p role="status">{message}</p>}
       {downloadOrigin === 'bottom' && error && <p role="alert" className="builder-error">{error}</p>}
-    </section>
+    </section>}
 
     <details id="vista-previa" className="builder-preview-section" open={custom} ref={preview}>
       <summary>Vista previa del apunte</summary>
