@@ -4240,7 +4240,9 @@
     }
   ],
   "unknowns": [
-    "El Gym contiene una fila extra (CCL Soarch 4) que no aparece en la tabla AAPC y no tiene a Root de AAPC; métricas por problema usan solo los 182 equipos reconciliados por nombre, problemas y penalidad. Root queda con solvedProblems null. La discrepancia de memberships está documentada en notas."
+    "No se dispone de una fila del Gym para Root; AAPC publica cero AC, por lo que root normalizó sus letras a [] sin afectar ningún conteo.",
+    "El Gym contiene CCL Soarch 4, ausente de AAPC; sus dos AC se excluyen de la población nacional. La discrepancia de participantes queda documentada.",
+    "Clasificación efectiva al Regional de los equipos de Tucumán no confirmada."
   ],
   "rawStandingsRows": [
     {
