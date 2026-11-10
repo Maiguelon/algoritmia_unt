@@ -1,0 +1,49 @@
+{
+  "id": "regional-2024-j",
+  "tournamentId": "regional-2024",
+  "letter": "J",
+  "title": "Jigsaw of Shadows",
+  "summary": "Calcular la longitud de una ruta cubierta por las sombras de personas con posiciones y alturas dadas, iluminadas bajo un ángulo conocido.",
+  "topics": [
+    "Geometría",
+    "Ordenación",
+    "Intervalos"
+  ],
+  "difficulty": "Consolidación",
+  "difficultyReason": "Estimación editorial: conceptual 2/5 e implementación 2/5. Buena práctica de STL e implementación; requiere convertir una descripción geométrica en intervalos.",
+  "implementation": "2/5 (estimación editorial)",
+  "conceptual": "2/5 (estimación editorial)",
+  "ac": 77,
+  "total": 187,
+  "judgeUrl": "https://codeforces.com/gym/105505/problem/J",
+  "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2024/contest.pdf#page=16",
+  "statementUrl": "/statements/regional-2024-j.pdf",
+  "chunkIds": [
+    "cpp-pares",
+    "cpp-ordenacion",
+    "cpp-reales",
+    "cpp-intervalos"
+  ],
+  "coverage": "completa",
+  "missingTools": [],
+  "hints": [
+    "Revisá especialmente: grados frente a radianes.",
+    "Cuidado con sumar dos veces superposiciones.",
+    "Revisá especialmente: precisión de salida."
+  ],
+  "status": "verificado",
+  "approach": "Base de clasificación: editorial oficial + enunciado. Los bloques propuestos son una selección editorial de herramientas, no una solución ni un inventario de todos los enfoques. Cubren las operaciones de base del enfoque elegido; descubrir y justificar la observación sigue siendo parte del ejercicio.",
+  "editorialUrl": "https://scorelatam.naquadah.com.br/latam-2024/icpcla24_solution_sketches.pdf",
+  "classificationConfidence": "Alta: editorial oficial. Rápida condicionada a recordar trigonometría elemental y unión de intervalos.",
+  "firstSolve": {
+    "minute": 25,
+    "teams": [
+      "[UCSP] LobitosFC"
+    ]
+  },
+  "statementPages": {
+    "start": 16,
+    "end": 17,
+    "sourcePageCount": 19
+  }
+}

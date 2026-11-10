@@ -1,0 +1,49 @@
+{
+  "id": "regional-2024-e",
+  "tournamentId": "regional-2024",
+  "letter": "E",
+  "title": "Evereth Expedition",
+  "summary": "Completar los números borrados de un itinerario que visita cada estación de montaña una vez, en un solo ascenso seguido de un descenso.",
+  "topics": [
+    "Greedy",
+    "Constructivos"
+  ],
+  "difficulty": "Avanzado",
+  "difficultyReason": "Estimación editorial: conceptual 4/5 e implementación 3/5. Caso puente para estudiar más adelante: código moderado, pero decisiones delicadas y pocos AC oficiales.",
+  "implementation": "3/5 (estimación editorial)",
+  "conceptual": "4/5 (estimación editorial)",
+  "ac": 4,
+  "total": 187,
+  "judgeUrl": "https://codeforces.com/gym/105505/problem/E",
+  "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2024/contest.pdf#page=9",
+  "statementUrl": "/statements/regional-2024-e.pdf",
+  "chunkIds": [
+    "cpp-vectores",
+    "cpp-set",
+    "cpp-ordenacion"
+  ],
+  "coverage": "parcial",
+  "missingTools": [
+    "Greedy de extremos; alternativa de flujo No desarrollado como técnica en la biblioteca básica."
+  ],
+  "hints": [
+    "Cuidado con elegir cualquier hueco sin prueba.",
+    "Revisá especialmente: único valor conocido.",
+    "Cuidado con conservar todos los valores fijados."
+  ],
+  "status": "verificado",
+  "approach": "Base de clasificación: editorial oficial + enunciado. Los bloques propuestos son una selección editorial de herramientas, no una solución ni un inventario de todos los enfoques. La técnica indicada como faltante necesita una ampliación de los apuntes; estos bloques no bastan para aprenderla.",
+  "editorialUrl": "https://scorelatam.naquadah.com.br/latam-2024/icpcla24_solution_sketches.pdf",
+  "classificationConfidence": "Alta: editorial oficial. Tiene alternativa por flujo; no se etiqueta como problema introductorio de flujo.",
+  "firstSolve": {
+    "minute": 255,
+    "teams": [
+      "[UTEC] WA doesn't go away with tears"
+    ]
+  },
+  "statementPages": {
+    "start": 9,
+    "end": 9,
+    "sourcePageCount": 19
+  }
+}

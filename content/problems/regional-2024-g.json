@@ -1,0 +1,48 @@
+{
+  "id": "regional-2024-g",
+  "tournamentId": "regional-2024",
+  "letter": "G",
+  "title": "Grand Glory Race",
+  "summary": "Responder cuántas aldeas reclama un corredor que parte de una hoja de un árbol cuando se elige otra aldea como meta de la carrera.",
+  "topics": [
+    "Árboles",
+    "DP"
+  ],
+  "difficulty": "Avanzado",
+  "difficultyReason": "Estimación editorial: conceptual 4/5 e implementación 4/5. Relevante para ampliar DP en árboles, con carga considerable de estados y restauración al cambiar la raíz.",
+  "implementation": "4/5 (estimación editorial)",
+  "conceptual": "4/5 (estimación editorial)",
+  "ac": 2,
+  "total": 187,
+  "judgeUrl": "https://codeforces.com/gym/105505/problem/G",
+  "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2024/contest.pdf#page=11",
+  "statementUrl": "/statements/regional-2024-g.pdf",
+  "chunkIds": [
+    "cpp-vectores",
+    "cpp-pares"
+  ],
+  "coverage": "parcial",
+  "missingTools": [
+    "DP de rerooting No desarrollado como técnica en la biblioteca básica."
+  ],
+  "hints": [
+    "Revisá especialmente: desempate entre corredores.",
+    "Cuidado con perder la segunda mejor opción.",
+    "Cuidado con restaurar mal el estado."
+  ],
+  "status": "verificado",
+  "approach": "Base de clasificación: editorial oficial + enunciado. Los bloques propuestos son una selección editorial de herramientas, no una solución ni un inventario de todos los enfoques. La técnica indicada como faltante necesita una ampliación de los apuntes; estos bloques no bastan para aprenderla.",
+  "editorialUrl": "https://scorelatam.naquadah.com.br/latam-2024/icpcla24_solution_sketches.pdf",
+  "classificationConfidence": "Alta: editorial oficial. Rerooting requiere más preparación que recorridos simples.",
+  "firstSolve": {
+    "minute": 278,
+    "teams": [
+      "[UMSS] Perritos Malvados"
+    ]
+  },
+  "statementPages": {
+    "start": 11,
+    "end": 12,
+    "sourcePageCount": 19
+  }
+}

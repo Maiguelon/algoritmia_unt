@@ -1,0 +1,49 @@
+{
+  "id": "regional-2024-i",
+  "tournamentId": "regional-2024",
+  "letter": "I",
+  "title": "Inversion Insight",
+  "summary": "Reconstruir una permutación a partir de su posición en el orden que primero considera cantidad de inversiones y luego orden lexicográfico.",
+  "topics": [
+    "DP",
+    "Combinatoria",
+    "Estructuras de datos"
+  ],
+  "difficulty": "Avanzado",
+  "difficultyReason": "Estimación editorial: conceptual 5/5 e implementación 4/5. La reconstrucción por orden exige conteos enormes y control fino del coste; no es la inversión clásica.",
+  "implementation": "4/5 (estimación editorial)",
+  "conceptual": "5/5 (estimación editorial)",
+  "ac": 1,
+  "total": 187,
+  "judgeUrl": "https://codeforces.com/gym/105505/problem/I",
+  "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2024/contest.pdf#page=15",
+  "statementUrl": "/statements/regional-2024-i.pdf",
+  "chunkIds": [
+    "cpp-vectores",
+    "cpp-cuentas-enteras"
+  ],
+  "coverage": "parcial",
+  "missingTools": [
+    "DP de conteo y reconstrucción por rango No desarrollado como técnica en la biblioteca básica."
+  ],
+  "hints": [
+    "Revisá especialmente: overflow en conteos.",
+    "Revisá especialmente: orden primario y desempate lexicográfico.",
+    "Revisá especialmente: saturación y resta de acumulados."
+  ],
+  "status": "verificado",
+  "approach": "Base de clasificación: editorial oficial + enunciado. Los bloques propuestos son una selección editorial de herramientas, no una solución ni un inventario de todos los enfoques. La técnica indicada como faltante necesita una ampliación de los apuntes; estos bloques no bastan para aprenderla.",
+  "editorialUrl": "https://scorelatam.naquadah.com.br/latam-2024/icpcla24_solution_sketches.pdf",
+  "classificationConfidence": "Alta: editorial oficial. Los métodos para limitar conteos deben ser matemáticamente coherentes.",
+  "firstSolve": {
+    "minute": 171,
+    "teams": [
+      "[UNI-FC] UnratedLegendaryGrandMasters"
+    ]
+  },
+  "statementPages": {
+    "start": 15,
+    "end": 15,
+    "sourcePageCount": 19
+  }
+}

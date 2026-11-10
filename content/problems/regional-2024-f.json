@@ -1,0 +1,47 @@
+{
+  "id": "regional-2024-f",
+  "tournamentId": "regional-2024",
+  "letter": "F",
+  "title": "Finding Privacy",
+  "summary": "Decidir si cierta cantidad de personas puede ocupar una fila de baños sin vecinos ocupados y dejarla sin lugar admisible para una persona más.",
+  "topics": [
+    "Constructivos",
+    "Greedy"
+  ],
+  "difficulty": "Consolidación",
+  "difficultyReason": "Estimación editorial: conceptual 2/5 e implementación 2/5. Buen entrenamiento de observación y construcción, con validación cuidadosa de la salida.",
+  "implementation": "2/5 (estimación editorial)",
+  "conceptual": "2/5 (estimación editorial)",
+  "ac": 109,
+  "total": 187,
+  "judgeUrl": "https://codeforces.com/gym/105505/problem/F",
+  "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2024/contest.pdf#page=10",
+  "statementUrl": "/statements/regional-2024-f.pdf",
+  "chunkIds": [
+    "cpp-vectores",
+    "cpp-recorridos",
+    "cpp-cuentas-enteras"
+  ],
+  "coverage": "completa",
+  "missingTools": [],
+  "hints": [
+    "Cuidado con confundir maximal con máximo.",
+    "Revisá especialmente: extremos de la fila.",
+    "Revisá especialmente: longitud y cantidad exactas."
+  ],
+  "status": "verificado",
+  "approach": "Base de clasificación: editorial oficial + enunciado. Los bloques propuestos son una selección editorial de herramientas, no una solución ni un inventario de todos los enfoques. Cubren las operaciones de base del enfoque elegido; descubrir y justificar la observación sigue siendo parte del ejercicio.",
+  "editorialUrl": "https://scorelatam.naquadah.com.br/latam-2024/icpcla24_solution_sketches.pdf",
+  "classificationConfidence": "Alta: editorial oficial. Una configuración válida debe impedir agregar otra persona; no alcanza separar las existentes.",
+  "firstSolve": {
+    "minute": 15,
+    "teams": [
+      "[UNR] Red-Black Tree"
+    ]
+  },
+  "statementPages": {
+    "start": 10,
+    "end": 10,
+    "sourcePageCount": 19
+  }
+}

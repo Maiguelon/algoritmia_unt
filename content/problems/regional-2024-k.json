@@ -1,0 +1,50 @@
+{
+  "id": "regional-2024-k",
+  "tournamentId": "regional-2024",
+  "letter": "K",
+  "title": "Kool Strings",
+  "summary": "Cambiar la menor cantidad de bits de una cadena para que no contenga una racha de K o más caracteres iguales.",
+  "topics": [
+    "Strings",
+    "Greedy",
+    "Constructivos"
+  ],
+  "difficulty": "Salto regional",
+  "difficultyReason": "Estimación editorial: conceptual 3/5 e implementación 3/5. Muy alineado con su foco: implementación corta con casos borde que deciden el AC.",
+  "implementation": "3/5 (estimación editorial)",
+  "conceptual": "3/5 (estimación editorial)",
+  "ac": 71,
+  "total": 187,
+  "judgeUrl": "https://codeforces.com/gym/105505/problem/K",
+  "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2024/contest.pdf#page=18",
+  "statementUrl": "/statements/regional-2024-k.pdf",
+  "chunkIds": [
+    "cpp-strings",
+    "cpp-rachas",
+    "cpp-recorridos"
+  ],
+  "coverage": "parcial",
+  "missingTools": [
+    "Análisis de rachas y construcción No desarrollado como técnica en la biblioteca básica."
+  ],
+  "hints": [
+    "Revisá especialmente: caso K=2.",
+    "Cuidado con unir accidentalmente rachas vecinas.",
+    "Cuidado con contar cambios sin construir una salida coherente."
+  ],
+  "status": "verificado",
+  "approach": "Base de clasificación: editorial oficial + enunciado. Los bloques propuestos son una selección editorial de herramientas, no una solución ni un inventario de todos los enfoques. La técnica indicada como faltante necesita una ampliación de los apuntes; estos bloques no bastan para aprenderla.",
+  "editorialUrl": "https://scorelatam.naquadah.com.br/latam-2024/icpcla24_solution_sketches.pdf",
+  "classificationConfidence": "Alta: editorial oficial. Es de los accesibles relativos del set, pero no un ejercicio automático.",
+  "firstSolve": {
+    "minute": 20,
+    "teams": [
+      "[CS-UNSA] CodeRats al fallo"
+    ]
+  },
+  "statementPages": {
+    "start": 18,
+    "end": 18,
+    "sourcePageCount": 19
+  }
+}

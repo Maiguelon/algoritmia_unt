@@ -1,0 +1,75 @@
+{
+  "id": "regional-2024",
+  "title": "Regional South America/South 2024",
+  "year": 2024,
+  "season": "2024-2025",
+  "setName": "ICPC Latin American Regional Contests 2024 · Gym 105505",
+  "population": "Filtro South oficial del tablero BOCA: excluye CCL y equipos de otras subregiones.",
+  "totalTeams": 187,
+  "status": "verificado",
+  "sources": [
+    {
+      "label": "Standings y población oficial",
+      "url": "https://scorelatam.naquadah.com.br/latam-2024/"
+    },
+    {
+      "label": "Enunciados oficiales",
+      "url": "https://scorelatam.naquadah.com.br/latam-2024/contest.pdf"
+    },
+    {
+      "label": "Envíos oficiales",
+      "url": "https://scorelatam.naquadah.com.br/latam-2024/Runs.html"
+    },
+    {
+      "label": "ICPC Global: identidad y temporada",
+      "url": "https://icpc.global/regionals/finder/SouthAmerica-South-2025/standings"
+    }
+  ],
+  "distribution": [
+    {
+      "solved": 0,
+      "teams": 9
+    },
+    {
+      "solved": 1,
+      "teams": 65
+    },
+    {
+      "solved": 2,
+      "teams": 33
+    },
+    {
+      "solved": 3,
+      "teams": 16
+    },
+    {
+      "solved": 4,
+      "teams": 55
+    },
+    {
+      "solved": 5,
+      "teams": 6
+    },
+    {
+      "solved": 6,
+      "teams": 2
+    },
+    {
+      "solved": 7,
+      "teams": 1
+    }
+  ],
+  "notes": [
+    "AC cuenta equipos distintos con al menos una resolución aceptada; no es el número de envíos aceptados.",
+    "Año de competencia y temporada se muestran separados. La dificultad y los requisitos son estimaciones editoriales.",
+    "Los puestos y la cantidad de AC no determinan por sí solos los cupos: también importan elegibilidad, institución y penalidad."
+  ],
+  "untResults": [
+    {
+      "team": "[UNT] TuringBot",
+      "solved": 4,
+      "rank": 19,
+      "note": "Puesto 19 en South oficial; penalidad 254; problemas A, F, J, K. No implica clasificación."
+    }
+  ]
+}

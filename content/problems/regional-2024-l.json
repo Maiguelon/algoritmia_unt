@@ -1,0 +1,48 @@
+{
+  "id": "regional-2024-l",
+  "tournamentId": "regional-2024",
+  "letter": "L",
+  "title": "Latin Squares",
+  "summary": "Determinar si existe un cuadrado latino que quede idéntico después de una lista de intercambios de filas y columnas; construir uno si existe.",
+  "topics": [
+    "Permutaciones",
+    "Constructivos"
+  ],
+  "difficulty": "Avanzado",
+  "difficultyReason": "Estimación editorial: conceptual 4/5 e implementación 4/5. Necesita reconocer una condición estructural y coordinar la construcción de la matriz.",
+  "implementation": "4/5 (estimación editorial)",
+  "conceptual": "4/5 (estimación editorial)",
+  "ac": 3,
+  "total": 187,
+  "judgeUrl": "https://codeforces.com/gym/105505/problem/L",
+  "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2024/contest.pdf#page=19",
+  "statementUrl": "/statements/regional-2024-l.pdf",
+  "chunkIds": [
+    "cpp-matrices",
+    "cpp-vectores"
+  ],
+  "coverage": "parcial",
+  "missingTools": [
+    "Descomposición en ciclos y construcción No desarrollado como técnica en la biblioteca básica."
+  ],
+  "hints": [
+    "Cuidado con confundir posición con valor.",
+    "Revisá especialmente: sentido de las permutaciones.",
+    "Cuidado con verificar filas pero no columnas."
+  ],
+  "status": "verificado",
+  "approach": "Base de clasificación: editorial oficial + enunciado. Los bloques propuestos son una selección editorial de herramientas, no una solución ni un inventario de todos los enfoques. La técnica indicada como faltante necesita una ampliación de los apuntes; estos bloques no bastan para aprenderla.",
+  "editorialUrl": "https://scorelatam.naquadah.com.br/latam-2024/icpcla24_solution_sketches.pdf",
+  "classificationConfidence": "Alta: editorial oficial. La complejidad del código puede ser moderada luego de descubrir la estructura.",
+  "firstSolve": {
+    "minute": 165,
+    "teams": [
+      "[UNR] Red-Black Tree"
+    ]
+  },
+  "statementPages": {
+    "start": 19,
+    "end": 19,
+    "sourcePageCount": 19
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "id": "regional-2024-h",
+  "tournamentId": "regional-2024",
+  "letter": "H",
+  "title": "Heraclosures",
+  "summary": "Mantener consultas de tiempos de ejecución en un programa con llamadas entre funciones que no forman ciclos y con cambios en sus tiempos base.",
+  "topics": [
+    "DP",
+    "Grafos",
+    "Estructuras de datos"
+  ],
+  "difficulty": "Avanzado",
+  "difficultyReason": "Estimación editorial: conceptual 5/5 e implementación 5/5. Combina dependencias y consultas dinámicas, con precálculo y coste de memoria importantes.",
+  "implementation": "5/5 (estimación editorial)",
+  "conceptual": "5/5 (estimación editorial)",
+  "ac": 0,
+  "total": 187,
+  "judgeUrl": "https://codeforces.com/gym/105505/problem/H",
+  "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2024/contest.pdf#page=13",
+  "statementUrl": "/statements/regional-2024-h.pdf",
+  "chunkIds": [
+    "cpp-vectores",
+    "cpp-cola"
+  ],
+  "coverage": "parcial",
+  "missingTools": [
+    "DP en DAG y procesamiento por bloques No desarrollado como técnica en la biblioteca básica."
+  ],
+  "hints": [
+    "Cuidado con recomputar todo por evento.",
+    "Cuidado con olvidar multiplicidad de caminos.",
+    "Revisá especialmente: tamaño del bloque y memoria."
+  ],
+  "status": "verificado",
+  "approach": "Base de clasificación: editorial oficial + enunciado. Los bloques propuestos son una selección editorial de herramientas, no una solución ni un inventario de todos los enfoques. La técnica indicada como faltante necesita una ampliación de los apuntes; estos bloques no bastan para aprenderla.",
+  "editorialUrl": "https://scorelatam.naquadah.com.br/latam-2024/icpcla24_solution_sketches.pdf",
+  "classificationConfidence": "Alta: editorial oficial. Las cotas conjuntas importan más que reconocer simplemente una DP.",
+  "firstSolve": null,
+  "statementPages": {
+    "start": 13,
+    "end": 14,
+    "sourcePageCount": 19
+  }
+}

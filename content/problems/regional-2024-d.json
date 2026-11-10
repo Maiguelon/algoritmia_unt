@@ -1,0 +1,49 @@
+{
+  "id": "regional-2024-d",
+  "tournamentId": "regional-2024",
+  "letter": "D",
+  "title": "Diverse T-Shirts",
+  "summary": "A partir de una matriz de incompatibilidades, elegir la mayor cantidad de modelos de remeras sin repetir colores de texto ni de fondo.",
+  "topics": [
+    "Grafos",
+    "Matching"
+  ],
+  "difficulty": "Avanzado",
+  "difficultyReason": "Estimación editorial: conceptual 5/5 e implementación 4/5. El matching puede conectar con flujo, pero el paso decisivo es reconstruir una estructura que no viene explícita.",
+  "implementation": "4/5 (estimación editorial)",
+  "conceptual": "5/5 (estimación editorial)",
+  "ac": 3,
+  "total": 187,
+  "judgeUrl": "https://codeforces.com/gym/105505/problem/D",
+  "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2024/contest.pdf#page=8",
+  "statementUrl": "/statements/regional-2024-d.pdf",
+  "chunkIds": [
+    "cpp-matrices",
+    "cpp-vectores",
+    "cpp-cola"
+  ],
+  "coverage": "parcial",
+  "missingTools": [
+    "Reconstrucción de grafo y matching bipartito No desarrollado como técnica en la biblioteca básica."
+  ],
+  "hints": [
+    "Cuidado con atacar un independiente máximo general.",
+    "Revisá especialmente: cliques y vértices aislados.",
+    "Cuidado con crear mal los extremos del grafo reconstruido."
+  ],
+  "status": "verificado",
+  "approach": "Base de clasificación: editorial oficial + enunciado. Los bloques propuestos son una selección editorial de herramientas, no una solución ni un inventario de todos los enfoques. La técnica indicada como faltante necesita una ampliación de los apuntes; estos bloques no bastan para aprenderla.",
+  "editorialUrl": "https://scorelatam.naquadah.com.br/latam-2024/icpcla24_solution_sketches.pdf",
+  "classificationConfidence": "Alta: editorial oficial. Saber max-flow no elimina la dificultad del modelado.",
+  "firstSolve": {
+    "minute": 131,
+    "teams": [
+      "[UNR] Red-Black Tree"
+    ]
+  },
+  "statementPages": {
+    "start": 8,
+    "end": 8,
+    "sourcePageCount": 19
+  }
+}

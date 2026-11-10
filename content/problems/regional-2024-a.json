@@ -1,0 +1,46 @@
+{
+  "id": "regional-2024-a",
+  "tournamentId": "regional-2024",
+  "letter": "A",
+  "title": "Append and Panic!",
+  "summary": "Recuperar el largo de un texto original después de que se le agregó al final su versión ordenada y sin letras repetidas.",
+  "topics": [
+    "Strings",
+    "Conteo"
+  ],
+  "difficulty": "Inicial",
+  "difficultyReason": "Estimación editorial: conceptual 1/5 e implementación 1/5. Muy alineado con STL y observación; referencia clara de entrada accesible al Regional.",
+  "implementation": "1/5 (estimación editorial)",
+  "conceptual": "1/5 (estimación editorial)",
+  "ac": 178,
+  "total": 187,
+  "judgeUrl": "https://codeforces.com/gym/105505/problem/A",
+  "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2024/contest.pdf#page=3",
+  "statementUrl": "/statements/regional-2024-a.pdf",
+  "chunkIds": [
+    "cpp-strings",
+    "cpp-set"
+  ],
+  "coverage": "completa",
+  "missingTools": [],
+  "hints": [
+    "Revisá especialmente: reconstrucción innecesaria.",
+    "Cuidado con confundir tamaño original con cantidad distinta.",
+    "Cuidado con copiar una fórmula sin comprobar su notación."
+  ],
+  "status": "verificado",
+  "approach": "Base de clasificación: editorial oficial + enunciado. Los bloques propuestos son una selección editorial de herramientas, no una solución ni un inventario de todos los enfoques. Cubren las operaciones de base del enfoque elegido; descubrir y justificar la observación sigue siendo parte del ejercicio.",
+  "editorialUrl": "https://scorelatam.naquadah.com.br/latam-2024/icpcla24_solution_sketches.pdf",
+  "classificationConfidence": "Alta. La prosa inicial de la editorial contiene una inconsistencia de notación; el enunciado y su código deben contrastarse.",
+  "firstSolve": {
+    "minute": 3,
+    "teams": [
+      "[UBA - FCEN] Incidentes Catastróficos en la Práctica del Caos"
+    ]
+  },
+  "statementPages": {
+    "start": 3,
+    "end": 3,
+    "sourcePageCount": 19
+  }
+}

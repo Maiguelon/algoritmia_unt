@@ -1,0 +1,43 @@
+{
+  "id": "regional-2024-b",
+  "tournamentId": "regional-2024",
+  "letter": "B",
+  "title": "Biketopia's Cyclic Track",
+  "summary": "Construir un circuito de calles que pueda cerrarse para una carrera de bicicletas sin desconectar ninguna ciudad del resto de la red.",
+  "topics": [
+    "Grafos",
+    "Constructivos"
+  ],
+  "difficulty": "Avanzado",
+  "difficultyReason": "Estimación editorial: conceptual 4/5 e implementación 3/5. Usa un recorrido conocido, pero encontrar la propiedad correcta fue una barrera real: no hubo AC oficial.",
+  "implementation": "3/5 (estimación editorial)",
+  "conceptual": "4/5 (estimación editorial)",
+  "ac": 0,
+  "total": 187,
+  "judgeUrl": "https://codeforces.com/gym/105505/problem/B",
+  "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2024/contest.pdf#page=4",
+  "statementUrl": "/statements/regional-2024-b.pdf",
+  "chunkIds": [
+    "cpp-vectores",
+    "cpp-pila"
+  ],
+  "coverage": "parcial",
+  "missingTools": [
+    "DFS constructivo con prueba estructural No desarrollado como técnica en la biblioteca básica."
+  ],
+  "hints": [
+    "Cuidado con emitir vértices cuando se piden aristas.",
+    "Cuidado con confundir arista padre con retorno.",
+    "Revisá especialmente: recursión profunda."
+  ],
+  "status": "verificado",
+  "approach": "Base de clasificación: editorial oficial + enunciado. Los bloques propuestos son una selección editorial de herramientas, no una solución ni un inventario de todos los enfoques. La técnica indicada como faltante necesita una ampliación de los apuntes; estos bloques no bastan para aprenderla.",
+  "editorialUrl": "https://scorelatam.naquadah.com.br/latam-2024/icpcla24_solution_sketches.pdf",
+  "classificationConfidence": "Alta: editorial oficial. Cero AC mide el concurso, no la complejidad asintótica; la técnica publicada es lineal.",
+  "firstSolve": null,
+  "statementPages": {
+    "start": 4,
+    "end": 5,
+    "sourcePageCount": 19
+  }
+}

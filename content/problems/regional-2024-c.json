@@ -1,0 +1,43 @@
+{
+  "id": "regional-2024-c",
+  "tournamentId": "regional-2024",
+  "letter": "C",
+  "title": "Cindy's Christmas Challenge",
+  "summary": "Responder consultas sobre el mínimo de inserciones, borrados y reemplazos para transformar distintos segmentos de una secuencia de colores en una forma objetivo.",
+  "topics": [
+    "Strings",
+    "Estructuras de datos"
+  ],
+  "difficulty": "Avanzado",
+  "difficultyReason": "Estimación editorial: conceptual 5/5 e implementación 5/5. Transformar la distancia de edición en consultas eficientes exige bastante derivación y cuidado de memoria.",
+  "implementation": "5/5 (estimación editorial)",
+  "conceptual": "5/5 (estimación editorial)",
+  "ac": 0,
+  "total": 187,
+  "judgeUrl": "https://codeforces.com/gym/105505/problem/C",
+  "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2024/contest.pdf#page=6",
+  "statementUrl": "/statements/regional-2024-c.pdf",
+  "chunkIds": [
+    "cpp-strings",
+    "cpp-prefijos"
+  ],
+  "coverage": "parcial",
+  "missingTools": [
+    "Descomposición de costes y RMQ No desarrollado como técnica en la biblioteca básica."
+  ],
+  "hints": [
+    "Cuidado con aplicar DP cuadrática por consulta.",
+    "Revisá especialmente: límites de intervalos.",
+    "Revisá especialmente: memoria de múltiples estructuras."
+  ],
+  "status": "verificado",
+  "approach": "Base de clasificación: editorial oficial + enunciado. Los bloques propuestos son una selección editorial de herramientas, no una solución ni un inventario de todos los enfoques. La técnica indicada como faltante necesita una ampliación de los apuntes; estos bloques no bastan para aprenderla.",
+  "editorialUrl": "https://scorelatam.naquadah.com.br/latam-2024/icpcla24_solution_sketches.pdf",
+  "classificationConfidence": "Alta: editorial oficial. No es un ejercicio básico de distancia de edición.",
+  "firstSolve": null,
+  "statementPages": {
+    "start": 6,
+    "end": 7,
+    "sourcePageCount": 19
+  }
+}
