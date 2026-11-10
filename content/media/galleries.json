@@ -1,0 +1,98 @@
+{
+  "camp": [
+    {
+      "src": "/media/camp-2026-comunidad.webp",
+      "width": 1024,
+      "height": 576,
+      "sha256": "cf3f77208cdf526258fdea38b9d3d64442c1e828534d6a9fedf3b02e645100dd",
+      "edition": "La Plata · 2026",
+      "title": "La comunidad del camp",
+      "alt": "Participantes del Training Camp Argentina 2026 reunidos en la Facultad de Informática de la UNLP.",
+      "credit": "Facultad de Informática · UNLP",
+      "sourceUrl": "https://www.info.unlp.edu.ar/training-camp-2026-en-la-plata/",
+      "originalUrl": "https://www.info.unlp.edu.ar/wp-content/uploads/2026/08/foto-3-1024x576.jpeg"
+    },
+    {
+      "src": "/media/camp-2024-practica.webp",
+      "width": 1280,
+      "height": 720,
+      "sha256": "19181a93350e983d34b539214312755258eea8d577945378e6d923ebafdbc412",
+      "edition": "Rosario · 2024",
+      "title": "Problemas y trabajo en equipo",
+      "alt": "Participantes del Training Camp en Rosario trabajando con computadoras en mesas compartidas.",
+      "credit": "AAPC / ICPC Argentina",
+      "sourceUrl": "https://aapc.org.ar/tc-2025/",
+      "originalUrl": "https://icpc.com.ar/wp-content/uploads/2024/12/49318027003922792811-1.jpg"
+    },
+    {
+      "src": "/media/camp-2026-clases.webp",
+      "width": 1024,
+      "height": 576,
+      "sha256": "f8a78178b74d2b763e34717699213dbf2b850de55ea9411a6f401de2708d32a4",
+      "edition": "La Plata · 2026",
+      "title": "Aprender con otros",
+      "alt": "Aula con estudiantes durante una clase del Training Camp Argentina 2026 en la UNLP.",
+      "credit": "Facultad de Informática · UNLP",
+      "sourceUrl": "https://www.info.unlp.edu.ar/training-camp-2026-en-la-plata/",
+      "originalUrl": "https://www.info.unlp.edu.ar/wp-content/uploads/2026/08/foto-2-0-1024x576.jpeg"
+    },
+    {
+      "src": "/media/camp-2024-comunidad.webp",
+      "width": 1280,
+      "height": 960,
+      "sha256": "0663243dd85b33d8ec37e1f144cf5414fbb0f498d18c6704ddbd731932c858ef",
+      "edition": "Rosario · 2024",
+      "title": "Mucho más que un entrenamiento",
+      "alt": "Participantes del Training Camp Argentina 2024 saludando en un auditorio.",
+      "credit": "AAPC / ICPC Argentina",
+      "sourceUrl": "https://aapc.org.ar/tc-2025/",
+      "originalUrl": "https://icpc.com.ar/wp-content/uploads/2024/12/whatsapp-image-2024-07-17-at-15.18.191-1.jpeg"
+    }
+  ],
+  "regional": [
+    {
+      "src": "/media/regional-2026-mono-pollo.webp",
+      "width": 1120,
+      "height": 1400,
+      "sha256": "7269a9beddea57315e2f2b4d5926b7181e1106b6e7659d825bf58b18db870ed2",
+      "team": "Mono Pollo NP++ 18",
+      "institution": "UNT",
+      "alt": "Foto de Mono Pollo NP++ 18, UNT, en el Regional 2026 en Santa Fe.",
+      "credit": "Compartida por la comunidad del club",
+      "source": "Imagen proporcionada por el usuario; versión limpiada con IA según su indicación."
+    },
+    {
+      "src": "/media/regional-2026-computops.webp",
+      "width": 1120,
+      "height": 1400,
+      "sha256": "9afa662cb4c9ed6068de10d85b704f7dcca922576bccb67e5d9568e46e483214",
+      "team": "Computops",
+      "institution": "UNT",
+      "alt": "Foto de Computops, UNT, en el Regional 2026 en Santa Fe.",
+      "credit": "Compartida por la comunidad del club",
+      "source": "Imagen proporcionada por el usuario; versión limpiada con IA según su indicación."
+    },
+    {
+      "src": "/media/regional-2026-pandas.webp",
+      "width": 1120,
+      "height": 1400,
+      "sha256": "fe04f1cfd9aa357c43bda0674883b30b673d5992e9710a4a8ee83045a1d706f5",
+      "team": "Pandas",
+      "institution": "UNSTA",
+      "alt": "Foto de Pandas, UNSTA, en el Regional 2026 en Santa Fe.",
+      "credit": "Compartida por la comunidad del club",
+      "source": "Imagen proporcionada por el usuario; versión limpiada con IA según su indicación."
+    },
+    {
+      "src": "/media/regional-2026-noxus.webp",
+      "width": 1120,
+      "height": 1400,
+      "sha256": "da60a9651a58447c4770d0f74b63957300b2af09b1b0debccdeff237ec50c1ae",
+      "team": "Noxus",
+      "institution": "UTN · FRT",
+      "alt": "Foto de Noxus, UTN · FRT, en el Regional 2026 en Santa Fe.",
+      "credit": "Compartida por la comunidad del club",
+      "source": "Imagen proporcionada por el usuario; versión limpiada con IA según su indicación."
+    }
+  ]
+}
