@@ -4,7 +4,7 @@
   "year": 2025,
   "season": "2025-2026",
   "setName": "ICPC Latin American Regional Contests 2025 · Gym 106178",
-  "population": "South oficial: Argentina, Bolivia, Chile y Perú; excluye CCL y equipos de otras subregiones.",
+  "population": "Filtro South oficial del tablero BOCA: excluye CCL y equipos de otras subregiones.",
   "totalTeams": 201,
   "status": "verificado",
   "sources": [
@@ -67,14 +67,14 @@
     "AC cuenta equipos distintos con al menos una resolución aceptada; no es el número de envíos aceptados.",
     "Año de competencia y temporada se muestran separados. La dificultad y los requisitos son estimaciones editoriales.",
     "Los puestos y la cantidad de AC no determinan por sí solos los cupos: también importan elegibilidad, institución y penalidad.",
-    "La población oficial South contiene 201 equipos. Las cifras 205 o AC de H=201 no corresponden a este subconjunto: H=192 y J=197."
+    "South oficial contiene 201 equipos: H=192 AC y J=197 AC. Los totales con CCL son otra población y no se mezclan aquí."
   ],
   "untResults": [
     {
       "team": "[UNT] Milanguchito",
       "solved": 2,
       "rank": 98,
-      "note": "Puesto 98 en South oficial; penalidad 55. No implica clasificación."
+      "note": "Puesto 98 en South oficial; penalidad 55; problemas H, J. No implica clasificación."
     }
   ]
 }

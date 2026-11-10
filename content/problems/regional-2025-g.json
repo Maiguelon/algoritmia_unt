@@ -1,0 +1,45 @@
+{
+  "id": "regional-2025-g",
+  "tournamentId": "regional-2025",
+  "letter": "G",
+  "title": "Gridoland Power Gauge",
+  "summary": "Analizar la capacidad de transportar corriente entre extremos de una red de bloques cuyas capacidades cambian linealmente con el tiempo.",
+  "topics": [
+    "Grafos",
+    "Flujo",
+    "Optimización"
+  ],
+  "difficulty": "Avanzado",
+  "difficultyReason": "Estimación editorial: conceptual 5/5 e implementación 5/5. Saber flujo es solo una parte: el tamaño y los tiempos requieren un enfoque más especializado.",
+  "implementation": "5/5 (estimación editorial)",
+  "conceptual": "5/5 (estimación editorial)",
+  "ac": 0,
+  "total": 201,
+  "judgeUrl": "https://codeforces.com/gym/106178/problem/G",
+  "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2025/contest.pdf#page=11",
+  "statementUrl": "/statements/regional-2025-g.pdf",
+  "chunkIds": [
+    "cpp-matrices",
+    "cpp-pares",
+    "cpp-cola"
+  ],
+  "coverage": "parcial",
+  "missingTools": [
+    "Cortes planares y optimización paramétrica No desarrollado como técnica en la biblioteca básica."
+  ],
+  "hints": [
+    "Cuidado con usar directamente flujo general sin evaluar el coste.",
+    "Revisá especialmente: overflow de capacidad por tiempo.",
+    "Cuidado con usar la cota errónea del impreso."
+  ],
+  "status": "verificado",
+  "approach": "Base de clasificación: inferencia del enunciado. Los bloques propuestos son una selección editorial de herramientas, no una solución ni un inventario de todos los enfoques. La técnica indicada como faltante necesita una ampliación de los apuntes; estos bloques no bastan para aprenderla.",
+  "editorialUrl": null,
+  "classificationConfidence": "Media: el enfoque se infiere del enunciado y hay indicios en los nombres de ejecuciones del jurado; esos nombres no prueban un algoritmo. Sin editorial oficial localizada.",
+  "firstSolve": null,
+  "statementPages": {
+    "start": 11,
+    "end": 12,
+    "sourcePageCount": 19
+  }
+}

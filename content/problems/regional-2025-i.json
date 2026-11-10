@@ -1,0 +1,44 @@
+{
+  "id": "regional-2025-i",
+  "tournamentId": "regional-2025",
+  "letter": "I",
+  "title": "Infiltration Route",
+  "summary": "Encontrar una ruta ascendente entre pisos mediante accesos de ascensor sin visitar dos pisos vigilados por el mismo sensor.",
+  "topics": [
+    "Grafos",
+    "DP"
+  ],
+  "difficulty": "Avanzado",
+  "difficultyReason": "Estimación editorial: conceptual 4/5 e implementación 4/5. No alcanza hallar un camino en el DAG: hay incompatibilidades entre pares de pisos y hay que reconstruir.",
+  "implementation": "4/5 (estimación editorial)",
+  "conceptual": "4/5 (estimación editorial)",
+  "ac": 0,
+  "total": 201,
+  "judgeUrl": "https://codeforces.com/gym/106178/problem/I",
+  "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2025/contest.pdf#page=14",
+  "statementUrl": "/statements/regional-2025-i.pdf",
+  "chunkIds": [
+    "cpp-vectores",
+    "cpp-pares",
+    "cpp-cola"
+  ],
+  "coverage": "parcial",
+  "missingTools": [
+    "Estados de pares de posiciones No desarrollado como técnica en la biblioteca básica."
+  ],
+  "hints": [
+    "Revisá especialmente: DFS con un único visitado por vértice.",
+    "Cuidado con ignorar sensores compartidos.",
+    "Revisá especialmente: reconstrucción y coste de repetir búsquedas."
+  ],
+  "status": "verificado",
+  "approach": "Base de clasificación: enunciado + desarrollo público no oficial. Los bloques propuestos son una selección editorial de herramientas, no una solución ni un inventario de todos los enfoques. La técnica indicada como faltante necesita una ampliación de los apuntes; estos bloques no bastan para aprenderla.",
+  "editorialUrl": null,
+  "classificationConfidence": "Media: hay un desarrollo público no oficial de DNR en el anuncio. No se adopta su complejidad o código como validación del jurado.",
+  "firstSolve": null,
+  "statementPages": {
+    "start": 14,
+    "end": 15,
+    "sourcePageCount": 19
+  }
+}

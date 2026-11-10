@@ -1,0 +1,51 @@
+{
+  "id": "regional-2025-f",
+  "tournamentId": "regional-2025",
+  "letter": "F",
+  "title": "Fuzzy Factorization",
+  "summary": "Producir la factorización prima de un entero suficientemente cercano al número dado, respetando el error relativo y las cotas de los factores.",
+  "topics": [
+    "Aritmética",
+    "Strings",
+    "Constructivos"
+  ],
+  "difficulty": "Salto regional",
+  "difficultyReason": "Estimación editorial: conceptual 3/5 e implementación 2/5. Buen candidato de observación y lectura de números como strings; exige entender bien el error relativo.",
+  "implementation": "2/5 (estimación editorial)",
+  "conceptual": "3/5 (estimación editorial)",
+  "ac": 45,
+  "total": 201,
+  "judgeUrl": "https://codeforces.com/gym/106178/problem/F",
+  "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2025/contest.pdf#page=10",
+  "statementUrl": "/statements/regional-2025-f.pdf",
+  "chunkIds": [
+    "cpp-conversiones",
+    "cpp-divisibilidad",
+    "cpp-cuentas-enteras"
+  ],
+  "coverage": "parcial",
+  "missingTools": [
+    "Aritmética de enteros muy grandes y justificación del error permitido. No desarrollado como técnica en la biblioteca básica."
+  ],
+  "hints": [
+    "Cuidado con convertir todo el número a un entero nativo.",
+    "Cuidado con confundir error absoluto con relativo.",
+    "Cuidado con no combinar factores repetidos."
+  ],
+  "status": "verificado",
+  "approach": "Base de clasificación: inferencia del enunciado. Los bloques propuestos son una selección editorial de herramientas, no una solución ni un inventario de todos los enfoques. La técnica indicada como faltante necesita una ampliación de los apuntes; estos bloques no bastan para aprenderla.",
+  "editorialUrl": null,
+  "classificationConfidence": "Media-alta: inferencia del enunciado, sin editorial oficial localizada. No requiere asumir factorización exacta del número gigante.",
+  "firstSolve": {
+    "minute": 56,
+    "teams": [
+      "[UBA - FCEN] Corman",
+      "[UTN Argentina - Santa Fe] Champán en lata"
+    ]
+  },
+  "statementPages": {
+    "start": 10,
+    "end": 10,
+    "sourcePageCount": 19
+  }
+}

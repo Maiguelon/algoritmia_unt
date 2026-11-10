@@ -1,0 +1,49 @@
+{
+  "id": "regional-2025-a",
+  "tournamentId": "regional-2025",
+  "letter": "A",
+  "title": "Apple Pie",
+  "summary": "Decidir si dos porciones visibles de una secuencia pueden pertenecer a una secuencia completa donde cada par de números distintos aparezca exactamente una vez en posiciones adyacentes.",
+  "topics": [
+    "Grafos",
+    "Constructivos"
+  ],
+  "difficulty": "Avanzado",
+  "difficultyReason": "Estimación editorial: conceptual 4/5 e implementación 4/5. Puede interesar a quien estudia recorridos, pero las partes vacías y los empalmes generan mucha casuística.",
+  "implementation": "4/5 (estimación editorial)",
+  "conceptual": "4/5 (estimación editorial)",
+  "ac": 9,
+  "total": 201,
+  "judgeUrl": "https://codeforces.com/gym/106178/problem/A",
+  "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2025/contest.pdf#page=3",
+  "statementUrl": "/statements/regional-2025-a.pdf",
+  "chunkIds": [
+    "cpp-vectores",
+    "cpp-frecuencias",
+    "cpp-pila"
+  ],
+  "coverage": "parcial",
+  "missingTools": [
+    "Validación euleriana del grafo residual No desarrollado como técnica en la biblioteca básica."
+  ],
+  "hints": [
+    "Revisá especialmente: pares no dirigidos repetidos.",
+    "Revisá especialmente: prefijo o sufijo vacío.",
+    "Revisá especialmente: conectividad de las aristas restantes."
+  ],
+  "status": "verificado",
+  "approach": "Base de clasificación: inferencia del enunciado. Los bloques propuestos son una selección editorial de herramientas, no una solución ni un inventario de todos los enfoques. La técnica indicada como faltante necesita una ampliación de los apuntes; estos bloques no bastan para aprenderla.",
+  "editorialUrl": null,
+  "classificationConfidence": "Media-alta: clasificación inferida del enunciado. No se encontró editorial oficial que certifique el enfoque previsto.",
+  "firstSolve": {
+    "minute": 151,
+    "teams": [
+      "[FAMAF - UNC] Helicóptero"
+    ]
+  },
+  "statementPages": {
+    "start": 3,
+    "end": 4,
+    "sourcePageCount": 19
+  }
+}

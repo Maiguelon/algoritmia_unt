@@ -1,0 +1,48 @@
+{
+  "id": "regional-2025-j",
+  "tournamentId": "regional-2025",
+  "letter": "J",
+  "title": "Judgmental Crowd",
+  "summary": "Calcular el puntaje de una actuación contando las apariciones de tres sonidos específicos dentro de una cadena que reúne las reacciones del público.",
+  "topics": [
+    "Strings",
+    "Implementación"
+  ],
+  "difficulty": "Inicial",
+  "difficultyReason": "Estimación editorial: conceptual 1/5 e implementación 1/5. Prioridad clara para su perfil de strings y casos borde; casi todos los equipos de South lograron AC.",
+  "implementation": "1/5 (estimación editorial)",
+  "conceptual": "1/5 (estimación editorial)",
+  "ac": 197,
+  "total": 201,
+  "judgeUrl": "https://codeforces.com/gym/106178/problem/J",
+  "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2025/contest.pdf#page=16",
+  "statementUrl": "/statements/regional-2025-j.pdf",
+  "chunkIds": [
+    "cpp-strings",
+    "cpp-apariciones",
+    "cpp-busqueda-conteo"
+  ],
+  "coverage": "completa",
+  "missingTools": [],
+  "hints": [
+    "Revisá especialmente: límites al mirar varios caracteres.",
+    "Cuidado con descartar coincidencias por saltar posiciones.",
+    "Revisá especialmente: signo y peso del puntaje."
+  ],
+  "status": "verificado",
+  "approach": "Base de clasificación: inferencia del enunciado. Los bloques propuestos son una selección editorial de herramientas, no una solución ni un inventario de todos los enfoques. Cubren las operaciones de base del enfoque elegido; descubrir y justificar la observación sigue siendo parte del ejercicio.",
+  "editorialUrl": null,
+  "classificationConfidence": "Alta por lectura directa del enunciado y los AC; no es una etiqueta oficial de dificultad.",
+  "firstSolve": {
+    "minute": 5,
+    "teams": [
+      "[UNR] ALKA",
+      "[UMSA] Los Marco-ders ft. Pancho"
+    ]
+  },
+  "statementPages": {
+    "start": 16,
+    "end": 16,
+    "sourcePageCount": 19
+  }
+}

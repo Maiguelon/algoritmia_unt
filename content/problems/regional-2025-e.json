@@ -1,0 +1,49 @@
+{
+  "id": "regional-2025-e",
+  "tournamentId": "regional-2025",
+  "letter": "E",
+  "title": "Emergency Rations",
+  "summary": "Tras cada alta o baja de una caja de raciones, calcular el mínimo de días para vaciar hipotéticamente todas las cajas usando las dos operaciones permitidas.",
+  "topics": [
+    "Estructuras de datos",
+    "Greedy"
+  ],
+  "difficulty": "Salto regional",
+  "difficultyReason": "Estimación editorial: conceptual 3/5 e implementación 3/5. Buen siguiente escalón si el equipo maneja Fenwick o segment tree; la versión dinámica es la dificultad adicional.",
+  "implementation": "3/5 (estimación editorial)",
+  "conceptual": "3/5 (estimación editorial)",
+  "ac": 24,
+  "total": 201,
+  "judgeUrl": "https://codeforces.com/gym/106178/problem/E",
+  "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2025/contest.pdf#page=9",
+  "statementUrl": "/statements/regional-2025-e.pdf",
+  "chunkIds": [
+    "cpp-multiset",
+    "cpp-ordenacion",
+    "cpp-busqueda-ordenada"
+  ],
+  "coverage": "parcial",
+  "missingTools": [
+    "Mantener un óptimo con actualizaciones No desarrollado como técnica en la biblioteca básica."
+  ],
+  "hints": [
+    "Cuidado con simular el consumo para cada consulta.",
+    "Cuidado con perder multiplicidades.",
+    "Revisá especialmente: multiconjunto vacío tras una baja."
+  ],
+  "status": "verificado",
+  "approach": "Base de clasificación: inferencia del enunciado. Los bloques propuestos son una selección editorial de herramientas, no una solución ni un inventario de todos los enfoques. La técnica indicada como faltante necesita una ampliación de los apuntes; estos bloques no bastan para aprenderla.",
+  "editorialUrl": null,
+  "classificationConfidence": "Media: inferencia del enunciado. La estructura específica y su complejidad óptima quedan pendientes de una fuente oficial de solución.",
+  "firstSolve": {
+    "minute": 60,
+    "teams": [
+      "[UNR] Red-Black Tree"
+    ]
+  },
+  "statementPages": {
+    "start": 9,
+    "end": 9,
+    "sourcePageCount": 19
+  }
+}

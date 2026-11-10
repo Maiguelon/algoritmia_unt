@@ -17,7 +17,7 @@
   "total": 201,
   "judgeUrl": "https://codeforces.com/gym/106178/problem/K",
   "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2025/contest.pdf#page=17",
-  "statementUrl": null,
+  "statementUrl": "/statements/regional-2025-k.pdf",
   "chunkIds": [
     "cpp-pares",
     "cpp-vectores",
@@ -26,15 +26,15 @@
   ],
   "coverage": "parcial",
   "missingTools": [
-    "Justificación de la optimización geométrica y reparto de movimientos; no desarrollados en la biblioteca básica."
+    "Justificación de la optimización geométrica y reparto de movimientos. No desarrollado como técnica en la biblioteca básica."
   ],
   "hints": [
-    "caso de un único rey",
-    "producto de dimensiones fuera de 32 bits",
-    "ignorar colisiones o gastar mal movimientos"
+    "Revisá especialmente: caso de un único rey.",
+    "Revisá especialmente: producto de dimensiones fuera de 32 bits.",
+    "Cuidado con ignorar colisiones o gastar mal movimientos."
   ],
   "status": "verificado",
-  "approach": "Herramientas para un enfoque editorial de implementación; no representan todos los enfoques posibles. Estos bloques solo cubren las operaciones de base y no constituyen una solución completa.",
+  "approach": "Base de clasificación: inferencia del enunciado. Los bloques propuestos son una selección editorial de herramientas, no una solución ni un inventario de todos los enfoques. La técnica indicada como faltante necesita una ampliación de los apuntes; estos bloques no bastan para aprenderla.",
   "editorialUrl": null,
   "classificationConfidence": "Media: clasificación inferida, sin editorial oficial localizada. Muchos WA agregados sugieren cuidado; no identifican su causa.",
   "firstSolve": {
@@ -42,5 +42,10 @@
     "teams": [
       "[UMSS] Wasos del valle"
     ]
+  },
+  "statementPages": {
+    "start": 17,
+    "end": 17,
+    "sourcePageCount": 19
   }
 }

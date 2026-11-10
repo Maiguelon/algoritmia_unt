@@ -1,0 +1,49 @@
+{
+  "id": "regional-2025-b",
+  "tournamentId": "regional-2025",
+  "letter": "B",
+  "title": "Balanced Balloons",
+  "summary": "Contar secuencias de aportes de globos, con cotas por persona, tales que en cada incorporación se puedan repartir por igual todos los globos reunidos.",
+  "topics": [
+    "DP",
+    "Conteo",
+    "Aritmética"
+  ],
+  "difficulty": "Salto regional",
+  "difficultyReason": "Estimación editorial: conceptual 3/5 e implementación 3/5. Candidato para el compañero de DP: exige comprimir el estado y evitar depender del enorme N.",
+  "implementation": "3/5 (estimación editorial)",
+  "conceptual": "3/5 (estimación editorial)",
+  "ac": 20,
+  "total": 201,
+  "judgeUrl": "https://codeforces.com/gym/106178/problem/B",
+  "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2025/contest.pdf#page=5",
+  "statementUrl": "/statements/regional-2025-b.pdf",
+  "chunkIds": [
+    "cpp-vectores",
+    "cpp-cuentas-enteras"
+  ],
+  "coverage": "parcial",
+  "missingTools": [
+    "DP acotada y optimización de transiciones No desarrollado como técnica en la biblioteca básica."
+  ],
+  "hints": [
+    "Cuidado con iterar hasta N.",
+    "Revisá especialmente: transición cúbica.",
+    "Revisá especialmente: límites y módulo en acumulados."
+  ],
+  "status": "verificado",
+  "approach": "Base de clasificación: inferencia del enunciado. Los bloques propuestos son una selección editorial de herramientas, no una solución ni un inventario de todos los enfoques. La técnica indicada como faltante necesita una ampliación de los apuntes; estos bloques no bastan para aprenderla.",
+  "editorialUrl": null,
+  "classificationConfidence": "Media: inferencia del enunciado y las cotas. El detalle de la optimización prevista no está confirmado por una editorial oficial.",
+  "firstSolve": {
+    "minute": 32,
+    "teams": [
+      "[UNR] Red-Black Tree"
+    ]
+  },
+  "statementPages": {
+    "start": 5,
+    "end": 5,
+    "sourcePageCount": 19
+  }
+}

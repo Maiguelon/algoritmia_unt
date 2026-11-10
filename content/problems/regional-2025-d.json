@@ -1,0 +1,43 @@
+{
+  "id": "regional-2025-d",
+  "tournamentId": "regional-2025",
+  "letter": "D",
+  "title": "Displaying Decimals",
+  "summary": "Calcular la cantidad esperada de dígitos que muestran las conversiones exactas entre monedas, incluyendo un período cuando la representación decimal se repite.",
+  "topics": [
+    "Teoría de números",
+    "Conteo"
+  ],
+  "difficulty": "Avanzado",
+  "difficultyReason": "Estimación editorial: conceptual 5/5 e implementación 4/5. Cero AC oficial y una combinación de teoría de números y conteo masivo; no es una simple simulación decimal.",
+  "implementation": "4/5 (estimación editorial)",
+  "conceptual": "5/5 (estimación editorial)",
+  "ac": 0,
+  "total": 201,
+  "judgeUrl": "https://codeforces.com/gym/106178/problem/D",
+  "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2025/contest.pdf#page=8",
+  "statementUrl": "/statements/regional-2025-d.pdf",
+  "chunkIds": [
+    "cpp-divisibilidad",
+    "cpp-cuentas-enteras"
+  ],
+  "coverage": "parcial",
+  "missingTools": [
+    "Agregación aritmética de períodos y divisores No desarrollado como técnica en la biblioteca básica."
+  ],
+  "hints": [
+    "Cuidado con iterar todos los pares.",
+    "Revisá especialmente: decimales terminantes y ceros.",
+    "Revisá especialmente: reducción de fracciones y módulo."
+  ],
+  "status": "verificado",
+  "approach": "Base de clasificación: inferencia del enunciado. Los bloques propuestos son una selección editorial de herramientas, no una solución ni un inventario de todos los enfoques. La técnica indicada como faltante necesita una ampliación de los apuntes; estos bloques no bastan para aprenderla.",
+  "editorialUrl": null,
+  "classificationConfidence": "Media sobre la técnica concreta; alta sobre el tema. No se encontró editorial oficial ni se verificó una implementación.",
+  "firstSolve": null,
+  "statementPages": {
+    "start": 8,
+    "end": 8,
+    "sourcePageCount": 19
+  }
+}

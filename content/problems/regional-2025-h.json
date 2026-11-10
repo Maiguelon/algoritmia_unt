@@ -16,7 +16,7 @@
   "total": 201,
   "judgeUrl": "https://codeforces.com/gym/106178/problem/H",
   "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2025/contest.pdf#page=13",
-  "statementUrl": null,
+  "statementUrl": "/statements/regional-2025-h.pdf",
   "chunkIds": [
     "cpp-recorridos",
     "cpp-vectores",
@@ -25,12 +25,12 @@
   "coverage": "completa",
   "missingTools": [],
   "hints": [
-    "tratar un empate como mejora",
-    "confundir grupos consecutivos con subsecuencias",
-    "olvidar el caso mínimo"
+    "Cuidado con tratar un empate como mejora.",
+    "Cuidado con confundir grupos consecutivos con subsecuencias.",
+    "Cuidado con olvidar el caso mínimo."
   ],
   "status": "verificado",
-  "approach": "Herramientas para un enfoque editorial de implementación; no representan todos los enfoques posibles. La biblioteca cubre las operaciones de C++ requeridas; encontrar la observación sigue siendo parte del ejercicio.",
+  "approach": "Base de clasificación: inferencia del enunciado. Los bloques propuestos son una selección editorial de herramientas, no una solución ni un inventario de todos los enfoques. Cubren las operaciones de base del enfoque elegido; descubrir y justificar la observación sigue siendo parte del ejercicio.",
   "editorialUrl": null,
   "classificationConfidence": "Alta sobre la clasificación simple por enunciado y evidencia empírica; no se presenta como técnica oficial publicada.",
   "firstSolve": {
@@ -39,5 +39,10 @@
       "[UChile] sin globito no hay fiesta",
       "[UNLP] NaN (Need a Name)"
     ]
+  },
+  "statementPages": {
+    "start": 13,
+    "end": 13,
+    "sourcePageCount": 19
   }
 }

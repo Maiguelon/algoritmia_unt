@@ -1,0 +1,50 @@
+{
+  "id": "regional-2025-c",
+  "tournamentId": "regional-2025",
+  "letter": "C",
+  "title": "Clean Streets",
+  "summary": "Elegir trabajadores, cantidades de calles y pagos por calle cumpliendo el plazo y las restricciones de remuneración del enunciado.",
+  "topics": [
+    "Greedy",
+    "Barrido",
+    "Estructuras de datos"
+  ],
+  "difficulty": "Avanzado",
+  "difficultyReason": "Estimación editorial: conceptual 4/5 e implementación 4/5. La restricción de pago común por hora y los cambios de disponibilidad exigen modelado y estructuras adicionales.",
+  "implementation": "4/5 (estimación editorial)",
+  "conceptual": "4/5 (estimación editorial)",
+  "ac": 2,
+  "total": 201,
+  "judgeUrl": "https://codeforces.com/gym/106178/problem/C",
+  "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2025/contest.pdf#page=6",
+  "statementUrl": "/statements/regional-2025-c.pdf",
+  "chunkIds": [
+    "cpp-pares",
+    "cpp-ordenacion",
+    "cpp-reales"
+  ],
+  "coverage": "parcial",
+  "missingTools": [
+    "Barrido de razones y agregados ordenados No desarrollado como técnica en la biblioteca básica."
+  ],
+  "hints": [
+    "Cuidado con ordenar razones con redondeo.",
+    "Revisá especialmente: capacidad entera por trabajador.",
+    "Cuidado con contratar a quienes no cumplen el pago común."
+  ],
+  "status": "verificado",
+  "approach": "Base de clasificación: inferencia del enunciado. Los bloques propuestos son una selección editorial de herramientas, no una solución ni un inventario de todos los enfoques. La técnica indicada como faltante necesita una ampliación de los apuntes; estos bloques no bastan para aprenderla.",
+  "editorialUrl": null,
+  "classificationConfidence": "Media: clasificación inferida. Fenwick o segment tree son posibles herramientas; no se afirma que sean las únicas ni las oficiales.",
+  "firstSolve": {
+    "minute": 259,
+    "teams": [
+      "[FAMAF - UNC] Helicóptero"
+    ]
+  },
+  "statementPages": {
+    "start": 6,
+    "end": 7,
+    "sourcePageCount": 19
+  }
+}

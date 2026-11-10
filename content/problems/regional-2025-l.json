@@ -1,0 +1,45 @@
+{
+  "id": "regional-2025-l",
+  "tournamentId": "regional-2025",
+  "letter": "L",
+  "title": "Lonely Creatures",
+  "summary": "Contar pares de rectas cuyo punto de intersección queda estrictamente dentro de una región delimitada por una parábola.",
+  "topics": [
+    "Geometría",
+    "Conteo",
+    "Estructuras de datos"
+  ],
+  "difficulty": "Avanzado",
+  "difficultyReason": "Estimación editorial: conceptual 5/5 e implementación 4/5. Combina geometría exacta y conteo subcuadrático; poco adecuado como práctica rápida del equipo.",
+  "implementation": "4/5 (estimación editorial)",
+  "conceptual": "5/5 (estimación editorial)",
+  "ac": 0,
+  "total": 201,
+  "judgeUrl": "https://codeforces.com/gym/106178/problem/L",
+  "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2025/contest.pdf#page=18",
+  "statementUrl": "/statements/regional-2025-l.pdf",
+  "chunkIds": [
+    "cpp-pares",
+    "cpp-ordenacion",
+    "cpp-reales"
+  ],
+  "coverage": "parcial",
+  "missingTools": [
+    "Conteo geométrico mediante ordenación No desarrollado como técnica en la biblioteca básica."
+  ],
+  "hints": [
+    "Cuidado con contar puntos de la frontera.",
+    "Revisá especialmente: rectas paralelas o tangentes.",
+    "Revisá especialmente: comparadores numéricamente inconsistentes."
+  ],
+  "status": "verificado",
+  "approach": "Base de clasificación: inferencia del enunciado. Los bloques propuestos son una selección editorial de herramientas, no una solución ni un inventario de todos los enfoques. La técnica indicada como faltante necesita una ampliación de los apuntes; estos bloques no bastan para aprenderla.",
+  "editorialUrl": null,
+  "classificationConfidence": "Media sobre la reducción concreta; alta sobre la dificultad empírica. No se encontró editorial oficial ni se validó una solución.",
+  "firstSolve": null,
+  "statementPages": {
+    "start": 18,
+    "end": 19,
+    "sourcePageCount": 19
+  }
+}
