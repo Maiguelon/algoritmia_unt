@@ -1,0 +1,49 @@
+{
+  "id": "regional-2023-c",
+  "tournamentId": "regional-2023",
+  "letter": "C",
+  "title": "Candy Rush",
+  "summary": "Encontrar el mayor segmento consecutivo de caramelos que permita dar a cada familiar la misma cantidad y una marca diferente de la de los demás.",
+  "topics": [
+    "Prefijos",
+    "Estructuras de datos"
+  ],
+  "difficulty": "Avanzado",
+  "difficultyReason": "Estimación editorial: conceptual 4/5 e implementación 4/5. La idea de prefijos es útil a futuro; cumplir las restricciones exige más que una ventana deslizante habitual.",
+  "implementation": "4/5 (estimación editorial)",
+  "conceptual": "4/5 (estimación editorial)",
+  "ac": 7,
+  "total": 152,
+  "judgeUrl": "https://codeforces.com/gym/104736/problem/C",
+  "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2023/contest.pdf#page=7",
+  "statementUrl": "/statements/regional-2023-c.pdf",
+  "chunkIds": [
+    "cpp-vectores",
+    "cpp-map",
+    "cpp-prefijos"
+  ],
+  "coverage": "parcial",
+  "missingTools": [
+    "Prefijos normalizados; hashing o descomposición No desarrollado como técnica en la biblioteca básica."
+  ],
+  "hints": [
+    "Cuidado con guardar un vector grande por prefijo.",
+    "Revisá especialmente: colisiones de hash.",
+    "Cuidado con omitir el prefijo vacío."
+  ],
+  "status": "verificado",
+  "approach": "Base de clasificación: editorial oficial + enunciado. Los bloques propuestos son una selección editorial de herramientas, no una solución ni un inventario de todos los enfoques. La técnica indicada como faltante necesita una ampliación de los apuntes; estos bloques no bastan para aprenderla.",
+  "editorialUrl": "https://scorelatam.naquadah.com.br/latam-2023/editorial.pdf",
+  "classificationConfidence": "Alta: la editorial admite más de un enfoque. No se presenta uno como la única solución.",
+  "firstSolve": {
+    "minute": 54,
+    "teams": [
+      "[UBA - FCEN] InChaVoLa"
+    ]
+  },
+  "statementPages": {
+    "start": 7,
+    "end": 8,
+    "sourcePageCount": 30
+  }
+}

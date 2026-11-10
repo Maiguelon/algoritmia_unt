@@ -1,0 +1,48 @@
+{
+  "id": "regional-2023-b",
+  "tournamentId": "regional-2023",
+  "letter": "B",
+  "title": "Blackboard Game",
+  "summary": "Determinar quién puede asegurar la victoria en un juego donde dos jugadores seleccionan y borran números de una pizarra, y al final comparan las sumas de sus selecciones.",
+  "topics": [
+    "Juegos",
+    "Conteo"
+  ],
+  "difficulty": "Consolidación",
+  "difficultyReason": "Estimación editorial: conceptual 3/5 e implementación 1/5. Buen candidato de observación: el código es breve, pero encontrar y justificar el criterio puede costar.",
+  "implementation": "1/5 (estimación editorial)",
+  "conceptual": "3/5 (estimación editorial)",
+  "ac": 67,
+  "total": 152,
+  "judgeUrl": "https://codeforces.com/gym/104736/problem/B",
+  "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2023/contest.pdf#page=5",
+  "statementUrl": "/statements/regional-2023-b.pdf",
+  "chunkIds": [
+    "cpp-recorridos",
+    "cpp-map",
+    "cpp-frecuencias",
+    "cpp-cuentas-enteras"
+  ],
+  "coverage": "completa",
+  "missingTools": [],
+  "hints": [
+    "Cuidado con inventar una regla a partir de pocos ejemplos.",
+    "Cuidado con ignorar multiplicidades.",
+    "Cuidado con confundir los objetivos de los jugadores."
+  ],
+  "status": "verificado",
+  "approach": "Base de clasificación: editorial oficial + enunciado. Los bloques propuestos son una selección editorial de herramientas, no una solución ni un inventario de todos los enfoques. Cubren las operaciones de base del enfoque elegido; descubrir y justificar la observación sigue siendo parte del ejercicio.",
+  "editorialUrl": "https://scorelatam.naquadah.com.br/latam-2023/editorial.pdf",
+  "classificationConfidence": "Alta sobre la técnica: editorial oficial. Rápida se refiere a la práctica candidata, no garantiza descubrir la observación.",
+  "firstSolve": {
+    "minute": 29,
+    "teams": [
+      "[UTEC] TeQuieroMuchoJuan"
+    ]
+  },
+  "statementPages": {
+    "start": 5,
+    "end": 6,
+    "sourcePageCount": 30
+  }
+}

@@ -1,0 +1,49 @@
+{
+  "id": "regional-2023-g",
+  "tournamentId": "regional-2023",
+  "letter": "G",
+  "title": "GPS on a Flat Earth",
+  "summary": "Determinar las ubicaciones compatibles con las distancias Manhattan medidas a varias torres de referencia en un plano.",
+  "topics": [
+    "Geometría",
+    "Implementación"
+  ],
+  "difficulty": "Salto regional",
+  "difficultyReason": "Estimación editorial: conceptual 3/5 e implementación 4/5. La carga de casos y la geometría exacta lo hacen riesgoso para una práctica rápida, aunque no exige una gran biblioteca.",
+  "implementation": "4/5 (estimación editorial)",
+  "conceptual": "3/5 (estimación editorial)",
+  "ac": 7,
+  "total": 152,
+  "judgeUrl": "https://codeforces.com/gym/104736/problem/G",
+  "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2023/contest.pdf#page=17",
+  "statementUrl": "/statements/regional-2023-g.pdf",
+  "chunkIds": [
+    "cpp-pares",
+    "cpp-reales",
+    "cpp-intervalos"
+  ],
+  "coverage": "parcial",
+  "missingTools": [
+    "Cambio de coordenadas e intersecciones No desarrollado como técnica en la biblioteca básica."
+  ],
+  "hints": [
+    "Revisá especialmente: paridad al recuperar coordenadas.",
+    "Revisá especialmente: segmentos degenerados.",
+    "Cuidado con duplicar puntos en vértices compartidos."
+  ],
+  "status": "verificado",
+  "approach": "Base de clasificación: editorial oficial + enunciado. Los bloques propuestos son una selección editorial de herramientas, no una solución ni un inventario de todos los enfoques. La técnica indicada como faltante necesita una ampliación de los apuntes; estos bloques no bastan para aprenderla.",
+  "editorialUrl": "https://scorelatam.naquadah.com.br/latam-2023/editorial.pdf",
+  "classificationConfidence": "Alta: editorial oficial. Dificultad concentrada en implementación; no equipararla automáticamente con técnicas avanzadas.",
+  "firstSolve": {
+    "minute": 57,
+    "teams": [
+      "[UBA - FCEN] InChaVoLa"
+    ]
+  },
+  "statementPages": {
+    "start": 17,
+    "end": 18,
+    "sourcePageCount": 30
+  }
+}

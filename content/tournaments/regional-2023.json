@@ -4,7 +4,7 @@
   "year": 2023,
   "season": "2023-2024",
   "setName": "ICPC Latin American Regional Contests 2023 · Gym 104736",
-  "population": "South oficial: Argentina, Bolivia, Chile y Perú; excluye CCL y equipos de otras subregiones.",
+  "population": "Filtro South oficial del tablero BOCA: excluye CCL y equipos de otras subregiones.",
   "totalTeams": 152,
   "status": "verificado",
   "sources": [
@@ -77,19 +77,13 @@
       "team": "[UNT] Turingbot",
       "solved": 5,
       "rank": 15,
-      "note": "Puesto 15 en South oficial; penalidad 688. No implica clasificación."
-    },
-    {
-      "team": "[USFA] Los Tucumanitas",
-      "solved": 1,
-      "rank": 116,
-      "note": "Puesto 116 en South oficial; penalidad 248. No implica clasificación."
+      "note": "Puesto 15 en South oficial; penalidad 688; problemas B, D, F, I, M. No implica clasificación."
     },
     {
       "team": "[UNT] Tres Acordes",
       "solved": 0,
       "rank": 124,
-      "note": "Puesto 124 en South oficial; penalidad 0. No implica clasificación."
+      "note": "Puesto 124 en South oficial; penalidad 0; problemas ninguno. No implica clasificación."
     }
   ]
 }

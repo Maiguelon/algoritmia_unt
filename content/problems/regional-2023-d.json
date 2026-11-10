@@ -3,7 +3,7 @@
   "tournamentId": "regional-2023",
   "letter": "D",
   "title": "Deciphering WordWhiz",
-  "summary": "Dado un diccionario de palabras de cinco letras distintas y las respuestas de WordWhiz, determinar qué palabras siguen siendo compatibles con las pistas recibidas.",
+  "summary": "Dado un diccionario con una palabra secreta conocida y varios patrones de colores, contar cuántas palabras del diccionario producirían cada patrón al compararse con la secreta.",
   "topics": [
     "Strings",
     "Implementación"
@@ -16,7 +16,7 @@
   "total": 152,
   "judgeUrl": "https://codeforces.com/gym/104736/problem/D",
   "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2023/contest.pdf#page=9",
-  "statementUrl": null,
+  "statementUrl": "/statements/regional-2023-d.pdf",
   "chunkIds": [
     "cpp-strings",
     "cpp-vectores",
@@ -26,12 +26,12 @@
   "coverage": "completa",
   "missingTools": [],
   "hints": [
-    "confundir palabra secreta con intento",
-    "confundir presencia y posición",
-    "filtrar usando información de otra consulta"
+    "Cuidado con confundir palabra secreta con intento.",
+    "Cuidado con confundir presencia y posición.",
+    "Cuidado con filtrar usando información de otra consulta."
   ],
   "status": "verificado",
-  "approach": "Herramientas para un enfoque editorial de implementación; no representan todos los enfoques posibles. La biblioteca cubre las operaciones de C++ requeridas; encontrar la observación sigue siendo parte del ejercicio.",
+  "approach": "Base de clasificación: editorial oficial + enunciado. Los bloques propuestos son una selección editorial de herramientas, no una solución ni un inventario de todos los enfoques. Cubren las operaciones de base del enfoque elegido; descubrir y justificar la observación sigue siendo parte del ejercicio.",
   "editorialUrl": "https://scorelatam.naquadah.com.br/latam-2023/editorial.pdf",
   "classificationConfidence": "Alta: editorial oficial. El enunciado garantiza palabras sin letras repetidas; no trasladar reglas de otra versión de Wordle.",
   "firstSolve": {
@@ -39,5 +39,10 @@
     "teams": [
       "[UBA - FCEN] InChaVoLa"
     ]
+  },
+  "statementPages": {
+    "start": 9,
+    "end": 12,
+    "sourcePageCount": 30
   }
 }

@@ -1,0 +1,50 @@
+{
+  "id": "regional-2023-l",
+  "tournamentId": "regional-2023",
+  "letter": "L",
+  "title": "Latam++",
+  "summary": "Contar cuántos segmentos de una cadena constituyen expresiones válidas del lenguaje Latam++, según su gramática de variables, operadores y paréntesis.",
+  "topics": [
+    "Strings",
+    "Conteo",
+    "Estructuras de datos"
+  ],
+  "difficulty": "Avanzado",
+  "difficultyReason": "Estimación editorial: conceptual 4/5 e implementación 4/5. El tema coincide con strings, pero el conteo de subcadenas válidas agrega una dificultad importante.",
+  "implementation": "4/5 (estimación editorial)",
+  "conceptual": "4/5 (estimación editorial)",
+  "ac": 1,
+  "total": 152,
+  "judgeUrl": "https://codeforces.com/gym/104736/problem/L",
+  "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2023/contest.pdf#page=27",
+  "statementUrl": "/statements/regional-2023-l.pdf",
+  "chunkIds": [
+    "cpp-strings",
+    "cpp-pila",
+    "cpp-prefijos"
+  ],
+  "coverage": "parcial",
+  "missingTools": [
+    "Balances y conteo con RMQ o divide y vencerás No desarrollado como técnica en la biblioteca básica."
+  ],
+  "hints": [
+    "Cuidado con validar solo el balance final.",
+    "Cuidado con ignorar adyacencias inválidas.",
+    "Revisá especialmente: overflow del número de subcadenas."
+  ],
+  "status": "verificado",
+  "approach": "Base de clasificación: editorial oficial + enunciado. Los bloques propuestos son una selección editorial de herramientas, no una solución ni un inventario de todos los enfoques. La técnica indicada como faltante necesita una ampliación de los apuntes; estos bloques no bastan para aprenderla.",
+  "editorialUrl": "https://scorelatam.naquadah.com.br/latam-2023/editorial.pdf",
+  "classificationConfidence": "Alta: editorial oficial. La coincidencia temática no es evidencia de accesibilidad.",
+  "firstSolve": {
+    "minute": 201,
+    "teams": [
+      "[UNR] Ñubel Carajo"
+    ]
+  },
+  "statementPages": {
+    "start": 27,
+    "end": 28,
+    "sourcePageCount": 30
+  }
+}

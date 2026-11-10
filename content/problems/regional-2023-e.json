@@ -1,0 +1,44 @@
+{
+  "id": "regional-2023-e",
+  "tournamentId": "regional-2023",
+  "letter": "E",
+  "title": "Elevated Profits",
+  "summary": "Planificar un recorrido por ciudades conectadas como un árbol para maximizar la ganancia, que depende del orden de primera visita y la popularidad de cada ciudad.",
+  "topics": [
+    "Árboles",
+    "Greedy"
+  ],
+  "difficulty": "Avanzado",
+  "difficultyReason": "Estimación editorial: conceptual 5/5 e implementación 5/5. Requiere una prueba poco inmediata y mantener agregados complejos en árboles grandes.",
+  "implementation": "5/5 (estimación editorial)",
+  "conceptual": "5/5 (estimación editorial)",
+  "ac": 0,
+  "total": 152,
+  "judgeUrl": "https://codeforces.com/gym/104736/problem/E",
+  "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2023/contest.pdf#page=13",
+  "statementUrl": "/statements/regional-2023-e.pdf",
+  "chunkIds": [
+    "cpp-vectores",
+    "cpp-pares",
+    "cpp-ordenacion"
+  ],
+  "coverage": "parcial",
+  "missingTools": [
+    "Greedy por bloques; small-to-large No desarrollado como técnica en la biblioteca básica."
+  ],
+  "hints": [
+    "Revisá especialmente: greedy local sin demostración.",
+    "Cuidado con comparar razones con poca precisión.",
+    "Revisá especialmente: pila de recursión en un árbol profundo."
+  ],
+  "status": "verificado",
+  "approach": "Base de clasificación: editorial oficial + enunciado. Los bloques propuestos son una selección editorial de herramientas, no una solución ni un inventario de todos los enfoques. La técnica indicada como faltante necesita una ampliación de los apuntes; estos bloques no bastan para aprenderla.",
+  "editorialUrl": "https://scorelatam.naquadah.com.br/latam-2023/editorial.pdf",
+  "classificationConfidence": "Alta sobre la técnica: editorial oficial. Cero AC oficial no implica que no exista solución; hubo AC CCL.",
+  "firstSolve": null,
+  "statementPages": {
+    "start": 13,
+    "end": 14,
+    "sourcePageCount": 30
+  }
+}

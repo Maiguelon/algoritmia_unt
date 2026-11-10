@@ -1,0 +1,48 @@
+{
+  "id": "regional-2023-k",
+  "tournamentId": "regional-2023",
+  "letter": "K",
+  "title": "Keen on Order",
+  "summary": "Decidir si todas las permutaciones de los títulos de un festival aparecen como subsecuencia de su programación; si falta alguna, construirla.",
+  "topics": [
+    "DP",
+    "Constructivos"
+  ],
+  "difficulty": "Avanzado",
+  "difficultyReason": "Estimación editorial: conceptual 5/5 e implementación 4/5. La DP requiere estados exponenciales controlados y una justificación adicional para el otro rango.",
+  "implementation": "4/5 (estimación editorial)",
+  "conceptual": "5/5 (estimación editorial)",
+  "ac": 1,
+  "total": 152,
+  "judgeUrl": "https://codeforces.com/gym/104736/problem/K",
+  "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2023/contest.pdf#page=25",
+  "statementUrl": "/statements/regional-2023-k.pdf",
+  "chunkIds": [
+    "cpp-vectores",
+    "cpp-frecuencias"
+  ],
+  "coverage": "parcial",
+  "missingTools": [
+    "DP de bitmask y separación de casos No desarrollado como técnica en la biblioteca básica."
+  ],
+  "hints": [
+    "Cuidado con confundir subsecuencia con subcadena.",
+    "Revisá especialmente: memoria de la bitmask.",
+    "Revisá especialmente: reconstrucción de una permutación válida."
+  ],
+  "status": "verificado",
+  "approach": "Base de clasificación: editorial oficial + enunciado. Los bloques propuestos son una selección editorial de herramientas, no una solución ni un inventario de todos los enfoques. La técnica indicada como faltante necesita una ampliación de los apuntes; estos bloques no bastan para aprenderla.",
+  "editorialUrl": "https://scorelatam.naquadah.com.br/latam-2023/editorial.pdf",
+  "classificationConfidence": "Alta: editorial oficial. Estar estudiando DP no basta para considerar este problema introductorio.",
+  "firstSolve": {
+    "minute": 246,
+    "teams": [
+      "[UBA - FCEN] InChaVoLa"
+    ]
+  },
+  "statementPages": {
+    "start": 25,
+    "end": 26,
+    "sourcePageCount": 30
+  }
+}

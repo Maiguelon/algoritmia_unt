@@ -1,0 +1,48 @@
+{
+  "id": "regional-2023-j",
+  "tournamentId": "regional-2023",
+  "letter": "J",
+  "title": "Journey of the Robber",
+  "summary": "Para cada ciudad de un árbol, encontrar la ciudad más cercana que tenga más dinero, resolviendo los empates según el identificador indicado.",
+  "topics": [
+    "Árboles",
+    "Estructuras de datos"
+  ],
+  "difficulty": "Avanzado",
+  "difficultyReason": "Estimación editorial: conceptual 5/5 e implementación 4/5. Recorridos básicos no alcanzan; necesita una organización avanzada de consultas de distancia.",
+  "implementation": "4/5 (estimación editorial)",
+  "conceptual": "5/5 (estimación editorial)",
+  "ac": 3,
+  "total": 152,
+  "judgeUrl": "https://codeforces.com/gym/104736/problem/J",
+  "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2023/contest.pdf#page=23",
+  "statementUrl": "/statements/regional-2023-j.pdf",
+  "chunkIds": [
+    "cpp-vectores",
+    "cpp-pares"
+  ],
+  "coverage": "parcial",
+  "missingTools": [
+    "Descomposición de centroides; alternativa por bloques No desarrollado como técnica en la biblioteca básica."
+  ],
+  "hints": [
+    "Revisá especialmente: desempates por identificador.",
+    "Cuidado con consultar vértices no elegibles.",
+    "Revisá especialmente: complejidad de repetir recorridos."
+  ],
+  "status": "verificado",
+  "approach": "Base de clasificación: editorial oficial + enunciado. Los bloques propuestos son una selección editorial de herramientas, no una solución ni un inventario de todos los enfoques. La técnica indicada como faltante necesita una ampliación de los apuntes; estos bloques no bastan para aprenderla.",
+  "editorialUrl": "https://scorelatam.naquadah.com.br/latam-2023/editorial.pdf",
+  "classificationConfidence": "Alta sobre las alternativas: editorial oficial. Las trampas son riesgos estimados, no un registro de errores de equipos.",
+  "firstSolve": {
+    "minute": 119,
+    "teams": [
+      "[UBA - FCEN] InChaVoLa"
+    ]
+  },
+  "statementPages": {
+    "start": 23,
+    "end": 24,
+    "sourcePageCount": 30
+  }
+}

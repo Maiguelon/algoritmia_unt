@@ -1,0 +1,49 @@
+{
+  "id": "regional-2023-a",
+  "tournamentId": "regional-2023",
+  "letter": "A",
+  "title": "Analyzing Contracts",
+  "summary": "Mantener una base de clientes que llegan en línea y responder consultas de la mayor ganancia posible al asociarlos con un proveedor de fechas y tarifas dadas.",
+  "topics": [
+    "Estructuras de datos",
+    "Geometría"
+  ],
+  "difficulty": "Avanzado",
+  "difficultyReason": "Estimación editorial: conceptual 5/5 e implementación 5/5. Combina una prueba de orden con una estructura especializada; queda lejos de la implementación básica de consultas.",
+  "implementation": "5/5 (estimación editorial)",
+  "conceptual": "5/5 (estimación editorial)",
+  "ac": 1,
+  "total": 152,
+  "judgeUrl": "https://codeforces.com/gym/104736/problem/A",
+  "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2023/contest.pdf#page=3",
+  "statementUrl": "/statements/regional-2023-a.pdf",
+  "chunkIds": [
+    "cpp-vectores",
+    "cpp-pares",
+    "cpp-reales"
+  ],
+  "coverage": "parcial",
+  "missingTools": [
+    "Li Chao generalizado; alternativa por bloques No desarrollado como técnica en la biblioteca básica."
+  ],
+  "hints": [
+    "Revisá especialmente: productos grandes.",
+    "Revisá especialmente: regiones de valor cero.",
+    "Revisá especialmente: inserciones y consultas en orden."
+  ],
+  "status": "verificado",
+  "approach": "Base de clasificación: editorial oficial + enunciado. Los bloques propuestos son una selección editorial de herramientas, no una solución ni un inventario de todos los enfoques. La técnica indicada como faltante necesita una ampliación de los apuntes; estos bloques no bastan para aprenderla.",
+  "editorialUrl": "https://scorelatam.naquadah.com.br/latam-2023/editorial.pdf",
+  "classificationConfidence": "Alta sobre la técnica: editorial oficial. Los puntajes y la adecuación al equipo son estimaciones.",
+  "firstSolve": {
+    "minute": 292,
+    "teams": [
+      "[UBA - FCEN] InChaVoLa"
+    ]
+  },
+  "statementPages": {
+    "start": 3,
+    "end": 4,
+    "sourcePageCount": 30
+  }
+}

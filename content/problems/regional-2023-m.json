@@ -1,0 +1,49 @@
+{
+  "id": "regional-2023-m",
+  "tournamentId": "regional-2023",
+  "letter": "M",
+  "title": "Meeting Point",
+  "summary": "Encontrar destinos alternativos para que todos los caminos mínimos desde la casa de Pedro pasen por el punto de reunión exactamente a mitad del trayecto.",
+  "topics": [
+    "Grafos",
+    "Caminos mínimos"
+  ],
+  "difficulty": "Salto regional",
+  "difficultyReason": "Estimación editorial: conceptual 3/5 e implementación 3/5. Buen siguiente escalón de grafos si ya pueden implementar Dijkstra con seguridad; no es un BFS de práctica básica.",
+  "implementation": "3/5 (estimación editorial)",
+  "conceptual": "3/5 (estimación editorial)",
+  "ac": 37,
+  "total": 152,
+  "judgeUrl": "https://codeforces.com/gym/104736/problem/M",
+  "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2023/contest.pdf#page=29",
+  "statementUrl": "/statements/regional-2023-m.pdf",
+  "chunkIds": [
+    "cpp-vectores",
+    "cpp-pares",
+    "cpp-cola"
+  ],
+  "coverage": "parcial",
+  "missingTools": [
+    "Comparación de caminos mínimos No desarrollado como técnica en la biblioteca básica."
+  ],
+  "hints": [
+    "Revisá especialmente: distancias fuera de 32 bits.",
+    "Revisá especialmente: rutas mínimas empatadas.",
+    "Cuidado con tratar un nodo inaccesible como distancia pequeña."
+  ],
+  "status": "verificado",
+  "approach": "Base de clasificación: editorial oficial + enunciado. Los bloques propuestos son una selección editorial de herramientas, no una solución ni un inventario de todos los enfoques. La técnica indicada como faltante necesita una ampliación de los apuntes; estos bloques no bastan para aprenderla.",
+  "editorialUrl": "https://scorelatam.naquadah.com.br/latam-2023/editorial.pdf",
+  "classificationConfidence": "Alta: editorial oficial. La categoría depende de que Dijkstra sea una herramienta conocida.",
+  "firstSolve": {
+    "minute": 48,
+    "teams": [
+      "[UChile] CTF enjoyers"
+    ]
+  },
+  "statementPages": {
+    "start": 29,
+    "end": 30,
+    "sourcePageCount": 30
+  }
+}

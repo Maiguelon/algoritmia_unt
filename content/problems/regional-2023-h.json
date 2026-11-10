@@ -1,0 +1,49 @@
+{
+  "id": "regional-2023-h",
+  "tournamentId": "regional-2023",
+  "letter": "H",
+  "title": "Health in Hazard",
+  "summary": "Encontrar el primer momento en que las líneas de deshielo impiden que un oso alcance un punto a una distancia fijada de su guarida.",
+  "topics": [
+    "Geometría",
+    "Búsqueda"
+  ],
+  "difficulty": "Avanzado",
+  "difficultyReason": "Estimación editorial: conceptual 5/5 e implementación 5/5. Depende de geometría robusta y una prueba de factibilidad; baja prioridad para el horizonte del equipo.",
+  "implementation": "5/5 (estimación editorial)",
+  "conceptual": "5/5 (estimación editorial)",
+  "ac": 3,
+  "total": 152,
+  "judgeUrl": "https://codeforces.com/gym/104736/problem/H",
+  "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2023/contest.pdf#page=19",
+  "statementUrl": "/statements/regional-2023-h.pdf",
+  "chunkIds": [
+    "cpp-pares",
+    "cpp-reales",
+    "cpp-ordenacion"
+  ],
+  "coverage": "parcial",
+  "missingTools": [
+    "Búsqueda binaria y factibilidad geométrica No desarrollado como técnica en la biblioteca básica."
+  ],
+  "hints": [
+    "Cuidado con confundir región no acotada con vacía.",
+    "Revisá especialmente: tangencias.",
+    "Revisá especialmente: corte angular y tolerancias."
+  ],
+  "status": "verificado",
+  "approach": "Base de clasificación: editorial oficial + enunciado. Los bloques propuestos son una selección editorial de herramientas, no una solución ni un inventario de todos los enfoques. La técnica indicada como faltante necesita una ampliación de los apuntes; estos bloques no bastan para aprenderla.",
+  "editorialUrl": "https://scorelatam.naquadah.com.br/latam-2023/editorial.pdf",
+  "classificationConfidence": "Alta: editorial oficial, con alternativas por semiplanos o arcos. No se asume una única técnica geométrica.",
+  "firstSolve": {
+    "minute": 194,
+    "teams": [
+      "[PUC] Bella y Sensual"
+    ]
+  },
+  "statementPages": {
+    "start": 19,
+    "end": 20,
+    "sourcePageCount": 30
+  }
+}
