@@ -1,0 +1,68 @@
+{
+  "providedBy": "Usuario",
+  "date": "2026-11-10",
+  "event": "Regional 2026, Santa Fe",
+  "usage": "Reserva para una futura incorporación visual. Estos archivos no se sirven en el sitio.",
+  "photos": [
+    {
+      "file": "mono-pollo-retrato.png",
+      "sourceFilename": "codex-clipboard-e0263069-4e6c-4a75-afd7-735fb31e1049.png",
+      "sha256": "ac309c2d5f21006bde2cd311437753966dd72f7746a4e6e9e50403fc049cd067",
+      "cleanedWithAI": true
+    },
+    {
+      "file": "pandas-retrato.png",
+      "sourceFilename": "codex-clipboard-c6ae7872-fe11-4d99-a6ec-bf78256dc5bc.png",
+      "sha256": "ac83f5655031f8d8580135baa07b39abe0741e989e1fd69dbc229fca1c2b6c11",
+      "cleanedWithAI": true
+    },
+    {
+      "file": "computops-retrato.png",
+      "sourceFilename": "codex-clipboard-a8d3c448-079d-444f-b5cd-c616e72ba5cc.png",
+      "sha256": "d94ffe29c3e7933522d6d077eeb7ed3e82287c441d0e9ba5d2bbcab864b7c472",
+      "cleanedWithAI": true
+    },
+    {
+      "file": "noxus-retrato.png",
+      "sourceFilename": "codex-clipboard-2d94b3f7-848a-4c4c-930f-e2715fe5a6c0.png",
+      "sha256": "b8530d9ec0048c8210ec4b153429b4dc2dbae2d8982b0326b8179b5df7a0ad49",
+      "cleanedWithAI": true
+    },
+    {
+      "file": "unt-exterior-01.png",
+      "sourceFilename": "codex-clipboard-1064c621-e477-4aa8-8ea6-207a6ef61de9.png",
+      "sha256": "34a4c01fd74b3a0160c068bc5478bfe95f190a8b99d6f31d3edf51dec72b5fea",
+      "cleanedWithAI": false
+    },
+    {
+      "file": "unt-exterior-02.png",
+      "sourceFilename": "codex-clipboard-aec986bf-3d43-4c8b-8196-8914722c4859.png",
+      "sha256": "3d709aac5b0bee04eeeae4dadc24fc69314fc1ccd1fb06932cc86317e1f72e4b",
+      "cleanedWithAI": false
+    },
+    {
+      "file": "unt-grupal.png",
+      "sourceFilename": "codex-clipboard-1e688d49-5846-444e-955c-588896bd655d.png",
+      "sha256": "c944db0d552e0bab658f618fa202ccfb17ed1f91194b81099fa1b3c853f235d8",
+      "cleanedWithAI": false
+    },
+    {
+      "file": "sala-01.png",
+      "sourceFilename": "codex-clipboard-291c1ee7-af7b-41cc-9c3b-88d875114d09.png",
+      "sha256": "3710c8a6f5411492f6ee541a6eec75bf9d0cc7603b5e6548fb77a519ecde8af3",
+      "cleanedWithAI": false
+    },
+    {
+      "file": "mono-pollo-sala.png",
+      "sourceFilename": "codex-clipboard-21e590fb-d712-42b1-ac3d-daaa807b4066.png",
+      "sha256": "e6e7bf1ce4e0dab8991064f5b43a6637b846586b341d2571d4d363a05e9a7ce2",
+      "cleanedWithAI": false
+    },
+    {
+      "file": "mono-pollo-exterior.png",
+      "sourceFilename": "codex-clipboard-d8dcf5f8-fd62-48bf-b69d-a19f120fe2e4.png",
+      "sha256": "808faeb4591d0c3f55dfc329c4bacd601c2c6f568c25562ac3d1393d222907d8",
+      "cleanedWithAI": false
+    }
+  ]
+}

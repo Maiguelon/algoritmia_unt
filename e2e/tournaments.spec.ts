@@ -17,6 +17,12 @@ test('torneo con población, curva y fuentes; Regional 2026 pendiente',async({pa
  await expect(page.locator('.stat').nth(1)).toContainText('55');
  await expect(page.locator('.stat').nth(1)).toContainText('cupos argentinos al Regional');
  await expect(page.locator('.stat').nth(2)).toContainText('4');
+ const navigation=page.getByRole('navigation',{name:'Secciones del torneo'});
+ for(const [name,id] of [['Estadísticas','estadisticas'],['Problemas','problemas'],['Tucumán','tucuman']]) {
+   await navigation.getByRole('link',{name,exact:true}).click();
+   await expect(page).toHaveURL(new RegExp(`#${id}$`));
+   await expect(page.locator(`#${id}`)).toBeInViewport();
+ }
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
  await page.goto('/torneos/regional-2026/');
  await expect(page.locator('.tournament-judge')).toHaveCount(0);
