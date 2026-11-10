@@ -1,0 +1,6 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import NotesLibrary from '../../components/NotesLibrary';
+import { chunks } from '../../lib/chunks';
+---
+<Layout title="Apuntes"><div class="page-heading"><span class="eyebrow">Biblioteca de consulta / C++17</span><h1>Las herramientas, a mano.</h1><p class="muted">Consultá una operación, entendé cuándo usarla o llevate un bloque a tu apunte. Elegí cuánto detalle necesitás.</p></div><NotesLibrary chunks={chunks} client:load/></Layout>
