@@ -1,0 +1,7 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import NotesBuilder from '../../components/NotesBuilder';
+import {chunks} from '../../lib/chunks';
+import {problems} from '../../lib/data';
+---
+<Layout title="Armar apunte"><div class="page-heading"><span class="eyebrow">Tu biblioteca, a tu medida</span><h1>Armá tu próximo apunte.</h1><p class="muted">Elegí herramientas y cuánto detalle llevar. Los problemas seleccionados sugieren bloques; la decisión final es tuya.</p></div><NotesBuilder chunks={chunks} problems={problems} client:load/></Layout>
