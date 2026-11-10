@@ -22,6 +22,7 @@ const problemTitle = (letter: string) => `${letter}. ${problems.find(problem => 
       <div class="solved-problems"><span>Resolvió:</span>{cutoff.solvedProblems.map(letter => <a href={problemLink(letter)} title={problemTitle(letter)}>{letter}</a>)}</div>
     </article>
     <div class="qualification-context">
+      <h3>Requerimientos para clasificar directo</h3>
       {analysis.cutoffContext.map(paragraph => <p>{paragraph}</p>)}
     </div>
   </div>
@@ -38,5 +39,5 @@ const problemTitle = (letter: string) => `${letter}. ${problems.find(problem => 
     </article>)}
   </div>
 
-  <p class="qualification-level"><strong>Nivel requerido para clasificación directa:</strong> <span class="chip" data-level={analysis.requiredLevel}>{analysis.requiredLevel}</span><span class="editorial-caption">Estimación editorial</span></p>
+  <p class="qualification-level"><strong>Nivel requerido para clasificación directa:</strong> <span class="chip" data-level={analysis.requiredLevel}>{analysis.requiredLevel}</span></p>
 </section>
