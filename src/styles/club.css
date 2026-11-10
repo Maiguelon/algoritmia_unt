@@ -126,6 +126,9 @@ input[type=checkbox] { accent-color: var(--blue); width: 17px; height: 17px; ver
 .selection-bar .button { background: var(--yellow); color: var(--ink); border-color: var(--yellow); box-shadow: none; }
 .selection-bar .button.secondary { color: white; background: transparent; border-color: #a8b4d4; }
 .selection-bar .actions { margin: 0; }
+.global-cart { position: fixed; bottom: 16px; inset-inline: 0; z-index: 30; pointer-events: none; }
+.global-cart .selection-bar { position: static; margin: 0; pointer-events: auto; }
+.has-selection .footer { padding-bottom: 140px; }
 .breadcrumb { font-size: .8rem; color: var(--muted); margin-bottom: 25px; }
 .page-heading { max-width: 850px; margin-bottom: 30px; }
 .page-heading .eyebrow { display: inline-block; padding: 3px 9px; border-radius: 5px; background: #e3eaff; color: #344b9a; }
@@ -219,4 +222,10 @@ summary { cursor: pointer; font-weight: 800; }
   .container { max-width: none; }
   .panel { border: 0; }
   .prose pre { white-space: pre-wrap; background: #f4f4f4; color: black; }
+}
+
+@media (max-width: 600px) {
+  .global-cart .selection-bar { padding: 11px 13px; gap: 8px; }
+  .global-cart .actions { width: 100%; display: grid; grid-template-columns: auto minmax(0, 1fr) minmax(0, 1fr); gap: 8px; }
+  .global-cart .button { min-width: 0; font-size: .75rem; padding: 8px 6px; white-space: nowrap; }
 }

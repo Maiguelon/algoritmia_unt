@@ -54,13 +54,14 @@ export default function NotesBuilder({ chunks, problems }: { chunks: Chunk[]; pr
     setSelection(initial);
     setReady(true);
 
-    function refreshProblems(event: StorageEvent) {
-      if (event.key === PROBLEMS_KEY || event.key === null) {
+    function refreshProblems(event: Event) {
+      if (event.type === 'algoritmia:selection' || (event as StorageEvent).key === PROBLEMS_KEY || (event as StorageEvent).key === null) {
         try { setProblemIds(readProblemIds(localStorage.getItem(PROBLEMS_KEY), problems)); } catch { /* The current selection remains usable. */ }
       }
     }
     window.addEventListener('storage', refreshProblems);
-    return () => window.removeEventListener('storage', refreshProblems);
+    window.addEventListener('algoritmia:selection', refreshProblems);
+    return () => { window.removeEventListener('storage', refreshProblems); window.removeEventListener('algoritmia:selection', refreshProblems); };
   }, [chunks, problems]);
 
   useEffect(() => {

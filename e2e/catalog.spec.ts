@@ -6,7 +6,7 @@ test('filtra por URL, conserva selección oculta y muestra ficha sin abrir pista
  await page.getByRole('checkbox',{name:'Seleccionar Harder Horizons',exact:true}).check();
  await page.getByRole('searchbox').fill('xyz inexistente');
  await expect(page.getByRole('heading',{name:'No hay coincidencias'})).toBeVisible();
- await expect(page.getByLabel('Selección de problemas')).toContainText('1 problemas seleccionados');
+ await expect(page.getByLabel('Selección de problemas')).toContainText('1 problema seleccionado');
  await page.getByRole('button',{name:'Limpiar filtros'}).click();
  await page.setViewportSize({width:390,height:844});
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);

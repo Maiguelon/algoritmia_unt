@@ -6,8 +6,11 @@ test('ficha directa, selección y pistas cerradas',async({page})=>{
  await expect(page.getByText('Cobertura del apunte:',{exact:false})).toContainText('parcial');
  await page.getByRole('button',{name:'＋ Seleccionar problema'}).click();
  await expect(page.getByRole('button',{name:'✓ En tu selección'})).toBeVisible();
+ await expect(page.getByRole('region',{name:'Selección de problemas'})).toContainText('1 problema seleccionado');
  await page.reload();
  await expect(page.getByRole('button',{name:'✓ En tu selección'})).toBeVisible();
+ await page.getByRole('region',{name:'Selección de problemas'}).getByRole('button',{name:'Vaciar',exact:true}).click();
+ await expect(page.getByRole('button',{name:'＋ Seleccionar problema'})).toBeVisible();
  await page.setViewportSize({width:390,height:844});
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
 });

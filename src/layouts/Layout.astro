@@ -1,5 +1,7 @@
 ---
 import '../styles/club.css';
+import SelectionCart from '../components/SelectionCart';
+import { problems } from '../lib/data';
 interface Props { title?: string; description?: string }
 const { title = 'Algoritmia UNT', description = 'Problemas, herramientas y torneos para entrenar programación competitiva en la UNT.' } = Astro.props;
 const pathname = Astro.url.pathname;
@@ -12,6 +14,7 @@ const navigation = [['/problemas/','Problemas'],['/torneos/','Torneos'],['/apunt
     <a class="skip-link" href="#contenido">Saltar al contenido</a>
     <header class="site-header"><div class="club-ribbon" aria-hidden="true"></div><div class="container header-inner"><a class="brand" href="/" aria-label="Algoritmia UNT, inicio"><img src="/logo-club.png" alt="" width="69" height="69"/><div><span class="brand-wordmark"><span>Club de</span>Algoritmia</span><small>UNT / FACET · TUCUMÁN</small></div></a><nav class="nav" aria-label="Principal">{navigation.map(([href,label])=><a href={href} aria-current={pathname.startsWith(href) ? 'page' : undefined}>{label}</a>)}</nav></div></header>
     <main id="contenido"><div class="container"><slot/></div></main>
+    <SelectionCart allowed={problems.map(problem => problem.id)} client:load/>
     <footer class="footer"><div class="container footer-inner"><div><span class="footer-dots" aria-hidden="true"><i></i><i></i><i></i></span><strong>La práctica se comparte.</strong><br/>Club de Algoritmia · UNT / FACET</div><span>C++17 · Datos con fuentes<br/>Hecho para entrenar juntos, problema a problema.</span></div></footer>
   </body>
 </html>

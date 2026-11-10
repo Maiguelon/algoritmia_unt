@@ -1,9 +1,6 @@
-import {useEffect,useState} from 'react';
-import { readSelected } from '../lib/catalog';
+import { useSelection } from '../lib/selection';
 export default function ProblemSelect({id,allowed}:{id:string;allowed:string[]}) {
-  const [selected,setSelected]=useState<string[]>([]);
-  const [ready,setReady]=useState(false);
-  useEffect(()=>{try{setSelected(readSelected(localStorage.getItem('algoritmia:selected'),allowed));}catch{}setReady(true);},[]);
+  const {selected,ready,toggle}=useSelection(allowed);
   const active=selected.includes(id);
-  return <button disabled={!ready} className={active?'button secondary':'button'} onClick={()=>{const next=active?selected.filter(x=>x!==id):[...selected,id];setSelected(next);try{localStorage.setItem('algoritmia:selected',JSON.stringify(next));}catch{}}}>{active?'✓ En tu selección':'＋ Seleccionar problema'}</button>;
+  return <button disabled={!ready} className={active?'button secondary':'button'} onClick={()=>toggle(id)}>{active?'✓ En tu selección':'＋ Seleccionar problema'}</button>;
 }
