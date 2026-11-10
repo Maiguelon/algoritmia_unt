@@ -30,7 +30,22 @@ El catálogo `catalogo.json` define orden, grupo y apoyos sugeridos. Un nuevo bl
 
 La plantilla es un bloque independiente. Su código se incluye una vez al inicio. El índice del apunte solo aparece cuando quedan dos o más bloques distintos de contenido con alguna parte seleccionada, sin contar la plantilla. Descripción/operaciones/ejemplos de un mismo bloque no cuentan como contenidos distintos.
 
-Los apoyos no se agregan de forma recursiva. Una persona puede haberlos estudiado o impreso. Las preferencias guardadas y los desmarcados tienen prioridad; el usuario puede añadir otra vez las sugerencias mediante una acción explícita.
+Los apoyos no se agregan de forma recursiva. Una persona puede haberlos estudiado o impreso. Se ofrecen en Personalizado para sumarlos por decisión explícita.
+
+### Selección y modos de exportación
+
+`/seleccion/` reúne los problemas, la descarga de enunciados y la preparación del apunte. Las rutas anteriores `/enunciados/` y `/armar/` conducen a esa página; las acciones `?chunk=` de la biblioteca se conservan y abren Personalizado.
+
+- Recomendado: descripción y funciones/operaciones de las herramientas sugeridas por los problemas.
+- Completo: las mismas herramientas con las tres partes y las explicaciones de la plantilla. No incorpora toda la biblioteca.
+- Solo funciones: la sección existente Funciones y operaciones de esas herramientas. Esta etapa no reestructura su contenido interno.
+- Personalizado: selección independiente por bloque y parte; conserva los desmarcados al cambiar problemas o probar los otros modos. La primera entrada copia el modo activo; las siguientes recuperan el borrador propio.
+
+Los tres modos automáticos se recalculan con la selección de problemas. La configuración se guarda en `algoritmia:notes:v2`; una configuración anterior válida se migra a Personalizado. El índice sigue dependiendo de la cantidad de bloques distintos, sin contar la plantilla.
+
+La barra ofrece descargas rápidas y acceso a la selección. **Apunte recomendado** siempre genera Recomendado, sin leer ni modificar el borrador personalizado. Dentro de la selección, **Descargar apunte PDF** utiliza el modo visible. Los datos de las descargas rápidas se cargan bajo demanda desde los archivos estáticos `/material/catalogo.json` y `/material/apuntes.json`.
+
+La cobertura parcial y las técnicas faltantes se muestran junto a cada problema. Los problemas fuera de alcance pueden exportar sus enunciados, pero no aportan herramientas al apunte. El recuento de herramientas incluidas no afirma que se haya incorporado una solución ni toda su teoría.
 
 ## Cerrar un cambio
 

@@ -1,77 +1,80 @@
-import { useEffect, useMemo, useState } from 'react';
+import { useEffect, useMemo, useRef, useState } from 'react';
 import type { Chunk } from '../lib/chunks';
-import type { Problem } from '../lib/types';
+import type { Problem, Tournament } from '../lib/types';
+import StatementDownload from './StatementDownload';
+import { useSelection, SELECTION_KEY } from '../lib/selection';
+import { readSelected } from '../lib/catalog';
+import {
+  activeNotesSelection, LEGACY_NOTES_CONFIG_KEY, NOTES_CONFIG_KEY,
+  recommendedChunkIds, restoreNotesPreferences, serializeNotesPreferences, switchNotesMode,
+  type NotesMode, type NotesPreferences,
+} from '../lib/notes-presets';
 import {
   TEMPLATE_ID, SECTION_KEYS, SECTION_LABELS, addSuggestedSelection, defaultSections,
-  hasAnySection, hasIndex, parseStoredSelection, selectedContentChunks,
-  suggestedPrerequisites, suggestedSelection,
+  hasAnySection, hasIndex, selectedContentChunks,
+  suggestedPrerequisites,
   type SectionKey, type Selection,
 } from '../lib/composition';
 
-const CONFIG_KEY = 'algoritmia:notes:v1';
-const PROBLEMS_KEY = 'algoritmia:selected';
 const OFF = { descripcion: false, operaciones: false, ejemplos: false };
+const MODES: Array<{ id: NotesMode; title: string; description: string }> = [
+  { id: 'recomendado', title: 'Recomendado', description: 'Descripción y funciones.' },
+  { id: 'completo', title: 'Completo', description: 'Descripción, funciones y ejemplos.' },
+  { id: 'funciones', title: 'Solo funciones', description: 'Funciones y operaciones.' },
+  { id: 'personalizado', title: 'Personalizado', description: 'Elegí los bloques y sus partes.' },
+];
 
-function readProblemIds(raw: string | null, problems: Problem[]): string[] {
-  try {
-    const value: unknown = JSON.parse(raw ?? '[]');
-    const valid = new Set(problems.map((problem) => problem.id));
-    return Array.isArray(value) ? [...new Set(value.filter((id): id is string => typeof id === 'string' && valid.has(id)))] : [];
-  } catch {
-    return [];
-  }
-}
-
-export default function NotesBuilder({ chunks, problems }: { chunks: Chunk[]; problems: Problem[] }) {
-  const [selection, setSelection] = useState<Selection>({});
-  const [problemIds, setProblemIds] = useState<string[]>([]);
+export default function NotesBuilder({ chunks, problems, tournaments }: { chunks: Chunk[]; problems: Problem[]; tournaments: Tournament[] }) {
+  const allowed = useMemo(() => problems.map(problem => problem.id), [problems]);
+  const { selected: problemIds } = useSelection(allowed);
+  const [preferences, setPreferences] = useState<NotesPreferences>({ mode: 'recomendado', custom: null });
   const [ready, setReady] = useState(false);
   const [working, setWorking] = useState(false);
   const [message, setMessage] = useState('');
   const [error, setError] = useState('');
   const [storageNotice, setStorageNotice] = useState('');
+  const preview = useRef<HTMLDetailsElement>(null);
 
   useEffect(() => {
-    let restored: Selection | null = null;
+    let restored: NotesPreferences = { mode: 'recomendado', custom: null };
     let ids: string[] = [];
     try {
-      restored = parseStoredSelection(localStorage.getItem(CONFIG_KEY), chunks);
-      ids = readProblemIds(localStorage.getItem(PROBLEMS_KEY), problems);
+      restored = restoreNotesPreferences(localStorage.getItem(NOTES_CONFIG_KEY), localStorage.getItem(LEGACY_NOTES_CONFIG_KEY), chunks);
+      ids = readSelected(localStorage.getItem(SELECTION_KEY), allowed);
     } catch {
       setStorageNotice('Podés armar y descargar el apunte, pero este navegador no permite guardar tus preferencias.');
     }
-    const suggested = problems.filter((problem) => ids.includes(problem.id)).flatMap((problem) => problem.chunkIds);
-    let initial = restored ?? suggestedSelection(suggested, chunks);
     const url = new URL(window.location.href);
     const incoming = url.searchParams.getAll('chunk');
     if (incoming.length) {
-      initial = addSuggestedSelection(initial, incoming, chunks);
+      const initial = restored.custom ?? activeNotesSelection(restored, recommendedChunkIds(problems.filter(problem => ids.includes(problem.id))), chunks);
+      restored = { mode: 'personalizado', custom: addSuggestedSelection(initial, incoming, chunks) };
       // Consume the explicit action so a later reload respects removals.
       url.searchParams.delete('chunk');
       window.history.replaceState(window.history.state, '', `${url.pathname}${url.search}${url.hash}`);
     }
-    setProblemIds(ids);
-    setSelection(initial);
+    setPreferences(restored);
     setReady(true);
 
-    function refreshProblems(event: Event) {
-      if (event.type === 'algoritmia:selection' || (event as StorageEvent).key === PROBLEMS_KEY || (event as StorageEvent).key === null) {
-        try { setProblemIds(readProblemIds(localStorage.getItem(PROBLEMS_KEY), problems)); } catch { /* The current selection remains usable. */ }
+    function refreshPreferences(event: StorageEvent) {
+      if (event.key === NOTES_CONFIG_KEY || event.key === null) {
+        try { setPreferences(restoreNotesPreferences(localStorage.getItem(NOTES_CONFIG_KEY), localStorage.getItem(LEGACY_NOTES_CONFIG_KEY), chunks)); } catch { /* The current draft remains usable. */ }
       }
     }
-    window.addEventListener('storage', refreshProblems);
-    window.addEventListener('algoritmia:selection', refreshProblems);
-    return () => { window.removeEventListener('storage', refreshProblems); window.removeEventListener('algoritmia:selection', refreshProblems); };
-  }, [chunks, problems]);
+    window.addEventListener('storage', refreshPreferences);
+    return () => window.removeEventListener('storage', refreshPreferences);
+  }, [chunks, problems, allowed]);
 
   useEffect(() => {
     if (!ready) return;
-    try { localStorage.setItem(CONFIG_KEY, JSON.stringify({ version: 1, selection })); }
+    try { localStorage.setItem(NOTES_CONFIG_KEY, serializeNotesPreferences(preferences)); }
     catch { setStorageNotice('Los cambios funcionan durante esta visita, pero no se pudieron guardar en el navegador.'); }
-  }, [selection, ready]);
+  }, [preferences, ready]);
 
   const selectedProblems = useMemo(() => problems.filter((problem) => problemIds.includes(problem.id)), [problems, problemIds]);
-  const recommendedIds = [...new Set(selectedProblems.flatMap((problem) => problem.chunkIds))];
+  const recommendedIds = recommendedChunkIds(selectedProblems);
+  const selection = activeNotesSelection(preferences, recommendedIds, chunks);
+  const custom = preferences.mode === 'personalizado';
   const missingRecommendations = chunks.filter((chunk) => chunk.id !== TEMPLATE_ID && recommendedIds.includes(chunk.id) && !hasAnySection(selection[chunk.id]));
   const content = selectedContentChunks(chunks, selection);
   const index = hasIndex(chunks, selection);
@@ -83,7 +86,15 @@ export default function NotesBuilder({ chunks, problems }: { chunks: Chunk[]; pr
   function change(next: Selection | ((previous: Selection) => Selection)) {
     setMessage('');
     setError('');
-    setSelection(next);
+    setPreferences(previous => {
+      const active = activeNotesSelection(previous, recommendedIds, chunks);
+      return { mode: 'personalizado', custom: typeof next === 'function' ? next(active) : next };
+    });
+  }
+
+  function chooseMode(mode: NotesMode) {
+    setMessage(''); setError('');
+    setPreferences(previous => switchNotesMode(previous, mode, selection));
   }
 
   function toggleChunk(id: string) {
@@ -110,25 +121,30 @@ export default function NotesBuilder({ chunks, problems }: { chunks: Chunk[]; pr
   }
 
   return <div className="notes-builder">
-    <div className="panel builder-intro">
-      <p>Elegí las herramientas y qué parte querés llevar de cada una. La plantilla va primero y una sola vez. Los apoyos se sugieren: vos decidís si sumarlos.</p>
-      {storageNotice && <p className="muted" role="status">{storageNotice}</p>}
-      {!ready && <p role="status">Recuperando tu selección…</p>}
-    </div>
+    <StatementDownload problems={problems} tournaments={tournaments} includedChunkIds={content.map(chunk => chunk.id)}/>
 
-    {selectedProblems.length > 0 && <section className="panel builder-problems" aria-label="Problemas seleccionados">
-      <h2>Para tus problemas</h2>
-      <ul>{selectedProblems.map((problem) => <li key={problem.id}>
-        <a href={`/problemas/${problem.id}/`}>{problem.letter}. {problem.title}</a>
-        {problem.coverage !== 'completa' && <p className="builder-coverage">{problem.coverage === 'fuera de alcance' ? 'Fuera del alcance actual de los apuntes.' : <>Cobertura {problem.coverage}. {problem.missingTools.length ? `Todavía faltan: ${problem.missingTools.join(', ')}.` : 'Revisá los requisitos antes de confiar en este apunte.'}</>}</p>}
-      </li>)}</ul>
-      <p className="muted">Las herramientas corresponden al enfoque señalado en cada ficha. Podés modificar esta propuesta.</p>
-      {missingRecommendations.length > 0 && <button type="button" className="button secondary" onClick={() => change((previous) => addSuggestedSelection(previous, recommendedIds, chunks))}>Añadir {missingRecommendations.length} bloques sugeridos por los problemas</button>}
-      <a className="builder-problems-link" href="/problemas/">Elegir otros problemas →</a>
-    </section>}
+    <section id="apuntes" className="builder-notes" aria-labelledby="notes-title">
+    <div className="builder-selection-heading"><h2 id="notes-title">Apunte de herramientas</h2><span className="chip">C++17</span></div>
+    <p className="muted">Las herramientas compartidas se incluyen una sola vez. La plantilla de C++ va siempre al inicio.</p>
+    <fieldset className="notes-modes" disabled={!ready}>
+      <legend>Elegí el contenido del apunte</legend>
+      {MODES.map(mode => <label className={`notes-mode ${preferences.mode === mode.id ? 'is-active' : ''}`} key={mode.id}>
+        <span><input type="radio" name="notes-mode" aria-label={mode.title} checked={preferences.mode === mode.id} onChange={() => chooseMode(mode.id)}/><strong>{mode.title}</strong></span>
+        <small>{mode.description}</small>
+      </label>)}
+    </fieldset>
+    <p className="muted notes-mode-context">{custom
+      ? 'Tu configuración se conserva aunque cambies los problemas o pruebes otro modo.'
+      : 'Se actualiza al cambiar los problemas. Completo amplía estas herramientas, no toda la biblioteca.'}</p>
+    {storageNotice && <p className="muted" role="status">{storageNotice}</p>}
+    {!ready && <p role="status">Recuperando tu selección…</p>}
+    {custom && missingRecommendations.length > 0 && <div className="panel builder-missing">
+      <p>Tu apunte omite {missingRecommendations.length} {missingRecommendations.length === 1 ? 'herramienta sugerida' : 'herramientas sugeridas'} para estos problemas.</p>
+      <button type="button" className="button secondary small" onClick={() => change(previous => addSuggestedSelection(previous, recommendedIds, chunks))}>Añadir {missingRecommendations.length} bloques sugeridos por los problemas</button>
+    </div>}
 
     <div className="builder-layout">
-      <div className="builder-controls">
+      {custom ? <div className="builder-controls">
         <section className="panel builder-template">
           <p className="eyebrow">Siempre al inicio</p>
           <h2>Plantilla de C++17</h2>
@@ -148,25 +164,33 @@ export default function NotesBuilder({ chunks, problems }: { chunks: Chunk[]; pr
             {hasAnySection(selection[chunk.id]) && <div className="builder-parts">{SECTION_KEYS.map((key) => <label key={key}><input type="checkbox" checked={selection[chunk.id]?.[key] ?? false} onChange={() => togglePart(chunk.id, key)} />{SECTION_LABELS[key]}</label>)}</div>}
           </div>)}
         </details>)}
-      </div>
+      </div> : <section className="panel builder-included" aria-label="Herramientas incluidas">
+        <h3>Herramientas para tu selección</h3>
+        {content.length ? <ul>{content.map(chunk => <li key={chunk.id}><a href={`/apuntes/${chunk.id}/`} target="_blank" rel="noreferrer">{chunk.title} ↗</a><span className="muted">{chunk.family}</span></li>)}</ul>
+          : <p className="muted">{selectedProblems.length ? 'Estos problemas no tienen herramientas recomendadas disponibles. Podés armar un apunte personalizado con la biblioteca.' : 'Elegí problemas del catálogo o usá Personalizado para armar un apunte libre.'}</p>}
+        <button className="builder-text-button" type="button" onClick={() => chooseMode('personalizado')}>Personalizar bloques y partes →</button>
+      </section>}
 
       <aside className="builder-summary">
         <section className="panel builder-summary-card" aria-label="Resumen del apunte">
-          <p className="eyebrow">Tu selección</p>
+          <p className="eyebrow">{MODES.find(mode => mode.id === preferences.mode)?.title}</p>
           <h2><span data-testid="notes-content-count">{content.length}</span> {content.length === 1 ? 'bloque' : 'bloques'} + plantilla</h2>
           <p data-testid="notes-index-status">{index ? 'Con índice de contenidos.' : 'Sin índice: se agrega a partir de dos bloques.'}</p>
           <p className="muted">A4 · código seleccionable · listo para doble faz</p>
-          {content.length > 0 ? <ol>{content.map((chunk) => <li key={chunk.id}>{chunk.title}</li>)}</ol> : <p>Elegí al menos un bloque para preparar el apunte.</p>}
+          {custom && content.length > 0 && <ol>{content.map((chunk) => <li key={chunk.id}>{chunk.title}</li>)}</ol>}
+          {content.length === 0 && <p>Elegí al menos un bloque para preparar el apunte.</p>}
+          {selectedProblems.some(problem => problem.coverage !== 'completa') && <p className="builder-coverage">Hay problemas con cobertura parcial o fuera de alcance. Revisá las indicaciones junto a sus nombres.</p>}
           <button type="button" className="button" disabled={!ready || working || content.length === 0} onClick={download}>{working ? 'Preparando PDF…' : 'Descargar apunte PDF'}</button>
           {message && <p role="status">{message}</p>}
           {error && <p role="alert" className="builder-error">{error}</p>}
-          {content.length > 0 && <a href="#vista-previa">Revisar vista previa ↓</a>}
+          {content.length > 0 && <a href="#vista-previa" onClick={() => { if (preview.current) preview.current.open = true; }}>Revisar vista previa ↓</a>}
         </section>
-        {supports.length > 0 && <section className="panel builder-supports"><h3>Apoyos que podés sumar</h3><p className="muted">Si ya los conocés o tenés impresos, dejalos fuera.</p><div>{supports.map((chunk) => <button key={chunk.id} type="button" className="chip" onClick={() => change((previous) => addSuggestedSelection(previous, [chunk.id], chunks))}>+ {chunk.title}</button>)}</div></section>}
+        {custom && supports.length > 0 && <section className="panel builder-supports"><h3>Apoyos que podés sumar</h3><p className="muted">Si ya los conocés o tenés impresos, dejalos fuera.</p><div>{supports.map((chunk) => <button key={chunk.id} type="button" className="chip" onClick={() => change((previous) => addSuggestedSelection(previous, [chunk.id], chunks))}>+ {chunk.title}</button>)}</div></section>}
       </aside>
     </div>
 
-    <section id="vista-previa" className="builder-preview-section" aria-label="Vista previa del apunte">
+    <details id="vista-previa" className="builder-preview-section" open={custom} ref={preview}>
+      <summary>Vista previa del apunte</summary>
       <div className="builder-selection-heading"><h2>Vista previa</h2><span className="muted">Mismas partes que el PDF</span></div>
       {content.length > 0 && <p className="muted builder-table-help">En pantallas chicas, desplazá las tablas hacia los costados para consultar todas sus columnas.</p>}
       {content.length > 0 ? <div className="panel builder-preview">
@@ -174,10 +198,23 @@ export default function NotesBuilder({ chunks, problems }: { chunks: Chunk[]; pr
         {index && <nav aria-label="Índice de la vista previa"><h2>Índice</h2><ol>{content.map((chunk) => <li key={chunk.id}><a href={`#preview-${chunk.id}`}>{chunk.title}</a></li>)}</ol></nav>}
         {content.map((chunk) => <article id={`preview-${chunk.id}`} key={chunk.id}><h2>{chunk.title}</h2>{SECTION_KEYS.filter((key) => selection[chunk.id]?.[key]).map((key) => <section key={key}><h3>{SECTION_LABELS[key]}</h3><div className="prose" dangerouslySetInnerHTML={{ __html: chunk.html[key] }} /></section>)}</article>)}
       </div> : <div className="panel muted">La vista previa aparece cuando elegís un bloque.</div>}
+    </details>
     </section>
 
     <style>{`
-      .builder-intro { margin-bottom:1.25rem; } .builder-intro>p:first-child { margin-top:0; }
+      .builder-notes { margin-top:2.5rem; scroll-margin-top:1.5rem; }
+      .notes-modes { border:0; padding:0; margin:1.25rem 0 .65rem; display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:.7rem; }
+      .notes-modes legend { font-weight:750; margin-bottom:.8rem; }
+      .notes-mode { padding:1rem; border:1.5px solid var(--line); border-radius:10px; background:white; cursor:pointer; }
+      .notes-mode.is-active { border:2px solid var(--blue); background:#edf0ff; padding:calc(1rem - .5px); }
+      .notes-mode>span { display:flex; align-items:center; gap:.6rem; } .notes-mode input { flex-shrink:0; margin:0; }
+      .notes-mode small { display:block; margin-top:.4rem; font-size:.8rem; color:var(--muted); line-height:1.5; }
+      .notes-mode-context { font-size:.85rem; margin-bottom:1.4rem; }
+      .builder-included h3 { margin-top:0; } .builder-included ul { list-style:none; padding:0; margin:0 0 1.5rem; }
+      .builder-included li { display:flex; justify-content:space-between; flex-wrap:wrap; gap:.25rem 1rem; padding:.7rem 0; border-bottom:1px solid var(--line); }
+      .builder-included li span { font-size:.8rem; } .builder-included a { font-weight:700; }
+      .builder-text-button { color:var(--blue); border:0; padding:0; background:none; font:inherit; text-decoration:underline; cursor:pointer; }
+      .builder-missing { margin-bottom:1rem; } .builder-missing p { margin-top:0; }
       .builder-layout { display:grid; grid-template-columns:minmax(0, 1fr) 310px; gap:1.25rem; align-items:start; }
       .builder-controls { min-width:0; } .builder-template { margin-bottom:1.5rem; }
       .builder-template h2 { margin:.25rem 0; } .builder-template .muted { font-size:.95rem; }
@@ -202,7 +239,7 @@ export default function NotesBuilder({ chunks, problems }: { chunks: Chunk[]; pr
       .builder-problems-link { display:inline-block; margin:.7rem 1rem 0 0; font-size:.9rem; }
       .builder-coverage { color:var(--warning-text, #815716); font-size:.88rem; margin:.3rem 0; }
       .builder-error { color:#a52727; overflow-wrap:anywhere; }
-      .builder-preview-section { margin-top:2.5rem; scroll-margin-top:1rem; } .builder-preview { padding:clamp(1rem, 3.5vw, 3rem); }
+      .builder-preview-section { margin-top:2rem; scroll-margin-top:1rem; } .builder-preview-section>summary { cursor:pointer; font-size:1.1rem; font-weight:800; } .builder-preview { padding:clamp(1rem, 3.5vw, 3rem); }
       .builder-preview article+article,.builder-preview nav+article { border-top:1px solid var(--border, #d4ded9); padding-top:2rem; margin-top:2rem; }
       .builder-preview article { scroll-margin-top:1rem; overflow-wrap:anywhere; }
       .builder-preview pre { max-width:100%; overflow:auto; padding:1rem; background:#eef2ef; color:#142b22; border-radius:.5rem; font-size:.85rem; line-height:1.65; }
@@ -211,7 +248,7 @@ export default function NotesBuilder({ chunks, problems }: { chunks: Chunk[]; pr
       .builder-preview .prose table th:first-child,.builder-preview .prose table td:first-child { min-width:220px; }
       .builder-preview .prose table code { white-space:nowrap; }
       .builder-table-help { font-size:.85rem; }
-      @media(max-width:850px) { .builder-layout { grid-template-columns:minmax(0, 1fr); } .builder-summary { position:static; grid-row:1; } .builder-summary-card ol { max-height:9rem; } }
+      @media(max-width:850px) { .notes-modes { grid-template-columns:repeat(2,minmax(0,1fr)); } .builder-layout { grid-template-columns:minmax(0, 1fr); } .builder-summary { position:static; grid-row:1; } .builder-summary-card ol { max-height:9rem; } }
       @media(max-width:480px) { .builder-chunk-title { align-items:start; } .builder-family>summary .muted { display:block; margin-left:1rem; margin-top:.25rem; } .builder-parts { flex-direction:column; } }
     `}</style>
   </div>;

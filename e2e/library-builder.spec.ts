@@ -18,7 +18,7 @@ test('biblioteca completa: grupos, búsqueda sin acentos y entrada al armador', 
   await page.getByRole('searchbox', { name: 'Buscar una herramienta' }).fill('set');
   await expect(page.getByRole('heading', { name: 'Set', exact: true })).toBeVisible();
   const setCard = page.getByRole('article').filter({ has: page.getByRole('heading', { name: 'Set', exact: true }) });
-  await expect(setCard.getByRole('link', { name: 'Usar en apunte' })).toHaveAttribute('href', '/armar/?chunk=cpp-set');
+  await expect(setCard.getByRole('link', { name: 'Usar en apunte' })).toHaveAttribute('href', '/seleccion/?chunk=cpp-set');
   await page.getByRole('searchbox', { name: 'Buscar una herramienta' }).clear();
   await page.screenshot({ path: 'test-results-library/apuntes-desktop.png', fullPage: true });
   await page.setViewportSize({ width: 390, height: 844 });
@@ -30,10 +30,10 @@ test('biblioteca completa: grupos, búsqueda sin acentos y entrada al armador', 
 test('una herramienta respeta partes y desmarcados al recargar', async ({ page }) => {
   const errors: string[] = [];
   page.on('pageerror', (error) => errors.push(error.message));
-  await page.goto('/armar/?chunk=cpp-set');
+  await page.goto('/seleccion/?chunk=cpp-set');
   await expect(page.getByTestId('notes-content-count')).toHaveText('1');
   await expect(page.getByTestId('notes-index-status')).toContainText('Sin índice');
-  await expect(page).toHaveURL(/\/armar\/$/);
+  await expect(page).toHaveURL(/\/seleccion\/(?:#apuntes)?$/);
   await block(page, 'Set').getByRole('checkbox', { name: 'Descripción', exact: true }).check();
   await block(page, 'Set').getByRole('checkbox', { name: 'Funciones y operaciones', exact: true }).uncheck();
   await expect(page.locator('#preview-cpp-set').getByRole('heading', { name: 'Descripción', exact: true })).toBeVisible();
@@ -82,7 +82,7 @@ test('una configuración antigua no rompe el armador y la plantilla sigue siendo
   await expect(page.getByTestId('notes-index-status')).toContainText('Sin índice');
   await expect(page.locator('.builder-preview article').getByRole('heading', { name: 'Plantilla de C++', exact: true })).toHaveCount(1);
   await expect(page.locator('.builder-preview article').first().getByRole('heading', { name: 'Descripción', exact: true })).toBeVisible();
-  expect(await page.evaluate(() => JSON.parse(localStorage.getItem('algoritmia:notes:v1') ?? '{}').selection)).not.toHaveProperty('cpp-no-existe');
+  expect(await page.evaluate(() => JSON.parse(localStorage.getItem('algoritmia:notes:v2') ?? '{}').custom)).not.toHaveProperty('cpp-no-existe');
 });
 
 test('armador y vista previa permanecen dentro de la pantalla en computadora y celular', async ({ page }) => {

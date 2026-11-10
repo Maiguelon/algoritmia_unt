@@ -123,12 +123,24 @@ input[type=search], select { min-width: 0; width: 100%; background: white; borde
 input[type=checkbox] { accent-color: var(--blue); width: 17px; height: 17px; vertical-align: middle; }
 .catalog-meta { display: flex; align-items: center; justify-content: space-between; gap: 12px; flex-wrap: wrap; margin: 12px 0 20px; }
 .catalog-meta select { width: auto; }
-.selection-bar { position: sticky; bottom: 18px; margin: 24px auto 0; display: flex; align-items: center; justify-content: space-between; gap: 16px; background: var(--ink); color: white; padding: 16px 22px; border: 2px solid var(--ink); border-radius: 12px; box-shadow: 4px 4px 0 #aebde7; z-index: 5; }
+.selection-bar { position: sticky; bottom: 18px; margin: 24px auto 0; display: flex; flex-wrap: wrap; align-items: center; justify-content: space-between; gap: 16px; background: var(--ink); color: white; padding: 16px 22px; border: 2px solid var(--ink); border-radius: 12px; box-shadow: 4px 4px 0 #aebde7; z-index: 5; }
 .selection-bar .button { background: var(--yellow); color: var(--ink); border-color: var(--yellow); box-shadow: none; }
 .selection-bar .button.secondary { color: white; background: transparent; border-color: #a8b4d4; }
 .selection-bar .actions { margin: 0; }
 .global-cart { position: fixed; bottom: 16px; inset-inline: 0; z-index: 30; pointer-events: none; }
 .global-cart .selection-bar { position: static; margin: 0; pointer-events: auto; }
+.global-cart .button { padding: 10px 13px; font-size: .85rem; }
+.cart-clear { background: none; border: 0; color: #e1e5f5; text-decoration: underline; cursor: pointer; font: inherit; padding: 8px; font-size: .8rem; }
+.cart-clear:disabled { opacity: .5; cursor: wait; }
+.cart-download-menu { display: none; position: relative; }
+.cart-download-menu summary { list-style: none; cursor: pointer; border: 2px solid #a8b4d4; border-radius: 7px; padding: 8px 10px; text-align: center; font-weight: 800; }
+.cart-download-menu summary::-webkit-details-marker { display: none; }
+.cart-download-options { position: absolute; bottom: calc(100% + 12px); right: 0; min-width: 245px; border: 2px solid var(--ink); border-radius: 8px; background: white; box-shadow: 4px 4px 0 #aebde7; overflow: hidden; }
+.cart-download-options button { display: block; width: 100%; padding: 14px; border: 0; background: white; color: var(--ink); text-align: left; font: inherit; font-size: .9rem; cursor: pointer; }
+.cart-download-options button:hover,.cart-download-options button:focus-visible { background: var(--soft); }
+.cart-download-options button:disabled { opacity: .5; }
+.cart-feedback { flex-basis: 100%; font-size: .85rem; overflow-wrap: anywhere; }
+.cart-feedback a { color: var(--yellow); }
 .has-selection .footer { padding-bottom: 140px; }
 .breadcrumb { font-size: .8rem; color: var(--muted); margin-bottom: 25px; }
 .page-heading { max-width: 850px; margin-bottom: 30px; }
@@ -217,10 +229,14 @@ summary { cursor: pointer; font-weight: 800; }
 .tournament-sources .note-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 0 24px; }
 @media (max-width: 950px) { .university-results { grid-template-columns: 1fr; } }
 @media (max-width: 600px) { .tournament-sources .note-list { grid-template-columns: 1fr; } }
-@media (max-width: 600px) {
+@media (max-width: 800px) {
   .global-cart .selection-bar { padding: 11px 13px; gap: 8px; }
-  .global-cart .actions { width: 100%; display: grid; grid-template-columns: auto minmax(0, 1fr) minmax(0, 1fr); gap: 8px; }
+  .global-cart .actions { width: 100%; display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) auto; gap: 8px; }
   .global-cart .button { min-width: 0; font-size: .75rem; padding: 8px 6px; white-space: nowrap; }
+  .global-cart .cart-desktop-download { display: none; }
+  .cart-download-menu { display: block; min-width: 0; font-size: .75rem; }
+  .cart-clear { padding: 6px 3px; font-size: .75rem; }
+  .has-selection .footer { padding-bottom: 205px; }
 }
 
 

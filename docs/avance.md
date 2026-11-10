@@ -27,3 +27,11 @@ La interfaz y las descargas se probaron en Chromium en computadora y celular. Es
 La primera publicación tiene su propia configuración y verificación. El resultado estático permanece portable a Cloudflare Pages o al servidor de la facultad.
 
 El chunk 11 se cerró en `d3c3fd7`: 33 pruebas y 12 recorridos aprobados, comprobación de tipos sin errores y construcción de 93 páginas. El chunk 12 incorpora la configuración y la guía de publicación; el estado efectivo del alojamiento se verifica al desplegar ese commit.
+
+## Selección y apuntes automáticos — 10 de noviembre
+
+- `01e3499`: modos de composición y migración de las preferencias anteriores; 11 pruebas pertinentes aprobadas.
+- Página única `/seleccion/`, descargas rápidas en la barra, menú de descargas en celular y controles detallados en Personalizado.
+- Recomendado, Completo y Solo funciones se recalculan al cambiar los problemas. El borrador personalizado conserva sus exclusiones y partes.
+- Se conserva la cobertura por problema, el índice condicional y la plantilla única. No se modificó el contenido de los apuntes.
+- Comprobación: 40 pruebas unitarias, tipos sin errores y 20 recorridos de navegador, incluidas descargas reales, migración, dos pestañas, reintento de conexión y pantallas de 320 y 390 px. Revisión visual de escritorio y celular.

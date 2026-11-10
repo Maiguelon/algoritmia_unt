@@ -34,7 +34,7 @@ export default function NotesLibrary({ chunks }: { chunks: Chunk[] }) {
           <p className="eyebrow">C++17{chunk.id === 'cpp-plantilla' ? ' · Al principio de cada apunte' : ''}</p>
           <h3><a href={`/apuntes/${chunk.id}/`}>{chunk.title}</a></h3>
           <p className="muted">{chunk.sections.descripcion.split(/\n\s*\n/)[0].replace(/`/g, '')}</p>
-          <div className="notes-card-actions"><a href={`/apuntes/${chunk.id}/`}>Leer ficha →</a>{chunk.id !== 'cpp-plantilla' && <a href={`/armar/?chunk=${encodeURIComponent(chunk.id)}`}>Usar en apunte</a>}</div>
+          <div className="notes-card-actions"><a href={`/apuntes/${chunk.id}/`}>Leer ficha →</a>{chunk.id !== 'cpp-plantilla' && <a href={`/seleccion/?chunk=${encodeURIComponent(chunk.id)}`}>Usar en apunte</a>}</div>
         </article>)}
       </div>
     </section>)}

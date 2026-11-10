@@ -1,0 +1,10 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import NotesBuilder from '../../components/NotesBuilder';
+import { chunks } from '../../lib/chunks';
+import { problems, tournaments } from '../../lib/data';
+---
+<Layout title="Mi selección">
+  <div class="page-heading"><span class="eyebrow">Preparar la práctica</span><h1>Tu selección, lista para llevar.</h1><p class="muted">Reuní los enunciados y prepará el apunte de herramientas en un solo lugar.</p><nav class="tournament-nav" aria-label="Material de tu selección"><a class="button secondary small" href="#enunciados">Enunciados ↓</a><a class="button secondary small" href="#apuntes">Apuntes ↓</a></nav></div>
+  <NotesBuilder chunks={chunks} problems={problems} tournaments={tournaments} client:load/>
+</Layout>
