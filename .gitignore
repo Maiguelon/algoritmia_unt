@@ -8,4 +8,5 @@ test-results/
 test-results-*/
 playwright-report/
 .wrangler/
-.openai/
+.openai/*
+!.openai/hosting.json

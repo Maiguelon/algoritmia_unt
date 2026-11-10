@@ -25,3 +25,5 @@ La validación integrada comprende 33 pruebas de datos, selección, filtros y PD
 La interfaz y las descargas se probaron en Chromium en computadora y celular. Esto no equivale a haber realizado pruebas con integrantes del club: quedan pendientes la revisión del usuario y de una persona principiante. También siguen pendientes los enfoques avanzados identificados como estimaciones de baja confianza.
 
 La primera publicación tiene su propia configuración y verificación. El resultado estático permanece portable a Cloudflare Pages o al servidor de la facultad.
+
+El chunk 11 se cerró en `d3c3fd7`: 33 pruebas y 12 recorridos aprobados, comprobación de tipos sin errores y construcción de 93 páginas. El chunk 12 incorpora la configuración y la guía de publicación; el estado efectivo del alojamiento se verifica al desplegar ese commit.
