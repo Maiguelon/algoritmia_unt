@@ -14,9 +14,9 @@ Los datos de práctica del Gym cambian con el tiempo. Los AC publicados aquí co
 | Regional 2024 | 2024–2025 | [Gym 105505](https://codeforces.com/gym/105505) | 12 | 187 equipos de South, sin CCL |
 | Regional 2025 | 2025–2026 | [Gym 106178](https://codeforces.com/gym/106178) | 12 | 201 equipos de South, sin CCL |
 | TAP 2026 | Año 2026, inscripción ICPC TAP-2027 | [Gym 106682](https://codeforces.com/gym/106682) | 14 | 186 entradas de la tabla nacional publicada por AAPC |
-| Regional 2026 | Pendiente de confirmar con el set | Sin enlace incorporado | — | No se publican cifras sin verificar |
+| Regional 2026 | 2026–2027 | Enunciados oficiales; Gym pendiente | 13 | 214 equipos oficiales de South, sin CCL |
 
-El Regional 2026 queda aplazado por indicación del usuario. Se conserva únicamente una ficha de torneo pendiente, sin problemas, estadísticas ni enlace supuesto a Codeforces. No hay proceso automático que lo consulte ni que lo complete.
+El Regional 2026 se incorporó el 10 de noviembre a pedido del usuario, una vez publicados el cuadernillo y el reporte oficial. El Gym continúa pendiente y no se supone ningún enlace. La investigación y la conciliación de resultados se documentan en [Regional 2026](investigacion/regional-2026.md). No hay proceso automático de actualización.
 
 ## Regionales 2023–2025
 
@@ -54,13 +54,13 @@ Las fichas A, B, I y K tienen una selección de herramientas de base completa pa
 
 ## PDFs de los enunciados
 
-Los 51 archivos de `public/statements/` conservan páginas de los cuadernillos originales. Los regionales están en inglés y TAP 2026 en español. Los nombres de TAP en el catálogo coinciden con Codeforces y pueden diferir del título español impreso.
+Los 64 archivos individuales de `public/statements/` conservan páginas de los cuadernillos originales. Los regionales están en inglés y TAP 2026 en español. Los nombres de TAP en el catálogo coinciden con Codeforces y pueden diferir del título español impreso.
 
-Además se conservan los cuatro cuadernillos completos como `*-completo.pdf`, accesibles desde la página de cada torneo mediante una descarga local. Son copias sin modificaciones de las fuentes ya archivadas: Regional 2023 tiene 30 páginas, Regional 2024 y 2025 tienen 19 cada uno y TAP 2026 tiene 20. Se contrastaron estos recuentos con los metadatos de los enunciados individuales y se comprobó igualdad binaria con los archivos fuente. `statementBooklet` relaciona cada descarga con su URL oficial en las fuentes del torneo. Regional 2026 continúa sin cuadernillo incorporado.
+Además se conservan los cinco cuadernillos completos como `*-completo.pdf`, accesibles desde la página de cada torneo mediante una descarga local. Son copias sin modificaciones de las fuentes ya archivadas: Regional 2023 tiene 30 páginas, Regional 2024 y 2025 tienen 19 cada uno y TAP 2026 tiene 20. Se contrastaron estos recuentos con los metadatos de los enunciados individuales y se comprobó igualdad binaria con los archivos fuente. `statementBooklet` relaciona cada descarga con su URL oficial en las fuentes del torneo. Regional 2026 tiene un cuadernillo de 23 páginas físicas.
 
 Cada problema guarda `statementPages` con páginas físicas inclusivas del PDF de origen, empezando en uno. El rango termina antes del inicio del siguiente problema. Las páginas en blanco intencionales de 2023 se conservan como parte del original; no son contenido perdido.
 
-Se comprobaron cantidad de páginas, igualdad del texto extraído y dimensiones respecto del original. Además se renderizaron e inspeccionaron las 80 páginas de los 51 archivos, incluidos ejemplos, diagramas y fórmulas. No se reescribieron los enunciados ni se incorporaron soluciones en esos PDFs.
+Se comprobaron cantidad de páginas, igualdad del texto extraído y dimensiones respecto del original. Además se renderizaron e inspeccionaron las 101 páginas de los 64 archivos, incluidos ejemplos, diagramas y fórmulas. No se reescribieron los enunciados ni se incorporaron soluciones en esos PDFs.
 
 ## Contenido y mantenimiento
 
@@ -72,4 +72,4 @@ Se comprobaron cantidad de páginas, igualdad del texto extraído y dimensiones 
 - La validación rechaza referencias rotas, duplicados, denominadores inválidos, AC imposibles y rangos de páginas inválidos. Las pruebas de datos también contrastan los totales de las distribuciones y la existencia de cada PDF local.
 - Para revisar el contenido se ejecuta `npm exec vitest run tests/data.test.ts`. La importación de datos también ejecuta `validateDataset()` y detiene la construcción si encuentra inconsistencias.
 
-Queda pendiente la revisión humana con integrantes del club y el contraste de los enfoques avanzados que están marcados con confianza baja o media. La incorporación del Regional 2026 requiere un nuevo chunk con sus propias fuentes, comprobaciones y commit.
+Queda pendiente la revisión humana con integrantes del club y el contraste de los enfoques avanzados que están marcados con confianza baja o media. La revisión de técnicas avanzadas del Regional 2026 y la incorporación de su futuro Gym requieren nuevas comprobaciones y commit.

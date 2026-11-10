@@ -33,8 +33,8 @@ const qualification = t.qualification;
   <section class="tournament-section" id="estadisticas" aria-label="Estadísticas del torneo">
   <div class="stats-row">
     <div class="stat" title={t.population}><strong>{t.totalTeams ?? '—'}</strong><span>equipos participantes</span></div>
-    <div class="stat"><strong>{qualification?.count ?? '—'}</strong><span>{qualification ? `${qualification.kind} ${qualification.scope} al ${qualification.target}` : 'clasificados totales por verificar'}</span></div>
-    <div class="stat"><strong>{qualified.length || '—'}</strong><span>clasificados de Tucumán{t.id.startsWith('tap-') ? ' al Regional' : ' a la siguiente instancia'}</span></div>
+    <div class="stat" title={qualification?.provisional ? 'Lista provisoria del reporte oficial al 10 de noviembre de 2026.' : undefined}><strong>{qualification?.count ?? '—'}</strong><span>{qualification ? `${qualification.kind} ${qualification.scope} al ${qualification.target}${qualification.provisional ? ' · provisorios' : ''}` : 'clasificados totales por verificar'}</span></div>
+    <div class="stat"><strong>{qualified.length || (qualification ? 0 : '—')}</strong><span>clasificados de Tucumán{t.id.startsWith('tap-') ? ' al Regional' : ' a la siguiente instancia'}</span></div>
   </div>
 
   {t.qualificationAnalysis && <QualificationAnalysis tournament={t} problems={set}/>}

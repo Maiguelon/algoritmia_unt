@@ -1,0 +1,46 @@
+{
+  "id": "regional-2026-c",
+  "tournamentId": "regional-2026",
+  "letter": "C",
+  "title": "Clumsy Courier",
+  "summary": "Contar recorridos en una grilla con cantidades fijadas de movimientos hacia arriba y hacia la izquierda, sin salir de sus límites.",
+  "topics": [
+    "DP",
+    "Combinatoria",
+    "Aritmética modular"
+  ],
+  "difficulty": "Salto regional",
+  "difficultyReason": "Valoración editorial del enunciado: conceptual 3/5 e implementación 3/5. Las herramientas sugeridas corresponden al enfoque descrito.",
+  "implementation": "3/5",
+  "conceptual": "3/5",
+  "ac": 31,
+  "total": 214,
+  "judgeUrl": null,
+  "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2026/statements/C.html",
+  "statementUrl": "/statements/regional-2026-c.pdf",
+  "chunkIds": [
+    "cpp-matrices",
+    "cpp-vectores",
+    "cpp-cuentas-enteras"
+  ],
+  "coverage": "parcial",
+  "missingTools": [
+    "DP de recorridos acotados y combinatoria modular eficiente."
+  ],
+  "hints": [],
+  "status": "verificado",
+  "approach": "Conteo por programación dinámica y combinación de movimientos independientes.",
+  "editorialUrl": null,
+  "classificationConfidence": "Media: lectura del enunciado y análisis editorial propio; sin editorial oficial localizada para contrastar una solución completa.",
+  "firstSolve": {
+    "minute": 36,
+    "teams": [
+      "[UBA] Corman"
+    ]
+  },
+  "statementPages": {
+    "start": 7,
+    "end": 7,
+    "sourcePageCount": 23
+  }
+}

@@ -10,19 +10,19 @@ const problemTitle = (letter: string) => `${letter}. ${problems.find(problem => 
 <section class="panel qualification-analysis" aria-labelledby="qualification-title">
   <h2 id="qualification-title">Qué hacía falta para clasificar</h2>
   <ul class="qualification-paths">
-    <li><strong>Clasificación directa:</strong> top {analysis.rankLimit} <span class="muted">(máximo {analysis.institutionLimit} equipos por institución).</span></li>
+    <li><strong>Clasificación directa:</strong> {analysis.directQualification ?? <>top {analysis.rankLimit} <span class="muted">(máximo {analysis.institutionLimit} equipos por institución).</span></>}</li>
     <li><strong>Clasificación indirecta:</strong> {analysis.indirectQualification} <a href={analysis.ruleSourceUrl} target="_blank" rel="noreferrer">Ver reglamento ↗</a></li>
   </ul>
 
   <div class="qualification-overview">
-    <article class="qualification-cutoff" aria-label="Último equipo en el corte directo">
-      <span class="eyebrow">Último en el corte directo</span>
+    <article class="qualification-cutoff" aria-label={cutoff.caption ?? 'Último equipo en el corte directo'}>
+      <span class="eyebrow">{cutoff.caption ?? 'Último en el corte directo'}</span>
       <h3>{cutoff.team} <span class="chip">{cutoff.institution}</span></h3>
-      <p class="result-metrics"><span>Puesto: <strong>{cutoff.rank}</strong></span><span>AC: <strong>{cutoff.solved}</strong></span><span>Penalidad: <strong>{cutoff.penalty}</strong></span></p>
+      <p class="result-metrics"><span>{cutoff.rankLabel ?? 'Puesto'}: <strong>{cutoff.rank}</strong></span><span>AC: <strong>{cutoff.solved}</strong></span><span>Penalidad: <strong>{cutoff.penalty}</strong></span></p>
       <div class="solved-problems"><span>Resolvió:</span>{cutoff.solvedProblems.map(letter => <a href={problemLink(letter)} title={problemTitle(letter)}>{letter}</a>)}</div>
     </article>
     <div class="qualification-context">
-      <h3>Requerimientos para clasificar directo</h3>
+      <h3>{analysis.contextTitle ?? 'Requerimientos para clasificar directo'}</h3>
       {analysis.cutoffContext.map(paragraph => <p>{paragraph}</p>)}
     </div>
   </div>
@@ -39,5 +39,5 @@ const problemTitle = (letter: string) => `${letter}. ${problems.find(problem => 
     </article>)}
   </div>
 
-  <p class="qualification-level"><strong>Nivel requerido para clasificación directa:</strong> <span class="chip" data-level={analysis.requiredLevel}>{analysis.requiredLevel}</span></p>
+  <p class="qualification-level"><strong>{analysis.requiredLevelLabel ?? 'Nivel requerido para clasificación directa:'}</strong> <span class="chip" data-level={analysis.requiredLevel}>{analysis.requiredLevel}</span></p>
 </section>

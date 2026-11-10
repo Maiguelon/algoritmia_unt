@@ -120,7 +120,7 @@ export default function NotesBuilder({ chunks, problems }: { chunks: Chunk[]; pr
       <h2>Para tus problemas</h2>
       <ul>{selectedProblems.map((problem) => <li key={problem.id}>
         <a href={`/problemas/${problem.id}/`}>{problem.letter}. {problem.title}</a>
-        {problem.coverage !== 'completa' && <p className="builder-coverage">Cobertura {problem.coverage}. {problem.missingTools.length ? `Todavía faltan: ${problem.missingTools.join(', ')}.` : 'Revisá los requisitos antes de confiar en este apunte.'}</p>}
+        {problem.coverage !== 'completa' && <p className="builder-coverage">{problem.coverage === 'fuera de alcance' ? 'Fuera del alcance actual de los apuntes.' : <>Cobertura {problem.coverage}. {problem.missingTools.length ? `Todavía faltan: ${problem.missingTools.join(', ')}.` : 'Revisá los requisitos antes de confiar en este apunte.'}</>}</p>}
       </li>)}</ul>
       <p className="muted">Las herramientas corresponden al enfoque señalado en cada ficha. Podés modificar esta propuesta.</p>
       {missingRecommendations.length > 0 && <button type="button" className="button secondary" onClick={() => change((previous) => addSuggestedSelection(previous, recommendedIds, chunks))}>Añadir {missingRecommendations.length} bloques sugeridos por los problemas</button>}

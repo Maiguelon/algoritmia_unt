@@ -3,6 +3,7 @@ import { existsSync } from 'node:fs';
 import { resolve } from 'node:path';
 import { problems, tournaments, validateDataset } from '../src/lib/data';
 import type { Problem, Tournament } from '../src/lib/types';
+import regional2026Evidence from '../docs/investigacion/regional-2026-evidencia.json';
 
 const copyProblems = () => structuredClone(problems);
 const copyTournaments = () => structuredClone(tournaments);
@@ -91,7 +92,7 @@ describe('contratos del contenido editorial', () => {
   });
 
   it('admite información desconocida como null y no como cero', () => {
-    const unknown: Tournament = { ...tournaments[0], id: 'torneo-pendiente', totalTeams: null, status: 'pendiente', distribution: [] };
+    const unknown: Tournament = { ...tournaments[0], id: 'torneo-pendiente', totalTeams: null, status: 'pendiente', distribution: [], qualification: undefined, qualificationAnalysis: undefined, statementBooklet: undefined, tucumanResults: [] };
     const problem: Problem = { ...problems[0], id: 'problema-provisorio', tournamentId: unknown.id, status: 'provisorio', ac: null, total: null, judgeUrl: null, statementUrl: null, statementPages: undefined };
     expect(() => validateDataset([problem], [unknown])).not.toThrow();
     expect(problem.ac).toBeNull();
@@ -124,11 +125,20 @@ describe('contratos del contenido editorial', () => {
     expect(tap?.tucumanResults.find(t => t.team === 'Computops')?.rank).toBe(55);
   });
 
-  it('Regional 2026 sigue pendiente y no inventa problemas ni estadísticas', () => {
-    const pending = tournaments.find(t => t.id === 'regional-2026');
-    expect(pending?.status).toBe('pendiente');
-    expect(pending?.totalTeams).toBeNull();
-    expect(pending?.distribution).toEqual([]);
-    expect(problems.filter(p => p.tournamentId === 'regional-2026')).toEqual([]);
+  it('Regional 2026 conserva South y sus AC sin inventar un Gym', () => {
+    const tournament = tournaments.find(t => t.id === 'regional-2026')!;
+    const set = problems.filter(p => p.tournamentId === tournament.id);
+    expect(tournament.totalTeams).toBe(214);
+    expect(set).toHaveLength(13);
+    expect(tournament.judgeUrl).toBeUndefined();
+    expect(tournament.qualification?.count).toBe(19);
+    expect(tournament.qualification?.provisional).toBe(true);
+    expect(tournament.tucumanResults.find(t => t.team === 'Mono Pollo NP++ 18')?.solvedProblems).toEqual(['D','G','J']);
+    for (const problem of set) {
+      expect(problem.judgeUrl).toBeNull();
+      const accepted = regional2026Evidence.teams.filter(team => problem.letter in team.accepted);
+      expect(problem.ac).toBe(accepted.length);
+      expect(problem.total).toBe(regional2026Evidence.totalSouth);
+    }
   });
 });

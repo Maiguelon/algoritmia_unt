@@ -1,8 +1,33 @@
 import { test, expect } from '@playwright/test';
 import fs from 'node:fs/promises';
-import { PDFDocument } from 'pdf-lib';
+import { PDFDocument, PDFDict, PDFName, PDFString, PDFHexString } from 'pdf-lib';
 
 test.describe.configure({ timeout: 60_000 });
+
+test('Regional 2026 descarga enunciados sin Gym y enlaza las fuentes oficiales', async ({ page }, testInfo) => {
+  await page.addInitScript(() => localStorage.setItem('algoritmia:selected', JSON.stringify(['regional-2026-d', 'regional-2026-g'])));
+  await page.goto('/enunciados/');
+  await expect(page.getByRole('link', { name: 'D · Divine Lights', exact: true })).toBeVisible();
+  const downloading = page.waitForEvent('download');
+  await page.getByRole('button', { name: /Descargar PDF de enunciados/ }).click();
+  const download = await downloading;
+  expect(await download.failure()).toBeNull();
+  const file = testInfo.outputPath('regional-2026-d-g.pdf');
+  await download.saveAs(file);
+  const pdf = await PDFDocument.load(await fs.readFile(file));
+  expect(pdf.getPageCount()).toBe(4);
+  const index = pdf.getPage(0);
+  const annotations = index.node.Annots();
+  const targets = annotations?.asArray().map(ref => {
+    const annotation = pdf.context.lookup(ref, PDFDict);
+    const action = annotation.lookupMaybe(PDFName.of('A'), PDFDict);
+    const uri = action?.lookup(PDFName.of('URI'));
+    return uri instanceof PDFString || uri instanceof PDFHexString ? uri.decodeText() : '';
+  }).join('\n') ?? '';
+  expect(targets).toContain('latam-2026/statements/D.html');
+  expect(targets).toContain('latam-2026/statements/G.html');
+  expect(targets).not.toContain('codeforces');
+});
 
 test('descarga un apunte real con un único bloque y páginas A4', async ({ page }, testInfo) => {
   const errors: string[] = [];

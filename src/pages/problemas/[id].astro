@@ -13,10 +13,10 @@ const estimate = (value: string) => value.replace(/\s*\(estimación editorial\)/
   <div class="breadcrumb"><a href="/problemas/">Problemas</a> / <a href={`/torneos/${tournament.id}/`}>{tournamentLabel(tournament)}</a> / {p.letter}</div>
   <div class="page-heading">
     <h1>{p.title}</h1>
-    <span class="chip" data-level={p.difficulty}>{p.difficulty}</span>{p.topics.map(topic => <span class="chip">{topic}</span>)}
+    <span class="chip" data-level={p.difficulty} title={p.classificationConfidence}>{p.difficulty}</span>{p.topics.map(topic => <span class="chip">{topic}</span>)}
     <div class="actions">
       <ProblemSelect id={p.id} allowed={problems.map(problem => problem.id)} client:load/>
-      {p.judgeUrl && <a class="button secondary" href={p.judgeUrl} target="_blank" rel="noreferrer">Practicar en el juez ↗</a>}
+      {p.judgeUrl ? <a class="button secondary" href={p.judgeUrl} target="_blank" rel="noreferrer">Practicar en el juez ↗</a> : <a class="button secondary" href={p.sourceUrl} target="_blank" rel="noreferrer">Leer enunciado ↗</a>}
     </div>
   </div>
 
@@ -34,10 +34,10 @@ const estimate = (value: string) => value.replace(/\s*\(estimación editorial\)/
       <section class="panel">
         <h2>Herramientas sugeridas</h2>
         <p class="muted">Cobertura del apunte: <strong>{p.coverage}</strong></p>
-        <ul>{p.chunkIds.map(id => <li><a href={`/apuntes/${id}/`}>{chunks.find(chunk => chunk.id === id)?.title}</a></li>)}</ul>
+        {p.chunkIds.length > 0 && <ul>{p.chunkIds.map(id => <li><a href={`/apuntes/${id}/`}>{chunks.find(chunk => chunk.id === id)?.title}</a></li>)}</ul>}
         {p.missingTools.length > 0 && <div class="notice"><strong>Falta cubrir en la biblioteca:</strong><ul>{p.missingTools.map(tool => <li>{tool}</li>)}</ul></div>}
         <div class="actions">
-          <a class="button secondary" href="/armar/">Ir al armador ↗</a>
+          {p.coverage !== 'fuera de alcance' && <a class="button secondary" href="/armar/">Ir al armador ↗</a>}
           {p.statementUrl && <a href={p.statementUrl} download>Descargar enunciado ↓</a>}
         </div>
       </section>

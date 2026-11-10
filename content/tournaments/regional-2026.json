@@ -2,21 +2,274 @@
   "id": "regional-2026",
   "title": "Regional South America/South 2026",
   "year": 2026,
-  "season": "Por confirmar con la publicación oficial del set",
-  "setName": "Pendiente de incorporación",
-  "population": "Estadísticas todavía no incorporadas ni verificadas",
-  "totalTeams": null,
-  "status": "pendiente",
+  "season": "2026–2027",
+  "setName": "The 2026–2027 ICPC Latin America Regionals · 13 problemas",
+  "population": "Región South America/South del reporte oficial MOJ: 214 equipos del ranking, sin invitados CCL. Los puestos locales se expresan dentro de South.",
+  "totalTeams": 214,
+  "status": "verificado",
   "sources": [
     {
-      "label": "Calendario de la AAPC",
-      "url": "https://aapc.org.ar/"
+      "label": "Organización, temporada y documentos oficiales",
+      "url": "https://www.icpclatam.org/regionals/lar2026/"
+    },
+    {
+      "label": "Reporte final y filtro regional South",
+      "url": "https://scorelatam.naquadah.com.br/latam-2026/"
+    },
+    {
+      "label": "Registro de envíos y primeras resoluciones",
+      "url": "https://scorelatam.naquadah.com.br/latam-2026/runs.html"
+    },
+    {
+      "label": "Cuadernillo oficial completo",
+      "url": "https://www.icpclatam.org/assets/docs/LAR2026%20-%20Problem%20set.pdf"
+    },
+    {
+      "label": "Equipos marcados para el Latinoamericano (lista provisoria)",
+      "url": "https://scorelatam.naquadah.com.br/latam-2026/classificados.html"
+    },
+    {
+      "label": "Reglas de promoción al Latinoamericano 2027",
+      "url": "https://www.icpclatam.org/assets/docs/2026-2027%20ICPC%20Latin%20America%20-%20Promotion%20Rules.pdf"
     }
   ],
-  "distribution": [],
-  "notes": [
-    "En espera del set y del juez de práctica. Las fichas y estadísticas se incorporarán cuando puedan verificarse.",
-    "No se reutilizan problemas ni enlaces de otros años para completar esta edición."
+  "distribution": [
+    {
+      "solved": 0,
+      "teams": 42
+    },
+    {
+      "solved": 1,
+      "teams": 15
+    },
+    {
+      "solved": 2,
+      "teams": 30
+    },
+    {
+      "solved": 3,
+      "teams": 33
+    },
+    {
+      "solved": 4,
+      "teams": 46
+    },
+    {
+      "solved": 5,
+      "teams": 16
+    },
+    {
+      "solved": 6,
+      "teams": 8
+    },
+    {
+      "solved": 7,
+      "teams": 8
+    },
+    {
+      "solved": 8,
+      "teams": 3
+    },
+    {
+      "solved": 9,
+      "teams": 9
+    },
+    {
+      "solved": 10,
+      "teams": 2
+    },
+    {
+      "solved": 11,
+      "teams": 2
+    }
   ],
-  "tucumanResults": []
+  "notes": [
+    "Concurso del 7 de noviembre de 2026; temporada 2026–2027.",
+    "AC y primeras resoluciones reconciliados entre el ranking South y los envíos Accepted. Cada AC cuenta un equipo distinto.",
+    "Los 19 clasificados de South son marcas del reporte al 10 de noviembre; la organización puede ajustar la lista. No incluyen reservas de otras regiones.",
+    "No hay enlace de Gym incorporado: el usuario informó que todavía no está disponible. Los enlaces y QR abren los enunciados oficiales.",
+    "Los temas y niveles son análisis editoriales de los enunciados. Se conservan puntuaciones provisionales y técnicas pendientes de contraste."
+  ],
+  "tucumanResults": [
+    {
+      "team": "Computops",
+      "institution": "UNT",
+      "solved": 4,
+      "rank": 94,
+      "penalty": 1148,
+      "solvedProblems": [
+        "D",
+        "F",
+        "G",
+        "J"
+      ],
+      "note": "Puesto South 94; Argentina 30; Latinoamerica 257. Sin marca de clasificacion al Latinoamericano en el reporte."
+    },
+    {
+      "team": "Mono Pollo NP++ 18",
+      "institution": "UNT",
+      "solved": 3,
+      "rank": 105,
+      "penalty": 332,
+      "solvedProblems": [
+        "D",
+        "G",
+        "J"
+      ],
+      "note": "Puesto South 105; Argentina 31; Latinoamerica 278. Sin marca de clasificacion al Latinoamericano en el reporte."
+    },
+    {
+      "team": "Pandas",
+      "institution": "UNSTA",
+      "solved": 2,
+      "rank": 139,
+      "penalty": 354,
+      "solvedProblems": [
+        "D",
+        "G"
+      ],
+      "note": "Puesto South 139; Argentina 38; Latinoamerica 358. Sin marca de clasificacion al Latinoamericano en el reporte."
+    },
+    {
+      "team": "Noxus",
+      "institution": "UTN-FRT",
+      "solved": 0,
+      "rank": 173,
+      "penalty": 0,
+      "solvedProblems": [],
+      "note": "Puesto South 173; Argentina 46; Latinoamerica 433. Sin marca de clasificacion al Latinoamericano en el reporte."
+    }
+  ],
+  "statementBooklet": {
+    "url": "/statements/regional-2026-completo.pdf",
+    "sourceUrl": "https://www.icpclatam.org/assets/docs/LAR2026%20-%20Problem%20set.pdf"
+  },
+  "qualification": {
+    "count": 19,
+    "kind": "clasificados",
+    "scope": "de South",
+    "target": "Latinoamericano 2027",
+    "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2026/classificados.html",
+    "provisional": true
+  },
+  "qualificationAnalysis": {
+    "rankLimit": 20,
+    "institutionLimit": 2,
+    "ruleSourceUrl": "https://www.icpclatam.org/assets/docs/2026-2027%20ICPC%20Latin%20America%20-%20Promotion%20Rules.pdf",
+    "directQualification": "20 cupos por rendimiento en el ranking latinoamericano, con máximo 2 equipos por institución.",
+    "indirectQualification": "otros cupos por país, región, participación y categorías femeninas, según el reglamento.",
+    "contextTitle": "Referencia para equipos argentinos",
+    "cutoff": {
+      "team": "Ctrl F Huevitos",
+      "institution": "UTN · Facultad Regional Santa Fe",
+      "rank": 17,
+      "solved": 7,
+      "penalty": 578,
+      "solvedProblems": [
+        "B",
+        "C",
+        "D",
+        "F",
+        "G",
+        "J",
+        "L"
+      ],
+      "isDirect": false,
+      "caption": "Último argentino marcado para el Latinoamericano",
+      "rankLabel": "Puesto South"
+    },
+    "cohort": {
+      "solved": 7,
+      "combinations": [
+        {
+          "teams": 6,
+          "solvedProblems": [
+            "B",
+            "C",
+            "D",
+            "F",
+            "G",
+            "J",
+            "L"
+          ]
+        },
+        {
+          "teams": 1,
+          "solvedProblems": [
+            "C",
+            "D",
+            "E",
+            "F",
+            "G",
+            "J",
+            "L"
+          ]
+        },
+        {
+          "teams": 1,
+          "solvedProblems": [
+            "B",
+            "D",
+            "E",
+            "F",
+            "G",
+            "J",
+            "L"
+          ]
+        }
+      ]
+    },
+    "cutoffContext": [
+      "El corte de rendimiento latinoamericano fue 9 AC: ITA, con 929 de penalidad.",
+      "El último argentino marcado hizo 7 AC: fue 9.º de Argentina y 57.º de Latinoamérica, y recibió un cupo por participación del país.",
+      "El límite institucional importaba: dos equipos de UBA con 9 AC quedaron sin marca de clasificación."
+    ],
+    "preparation": [
+      {
+        "title": "Asegurar el piso",
+        "items": [
+          {
+            "solvedProblems": [
+              "D",
+              "F",
+              "G",
+              "J"
+            ],
+            "tools": "Implementación, simulación, conteo y observación"
+          }
+        ]
+      },
+      {
+        "title": "Construir la ruta de 7 AC",
+        "items": [
+          {
+            "solvedProblems": [
+              "B"
+            ],
+            "tools": "Orden geométrico y conteo de inversiones"
+          },
+          {
+            "solvedProblems": [
+              "C"
+            ],
+            "tools": "DP de conteo y combinatoria modular"
+          },
+          {
+            "solvedProblems": [
+              "L"
+            ],
+            "tools": "DP en árboles y conteo de pares"
+          }
+        ]
+      }
+    ],
+    "requiredLevel": "Salto regional",
+    "evidenceSourceUrls": [
+      "https://www.icpclatam.org/assets/docs/2026-2027%20ICPC%20Latin%20America%20-%20Promotion%20Rules.pdf",
+      "https://scorelatam.naquadah.com.br/latam-2026/",
+      "https://scorelatam.naquadah.com.br/latam-2026/classificados.html",
+      "https://scorelatam.naquadah.com.br/latam-2026/runs.html"
+    ],
+    "requiredLevelLabel": "Nivel de la ruta argentina mostrada:"
+  }
 }

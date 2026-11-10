@@ -1,0 +1,46 @@
+{
+  "id": "regional-2026-a",
+  "tournamentId": "regional-2026",
+  "letter": "A",
+  "title": "Antonia's Ants",
+  "summary": "Elegir una coloración mínima que permita reconstruir recorridos de hormigas y responder a las secuencias que envía un juez interactivo.",
+  "topics": [
+    "Interactivos",
+    "Constructivos",
+    "Reconstrucción"
+  ],
+  "difficulty": "Avanzado",
+  "difficultyReason": "Valoración editorial del enunciado: conceptual 4/5 e implementación 3/5. Técnica y banda provisionales hasta contrastar una solución completa.",
+  "implementation": "3/5 (provisional)",
+  "conceptual": "4/5 (provisional)",
+  "ac": 3,
+  "total": 214,
+  "judgeUrl": null,
+  "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2026/statements/A.html",
+  "statementUrl": "/statements/regional-2026-a.pdf",
+  "chunkIds": [
+    "cpp-vectores",
+    "cpp-entrada-salida",
+    "cpp-recorridos"
+  ],
+  "coverage": "parcial",
+  "missingTools": [
+    "Construcción y prueba de la coloración mínima, reconstrucción y protocolo interactivo con flush."
+  ],
+  "hints": [],
+  "status": "verificado",
+  "approach": "Construcción de una codificación y decodificación de recorridos; el enfoque completo está pendiente de contraste.",
+  "editorialUrl": null,
+  "classificationConfidence": "Baja/Media: lectura del enunciado y análisis editorial propio; sin editorial oficial localizada para contrastar una solución completa.",
+  "firstSolve": {
+    "minute": 198,
+    "teams": [
+      "[UNR] para la pda"
+    ]
+  },
+  "statementPages": {
+    "start": 3,
+    "end": 4,
+    "sourcePageCount": 23
+  }
+}

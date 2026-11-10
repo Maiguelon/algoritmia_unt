@@ -1,0 +1,40 @@
+{
+  "id": "regional-2026-m",
+  "tournamentId": "regional-2026",
+  "letter": "M",
+  "title": "Moving Mountains",
+  "summary": "Minimizar las operaciones necesarias para transformar dos perfiles de montañas en un mismo perfil, respetando el movimiento permitido.",
+  "topics": [
+    "Secuencias",
+    "Transformaciones",
+    "Optimización"
+  ],
+  "difficulty": "Top global",
+  "difficultyReason": "Fuera del recorrido cubierto: conteo o transformación global con restricciones exigentes; clasificación editorial provisional, sin umbral automático de AC.",
+  "implementation": "Sin valorar",
+  "conceptual": "Sin valorar",
+  "ac": 1,
+  "total": 214,
+  "judgeUrl": null,
+  "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2026/statements/M.html",
+  "statementUrl": "/statements/regional-2026-m.pdf",
+  "chunkIds": [],
+  "coverage": "fuera de alcance",
+  "missingTools": [],
+  "hints": [],
+  "status": "verificado",
+  "approach": "Optimización de transformaciones de perfiles balanceados; técnica eficiente pendiente de análisis y de una solución de referencia.",
+  "editorialUrl": null,
+  "classificationConfidence": "Baja sobre la técnica exacta; alcance editorial provisional. No se asigna puntuación 1–5 ni se sugieren apuntes.",
+  "firstSolve": {
+    "minute": 278,
+    "teams": [
+      "[UNR] para la pda"
+    ]
+  },
+  "statementPages": {
+    "start": 22,
+    "end": 23,
+    "sourcePageCount": 23
+  }
+}

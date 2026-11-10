@@ -1,6 +1,6 @@
 # Entregas y verificación
 
-Plan aprobado y ejecutado el 9 de noviembre de 2026. Cada entrega de implementación se comprobó y cerró con un commit. El contenido del Regional 2026 continúa aplazado por indicación del usuario.
+Plan aprobado y ejecutado el 9 de noviembre de 2026. Cada entrega de implementación se comprobó y cerró con un commit. En esa entrega, el contenido del Regional 2026 quedó aplazado por indicación del usuario; se incorporó en la revisión del 10 de noviembre, documentada en `investigacion/regional-2026.md`.
 
 | Chunk | Commit | Resultado |
 |---|---|---|

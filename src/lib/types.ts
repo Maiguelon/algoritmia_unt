@@ -47,11 +47,14 @@ export interface Tournament {
     scope: string;
     target: string;
     sourceUrl: string;
+    provisional?: boolean;
   };
   qualificationAnalysis?: {
     rankLimit: number;
     institutionLimit: number;
     ruleSourceUrl: string;
+    directQualification?: string;
+    contextTitle?: string;
     cutoff: {
       team: string;
       institution: string;
@@ -59,6 +62,9 @@ export interface Tournament {
       solved: number;
       penalty: number;
       solvedProblems: string[];
+      isDirect?: boolean;
+      caption?: string;
+      rankLabel?: string;
     };
     cohort: {
       solved: number;
@@ -67,6 +73,7 @@ export interface Tournament {
     indirectQualification: string;
     cutoffContext: string[];
     requiredLevel: Difficulty;
+    requiredLevelLabel?: string;
     preparation: Array<{
       title: string;
       items: Array<{ solvedProblems: string[]; tools: string }>;

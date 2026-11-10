@@ -1,0 +1,47 @@
+{
+  "id": "regional-2026-b",
+  "tournamentId": "regional-2026",
+  "letter": "B",
+  "title": "Between Two Cameras",
+  "summary": "Comparar el orden en que dos cámaras observan gatos y sumar el costo de los pares que aparecen en órdenes opuestos.",
+  "topics": [
+    "Geometría",
+    "Inversiones",
+    "Fenwick"
+  ],
+  "difficulty": "Salto regional",
+  "difficultyReason": "Valoración editorial del enunciado: conceptual 3/5 e implementación 3/5. Las herramientas sugeridas corresponden al enfoque descrito.",
+  "implementation": "3/5",
+  "conceptual": "3/5",
+  "ac": 36,
+  "total": 214,
+  "judgeUrl": null,
+  "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2026/statements/B.html",
+  "statementUrl": "/statements/regional-2026-b.pdf",
+  "chunkIds": [
+    "cpp-ordenacion",
+    "cpp-pares",
+    "cpp-vectores",
+    "cpp-cuentas-enteras"
+  ],
+  "coverage": "parcial",
+  "missingTools": [
+    "Orden angular exacto y conteo ponderado de inversiones con Fenwick o una estructura equivalente."
+  ],
+  "hints": [],
+  "status": "verificado",
+  "approach": "Reducción de órdenes geométricos a conteo ponderado de inversiones.",
+  "editorialUrl": null,
+  "classificationConfidence": "Media: lectura del enunciado y análisis editorial propio; sin editorial oficial localizada para contrastar una solución completa.",
+  "firstSolve": {
+    "minute": 76,
+    "teams": [
+      "[UNC] Los Marineros"
+    ]
+  },
+  "statementPages": {
+    "start": 5,
+    "end": 6,
+    "sourcePageCount": 23
+  }
+}

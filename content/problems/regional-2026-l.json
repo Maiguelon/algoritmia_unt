@@ -1,0 +1,46 @@
+{
+  "id": "regional-2026-l",
+  "tournamentId": "regional-2026",
+  "letter": "L",
+  "title": "Lookout Towers",
+  "summary": "Encontrar la menor distancia entre torres marcadas de un árbol y contar cuántos pares alcanzan esa distancia.",
+  "topics": [
+    "Árboles",
+    "DP",
+    "Conteo"
+  ],
+  "difficulty": "Salto regional",
+  "difficultyReason": "Valoración editorial del enunciado: conceptual 3/5 e implementación 3/5. Las herramientas sugeridas corresponden al enfoque descrito.",
+  "implementation": "3/5",
+  "conceptual": "3/5",
+  "ac": 35,
+  "total": 214,
+  "judgeUrl": null,
+  "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2026/statements/L.html",
+  "statementUrl": "/statements/regional-2026-l.pdf",
+  "chunkIds": [
+    "cpp-vectores",
+    "cpp-pila",
+    "cpp-cuentas-enteras"
+  ],
+  "coverage": "parcial",
+  "missingTools": [
+    "Recorrido de árbol, DP de distancias y conteo de pares sin duplicarlos."
+  ],
+  "hints": [],
+  "status": "verificado",
+  "approach": "DP en árboles con distancias mínimas y multiplicidades.",
+  "editorialUrl": null,
+  "classificationConfidence": "Media: lectura del enunciado y análisis editorial propio; sin editorial oficial localizada para contrastar una solución completa.",
+  "firstSolve": {
+    "minute": 48,
+    "teams": [
+      "[UBA] El anterior nombre era mufa"
+    ]
+  },
+  "statementPages": {
+    "start": 21,
+    "end": 21,
+    "sourcePageCount": 23
+  }
+}

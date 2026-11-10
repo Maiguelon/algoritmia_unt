@@ -2,7 +2,9 @@
 
 Estado: aprobado el 9 de noviembre de 2026. Ejecución por chunks, pruebas y commit de cierre.
 
-Cambio de alcance autorizado: el Regional 2026 queda aplazado hasta que sus problemas estén publicados y verificables. No se cargan enunciados ni enlaces de juez supuestos; las estadísticas, si se incorporan antes, se rotulan provisorias. La primera versión puede publicarse sin ese torneo completo.
+Actualización del 10 de noviembre: el usuario autorizó incorporar el Regional 2026 y sus fuentes ya están publicadas. El Gym sigue pendiente.
+
+Alcance de la primera entrega: el Regional 2026 quedaba aplazado hasta que sus problemas estuvieran publicados y verificables. No se cargan enunciados ni enlaces de juez supuestos; las estadísticas, si se incorporan antes, se rotulan provisorias. La primera versión puede publicarse sin ese torneo completo.
 
 ## Resultado de la primera versión
 

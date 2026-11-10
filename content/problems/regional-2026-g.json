@@ -1,0 +1,44 @@
+{
+  "id": "regional-2026-g",
+  "tournamentId": "regional-2026",
+  "letter": "G",
+  "title": "Gratitude Loop",
+  "summary": "Simular mensajes que responden al último remitente y contar cuántos recibe cada persona.",
+  "topics": [
+    "Simulación",
+    "Implementación",
+    "Vectores"
+  ],
+  "difficulty": "Inicial",
+  "difficultyReason": "Valoración editorial del enunciado: conceptual 1/5 e implementación 1/5. Las herramientas sugeridas corresponden al enfoque descrito.",
+  "implementation": "1/5",
+  "conceptual": "1/5",
+  "ac": 167,
+  "total": 214,
+  "judgeUrl": null,
+  "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2026/statements/G.html",
+  "statementUrl": "/statements/regional-2026-g.pdf",
+  "chunkIds": [
+    "cpp-vectores",
+    "cpp-condiciones",
+    "cpp-recorridos"
+  ],
+  "coverage": "completa",
+  "missingTools": [],
+  "hints": [],
+  "status": "verificado",
+  "approach": "Simulación directa con estado por persona y contadores.",
+  "editorialUrl": null,
+  "classificationConfidence": "Media: lectura del enunciado y análisis editorial propio; sin editorial oficial localizada para contrastar una solución completa.",
+  "firstSolve": {
+    "minute": 11,
+    "teams": [
+      "[UMSA] Los Maquinolas∶ The Last Dance"
+    ]
+  },
+  "statementPages": {
+    "start": 12,
+    "end": 13,
+    "sourcePageCount": 23
+  }
+}

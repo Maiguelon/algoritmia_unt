@@ -1,0 +1,35 @@
+{
+  "id": "regional-2026-k",
+  "tournamentId": "regional-2026",
+  "letter": "K",
+  "title": "Kayaking",
+  "summary": "Contar las configuraciones de corrientes de una grilla de dos filas según cuántas celdas terminan alcanzando una zona segura.",
+  "topics": [
+    "Conteo en grillas",
+    "Grafos funcionales",
+    "DP"
+  ],
+  "difficulty": "Top global",
+  "difficultyReason": "Fuera del recorrido cubierto: conteo o transformación global con restricciones exigentes; clasificación editorial provisional, sin umbral automático de AC.",
+  "implementation": "Sin valorar",
+  "conceptual": "Sin valorar",
+  "ac": 0,
+  "total": 214,
+  "judgeUrl": null,
+  "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2026/statements/K.html",
+  "statementUrl": "/statements/regional-2026-k.pdf",
+  "chunkIds": [],
+  "coverage": "fuera de alcance",
+  "missingTools": [],
+  "hints": [],
+  "status": "verificado",
+  "approach": "Conteo con restricciones globales de alcanzabilidad y ciclos; una DP de frontera es una hipótesis de trabajo, sin solución validada.",
+  "editorialUrl": null,
+  "classificationConfidence": "Baja sobre la técnica exacta; alcance editorial provisional. No se asigna puntuación 1–5 ni se sugieren apuntes.",
+  "firstSolve": null,
+  "statementPages": {
+    "start": 19,
+    "end": 20,
+    "sourcePageCount": 23
+  }
+}

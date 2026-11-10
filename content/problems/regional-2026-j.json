@@ -1,0 +1,44 @@
+{
+  "id": "regional-2026-j",
+  "tournamentId": "regional-2026",
+  "letter": "J",
+  "title": "Just Four Pieces",
+  "summary": "Elegir dos cortes de una tableta de chocolate para obtener cuatro rectángulos de áreas distintas, o determinar que es imposible.",
+  "topics": [
+    "Constructivos",
+    "Observación",
+    "Aritmética"
+  ],
+  "difficulty": "Consolidación",
+  "difficultyReason": "Valoración editorial del enunciado: conceptual 2/5 e implementación 2/5. Las herramientas sugeridas corresponden al enfoque descrito.",
+  "implementation": "2/5",
+  "conceptual": "2/5",
+  "ac": 137,
+  "total": 214,
+  "judgeUrl": null,
+  "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2026/statements/J.html",
+  "statementUrl": "/statements/regional-2026-j.pdf",
+  "chunkIds": [
+    "cpp-condiciones",
+    "cpp-cuentas-enteras",
+    "cpp-set"
+  ],
+  "coverage": "completa",
+  "missingTools": [],
+  "hints": [],
+  "status": "verificado",
+  "approach": "Construcción de cortes y control de casos pequeños con aritmética entera.",
+  "editorialUrl": null,
+  "classificationConfidence": "Media: lectura del enunciado y análisis editorial propio; sin editorial oficial localizada para contrastar una solución completa.",
+  "firstSolve": {
+    "minute": 10,
+    "teams": [
+      "[UTEC] unlasting"
+    ]
+  },
+  "statementPages": {
+    "start": 18,
+    "end": 18,
+    "sourcePageCount": 23
+  }
+}

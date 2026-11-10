@@ -1,0 +1,46 @@
+{
+  "id": "regional-2026-d",
+  "tournamentId": "regional-2026",
+  "letter": "D",
+  "title": "Divine Lights",
+  "summary": "Obtener los extremos de lámparas encendidas durante una secuencia de inversiones masivas, sin incluir el estado inicial.",
+  "topics": [
+    "Observación",
+    "Simulación",
+    "Paridad"
+  ],
+  "difficulty": "Consolidación",
+  "difficultyReason": "Valoración editorial del enunciado: conceptual 2/5 e implementación 2/5. Las herramientas sugeridas corresponden al enfoque descrito.",
+  "implementation": "2/5",
+  "conceptual": "2/5",
+  "ac": 151,
+  "total": 214,
+  "judgeUrl": null,
+  "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2026/statements/D.html",
+  "statementUrl": "/statements/regional-2026-d.pdf",
+  "chunkIds": [
+    "cpp-strings",
+    "cpp-recorridos",
+    "cpp-frecuencias",
+    "cpp-cuentas-enteras",
+    "cpp-extremos-sumas"
+  ],
+  "coverage": "completa",
+  "missingTools": [],
+  "hints": [],
+  "status": "verificado",
+  "approach": "Mantener conteos e interpretar las inversiones sin simular cada lámpara en cada día.",
+  "editorialUrl": null,
+  "classificationConfidence": "Media: lectura del enunciado y análisis editorial propio; sin editorial oficial localizada para contrastar una solución completa.",
+  "firstSolve": {
+    "minute": 8,
+    "teams": [
+      "[UNC] Helicóptero"
+    ]
+  },
+  "statementPages": {
+    "start": 8,
+    "end": 8,
+    "sourcePageCount": 23
+  }
+}

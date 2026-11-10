@@ -1,0 +1,5328 @@
+{
+  "retrieved": "2026-11-10",
+  "sources": {
+    "score": "https://scorelatam.naquadah.com.br/latam-2026/",
+    "runs": "https://scorelatam.naquadah.com.br/latam-2026/runs.html",
+    "qualified": "https://scorelatam.naquadah.com.br/latam-2026/classificados.html",
+    "problemset": "https://www.icpclatam.org/assets/docs/LAR2026%20-%20Problem%20set.pdf"
+  },
+  "method": "RMEM membership 19, non-null official rank; scoreboard accepted cells reconciled against unique Accepted teams in runs. Competition ranks use the official data-tie keys.",
+  "totalOfficial": 528,
+  "totalSouth": 214,
+  "counts": {
+    "A": 3,
+    "B": 36,
+    "C": 31,
+    "D": 151,
+    "E": 16,
+    "F": 95,
+    "G": 167,
+    "H": 15,
+    "I": 2,
+    "J": 137,
+    "K": 0,
+    "L": 35,
+    "M": 1
+  },
+  "firstSolve": {
+    "A": {
+      "minute": 198,
+      "teams": [
+        "[UNR] para la pda"
+      ]
+    },
+    "B": {
+      "minute": 76,
+      "teams": [
+        "[UNC] Los Marineros"
+      ]
+    },
+    "C": {
+      "minute": 36,
+      "teams": [
+        "[UBA] Corman"
+      ]
+    },
+    "D": {
+      "minute": 8,
+      "teams": [
+        "[UNC] Helicóptero"
+      ]
+    },
+    "E": {
+      "minute": 95,
+      "teams": [
+        "[UNC] Helicóptero"
+      ]
+    },
+    "F": {
+      "minute": 19,
+      "teams": [
+        "[UNR] para la pda"
+      ]
+    },
+    "G": {
+      "minute": 11,
+      "teams": [
+        "[UMSA] Los Maquinolas∶ The Last Dance"
+      ]
+    },
+    "H": {
+      "minute": 114,
+      "teams": [
+        "[UBA] Los Emuladores"
+      ]
+    },
+    "I": {
+      "minute": 192,
+      "teams": [
+        "[UNC] Helicóptero"
+      ]
+    },
+    "J": {
+      "minute": 10,
+      "teams": [
+        "[UTEC] unlasting"
+      ]
+    },
+    "K": null,
+    "L": {
+      "minute": 48,
+      "teams": [
+        "[UBA] El anterior nombre era mufa"
+      ]
+    },
+    "M": {
+      "minute": 278,
+      "teams": [
+        "[UNR] para la pda"
+      ]
+    }
+  },
+  "distribution": {
+    "0": 42,
+    "1": 15,
+    "2": 30,
+    "3": 33,
+    "4": 46,
+    "5": 16,
+    "6": 8,
+    "7": 8,
+    "8": 3,
+    "9": 9,
+    "10": 2,
+    "11": 2
+  },
+  "qualifiedSouth": [
+    {
+      "team": "Helicóptero",
+      "institution": "UNC",
+      "rankSouth": 1,
+      "rankGlobal": 2,
+      "reason": "performance"
+    },
+    {
+      "team": "para la pda",
+      "institution": "UNR",
+      "rankSouth": 2,
+      "rankGlobal": 4,
+      "reason": "performance"
+    },
+    {
+      "team": "Corman",
+      "institution": "UBA",
+      "rankSouth": 3,
+      "rankGlobal": 11,
+      "reason": "performance"
+    },
+    {
+      "team": "Pocochuk's Mafia",
+      "institution": "UNSA",
+      "rankSouth": 4,
+      "rankGlobal": 12,
+      "reason": "performance"
+    },
+    {
+      "team": "Los Emuladores",
+      "institution": "UBA",
+      "rankSouth": 5,
+      "rankGlobal": 17,
+      "reason": "performance"
+    },
+    {
+      "team": "SaleEnOdeUno",
+      "institution": "UNI FIIS",
+      "rankSouth": 6,
+      "rankGlobal": 19,
+      "reason": "performance"
+    },
+    {
+      "team": "LobitosFC",
+      "institution": "UTP-PE",
+      "rankSouth": 7,
+      "rankGlobal": 22,
+      "reason": "region"
+    },
+    {
+      "team": "Toesca 6",
+      "institution": "UTFSM",
+      "rankSouth": 10,
+      "rankGlobal": 26,
+      "reason": "country"
+    },
+    {
+      "team": "ORT 1 50ceanos",
+      "institution": "ORT",
+      "rankSouth": 11,
+      "rankGlobal": 27,
+      "reason": "country"
+    },
+    {
+      "team": "ReReReRe∶Monaschinas",
+      "institution": "UPC",
+      "rankSouth": 12,
+      "rankGlobal": 28,
+      "reason": "region"
+    },
+    {
+      "team": "Pan't con Manteca",
+      "institution": "UTN FRRo",
+      "rankSouth": 16,
+      "rankGlobal": 55,
+      "reason": "country participation"
+    },
+    {
+      "team": "Ctrl F Huevitos",
+      "institution": "UTN FRSF",
+      "rankSouth": 17,
+      "rankGlobal": 57,
+      "reason": "country participation"
+    },
+    {
+      "team": "Los Maquinolas∶ The Last Dance",
+      "institution": "UMSA",
+      "rankSouth": 18,
+      "rankGlobal": 59,
+      "reason": "country"
+    },
+    {
+      "team": "Api con pastel",
+      "institution": "UMSS",
+      "rankSouth": 20,
+      "rankGlobal": 62,
+      "reason": "country participation"
+    },
+    {
+      "team": "oye no nada",
+      "institution": "PUC",
+      "rankSouth": 25,
+      "rankGlobal": 79,
+      "reason": "≥2 female"
+    },
+    {
+      "team": "ElCeroNoEsNatural",
+      "institution": "UCB",
+      "rankSouth": 28,
+      "rankGlobal": 87,
+      "reason": "country participation"
+    },
+    {
+      "team": "El Choripan mojado mas largo del mundo",
+      "institution": "PUC",
+      "rankSouth": 30,
+      "rankGlobal": 95,
+      "reason": "≥2 female"
+    },
+    {
+      "team": "CSI",
+      "institution": "UTFSM",
+      "rankSouth": 41,
+      "rankGlobal": 133,
+      "reason": "region all-female"
+    },
+    {
+      "team": "Los Culisueltos",
+      "institution": "UPBLP",
+      "rankSouth": 44,
+      "rankGlobal": 139,
+      "reason": "country participation"
+    }
+  ],
+  "teams": [
+    {
+      "login": "teamsoar040",
+      "team": "Helicóptero",
+      "institution": "UNC",
+      "rankSouth": 1,
+      "rankGlobal": 2,
+      "solved": 11,
+      "penalty": 1225,
+      "accepted": {
+        "A": {
+          "second": 17889,
+          "minute": 298
+        },
+        "B": {
+          "second": 5202,
+          "minute": 86
+        },
+        "C": {
+          "second": 6074,
+          "minute": 101
+        },
+        "D": {
+          "second": 481,
+          "minute": 8
+        },
+        "E": {
+          "second": 5702,
+          "minute": 95
+        },
+        "F": {
+          "second": 2065,
+          "minute": 34
+        },
+        "G": {
+          "second": 1094,
+          "minute": 18
+        },
+        "H": {
+          "second": 10308,
+          "minute": 171
+        },
+        "I": {
+          "second": 11564,
+          "minute": 192
+        },
+        "J": {
+          "second": 1469,
+          "minute": 24
+        },
+        "L": {
+          "second": 3500,
+          "minute": 58
+        }
+      }
+    },
+    {
+      "login": "teamsoar011",
+      "team": "para la pda",
+      "institution": "UNR",
+      "rankSouth": 2,
+      "rankGlobal": 4,
+      "solved": 11,
+      "penalty": 1476,
+      "accepted": {
+        "A": {
+          "second": 11893,
+          "minute": 198
+        },
+        "B": {
+          "second": 4638,
+          "minute": 77
+        },
+        "C": {
+          "second": 7026,
+          "minute": 117
+        },
+        "D": {
+          "second": 723,
+          "minute": 12
+        },
+        "E": {
+          "second": 10096,
+          "minute": 168
+        },
+        "F": {
+          "second": 1161,
+          "minute": 19
+        },
+        "G": {
+          "second": 2397,
+          "minute": 39
+        },
+        "H": {
+          "second": 16347,
+          "minute": 272
+        },
+        "J": {
+          "second": 1412,
+          "minute": 23
+        },
+        "L": {
+          "second": 6793,
+          "minute": 113
+        },
+        "M": {
+          "second": 16686,
+          "minute": 278
+        }
+      }
+    },
+    {
+      "login": "teamsoar021",
+      "team": "Corman",
+      "institution": "UBA",
+      "rankSouth": 3,
+      "rankGlobal": 11,
+      "solved": 10,
+      "penalty": 1183,
+      "accepted": {
+        "A": {
+          "second": 15775,
+          "minute": 262
+        },
+        "B": {
+          "second": 4940,
+          "minute": 82
+        },
+        "C": {
+          "second": 2196,
+          "minute": 36
+        },
+        "D": {
+          "second": 881,
+          "minute": 14
+        },
+        "E": {
+          "second": 9144,
+          "minute": 152
+        },
+        "F": {
+          "second": 3694,
+          "minute": 61
+        },
+        "G": {
+          "second": 1426,
+          "minute": 23
+        },
+        "H": {
+          "second": 13337,
+          "minute": 222
+        },
+        "J": {
+          "second": 2412,
+          "minute": 40
+        },
+        "L": {
+          "second": 5511,
+          "minute": 91
+        }
+      }
+    },
+    {
+      "login": "teamsope005",
+      "team": "Pocochuk's Mafia",
+      "institution": "UNSA",
+      "rankSouth": 4,
+      "rankGlobal": 12,
+      "solved": 10,
+      "penalty": 1206,
+      "accepted": {
+        "B": {
+          "second": 4753,
+          "minute": 79
+        },
+        "C": {
+          "second": 5258,
+          "minute": 87
+        },
+        "D": {
+          "second": 1193,
+          "minute": 19
+        },
+        "E": {
+          "second": 7592,
+          "minute": 126
+        },
+        "F": {
+          "second": 3488,
+          "minute": 58
+        },
+        "G": {
+          "second": 1760,
+          "minute": 29
+        },
+        "H": {
+          "second": 13176,
+          "minute": 219
+        },
+        "I": {
+          "second": 17584,
+          "minute": 293
+        },
+        "J": {
+          "second": 803,
+          "minute": 13
+        },
+        "L": {
+          "second": 7431,
+          "minute": 123
+        }
+      }
+    },
+    {
+      "login": "teamsoar001",
+      "team": "Los Emuladores",
+      "institution": "UBA",
+      "rankSouth": 5,
+      "rankGlobal": 17,
+      "solved": 9,
+      "penalty": 763,
+      "accepted": {
+        "B": {
+          "second": 9720,
+          "minute": 162
+        },
+        "C": {
+          "second": 3603,
+          "minute": 60
+        },
+        "D": {
+          "second": 1112,
+          "minute": 18
+        },
+        "E": {
+          "second": 12817,
+          "minute": 213
+        },
+        "F": {
+          "second": 1737,
+          "minute": 28
+        },
+        "G": {
+          "second": 2082,
+          "minute": 34
+        },
+        "H": {
+          "second": 6869,
+          "minute": 114
+        },
+        "J": {
+          "second": 1398,
+          "minute": 23
+        },
+        "L": {
+          "second": 4316,
+          "minute": 71
+        }
+      }
+    },
+    {
+      "login": "teamsope032",
+      "team": "SaleEnOdeUno",
+      "institution": "UNI FIIS",
+      "rankSouth": 6,
+      "rankGlobal": 19,
+      "solved": 9,
+      "penalty": 843,
+      "accepted": {
+        "B": {
+          "second": 7384,
+          "minute": 123
+        },
+        "C": {
+          "second": 7635,
+          "minute": 127
+        },
+        "D": {
+          "second": 684,
+          "minute": 11
+        },
+        "E": {
+          "second": 9283,
+          "minute": 154
+        },
+        "F": {
+          "second": 1927,
+          "minute": 32
+        },
+        "G": {
+          "second": 1307,
+          "minute": 21
+        },
+        "H": {
+          "second": 12481,
+          "minute": 208
+        },
+        "J": {
+          "second": 2638,
+          "minute": 43
+        },
+        "L": {
+          "second": 5087,
+          "minute": 84
+        }
+      }
+    },
+    {
+      "login": "teamsope004",
+      "team": "LobitosFC",
+      "institution": "UTP-PE",
+      "rankSouth": 7,
+      "rankGlobal": 22,
+      "solved": 9,
+      "penalty": 967,
+      "accepted": {
+        "B": {
+          "second": 8410,
+          "minute": 140
+        },
+        "C": {
+          "second": 5798,
+          "minute": 96
+        },
+        "D": {
+          "second": 795,
+          "minute": 13
+        },
+        "E": {
+          "second": 13962,
+          "minute": 232
+        },
+        "F": {
+          "second": 2591,
+          "minute": 43
+        },
+        "G": {
+          "second": 1400,
+          "minute": 23
+        },
+        "H": {
+          "second": 10951,
+          "minute": 182
+        },
+        "J": {
+          "second": 1649,
+          "minute": 27
+        },
+        "L": {
+          "second": 5462,
+          "minute": 91
+        }
+      }
+    },
+    {
+      "login": "teamsoar050",
+      "team": "El anterior nombre era mufa",
+      "institution": "UBA",
+      "rankSouth": 8,
+      "rankGlobal": 24,
+      "solved": 9,
+      "penalty": 993,
+      "accepted": {
+        "B": {
+          "second": 7929,
+          "minute": 132
+        },
+        "C": {
+          "second": 10510,
+          "minute": 175
+        },
+        "D": {
+          "second": 2231,
+          "minute": 37
+        },
+        "E": {
+          "second": 14997,
+          "minute": 249
+        },
+        "F": {
+          "second": 4025,
+          "minute": 67
+        },
+        "G": {
+          "second": 3173,
+          "minute": 52
+        },
+        "H": {
+          "second": 9788,
+          "minute": 163
+        },
+        "J": {
+          "second": 1815,
+          "minute": 30
+        },
+        "L": {
+          "second": 2910,
+          "minute": 48
+        }
+      }
+    },
+    {
+      "login": "teamsoar048",
+      "team": "Denis Wu y los Rolling Hashes",
+      "institution": "UBA",
+      "rankSouth": 9,
+      "rankGlobal": 25,
+      "solved": 9,
+      "penalty": 1001,
+      "accepted": {
+        "B": {
+          "second": 5243,
+          "minute": 87
+        },
+        "C": {
+          "second": 3865,
+          "minute": 64
+        },
+        "D": {
+          "second": 619,
+          "minute": 10
+        },
+        "E": {
+          "second": 11705,
+          "minute": 195
+        },
+        "F": {
+          "second": 2086,
+          "minute": 34
+        },
+        "G": {
+          "second": 1119,
+          "minute": 18
+        },
+        "H": {
+          "second": 17555,
+          "minute": 292
+        },
+        "J": {
+          "second": 862,
+          "minute": 14
+        },
+        "L": {
+          "second": 8831,
+          "minute": 147
+        }
+      }
+    },
+    {
+      "login": "teamsocl031",
+      "team": "Toesca 6",
+      "institution": "UTFSM",
+      "rankSouth": 10,
+      "rankGlobal": 26,
+      "solved": 9,
+      "penalty": 1041,
+      "accepted": {
+        "B": {
+          "second": 8820,
+          "minute": 147
+        },
+        "C": {
+          "second": 5771,
+          "minute": 96
+        },
+        "D": {
+          "second": 795,
+          "minute": 13
+        },
+        "E": {
+          "second": 15762,
+          "minute": 262
+        },
+        "F": {
+          "second": 3031,
+          "minute": 50
+        },
+        "G": {
+          "second": 3706,
+          "minute": 61
+        },
+        "H": {
+          "second": 14599,
+          "minute": 243
+        },
+        "J": {
+          "second": 1992,
+          "minute": 33
+        },
+        "L": {
+          "second": 4607,
+          "minute": 76
+        }
+      }
+    },
+    {
+      "login": "teamsouy009",
+      "team": "ORT 1 50ceanos",
+      "institution": "ORT",
+      "rankSouth": 11,
+      "rankGlobal": 27,
+      "solved": 9,
+      "penalty": 1080,
+      "accepted": {
+        "B": {
+          "second": 7475,
+          "minute": 124
+        },
+        "C": {
+          "second": 13066,
+          "minute": 217
+        },
+        "D": {
+          "second": 925,
+          "minute": 15
+        },
+        "E": {
+          "second": 12022,
+          "minute": 200
+        },
+        "F": {
+          "second": 1852,
+          "minute": 30
+        },
+        "G": {
+          "second": 1373,
+          "minute": 22
+        },
+        "H": {
+          "second": 17401,
+          "minute": 290
+        },
+        "J": {
+          "second": 1317,
+          "minute": 21
+        },
+        "L": {
+          "second": 4902,
+          "minute": 81
+        }
+      }
+    },
+    {
+      "login": "teamsope024",
+      "team": "ReReReRe∶Monaschinas",
+      "institution": "UPC",
+      "rankSouth": 12,
+      "rankGlobal": 28,
+      "solved": 9,
+      "penalty": 1099,
+      "accepted": {
+        "B": {
+          "second": 9697,
+          "minute": 161
+        },
+        "C": {
+          "second": 8776,
+          "minute": 146
+        },
+        "D": {
+          "second": 1070,
+          "minute": 17
+        },
+        "E": {
+          "second": 17355,
+          "minute": 289
+        },
+        "F": {
+          "second": 3272,
+          "minute": 54
+        },
+        "G": {
+          "second": 2425,
+          "minute": 40
+        },
+        "H": {
+          "second": 14497,
+          "minute": 241
+        },
+        "J": {
+          "second": 1510,
+          "minute": 25
+        },
+        "L": {
+          "second": 5195,
+          "minute": 86
+        }
+      }
+    },
+    {
+      "login": "teamsope022",
+      "team": "Rating Disaster Oño",
+      "institution": "UNI FC",
+      "rankSouth": 13,
+      "rankGlobal": 31,
+      "solved": 9,
+      "penalty": 1258,
+      "accepted": {
+        "B": {
+          "second": 9204,
+          "minute": 153
+        },
+        "C": {
+          "second": 16578,
+          "minute": 276
+        },
+        "D": {
+          "second": 2501,
+          "minute": 41
+        },
+        "E": {
+          "second": 13159,
+          "minute": 219
+        },
+        "F": {
+          "second": 3959,
+          "minute": 65
+        },
+        "G": {
+          "second": 2317,
+          "minute": 38
+        },
+        "H": {
+          "second": 16359,
+          "minute": 272
+        },
+        "J": {
+          "second": 1347,
+          "minute": 22
+        },
+        "L": {
+          "second": 6752,
+          "minute": 112
+        }
+      }
+    },
+    {
+      "login": "teamsoar031",
+      "team": "Los Marineros",
+      "institution": "UNC",
+      "rankSouth": 14,
+      "rankGlobal": 41,
+      "solved": 8,
+      "penalty": 887,
+      "accepted": {
+        "B": {
+          "second": 4575,
+          "minute": 76
+        },
+        "C": {
+          "second": 6533,
+          "minute": 108
+        },
+        "D": {
+          "second": 1413,
+          "minute": 23
+        },
+        "F": {
+          "second": 3040,
+          "minute": 50
+        },
+        "G": {
+          "second": 2457,
+          "minute": 40
+        },
+        "H": {
+          "second": 14297,
+          "minute": 238
+        },
+        "J": {
+          "second": 2171,
+          "minute": 36
+        },
+        "L": {
+          "second": 10562,
+          "minute": 176
+        }
+      }
+    },
+    {
+      "login": "teamsope014",
+      "team": "son son son sahur",
+      "institution": "UTEC",
+      "rankSouth": 15,
+      "rankGlobal": 53,
+      "solved": 8,
+      "penalty": 1123,
+      "accepted": {
+        "B": {
+          "second": 12856,
+          "minute": 214
+        },
+        "C": {
+          "second": 13899,
+          "minute": 231
+        },
+        "D": {
+          "second": 1497,
+          "minute": 24
+        },
+        "F": {
+          "second": 4381,
+          "minute": 73
+        },
+        "G": {
+          "second": 2126,
+          "minute": 35
+        },
+        "H": {
+          "second": 13036,
+          "minute": 217
+        },
+        "J": {
+          "second": 3598,
+          "minute": 59
+        },
+        "L": {
+          "second": 9041,
+          "minute": 150
+        }
+      }
+    },
+    {
+      "login": "teamsoar049",
+      "team": "Pan't con Manteca",
+      "institution": "UTN FRRo",
+      "rankSouth": 16,
+      "rankGlobal": 55,
+      "solved": 8,
+      "penalty": 1273,
+      "accepted": {
+        "B": {
+          "second": 10955,
+          "minute": 182
+        },
+        "C": {
+          "second": 13588,
+          "minute": 226
+        },
+        "D": {
+          "second": 4585,
+          "minute": 76
+        },
+        "E": {
+          "second": 16936,
+          "minute": 282
+        },
+        "F": {
+          "second": 4831,
+          "minute": 80
+        },
+        "G": {
+          "second": 2835,
+          "minute": 47
+        },
+        "J": {
+          "second": 5275,
+          "minute": 87
+        },
+        "L": {
+          "second": 12781,
+          "minute": 213
+        }
+      }
+    },
+    {
+      "login": "teamsoar032",
+      "team": "Ctrl F Huevitos",
+      "institution": "UTN FRSF",
+      "rankSouth": 17,
+      "rankGlobal": 57,
+      "solved": 7,
+      "penalty": 578,
+      "accepted": {
+        "B": {
+          "second": 7343,
+          "minute": 122
+        },
+        "C": {
+          "second": 5962,
+          "minute": 99
+        },
+        "D": {
+          "second": 1042,
+          "minute": 17
+        },
+        "F": {
+          "second": 1538,
+          "minute": 25
+        },
+        "G": {
+          "second": 2998,
+          "minute": 49
+        },
+        "J": {
+          "second": 3381,
+          "minute": 56
+        },
+        "L": {
+          "second": 11429,
+          "minute": 190
+        }
+      }
+    },
+    {
+      "login": "teamsobo002",
+      "team": "Los Maquinolas∶ The Last Dance",
+      "institution": "UMSA",
+      "rankSouth": 18,
+      "rankGlobal": 59,
+      "solved": 7,
+      "penalty": 597,
+      "accepted": {
+        "B": {
+          "second": 5253,
+          "minute": 87
+        },
+        "C": {
+          "second": 8332,
+          "minute": 138
+        },
+        "D": {
+          "second": 1119,
+          "minute": 18
+        },
+        "F": {
+          "second": 2543,
+          "minute": 42
+        },
+        "G": {
+          "second": 686,
+          "minute": 11
+        },
+        "J": {
+          "second": 2253,
+          "minute": 37
+        },
+        "L": {
+          "second": 12270,
+          "minute": 204
+        }
+      }
+    },
+    {
+      "login": "teamsope031",
+      "team": "unlasting",
+      "institution": "UTEC",
+      "rankSouth": 19,
+      "rankGlobal": 61,
+      "solved": 7,
+      "penalty": 682,
+      "accepted": {
+        "B": {
+          "second": 14624,
+          "minute": 243
+        },
+        "C": {
+          "second": 5729,
+          "minute": 95
+        },
+        "D": {
+          "second": 4888,
+          "minute": 81
+        },
+        "F": {
+          "second": 3791,
+          "minute": 63
+        },
+        "G": {
+          "second": 1613,
+          "minute": 26
+        },
+        "J": {
+          "second": 620,
+          "minute": 10
+        },
+        "L": {
+          "second": 9863,
+          "minute": 164
+        }
+      }
+    },
+    {
+      "login": "teamsobo001",
+      "team": "Api con pastel",
+      "institution": "UMSS",
+      "rankSouth": 20,
+      "rankGlobal": 62,
+      "solved": 7,
+      "penalty": 713,
+      "accepted": {
+        "B": {
+          "second": 9146,
+          "minute": 152
+        },
+        "C": {
+          "second": 14012,
+          "minute": 233
+        },
+        "D": {
+          "second": 1693,
+          "minute": 28
+        },
+        "F": {
+          "second": 2709,
+          "minute": 45
+        },
+        "G": {
+          "second": 3768,
+          "minute": 62
+        },
+        "J": {
+          "second": 733,
+          "minute": 12
+        },
+        "L": {
+          "second": 6095,
+          "minute": 101
+        }
+      }
+    },
+    {
+      "login": "teamsocl003",
+      "team": "Camino auraliano",
+      "institution": "UChile",
+      "rankSouth": 21,
+      "rankGlobal": 65,
+      "solved": 7,
+      "penalty": 733,
+      "accepted": {
+        "B": {
+          "second": 14206,
+          "minute": 236
+        },
+        "C": {
+          "second": 9231,
+          "minute": 153
+        },
+        "D": {
+          "second": 1070,
+          "minute": 17
+        },
+        "F": {
+          "second": 3261,
+          "minute": 54
+        },
+        "G": {
+          "second": 1494,
+          "minute": 24
+        },
+        "J": {
+          "second": 4006,
+          "minute": 66
+        },
+        "L": {
+          "second": 5008,
+          "minute": 83
+        }
+      }
+    },
+    {
+      "login": "teamsoar022",
+      "team": "ChichuMerge",
+      "institution": "UTN FRSF",
+      "rankSouth": 22,
+      "rankGlobal": 69,
+      "solved": 7,
+      "penalty": 787,
+      "accepted": {
+        "B": {
+          "second": 7774,
+          "minute": 129
+        },
+        "C": {
+          "second": 11314,
+          "minute": 188
+        },
+        "D": {
+          "second": 2410,
+          "minute": 40
+        },
+        "F": {
+          "second": 4555,
+          "minute": 75
+        },
+        "G": {
+          "second": 1468,
+          "minute": 24
+        },
+        "J": {
+          "second": 4389,
+          "minute": 73
+        },
+        "L": {
+          "second": 14297,
+          "minute": 238
+        }
+      }
+    },
+    {
+      "login": "teamsoar041",
+      "team": "Profes",
+      "institution": "UNR",
+      "rankSouth": 23,
+      "rankGlobal": 74,
+      "solved": 7,
+      "penalty": 924,
+      "accepted": {
+        "C": {
+          "second": 14494,
+          "minute": 241
+        },
+        "D": {
+          "second": 2765,
+          "minute": 46
+        },
+        "E": {
+          "second": 14384,
+          "minute": 239
+        },
+        "F": {
+          "second": 3670,
+          "minute": 61
+        },
+        "G": {
+          "second": 2537,
+          "minute": 42
+        },
+        "J": {
+          "second": 2258,
+          "minute": 37
+        },
+        "L": {
+          "second": 7136,
+          "minute": 118
+        }
+      }
+    },
+    {
+      "login": "teamsoar042",
+      "team": "-WAall",
+      "institution": "UNLP",
+      "rankSouth": 24,
+      "rankGlobal": 77,
+      "solved": 7,
+      "penalty": 1119,
+      "accepted": {
+        "B": {
+          "second": 15215,
+          "minute": 253
+        },
+        "D": {
+          "second": 2603,
+          "minute": 43
+        },
+        "E": {
+          "second": 15832,
+          "minute": 263
+        },
+        "F": {
+          "second": 3774,
+          "minute": 62
+        },
+        "G": {
+          "second": 3998,
+          "minute": 66
+        },
+        "J": {
+          "second": 5990,
+          "minute": 99
+        },
+        "L": {
+          "second": 11582,
+          "minute": 193
+        }
+      }
+    },
+    {
+      "login": "teamsocl029",
+      "team": "oye no nada",
+      "institution": "PUC",
+      "rankSouth": 25,
+      "rankGlobal": 79,
+      "solved": 6,
+      "penalty": 479,
+      "accepted": {
+        "C": {
+          "second": 9388,
+          "minute": 156
+        },
+        "D": {
+          "second": 580,
+          "minute": 9
+        },
+        "F": {
+          "second": 3281,
+          "minute": 54
+        },
+        "G": {
+          "second": 1890,
+          "minute": 31
+        },
+        "J": {
+          "second": 2063,
+          "minute": 34
+        },
+        "L": {
+          "second": 6914,
+          "minute": 115
+        }
+      }
+    },
+    {
+      "login": "teamsocl015",
+      "team": "Un pinhon no va a la vega",
+      "institution": "PUC",
+      "rankSouth": 26,
+      "rankGlobal": 81,
+      "solved": 6,
+      "penalty": 495,
+      "accepted": {
+        "B": {
+          "second": 10962,
+          "minute": 182
+        },
+        "C": {
+          "second": 5553,
+          "minute": 92
+        },
+        "D": {
+          "second": 3519,
+          "minute": 58
+        },
+        "F": {
+          "second": 2651,
+          "minute": 44
+        },
+        "G": {
+          "second": 2919,
+          "minute": 48
+        },
+        "J": {
+          "second": 3065,
+          "minute": 51
+        }
+      }
+    },
+    {
+      "login": "teamsobo026",
+      "team": "Los Sabrossos 🐻",
+      "institution": "UMSA",
+      "rankSouth": 27,
+      "rankGlobal": 83,
+      "solved": 6,
+      "penalty": 578,
+      "accepted": {
+        "B": {
+          "second": 10341,
+          "minute": 172
+        },
+        "D": {
+          "second": 1000,
+          "minute": 16
+        },
+        "F": {
+          "second": 3782,
+          "minute": 63
+        },
+        "G": {
+          "second": 1191,
+          "minute": 19
+        },
+        "J": {
+          "second": 2830,
+          "minute": 47
+        },
+        "L": {
+          "second": 12069,
+          "minute": 201
+        }
+      }
+    },
+    {
+      "login": "teamsobo046",
+      "team": "ElCeroNoEsNatural",
+      "institution": "UCB",
+      "rankSouth": 28,
+      "rankGlobal": 87,
+      "solved": 6,
+      "penalty": 590,
+      "accepted": {
+        "B": {
+          "second": 8315,
+          "minute": 138
+        },
+        "C": {
+          "second": 13423,
+          "minute": 223
+        },
+        "D": {
+          "second": 1318,
+          "minute": 21
+        },
+        "F": {
+          "second": 3264,
+          "minute": 54
+        },
+        "G": {
+          "second": 865,
+          "minute": 14
+        },
+        "J": {
+          "second": 2453,
+          "minute": 40
+        }
+      }
+    },
+    {
+      "login": "teamsope015",
+      "team": "Turistas",
+      "institution": "UPC",
+      "rankSouth": 29,
+      "rankGlobal": 90,
+      "solved": 6,
+      "penalty": 631,
+      "accepted": {
+        "B": {
+          "second": 11562,
+          "minute": 192
+        },
+        "D": {
+          "second": 981,
+          "minute": 16
+        },
+        "F": {
+          "second": 5351,
+          "minute": 89
+        },
+        "G": {
+          "second": 2204,
+          "minute": 36
+        },
+        "J": {
+          "second": 2354,
+          "minute": 39
+        },
+        "L": {
+          "second": 9591,
+          "minute": 159
+        }
+      }
+    },
+    {
+      "login": "teamsocl001",
+      "team": "El Choripan mojado mas largo del mundo",
+      "institution": "PUC",
+      "rankSouth": 30,
+      "rankGlobal": 95,
+      "solved": 6,
+      "penalty": 696,
+      "accepted": {
+        "C": {
+          "second": 12688,
+          "minute": 211
+        },
+        "D": {
+          "second": 4577,
+          "minute": 76
+        },
+        "F": {
+          "second": 3500,
+          "minute": 58
+        },
+        "G": {
+          "second": 1725,
+          "minute": 28
+        },
+        "J": {
+          "second": 1008,
+          "minute": 16
+        },
+        "L": {
+          "second": 10069,
+          "minute": 167
+        }
+      }
+    },
+    {
+      "login": "teamsobo014",
+      "team": "candi_ositos club de fans",
+      "institution": "UMSA",
+      "rankSouth": 31,
+      "rankGlobal": 97,
+      "solved": 6,
+      "penalty": 711,
+      "accepted": {
+        "B": {
+          "second": 11015,
+          "minute": 183
+        },
+        "D": {
+          "second": 3585,
+          "minute": 59
+        },
+        "F": {
+          "second": 3980,
+          "minute": 66
+        },
+        "G": {
+          "second": 2394,
+          "minute": 39
+        },
+        "J": {
+          "second": 1511,
+          "minute": 25
+        },
+        "L": {
+          "second": 16797,
+          "minute": 279
+        }
+      }
+    },
+    {
+      "login": "teamsope029",
+      "team": "NoConfian",
+      "institution": "PUCP",
+      "rankSouth": 32,
+      "rankGlobal": 100,
+      "solved": 6,
+      "penalty": 781,
+      "accepted": {
+        "B": {
+          "second": 14449,
+          "minute": 240
+        },
+        "C": {
+          "second": 11666,
+          "minute": 194
+        },
+        "D": {
+          "second": 1799,
+          "minute": 29
+        },
+        "F": {
+          "second": 8794,
+          "minute": 146
+        },
+        "G": {
+          "second": 1723,
+          "minute": 28
+        },
+        "J": {
+          "second": 3874,
+          "minute": 64
+        }
+      }
+    },
+    {
+      "login": "teamsoar033",
+      "team": "tres quintos",
+      "institution": "UBA",
+      "rankSouth": 33,
+      "rankGlobal": 113,
+      "solved": 5,
+      "penalty": 349,
+      "accepted": {
+        "B": {
+          "second": 7807,
+          "minute": 130
+        },
+        "D": {
+          "second": 1654,
+          "minute": 27
+        },
+        "F": {
+          "second": 4456,
+          "minute": 74
+        },
+        "G": {
+          "second": 3737,
+          "minute": 62
+        },
+        "J": {
+          "second": 2176,
+          "minute": 36
+        }
+      }
+    },
+    {
+      "login": "teamsouy059",
+      "team": "ORT 2 algo con carácter",
+      "institution": "ORT",
+      "rankSouth": 34,
+      "rankGlobal": 119,
+      "solved": 5,
+      "penalty": 460,
+      "accepted": {
+        "B": {
+          "second": 16214,
+          "minute": 270
+        },
+        "D": {
+          "second": 1816,
+          "minute": 30
+        },
+        "F": {
+          "second": 4498,
+          "minute": 74
+        },
+        "G": {
+          "second": 3225,
+          "minute": 53
+        },
+        "J": {
+          "second": 2021,
+          "minute": 33
+        }
+      }
+    },
+    {
+      "login": "teamsope009",
+      "team": "PachasJrs",
+      "institution": "UCSP",
+      "rankSouth": 35,
+      "rankGlobal": 120,
+      "solved": 5,
+      "penalty": 476,
+      "accepted": {
+        "C": {
+          "second": 17469,
+          "minute": 291
+        },
+        "D": {
+          "second": 1791,
+          "minute": 29
+        },
+        "F": {
+          "second": 3359,
+          "minute": 55
+        },
+        "G": {
+          "second": 3618,
+          "minute": 60
+        },
+        "J": {
+          "second": 2506,
+          "minute": 41
+        }
+      }
+    },
+    {
+      "login": "teamsobo025",
+      "team": "Gallos Primo",
+      "institution": "UMSS",
+      "rankSouth": 36,
+      "rankGlobal": 121,
+      "solved": 5,
+      "penalty": 488,
+      "accepted": {
+        "D": {
+          "second": 1062,
+          "minute": 17
+        },
+        "F": {
+          "second": 7988,
+          "minute": 133
+        },
+        "G": {
+          "second": 2212,
+          "minute": 36
+        },
+        "J": {
+          "second": 3539,
+          "minute": 58
+        },
+        "L": {
+          "second": 7452,
+          "minute": 124
+        }
+      }
+    },
+    {
+      "login": "teamsoar053",
+      "team": "Binary Three (11)",
+      "institution": "IB",
+      "rankSouth": 37,
+      "rankGlobal": 125,
+      "solved": 5,
+      "penalty": 523,
+      "accepted": {
+        "C": {
+          "second": 14151,
+          "minute": 235
+        },
+        "D": {
+          "second": 1600,
+          "minute": 26
+        },
+        "F": {
+          "second": 5398,
+          "minute": 89
+        },
+        "G": {
+          "second": 2363,
+          "minute": 39
+        },
+        "J": {
+          "second": 4495,
+          "minute": 74
+        }
+      }
+    },
+    {
+      "login": "teamsoar012",
+      "team": "La Venganza De Los Mendis",
+      "institution": "UTDT",
+      "rankSouth": 38,
+      "rankGlobal": 129,
+      "solved": 5,
+      "penalty": 543,
+      "accepted": {
+        "B": {
+          "second": 12360,
+          "minute": 206
+        },
+        "D": {
+          "second": 2663,
+          "minute": 44
+        },
+        "F": {
+          "second": 6284,
+          "minute": 104
+        },
+        "G": {
+          "second": 4794,
+          "minute": 79
+        },
+        "J": {
+          "second": 4220,
+          "minute": 70
+        }
+      }
+    },
+    {
+      "login": "teamsope021",
+      "team": "BitOmelette",
+      "institution": "UNI FIIS",
+      "rankSouth": 39,
+      "rankGlobal": 130,
+      "solved": 5,
+      "penalty": 565,
+      "accepted": {
+        "B": {
+          "second": 11688,
+          "minute": 194
+        },
+        "D": {
+          "second": 3320,
+          "minute": 55
+        },
+        "F": {
+          "second": 3747,
+          "minute": 62
+        },
+        "G": {
+          "second": 4411,
+          "minute": 73
+        },
+        "J": {
+          "second": 6093,
+          "minute": 101
+        }
+      }
+    },
+    {
+      "login": "teamsocl022",
+      "team": "Cuando Pagan",
+      "institution": "PUC",
+      "rankSouth": 40,
+      "rankGlobal": 131,
+      "solved": 5,
+      "penalty": 566,
+      "accepted": {
+        "D": {
+          "second": 3390,
+          "minute": 56
+        },
+        "F": {
+          "second": 7059,
+          "minute": 117
+        },
+        "G": {
+          "second": 4427,
+          "minute": 73
+        },
+        "J": {
+          "second": 5326,
+          "minute": 88
+        },
+        "L": {
+          "second": 10338,
+          "minute": 172
+        }
+      }
+    },
+    {
+      "login": "teamsocl004",
+      "team": "CSI",
+      "institution": "UTFSM",
+      "rankSouth": 41,
+      "rankGlobal": 133,
+      "solved": 5,
+      "penalty": 580,
+      "accepted": {
+        "B": {
+          "second": 14827,
+          "minute": 247
+        },
+        "D": {
+          "second": 1522,
+          "minute": 25
+        },
+        "F": {
+          "second": 7135,
+          "minute": 118
+        },
+        "G": {
+          "second": 918,
+          "minute": 15
+        },
+        "J": {
+          "second": 4535,
+          "minute": 75
+        }
+      }
+    },
+    {
+      "login": "teamsoar013",
+      "team": "Melón Térmico",
+      "institution": "UNC",
+      "rankSouth": 42,
+      "rankGlobal": 135,
+      "solved": 5,
+      "penalty": 609,
+      "accepted": {
+        "D": {
+          "second": 7014,
+          "minute": 116
+        },
+        "F": {
+          "second": 6759,
+          "minute": 112
+        },
+        "G": {
+          "second": 3530,
+          "minute": 58
+        },
+        "J": {
+          "second": 1255,
+          "minute": 20
+        },
+        "L": {
+          "second": 14592,
+          "minute": 243
+        }
+      }
+    },
+    {
+      "login": "teamsouy038",
+      "team": "Equipo UCU01",
+      "institution": "UCU",
+      "rankSouth": 43,
+      "rankGlobal": 138,
+      "solved": 5,
+      "penalty": 632,
+      "accepted": {
+        "C": {
+          "second": 16532,
+          "minute": 275
+        },
+        "D": {
+          "second": 3563,
+          "minute": 59
+        },
+        "F": {
+          "second": 4637,
+          "minute": 77
+        },
+        "G": {
+          "second": 909,
+          "minute": 15
+        },
+        "J": {
+          "second": 8769,
+          "minute": 146
+        }
+      }
+    },
+    {
+      "login": "teamsobo062",
+      "team": "Los Culisueltos",
+      "institution": "UPBLP",
+      "rankSouth": 44,
+      "rankGlobal": 139,
+      "solved": 5,
+      "penalty": 643,
+      "accepted": {
+        "B": {
+          "second": 16001,
+          "minute": 266
+        },
+        "D": {
+          "second": 1364,
+          "minute": 22
+        },
+        "F": {
+          "second": 9678,
+          "minute": 161
+        },
+        "G": {
+          "second": 5265,
+          "minute": 87
+        },
+        "J": {
+          "second": 2863,
+          "minute": 47
+        }
+      }
+    },
+    {
+      "login": "teamsocl038",
+      "team": "CHAKOTEAM!",
+      "institution": "UTFSM",
+      "rankSouth": 45,
+      "rankGlobal": 140,
+      "solved": 5,
+      "penalty": 678,
+      "accepted": {
+        "D": {
+          "second": 905,
+          "minute": 15
+        },
+        "F": {
+          "second": 9566,
+          "minute": 159
+        },
+        "G": {
+          "second": 2590,
+          "minute": 43
+        },
+        "J": {
+          "second": 6449,
+          "minute": 107
+        },
+        "L": {
+          "second": 11687,
+          "minute": 194
+        }
+      }
+    },
+    {
+      "login": "teamsocl010",
+      "team": "NP completo mojado",
+      "institution": "UChile",
+      "rankSouth": 46,
+      "rankGlobal": 141,
+      "solved": 5,
+      "penalty": 695,
+      "accepted": {
+        "D": {
+          "second": 2073,
+          "minute": 34
+        },
+        "F": {
+          "second": 10966,
+          "minute": 182
+        },
+        "G": {
+          "second": 2463,
+          "minute": 41
+        },
+        "J": {
+          "second": 1805,
+          "minute": 30
+        },
+        "L": {
+          "second": 17315,
+          "minute": 288
+        }
+      }
+    },
+    {
+      "login": "teamsoar023",
+      "team": "#include<unne>",
+      "institution": "UNNE",
+      "rankSouth": 47,
+      "rankGlobal": 142,
+      "solved": 5,
+      "penalty": 724,
+      "accepted": {
+        "D": {
+          "second": 2383,
+          "minute": 39
+        },
+        "F": {
+          "second": 4134,
+          "minute": 68
+        },
+        "G": {
+          "second": 1874,
+          "minute": 31
+        },
+        "J": {
+          "second": 5769,
+          "minute": 96
+        },
+        "L": {
+          "second": 17406,
+          "minute": 290
+        }
+      }
+    },
+    {
+      "login": "teamsobo040",
+      "team": "Testigos de Turing",
+      "institution": "UPBLP",
+      "rankSouth": 48,
+      "rankGlobal": 143,
+      "solved": 5,
+      "penalty": 784,
+      "accepted": {
+        "B": {
+          "second": 13335,
+          "minute": 222
+        },
+        "D": {
+          "second": 3405,
+          "minute": 56
+        },
+        "F": {
+          "second": 9148,
+          "minute": 152
+        },
+        "G": {
+          "second": 4836,
+          "minute": 80
+        },
+        "J": {
+          "second": 4496,
+          "minute": 74
+        }
+      }
+    },
+    {
+      "login": "teamsoar052",
+      "team": "El pabellón",
+      "institution": "UNC",
+      "rankSouth": 49,
+      "rankGlobal": 150,
+      "solved": 4,
+      "penalty": 202,
+      "accepted": {
+        "D": {
+          "second": 957,
+          "minute": 15
+        },
+        "F": {
+          "second": 3872,
+          "minute": 64
+        },
+        "G": {
+          "second": 2292,
+          "minute": 38
+        },
+        "J": {
+          "second": 1534,
+          "minute": 25
+        }
+      }
+    },
+    {
+      "login": "teamsobo024",
+      "team": "Noches sin dormir, días sin reír",
+      "institution": "UPB - Cbba",
+      "rankSouth": 50,
+      "rankGlobal": 151,
+      "solved": 4,
+      "penalty": 208,
+      "accepted": {
+        "D": {
+          "second": 3849,
+          "minute": 64
+        },
+        "F": {
+          "second": 5130,
+          "minute": 85
+        },
+        "G": {
+          "second": 1688,
+          "minute": 28
+        },
+        "J": {
+          "second": 1868,
+          "minute": 31
+        }
+      }
+    },
+    {
+      "login": "teamsope019",
+      "team": "ChuchuWA",
+      "institution": "UTEC",
+      "rankSouth": 51,
+      "rankGlobal": 152,
+      "solved": 4,
+      "penalty": 213,
+      "accepted": {
+        "D": {
+          "second": 2448,
+          "minute": 40
+        },
+        "F": {
+          "second": 4722,
+          "minute": 78
+        },
+        "G": {
+          "second": 804,
+          "minute": 13
+        },
+        "J": {
+          "second": 2537,
+          "minute": 42
+        }
+      }
+    },
+    {
+      "login": "teamsope013",
+      "team": "Characatux",
+      "institution": "UNSA-IS",
+      "rankSouth": 52,
+      "rankGlobal": 155,
+      "solved": 4,
+      "penalty": 228,
+      "accepted": {
+        "D": {
+          "second": 1388,
+          "minute": 23
+        },
+        "F": {
+          "second": 5412,
+          "minute": 90
+        },
+        "G": {
+          "second": 3282,
+          "minute": 54
+        },
+        "J": {
+          "second": 2519,
+          "minute": 41
+        }
+      }
+    },
+    {
+      "login": "teamsope027",
+      "team": "déjame ver",
+      "institution": "UTEC",
+      "rankSouth": 53,
+      "rankGlobal": 157,
+      "solved": 4,
+      "penalty": 236,
+      "accepted": {
+        "D": {
+          "second": 2163,
+          "minute": 36
+        },
+        "F": {
+          "second": 4945,
+          "minute": 82
+        },
+        "G": {
+          "second": 2605,
+          "minute": 43
+        },
+        "J": {
+          "second": 3344,
+          "minute": 55
+        }
+      }
+    },
+    {
+      "login": "teamsope016",
+      "team": "Wasa",
+      "institution": "UNI FIIS",
+      "rankSouth": 54,
+      "rankGlobal": 159,
+      "solved": 4,
+      "penalty": 257,
+      "accepted": {
+        "D": {
+          "second": 1688,
+          "minute": 28
+        },
+        "F": {
+          "second": 6539,
+          "minute": 108
+        },
+        "G": {
+          "second": 3584,
+          "minute": 59
+        },
+        "J": {
+          "second": 1326,
+          "minute": 22
+        }
+      }
+    },
+    {
+      "login": "teamsocl009",
+      "team": "Xx_Jaime_y_los_Papus_67_xX",
+      "institution": "UCM",
+      "rankSouth": 55,
+      "rankGlobal": 160,
+      "solved": 4,
+      "penalty": 261,
+      "accepted": {
+        "D": {
+          "second": 1853,
+          "minute": 30
+        },
+        "F": {
+          "second": 6248,
+          "minute": 104
+        },
+        "G": {
+          "second": 2531,
+          "minute": 42
+        },
+        "J": {
+          "second": 3907,
+          "minute": 65
+        }
+      }
+    },
+    {
+      "login": "teamsocl012",
+      "team": "RotomCampanil",
+      "institution": "UdeC",
+      "rankSouth": 56,
+      "rankGlobal": 163,
+      "solved": 4,
+      "penalty": 278,
+      "accepted": {
+        "D": {
+          "second": 4046,
+          "minute": 67
+        },
+        "F": {
+          "second": 5577,
+          "minute": 92
+        },
+        "G": {
+          "second": 1401,
+          "minute": 23
+        },
+        "J": {
+          "second": 3395,
+          "minute": 56
+        }
+      }
+    },
+    {
+      "login": "teamsope028",
+      "team": "bogosorts !!!",
+      "institution": "UPC",
+      "rankSouth": 57,
+      "rankGlobal": 164,
+      "solved": 4,
+      "penalty": 280,
+      "accepted": {
+        "D": {
+          "second": 4423,
+          "minute": 73
+        },
+        "F": {
+          "second": 6554,
+          "minute": 109
+        },
+        "G": {
+          "second": 3151,
+          "minute": 52
+        },
+        "J": {
+          "second": 1598,
+          "minute": 26
+        }
+      }
+    },
+    {
+      "login": "teamsobo013",
+      "team": "Sal de mi cabeza∶ última advertencia",
+      "institution": "UMSS",
+      "rankSouth": 58,
+      "rankGlobal": 165,
+      "solved": 4,
+      "penalty": 282,
+      "accepted": {
+        "D": {
+          "second": 931,
+          "minute": 15
+        },
+        "F": {
+          "second": 8128,
+          "minute": 135
+        },
+        "G": {
+          "second": 1336,
+          "minute": 22
+        },
+        "J": {
+          "second": 1827,
+          "minute": 30
+        }
+      }
+    },
+    {
+      "login": "teamsoar051",
+      "team": "Vaquita Envidiosa",
+      "institution": "UNLP",
+      "rankSouth": 59,
+      "rankGlobal": 168,
+      "solved": 4,
+      "penalty": 284,
+      "accepted": {
+        "D": {
+          "second": 3888,
+          "minute": 64
+        },
+        "F": {
+          "second": 6271,
+          "minute": 104
+        },
+        "G": {
+          "second": 6025,
+          "minute": 100
+        },
+        "J": {
+          "second": 989,
+          "minute": 16
+        }
+      }
+    },
+    {
+      "login": "teamsoar002",
+      "team": "Granola Gagá",
+      "institution": "UNC",
+      "rankSouth": 60,
+      "rankGlobal": 170,
+      "solved": 4,
+      "penalty": 289,
+      "accepted": {
+        "D": {
+          "second": 2776,
+          "minute": 46
+        },
+        "F": {
+          "second": 5221,
+          "minute": 87
+        },
+        "G": {
+          "second": 3665,
+          "minute": 61
+        },
+        "J": {
+          "second": 3300,
+          "minute": 55
+        }
+      }
+    },
+    {
+      "login": "teamsope034",
+      "team": "Pseudocoders",
+      "institution": "UNMSM",
+      "rankSouth": 61,
+      "rankGlobal": 171,
+      "solved": 4,
+      "penalty": 294,
+      "accepted": {
+        "D": {
+          "second": 1219,
+          "minute": 20
+        },
+        "F": {
+          "second": 9299,
+          "minute": 154
+        },
+        "G": {
+          "second": 2062,
+          "minute": 34
+        },
+        "J": {
+          "second": 3979,
+          "minute": 66
+        }
+      }
+    },
+    {
+      "login": "teamsoar034",
+      "team": "Chirimbolo CP",
+      "institution": "UDESA",
+      "rankSouth": 62,
+      "rankGlobal": 174,
+      "solved": 4,
+      "penalty": 317,
+      "accepted": {
+        "D": {
+          "second": 1963,
+          "minute": 32
+        },
+        "F": {
+          "second": 8503,
+          "minute": 141
+        },
+        "G": {
+          "second": 3571,
+          "minute": 59
+        },
+        "J": {
+          "second": 3953,
+          "minute": 65
+        }
+      }
+    },
+    {
+      "login": "teamsope033",
+      "team": "EEGGCC",
+      "institution": "PUCP",
+      "rankSouth": 63,
+      "rankGlobal": 176,
+      "solved": 4,
+      "penalty": 332,
+      "accepted": {
+        "D": {
+          "second": 4907,
+          "minute": 81
+        },
+        "F": {
+          "second": 6438,
+          "minute": 107
+        },
+        "G": {
+          "second": 2191,
+          "minute": 36
+        },
+        "J": {
+          "second": 4098,
+          "minute": 68
+        }
+      }
+    },
+    {
+      "login": "teamsobo037",
+      "team": "Joan y sus amigos",
+      "institution": "UMSS",
+      "rankSouth": 64,
+      "rankGlobal": 177,
+      "solved": 4,
+      "penalty": 335,
+      "accepted": {
+        "D": {
+          "second": 2198,
+          "minute": 36
+        },
+        "F": {
+          "second": 11472,
+          "minute": 191
+        },
+        "G": {
+          "second": 955,
+          "minute": 15
+        },
+        "J": {
+          "second": 3198,
+          "minute": 53
+        }
+      }
+    },
+    {
+      "login": "teamsobo067",
+      "team": "RISE",
+      "institution": "UPDS-Tarija",
+      "rankSouth": 65,
+      "rankGlobal": 179,
+      "solved": 4,
+      "penalty": 348,
+      "accepted": {
+        "D": {
+          "second": 2248,
+          "minute": 37
+        },
+        "F": {
+          "second": 5399,
+          "minute": 89
+        },
+        "G": {
+          "second": 3036,
+          "minute": 50
+        },
+        "J": {
+          "second": 6768,
+          "minute": 112
+        }
+      }
+    },
+    {
+      "login": "teamsocl017",
+      "team": "Claudio Gepeto Giménez",
+      "institution": "UChile",
+      "rankSouth": 66,
+      "rankGlobal": 182,
+      "solved": 4,
+      "penalty": 369,
+      "accepted": {
+        "D": {
+          "second": 7487,
+          "minute": 124
+        },
+        "F": {
+          "second": 5615,
+          "minute": 93
+        },
+        "G": {
+          "second": 4529,
+          "minute": 75
+        },
+        "J": {
+          "second": 3455,
+          "minute": 57
+        }
+      }
+    },
+    {
+      "login": "teamsobo051",
+      "team": "CodeTesters",
+      "institution": "UPBLP",
+      "rankSouth": 67,
+      "rankGlobal": 190,
+      "solved": 4,
+      "penalty": 412,
+      "accepted": {
+        "D": {
+          "second": 4214,
+          "minute": 70
+        },
+        "F": {
+          "second": 8596,
+          "minute": 143
+        },
+        "G": {
+          "second": 2334,
+          "minute": 38
+        },
+        "J": {
+          "second": 6073,
+          "minute": 101
+        }
+      }
+    },
+    {
+      "login": "teamsoar030",
+      "team": "BolitosFC",
+      "institution": "UNR",
+      "rankSouth": 68,
+      "rankGlobal": 195,
+      "solved": 4,
+      "penalty": 425,
+      "accepted": {
+        "D": {
+          "second": 3137,
+          "minute": 52
+        },
+        "F": {
+          "second": 12659,
+          "minute": 210
+        },
+        "G": {
+          "second": 3605,
+          "minute": 60
+        },
+        "J": {
+          "second": 2611,
+          "minute": 43
+        }
+      }
+    },
+    {
+      "login": "teamsoar003",
+      "team": "hola",
+      "institution": "UTN FRRo",
+      "rankSouth": 69,
+      "rankGlobal": 197,
+      "solved": 4,
+      "penalty": 431,
+      "accepted": {
+        "D": {
+          "second": 2645,
+          "minute": 44
+        },
+        "F": {
+          "second": 6614,
+          "minute": 110
+        },
+        "G": {
+          "second": 1638,
+          "minute": 27
+        },
+        "J": {
+          "second": 5456,
+          "minute": 90
+        }
+      }
+    },
+    {
+      "login": "teamsobo064",
+      "team": "Os vaciadinhos (Tomara que ñao houvesse dinheiro, ha dinheiro negativo)",
+      "institution": "UAJMS",
+      "rankSouth": 70,
+      "rankGlobal": 199,
+      "solved": 4,
+      "penalty": 439,
+      "accepted": {
+        "D": {
+          "second": 3899,
+          "minute": 64
+        },
+        "F": {
+          "second": 6268,
+          "minute": 104
+        },
+        "G": {
+          "second": 4577,
+          "minute": 76
+        },
+        "J": {
+          "second": 6908,
+          "minute": 115
+        }
+      }
+    },
+    {
+      "login": "teamsobo021",
+      "team": "Código Penal",
+      "institution": "UCB-Tarija",
+      "rankSouth": 71,
+      "rankGlobal": 201,
+      "solved": 4,
+      "penalty": 442,
+      "accepted": {
+        "D": {
+          "second": 5498,
+          "minute": 91
+        },
+        "F": {
+          "second": 12677,
+          "minute": 211
+        },
+        "G": {
+          "second": 2612,
+          "minute": 43
+        },
+        "J": {
+          "second": 1060,
+          "minute": 17
+        }
+      }
+    },
+    {
+      "login": "teamsobo038",
+      "team": "Cpbabies",
+      "institution": "UMSA",
+      "rankSouth": 72,
+      "rankGlobal": 204,
+      "solved": 4,
+      "penalty": 464,
+      "accepted": {
+        "D": {
+          "second": 2702,
+          "minute": 45
+        },
+        "F": {
+          "second": 8538,
+          "minute": 142
+        },
+        "G": {
+          "second": 8092,
+          "minute": 134
+        },
+        "J": {
+          "second": 4987,
+          "minute": 83
+        }
+      }
+    },
+    {
+      "login": "teamsobo029",
+      "team": "Equipo",
+      "institution": "UCB-Cochabamba",
+      "rankSouth": 73,
+      "rankGlobal": 208,
+      "solved": 4,
+      "penalty": 494,
+      "accepted": {
+        "D": {
+          "second": 1810,
+          "minute": 30
+        },
+        "F": {
+          "second": 11839,
+          "minute": 197
+        },
+        "G": {
+          "second": 2647,
+          "minute": 44
+        },
+        "J": {
+          "second": 5027,
+          "minute": 83
+        }
+      }
+    },
+    {
+      "login": "teamsoar005",
+      "team": "McDuck",
+      "institution": "UTN FRC",
+      "rankSouth": 74,
+      "rankGlobal": 209,
+      "solved": 4,
+      "penalty": 497,
+      "accepted": {
+        "D": {
+          "second": 5995,
+          "minute": 99
+        },
+        "F": {
+          "second": 15272,
+          "minute": 254
+        },
+        "G": {
+          "second": 2160,
+          "minute": 36
+        },
+        "J": {
+          "second": 5337,
+          "minute": 88
+        }
+      }
+    },
+    {
+      "login": "teamsobo070",
+      "team": "Gatitas Bondadosas",
+      "institution": "UMSS",
+      "rankSouth": 75,
+      "rankGlobal": 210,
+      "solved": 4,
+      "penalty": 504,
+      "accepted": {
+        "D": {
+          "second": 2555,
+          "minute": 42
+        },
+        "F": {
+          "second": 13042,
+          "minute": 217
+        },
+        "G": {
+          "second": 7476,
+          "minute": 124
+        },
+        "J": {
+          "second": 4865,
+          "minute": 81
+        }
+      }
+    },
+    {
+      "login": "teamsobo073",
+      "team": "==true",
+      "institution": "UPBLP",
+      "rankSouth": 76,
+      "rankGlobal": 211,
+      "solved": 4,
+      "penalty": 511,
+      "accepted": {
+        "D": {
+          "second": 2653,
+          "minute": 44
+        },
+        "F": {
+          "second": 12941,
+          "minute": 215
+        },
+        "G": {
+          "second": 3257,
+          "minute": 54
+        },
+        "J": {
+          "second": 2311,
+          "minute": 38
+        }
+      }
+    },
+    {
+      "login": "teamsope025",
+      "team": "CorridosOnichan",
+      "institution": "UNI FIIS",
+      "rankSouth": 77,
+      "rankGlobal": 213,
+      "solved": 4,
+      "penalty": 513,
+      "accepted": {
+        "D": {
+          "second": 2993,
+          "minute": 49
+        },
+        "F": {
+          "second": 6245,
+          "minute": 104
+        },
+        "G": {
+          "second": 3284,
+          "minute": 54
+        },
+        "J": {
+          "second": 14782,
+          "minute": 246
+        }
+      }
+    },
+    {
+      "login": "teamsope020",
+      "team": "Newbie Jeans",
+      "institution": "UPC",
+      "rankSouth": 78,
+      "rankGlobal": 214,
+      "solved": 4,
+      "penalty": 515,
+      "accepted": {
+        "D": {
+          "second": 2813,
+          "minute": 46
+        },
+        "F": {
+          "second": 13080,
+          "minute": 218
+        },
+        "G": {
+          "second": 2426,
+          "minute": 40
+        },
+        "J": {
+          "second": 5510,
+          "minute": 91
+        }
+      }
+    },
+    {
+      "login": "teamsoar035",
+      "team": "Byteare",
+      "institution": "UNLP",
+      "rankSouth": 79,
+      "rankGlobal": 216,
+      "solved": 4,
+      "penalty": 529,
+      "accepted": {
+        "D": {
+          "second": 6366,
+          "minute": 106
+        },
+        "F": {
+          "second": 13779,
+          "minute": 229
+        },
+        "G": {
+          "second": 4818,
+          "minute": 80
+        },
+        "J": {
+          "second": 3265,
+          "minute": 54
+        }
+      }
+    },
+    {
+      "login": "teamsope018",
+      "team": "Donde estas CR7!!",
+      "institution": "UNJFSC",
+      "rankSouth": 80,
+      "rankGlobal": 217,
+      "solved": 4,
+      "penalty": 531,
+      "accepted": {
+        "D": {
+          "second": 3492,
+          "minute": 58
+        },
+        "F": {
+          "second": 11391,
+          "minute": 189
+        },
+        "G": {
+          "second": 7577,
+          "minute": 126
+        },
+        "J": {
+          "second": 4721,
+          "minute": 78
+        }
+      }
+    },
+    {
+      "login": "teamsobo017",
+      "team": "Mapaches Chambeadores sin Chamba",
+      "institution": "UCB-Cochabamba",
+      "rankSouth": 81,
+      "rankGlobal": 218,
+      "solved": 4,
+      "penalty": 536,
+      "accepted": {
+        "D": {
+          "second": 5897,
+          "minute": 98
+        },
+        "F": {
+          "second": 10455,
+          "minute": 174
+        },
+        "G": {
+          "second": 3959,
+          "minute": 65
+        },
+        "J": {
+          "second": 3575,
+          "minute": 59
+        }
+      }
+    },
+    {
+      "login": "teamsobo048",
+      "team": "Toy cansado gfe",
+      "institution": "UMSS",
+      "rankSouth": 82,
+      "rankGlobal": 223,
+      "solved": 4,
+      "penalty": 568,
+      "accepted": {
+        "D": {
+          "second": 4507,
+          "minute": 75
+        },
+        "F": {
+          "second": 10828,
+          "minute": 180
+        },
+        "G": {
+          "second": 4211,
+          "minute": 70
+        },
+        "J": {
+          "second": 8600,
+          "minute": 143
+        }
+      }
+    },
+    {
+      "login": "teamsobo032",
+      "team": "Cookies",
+      "institution": "USFX",
+      "rankSouth": 83,
+      "rankGlobal": 224,
+      "solved": 4,
+      "penalty": 568,
+      "accepted": {
+        "D": {
+          "second": 7297,
+          "minute": 121
+        },
+        "F": {
+          "second": 16077,
+          "minute": 267
+        },
+        "G": {
+          "second": 2726,
+          "minute": 45
+        },
+        "J": {
+          "second": 3354,
+          "minute": 55
+        }
+      }
+    },
+    {
+      "login": "teamsoar014",
+      "team": "Los predicadores de Linux",
+      "institution": "UNLaM",
+      "rankSouth": 84,
+      "rankGlobal": 231,
+      "solved": 4,
+      "penalty": 592,
+      "accepted": {
+        "D": {
+          "second": 2238,
+          "minute": 37
+        },
+        "F": {
+          "second": 12604,
+          "minute": 210
+        },
+        "G": {
+          "second": 3072,
+          "minute": 51
+        },
+        "J": {
+          "second": 14083,
+          "minute": 234
+        }
+      }
+    },
+    {
+      "login": "teamsope008",
+      "team": "El poder de la amistad no alcanza",
+      "institution": "UNSA-CC",
+      "rankSouth": 85,
+      "rankGlobal": 232,
+      "solved": 4,
+      "penalty": 598,
+      "accepted": {
+        "D": {
+          "second": 4865,
+          "minute": 81
+        },
+        "F": {
+          "second": 17039,
+          "minute": 283
+        },
+        "G": {
+          "second": 8087,
+          "minute": 134
+        },
+        "J": {
+          "second": 6005,
+          "minute": 100
+        }
+      }
+    },
+    {
+      "login": "teamsobo027",
+      "team": "NO ERA GREEDY",
+      "institution": "UTO",
+      "rankSouth": 86,
+      "rankGlobal": 238,
+      "solved": 4,
+      "penalty": 639,
+      "accepted": {
+        "D": {
+          "second": 2544,
+          "minute": 42
+        },
+        "F": {
+          "second": 17267,
+          "minute": 287
+        },
+        "G": {
+          "second": 7943,
+          "minute": 132
+        },
+        "J": {
+          "second": 4695,
+          "minute": 78
+        }
+      }
+    },
+    {
+      "login": "teamsoar025",
+      "team": "PABLO.md",
+      "institution": "UTN FRRe",
+      "rankSouth": 87,
+      "rankGlobal": 241,
+      "solved": 4,
+      "penalty": 669,
+      "accepted": {
+        "D": {
+          "second": 5764,
+          "minute": 96
+        },
+        "F": {
+          "second": 10263,
+          "minute": 171
+        },
+        "G": {
+          "second": 4902,
+          "minute": 81
+        },
+        "J": {
+          "second": 12085,
+          "minute": 201
+        }
+      }
+    },
+    {
+      "login": "teamsope003",
+      "team": "Pingpong good",
+      "institution": "UNSA-CC",
+      "rankSouth": 88,
+      "rankGlobal": 243,
+      "solved": 4,
+      "penalty": 697,
+      "accepted": {
+        "D": {
+          "second": 4541,
+          "minute": 75
+        },
+        "F": {
+          "second": 12186,
+          "minute": 203
+        },
+        "G": {
+          "second": 5338,
+          "minute": 88
+        },
+        "J": {
+          "second": 15096,
+          "minute": 251
+        }
+      }
+    },
+    {
+      "login": "teamsoar004",
+      "team": "PodadoraSexy?!",
+      "institution": "UTN FRSF",
+      "rankSouth": 89,
+      "rankGlobal": 245,
+      "solved": 4,
+      "penalty": 712,
+      "accepted": {
+        "D": {
+          "second": 7801,
+          "minute": 130
+        },
+        "F": {
+          "second": 6364,
+          "minute": 106
+        },
+        "G": {
+          "second": 4046,
+          "minute": 67
+        },
+        "J": {
+          "second": 11342,
+          "minute": 189
+        }
+      }
+    },
+    {
+      "login": "teamsobo059",
+      "team": "Los desquiciados",
+      "institution": "UMSS",
+      "rankSouth": 90,
+      "rankGlobal": 249,
+      "solved": 4,
+      "penalty": 747,
+      "accepted": {
+        "D": {
+          "second": 7456,
+          "minute": 124
+        },
+        "F": {
+          "second": 13623,
+          "minute": 227
+        },
+        "G": {
+          "second": 4058,
+          "minute": 67
+        },
+        "J": {
+          "second": 1760,
+          "minute": 29
+        }
+      }
+    },
+    {
+      "login": "teamsoar024",
+      "team": "SlimeChunk",
+      "institution": "UDESA",
+      "rankSouth": 91,
+      "rankGlobal": 250,
+      "solved": 4,
+      "penalty": 773,
+      "accepted": {
+        "D": {
+          "second": 10511,
+          "minute": 175
+        },
+        "F": {
+          "second": 15397,
+          "minute": 256
+        },
+        "G": {
+          "second": 6411,
+          "minute": 106
+        },
+        "J": {
+          "second": 2170,
+          "minute": 36
+        }
+      }
+    },
+    {
+      "login": "teamsocl013",
+      "team": "SinTáctica",
+      "institution": "UACH-CL",
+      "rankSouth": 92,
+      "rankGlobal": 255,
+      "solved": 4,
+      "penalty": 890,
+      "accepted": {
+        "D": {
+          "second": 3631,
+          "minute": 60
+        },
+        "F": {
+          "second": 11183,
+          "minute": 186
+        },
+        "G": {
+          "second": 5241,
+          "minute": 87
+        },
+        "J": {
+          "second": 17839,
+          "minute": 297
+        }
+      }
+    },
+    {
+      "login": "teamsocl037",
+      "team": "mira mamá sin caña",
+      "institution": "UChile",
+      "rankSouth": 93,
+      "rankGlobal": 256,
+      "solved": 4,
+      "penalty": 909,
+      "accepted": {
+        "D": {
+          "second": 6602,
+          "minute": 110
+        },
+        "F": {
+          "second": 13090,
+          "minute": 218
+        },
+        "G": {
+          "second": 2225,
+          "minute": 37
+        },
+        "J": {
+          "second": 11057,
+          "minute": 184
+        }
+      }
+    },
+    {
+      "login": "teamsoar055",
+      "team": "Computops",
+      "institution": "UNT",
+      "rankSouth": 94,
+      "rankGlobal": 257,
+      "solved": 4,
+      "penalty": 1148,
+      "accepted": {
+        "D": {
+          "second": 10341,
+          "minute": 172
+        },
+        "F": {
+          "second": 17504,
+          "minute": 291
+        },
+        "G": {
+          "second": 2867,
+          "minute": 47
+        },
+        "J": {
+          "second": 14308,
+          "minute": 238
+        }
+      }
+    },
+    {
+      "login": "teamsope030",
+      "team": "TomorrowXtimeout",
+      "institution": "UNI FC",
+      "rankSouth": 95,
+      "rankGlobal": 260,
+      "solved": 3,
+      "penalty": 194,
+      "accepted": {
+        "D": {
+          "second": 5611,
+          "minute": 93
+        },
+        "G": {
+          "second": 1534,
+          "minute": 25
+        },
+        "J": {
+          "second": 3377,
+          "minute": 56
+        }
+      }
+    },
+    {
+      "login": "teamsocl024",
+      "team": "sana sana potito de rana",
+      "institution": "UChile",
+      "rankSouth": 96,
+      "rankGlobal": 262,
+      "solved": 3,
+      "penalty": 224,
+      "accepted": {
+        "D": {
+          "second": 6873,
+          "minute": 114
+        },
+        "G": {
+          "second": 2598,
+          "minute": 43
+        },
+        "J": {
+          "second": 4042,
+          "minute": 67
+        }
+      }
+    },
+    {
+      "login": "teamsobo049",
+      "team": "DIV5∶ Las Wawas del LuchXDD",
+      "institution": "UMSA",
+      "rankSouth": 97,
+      "rankGlobal": 264,
+      "solved": 3,
+      "penalty": 234,
+      "accepted": {
+        "D": {
+          "second": 6040,
+          "minute": 100
+        },
+        "G": {
+          "second": 5740,
+          "minute": 95
+        },
+        "J": {
+          "second": 2368,
+          "minute": 39
+        }
+      }
+    },
+    {
+      "login": "teamsocl026",
+      "team": "Papas Duquesa",
+      "institution": "UdeC",
+      "rankSouth": 98,
+      "rankGlobal": 266,
+      "solved": 3,
+      "penalty": 258,
+      "accepted": {
+        "D": {
+          "second": 2580,
+          "minute": 43
+        },
+        "G": {
+          "second": 6485,
+          "minute": 108
+        },
+        "J": {
+          "second": 4040,
+          "minute": 67
+        }
+      }
+    },
+    {
+      "login": "teamsocl033",
+      "team": "localhost∶6969/OpenToWork",
+      "institution": "UDP",
+      "rankSouth": 99,
+      "rankGlobal": 269,
+      "solved": 3,
+      "penalty": 282,
+      "accepted": {
+        "D": {
+          "second": 10571,
+          "minute": 176
+        },
+        "G": {
+          "second": 1108,
+          "minute": 18
+        },
+        "J": {
+          "second": 5299,
+          "minute": 88
+        }
+      }
+    },
+    {
+      "login": "teamsope023",
+      "team": "jesus humilha satanas",
+      "institution": "UTEC",
+      "rankSouth": 100,
+      "rankGlobal": 270,
+      "solved": 3,
+      "penalty": 282,
+      "accepted": {
+        "D": {
+          "second": 11162,
+          "minute": 186
+        },
+        "G": {
+          "second": 2889,
+          "minute": 48
+        },
+        "J": {
+          "second": 1684,
+          "minute": 28
+        }
+      }
+    },
+    {
+      "login": "teamsocl011",
+      "team": "Starken Industries",
+      "institution": "UTFSM",
+      "rankSouth": 101,
+      "rankGlobal": 271,
+      "solved": 3,
+      "penalty": 295,
+      "accepted": {
+        "D": {
+          "second": 11074,
+          "minute": 184
+        },
+        "G": {
+          "second": 2457,
+          "minute": 40
+        },
+        "J": {
+          "second": 3060,
+          "minute": 51
+        }
+      }
+    },
+    {
+      "login": "teamsocl025",
+      "team": "LemusXMrNachoXNettleXClaptXPampillaXValdiviaSinRemi",
+      "institution": "UCN",
+      "rankSouth": 102,
+      "rankGlobal": 272,
+      "solved": 3,
+      "penalty": 305,
+      "accepted": {
+        "D": {
+          "second": 3360,
+          "minute": 56
+        },
+        "G": {
+          "second": 4808,
+          "minute": 80
+        },
+        "J": {
+          "second": 8945,
+          "minute": 149
+        }
+      }
+    },
+    {
+      "login": "teamsobo077",
+      "team": "Quantum Coders",
+      "institution": "UV-La Paz",
+      "rankSouth": 103,
+      "rankGlobal": 276,
+      "solved": 3,
+      "penalty": 327,
+      "accepted": {
+        "D": {
+          "second": 3193,
+          "minute": 53
+        },
+        "G": {
+          "second": 4935,
+          "minute": 82
+        },
+        "J": {
+          "second": 7949,
+          "minute": 132
+        }
+      }
+    },
+    {
+      "login": "teamsocl018",
+      "team": "La criba",
+      "institution": "UTFSM",
+      "rankSouth": 104,
+      "rankGlobal": 277,
+      "solved": 3,
+      "penalty": 327,
+      "accepted": {
+        "D": {
+          "second": 4338,
+          "minute": 72
+        },
+        "G": {
+          "second": 3141,
+          "minute": 52
+        },
+        "J": {
+          "second": 8622,
+          "minute": 143
+        }
+      }
+    },
+    {
+      "login": "teamsoar037",
+      "team": "Mono Pollo NP++ 18",
+      "institution": "UNT",
+      "rankSouth": 105,
+      "rankGlobal": 278,
+      "solved": 3,
+      "penalty": 332,
+      "accepted": {
+        "D": {
+          "second": 4476,
+          "minute": 74
+        },
+        "G": {
+          "second": 11356,
+          "minute": 189
+        },
+        "J": {
+          "second": 2993,
+          "minute": 49
+        }
+      }
+    },
+    {
+      "login": "teamsobo055",
+      "team": "BOSCOSOFT",
+      "institution": "UATF-II",
+      "rankSouth": 106,
+      "rankGlobal": 281,
+      "solved": 3,
+      "penalty": 355,
+      "accepted": {
+        "D": {
+          "second": 11711,
+          "minute": 195
+        },
+        "G": {
+          "second": 6083,
+          "minute": 101
+        },
+        "J": {
+          "second": 2390,
+          "minute": 39
+        }
+      }
+    },
+    {
+      "login": "teamsope011",
+      "team": "Llamita Recursiva",
+      "institution": "UNSAAC",
+      "rankSouth": 107,
+      "rankGlobal": 284,
+      "solved": 3,
+      "penalty": 364,
+      "accepted": {
+        "D": {
+          "second": 3535,
+          "minute": 58
+        },
+        "G": {
+          "second": 9684,
+          "minute": 161
+        },
+        "J": {
+          "second": 8707,
+          "minute": 145
+        }
+      }
+    },
+    {
+      "login": "teamsoar026",
+      "team": "echo",
+      "institution": "UTDT",
+      "rankSouth": 108,
+      "rankGlobal": 286,
+      "solved": 3,
+      "penalty": 386,
+      "accepted": {
+        "D": {
+          "second": 9308,
+          "minute": 155
+        },
+        "G": {
+          "second": 7352,
+          "minute": 122
+        },
+        "J": {
+          "second": 2964,
+          "minute": 49
+        }
+      }
+    },
+    {
+      "login": "teamsocl008",
+      "team": "Programandriles",
+      "institution": "PUC",
+      "rankSouth": 109,
+      "rankGlobal": 287,
+      "solved": 3,
+      "penalty": 389,
+      "accepted": {
+        "D": {
+          "second": 6282,
+          "minute": 104
+        },
+        "G": {
+          "second": 3920,
+          "minute": 65
+        },
+        "J": {
+          "second": 10821,
+          "minute": 180
+        }
+      }
+    },
+    {
+      "login": "teamsope002",
+      "team": "InfoProtas++",
+      "institution": "UNSAAC",
+      "rankSouth": 110,
+      "rankGlobal": 289,
+      "solved": 3,
+      "penalty": 401,
+      "accepted": {
+        "D": {
+          "second": 9449,
+          "minute": 157
+        },
+        "G": {
+          "second": 5282,
+          "minute": 88
+        },
+        "J": {
+          "second": 6990,
+          "minute": 116
+        }
+      }
+    },
+    {
+      "login": "teamsobo034",
+      "team": "Qubit-UTEPSA",
+      "institution": "UTEPSA",
+      "rankSouth": 111,
+      "rankGlobal": 291,
+      "solved": 3,
+      "penalty": 404,
+      "accepted": {
+        "D": {
+          "second": 9556,
+          "minute": 159
+        },
+        "G": {
+          "second": 7082,
+          "minute": 118
+        },
+        "J": {
+          "second": 6448,
+          "minute": 107
+        }
+      }
+    },
+    {
+      "login": "teamsoar054",
+      "team": "Ed, Edd y Eddy",
+      "institution": "UNLaM",
+      "rankSouth": 112,
+      "rankGlobal": 292,
+      "solved": 3,
+      "penalty": 410,
+      "accepted": {
+        "D": {
+          "second": 9006,
+          "minute": 150
+        },
+        "G": {
+          "second": 8131,
+          "minute": 135
+        },
+        "J": {
+          "second": 2721,
+          "minute": 45
+        }
+      }
+    },
+    {
+      "login": "teamsocl005",
+      "team": "Os poporopos",
+      "institution": "UCN",
+      "rankSouth": 113,
+      "rankGlobal": 299,
+      "solved": 3,
+      "penalty": 433,
+      "accepted": {
+        "D": {
+          "second": 7799,
+          "minute": 129
+        },
+        "G": {
+          "second": 5844,
+          "minute": 97
+        },
+        "J": {
+          "second": 7671,
+          "minute": 127
+        }
+      }
+    },
+    {
+      "login": "teamsoar045",
+      "team": "Fuerza de la Trinidad",
+      "institution": "UTN FRRe",
+      "rankSouth": 114,
+      "rankGlobal": 301,
+      "solved": 3,
+      "penalty": 439,
+      "accepted": {
+        "D": {
+          "second": 13291,
+          "minute": 221
+        },
+        "G": {
+          "second": 4276,
+          "minute": 71
+        },
+        "J": {
+          "second": 5262,
+          "minute": 87
+        }
+      }
+    },
+    {
+      "login": "teamsobo041",
+      "team": "Glorp",
+      "institution": "UCB-Cochabamba",
+      "rankSouth": 115,
+      "rankGlobal": 303,
+      "solved": 3,
+      "penalty": 470,
+      "accepted": {
+        "D": {
+          "second": 9609,
+          "minute": 160
+        },
+        "G": {
+          "second": 9318,
+          "minute": 155
+        },
+        "J": {
+          "second": 8148,
+          "minute": 135
+        }
+      }
+    },
+    {
+      "login": "teamsocl027",
+      "team": "UACHiturros",
+      "institution": "UACH-CL",
+      "rankSouth": 116,
+      "rankGlobal": 306,
+      "solved": 3,
+      "penalty": 494,
+      "accepted": {
+        "F": {
+          "second": 7918,
+          "minute": 131
+        },
+        "G": {
+          "second": 7019,
+          "minute": 116
+        },
+        "J": {
+          "second": 11239,
+          "minute": 187
+        }
+      }
+    },
+    {
+      "login": "teamsocl019",
+      "team": "TeraTigers",
+      "institution": "UdeC",
+      "rankSouth": 117,
+      "rankGlobal": 315,
+      "solved": 3,
+      "penalty": 587,
+      "accepted": {
+        "D": {
+          "second": 12724,
+          "minute": 212
+        },
+        "G": {
+          "second": 2381,
+          "minute": 39
+        },
+        "J": {
+          "second": 16613,
+          "minute": 276
+        }
+      }
+    },
+    {
+      "login": "teamsobo010",
+      "team": "Team_Limit",
+      "institution": "UPDS",
+      "rankSouth": 118,
+      "rankGlobal": 316,
+      "solved": 3,
+      "penalty": 588,
+      "accepted": {
+        "D": {
+          "second": 5542,
+          "minute": 92
+        },
+        "G": {
+          "second": 7932,
+          "minute": 132
+        },
+        "J": {
+          "second": 13496,
+          "minute": 224
+        }
+      }
+    },
+    {
+      "login": "teamsocl039",
+      "team": "Pelantaro 208",
+      "institution": "UCN",
+      "rankSouth": 119,
+      "rankGlobal": 318,
+      "solved": 3,
+      "penalty": 600,
+      "accepted": {
+        "D": {
+          "second": 16989,
+          "minute": 283
+        },
+        "G": {
+          "second": 6049,
+          "minute": 100
+        },
+        "J": {
+          "second": 8224,
+          "minute": 137
+        }
+      }
+    },
+    {
+      "login": "teamsoar036",
+      "team": "Trío 200",
+      "institution": "UNRC",
+      "rankSouth": 120,
+      "rankGlobal": 319,
+      "solved": 3,
+      "penalty": 605,
+      "accepted": {
+        "D": {
+          "second": 11389,
+          "minute": 189
+        },
+        "G": {
+          "second": 7990,
+          "minute": 133
+        },
+        "J": {
+          "second": 12192,
+          "minute": 203
+        }
+      }
+    },
+    {
+      "login": "teamsobo044",
+      "team": "Los ex's de mi hermana",
+      "institution": "USFX",
+      "rankSouth": 121,
+      "rankGlobal": 321,
+      "solved": 3,
+      "penalty": 612,
+      "accepted": {
+        "D": {
+          "second": 13918,
+          "minute": 231
+        },
+        "G": {
+          "second": 6447,
+          "minute": 107
+        },
+        "J": {
+          "second": 8095,
+          "minute": 134
+        }
+      }
+    },
+    {
+      "login": "teamsocl023",
+      "team": "Dividimos Pero NO Conquistamos",
+      "institution": "UCM",
+      "rankSouth": 122,
+      "rankGlobal": 323,
+      "solved": 3,
+      "penalty": 646,
+      "accepted": {
+        "D": {
+          "second": 12085,
+          "minute": 201
+        },
+        "G": {
+          "second": 15488,
+          "minute": 258
+        },
+        "J": {
+          "second": 7646,
+          "minute": 127
+        }
+      }
+    },
+    {
+      "login": "teamsocl036",
+      "team": "sopaipillinas",
+      "institution": "PUC",
+      "rankSouth": 123,
+      "rankGlobal": 328,
+      "solved": 3,
+      "penalty": 718,
+      "accepted": {
+        "D": {
+          "second": 8038,
+          "minute": 133
+        },
+        "G": {
+          "second": 9414,
+          "minute": 156
+        },
+        "J": {
+          "second": 17345,
+          "minute": 289
+        }
+      }
+    },
+    {
+      "login": "teamsope026",
+      "team": "Los chocolateros",
+      "institution": "UNI FC",
+      "rankSouth": 124,
+      "rankGlobal": 331,
+      "solved": 3,
+      "penalty": 761,
+      "accepted": {
+        "D": {
+          "second": 17782,
+          "minute": 296
+        },
+        "G": {
+          "second": 13854,
+          "minute": 230
+        },
+        "J": {
+          "second": 5733,
+          "minute": 95
+        }
+      }
+    },
+    {
+      "login": "teamsobo023",
+      "team": "TRIPLE-A",
+      "institution": "UV-Sucre",
+      "rankSouth": 125,
+      "rankGlobal": 332,
+      "solved": 3,
+      "penalty": 851,
+      "accepted": {
+        "D": {
+          "second": 17806,
+          "minute": 296
+        },
+        "G": {
+          "second": 15230,
+          "minute": 253
+        },
+        "J": {
+          "second": 10944,
+          "minute": 182
+        }
+      }
+    },
+    {
+      "login": "teamsobo071",
+      "team": "Sin WA no hay paraíso∶ Jairo The Last Dance",
+      "institution": "UTO",
+      "rankSouth": 126,
+      "rankGlobal": 333,
+      "solved": 3,
+      "penalty": 870,
+      "accepted": {
+        "D": {
+          "second": 13516,
+          "minute": 225
+        },
+        "G": {
+          "second": 16137,
+          "minute": 268
+        },
+        "J": {
+          "second": 11859,
+          "minute": 197
+        }
+      }
+    },
+    {
+      "login": "teamsobo079",
+      "team": "Caballero hace lo suyo y se retira",
+      "institution": "UAGRM",
+      "rankSouth": 127,
+      "rankGlobal": 334,
+      "solved": 3,
+      "penalty": 947,
+      "accepted": {
+        "D": {
+          "second": 9363,
+          "minute": 156
+        },
+        "G": {
+          "second": 13192,
+          "minute": 219
+        },
+        "J": {
+          "second": 17525,
+          "minute": 292
+        }
+      }
+    },
+    {
+      "login": "teamsobo061",
+      "team": "DORAMAS",
+      "institution": "EMI",
+      "rankSouth": 128,
+      "rankGlobal": 336,
+      "solved": 2,
+      "penalty": 134,
+      "accepted": {
+        "D": {
+          "second": 3025,
+          "minute": 50
+        },
+        "G": {
+          "second": 5082,
+          "minute": 84
+        }
+      }
+    },
+    {
+      "login": "teamsobo003",
+      "team": "La red flag y sus pastos",
+      "institution": "UTO",
+      "rankSouth": 129,
+      "rankGlobal": 339,
+      "solved": 2,
+      "penalty": 174,
+      "accepted": {
+        "D": {
+          "second": 3535,
+          "minute": 58
+        },
+        "G": {
+          "second": 7006,
+          "minute": 116
+        }
+      }
+    },
+    {
+      "login": "teamsocl032",
+      "team": "Hachigang",
+      "institution": "UCN",
+      "rankSouth": 130,
+      "rankGlobal": 341,
+      "solved": 2,
+      "penalty": 197,
+      "accepted": {
+        "D": {
+          "second": 7640,
+          "minute": 127
+        },
+        "G": {
+          "second": 4223,
+          "minute": 70
+        }
+      }
+    },
+    {
+      "login": "teamsoar019",
+      "team": "Dullahan",
+      "institution": "UNL",
+      "rankSouth": 131,
+      "rankGlobal": 342,
+      "solved": 2,
+      "penalty": 216,
+      "accepted": {
+        "D": {
+          "second": 4007,
+          "minute": 66
+        },
+        "G": {
+          "second": 6628,
+          "minute": 110
+        }
+      }
+    },
+    {
+      "login": "teamsobo076",
+      "team": "Patitas de pollo \"The last dance\"",
+      "institution": "UATF-IS",
+      "rankSouth": 132,
+      "rankGlobal": 345,
+      "solved": 2,
+      "penalty": 253,
+      "accepted": {
+        "D": {
+          "second": 4542,
+          "minute": 75
+        },
+        "G": {
+          "second": 8310,
+          "minute": 138
+        }
+      }
+    },
+    {
+      "login": "teamsope012",
+      "team": "NullPointer con ∶w",
+      "institution": "UNSA-CC",
+      "rankSouth": 133,
+      "rankGlobal": 346,
+      "solved": 2,
+      "penalty": 261,
+      "accepted": {
+        "D": {
+          "second": 4247,
+          "minute": 70
+        },
+        "G": {
+          "second": 11508,
+          "minute": 191
+        }
+      }
+    },
+    {
+      "login": "teamsobo033",
+      "team": "Credo Ut Intelligam",
+      "institution": "UCB-Tarija",
+      "rankSouth": 134,
+      "rankGlobal": 348,
+      "solved": 2,
+      "penalty": 272,
+      "accepted": {
+        "G": {
+          "second": 13537,
+          "minute": 225
+        },
+        "J": {
+          "second": 2848,
+          "minute": 47
+        }
+      }
+    },
+    {
+      "login": "teamsobo054",
+      "team": "Las wawitas de Juan Jose∶ Requiem",
+      "institution": "UATF-IS",
+      "rankSouth": 135,
+      "rankGlobal": 349,
+      "solved": 2,
+      "penalty": 274,
+      "accepted": {
+        "D": {
+          "second": 5160,
+          "minute": 86
+        },
+        "G": {
+          "second": 10129,
+          "minute": 168
+        }
+      }
+    },
+    {
+      "login": "teamsobo039",
+      "team": "StarCode",
+      "institution": "UTO",
+      "rankSouth": 136,
+      "rankGlobal": 352,
+      "solved": 2,
+      "penalty": 287,
+      "accepted": {
+        "D": {
+          "second": 4721,
+          "minute": 78
+        },
+        "G": {
+          "second": 10174,
+          "minute": 169
+        }
+      }
+    },
+    {
+      "login": "teamsoar020",
+      "team": "UTNFRD - Eventually Accept",
+      "institution": "UTN FRD",
+      "rankSouth": 137,
+      "rankGlobal": 355,
+      "solved": 2,
+      "penalty": 327,
+      "accepted": {
+        "G": {
+          "second": 8931,
+          "minute": 148
+        },
+        "J": {
+          "second": 9564,
+          "minute": 159
+        }
+      }
+    },
+    {
+      "login": "teamsope007",
+      "team": "Accepted by judge, Rejected by her",
+      "institution": "UNSAAC",
+      "rankSouth": 138,
+      "rankGlobal": 356,
+      "solved": 2,
+      "penalty": 333,
+      "accepted": {
+        "D": {
+          "second": 9650,
+          "minute": 160
+        },
+        "G": {
+          "second": 10412,
+          "minute": 173
+        }
+      }
+    },
+    {
+      "login": "teamsoar047",
+      "team": "Pandas",
+      "institution": "UNSTA",
+      "rankSouth": 139,
+      "rankGlobal": 358,
+      "solved": 2,
+      "penalty": 354,
+      "accepted": {
+        "D": {
+          "second": 17344,
+          "minute": 289
+        },
+        "G": {
+          "second": 2713,
+          "minute": 45
+        }
+      }
+    },
+    {
+      "login": "teamsoar058",
+      "team": "UTNFRD - Cazadores de Utopías Imposibles",
+      "institution": "UTN FRD",
+      "rankSouth": 140,
+      "rankGlobal": 359,
+      "solved": 2,
+      "penalty": 356,
+      "accepted": {
+        "G": {
+          "second": 4817,
+          "minute": 80
+        },
+        "J": {
+          "second": 14217,
+          "minute": 236
+        }
+      }
+    },
+    {
+      "login": "teamsobo072",
+      "team": "Los /caveman",
+      "institution": "EMI",
+      "rankSouth": 141,
+      "rankGlobal": 360,
+      "solved": 2,
+      "penalty": 361,
+      "accepted": {
+        "D": {
+          "second": 13680,
+          "minute": 228
+        },
+        "G": {
+          "second": 7983,
+          "minute": 133
+        }
+      }
+    },
+    {
+      "login": "teamsobo063",
+      "team": "O(N^3) y Orgullosos",
+      "institution": "UCB-Santa Cruz",
+      "rankSouth": 142,
+      "rankGlobal": 361,
+      "solved": 2,
+      "penalty": 371,
+      "accepted": {
+        "D": {
+          "second": 8301,
+          "minute": 138
+        },
+        "G": {
+          "second": 11596,
+          "minute": 193
+        }
+      }
+    },
+    {
+      "login": "teamsobo074",
+      "team": "A++",
+      "institution": "UCB-Santa Cruz",
+      "rankSouth": 143,
+      "rankGlobal": 362,
+      "solved": 2,
+      "penalty": 391,
+      "accepted": {
+        "D": {
+          "second": 5699,
+          "minute": 94
+        },
+        "G": {
+          "second": 13054,
+          "minute": 217
+        }
+      }
+    },
+    {
+      "login": "teamsobo004",
+      "team": "Oreo Devs",
+      "institution": "EMI",
+      "rankSouth": 144,
+      "rankGlobal": 363,
+      "solved": 2,
+      "penalty": 397,
+      "accepted": {
+        "D": {
+          "second": 8855,
+          "minute": 147
+        },
+        "G": {
+          "second": 12658,
+          "minute": 210
+        }
+      }
+    },
+    {
+      "login": "teamsocl040",
+      "team": "UnDP",
+      "institution": "UDP",
+      "rankSouth": 145,
+      "rankGlobal": 364,
+      "solved": 2,
+      "penalty": 399,
+      "accepted": {
+        "D": {
+          "second": 15342,
+          "minute": 255
+        },
+        "G": {
+          "second": 5063,
+          "minute": 84
+        }
+      }
+    },
+    {
+      "login": "teamsobo012",
+      "team": "CodeMantikos",
+      "institution": "UNSXX- II",
+      "rankSouth": 146,
+      "rankGlobal": 366,
+      "solved": 2,
+      "penalty": 401,
+      "accepted": {
+        "D": {
+          "second": 6544,
+          "minute": 109
+        },
+        "J": {
+          "second": 17570,
+          "minute": 292
+        }
+      }
+    },
+    {
+      "login": "teamsobo035",
+      "team": "Lambda",
+      "institution": "UAB-La Paz",
+      "rankSouth": 147,
+      "rankGlobal": 367,
+      "solved": 2,
+      "penalty": 403,
+      "accepted": {
+        "G": {
+          "second": 9997,
+          "minute": 166
+        },
+        "J": {
+          "second": 3479,
+          "minute": 57
+        }
+      }
+    },
+    {
+      "login": "teamsocl020",
+      "team": "Better Call Claude",
+      "institution": "UACH-CL",
+      "rankSouth": 148,
+      "rankGlobal": 371,
+      "solved": 2,
+      "penalty": 417,
+      "accepted": {
+        "D": {
+          "second": 16669,
+          "minute": 277
+        },
+        "G": {
+          "second": 3612,
+          "minute": 60
+        }
+      }
+    },
+    {
+      "login": "teamsobo016",
+      "team": "Codewarriors",
+      "institution": "EMI",
+      "rankSouth": 149,
+      "rankGlobal": 372,
+      "solved": 2,
+      "penalty": 420,
+      "accepted": {
+        "D": {
+          "second": 6999,
+          "minute": 116
+        },
+        "G": {
+          "second": 12278,
+          "minute": 204
+        }
+      }
+    },
+    {
+      "login": "teamsobo030",
+      "team": "Pachequitos Final Form",
+      "institution": "USFX-Chuquisaca",
+      "rankSouth": 150,
+      "rankGlobal": 373,
+      "solved": 2,
+      "penalty": 429,
+      "accepted": {
+        "G": {
+          "second": 16731,
+          "minute": 278
+        },
+        "J": {
+          "second": 4282,
+          "minute": 71
+        }
+      }
+    },
+    {
+      "login": "teamsoar006",
+      "team": "The Java Padawans",
+      "institution": "UNSa-AR",
+      "rankSouth": 151,
+      "rankGlobal": 377,
+      "solved": 2,
+      "penalty": 479,
+      "accepted": {
+        "D": {
+          "second": 16105,
+          "minute": 268
+        },
+        "J": {
+          "second": 7884,
+          "minute": 131
+        }
+      }
+    },
+    {
+      "login": "teamsocl002",
+      "team": "Métodos Cuestionables de Codificación",
+      "institution": "UCM",
+      "rankSouth": 152,
+      "rankGlobal": 379,
+      "solved": 2,
+      "penalty": 488,
+      "accepted": {
+        "D": {
+          "second": 16380,
+          "minute": 273
+        },
+        "G": {
+          "second": 6940,
+          "minute": 115
+        }
+      }
+    },
+    {
+      "login": "teamsocl016",
+      "team": "Dos neuronas y media",
+      "institution": "UCM",
+      "rankSouth": 153,
+      "rankGlobal": 380,
+      "solved": 2,
+      "penalty": 525,
+      "accepted": {
+        "D": {
+          "second": 16492,
+          "minute": 274
+        },
+        "G": {
+          "second": 9107,
+          "minute": 151
+        }
+      }
+    },
+    {
+      "login": "teamsoar057",
+      "team": "StereoBosé",
+      "institution": "UNL",
+      "rankSouth": 154,
+      "rankGlobal": 381,
+      "solved": 2,
+      "penalty": 572,
+      "accepted": {
+        "G": {
+          "second": 10833,
+          "minute": 180
+        },
+        "J": {
+          "second": 10364,
+          "minute": 172
+        }
+      }
+    },
+    {
+      "login": "teamsobo068",
+      "team": "Snakil.com",
+      "institution": "Ucatec",
+      "rankSouth": 155,
+      "rankGlobal": 382,
+      "solved": 2,
+      "penalty": 597,
+      "accepted": {
+        "D": {
+          "second": 17674,
+          "minute": 294
+        },
+        "G": {
+          "second": 12215,
+          "minute": 203
+        }
+      }
+    },
+    {
+      "login": "teamsobo078",
+      "team": "CASI GANAMOS",
+      "institution": "UPDS-Tarija",
+      "rankSouth": 156,
+      "rankGlobal": 385,
+      "solved": 2,
+      "penalty": 652,
+      "accepted": {
+        "G": {
+          "second": 17317,
+          "minute": 288
+        },
+        "J": {
+          "second": 13445,
+          "minute": 224
+        }
+      }
+    },
+    {
+      "login": "teamsocl021",
+      "team": "Bogosort",
+      "institution": "UFT",
+      "rankSouth": 157,
+      "rankGlobal": 386,
+      "solved": 2,
+      "penalty": 678,
+      "accepted": {
+        "G": {
+          "second": 16098,
+          "minute": 268
+        },
+        "J": {
+          "second": 13835,
+          "minute": 230
+        }
+      }
+    },
+    {
+      "login": "teamsocl007",
+      "team": "Brute Force",
+      "institution": "UCSC",
+      "rankSouth": 158,
+      "rankGlobal": 390,
+      "solved": 1,
+      "penalty": 70,
+      "accepted": {
+        "G": {
+          "second": 4200,
+          "minute": 70
+        }
+      }
+    },
+    {
+      "login": "teamsoar010",
+      "team": "GIRLAS - UTNFRD",
+      "institution": "UTN FRD",
+      "rankSouth": 159,
+      "rankGlobal": 395,
+      "solved": 1,
+      "penalty": 108,
+      "accepted": {
+        "G": {
+          "second": 6493,
+          "minute": 108
+        }
+      }
+    },
+    {
+      "login": "teamsobo018",
+      "team": "Lazarus",
+      "institution": "UCB-Santa Cruz",
+      "rankSouth": 160,
+      "rankGlobal": 396,
+      "solved": 1,
+      "penalty": 113,
+      "accepted": {
+        "G": {
+          "second": 6811,
+          "minute": 113
+        }
+      }
+    },
+    {
+      "login": "teamsouy029",
+      "team": "Equipo UCU02",
+      "institution": "UCU",
+      "rankSouth": 161,
+      "rankGlobal": 401,
+      "solved": 1,
+      "penalty": 136,
+      "accepted": {
+        "G": {
+          "second": 8183,
+          "minute": 136
+        }
+      }
+    },
+    {
+      "login": "teamsobo031",
+      "team": "helloworld.py",
+      "institution": "UABJB",
+      "rankSouth": 162,
+      "rankGlobal": 404,
+      "solved": 1,
+      "penalty": 141,
+      "accepted": {
+        "D": {
+          "second": 7297,
+          "minute": 121
+        }
+      }
+    },
+    {
+      "login": "teamsobo052",
+      "team": "Charlie & los Kirks",
+      "institution": "UCB-Cochabamba",
+      "rankSouth": 163,
+      "rankGlobal": 406,
+      "solved": 1,
+      "penalty": 151,
+      "accepted": {
+        "G": {
+          "second": 9091,
+          "minute": 151
+        }
+      }
+    },
+    {
+      "login": "teamsope006",
+      "team": "QuitaElFreopen (UNAP)",
+      "institution": "UNAP",
+      "rankSouth": 164,
+      "rankGlobal": 407,
+      "solved": 1,
+      "penalty": 155,
+      "accepted": {
+        "G": {
+          "second": 9348,
+          "minute": 155
+        }
+      }
+    },
+    {
+      "login": "teamsoar016",
+      "team": "localhost∶3400",
+      "institution": "UTN FRRe",
+      "rankSouth": 165,
+      "rankGlobal": 411,
+      "solved": 1,
+      "penalty": 185,
+      "accepted": {
+        "G": {
+          "second": 11157,
+          "minute": 185
+        }
+      }
+    },
+    {
+      "login": "teamsocl006",
+      "team": "WomenInMaleFields",
+      "institution": "UDP",
+      "rankSouth": 166,
+      "rankGlobal": 414,
+      "solved": 1,
+      "penalty": 202,
+      "accepted": {
+        "G": {
+          "second": 10953,
+          "minute": 182
+        }
+      }
+    },
+    {
+      "login": "teamsobo060",
+      "team": "La niña que quiso jugar futbol",
+      "institution": "UMSA",
+      "rankSouth": 167,
+      "rankGlobal": 415,
+      "solved": 1,
+      "penalty": 218,
+      "accepted": {
+        "G": {
+          "second": 10719,
+          "minute": 178
+        }
+      }
+    },
+    {
+      "login": "teamsoar039",
+      "team": "Runtime Crew",
+      "institution": "UTN FRC",
+      "rankSouth": 168,
+      "rankGlobal": 420,
+      "solved": 1,
+      "penalty": 246,
+      "accepted": {
+        "G": {
+          "second": 14765,
+          "minute": 246
+        }
+      }
+    },
+    {
+      "login": "teamsobo019",
+      "team": "CODE3",
+      "institution": "UABJB",
+      "rankSouth": 169,
+      "rankGlobal": 424,
+      "solved": 1,
+      "penalty": 279,
+      "accepted": {
+        "D": {
+          "second": 14389,
+          "minute": 239
+        }
+      }
+    },
+    {
+      "login": "teamsobo056",
+      "team": "Los caperucitos",
+      "institution": "USFA",
+      "rankSouth": 170,
+      "rankGlobal": 428,
+      "solved": 1,
+      "penalty": 297,
+      "accepted": {
+        "D": {
+          "second": 17852,
+          "minute": 297
+        }
+      }
+    },
+    {
+      "login": "teamsoar017",
+      "team": "McLovins",
+      "institution": "UNSa-AR",
+      "rankSouth": 171,
+      "rankGlobal": 430,
+      "solved": 1,
+      "penalty": 301,
+      "accepted": {
+        "G": {
+          "second": 14477,
+          "minute": 241
+        }
+      }
+    },
+    {
+      "login": "teamsobo006",
+      "team": "RootForce",
+      "institution": "UCB-Santa Cruz",
+      "rankSouth": 172,
+      "rankGlobal": 431,
+      "solved": 1,
+      "penalty": 323,
+      "accepted": {
+        "G": {
+          "second": 12189,
+          "minute": 203
+        }
+      }
+    },
+    {
+      "login": "teamsoar007",
+      "team": "Codigo RCK",
+      "institution": "UN Chilecito",
+      "rankSouth": 173,
+      "rankGlobal": 433,
+      "solved": 0,
+      "penalty": 0,
+      "accepted": {}
+    },
+    {
+      "login": "teamsoar008",
+      "team": "Mausep",
+      "institution": "UA",
+      "rankSouth": 173,
+      "rankGlobal": 433,
+      "solved": 0,
+      "penalty": 0,
+      "accepted": {}
+    },
+    {
+      "login": "teamsoar015",
+      "team": "Río C++",
+      "institution": "UNRC",
+      "rankSouth": 173,
+      "rankGlobal": 433,
+      "solved": 0,
+      "penalty": 0,
+      "accepted": {}
+    },
+    {
+      "login": "teamsoar018",
+      "team": "Overflow",
+      "institution": "UNPatagonia",
+      "rankSouth": 173,
+      "rankGlobal": 433,
+      "solved": 0,
+      "penalty": 0,
+      "accepted": {}
+    },
+    {
+      "login": "teamsoar027",
+      "team": "paraboloide hiperbólico futbol club",
+      "institution": "UN Chilecito",
+      "rankSouth": 173,
+      "rankGlobal": 433,
+      "solved": 0,
+      "penalty": 0,
+      "accepted": {}
+    },
+    {
+      "login": "teamsoar028",
+      "team": "Noxus",
+      "institution": "UTN FRT",
+      "rankSouth": 173,
+      "rankGlobal": 433,
+      "solved": 0,
+      "penalty": 0,
+      "accepted": {}
+    },
+    {
+      "login": "teamsoar043",
+      "team": "Los nuevos gestores del chiclin",
+      "institution": "UDESA",
+      "rankSouth": 173,
+      "rankGlobal": 433,
+      "solved": 0,
+      "penalty": 0,
+      "accepted": {}
+    },
+    {
+      "login": "teamsoar044",
+      "team": "El Six y sus Sevens",
+      "institution": "UTN FRLP",
+      "rankSouth": 173,
+      "rankGlobal": 433,
+      "solved": 0,
+      "penalty": 0,
+      "accepted": {}
+    },
+    {
+      "login": "teamsoar046",
+      "team": "No compila",
+      "institution": "UNL",
+      "rankSouth": 173,
+      "rankGlobal": 433,
+      "solved": 0,
+      "penalty": 0,
+      "accepted": {}
+    },
+    {
+      "login": "teamsoar056",
+      "team": "MathreeX",
+      "institution": "UNJu",
+      "rankSouth": 173,
+      "rankGlobal": 433,
+      "solved": 0,
+      "penalty": 0,
+      "accepted": {}
+    },
+    {
+      "login": "teamsobo005",
+      "team": "Solovino678",
+      "institution": "UPBLP",
+      "rankSouth": 173,
+      "rankGlobal": 433,
+      "solved": 0,
+      "penalty": 0,
+      "accepted": {}
+    },
+    {
+      "login": "teamsobo007",
+      "team": "Los Pythones",
+      "institution": "UAJMS",
+      "rankSouth": 173,
+      "rankGlobal": 433,
+      "solved": 0,
+      "penalty": 0,
+      "accepted": {}
+    },
+    {
+      "login": "teamsobo008",
+      "team": "Capitán Lara y los Pythones",
+      "institution": "UAJMS BERMEJO",
+      "rankSouth": 173,
+      "rankGlobal": 433,
+      "solved": 0,
+      "penalty": 0,
+      "accepted": {}
+    },
+    {
+      "login": "teamsobo009",
+      "team": "Bit Busters",
+      "institution": "UV-La Paz",
+      "rankSouth": 173,
+      "rankGlobal": 433,
+      "solved": 0,
+      "penalty": 0,
+      "accepted": {}
+    },
+    {
+      "login": "teamsobo011",
+      "team": "Compiló en mi Laptop",
+      "institution": "UAP",
+      "rankSouth": 173,
+      "rankGlobal": 433,
+      "solved": 0,
+      "penalty": 0,
+      "accepted": {}
+    },
+    {
+      "login": "teamsobo015",
+      "team": "La venganza del Dream Team",
+      "institution": "UTO",
+      "rankSouth": 173,
+      "rankGlobal": 433,
+      "solved": 0,
+      "penalty": 0,
+      "accepted": {}
+    },
+    {
+      "login": "teamsobo020",
+      "team": "Control Z",
+      "institution": "UAJMS BERMEJO",
+      "rankSouth": 173,
+      "rankGlobal": 433,
+      "solved": 0,
+      "penalty": 0,
+      "accepted": {}
+    },
+    {
+      "login": "teamsobo022",
+      "team": "EquipoAlfaBuenaMaravillaOndaDinamitaEscuadronLobo",
+      "institution": "UPDS",
+      "rankSouth": 173,
+      "rankGlobal": 433,
+      "solved": 0,
+      "penalty": 0,
+      "accepted": {}
+    },
+    {
+      "login": "teamsobo028",
+      "team": "Las Código Pink",
+      "institution": "EMI",
+      "rankSouth": 173,
+      "rankGlobal": 433,
+      "solved": 0,
+      "penalty": 0,
+      "accepted": {}
+    },
+    {
+      "login": "teamsobo036",
+      "team": "INTJEM PRO",
+      "institution": "ITJM 2 - SI",
+      "rankSouth": 173,
+      "rankGlobal": 433,
+      "solved": 0,
+      "penalty": 0,
+      "accepted": {}
+    },
+    {
+      "login": "teamsobo042",
+      "team": "PyCoders++",
+      "institution": "USFX-Chuquisaca",
+      "rankSouth": 173,
+      "rankGlobal": 433,
+      "solved": 0,
+      "penalty": 0,
+      "accepted": {}
+    },
+    {
+      "login": "teamsobo043",
+      "team": "F#ck_Microsoft",
+      "institution": "UABJB",
+      "rankSouth": 173,
+      "rankGlobal": 433,
+      "solved": 0,
+      "penalty": 0,
+      "accepted": {}
+    },
+    {
+      "login": "teamsobo045",
+      "team": "Los Papus",
+      "institution": "USFA",
+      "rankSouth": 173,
+      "rankGlobal": 433,
+      "solved": 0,
+      "penalty": 0,
+      "accepted": {}
+    },
+    {
+      "login": "teamsobo047",
+      "team": "Tokenizers",
+      "institution": "UNIOR",
+      "rankSouth": 173,
+      "rankGlobal": 433,
+      "solved": 0,
+      "penalty": 0,
+      "accepted": {}
+    },
+    {
+      "login": "teamsobo050",
+      "team": "Los depuradores",
+      "institution": "UTO",
+      "rankSouth": 173,
+      "rankGlobal": 433,
+      "solved": 0,
+      "penalty": 0,
+      "accepted": {}
+    },
+    {
+      "login": "teamsobo053",
+      "team": "TPF",
+      "institution": "USFX-Chuquisaca",
+      "rankSouth": 173,
+      "rankGlobal": 433,
+      "solved": 0,
+      "penalty": 0,
+      "accepted": {}
+    },
+    {
+      "login": "teamsobo057",
+      "team": "Claude - Lovers",
+      "institution": "Univalle Scz",
+      "rankSouth": 173,
+      "rankGlobal": 433,
+      "solved": 0,
+      "penalty": 0,
+      "accepted": {}
+    },
+    {
+      "login": "teamsobo058",
+      "team": "Api con Pastel",
+      "institution": "UDABOL-Oruro",
+      "rankSouth": 173,
+      "rankGlobal": 433,
+      "solved": 0,
+      "penalty": 0,
+      "accepted": {}
+    },
+    {
+      "login": "teamsobo065",
+      "team": "Team Cocos",
+      "institution": "UATF-IS",
+      "rankSouth": 173,
+      "rankGlobal": 433,
+      "solved": 0,
+      "penalty": 0,
+      "accepted": {}
+    },
+    {
+      "login": "teamsobo066",
+      "team": "ApexCode",
+      "institution": "UATF-II",
+      "rankSouth": 173,
+      "rankGlobal": 433,
+      "solved": 0,
+      "penalty": 0,
+      "accepted": {}
+    },
+    {
+      "login": "teamsobo069",
+      "team": "Late Night Loops",
+      "institution": "UV-Trinidad",
+      "rankSouth": 173,
+      "rankGlobal": 433,
+      "solved": 0,
+      "penalty": 0,
+      "accepted": {}
+    },
+    {
+      "login": "teamsobo075",
+      "team": "S.E.E.S",
+      "institution": "UAJMS",
+      "rankSouth": 173,
+      "rankGlobal": 433,
+      "solved": 0,
+      "penalty": 0,
+      "accepted": {}
+    },
+    {
+      "login": "teamsobo080",
+      "team": "IDK",
+      "institution": "UNIFRANZ",
+      "rankSouth": 173,
+      "rankGlobal": 433,
+      "solved": 0,
+      "penalty": 0,
+      "accepted": {}
+    },
+    {
+      "login": "teamsocl014",
+      "team": "Las chicas superpoderosas",
+      "institution": "UCSC",
+      "rankSouth": 173,
+      "rankGlobal": 433,
+      "solved": 0,
+      "penalty": 0,
+      "accepted": {}
+    },
+    {
+      "login": "teamsocl028",
+      "team": "los hans solo",
+      "institution": "UCEN",
+      "rankSouth": 173,
+      "rankGlobal": 433,
+      "solved": 0,
+      "penalty": 0,
+      "accepted": {}
+    },
+    {
+      "login": "teamsocl030",
+      "team": "Kódigo con Cuea",
+      "institution": "UCM",
+      "rankSouth": 173,
+      "rankGlobal": 433,
+      "solved": 0,
+      "penalty": 0,
+      "accepted": {}
+    },
+    {
+      "login": "teamsocl034",
+      "team": "'b'+'a'++'a'+'a'",
+      "institution": "UAH",
+      "rankSouth": 173,
+      "rankGlobal": 433,
+      "solved": 0,
+      "penalty": 0,
+      "accepted": {}
+    },
+    {
+      "login": "teamsocl035",
+      "team": "Equipo alfa buena maravilla onda dinamita escuadron lobo",
+      "institution": "UTA-CL",
+      "rankSouth": 173,
+      "rankGlobal": 433,
+      "solved": 0,
+      "penalty": 0,
+      "accepted": {}
+    },
+    {
+      "login": "teamsocl041",
+      "team": "Kernel Panic",
+      "institution": "UAH",
+      "rankSouth": 173,
+      "rankGlobal": 433,
+      "solved": 0,
+      "penalty": 0,
+      "accepted": {}
+    },
+    {
+      "login": "teamsope001",
+      "team": "Los Camachitos (UNAP)",
+      "institution": "UNAP",
+      "rankSouth": 173,
+      "rankGlobal": 433,
+      "solved": 0,
+      "penalty": 0,
+      "accepted": {}
+    },
+    {
+      "login": "teamsope010",
+      "team": "ADN-TesteadoEnLaMente(UNAP)",
+      "institution": "UNAP",
+      "rankSouth": 173,
+      "rankGlobal": 433,
+      "solved": 0,
+      "penalty": 0,
+      "accepted": {}
+    },
+    {
+      "login": "teamsope017",
+      "team": "Yo codeo para vos mamá",
+      "institution": "PUCP",
+      "rankSouth": 173,
+      "rankGlobal": 433,
+      "solved": 0,
+      "penalty": 0,
+      "accepted": {}
+    }
+  ],
+  "sourceSha256": {
+    "score.html": "36d33f481f445d2be200a34de49108a8b16afbd13995975d99fd922148cf552c",
+    "runs.html": "b3a08f743dee332a8cdf5e4f6d1bfc677db9ab53a8a6a13742e4b2de1091ef58",
+    "qualified.html": "77555ccc2db9eb230855535894b1d911145109bbfa87656fb6722c9ee4a6f59c",
+    "problemset.pdf": "66aa5cc0cc2a472508550d57501f013412e152f631c3b35397a4cba651d43d2f",
+    "promotion.pdf": "647cb34707b79501e5412e4986c9cbf6fd081db112a5373ae93a4389370c9afc"
+  }
+}

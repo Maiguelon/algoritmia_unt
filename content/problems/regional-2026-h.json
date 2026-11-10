@@ -1,0 +1,48 @@
+{
+  "id": "regional-2026-h",
+  "tournamentId": "regional-2026",
+  "letter": "H",
+  "title": "Hazel's Harvest",
+  "summary": "Responder el primer año en que una plantación puede cumplir cada pedido de cierta cantidad de árboles con altura mínima.",
+  "topics": [
+    "Consultas offline",
+    "Orden estadístico",
+    "Búsqueda binaria"
+  ],
+  "difficulty": "Avanzado",
+  "difficultyReason": "Valoración editorial del enunciado: conceptual 4/5 e implementación 4/5. Técnica y banda provisionales hasta contrastar una solución completa.",
+  "implementation": "4/5 (provisional)",
+  "conceptual": "4/5 (provisional)",
+  "ac": 15,
+  "total": 214,
+  "judgeUrl": null,
+  "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2026/statements/H.html",
+  "statementUrl": "/statements/regional-2026-h.pdf",
+  "chunkIds": [
+    "cpp-ordenacion",
+    "cpp-pares",
+    "cpp-busqueda-ordenada",
+    "cpp-vectores",
+    "cpp-cuentas-enteras"
+  ],
+  "coverage": "parcial",
+  "missingTools": [
+    "Reformulación de las consultas y estructura para consultas de orden; técnica concreta por contrastar."
+  ],
+  "hints": [],
+  "status": "verificado",
+  "approach": "Consultas de orden sobre funciones de disponibilidad; procesamiento offline y estructuras ordenadas como enfoque candidato.",
+  "editorialUrl": null,
+  "classificationConfidence": "Baja/Media: lectura del enunciado y análisis editorial propio; sin editorial oficial localizada para contrastar una solución completa.",
+  "firstSolve": {
+    "minute": 114,
+    "teams": [
+      "[UBA] Los Emuladores"
+    ]
+  },
+  "statementPages": {
+    "start": 14,
+    "end": 15,
+    "sourcePageCount": 23
+  }
+}
