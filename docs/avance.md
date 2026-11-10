@@ -68,3 +68,9 @@ Con problemas seleccionados, la entrada al apunte parte de Recomendado y no rest
 El resumen «Tu apunte lleva…» aparece antes de las categorías, con herramientas y descarga. Se suma otro botón al final de los controles; ambos usan el mismo contenido y muestran el resultado o error junto al botón utilizado. Computops aparece primero en las galerías de portada y Regional.
 
 Validación: 45 pruebas unitarias, 24 recorridos de navegador y tipos sin errores. Se descargaron PDFs reales desde los dos accesos, se probaron preferencias antiguas y cambios de problemas entre pestañas, y se revisó el resumen en escritorio y celular.
+
+## Primera práctica guiada — 10 de noviembre
+
+Se conecta «Arrancá acá» con `/empeza/`: seis pasos con el A del TAP 2026, razonamiento por conversión a segundos, herramientas del apunte, plantilla incompleta, implementación explicada opcional, pruebas y envío en Codeforces. El cierre explica las dificultades y ofrece otros Iniciales y la comunidad. Fuentes y verificación del código en `primeros-pasos.md`.
+
+La implementación se comprobó localmente sobre las 18.000 entradas válidas; la plantilla pasó la comprobación de sintaxis. Tipos sin errores y revisión visual en 1280, 390 y 320 px. Los diez recorridos pertinentes de inicio, primera práctica y selección pasaron; las tres descargas de PDF también pasaron durante la validación. Se corrige además la descarga inferior: solo aparece en Personalizado, según la observación del usuario.

@@ -1,0 +1,36 @@
+---
+interface Props { code: string; title: string; copyLabel: string }
+const {code, title, copyLabel} = Astro.props;
+---
+<code-copy class="code-copy" role="group" aria-label={title}>
+  <div class="code-heading"><strong>{title}</strong><button class="button secondary small copy-control" type="button" hidden>{copyLabel}</button></div>
+  <pre tabindex="0" aria-label={`Código: ${title}`}><code>{code.trim()}</code></pre>
+  <p role="status" aria-live="polite"></p>
+</code-copy>
+<script>
+  class CodeCopy extends HTMLElement {
+    connectedCallback() {
+      const button = this.querySelector<HTMLButtonElement>('button');
+      const code = this.querySelector('code');
+      const status = this.querySelector('[role="status"]');
+      if (!button || !code || !status) return;
+      button.hidden = false;
+      button.addEventListener('click', async () => {
+        try {
+          await navigator.clipboard.writeText(`${code.textContent ?? ''}\n`);
+          status.textContent = 'Código copiado.';
+        } catch {
+          status.textContent = 'No se pudo copiar automáticamente. Seleccioná el código del recuadro y copialo.';
+        }
+      });
+    }
+  }
+  customElements.define('code-copy', CodeCopy);
+</script>
+<style>
+  .code-copy { display:block; min-width:0; margin:1rem 0; }
+  .code-heading { display:flex; align-items:center; justify-content:space-between; gap:.8rem; flex-wrap:wrap; }
+  .copy-control[hidden] { display:none; }
+  pre { max-width:100%; overflow:auto; border-radius:10px; padding:1.2rem; color:#f0f2ff; background:var(--ink); line-height:1.65; font-size:.85rem; tab-size:4; }
+  [role="status"] { color:var(--muted); font-size:.85rem; margin:0; }
+</style>
