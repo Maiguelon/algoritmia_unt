@@ -3,7 +3,7 @@ test('inicio, teclado, identidad y formato móvil', async ({ page }) => {
   const errors: string[] = [];
   page.on('pageerror', error => errors.push(error.message));
   await page.goto('/');
-  await expect(page.getByRole('heading', { level: 1 })).toContainText('Un problema más.');
+  await expect(page.getByRole('heading', { level: 1 })).toContainText('De tu primer problema');
   await expect(page.getByRole('img', { name: /Tres hormigas/ })).toBeVisible();
   await page.keyboard.press('Tab');
   await expect(page.getByRole('link', { name: 'Saltar al contenido' })).toBeFocused();

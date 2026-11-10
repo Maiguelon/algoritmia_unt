@@ -1,11 +1,36 @@
 ---
 import Layout from '../layouts/Layout.astro';
-import { chunks } from '../lib/chunks';
 ---
 <Layout>
-  <section class="hero"><div><div class="hero-kicker eyebrow"><span class="dot"></span>El entrenamiento es en equipo</div><h1>Un problema más.<br/><span>Un salto más cerca.</span></h1><p class="hero-copy">Encontrá tu próximo desafío, conocé las herramientas que pide y armá el apunte que te sirve. Desde el primer AC hasta los Regionales.</p><div class="actions"><a class="button" href="/problemas/">Explorar problemas <span aria-hidden="true">↗</span></a><a class="button secondary" href="/apuntes/">Consultar apuntes</a></div></div><div class="hero-art"><svg class="colony-path" viewBox="0 0 440 410" aria-hidden="true"><path d="M35 98 C-5 5 130 5 156 40 S365 50 398 115 S495 319 365 361 S67 440 36 307"/><circle cx="38" cy="103" r="10" fill="#48a9ed"/><circle cx="390" cy="328" r="13" fill="#e34954"/><circle cx="95" cy="376" r="7" fill="#ffdc60"/></svg><div class="mascot-board"><div class="board-label"><span>LA COLONIA / UNT</span><span class="board-lights" aria-hidden="true"><i></i><i></i><i></i></span></div><img src="/logo-club.png" alt="Tres hormigas del Club de Algoritmia reunidas alrededor de una computadora" width="245" height="245"/><p class="board-caption">Pensar. Probar. Compartir.</p><span class="sticker sticker-ac" aria-hidden="true">AC!</span><span class="sticker sticker-team" aria-hidden="true">mejor en equipo ↗</span></div></div></section>
-  <div class="stats-row"><div class="stat"><strong>{chunks.length}</strong><span>bloques de C++ para consultar</span></div><div class="stat"><strong>A tu medida</strong><span>apuntes por herramientas y secciones</span></div><div class="stat"><strong>Con contexto</strong><span>cada AC con población y fuente</span></div></div>
-  <div class="section-title"><h2>Elegí por dónde seguir</h2><span class="eyebrow desktop-only">Una biblioteca para el club</span></div>
-  <div class="grid-three"><a class="link-card activity-card" href="/problemas/"><span class="activity-icon" aria-hidden="true">&lt;/&gt;</span><span class="eyebrow">01 / Practicar</span><h3>Buscá tu próximo problema ↗</h3><p>Filtrá por tema y dificultad. Consultá qué herramientas entran en juego y elegí un desafío.</p></a><a class="link-card activity-card" href="/seleccion/#apuntes"><span class="activity-icon" aria-hidden="true">&#123; &#125;</span><span class="eyebrow">02 / Preparar</span><h3>Llevá lo que necesitás ↗</h3><p>Combiná bloques, elegí el nivel de detalle y descargá un apunte propio para leer o imprimir.</p></a><a class="link-card activity-card" href="/torneos/"><span class="activity-icon" aria-hidden="true">↗</span><span class="eyebrow">03 / Entender</span><h3>Mirá el torneo completo ↗</h3><p>Explorá la distribución de AC y los saltos de dificultad con el contexto de cada set.</p></a></div>
-  <div class="notice" style="margin-top:32px"><strong>Regional 2026: esperamos su publicación.</strong> Incorporaremos los problemas cuando estén disponibles y se puedan verificar sus fuentes y enlaces al juez.</div>
+  <section class="hero"><div><div class="hero-kicker eyebrow"><span class="dot"></span>Rumbo al Training Camp Argentina 2027</div><h1>De tu primer problema<br/><span>al Regional.</span></h1><p class="hero-copy">Un lugar para aprender, practicar y crecer en equipo. Explorá problemas de torneos sudamericanos, prepará tus apuntes y sumate a la comunidad de algoritmia de Tucumán.</p><div class="actions"><a class="button" href="/problemas/">Explorar problemas <span aria-hidden="true">↗</span></a><button class="button secondary" type="button" disabled title="Enlace a la comunidad pendiente">Sumate a la comunidad de WhatsApp</button></div><p class="beginner-entry"><button type="button" disabled>¿Recién empezás? Empezá por acá →</button></p></div><div class="hero-art"><svg class="colony-path" viewBox="0 0 440 410" aria-hidden="true"><path d="M35 98 C-5 5 130 5 156 40 S365 50 398 115 S495 319 365 361 S67 440 36 307"/><circle cx="38" cy="103" r="10" fill="#48a9ed"/><circle cx="390" cy="328" r="13" fill="#e34954"/><circle cx="95" cy="376" r="7" fill="#ffdc60"/></svg><div class="mascot-board"><div class="board-label"><span>LA COLONIA / UNT</span><span class="board-lights" aria-hidden="true"><i></i><i></i><i></i></span></div><img src="/logo-club.png" alt="Tres hormigas del Club de Algoritmia reunidas alrededor de una computadora" width="245" height="245"/><p class="board-caption">Pensar. Probar. Compartir.</p><span class="sticker sticker-ac" aria-hidden="true">AC!</span><span class="sticker sticker-team" aria-hidden="true">mejor en equipo ↗</span></div></div></section>
+  <div class="stats-row">
+    <div class="stat"><strong>Apuntes a tu medida</strong><span>Elegí las herramientas y el detalle que necesitás. Descargalos para leer o imprimir.</span></div>
+    <div class="stat"><strong>Problemas de acá</strong><span>Practicá con problemas del TAP y de los Regionales sudamericanos, por tema y dificultad.</span></div>
+    <div class="stat"><strong>Los torneos, en números</strong><span>Explorá cuántos equipos resolvieron cada problema y dónde estuvo el salto de dificultad.</span></div>
+  </div>
+  <section class="panel camp-section">
+    <span class="eyebrow">Training Camp Argentina 2027 · Tucumán</span>
+    <h2>El próximo encuentro se entrena desde ahora</h2>
+    <p>El Training Camp reúne a estudiantes para aprender algoritmos, resolver problemas y entrenar para las competencias de programación. También es una oportunidad para conocer a otras personas con las mismas ganas de aprender.</p>
+    <p>En 2027 nos toca recibirlo en Tucumán. Desde el club queremos que más estudiantes se animen a empezar y encuentren un equipo con el que seguir creciendo. Este espacio es parte de ese camino.</p>
+  </section>
+  <section class="panel latest-tournament">
+    <span class="eyebrow">Así competimos</span>
+    <h2>Un equipo, un Regional, mucho por aprender</h2>
+    <p>Conocé cómo fue el Regional 2026: los equipos de Tucumán, sus resultados y los problemas que marcaron el torneo.</p>
+    <button class="button secondary" type="button" disabled title="Acceso al torneo pendiente">Conocé el último Regional →</button>
+  </section>
 </Layout>
+<style>
+  .beginner-entry { margin: 1.2rem 0 0; }
+  .beginner-entry button { background: none; border: 0; padding: 0; color: var(--ink, #24263d); font: inherit; font-size: .95rem; text-decoration: underline; text-underline-offset: 4px; }
+  button:disabled { cursor: default; }
+  .camp-section { margin-top: 2.5rem; }
+  .camp-section p, .latest-tournament p { max-width: 75ch; }
+  .latest-tournament { margin-top: 1.5rem; }
+  .stats-row .stat strong { font-size: clamp(1.2rem, 2vw, 1.65rem); line-height: 1.25; }
+  @media (max-width: 600px) {
+    .stats-row { grid-template-columns: 1fr; }
+    .stats-row .stat + .stat { border-left: 0; border-top: 1px solid #cdd2ed; }
+  }
+</style>
