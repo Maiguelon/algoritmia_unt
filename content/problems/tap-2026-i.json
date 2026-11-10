@@ -1,0 +1,44 @@
+{
+  "id": "tap-2026-i",
+  "tournamentId": "tap-2026",
+  "letter": "I",
+  "title": "Is There a Winner?",
+  "summary": "Determinar si un torneo de rondas independientes garantiza un campeón único para cualquier reparto de victorias o puede terminar empatado.",
+  "topics": [
+    "Observación",
+    "Aritmética"
+  ],
+  "difficulty": "Consolidación",
+  "difficultyReason": "Conceptual 2/5 e implementación 1/5, estimaciones editoriales. Fue resuelto por 146/186 equipos; ese dato empírico no determina por sí solo su dificultad conceptual.",
+  "implementation": "1/5 (estimación editorial)",
+  "conceptual": "2/5 (estimación editorial)",
+  "ac": 146,
+  "total": 186,
+  "judgeUrl": "https://codeforces.com/gym/106682/problem/I",
+  "sourceUrl": "https://codeforces.com/gym/106682/attachments/download/39252/TAP-2026.pdf#page=14",
+  "statementUrl": "/statements/tap-2026-i.pdf",
+  "chunkIds": [
+    "cpp-condiciones",
+    "cpp-cuentas-enteras"
+  ],
+  "coverage": "completa",
+  "missingTools": [],
+  "hints": [],
+  "status": "verificado",
+  "approach": "Selección editorial de herramientas de base. Cubre las operaciones del enfoque de implementación elegido; no incluye la solución.",
+  "editorialUrl": null,
+  "classificationConfidence": "Media: lectura del enunciado y análisis editorial propio; sin editorial oficial localizada. Las bandas no son ratings oficiales.",
+  "firstSolve": {
+    "minute": 14,
+    "teams": [
+      "[UBA] No Lo Testeamos (Ni Un Poco)",
+      "[UDESA] Chirimbolo CP",
+      "[UDESA] Los nuevos gestores del chiclin"
+    ]
+  },
+  "statementPages": {
+    "start": 14,
+    "end": 14,
+    "sourcePageCount": 20
+  }
+}

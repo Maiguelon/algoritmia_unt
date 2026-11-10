@@ -1,0 +1,44 @@
+{
+  "id": "tap-2026-c",
+  "tournamentId": "tap-2026",
+  "letter": "C",
+  "title": "Confrontation of Numbers",
+  "summary": "Hallar el puntaje final de un juego sobre dos arreglos donde se puede avanzar a un índice mayor o pasar, suponiendo que ambos jugadores juegan de manera óptima.",
+  "topics": [
+    "Juegos",
+    "DP"
+  ],
+  "difficulty": "Salto regional",
+  "difficultyReason": "Conceptual 3/5 e implementación 2/5, estimaciones editoriales. Fue resuelto por 30/186 equipos; ese dato empírico no determina por sí solo su dificultad conceptual.",
+  "implementation": "2/5 (estimación editorial)",
+  "conceptual": "3/5 (estimación editorial)",
+  "ac": 30,
+  "total": 186,
+  "judgeUrl": "https://codeforces.com/gym/106682/problem/C",
+  "sourceUrl": "https://codeforces.com/gym/106682/attachments/download/39252/TAP-2026.pdf#page=5",
+  "statementUrl": "/statements/tap-2026-c.pdf",
+  "chunkIds": [
+    "cpp-vectores",
+    "cpp-extremos-sumas"
+  ],
+  "coverage": "parcial",
+  "missingTools": [
+    "Modelo de juego óptimo y recurrencia: no hay bloque de DP/minimax en la biblioteca."
+  ],
+  "hints": [],
+  "status": "verificado",
+  "approach": "Selección editorial de herramientas de base. El enfoque completo está pendiente o requiere técnicas aún no incluidas en el apunte.",
+  "editorialUrl": null,
+  "classificationConfidence": "Media: lectura del enunciado y análisis editorial propio; sin editorial oficial localizada. Las bandas no son ratings oficiales.",
+  "firstSolve": {
+    "minute": 42,
+    "teams": [
+      "[UNR] para la pda"
+    ]
+  },
+  "statementPages": {
+    "start": 5,
+    "end": 5,
+    "sourcePageCount": 20
+  }
+}

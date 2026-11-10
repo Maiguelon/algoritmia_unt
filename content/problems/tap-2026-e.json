@@ -1,0 +1,40 @@
+{
+  "id": "tap-2026-e",
+  "tournamentId": "tap-2026",
+  "letter": "E",
+  "title": "Engaging Card Game",
+  "summary": "Decidir quién gana un juego de cartas con multiplicidades en el que los valores de jugadas consecutivas deben sumar una potencia de dos menos uno.",
+  "topics": [
+    "Juegos",
+    "Conteo"
+  ],
+  "difficulty": "Avanzado",
+  "difficultyReason": "Clasificación editorial provisional por revisar con solución de referencia. Fue resuelto por 0/186 equipos; ese dato empírico no determina por sí solo su dificultad conceptual.",
+  "implementation": "Pendiente de revisión conceptual",
+  "conceptual": "Pendiente de revisión conceptual",
+  "ac": 0,
+  "total": 186,
+  "judgeUrl": "https://codeforces.com/gym/106682/problem/E",
+  "sourceUrl": "https://codeforces.com/gym/106682/attachments/download/39252/TAP-2026.pdf#page=7",
+  "statementUrl": "/statements/tap-2026-e.pdf",
+  "chunkIds": [
+    "cpp-map",
+    "cpp-frecuencias",
+    "cpp-cuentas-enteras"
+  ],
+  "coverage": "parcial",
+  "missingTools": [
+    "Análisis del juego con multiplicidades; solución pendiente de contrastar."
+  ],
+  "hints": [],
+  "status": "verificado",
+  "approach": "Selección editorial de herramientas de base. El enfoque completo está pendiente o requiere técnicas aún no incluidas en el apunte.",
+  "editorialUrl": null,
+  "classificationConfidence": "Baja sobre la técnica y la banda conceptual: se cuenta con enunciado y AC oficiales, pero falta contrastar una solución de referencia.",
+  "firstSolve": null,
+  "statementPages": {
+    "start": 7,
+    "end": 8,
+    "sourcePageCount": 20
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "id": "tap-2026",
+  "title": "Torneo Argentino de Programación 2026",
+  "year": 2026,
+  "season": "2026–2027 (inscripción ICPC TAP-2027)",
+  "setName": "2026 Argentinian Programming Tournament · Gym 106682 · 14 problemas",
+  "population": "Tabla nacional publicada por AAPC: 186 equipos de 15 sedes. Incluye las entradas Extra que conserva ese tablero; no es una lista de elegibilidad para cupos.",
+  "totalTeams": 186,
+  "status": "verificado",
+  "sources": [
+    {
+      "label": "Organización, fecha y acceso al juez",
+      "url": "https://aapc.org.ar/tap/"
+    },
+    {
+      "label": "Resultados nacionales",
+      "url": "https://aapc.org.ar/resultados-tap-2026/"
+    },
+    {
+      "label": "Resultados interactivos y datos de BOCA",
+      "url": "https://storage.googleapis.com/tap-resultados-2026/index.html"
+    },
+    {
+      "label": "Cuadernillo oficial español",
+      "url": "https://codeforces.com/gym/106682/attachments/download/39252/TAP-2026.pdf"
+    },
+    {
+      "label": "Juez oficial de práctica",
+      "url": "https://codeforces.com/gym/106682"
+    }
+  ],
+  "distribution": [
+    {
+      "solved": 0,
+      "teams": 6
+    },
+    {
+      "solved": 1,
+      "teams": 17
+    },
+    {
+      "solved": 2,
+      "teams": 31
+    },
+    {
+      "solved": 3,
+      "teams": 65
+    },
+    {
+      "solved": 4,
+      "teams": 34
+    },
+    {
+      "solved": 5,
+      "teams": 14
+    },
+    {
+      "solved": 6,
+      "teams": 9
+    },
+    {
+      "solved": 7,
+      "teams": 2
+    },
+    {
+      "solved": 8,
+      "teams": 3
+    },
+    {
+      "solved": 9,
+      "teams": 1
+    },
+    {
+      "solved": 10,
+      "teams": 3
+    },
+    {
+      "solved": 11,
+      "teams": 1
+    }
+  ],
+  "notes": [
+    "Se cuentan equipos con estado solved por problema en el tablero oficial enlazado por AAPC, no las resoluciones acumuladas del Gym de práctica.",
+    "Las bandas, temas y herramientas son estimaciones editoriales. Las técnicas de los problemas difíciles todavía necesitan revisión contra soluciones de referencia.",
+    "Año calendario 2026; la inscripción de ICPC usa el identificador TAP-2027.",
+    "Los resultados nacionales, la cantidad de AC y las reglas por institución son datos distintos; no se deduce automáticamente un cupo del puesto."
+  ],
+  "untResults": [
+    {
+      "team": "Computops",
+      "solved": 4,
+      "rank": 55,
+      "note": "Puesto nacional publicado; penalidad 460; problemas A, B, I, K. No se infiere clasificación automática."
+    },
+    {
+      "team": "Mono Pollo NP++ 18",
+      "solved": 3,
+      "rank": 99,
+      "note": "Puesto nacional publicado; penalidad 343; problemas A, I, K. No se infiere clasificación automática."
+    },
+    {
+      "team": "Achilata",
+      "solved": 3,
+      "rank": 101,
+      "note": "Puesto nacional publicado; penalidad 347; problemas A, B, K. No se infiere clasificación automática."
+    },
+    {
+      "team": "las divinas",
+      "solved": 2,
+      "rank": 134,
+      "note": "Puesto nacional publicado; penalidad 104; problemas A, I. No se infiere clasificación automática."
+    }
+  ]
+}

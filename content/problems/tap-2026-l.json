@@ -1,0 +1,45 @@
+{
+  "id": "tap-2026-l",
+  "tournamentId": "tap-2026",
+  "letter": "L",
+  "title": "Luana's Album",
+  "summary": "Maximizar cuántas figuritas se pegan en orden creciente y minimizar los sobres comprados, sabiendo que todos traen la misma secuencia y pueden abrirse al revés.",
+  "topics": [
+    "Secuencias",
+    "Optimización"
+  ],
+  "difficulty": "Salto regional",
+  "difficultyReason": "Clasificación editorial provisional por revisar con solución de referencia. Fue resuelto por 21/186 equipos; ese dato empírico no determina por sí solo su dificultad conceptual.",
+  "implementation": "Pendiente de revisión conceptual",
+  "conceptual": "Pendiente de revisión conceptual",
+  "ac": 21,
+  "total": 186,
+  "judgeUrl": "https://codeforces.com/gym/106682/problem/L",
+  "sourceUrl": "https://codeforces.com/gym/106682/attachments/download/39252/TAP-2026.pdf#page=17",
+  "statementUrl": "/statements/tap-2026-l.pdf",
+  "chunkIds": [
+    "cpp-vectores",
+    "cpp-ordenacion",
+    "cpp-pares"
+  ],
+  "coverage": "parcial",
+  "missingTools": [
+    "Optimización de la cantidad de sobres y tratamiento de ambas orientaciones; solución pendiente de contrastar."
+  ],
+  "hints": [],
+  "status": "verificado",
+  "approach": "Selección editorial de herramientas de base. El enfoque completo está pendiente o requiere técnicas aún no incluidas en el apunte.",
+  "editorialUrl": null,
+  "classificationConfidence": "Baja sobre la técnica y la banda conceptual: se cuenta con enunciado y AC oficiales, pero falta contrastar una solución de referencia.",
+  "firstSolve": {
+    "minute": 37,
+    "teams": [
+      "[UNC] Helicóptero"
+    ]
+  },
+  "statementPages": {
+    "start": 17,
+    "end": 17,
+    "sourcePageCount": 20
+  }
+}

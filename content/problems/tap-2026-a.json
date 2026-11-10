@@ -1,0 +1,43 @@
+{
+  "id": "tap-2026-a",
+  "tournamentId": "tap-2026",
+  "letter": "A",
+  "title": "At the midpoint",
+  "summary": "Decidir si un tiempo dado en horas, minutos y segundos está antes, después o exactamente en la mitad de una competencia de cinco horas.",
+  "topics": [
+    "Implementación",
+    "Aritmética"
+  ],
+  "difficulty": "Inicial",
+  "difficultyReason": "Conceptual 1/5 e implementación 1/5, estimaciones editoriales. Fue resuelto por 180/186 equipos; ese dato empírico no determina por sí solo su dificultad conceptual.",
+  "implementation": "1/5 (estimación editorial)",
+  "conceptual": "1/5 (estimación editorial)",
+  "ac": 180,
+  "total": 186,
+  "judgeUrl": "https://codeforces.com/gym/106682/problem/A",
+  "sourceUrl": "https://codeforces.com/gym/106682/attachments/download/39252/TAP-2026.pdf#page=3",
+  "statementUrl": "/statements/tap-2026-a.pdf",
+  "chunkIds": [
+    "cpp-variables",
+    "cpp-condiciones",
+    "cpp-cuentas-enteras"
+  ],
+  "coverage": "completa",
+  "missingTools": [],
+  "hints": [],
+  "status": "verificado",
+  "approach": "Selección editorial de herramientas de base. Cubre las operaciones del enfoque de implementación elegido; no incluye la solución.",
+  "editorialUrl": null,
+  "classificationConfidence": "Media: lectura del enunciado y análisis editorial propio; sin editorial oficial localizada. Las bandas no son ratings oficiales.",
+  "firstSolve": {
+    "minute": 3,
+    "teams": [
+      "[UNLP] Vaquita Envidiosa"
+    ]
+  },
+  "statementPages": {
+    "start": 3,
+    "end": 3,
+    "sourcePageCount": 20
+  }
+}

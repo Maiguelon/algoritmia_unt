@@ -1,0 +1,45 @@
+{
+  "id": "tap-2026-m",
+  "tournamentId": "tap-2026",
+  "letter": "M",
+  "title": "Mendocinos Mismanaging Malbec",
+  "summary": "Procesar cargas de vino que se desbordan hacia barriles anteriores y consultas que vacían intervalos completos, informando cuánto vino se retira.",
+  "topics": [
+    "Estructuras de datos",
+    "Simulación"
+  ],
+  "difficulty": "Avanzado",
+  "difficultyReason": "Clasificación editorial provisional por revisar con solución de referencia. Fue resuelto por 7/186 equipos; ese dato empírico no determina por sí solo su dificultad conceptual.",
+  "implementation": "Pendiente de revisión conceptual",
+  "conceptual": "Pendiente de revisión conceptual",
+  "ac": 7,
+  "total": 186,
+  "judgeUrl": "https://codeforces.com/gym/106682/problem/M",
+  "sourceUrl": "https://codeforces.com/gym/106682/attachments/download/39252/TAP-2026.pdf#page=18",
+  "statementUrl": "/statements/tap-2026-m.pdf",
+  "chunkIds": [
+    "cpp-vectores",
+    "cpp-pares",
+    "cpp-prefijos"
+  ],
+  "coverage": "parcial",
+  "missingTools": [
+    "Estructura para desbordamientos y vaciado de intervalos; solución pendiente de contrastar."
+  ],
+  "hints": [],
+  "status": "verificado",
+  "approach": "Selección editorial de herramientas de base. El enfoque completo está pendiente o requiere técnicas aún no incluidas en el apunte.",
+  "editorialUrl": null,
+  "classificationConfidence": "Baja sobre la técnica y la banda conceptual: se cuenta con enunciado y AC oficiales, pero falta contrastar una solución de referencia.",
+  "firstSolve": {
+    "minute": 92,
+    "teams": [
+      "[UBA] El anterior nombre era mufa"
+    ]
+  },
+  "statementPages": {
+    "start": 18,
+    "end": 19,
+    "sourcePageCount": 20
+  }
+}

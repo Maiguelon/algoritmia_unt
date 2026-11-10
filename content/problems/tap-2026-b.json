@@ -1,0 +1,46 @@
+{
+  "id": "tap-2026-b",
+  "tournamentId": "tap-2026",
+  "letter": "B",
+  "title": "Breaking Rosarigasino",
+  "summary": "Reconstruir las palabras que pueden haber originado un texto después de una transformación rosarigasina; distinguir entre ninguna, una o varias traducciones distintas.",
+  "topics": [
+    "Strings",
+    "Implementación"
+  ],
+  "difficulty": "Consolidación",
+  "difficultyReason": "Conceptual 2/5 e implementación 2/5, estimaciones editoriales. Fue resuelto por 69/186 equipos; ese dato empírico no determina por sí solo su dificultad conceptual.",
+  "implementation": "2/5 (estimación editorial)",
+  "conceptual": "2/5 (estimación editorial)",
+  "ac": 69,
+  "total": 186,
+  "judgeUrl": "https://codeforces.com/gym/106682/problem/B",
+  "sourceUrl": "https://codeforces.com/gym/106682/attachments/download/39252/TAP-2026.pdf#page=4",
+  "statementUrl": "/statements/tap-2026-b.pdf",
+  "chunkIds": [
+    "cpp-strings",
+    "cpp-set",
+    "cpp-apariciones"
+  ],
+  "coverage": "completa",
+  "missingTools": [],
+  "hints": [
+    "Revisá que las posibles traducciones se cuenten como palabras distintas, no como cantidad de posiciones válidas."
+  ],
+  "status": "verificado",
+  "approach": "Selección editorial de herramientas de base. Cubre las operaciones del enfoque de implementación elegido; no incluye la solución.",
+  "editorialUrl": null,
+  "classificationConfidence": "Media: lectura del enunciado y análisis editorial propio; sin editorial oficial localizada. Las bandas no son ratings oficiales.",
+  "firstSolve": {
+    "minute": 10,
+    "teams": [
+      "[UBA] Corman",
+      "[UBA] No Lo Testeamos (Ni Un Poco)"
+    ]
+  },
+  "statementPages": {
+    "start": 4,
+    "end": 4,
+    "sourcePageCount": 20
+  }
+}

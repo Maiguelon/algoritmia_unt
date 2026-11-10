@@ -1,0 +1,44 @@
+{
+  "id": "tap-2026-j",
+  "tournamentId": "tap-2026",
+  "letter": "J",
+  "title": "Joy of playing TAPum",
+  "summary": "Decidir si una cadena de T, A y P se puede vaciar eliminando de a tres caracteres consecutivos y distintos, sin alterar el orden restante.",
+  "topics": [
+    "Strings",
+    "DP"
+  ],
+  "difficulty": "Avanzado",
+  "difficultyReason": "Conceptual 4/5 e implementación 3/5, estimaciones editoriales. Fue resuelto por 4/186 equipos; ese dato empírico no determina por sí solo su dificultad conceptual.",
+  "implementation": "3/5 (estimación editorial)",
+  "conceptual": "4/5 (estimación editorial)",
+  "ac": 4,
+  "total": 186,
+  "judgeUrl": "https://codeforces.com/gym/106682/problem/J",
+  "sourceUrl": "https://codeforces.com/gym/106682/attachments/download/39252/TAP-2026.pdf#page=15",
+  "statementUrl": "/statements/tap-2026-j.pdf",
+  "chunkIds": [
+    "cpp-strings",
+    "cpp-matrices"
+  ],
+  "coverage": "parcial",
+  "missingTools": [
+    "DP sobre intervalos y prueba de las transiciones. La búsqueda de patrones por sí sola no resuelve este problema."
+  ],
+  "hints": [],
+  "status": "verificado",
+  "approach": "Selección editorial de herramientas de base. El enfoque completo está pendiente o requiere técnicas aún no incluidas en el apunte.",
+  "editorialUrl": null,
+  "classificationConfidence": "Media: lectura del enunciado y análisis editorial propio; sin editorial oficial localizada. Las bandas no son ratings oficiales.",
+  "firstSolve": {
+    "minute": 109,
+    "teams": [
+      "[UNC] Helicóptero"
+    ]
+  },
+  "statementPages": {
+    "start": 15,
+    "end": 15,
+    "sourcePageCount": 20
+  }
+}

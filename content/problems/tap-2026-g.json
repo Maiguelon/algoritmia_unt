@@ -1,0 +1,45 @@
+{
+  "id": "tap-2026-g",
+  "tournamentId": "tap-2026",
+  "letter": "G",
+  "title": "Galactic Southern Cross",
+  "summary": "Contar conjuntos de cuatro estrellas que cumplen las condiciones geométricas de una Cruz del Sur: perpendicularidad, bisección y alineación con el origen.",
+  "topics": [
+    "Geometría",
+    "Conteo"
+  ],
+  "difficulty": "Avanzado",
+  "difficultyReason": "Clasificación editorial provisional por revisar con solución de referencia. Fue resuelto por 1/186 equipos; ese dato empírico no determina por sí solo su dificultad conceptual.",
+  "implementation": "Pendiente de revisión conceptual",
+  "conceptual": "Pendiente de revisión conceptual",
+  "ac": 1,
+  "total": 186,
+  "judgeUrl": "https://codeforces.com/gym/106682/problem/G",
+  "sourceUrl": "https://codeforces.com/gym/106682/attachments/download/39252/TAP-2026.pdf#page=11",
+  "statementUrl": "/statements/tap-2026-g.pdf",
+  "chunkIds": [
+    "cpp-pares",
+    "cpp-cuentas-enteras",
+    "cpp-reales"
+  ],
+  "coverage": "parcial",
+  "missingTools": [
+    "Conteo geométrico eficiente; solución pendiente de contrastar."
+  ],
+  "hints": [],
+  "status": "verificado",
+  "approach": "Selección editorial de herramientas de base. El enfoque completo está pendiente o requiere técnicas aún no incluidas en el apunte.",
+  "editorialUrl": null,
+  "classificationConfidence": "Baja sobre la técnica y la banda conceptual: se cuenta con enunciado y AC oficiales, pero falta contrastar una solución de referencia.",
+  "firstSolve": {
+    "minute": 273,
+    "teams": [
+      "[UBA] Corman"
+    ]
+  },
+  "statementPages": {
+    "start": 11,
+    "end": 12,
+    "sourcePageCount": 20
+  }
+}

@@ -1,0 +1,44 @@
+{
+  "id": "tap-2026-k",
+  "tournamentId": "tap-2026",
+  "letter": "K",
+  "title": "Kilograms Exceeded",
+  "summary": "Reconstruir la combinación de un candado de dígitos 0 a 8 después de que cada ruedita fue girada hacia el lado contrario al que se pretendía.",
+  "topics": [
+    "Implementación",
+    "Aritmética"
+  ],
+  "difficulty": "Inicial",
+  "difficultyReason": "Conceptual 1/5 e implementación 1/5, estimaciones editoriales. Fue resuelto por 146/186 equipos; ese dato empírico no determina por sí solo su dificultad conceptual.",
+  "implementation": "1/5 (estimación editorial)",
+  "conceptual": "1/5 (estimación editorial)",
+  "ac": 146,
+  "total": 186,
+  "judgeUrl": "https://codeforces.com/gym/106682/problem/K",
+  "sourceUrl": "https://codeforces.com/gym/106682/attachments/download/39252/TAP-2026.pdf#page=16",
+  "statementUrl": "/statements/tap-2026-k.pdf",
+  "chunkIds": [
+    "cpp-strings",
+    "cpp-recorridos",
+    "cpp-cuentas-enteras",
+    "cpp-conversiones"
+  ],
+  "coverage": "completa",
+  "missingTools": [],
+  "hints": [],
+  "status": "verificado",
+  "approach": "Selección editorial de herramientas de base. Cubre las operaciones del enfoque de implementación elegido; no incluye la solución.",
+  "editorialUrl": null,
+  "classificationConfidence": "Media: lectura del enunciado y análisis editorial propio; sin editorial oficial localizada. Las bandas no son ratings oficiales.",
+  "firstSolve": {
+    "minute": 9,
+    "teams": [
+      "[UNLP] -WAall"
+    ]
+  },
+  "statementPages": {
+    "start": 16,
+    "end": 16,
+    "sourcePageCount": 20
+  }
+}
