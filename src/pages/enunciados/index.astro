@@ -1,0 +1,6 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import StatementDownload from '../../components/StatementDownload';
+import {problems,tournaments} from '../../lib/data';
+---
+<Layout title="Enunciados para practicar"><div class="page-heading"><span class="eyebrow">Una práctica lista para llevar</span><h1>Los problemas, juntos.</h1><p class="muted">Descargá tus enunciados seleccionados para leer sin conexión o imprimir. El apunte de herramientas se prepara por separado.</p></div><StatementDownload problems={problems} tournaments={tournaments} client:load/></Layout>
