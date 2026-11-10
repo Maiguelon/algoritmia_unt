@@ -1,0 +1,46 @@
+{
+  "id": "regional-2025-k",
+  "tournamentId": "regional-2025",
+  "letter": "K",
+  "title": "Kings Conquest",
+  "summary": "Mover reyes en una grilla infinita durante una cantidad fijada de movimientos y maximizar el área del menor rectángulo que los contiene, sin superponerlos.",
+  "topics": [
+    "Geometría",
+    "Greedy",
+    "Optimización"
+  ],
+  "difficulty": "Salto regional",
+  "difficultyReason": "Estimación editorial: conceptual 3/5 e implementación 3/5. Alineado con observación y casos borde; necesita prueba cuidadosa antes de codificar un greedy.",
+  "implementation": "3/5 (estimación editorial)",
+  "conceptual": "3/5 (estimación editorial)",
+  "ac": 24,
+  "total": 201,
+  "judgeUrl": "https://codeforces.com/gym/106178/problem/K",
+  "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2025/contest.pdf#page=17",
+  "statementUrl": null,
+  "chunkIds": [
+    "cpp-pares",
+    "cpp-vectores",
+    "cpp-extremos-sumas",
+    "cpp-cuentas-enteras"
+  ],
+  "coverage": "parcial",
+  "missingTools": [
+    "Justificación de la optimización geométrica y reparto de movimientos; no desarrollados en la biblioteca básica."
+  ],
+  "hints": [
+    "caso de un único rey",
+    "producto de dimensiones fuera de 32 bits",
+    "ignorar colisiones o gastar mal movimientos"
+  ],
+  "status": "verificado",
+  "approach": "Herramientas para un enfoque editorial de implementación; no representan todos los enfoques posibles. Estos bloques solo cubren las operaciones de base y no constituyen una solución completa.",
+  "editorialUrl": null,
+  "classificationConfidence": "Media: clasificación inferida, sin editorial oficial localizada. Muchos WA agregados sugieren cuidado; no identifican su causa.",
+  "firstSolve": {
+    "minute": 51,
+    "teams": [
+      "[UMSS] Wasos del valle"
+    ]
+  }
+}

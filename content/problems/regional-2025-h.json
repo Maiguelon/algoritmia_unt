@@ -1,0 +1,43 @@
+{
+  "id": "regional-2025-h",
+  "tournamentId": "regional-2025",
+  "letter": "H",
+  "title": "Harder Horizons",
+  "summary": "Dividir una lista ordenada de tareas en la mayor cantidad de días consecutivos, de modo que la tarea más difícil de cada día sea estrictamente más difícil que la del anterior.",
+  "topics": [
+    "Greedy",
+    "Implementación"
+  ],
+  "difficulty": "Inicial",
+  "difficultyReason": "Estimación editorial: conceptual 1/5 e implementación 1/5. Encaja con observación y recorridos de arreglos; es uno de los puntos de entrada más claros del corpus.",
+  "implementation": "1/5 (estimación editorial)",
+  "conceptual": "1/5 (estimación editorial)",
+  "ac": 192,
+  "total": 201,
+  "judgeUrl": "https://codeforces.com/gym/106178/problem/H",
+  "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2025/contest.pdf#page=13",
+  "statementUrl": null,
+  "chunkIds": [
+    "cpp-recorridos",
+    "cpp-vectores",
+    "cpp-extremos-sumas"
+  ],
+  "coverage": "completa",
+  "missingTools": [],
+  "hints": [
+    "tratar un empate como mejora",
+    "confundir grupos consecutivos con subsecuencias",
+    "olvidar el caso mínimo"
+  ],
+  "status": "verificado",
+  "approach": "Herramientas para un enfoque editorial de implementación; no representan todos los enfoques posibles. La biblioteca cubre las operaciones de C++ requeridas; encontrar la observación sigue siendo parte del ejercicio.",
+  "editorialUrl": null,
+  "classificationConfidence": "Alta sobre la clasificación simple por enunciado y evidencia empírica; no se presenta como técnica oficial publicada.",
+  "firstSolve": {
+    "minute": 4,
+    "teams": [
+      "[UChile] sin globito no hay fiesta",
+      "[UNLP] NaN (Need a Name)"
+    ]
+  }
+}

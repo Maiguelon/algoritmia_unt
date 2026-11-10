@@ -1,0 +1,80 @@
+{
+  "id": "regional-2025",
+  "title": "Regional South America/South 2025",
+  "year": 2025,
+  "season": "2025-2026",
+  "setName": "ICPC Latin American Regional Contests 2025 · Gym 106178",
+  "population": "South oficial: Argentina, Bolivia, Chile y Perú; excluye CCL y equipos de otras subregiones.",
+  "totalTeams": 201,
+  "status": "verificado",
+  "sources": [
+    {
+      "label": "Standings y población oficial",
+      "url": "https://scorelatam.naquadah.com.br/latam-2025/"
+    },
+    {
+      "label": "Enunciados oficiales",
+      "url": "https://scorelatam.naquadah.com.br/latam-2025/contest.pdf"
+    },
+    {
+      "label": "Envíos oficiales",
+      "url": "https://scorelatam.naquadah.com.br/latam-2025/Runs.html"
+    },
+    {
+      "label": "ICPC Global: identidad y temporada",
+      "url": "https://icpc.global/regionals/finder/SouthAmerica-South-2026/standings"
+    }
+  ],
+  "distribution": [
+    {
+      "solved": 0,
+      "teams": 2
+    },
+    {
+      "solved": 1,
+      "teams": 9
+    },
+    {
+      "solved": 2,
+      "teams": 140
+    },
+    {
+      "solved": 3,
+      "teams": 22
+    },
+    {
+      "solved": 4,
+      "teams": 7
+    },
+    {
+      "solved": 5,
+      "teams": 4
+    },
+    {
+      "solved": 6,
+      "teams": 11
+    },
+    {
+      "solved": 7,
+      "teams": 4
+    },
+    {
+      "solved": 8,
+      "teams": 2
+    }
+  ],
+  "notes": [
+    "AC cuenta equipos distintos con al menos una resolución aceptada; no es el número de envíos aceptados.",
+    "Año de competencia y temporada se muestran separados. La dificultad y los requisitos son estimaciones editoriales.",
+    "Los puestos y la cantidad de AC no determinan por sí solos los cupos: también importan elegibilidad, institución y penalidad.",
+    "La población oficial South contiene 201 equipos. Las cifras 205 o AC de H=201 no corresponden a este subconjunto: H=192 y J=197."
+  ],
+  "untResults": [
+    {
+      "team": "[UNT] Milanguchito",
+      "solved": 2,
+      "rank": 98,
+      "note": "Puesto 98 en South oficial; penalidad 55. No implica clasificación."
+    }
+  ]
+}

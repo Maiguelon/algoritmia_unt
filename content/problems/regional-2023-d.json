@@ -1,0 +1,43 @@
+{
+  "id": "regional-2023-d",
+  "tournamentId": "regional-2023",
+  "letter": "D",
+  "title": "Deciphering WordWhiz",
+  "summary": "Dado un diccionario de palabras de cinco letras distintas y las respuestas de WordWhiz, determinar qué palabras siguen siendo compatibles con las pistas recibidas.",
+  "topics": [
+    "Strings",
+    "Implementación"
+  ],
+  "difficulty": "Consolidación",
+  "difficultyReason": "Estimación editorial: conceptual 1/5 e implementación 2/5. Encaja directamente con strings, recorridos y lectura precisa; buen punto de entrada al corpus.",
+  "implementation": "2/5 (estimación editorial)",
+  "conceptual": "1/5 (estimación editorial)",
+  "ac": 120,
+  "total": 152,
+  "judgeUrl": "https://codeforces.com/gym/104736/problem/D",
+  "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2023/contest.pdf#page=9",
+  "statementUrl": null,
+  "chunkIds": [
+    "cpp-strings",
+    "cpp-vectores",
+    "cpp-busqueda-conteo",
+    "cpp-set"
+  ],
+  "coverage": "completa",
+  "missingTools": [],
+  "hints": [
+    "confundir palabra secreta con intento",
+    "confundir presencia y posición",
+    "filtrar usando información de otra consulta"
+  ],
+  "status": "verificado",
+  "approach": "Herramientas para un enfoque editorial de implementación; no representan todos los enfoques posibles. La biblioteca cubre las operaciones de C++ requeridas; encontrar la observación sigue siendo parte del ejercicio.",
+  "editorialUrl": "https://scorelatam.naquadah.com.br/latam-2023/editorial.pdf",
+  "classificationConfidence": "Alta: editorial oficial. El enunciado garantiza palabras sin letras repetidas; no trasladar reglas de otra versión de Wordle.",
+  "firstSolve": {
+    "minute": 10,
+    "teams": [
+      "[UBA - FCEN] InChaVoLa"
+    ]
+  }
+}
