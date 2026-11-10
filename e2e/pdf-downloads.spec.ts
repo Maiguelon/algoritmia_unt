@@ -37,7 +37,7 @@ test('descarga un apunte real con un único bloque y páginas A4', async ({ page
   await expect(page.getByTestId('notes-index-status')).toContainText('Sin índice');
 
   const downloading = page.waitForEvent('download', { timeout: 45_000 });
-  await page.getByRole('button', { name: 'Descargar apunte PDF', exact: true }).click();
+  await page.getByRole('region', { name:'Resumen del apunte' }).getByRole('button', { name: 'Descargar apunte PDF', exact: true }).click();
   const download = await downloading;
   expect(await download.failure()).toBeNull();
   expect(download.suggestedFilename()).toBe('apunte-cpp-algoritmia-unt.pdf');
@@ -52,7 +52,7 @@ test('descarga un apunte real con un único bloque y páginas A4', async ({ page
     expect(page.getWidth()).toBeCloseTo(595.28, 1);
     expect(page.getHeight()).toBeCloseTo(841.89, 1);
   }
-  await expect(page.getByRole('button', { name: 'Descargar apunte PDF', exact: true })).toBeEnabled();
+  await expect(page.getByRole('region', { name:'Resumen del apunte' }).getByRole('button', { name: 'Descargar apunte PDF', exact: true })).toBeEnabled();
   await expect(page.getByRole('alert')).toHaveCount(0);
   expect(errors).toEqual([]);
   console.log(`Apunte descargado: ${bytes.length} bytes, ${document.getPageCount()} páginas A4.`);

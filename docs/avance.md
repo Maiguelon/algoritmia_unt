@@ -60,3 +60,11 @@ Validación de esta revisión: 44 pruebas unitarias, 22 recorridos de navegador 
 - Preview de UNT, UNSTA y UTN con igual jerarquía por equipo; enlace al apartado Tucumán del Regional, que incluye las cuatro fotos ampliables.
 - Página de torneos: «Analizá cada torneo», preguntas sobre problemas, temas y clasificación; sin las etiquetas redundantes de año/verificación.
 - Verificación: tipos sin errores; cuatro recorridos de navegador aprobados, incluidos carrusel, teclado, plegado, enlaces e imágenes, y pantallas de 320, 390 y 1280 px. Revisión visual de la portada en escritorio y celular.
+
+## Recomendado al entrar y descargas visibles — 10 de noviembre
+
+Con problemas seleccionados, la entrada al apunte parte de Recomendado y no restaura un borrador anterior. Cambiar el conjunto de problemas también reinicia ese modo, incluso desde otra pestaña. Personalizado mantiene los cambios al alternar modos durante la visita. El armador libre sin problemas conserva su configuración y las entradas explícitas desde la biblioteca siguen funcionando.
+
+El resumen «Tu apunte lleva…» aparece antes de las categorías, con herramientas y descarga. Se suma otro botón al final de los controles; ambos usan el mismo contenido y muestran el resultado o error junto al botón utilizado. Computops aparece primero en las galerías de portada y Regional.
+
+Validación: 45 pruebas unitarias, 24 recorridos de navegador y tipos sin errores. Se descargaron PDFs reales desde los dos accesos, se probaron preferencias antiguas y cambios de problemas entre pestañas, y se revisó el resumen en escritorio y celular.

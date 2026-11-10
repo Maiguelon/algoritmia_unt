@@ -13,6 +13,13 @@ const problems = [
 ];
 
 describe('modos del apunte', () => {
+  it('inicia en Recomendado con problemas elegidos y descarta preferencias de otra visita', () => {
+    const stored = serializeNotesPreferences({mode:'personalizado',custom:{'cpp-map':off,'cpp-set':off}});
+    const restored = restoreNotesPreferences(stored, null, chunks, ['problema-nuevo']);
+    expect(restored).toEqual({mode:'recomendado',custom:null});
+    expect(activeNotesSelection(restored, ['cpp-set', 'cpp-find'], chunks)).toEqual(presetSelection('recomendado', ['cpp-set', 'cpp-find'], chunks));
+    expect(restoreNotesPreferences(serializeNotesPreferences({mode:'funciones',custom:null}), null, chunks, ['problema-nuevo']).mode).toBe('recomendado');
+  });
   it('reúne las herramientas compartidas y excluye problemas fuera de alcance', () => {
     expect(recommendedChunkIds(problems)).toEqual(['cpp-set', 'cpp-find']);
     expect(presetSelection('completo', recommendedChunkIds(problems), chunks)).not.toHaveProperty('cpp-map');

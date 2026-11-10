@@ -47,7 +47,7 @@ test('una herramienta respeta partes y desmarcados al recargar', async ({ page }
   await expect(page.getByTestId('notes-content-count')).toHaveText('0');
   await page.reload();
   await expect(page.getByTestId('notes-content-count')).toHaveText('0');
-  await expect(page.getByRole('button', { name: 'Descargar apunte PDF' })).toBeDisabled();
+  await expect(page.getByRole('region', { name:'Resumen del apunte' }).getByRole('button', { name: 'Descargar apunte PDF' })).toBeDisabled();
   expect(errors).toEqual([]);
 });
 

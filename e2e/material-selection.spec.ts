@@ -9,6 +9,44 @@ async function select(page: Page, ids: string[]) {
   await page.goto('/seleccion/');
 }
 
+test('entra con las recomendaciones actuales, muestra el resumen arriba y descarga también al final', async ({page, context}, testInfo) => {
+  await page.goto('/');
+  await page.evaluate(() => {
+    localStorage.setItem('algoritmia:selected', JSON.stringify(['tap-2026-b']));
+    localStorage.setItem('algoritmia:notes:v2', JSON.stringify({version:2,mode:'personalizado',custom:{'cpp-vectores':{descripcion:true,operaciones:true,ejemplos:true}}}));
+  });
+  await page.goto('/seleccion/#apuntes');
+  await expect(page.getByRole('radio', {name:'Recomendado',exact:true})).toBeChecked();
+  const summary = page.getByRole('region', {name:'Resumen del apunte'});
+  await expect(summary).toContainText('Tu apunte lleva 3 bloques + plantilla');
+  await expect(summary.getByRole('button', {name:'Descargar apunte PDF'})).toBeInViewport();
+  await expect(summary.getByRole('link', {name:'Vectores ↗',exact:true})).toHaveCount(0);
+  await page.getByRole('radio', {name:'Personalizado',exact:true}).check();
+  await page.getByRole('checkbox', {name:'Set',exact:true}).uncheck();
+  expect((await summary.boundingBox())!.y).toBeLessThan((await page.locator('.builder-controls').boundingBox())!.y);
+  const other = await context.newPage();
+  await other.goto('/problemas/tap-2026-k/');
+  await other.getByRole('button', {name:'＋ Seleccionar problema'}).click();
+  await expect(page.getByRole('radio', {name:'Recomendado',exact:true})).toBeChecked();
+  await expect(page.getByTestId('notes-content-count')).toHaveText('6');
+  const bottom = page.getByRole('region', {name:'Descarga al final del apunte'});
+  const downloading = page.waitForEvent('download');
+  await bottom.getByRole('button', {name:'Descargar apunte PDF'}).click();
+  const download = await downloading;
+  expect(await download.failure()).toBeNull();
+  const path = testInfo.outputPath('apunte-desde-abajo.pdf');
+  await download.saveAs(path);
+  expect((await PDFDocument.load(await fs.readFile(path))).getPageCount()).toBeGreaterThan(1);
+  await page.getByRole('radio', {name:'Personalizado',exact:true}).check();
+  await page.locator('#apuntes').scrollIntoViewIfNeeded();
+  await page.screenshot({path:'test-results-material/apunte-resumen-arriba.png'});
+  await page.setViewportSize({width:390,height:844});
+  await page.locator('#apuntes').scrollIntoViewIfNeeded();
+  await expect(summary.getByRole('button', {name:'Descargar apunte PDF'})).toBeInViewport();
+  expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
+  await page.screenshot({path:'test-results-material/apunte-resumen-mobile.png'});
+});
+
 test('los modos automáticos reúnen herramientas y se actualizan al quitar problemas o cambiar de pestaña', async ({ page, context }) => {
   await select(page, ['tap-2026-b', 'tap-2026-k']);
   await expect(page.getByRole('radio', { name: 'Recomendado', exact: true })).toBeChecked();
@@ -28,13 +66,13 @@ test('los modos automáticos reúnen herramientas y se actualizan al quitar prob
   await other.getByRole('button', { name: '＋ Seleccionar problema' }).click();
   await expect(page.getByTestId('notes-content-count')).toHaveText('6');
   await page.reload();
-  await expect(page.getByRole('radio', { name: 'Solo funciones', exact: true })).toBeChecked();
+  await expect(page.getByRole('radio', { name: 'Recomendado', exact: true })).toBeChecked();
   await expect(page.getByTestId('notes-content-count')).toHaveText('6');
   await page.getByRole('radio', { name: 'Recomendado', exact: true }).check();
   await page.screenshot({ path: 'test-results-material/seleccion-desktop.png', fullPage: true });
 });
 
-test('Personalizado conserva partes y desmarcados al probar otros modos, recargar y cambiar los problemas', async ({ page }) => {
+test('Personalizado conserva cambios durante la visita y vuelve a Recomendado al recargar o cambiar los problemas', async ({ page }) => {
   await select(page, ['tap-2026-b']);
   await page.getByRole('radio', { name: 'Personalizado', exact: true }).check();
   await page.getByRole('checkbox', { name: 'Set', exact: true }).uncheck();
@@ -47,12 +85,15 @@ test('Personalizado conserva partes y desmarcados al probar otros modos, recarga
   await expect(block(page, 'Strings').getByRole('checkbox', { name: 'Funciones y operaciones', exact: true })).not.toBeChecked();
   await expect(page.getByRole('region', { name: 'Problemas seleccionados' })).toContainText('2/3 herramientas sugeridas incluidas');
   await page.reload();
-  await expect(page.getByRole('checkbox', { name: 'Set', exact: true })).not.toBeChecked();
+  await expect(page.getByRole('radio', { name: 'Recomendado', exact: true })).toBeChecked();
+  await expect(page.getByTestId('notes-content-count')).toHaveText('3');
+  await page.getByRole('radio', { name: 'Personalizado', exact: true }).check();
+  await expect(page.getByRole('checkbox', { name: 'Set', exact: true })).toBeChecked();
   await page.getByRole('button', { name: 'Quitar Breaking Rosarigasino', exact: true }).click();
   await expect(page.getByText('Todavía no seleccionaste problemas.', { exact: true })).toBeVisible();
-  await expect(page.getByTestId('notes-content-count')).toHaveText('2');
+  await expect(page.getByTestId('notes-content-count')).toHaveText('0');
   await page.reload();
-  await expect(page.getByTestId('notes-content-count')).toHaveText('2');
+  await expect(page.getByTestId('notes-content-count')).toHaveText('0');
 });
 
 test('la descarga rápida usa Recomendado aunque el borrador esté vacío, y permite reintentar un error de conexión', async ({ page }, testInfo) => {
@@ -125,6 +166,6 @@ test('cobertura parcial y Top global no prometen un apunte completo', async ({ p
   await expect(page.getByTestId('notes-content-count')).toHaveText('2');
   await page.getByRole('button', { name: 'Quitar Confrontation of Numbers', exact: true }).click();
   await expect(page.getByTestId('notes-content-count')).toHaveText('0');
-  await expect(page.getByRole('button', { name: 'Descargar apunte PDF', exact: true })).toBeDisabled();
+  await expect(page.getByRole('region', { name:'Resumen del apunte' }).getByRole('button', { name: 'Descargar apunte PDF', exact: true })).toBeDisabled();
   await expect(page.getByRole('button', { name: /Descargar PDF de enunciados/ })).toBeEnabled();
 });

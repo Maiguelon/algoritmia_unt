@@ -26,21 +26,23 @@ const MODES: Array<{ id: NotesMode; title: string; description: string }> = [
 
 export default function NotesBuilder({ chunks, problems, tournaments }: { chunks: Chunk[]; problems: Problem[]; tournaments: Tournament[] }) {
   const allowed = useMemo(() => problems.map(problem => problem.id), [problems]);
-  const { selected: problemIds } = useSelection(allowed);
+  const { selected: problemIds, ready: selectionReady } = useSelection(allowed);
   const [preferences, setPreferences] = useState<NotesPreferences>({ mode: 'recomendado', custom: null });
   const [ready, setReady] = useState(false);
   const [working, setWorking] = useState(false);
   const [message, setMessage] = useState('');
   const [error, setError] = useState('');
   const [storageNotice, setStorageNotice] = useState('');
+  const [downloadOrigin, setDownloadOrigin] = useState<'top' | 'bottom'>('top');
+  const previousProblems = useRef<string | null>(null);
   const preview = useRef<HTMLDetailsElement>(null);
 
   useEffect(() => {
     let restored: NotesPreferences = { mode: 'recomendado', custom: null };
     let ids: string[] = [];
     try {
-      restored = restoreNotesPreferences(localStorage.getItem(NOTES_CONFIG_KEY), localStorage.getItem(LEGACY_NOTES_CONFIG_KEY), chunks);
       ids = readSelected(localStorage.getItem(SELECTION_KEY), allowed);
+      restored = restoreNotesPreferences(localStorage.getItem(NOTES_CONFIG_KEY), localStorage.getItem(LEGACY_NOTES_CONFIG_KEY), chunks, ids);
     } catch {
       setStorageNotice('Podés armar y descargar el apunte, pero este navegador no permite guardar tus preferencias.');
     }
@@ -53,17 +55,30 @@ export default function NotesBuilder({ chunks, problems, tournaments }: { chunks
       url.searchParams.delete('chunk');
       window.history.replaceState(window.history.state, '', `${url.pathname}${url.search}${url.hash}`);
     }
+    previousProblems.current = [...ids].sort().join('|');
     setPreferences(restored);
     setReady(true);
 
     function refreshPreferences(event: StorageEvent) {
       if (event.key === NOTES_CONFIG_KEY || event.key === null) {
-        try { setPreferences(restoreNotesPreferences(localStorage.getItem(NOTES_CONFIG_KEY), localStorage.getItem(LEGACY_NOTES_CONFIG_KEY), chunks)); } catch { /* The current draft remains usable. */ }
+        try {
+          if (readSelected(localStorage.getItem(SELECTION_KEY), allowed).length) return;
+          setPreferences(restoreNotesPreferences(localStorage.getItem(NOTES_CONFIG_KEY), localStorage.getItem(LEGACY_NOTES_CONFIG_KEY), chunks));
+        } catch { /* The current draft remains usable. */ }
       }
     }
     window.addEventListener('storage', refreshPreferences);
     return () => window.removeEventListener('storage', refreshPreferences);
   }, [chunks, problems, allowed]);
+
+  useEffect(() => {
+    if (!ready || !selectionReady) return;
+    const key = [...problemIds].sort().join('|');
+    if (key === previousProblems.current) return;
+    previousProblems.current = key;
+    setPreferences({ mode: 'recomendado', custom: null });
+    setMessage(''); setError('');
+  }, [problemIds, ready, selectionReady]);
 
   useEffect(() => {
     if (!ready) return;
@@ -105,7 +120,9 @@ export default function NotesBuilder({ chunks, problems, tournaments }: { chunks
     change((previous) => ({ ...previous, [id]: { ...(previous[id] ?? OFF), [key]: !previous[id]?.[key] } }));
   }
 
-  async function download() {
+  async function download(origin: 'top' | 'bottom') {
+    if (working) return;
+    setDownloadOrigin(origin);
     setWorking(true);
     setMessage('');
     setError('');
@@ -134,10 +151,28 @@ export default function NotesBuilder({ chunks, problems, tournaments }: { chunks
       </label>)}
     </fieldset>
     <p className="muted notes-mode-context">{custom
-      ? 'Tu configuración se conserva aunque cambies los problemas o pruebes otro modo.'
+      ? selectedProblems.length ? 'Personalizá este apunte. Al volver a entrar o cambiar los problemas, se carga Recomendado.' : 'Tu apunte libre se conserva en este navegador.'
       : 'Se actualiza al cambiar los problemas. Completo amplía estas herramientas, no toda la biblioteca.'}</p>
     {storageNotice && <p className="muted" role="status">{storageNotice}</p>}
     {!ready && <p role="status">Recuperando tu selección…</p>}
+    <section className="panel builder-summary-card" aria-label="Resumen del apunte">
+      <div className="builder-summary-heading">
+        <div><p className="eyebrow">{MODES.find(mode => mode.id === preferences.mode)?.title}</p><h3>Tu apunte lleva <span data-testid="notes-content-count">{content.length}</span> {content.length === 1 ? 'bloque' : 'bloques'} + plantilla</h3></div>
+        <div className="builder-summary-actions">
+          <button type="button" className="button" disabled={!ready || working || content.length === 0} onClick={() => download('top')}>{working ? 'Preparando PDF…' : 'Descargar apunte PDF'}</button>
+          {content.length > 0 && <a href="#vista-previa" onClick={() => { if (preview.current) preview.current.open = true; }}>Revisar vista previa ↓</a>}
+        </div>
+      </div>
+      <div className="builder-included" role="region" aria-label="Herramientas incluidas">
+        {content.length ? <ul>{content.map(chunk => <li key={chunk.id}><a href={`/apuntes/${chunk.id}/`} target="_blank" rel="noreferrer">{chunk.title} ↗</a></li>)}</ul>
+          : <p className="muted">{selectedProblems.length ? 'Estos problemas no tienen herramientas recomendadas disponibles. Podés armar un apunte personalizado con la biblioteca.' : 'Elegí problemas del catálogo o usá Personalizado para armar un apunte libre.'}</p>}
+      </div>
+      <p className="muted builder-format"><span data-testid="notes-index-status">{index ? 'Con índice de contenidos.' : 'Sin índice: se agrega a partir de dos bloques.'}</span> A4 · listo para doble faz.</p>
+      {selectedProblems.some(problem => problem.coverage !== 'completa') && <p className="builder-coverage">Hay problemas con cobertura parcial o fuera de alcance. Revisá las indicaciones junto a sus nombres.</p>}
+      {!custom && <button className="builder-text-button" type="button" onClick={() => chooseMode('personalizado')}>Personalizar bloques y partes →</button>}
+      {downloadOrigin === 'top' && message && <p role="status">{message}</p>}
+      {downloadOrigin === 'top' && error && <p role="alert" className="builder-error">{error}</p>}
+    </section>
     {custom && missingRecommendations.length > 0 && <div className="panel builder-missing">
       <p>Tu apunte omite {missingRecommendations.length} {missingRecommendations.length === 1 ? 'herramienta sugerida' : 'herramientas sugeridas'} para estos problemas.</p>
       <button type="button" className="button secondary small" onClick={() => change(previous => addSuggestedSelection(previous, recommendedIds, chunks))}>Añadir {missingRecommendations.length} bloques sugeridos por los problemas</button>
@@ -164,30 +199,15 @@ export default function NotesBuilder({ chunks, problems, tournaments }: { chunks
             {hasAnySection(selection[chunk.id]) && <div className="builder-parts">{SECTION_KEYS.map((key) => <label key={key}><input type="checkbox" checked={selection[chunk.id]?.[key] ?? false} onChange={() => togglePart(chunk.id, key)} />{SECTION_LABELS[key]}</label>)}</div>}
           </div>)}
         </details>)}
-      </div> : <section className="panel builder-included" aria-label="Herramientas incluidas">
-        <h3>Herramientas para tu selección</h3>
-        {content.length ? <ul>{content.map(chunk => <li key={chunk.id}><a href={`/apuntes/${chunk.id}/`} target="_blank" rel="noreferrer">{chunk.title} ↗</a><span className="muted">{chunk.family}</span></li>)}</ul>
-          : <p className="muted">{selectedProblems.length ? 'Estos problemas no tienen herramientas recomendadas disponibles. Podés armar un apunte personalizado con la biblioteca.' : 'Elegí problemas del catálogo o usá Personalizado para armar un apunte libre.'}</p>}
-        <button className="builder-text-button" type="button" onClick={() => chooseMode('personalizado')}>Personalizar bloques y partes →</button>
-      </section>}
-
-      <aside className="builder-summary">
-        <section className="panel builder-summary-card" aria-label="Resumen del apunte">
-          <p className="eyebrow">{MODES.find(mode => mode.id === preferences.mode)?.title}</p>
-          <h2><span data-testid="notes-content-count">{content.length}</span> {content.length === 1 ? 'bloque' : 'bloques'} + plantilla</h2>
-          <p data-testid="notes-index-status">{index ? 'Con índice de contenidos.' : 'Sin índice: se agrega a partir de dos bloques.'}</p>
-          <p className="muted">A4 · código seleccionable · listo para doble faz</p>
-          {custom && content.length > 0 && <ol>{content.map((chunk) => <li key={chunk.id}>{chunk.title}</li>)}</ol>}
-          {content.length === 0 && <p>Elegí al menos un bloque para preparar el apunte.</p>}
-          {selectedProblems.some(problem => problem.coverage !== 'completa') && <p className="builder-coverage">Hay problemas con cobertura parcial o fuera de alcance. Revisá las indicaciones junto a sus nombres.</p>}
-          <button type="button" className="button" disabled={!ready || working || content.length === 0} onClick={download}>{working ? 'Preparando PDF…' : 'Descargar apunte PDF'}</button>
-          {message && <p role="status">{message}</p>}
-          {error && <p role="alert" className="builder-error">{error}</p>}
-          {content.length > 0 && <a href="#vista-previa" onClick={() => { if (preview.current) preview.current.open = true; }}>Revisar vista previa ↓</a>}
-        </section>
-        {custom && supports.length > 0 && <section className="panel builder-supports"><h3>Apoyos que podés sumar</h3><p className="muted">Si ya los conocés o tenés impresos, dejalos fuera.</p><div>{supports.map((chunk) => <button key={chunk.id} type="button" className="chip" onClick={() => change((previous) => addSuggestedSelection(previous, [chunk.id], chunks))}>+ {chunk.title}</button>)}</div></section>}
-      </aside>
+      </div> : null}
     </div>
+    {custom && supports.length > 0 && <section className="panel builder-supports"><h3>Apoyos que podés sumar</h3><p className="muted">Si ya los conocés o tenés impresos, dejalos fuera.</p><div>{supports.map((chunk) => <button key={chunk.id} type="button" className="chip" onClick={() => change((previous) => addSuggestedSelection(previous, [chunk.id], chunks))}>+ {chunk.title}</button>)}</div></section>}
+    <section className="panel builder-download-bottom" aria-label="Descarga al final del apunte">
+      <p><strong>{content.length} {content.length === 1 ? 'bloque' : 'bloques'} + plantilla de C++17</strong><br/><span className="muted">Descargá el apunte con el contenido que elegiste.</span></p>
+      <button type="button" className="button" disabled={!ready || working || content.length === 0} onClick={() => download('bottom')}>{working ? 'Preparando PDF…' : 'Descargar apunte PDF'}</button>
+      {downloadOrigin === 'bottom' && message && <p role="status">{message}</p>}
+      {downloadOrigin === 'bottom' && error && <p role="alert" className="builder-error">{error}</p>}
+    </section>
 
     <details id="vista-previa" className="builder-preview-section" open={custom} ref={preview}>
       <summary>Vista previa del apunte</summary>
@@ -215,7 +235,7 @@ export default function NotesBuilder({ chunks, problems, tournaments }: { chunks
       .builder-included li span { font-size:.8rem; } .builder-included a { font-weight:700; }
       .builder-text-button { color:var(--blue); border:0; padding:0; background:none; font:inherit; text-decoration:underline; cursor:pointer; }
       .builder-missing { margin-bottom:1rem; } .builder-missing p { margin-top:0; }
-      .builder-layout { display:grid; grid-template-columns:minmax(0, 1fr) 310px; gap:1.25rem; align-items:start; }
+      .builder-layout { display:block; }
       .builder-controls { min-width:0; } .builder-template { margin-bottom:1.5rem; }
       .builder-template h2 { margin:.25rem 0; } .builder-template .muted { font-size:.95rem; }
       .builder-selection-heading { display:flex; justify-content:space-between; align-items:center; gap:1rem; flex-wrap:wrap; margin-block:1.25rem .75rem; }
@@ -230,10 +250,20 @@ export default function NotesBuilder({ chunks, problems, tournaments }: { chunks
       .builder-chunk-title input,.builder-parts input { width:1rem; height:1rem; flex-shrink:0; accent-color:var(--accent, #135745); }
       .builder-parts { display:flex; flex-wrap:wrap; gap:.65rem 1rem; padding-top:.7rem; font-size:.85rem; }
       .builder-chunk .builder-parts { padding-left:1.6rem; }
-      .builder-summary { position:sticky; top:1rem; display:grid; gap:1rem; } .builder-summary h2 { margin:.25rem 0 .8rem; }
-      .builder-summary-card { display:grid; gap:.7rem; } .builder-summary-card>p { margin:0; } .builder-summary-card ol { margin:.3rem 0; padding-left:1.25rem; font-size:.88rem; max-height:18rem; overflow:auto; }
-      .builder-summary-card .button { width:100%; text-align:center; } .builder-summary-card>a { font-size:.85rem; }
-      .builder-summary-card .muted { font-size:.85rem; }
+      .builder-summary-card { display:grid; gap:.8rem; }
+      .builder-summary-heading { display:flex; justify-content:space-between; align-items:start; gap:1rem; flex-wrap:wrap; }
+      .builder-summary-heading .eyebrow { margin:0 0 .4rem; }
+      .builder-summary-heading h3 { margin:0; font-size:1.5rem; }
+      .builder-summary-actions { display:flex; flex-direction:column; gap:.7rem; align-items:center; }
+      .builder-summary-actions>a { font-size:.85rem; }
+      .builder-summary-card .builder-included ul { display:flex; flex-wrap:wrap; gap:.5rem; margin:.4rem 0; }
+      .builder-summary-card .builder-included li { display:block; border:1px solid var(--line); border-radius:6px; padding:.3rem .65rem; background:var(--paper); font-size:.85rem; }
+      .builder-summary-card .builder-text-button { justify-self:start; }
+      .builder-format { font-size:.82rem; margin:0; }
+      .builder-download-bottom { display:flex; justify-content:space-between; align-items:center; flex-wrap:wrap; gap:1rem; }
+      .builder-download-bottom p { margin:0; }
+      .builder-download-bottom .muted { font-size:.85rem; }
+      .builder-download-bottom [role] { flex-basis:100%; }
       .builder-supports h3 { margin:0; } .builder-supports>div { display:flex; flex-wrap:wrap; gap:.4rem; }
       .builder-problems { margin-bottom:1.25rem; } .builder-problems h2 { margin-top:0; } .builder-problems li { margin-block:.65rem; }
       .builder-problems-link { display:inline-block; margin:.7rem 1rem 0 0; font-size:.9rem; }
@@ -248,8 +278,8 @@ export default function NotesBuilder({ chunks, problems, tournaments }: { chunks
       .builder-preview .prose table th:first-child,.builder-preview .prose table td:first-child { min-width:220px; }
       .builder-preview .prose table code { white-space:nowrap; }
       .builder-table-help { font-size:.85rem; }
-      @media(max-width:850px) { .notes-modes { grid-template-columns:repeat(2,minmax(0,1fr)); } .builder-layout { grid-template-columns:minmax(0, 1fr); } .builder-summary { position:static; grid-row:1; } .builder-summary-card ol { max-height:9rem; } }
-      @media(max-width:480px) { .builder-chunk-title { align-items:start; } .builder-family>summary .muted { display:block; margin-left:1rem; margin-top:.25rem; } .builder-parts { flex-direction:column; } }
+      @media(max-width:850px) { .notes-modes { grid-template-columns:repeat(2,minmax(0,1fr)); } .builder-layout { grid-template-columns:minmax(0, 1fr); } }
+      @media(max-width:480px) { .builder-summary-actions,.builder-download-bottom .button { width:100%; } .builder-summary-actions .button { width:100%; } .builder-chunk-title { align-items:start; } .builder-family>summary .muted { display:block; margin-left:1rem; margin-top:.25rem; } .builder-parts { flex-direction:column; } }
     `}</style>
   </div>;
 }

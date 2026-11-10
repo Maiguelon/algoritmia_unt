@@ -46,7 +46,8 @@ export function switchNotesMode(preferences: NotesPreferences, mode: NotesMode, 
   return { mode, custom: mode === 'personalizado' && preferences.custom === null ? current : preferences.custom };
 }
 
-export function restoreNotesPreferences(raw: string | null, legacyRaw: string | null, chunks: Pick<Chunk, 'id'>[]): NotesPreferences {
+export function restoreNotesPreferences(raw: string | null, legacyRaw: string | null, chunks: Pick<Chunk, 'id'>[], problemIds: string[] = []): NotesPreferences {
+  if (problemIds.length) return { mode: 'recomendado', custom: null };
   try {
     const stored = JSON.parse(raw ?? 'null');
     if (stored?.version === 2 && NOTES_MODES.includes(stored.mode)

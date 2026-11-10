@@ -27,6 +27,7 @@ test('la portada conecta comunidad, carrusel manual, camp y equipos del Regional
   await expect(page.locator('.camp-details')).toContainText('Dos semanas');
   await page.getByText('¿Qué es el Training Camp?', {exact:true}).click();
   await expect(page.locator('.latest-tournament figure')).toHaveCount(4);
+  await expect(page.locator('.latest-tournament figcaption').first()).toContainText('Computops');
   for (const width of [1280, 390, 320]) {
     await page.setViewportSize({width,height:844});
     expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
