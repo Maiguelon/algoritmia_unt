@@ -1,0 +1,11 @@
+---
+import Layout from '../layouts/Layout.astro';
+import { chunks } from '../lib/chunks';
+---
+<Layout>
+  <section class="hero"><div><div class="hero-kicker eyebrow"><span class="dot"></span>Entrenamiento de programación competitiva</div><h1>Un problema más.<br/><span style="color:var(--green)">Un salto más cerca.</span></h1><p class="hero-copy">Encontrá tu próximo desafío, conocé las herramientas que pide y armá el apunte que te sirve. Desde el primer AC hasta los Regionales.</p><div class="actions"><a class="button" href="/problemas/">Explorar problemas <span aria-hidden="true">↗</span></a><a class="button secondary" href="/apuntes/">Consultar apuntes</a></div></div><div class="hero-art"><img src="/logo-club.png" alt="Tres hormigas del Club de Algoritmia reunidas alrededor de una computadora" width="260" height="260"/></div></section>
+  <div class="stats-row"><div class="stat"><strong>{chunks.length}</strong><span>bloques de C++ para consultar</span></div><div class="stat"><strong>A tu medida</strong><span>apuntes por herramientas y secciones</span></div><div class="stat"><strong>Con contexto</strong><span>cada AC con población y fuente</span></div></div>
+  <div class="section-title"><h2>Elegí por dónde seguir</h2><span class="eyebrow desktop-only">Una biblioteca para el club</span></div>
+  <div class="grid-three"><a class="link-card" href="/problemas/"><span class="eyebrow">01 / Practicar</span><h3>Buscá tu próximo problema ↗</h3><p>Filtrá por tema y dificultad. Consultá qué herramientas entran en juego y elegí un desafío.</p></a><a class="link-card" href="/armar/"><span class="eyebrow">02 / Preparar</span><h3>Llevá lo que necesitás ↗</h3><p>Combiná bloques, elegí el nivel de detalle y descargá un apunte propio para leer o imprimir.</p></a><a class="link-card" href="/torneos/"><span class="eyebrow">03 / Entender</span><h3>Mirá el torneo completo ↗</h3><p>Explorá la distribución de AC y los saltos de dificultad con el contexto de cada set.</p></a></div>
+  <div class="notice" style="margin-top:32px"><strong>Regional 2026: esperamos su publicación.</strong> Incorporaremos los problemas cuando estén disponibles y se puedan verificar sus fuentes y enlaces al juez.</div>
+</Layout>

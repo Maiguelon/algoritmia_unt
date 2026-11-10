@@ -1,0 +1,17 @@
+---
+import '../styles/global.css';
+interface Props { title?: string; description?: string }
+const { title = 'Algoritmia UNT', description = 'Problemas, herramientas y torneos para entrenar programación competitiva en la UNT.' } = Astro.props;
+const pathname = Astro.url.pathname;
+const navigation = [['/problemas/','Problemas'],['/torneos/','Torneos'],['/apuntes/','Apuntes'],['/armar/','Armar apunte']];
+---
+<!doctype html>
+<html lang="es-AR">
+  <head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width"/><meta name="description" content={description}/><meta name="theme-color" content="#245c4c"/><link rel="icon" type="image/png" href="/logo-club.png"/><title>{title === 'Algoritmia UNT' ? title : `${title} · Algoritmia UNT`}</title></head>
+  <body>
+    <a class="skip-link" href="#contenido">Saltar al contenido</a>
+    <header class="site-header"><div class="container header-inner"><a class="brand" href="/" aria-label="Algoritmia UNT, inicio"><img src="/logo-club.png" alt="" width="52" height="52"/><span>algoritmia<span style="color:var(--green)">.unt</span><small>Club de algoritmia · Tucumán</small></span></a><nav class="nav" aria-label="Principal">{navigation.map(([href,label])=><a href={href} aria-current={pathname.startsWith(href) ? 'page' : undefined}>{label}</a>)}</nav></div></header>
+    <main id="contenido"><div class="container"><slot/></div></main>
+    <footer class="footer"><div class="container footer-inner"><span>Hecho para entrenar juntos. Club de Algoritmia · UNT</span><span>C++17 · Datos con fuentes · Criterio editorial explícito</span></div></footer>
+  </body>
+</html>
