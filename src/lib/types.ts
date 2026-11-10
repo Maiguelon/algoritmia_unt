@@ -42,5 +42,12 @@ export interface Tournament {
   sources: Array<{ label: string; url: string }>;
   distribution: Array<{ solved: number; teams: number }>;
   notes: string[];
-  untResults: Array<{ team: string; solved: number; rank: number | null; note: string }>;
+  tucumanResults: Array<{
+    team: string;
+    institution: string;
+    solved: number;
+    rank: number | null;
+    note: string;
+    qualifiedTo?: string;
+  }>;
 }

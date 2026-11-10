@@ -64,12 +64,13 @@
     "Año de competencia y temporada se muestran separados. La dificultad y los requisitos son estimaciones editoriales.",
     "Los puestos y la cantidad de AC no determinan por sí solos los cupos: también importan elegibilidad, institución y penalidad."
   ],
-  "untResults": [
+  "tucumanResults": [
     {
       "team": "[UNT] TuringBot",
       "solved": 4,
       "rank": 19,
-      "note": "Puesto 19 en South oficial; penalidad 254; problemas A, F, J, K. No implica clasificación."
+      "note": "Puesto 19 en South oficial; penalidad 254; problemas A, F, J, K. No implica clasificación.",
+      "institution": "UNT"
     }
   ]
 }

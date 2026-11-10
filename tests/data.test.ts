@@ -83,7 +83,7 @@ describe('contratos del contenido editorial', () => {
     expect(actual).toHaveLength(14);
     expect(actual.find(p => p.letter === 'B')?.ac).toBe(69);
     expect(actual.find(p => p.letter === 'J')?.ac).toBe(4);
-    expect(tap?.untResults.find(t => t.team === 'Computops')?.rank).toBe(55);
+    expect(tap?.tucumanResults.find(t => t.team === 'Computops')?.rank).toBe(55);
   });
 
   it('Regional 2026 sigue pendiente y no inventa problemas ni estadísticas', () => {

@@ -163,6 +163,10 @@ summary { cursor: pointer; font-weight: 800; }
 .info-list dt { font-size: .75rem; color: var(--muted); margin-top: 18px; text-transform: uppercase; letter-spacing: .06em; }
 .info-list dd { margin: 5px 0; }
 .status-pending { color: #795117; background: #fff5d1; padding: 12px 16px; border-radius: 8px; font-size: .9rem; }
+.local-result { border-top: 1px solid var(--line); padding: 18px 0; }
+.local-result h3 { margin: 8px 0; }
+.local-result.qualified { border: 2px solid var(--blue); border-radius: 9px; padding: 16px; margin: 16px 0; background: #f5f7ff; }
+.qualification-badge { display: inline-block; background: var(--yellow); color: var(--ink); border-radius: 5px; padding: 4px 9px; font-size: .8rem; font-weight: 800; }
 
 @media (max-width: 950px) {
   .hero { gap: 24px; }

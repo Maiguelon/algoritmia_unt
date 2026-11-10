@@ -85,30 +85,57 @@
     "Año calendario 2026; la inscripción de ICPC usa el identificador TAP-2027.",
     "Los resultados nacionales, la cantidad de AC y las reglas por institución son datos distintos; no se deduce automáticamente un cupo del puesto."
   ],
-  "untResults": [
+  "tucumanResults": [
     {
       "team": "Computops",
+      "institution": "UNT",
       "solved": 4,
       "rank": 55,
-      "note": "Puesto nacional publicado; penalidad 460; problemas A, B, I, K. No se infiere clasificación automática."
+      "note": "Puesto nacional publicado; penalidad 460; problemas A, B, I, K.",
+      "qualifiedTo": "Regional 2026"
     },
     {
       "team": "Mono Pollo NP++ 18",
+      "institution": "UNT",
       "solved": 3,
       "rank": 99,
-      "note": "Puesto nacional publicado; penalidad 343; problemas A, I, K. No se infiere clasificación automática."
+      "note": "Puesto nacional publicado; penalidad 343; problemas A, I, K.",
+      "qualifiedTo": "Regional 2026"
     },
     {
       "team": "Achilata",
+      "institution": "UNT",
       "solved": 3,
       "rank": 101,
-      "note": "Puesto nacional publicado; penalidad 347; problemas A, B, K. No se infiere clasificación automática."
+      "note": "Puesto nacional publicado; penalidad 347; problemas A, B, K."
+    },
+    {
+      "team": "Pandas",
+      "institution": "UNSTA",
+      "solved": 3,
+      "rank": 123,
+      "note": "Puesto nacional publicado; penalidad 571; problemas A, I, K."
     },
     {
       "team": "las divinas",
+      "institution": "UNT",
       "solved": 2,
       "rank": 134,
-      "note": "Puesto nacional publicado; penalidad 104; problemas A, I. No se infiere clasificación automática."
+      "note": "Puesto nacional publicado; penalidad 104; problemas A, I."
+    },
+    {
+      "team": "Noxus",
+      "institution": "UTN-FRT",
+      "solved": 2,
+      "rank": 163,
+      "note": "Puesto nacional publicado; penalidad 690; problemas A, I."
+    },
+    {
+      "team": "GSE",
+      "institution": "UTN-FRT",
+      "solved": 0,
+      "rank": 183,
+      "note": "Puesto nacional publicado; penalidad 0; sin problemas resueltos."
     }
   ]
 }

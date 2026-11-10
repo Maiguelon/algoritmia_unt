@@ -69,12 +69,13 @@
     "Los puestos y la cantidad de AC no determinan por sí solos los cupos: también importan elegibilidad, institución y penalidad.",
     "South oficial contiene 201 equipos: H=192 AC y J=197 AC. Los totales con CCL son otra población y no se mezclan aquí."
   ],
-  "untResults": [
+  "tucumanResults": [
     {
       "team": "[UNT] Milanguchito",
       "solved": 2,
       "rank": 98,
-      "note": "Puesto 98 en South oficial; penalidad 55; problemas H, J. No implica clasificación."
+      "note": "Puesto 98 en South oficial; penalidad 55; problemas H, J. No implica clasificación.",
+      "institution": "UNT"
     }
   ]
 }
