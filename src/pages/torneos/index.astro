@@ -1,0 +1,5 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import {tournaments,problems} from '../../lib/data';
+---
+<Layout title="Torneos"><div class="page-heading"><span class="eyebrow">El contexto del set</span><h1>Cada torneo tiene su curva.</h1><p class="muted">Qué resolvieron los equipos, dónde estuvo el salto y qué herramientas aparecen. Las estadísticas pertenecen a una población concreta; las valoraciones de dificultad son editoriales.</p></div><div class="grid-three">{tournaments.map(t=><a class="link-card" href={`/torneos/${t.id}/`}><span class="eyebrow">{t.year} / Datos {t.status === 'verificado' ? 'verificados' : t.status === 'pendiente' ? 'pendientes' : 'provisorios'}</span><h2>{t.title}</h2><p>{t.status === 'pendiente' ? 'Set y estadísticas pendientes de incorporación' : `${problems.filter(p=>p.tournamentId===t.id).length} problemas · ${t.totalTeams ?? 'Sin dato de'} equipos`}</p><span>Explorar torneo ↗</span></a>)}</div><div class="notice" style="margin-top:30px"><strong>Regional 2026 pendiente de publicación de problemas.</strong><p>Esperamos el set y los enlaces oficiales antes de incorporarlo.</p></div></Layout>
