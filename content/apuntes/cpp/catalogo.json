@@ -1,0 +1,346 @@
+{
+  "version": 1,
+  "language": "cpp",
+  "standard": "C++17",
+  "sections": [
+    {
+      "id": "descripcion",
+      "heading": "Descripción",
+      "selectedByDefault": false
+    },
+    {
+      "id": "operaciones",
+      "heading": "Funciones y operaciones",
+      "selectedByDefault": true
+    },
+    {
+      "id": "ejemplos",
+      "heading": "Ejemplos",
+      "selectedByDefault": false
+    }
+  ],
+  "exportPolicy": {
+    "template": "cpp-plantilla",
+    "templateFirst": true,
+    "templateCodeAlways": true,
+    "prerequisites": "suggested",
+    "supportAvailableAtAllDifficulties": true,
+    "index": {
+      "mode": "multiple-content-chunks",
+      "exclude": [
+        "cpp-plantilla"
+      ]
+    }
+  },
+  "groups": [
+    {
+      "id": "plantilla",
+      "title": "Plantilla",
+      "chunks": [
+        "cpp-plantilla"
+      ]
+    },
+    {
+      "id": "apoyo-basico",
+      "title": "Apoyo básico",
+      "chunks": [
+        "cpp-variables",
+        "cpp-entrada-salida",
+        "cpp-condiciones",
+        "cpp-recorridos",
+        "cpp-funciones-referencias",
+        "cpp-iteradores"
+      ]
+    },
+    {
+      "id": "texto",
+      "title": "Texto",
+      "chunks": [
+        "cpp-strings",
+        "cpp-conversiones"
+      ]
+    },
+    {
+      "id": "contenedores",
+      "title": "Contenedores",
+      "chunks": [
+        "cpp-vectores",
+        "cpp-pares",
+        "cpp-matrices",
+        "cpp-set",
+        "cpp-map",
+        "cpp-multiset",
+        "cpp-pila",
+        "cpp-cola",
+        "cpp-deque"
+      ]
+    },
+    {
+      "id": "algoritmos",
+      "title": "Algoritmos de la STL",
+      "chunks": [
+        "cpp-busqueda-conteo",
+        "cpp-extremos-sumas",
+        "cpp-ordenacion",
+        "cpp-busqueda-ordenada"
+      ]
+    },
+    {
+      "id": "cuentas",
+      "title": "Cuentas",
+      "chunks": [
+        "cpp-cuentas-enteras",
+        "cpp-reales",
+        "cpp-divisibilidad"
+      ]
+    },
+    {
+      "id": "recetas",
+      "title": "Recetas básicas",
+      "chunks": [
+        "cpp-frecuencias",
+        "cpp-prefijos",
+        "cpp-rachas",
+        "cpp-apariciones",
+        "cpp-intervalos"
+      ]
+    }
+  ],
+  "chunks": [
+    {
+      "id": "cpp-plantilla",
+      "file": "plantilla.md",
+      "suggestedPrerequisites": []
+    },
+    {
+      "id": "cpp-variables",
+      "file": "variables.md",
+      "suggestedPrerequisites": []
+    },
+    {
+      "id": "cpp-entrada-salida",
+      "file": "entrada-salida.md",
+      "suggestedPrerequisites": [
+        "cpp-variables"
+      ]
+    },
+    {
+      "id": "cpp-condiciones",
+      "file": "condiciones.md",
+      "suggestedPrerequisites": [
+        "cpp-variables"
+      ]
+    },
+    {
+      "id": "cpp-recorridos",
+      "file": "recorridos.md",
+      "suggestedPrerequisites": [
+        "cpp-variables",
+        "cpp-condiciones"
+      ]
+    },
+    {
+      "id": "cpp-funciones-referencias",
+      "file": "funciones-referencias.md",
+      "suggestedPrerequisites": [
+        "cpp-variables",
+        "cpp-condiciones",
+        "cpp-recorridos"
+      ]
+    },
+    {
+      "id": "cpp-iteradores",
+      "file": "iteradores.md",
+      "suggestedPrerequisites": [
+        "cpp-variables"
+      ]
+    },
+    {
+      "id": "cpp-strings",
+      "file": "strings.md",
+      "suggestedPrerequisites": [
+        "cpp-variables",
+        "cpp-entrada-salida"
+      ]
+    },
+    {
+      "id": "cpp-conversiones",
+      "file": "conversiones.md",
+      "suggestedPrerequisites": [
+        "cpp-variables",
+        "cpp-strings"
+      ]
+    },
+    {
+      "id": "cpp-vectores",
+      "file": "vectores.md",
+      "suggestedPrerequisites": [
+        "cpp-variables",
+        "cpp-recorridos"
+      ]
+    },
+    {
+      "id": "cpp-pares",
+      "file": "pares.md",
+      "suggestedPrerequisites": [
+        "cpp-variables"
+      ]
+    },
+    {
+      "id": "cpp-matrices",
+      "file": "matrices.md",
+      "suggestedPrerequisites": [
+        "cpp-vectores",
+        "cpp-recorridos"
+      ]
+    },
+    {
+      "id": "cpp-set",
+      "file": "set.md",
+      "suggestedPrerequisites": [
+        "cpp-iteradores",
+        "cpp-pares"
+      ]
+    },
+    {
+      "id": "cpp-map",
+      "file": "map.md",
+      "suggestedPrerequisites": [
+        "cpp-iteradores",
+        "cpp-pares"
+      ]
+    },
+    {
+      "id": "cpp-multiset",
+      "file": "multiset.md",
+      "suggestedPrerequisites": [
+        "cpp-set"
+      ]
+    },
+    {
+      "id": "cpp-pila",
+      "file": "pila.md",
+      "suggestedPrerequisites": [
+        "cpp-recorridos"
+      ]
+    },
+    {
+      "id": "cpp-cola",
+      "file": "cola.md",
+      "suggestedPrerequisites": [
+        "cpp-recorridos"
+      ]
+    },
+    {
+      "id": "cpp-deque",
+      "file": "deque.md",
+      "suggestedPrerequisites": [
+        "cpp-vectores"
+      ]
+    },
+    {
+      "id": "cpp-busqueda-conteo",
+      "file": "busqueda-conteo.md",
+      "suggestedPrerequisites": [
+        "cpp-iteradores",
+        "cpp-recorridos",
+        "cpp-funciones-referencias"
+      ]
+    },
+    {
+      "id": "cpp-extremos-sumas",
+      "file": "extremos-sumas.md",
+      "suggestedPrerequisites": [
+        "cpp-variables",
+        "cpp-iteradores"
+      ]
+    },
+    {
+      "id": "cpp-ordenacion",
+      "file": "ordenacion.md",
+      "suggestedPrerequisites": [
+        "cpp-iteradores",
+        "cpp-pares",
+        "cpp-funciones-referencias"
+      ]
+    },
+    {
+      "id": "cpp-busqueda-ordenada",
+      "file": "busqueda-ordenada.md",
+      "suggestedPrerequisites": [
+        "cpp-ordenacion",
+        "cpp-iteradores"
+      ]
+    },
+    {
+      "id": "cpp-cuentas-enteras",
+      "file": "cuentas-enteras.md",
+      "suggestedPrerequisites": [
+        "cpp-variables"
+      ]
+    },
+    {
+      "id": "cpp-reales",
+      "file": "reales.md",
+      "suggestedPrerequisites": [
+        "cpp-variables",
+        "cpp-entrada-salida"
+      ]
+    },
+    {
+      "id": "cpp-divisibilidad",
+      "file": "divisibilidad.md",
+      "suggestedPrerequisites": [
+        "cpp-cuentas-enteras",
+        "cpp-pares",
+        "cpp-vectores"
+      ]
+    },
+    {
+      "id": "cpp-frecuencias",
+      "file": "frecuencias.md",
+      "suggestedPrerequisites": [
+        "cpp-recorridos",
+        "cpp-vectores",
+        "cpp-strings",
+        "cpp-map"
+      ]
+    },
+    {
+      "id": "cpp-prefijos",
+      "file": "prefijos.md",
+      "suggestedPrerequisites": [
+        "cpp-vectores",
+        "cpp-recorridos",
+        "cpp-cuentas-enteras"
+      ]
+    },
+    {
+      "id": "cpp-rachas",
+      "file": "rachas.md",
+      "suggestedPrerequisites": [
+        "cpp-recorridos",
+        "cpp-strings",
+        "cpp-pares"
+      ]
+    },
+    {
+      "id": "cpp-apariciones",
+      "file": "apariciones.md",
+      "suggestedPrerequisites": [
+        "cpp-recorridos",
+        "cpp-strings"
+      ]
+    },
+    {
+      "id": "cpp-intervalos",
+      "file": "intervalos.md",
+      "suggestedPrerequisites": [
+        "cpp-ordenacion",
+        "cpp-pares",
+        "cpp-reales",
+        "cpp-funciones-referencias"
+      ]
+    }
+  ]
+}
