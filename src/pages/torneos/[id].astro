@@ -2,6 +2,7 @@
 import Layout from '../../layouts/Layout.astro';
 import TournamentProblems from '../../components/TournamentProblems';
 import QualificationAnalysis from '../../components/QualificationAnalysis.astro';
+import RegionalPhotos from '../../components/RegionalPhotos.astro';
 import { problems, tournaments } from '../../lib/data';
 export function getStaticPaths() {
   return tournaments.map(tournament => ({ params: { id: tournament.id }, props: { tournament } }));
@@ -57,6 +58,7 @@ const qualification = t.qualification;
 
   <section class="local-results-section tournament-section" id="tucuman" aria-label="Resultados de Tucumán">
     <div class="section-title"><h2>Resultados de Tucumán</h2></div>
+    {t.id === 'regional-2026' && <RegionalPhotos/>}
     {t.tucumanResultsNote && <p class="muted">{t.tucumanResultsNote}</p>}
     {institutions.length > 0 ? <div class="university-results">{institutions.map(institution =>
       <section class="panel university-group" aria-label={institution}>

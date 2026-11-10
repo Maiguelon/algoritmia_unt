@@ -1,35 +1,75 @@
 ---
 import Layout from '../layouts/Layout.astro';
+import CampCarousel from '../components/CampCarousel.astro';
+import RegionalPhotos from '../components/RegionalPhotos.astro';
+import { WHATSAPP_URL } from '../lib/community';
 ---
 <Layout>
-  <section class="hero"><div><div class="hero-kicker eyebrow"><span class="dot"></span>Rumbo al Training Camp Argentina 2027</div><h1>De tu primer problema<br/><span>al Regional.</span></h1><p class="hero-copy">Un lugar para aprender, practicar y crecer en equipo. Explorá problemas de torneos sudamericanos, prepará tus apuntes y sumate a la comunidad de algoritmia de Tucumán.</p><div class="actions"><a class="button" href="/problemas/">Explorar problemas <span aria-hidden="true">↗</span></a><button class="button whatsapp" type="button" disabled title="Enlace a la comunidad pendiente">Sumate a la comunidad de WhatsApp</button></div><p class="beginner-entry"><button class="button secondary small" type="button" disabled>¿Recién empezás? Arrancá acá →</button></p></div><div class="hero-art"><svg class="colony-path" viewBox="0 0 440 410" aria-hidden="true"><path d="M35 98 C-5 5 130 5 156 40 S365 50 398 115 S495 319 365 361 S67 440 36 307"/><circle cx="38" cy="103" r="10" fill="#48a9ed"/><circle cx="390" cy="328" r="13" fill="#e34954"/><circle cx="95" cy="376" r="7" fill="#ffdc60"/></svg><div class="mascot-board"><div class="board-label"><span>LA COLONIA / UNT</span><span class="board-lights" aria-hidden="true"><i></i><i></i><i></i></span></div><img src="/logo-club.png" alt="Tres hormigas del Club de Algoritmia reunidas alrededor de una computadora" width="245" height="245"/><p class="board-caption">Pensar. Probar. Compartir.</p><span class="sticker sticker-ac" aria-hidden="true">AC!</span><span class="sticker sticker-team" aria-hidden="true">mejor en equipo ↗</span></div></div></section>
+  <section class="hero"><div><div class="hero-kicker eyebrow"><span class="dot"></span>Rumbo al Training Camp Argentina 2027</div><h1>De tu primer problema<br/><span>al Regional.</span></h1><p class="hero-copy">Un lugar para aprender, practicar y crecer en equipo. Explorá problemas de torneos sudamericanos, prepará tus apuntes y sumate a la comunidad de algoritmia de Tucumán.</p><div class="actions"><a class="button" href="/problemas/">Explorar problemas <span aria-hidden="true">↗</span></a></div><p class="beginner-entry"><button class="button secondary small" type="button" disabled>¿Recién empezás? Arrancá acá →</button></p></div><div class="hero-art"><svg class="colony-path" viewBox="0 0 440 410" aria-hidden="true"><path d="M35 98 C-5 5 130 5 156 40 S365 50 398 115 S495 319 365 361 S67 440 36 307"/><circle cx="38" cy="103" r="10" fill="#48a9ed"/><circle cx="390" cy="328" r="13" fill="#e34954"/><circle cx="95" cy="376" r="7" fill="#ffdc60"/></svg><div class="mascot-board"><div class="board-label"><span>LA COLONIA / UNT</span><span class="board-lights" aria-hidden="true"><i></i><i></i><i></i></span></div><img src="/logo-club.png" alt="Tres hormigas del Club de Algoritmia reunidas alrededor de una computadora" width="245" height="245"/><p class="board-caption">Pensar. Probar. Compartir.</p><span class="sticker sticker-ac" aria-hidden="true">AC!</span></div><a class="button whatsapp community-sticker" id="comunidad" href={WHATSAPP_URL} target="_blank" rel="noreferrer">Sumate a la comunidad de WhatsApp</a></div></section>
   <div class="stats-row">
     <div class="stat"><strong>Apuntes a tu medida</strong><span>Elegí las herramientas y el detalle que necesitás. Descargalos para leer o imprimir.</span></div>
     <div class="stat"><strong>Problemas de acá</strong><span>Practicá con problemas del TAP y de los Regionales sudamericanos, por tema y dificultad.</span></div>
     <div class="stat"><strong>Los torneos, en números</strong><span>Explorá cuántos equipos resolvieron cada problema y dónde estuvo el salto de dificultad.</span></div>
   </div>
-  <section class="panel camp-section">
-    <span class="eyebrow">Training Camp Argentina 2027 · Tucumán</span>
-    <h2>El próximo encuentro se entrena desde ahora</h2>
-    <p>El Training Camp reúne a estudiantes para aprender algoritmos, resolver problemas y entrenar para las competencias de programación. También es una oportunidad para conocer a otras personas con las mismas ganas de aprender.</p>
-    <p>En 2027 nos toca recibirlo en Tucumán. Desde el club queremos que más estudiantes se animen a empezar y encuentren un equipo con el que seguir creciendo. Este espacio es parte de ese camino.</p>
+  <section class="panel camp-section" aria-labelledby="camp-title">
+    <span class="eyebrow">Training Camp Argentina 2027</span>
+    <h2 id="camp-title">Preparáte para el próximo Training Camp, en Tucumán</h2>
+    <div class="camp-layout">
+      <CampCarousel/>
+      <div class="camp-invitation">
+        <h3>Aprender también es encontrarse</h3>
+        <p>Clases, problemas y gente con las mismas ganas de aprender. El próximo camp nos encuentra en Tucumán: un buen motivo para empezar a entrenar juntos.</p>
+        <details class="camp-details">
+          <summary>¿Qué es el Training Camp?</summary>
+          <p>Es un encuentro intensivo de programación competitiva. En las últimas ediciones, la propuesta fue:</p>
+          <ul>
+            <li><strong>Dos semanas</strong> de entrenamiento.</li>
+            <li>Niveles <strong>inicial y avanzado</strong>.</li>
+            <li>Clases de algoritmos y <strong>simulacros de competencia</strong> en equipo.</li>
+          </ul>
+          <p>Además de practicar, conocés a estudiantes y entrenadores de otras universidades.</p>
+          <a class="camp-source" href="https://aapc.org.ar/tc/" target="_blank" rel="noreferrer">Conocé la edición anterior ↗</a>
+        </details>
+        <p class="camp-contact"><strong>¿Querés saber más?</strong><br/><a href={WHATSAPP_URL} target="_blank" rel="noreferrer">Preguntanos por WhatsApp →</a></p>
+      </div>
+    </div>
   </section>
-  <section class="panel latest-tournament">
-    <span class="eyebrow">Así competimos</span>
-    <h2>Un equipo, un Regional, mucho por aprender</h2>
-    <p>Conocé cómo fue el Regional 2026: los equipos de Tucumán, sus resultados y los problemas que marcaron el torneo.</p>
-    <button class="button secondary" type="button" disabled title="Acceso al torneo pendiente">Conocé el último Regional →</button>
+  <section class="panel latest-tournament" aria-labelledby="regional-title">
+    <span class="eyebrow">UNT · UNSTA · UTN</span>
+    <h2 id="regional-title">Tucumán en el último Regional</h2>
+    <p>Así vivimos el Regional 2026 en Santa Fe. Conocé a los equipos de Tucumán, sus resultados y los desafíos del torneo.</p>
+    <RegionalPhotos preview/>
+    <a class="button secondary" href="/torneos/regional-2026/#tucuman">Ver equipos y resultados →</a>
   </section>
 </Layout>
 <style>
   .beginner-entry { margin: 1.2rem 0 0; }
   .button.whatsapp { background: #168344; color: white; opacity: 1; }
   button:disabled { cursor: default; }
-  .camp-section { margin-top: 2.5rem; }
+  .community-sticker { position: absolute; bottom: -42px; left: 50%; transform: translateX(-54%) rotate(-2deg); z-index: 2; max-width: 95%; width: max-content; font-size: .83rem; text-align: center; }
+  .community-sticker:hover { transform: translateX(-54%) rotate(-2deg); background: #168344; }
+  .camp-section { margin-top: 3rem; padding: 30px; }
+  .camp-section h2 { max-width: 32ch; margin-bottom: 28px; }
+  .camp-layout { display: grid; grid-template-columns: minmax(0, 1.55fr) minmax(0, 1fr); align-items: start; gap: 30px; }
+  .camp-invitation h3 { margin: 0 0 14px; }
+  .camp-invitation p { font-size: .95rem; color: var(--muted); }
+  .camp-details { border: 1px solid var(--line); border-radius: 10px; background: var(--paper); padding: 15px 18px; margin: 22px 0; }
+  .camp-details summary { font-weight: 800; cursor: pointer; }
+  .camp-details ul { padding-left: 20px; font-size: .9rem; }
+  .camp-details li + li { margin-top: 8px; }
+  .camp-source { font-size: .8rem; }
+  .camp-contact strong { color: var(--ink); }
+  @media (max-width: 850px) {
+    .camp-layout { grid-template-columns: 1fr; }
+  }
   .camp-section p, .latest-tournament p { max-width: 75ch; }
   .latest-tournament { margin-top: 1.5rem; }
   .stats-row .stat strong { font-size: clamp(1.2rem, 2vw, 1.65rem); line-height: 1.25; }
   @media (max-width: 600px) {
+    .hero-art { display: flex; flex-direction: column; gap: 20px; padding-bottom: 10px; }
+    .community-sticker { position: static; transform: none; width: auto; max-width: 100%; }
+    .community-sticker:hover { transform: none; }
+    .camp-section { padding: 20px; }
     .stats-row { grid-template-columns: 1fr; }
     .stats-row .stat + .stat { border-left: 0; border-top: 1px solid #cdd2ed; }
   }

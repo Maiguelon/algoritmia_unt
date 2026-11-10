@@ -51,3 +51,12 @@ Se verifican en navegador real las tablas oficiales ICPC. TAP 2024: La tupla del
 TAP 2025: tres UNT aceptados en el Regional según el registro oficial (Milanguchito, Chat con Grandes Problemas Tecnicos y while(so serious)). Solo Milanguchito tiene resultado regional identificado. El contador y los badges dicen aceptados, separados de asistencia. Fuentes, transcripción y límites en `investigacion/tap-promocion-2024-2025-evidencia.json`.
 
 Validación de esta revisión: 44 pruebas unitarias, 22 recorridos de navegador y comprobación de tipos sin errores. Se comprueban la identidad conciliada, las letras y penalidad, los tres aceptados, el cupo por universidad y la eliminación de la atribución peruana, además del funcionamiento de selección y descargas.
+
+## Comunidad y fotos en el inicio — 10 de noviembre
+
+- `92f7c56`: fotos de camps de La Plata 2026 y Rosario 2024 con fuentes y créditos, y cuatro equipos tucumanos del Regional 2026. Copias WebP y manifiesto de procedencia en `content/media/galleries.json`; notas en `fotos-comunidad.md`.
+- Carrusel manual con teclado y desplazamiento táctil, sin reproducción automática; explicación del camp plegada inicialmente. La dinámica de ediciones anteriores se distingue del anuncio de Tucumán 2027.
+- WhatsApp reemplaza el sticker decorativo junto a las hormigas y usa el enlace proporcionado por el usuario, también en la invitación del camp.
+- Preview de UNT, UNSTA y UTN con igual jerarquía por equipo; enlace al apartado Tucumán del Regional, que incluye las cuatro fotos ampliables.
+- Página de torneos: «Analizá cada torneo», preguntas sobre problemas, temas y clasificación; sin las etiquetas redundantes de año/verificación.
+- Verificación: tipos sin errores; cuatro recorridos de navegador aprobados, incluidos carrusel, teclado, plegado, enlaces e imágenes, y pantallas de 320, 390 y 1280 px. Revisión visual de la portada en escritorio y celular.

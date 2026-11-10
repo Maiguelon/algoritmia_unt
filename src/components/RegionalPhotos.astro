@@ -1,0 +1,27 @@
+---
+import galleries from '../../content/media/galleries.json';
+interface Props { preview?: boolean }
+const { preview = false } = Astro.props;
+---
+<div class:list={['regional-photos', { preview }]} aria-label="Equipos de Tucumán en el Regional 2026">
+  {galleries.regional.map(photo => <figure>
+    <a href={preview ? '/torneos/regional-2026/#tucuman' : photo.src} aria-label={preview ? `Ver a ${photo.team} y los resultados de Tucumán` : `Ampliar foto de ${photo.team}`} target={preview ? undefined : '_blank'} rel={preview ? undefined : 'noreferrer'}>
+      <img src={photo.src} alt={photo.alt} width={photo.width} height={photo.height} loading="lazy" decoding="async"/>
+    </a>
+    <figcaption><strong>{photo.team}</strong><span>{photo.institution}</span></figcaption>
+  </figure>)}
+</div>
+<style>
+  .regional-photos { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 18px; margin: 24px 0; }
+  figure { margin: 0; min-width: 0; background: white; border: 1px solid var(--line); padding: 7px; border-radius: 12px; }
+  a { display: block; overflow: hidden; border-radius: 7px; }
+  img { display: block; width: 100%; height: auto; aspect-ratio: 4 / 5; object-fit: cover; object-position: center top; }
+  figcaption { padding: 10px 5px 4px; line-height: 1.35; }
+  strong { display: block; font-size: .94rem; }
+  span { display: block; font-size: .76rem; color: var(--muted); margin-top: 4px; }
+  .preview figure:nth-child(odd) { transform: rotate(-1deg); }
+  .preview figure:nth-child(even) { transform: rotate(1deg); }
+  .preview a:hover { outline: 2px solid var(--blue); outline-offset: -2px; }
+  @media (max-width: 650px) { .regional-photos { grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 12px; } }
+  @media (prefers-reduced-motion: reduce) { .preview figure { transform: none; } }
+</style>
