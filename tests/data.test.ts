@@ -75,4 +75,22 @@ describe('contratos del contenido editorial', () => {
       if (problem.statementUrl) expect(existsSync(resolve('public', problem.statementUrl.slice(1)))).toBe(true);
     }
   });
+
+  it('TAP usa el tablero del torneo y no el contador del Gym de práctica', () => {
+    const tap = tournaments.find(t => t.id === 'tap-2026');
+    expect(tap?.totalTeams).toBe(186);
+    const actual = problems.filter(p => p.tournamentId === 'tap-2026');
+    expect(actual).toHaveLength(14);
+    expect(actual.find(p => p.letter === 'B')?.ac).toBe(69);
+    expect(actual.find(p => p.letter === 'J')?.ac).toBe(4);
+    expect(tap?.untResults.find(t => t.team === 'Computops')?.rank).toBe(55);
+  });
+
+  it('Regional 2026 sigue pendiente y no inventa problemas ni estadísticas', () => {
+    const pending = tournaments.find(t => t.id === 'regional-2026');
+    expect(pending?.status).toBe('pendiente');
+    expect(pending?.totalTeams).toBeNull();
+    expect(pending?.distribution).toEqual([]);
+    expect(problems.filter(p => p.tournamentId === 'regional-2026')).toEqual([]);
+  });
 });
