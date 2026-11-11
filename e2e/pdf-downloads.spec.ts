@@ -68,7 +68,6 @@ test('descarga los enunciados elegidos de Regional 2025 desde el navegador', asy
   await page.goto('/enunciados/');
   await expect(page.getByRole('link', { name: 'H · Harder Horizons', exact: true })).toBeVisible();
   await expect(page.getByRole('link', { name: 'J · Judgmental Crowd', exact: true })).toBeVisible();
-  await expect(page.getByText('Incluye índice de problemas con enlaces, QR y páginas.', { exact: false })).toBeVisible();
 
   const downloading = page.waitForEvent('download', { timeout: 45_000 });
   await page.getByRole('button', { name: /Descargar PDF de enunciados/ }).click();

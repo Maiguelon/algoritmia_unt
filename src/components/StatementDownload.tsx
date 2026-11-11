@@ -29,7 +29,6 @@ export default function StatementDownload({problems,tournaments,includedChunkIds
         </li>;
       })}</ol>
       <div className="actions"><button type="button" className="button" disabled={busy||missing.length>0} onClick={download}>{busy?'Preparando PDF…':'Descargar PDF de enunciados ↓'}</button><a href="/problemas/">Agregar problemas →</a></div>
-      <p className="muted material-pdf-caption">Incluye índice de problemas con enlaces, QR y páginas. Después van los enunciados, sin hojas intermedias.</p>
       {missing.length>0&&<p className="status-pending">Hay {missing.length} enunciados pendientes. Quitalos para descargar los disponibles.</p>}
     </>:<div className="empty"><p>Todavía no seleccionaste problemas.</p><a className="button" href="/problemas/">Explorar problemas ↗</a></div>}
     {error&&<p role="alert">{error}</p>}
@@ -45,7 +44,7 @@ export default function StatementDownload({problems,tournaments,includedChunkIds
       .material-problem-list li:before { content:counter(material,decimal-leading-zero); color:var(--blue); background:var(--soft); border-radius:5px; font-weight:800; padding:.2rem .5rem; margin-top:.25rem; }
       .material-problem-body { min-width:0; flex:1; } .material-problem-body small { font-size:.75rem; font-weight:750; }
       .material-problem-title { display:block; font-weight:800; font-size:1.1rem; margin:.1rem 0 .35rem; }
-      .material-tool-count,.material-pdf-caption { font-size:.85rem; color:var(--muted); }
+      .material-tool-count { font-size:.85rem; color:var(--muted); }
       .material-tool-count { margin:.2rem 0; }
       .material-problems .builder-coverage { margin:.3rem 0 0; font-size:.85rem; color:#815716; }
       @media(max-width:480px) { .material-problem-list li { gap:.6rem; } .material-problem-list li:before { font-size:.8rem; } .material-problem-title { font-size:1rem; } }
