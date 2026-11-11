@@ -9,7 +9,7 @@
     "Implementación"
   ],
   "difficulty": "Consolidación",
-  "difficultyReason": "Estimación editorial: conceptual 1/5 e implementación 2/5. Encaja directamente con strings, recorridos y lectura precisa; buen punto de entrada al corpus.",
+  "difficultyReason": "La regla de colores es directa. Hace falta coordinar la pertenencia de una letra y su posición para cada palabra y consulta.",
   "implementation": "2/5 (estimación editorial)",
   "conceptual": "1/5 (estimación editorial)",
   "ac": 120,
@@ -20,8 +20,7 @@
   "chunkIds": [
     "cpp-strings",
     "cpp-vectores",
-    "cpp-busqueda-conteo",
-    "cpp-set"
+    "cpp-recorridos"
   ],
   "coverage": "completa",
   "missingTools": [],
@@ -31,9 +30,9 @@
     "Cuidado con filtrar usando información de otra consulta."
   ],
   "status": "verificado",
-  "approach": "Base de clasificación: editorial oficial + enunciado. Los bloques propuestos son una selección editorial de herramientas, no una solución ni un inventario de todos los enfoques. Cubren las operaciones de base del enfoque elegido; descubrir y justificar la observación sigue siendo parte del ejercicio.",
+  "approach": "Guardar el diccionario en un vector y reproducir el patrón de cada palabra con acceso por índice y string::find.",
   "editorialUrl": "https://scorelatam.naquadah.com.br/latam-2023/editorial.pdf",
-  "classificationConfidence": "Alta: editorial oficial. El enunciado garantiza palabras sin letras repetidas; no trasladar reglas de otra versión de Wordle.",
+  "classificationConfidence": "Enunciado y editorial oficial contrastados con un generador independiente de patrones.",
   "firstSolve": {
     "minute": 10,
     "teams": [

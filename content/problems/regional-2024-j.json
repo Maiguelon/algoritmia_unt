@@ -9,10 +9,10 @@
     "Ordenación",
     "Intervalos"
   ],
-  "difficulty": "Consolidación",
-  "difficultyReason": "Estimación editorial: conceptual 2/5 e implementación 2/5. Buena práctica de STL e implementación; requiere convertir una descripción geométrica en intervalos.",
+  "difficulty": "Salto regional",
+  "difficultyReason": "La dificultad está en pasar de la proyección geométrica a intervalos sobre la ruta y medir su unión, con atención a la precisión.",
   "implementation": "2/5 (estimación editorial)",
-  "conceptual": "2/5 (estimación editorial)",
+  "conceptual": "3/5 (estimación editorial)",
   "ac": 77,
   "total": 187,
   "judgeUrl": "https://codeforces.com/gym/105505/problem/J",
@@ -20,7 +20,6 @@
   "statementUrl": "/statements/regional-2024-j.pdf",
   "chunkIds": [
     "cpp-pares",
-    "cpp-ordenacion",
     "cpp-reales",
     "cpp-intervalos"
   ],
@@ -32,9 +31,9 @@
     "Revisá especialmente: precisión de salida."
   ],
   "status": "verificado",
-  "approach": "Base de clasificación: editorial oficial + enunciado. Los bloques propuestos son una selección editorial de herramientas, no una solución ni un inventario de todos los enfoques. Cubren las operaciones de base del enfoque elegido; descubrir y justificar la observación sigue siendo parte del ejercicio.",
+  "approach": "Proyectar cada sombra con trigonometría elemental y ordenar y unir los intervalos resultantes.",
   "editorialUrl": "https://scorelatam.naquadah.com.br/latam-2024/icpcla24_solution_sketches.pdf",
-  "classificationConfidence": "Alta: editorial oficial. Rápida condicionada a recordar trigonometría elemental y unión de intervalos.",
+  "classificationConfidence": "Enunciado y editorial oficial contrastados con un cálculo independiente de longitud cubierta.",
   "firstSolve": {
     "minute": 25,
     "teams": [

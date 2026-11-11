@@ -10,8 +10,8 @@
     "Aritmética"
   ],
   "difficulty": "Consolidación",
-  "difficultyReason": "Valoración editorial del enunciado: conceptual 2/5 e implementación 2/5. Las herramientas sugeridas corresponden al enfoque descrito.",
-  "implementation": "2/5",
+  "difficultyReason": "Se puede reducir a pocos cortes candidatos con casos chicos especiales. Una vez fijados los cortes, el código es breve.",
+  "implementation": "1/5",
   "conceptual": "2/5",
   "ac": 137,
   "total": 214,
@@ -27,9 +27,9 @@
   "missingTools": [],
   "hints": [],
   "status": "verificado",
-  "approach": "Construcción de cortes y control de casos pequeños con aritmética entera.",
+  "approach": "Probar cortes candidatos fijos y validar que las cuatro áreas son distintas. Calcular los productos en 64 bits.",
   "editorialUrl": null,
-  "classificationConfidence": "Media: lectura del enunciado y análisis editorial propio; sin editorial oficial localizada para contrastar una solución completa.",
+  "classificationConfidence": "Enunciado oficial, comprobación de casos chicos por enumeración de todos los cortes y pruebas con dimensiones grandes.",
   "firstSolve": {
     "minute": 10,
     "teams": [

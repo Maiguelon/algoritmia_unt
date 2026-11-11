@@ -3,13 +3,14 @@
   "tournamentId": "regional-2024",
   "letter": "F",
   "title": "Finding Privacy",
-  "summary": "Decidir si cierta cantidad de personas puede ocupar una fila de baños sin vecinos ocupados y dejarla sin lugar admisible para una persona más.",
+  "summary": "Construir una fila de baños para cierta cantidad de personas, de forma que nadie tenga un vecino ocupado y ninguna persona más pueda instalarse, o indicar que es imposible.",
   "topics": [
     "Constructivos",
-    "Greedy"
+    "Observación",
+    "Strings"
   ],
   "difficulty": "Consolidación",
-  "difficultyReason": "Estimación editorial: conceptual 2/5 e implementación 2/5. Buen entrenamiento de observación y construcción, con validación cuidadosa de la salida.",
+  "difficultyReason": "Hay que identificar los espacios permitidos y construir una disposición completa. La salida requiere controlar los extremos y la cantidad de lugares.",
   "implementation": "2/5 (estimación editorial)",
   "conceptual": "2/5 (estimación editorial)",
   "ac": 109,
@@ -18,7 +19,7 @@
   "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2024/contest.pdf#page=10",
   "statementUrl": "/statements/regional-2024-f.pdf",
   "chunkIds": [
-    "cpp-vectores",
+    "cpp-strings",
     "cpp-recorridos",
     "cpp-cuentas-enteras"
   ],
@@ -30,9 +31,9 @@
     "Revisá especialmente: longitud y cantidad exactas."
   ],
   "status": "verificado",
-  "approach": "Base de clasificación: editorial oficial + enunciado. Los bloques propuestos son una selección editorial de herramientas, no una solución ni un inventario de todos los enfoques. Cubren las operaciones de base del enfoque elegido; descubrir y justificar la observación sigue siendo parte del ejercicio.",
+  "approach": "Construir el string de salida distribuyendo los lugares vacíos entre personas y en los extremos.",
   "editorialUrl": "https://scorelatam.naquadah.com.br/latam-2024/icpcla24_solution_sketches.pdf",
-  "classificationConfidence": "Alta: editorial oficial. Una configuración válida debe impedir agregar otra persona; no alcanza separar las existentes.",
+  "classificationConfidence": "Enunciado y editorial oficial contrastados con enumeración exhaustiva de filas chicas.",
   "firstSolve": {
     "minute": 15,
     "teams": [

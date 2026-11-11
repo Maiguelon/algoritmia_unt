@@ -14,15 +14,14 @@
   ],
   "chunkIds": [
     "cpp-extremos-sumas",
-    "cpp-pares",
     "cpp-cuentas-enteras"
   ],
   "coverage": "completa",
   "missingTools": [],
   "hints": [],
-  "classificationConfidence": "Alta: valoración propia del enunciado. No se localizó una editorial oficial de esta edición; las técnicas avanzadas requieren contraste con una solución de referencia.",
-  "difficultyReason": "La reducción geométrica es corta y la implementación requiere solo extremos y cuentas; no hace falta una biblioteca de geometría.",
-  "approach": "Herramientas de un enfoque editorial de referencia; no incluye la observación ni la solución.",
+  "classificationConfidence": "Enunciado oficial, cota por proyecciones y contraste con regiones ortogonales chicas.",
+  "difficultyReason": "Hay que justificar por qué una cerca ortogonal queda determinada por los extremos para este mínimo. La implementación usa cuatro extremos y aritmética entera.",
+  "approach": "Obtener los extremos en cada eje y calcular el perímetro de la caja que respeta el margen.",
   "ac": 121,
   "total": 183,
   "judgeUrl": "https://codeforces.com/gym/106054/problem/N",

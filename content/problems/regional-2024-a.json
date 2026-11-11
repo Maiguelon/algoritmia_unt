@@ -10,8 +10,8 @@
     "Conjuntos",
     "Observación"
   ],
-  "difficulty": "Consolidación",
-  "difficultyReason": "Requiere reconocer qué información conserva la transformación y relacionar dos longitudes. La implementación es breve, pero la deducción no viene dada como una cuenta directa; Consolidación baja.",
+  "difficulty": "Inicial",
+  "difficultyReason": "La transformación conserva el conjunto de letras distintas. Contarlas y relacionar las longitudes requiere una sola observación y una implementación breve.",
   "implementation": "1/5 (estimación editorial)",
   "conceptual": "2/5 (estimación editorial)",
   "ac": 178,
@@ -30,9 +30,9 @@
     "Distinguir cantidad de caracteres de cantidad de caracteres diferentes."
   ],
   "status": "verificado",
-  "approach": "Enfoque de referencia: contar caracteres distintos con set<char> y consultar longitudes del texto. Las herramientas cubren las operaciones; la relación que permite reconstruir el tamaño debe justificarse.",
+  "approach": "Contar letras distintas con set<char> y relacionar el resultado con el largo del texto.",
   "editorialUrl": "https://scorelatam.naquadah.com.br/latam-2024/icpcla24_solution_sketches.pdf",
-  "classificationConfidence": "Alta sobre las operaciones y el enfoque descritos: enunciado original revisado y modelos acotados contrastados el 11/11/2026. La banda y las puntuaciones son valoraciones del club, no oficiales.",
+  "classificationConfidence": "Enunciado y editorial oficial contrastados con textos generados. Inicial en el extremo alto de la banda.",
   "firstSolve": {
     "minute": 3,
     "teams": [

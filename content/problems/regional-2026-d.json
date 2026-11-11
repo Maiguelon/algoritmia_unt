@@ -10,7 +10,7 @@
     "Paridad"
   ],
   "difficulty": "Consolidación",
-  "difficultyReason": "Valoración editorial del enunciado: conceptual 2/5 e implementación 2/5. Las herramientas sugeridas corresponden al enfoque descrito.",
+  "difficultyReason": "Las inversiones masivas se resumen con un conteo y la paridad. La excepción de cada día y la exclusión del estado inicial requieren atención.",
   "implementation": "2/5",
   "conceptual": "2/5",
   "ac": 151,
@@ -21,7 +21,6 @@
   "chunkIds": [
     "cpp-strings",
     "cpp-recorridos",
-    "cpp-frecuencias",
     "cpp-cuentas-enteras",
     "cpp-extremos-sumas"
   ],
@@ -29,9 +28,9 @@
   "missingTools": [],
   "hints": [],
   "status": "verificado",
-  "approach": "Mantener conteos e interpretar las inversiones sin simular cada lámpara en cada día.",
+  "approach": "Mantener la cantidad encendida y usar la paridad para calcular el efecto de cada inversión sobre el conteo.",
   "editorialUrl": null,
-  "classificationConfidence": "Media: lectura del enunciado y análisis editorial propio; sin editorial oficial localizada para contrastar una solución completa.",
+  "classificationConfidence": "Enunciado oficial y contraste exhaustivo con simulación directa en cadenas binarias chicas.",
   "firstSolve": {
     "minute": 8,
     "teams": [

@@ -1,0 +1,40 @@
+# Revisión de Consolidación
+
+11 de noviembre de 2026. Leí los enunciados de los **15 problemas** marcados Consolidación al empezar, revisé los límites y busqué el enfoque más sencillo que entra en tiempo. Usé los editoriales oficiales disponibles para los Regionales 2023 y 2024. En los demás contrasté los enfoques con casos de prueba y, cuando se podía, con una solución directa para entradas chicas.
+
+**Resultado** · 1 pasa a Inicial, 3 pasan a Salto regional y 11 siguen en Consolidación.
+
+Inicial admite observaciones cortas y una traducción directa a código. Consolidación admite varias condiciones, estado por elemento o una reducción breve. Salto regional pide reconocer y justificar una técnica, un invariante o una reducción que cambia cómo se encara el problema. Los AC describen lo que ocurrió durante el torneo. Concepto e implementación se estiman por separado sobre el enfoque revisado.
+
+| Problema | AC | Banda revisada | Concepto / implementación | Motivo y herramientas |
+| --- | ---: | --- | --- | --- |
+| Regional 2023 B — Blackboard Game | 67/152 | **Salto regional** | 3/5 · 1/5 | Hace falta un invariante para razonar sobre juego óptimo. Map, frecuencias y resto entero. [Enunciado](https://scorelatam.naquadah.com.br/latam-2023/contest.pdf#page=5) · [Editorial](https://scorelatam.naquadah.com.br/latam-2023/editorial.pdf#page=2) |
+| Regional 2023 D — Deciphering WordWhiz | 120/152 | Consolidación | 1/5 · 2/5 | Las reglas están dadas y los límites permiten comparar cada palabra con cada consulta. Strings, índices, `string::find` y vector para el diccionario. [Enunciado](https://scorelatam.naquadah.com.br/latam-2023/contest.pdf#page=9) · [Editorial](https://scorelatam.naquadah.com.br/latam-2023/editorial.pdf#page=4) |
+| Regional 2024 A — Append and Panic! | 178/187 | **Inicial** | 2/5 · 1/5 | Basta reconocer qué letras se conservan y relacionar dos longitudes. Strings y set. [Enunciado](https://scorelatam.naquadah.com.br/latam-2024/contest.pdf#page=3) · [Editorial](https://scorelatam.naquadah.com.br/latam-2024/icpcla24_solution_sketches.pdf#page=1) |
+| Regional 2024 F — Finding Privacy | 109/187 | Consolidación | 2/5 · 2/5 | Construir una fila válida y verificar capacidad y extremos. Construcción de strings, recorridos y cuentas. [Enunciado](https://scorelatam.naquadah.com.br/latam-2024/contest.pdf#page=10) · [Editorial](https://scorelatam.naquadah.com.br/latam-2024/icpcla24_solution_sketches.pdf#page=7) |
+| Regional 2024 J — Jigsaw of Shadows | 77/187 | **Salto regional** | 3/5 · 2/5 | Pasar de sombras a intervalos y calcular la longitud de su unión. Reales, trigonometría elemental, pares, ordenación y fusión de intervalos. [Enunciado](https://scorelatam.naquadah.com.br/latam-2024/contest.pdf#page=16) · [Editorial](https://scorelatam.naquadah.com.br/latam-2024/icpcla24_solution_sketches.pdf#page=12) |
+| Regional 2025 H — Harder Horizons | 192/201 | Consolidación | 2/5 · 1/5 | Una pasada con máximo acumulado alcanza. Encontrar y justificar los cortes óptimos es el trabajo conceptual. [Enunciado](https://scorelatam.naquadah.com.br/latam-2025/contest.pdf#page=13) |
+| Regional 2025 J — Judgmental Crowd | 197/201 | Consolidación | 1/5 · 2/5 | La puntuación es directa. La práctica está en contar tres subcadenas, avanzar posiciones y acumular pesos. Strings y apariciones. [Enunciado](https://scorelatam.naquadah.com.br/latam-2025/contest.pdf#page=16) |
+| Regional 2026 D — Divine Lights | 151/214 | Consolidación | 2/5 · 2/5 | La paridad y un conteo resumen las inversiones. Hay que tratar la excepción de cada día y excluir el estado inicial. Strings, recorrido, paridad y extremos. [Enunciado](https://scorelatam.naquadah.com.br/latam-2026/statements/D.html) |
+| Regional 2026 F — Father's Footsteps | 95/214 | **Salto regional** | 3/5 · 2/5 | Hay que calcular el efecto acumulado de eliminar cada habilidad, incluso cuando se juntan rachas vecinas. Rachas, vectores, frecuencias y extremos. [Enunciado](https://scorelatam.naquadah.com.br/latam-2026/statements/F.html) |
+| Regional 2026 G — Gratitude Loop | 167/214 | Consolidación | 1/5 · 2/5 | Simulación con dos estados por persona. Importa actualizar a quien recibe el mensaje. Vectores, condiciones y recorridos. [Enunciado](https://scorelatam.naquadah.com.br/latam-2026/statements/G.html) |
+| Regional 2026 J — Just Four Pieces | 137/214 | Consolidación | 2/5 · 1/5 | Una construcción con pocos cortes y casos chicos especiales. Aritmética y condiciones. Set y productos en 64 bits si se validan las cuatro áreas. [Enunciado](https://scorelatam.naquadah.com.br/latam-2026/statements/J.html) |
+| TAP 2024 N — New Dimensions | 101/155 | Consolidación | 3/5 · 1/5 | La reducción a los extremos requiere una justificación algebraica. La implementación se reduce a extremos y un producto en 64 bits. [Enunciado](https://codeforces.com/gym/105321/attachments/download/26905/tap_2024.pdf#page=21) |
+| TAP 2025 I — Inés and her compitas | 121/183 | Consolidación | 1/5 · 2/5 | El ejemplo orienta la decisión. Hay que simular el reparto, desempatar y acumular por persona. Vectores, recorridos, cuentas enteras y condiciones. [Enunciado](https://icpc.com.ar/wp-content/uploads/2025/08/tap2025.pdf#page=13) |
+| TAP 2025 N — Nothofagus antarctica | 121/183 | Consolidación | 2/5 · 1/5 | Justificar la caja mínima con los extremos en cada eje y el margen. Extremos y cuentas enteras. [Enunciado](https://icpc.com.ar/wp-content/uploads/2025/08/tap2025.pdf#page=23) |
+| TAP 2026 B — Breaking Rosarigasino | 69/186 | Consolidación | 2/5 · 2/5 | Buscar candidatos, comprobar vocales y deduplicar las palabras reconstruidas. Strings, apariciones y set. [Enunciado](https://codeforces.com/gym/106682/attachments/download/39252/TAP-2026.pdf#page=4) |
+
+## Casos cerca del límite
+
+- **Append and Panic!** vuelve a Inicial tras compararlo con el resto de Consolidación y con Iniciales como Garlands. Su única observación se desprende de la transformación descrita. **Harder Horizons** queda en Consolidación baja. Saber llevar un máximo facilita el código y todavía queda justificar que los cortes dan la mejor partición.
+- **Finding Privacy** queda en Consolidación porque la construcción se puede expresar con una regla sencilla para los espacios. **New Dimensions** queda en el extremo alto. El 3/5 reconoce la deducción algebraica y el enfoque completo usa solo extremos y aritmética.
+- **Jigsaw of Shadows** está en la entrada de Salto regional. Con unión de intervalos ya practicada, la implementación es corta. La dificultad de práctica está en reconocer esa reducción desde el enunciado.
+- **Breaking Rosarigasino** sirve de referencia para Consolidación. Sus 69 AC reflejan el costo de coordinar las operaciones y los casos borde bajo tiempo de concurso. Un enfoque con búsqueda de patrones, edición de strings y deduplicación cabe con los límites del problema.
+
+## Ajustes de herramientas
+
+En **WordWhiz** y **Divine Lights** alcanza el bloque de Strings para la búsqueda por carácter y el conteo de un solo símbolo, respectivamente. **Finding Privacy** necesita un string de salida. **Jigsaw of Shadows** usa la ordenación ya incluida en Unión de intervalos. **Nothofagus** puede llevar cuatro variables de extremos. Se conserva Set en **Just Four Pieces** para el enfoque que valida las áreas de cortes candidatos.
+
+Los bloques describen las operaciones de un enfoque. En el apunte recomendado, el nivel más bajo de la selección determina si aparecen la plantilla y los bloques básicos. Al seleccionar solo un problema que pasó a Salto regional, se aplica el preset de ese nivel.
+
+Los contrastes incluyeron enumerar jugadas en Blackboard Game, comprobar cortes de Harder Horizons y Just Four Pieces, enumerar filas en Finding Privacy, comparar intervalos por tramos en Jigsaw of Shadows y simular lámparas y eliminación de habilidades en 2026. En los TAP se probaron ternas, repartos, cercas chicas y la transformación de palabras en sentido directo. Estos controles prueban los enfoques en instancias acotadas y apoyan la lectura editorial de la dificultad.

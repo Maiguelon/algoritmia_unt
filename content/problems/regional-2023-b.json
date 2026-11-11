@@ -6,10 +6,11 @@
   "summary": "Determinar quién puede asegurar la victoria en un juego donde dos jugadores seleccionan y borran números de una pizarra, y al final comparan las sumas de sus selecciones.",
   "topics": [
     "Juegos",
-    "Conteo"
+    "Frecuencias",
+    "Invariantes"
   ],
-  "difficulty": "Consolidación",
-  "difficultyReason": "Estimación editorial: conceptual 3/5 e implementación 1/5. Buen candidato de observación: el código es breve, pero encontrar y justificar el criterio puede costar.",
+  "difficulty": "Salto regional",
+  "difficultyReason": "El juego exige encontrar y justificar un criterio para el resultado bajo juego óptimo. El conteo posterior tiene una implementación breve.",
   "implementation": "1/5 (estimación editorial)",
   "conceptual": "3/5 (estimación editorial)",
   "ac": 67,
@@ -18,7 +19,6 @@
   "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2023/contest.pdf#page=5",
   "statementUrl": "/statements/regional-2023-b.pdf",
   "chunkIds": [
-    "cpp-recorridos",
     "cpp-map",
     "cpp-frecuencias",
     "cpp-cuentas-enteras"
@@ -31,9 +31,9 @@
     "Cuidado con confundir los objetivos de los jugadores."
   ],
   "status": "verificado",
-  "approach": "Base de clasificación: editorial oficial + enunciado. Los bloques propuestos son una selección editorial de herramientas, no una solución ni un inventario de todos los enfoques. Cubren las operaciones de base del enfoque elegido; descubrir y justificar la observación sigue siendo parte del ejercicio.",
+  "approach": "Contar por valor y usar aritmética modular para aplicar el invariante del juego.",
   "editorialUrl": "https://scorelatam.naquadah.com.br/latam-2023/editorial.pdf",
-  "classificationConfidence": "Alta sobre la técnica: editorial oficial. Rápida se refiere a la práctica candidata, no garantiza descubrir la observación.",
+  "classificationConfidence": "Enunciado y editorial oficial contrastados con juego exhaustivo en instancias chicas.",
   "firstSolve": {
     "minute": 29,
     "teams": [
