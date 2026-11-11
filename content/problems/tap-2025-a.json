@@ -5,23 +5,24 @@
   "title": "Artifact to print",
   "summary": "Determinar si al borrar letras de una cadena, sin reordenarlas, se puede obtener la palabra TAP.",
   "difficulty": "Inicial",
-  "conceptual": "1/5 (estimación editorial)",
+  "conceptual": "2/5 (estimación editorial)",
   "implementation": "1/5 (estimación editorial)",
   "topics": [
     "Strings",
-    "Recorridos"
+    "Recorridos",
+    "Subsecuencias"
   ],
   "chunkIds": [
     "cpp-strings",
     "cpp-recorridos",
-    "cpp-apariciones"
+    "cpp-condiciones"
   ],
   "coverage": "completa",
   "missingTools": [],
   "hints": [],
-  "classificationConfidence": "Alta: valoración propia del enunciado. No se localizó una editorial oficial de esta edición; las técnicas avanzadas requieren contraste con una solución de referencia.",
-  "difficultyReason": "Lectura editorial del enunciado: inicial. La banda no se calcula a partir de un umbral de AC.",
-  "approach": "Herramientas de un enfoque editorial de referencia; no incluye la observación ni la solución.",
+  "classificationConfidence": "Alta sobre las operaciones y el enfoque descritos: enunciado original revisado y modelos acotados contrastados el 11/11/2026. La banda y las puntuaciones son valoraciones del club, no oficiales.",
+  "difficultyReason": "La palabra objetivo es fija y la entrada tiene diez caracteres. Basta comprobar el orden de tres letras con búsquedas sucesivas o un recorrido; Inicial, aunque distinguir subsecuencia de subcadena es parte de la lectura.",
+  "approach": "Comprobar tres letras en orden con string::find desde una posición, o con un cursor durante un recorrido. No se exige que sean contiguas; contar apariciones de un patrón completo no representa este enfoque.",
   "ac": 175,
   "total": 183,
   "judgeUrl": "https://codeforces.com/gym/106054/problem/A",

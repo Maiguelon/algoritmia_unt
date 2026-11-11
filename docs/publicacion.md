@@ -2,7 +2,7 @@
 
 El alojamiento principal es [club-algoritmia-unt.pages.dev](https://club-algoritmia-unt.pages.dev/), en la cuenta de Cloudflare del usuario. Se publicó el 10 de noviembre de 2026 mediante **Pages / Direct Upload**, con el proyecto `club-algoritmia-unt`. El dominio provisorio pertenece a Pages y no usa el dominio de Sites.
 
-La versión de aplicación publicada corresponde al commit `a83eb4836eae974cf9cb2ed4f49c07beedc03058`: 280 archivos estáticos, incluido el PDF fijo de la primera práctica. Cloudflare confirmó la publicación y se comprobaron la portada, una ficha, el carrito y tres descargas reales. El apunte fijo descargado coincide byte por byte con el original.
+La primera publicación en Pages correspondió al commit `a83eb4836eae974cf9cb2ed4f49c07beedc03058`: 280 archivos estáticos, incluido el PDF fijo de la primera práctica. Cloudflare confirmó la publicación y se comprobaron la portada, una ficha, el carrito y tres descargas reales. El apunte fijo descargado coincide byte por byte con el original. Las revisiones posteriores se registran en `avance.md` y en el historial del proyecto.
 
 La publicación anterior en https://algoritmia-unt.kindloom8.chatgpt.site permanece como copia histórica. Su ID sigue en `.openai/hosting.json`, sin credenciales; ese archivo no configura el nuevo proyecto de Pages. No se configuraron un dominio comprado ni conexión automática a Git.
 

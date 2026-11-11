@@ -6,30 +6,30 @@
   "summary": "Reconstruir la combinación de un candado de dígitos 0 a 8 después de que cada ruedita fue girada hacia el lado contrario al que se pretendía.",
   "topics": [
     "Implementación",
-    "Aritmética"
+    "Aritmética",
+    "Enumeración acotada"
   ],
   "difficulty": "Inicial",
-  "difficultyReason": "Conceptual 1/5 e implementación 1/5, estimaciones editoriales. Fue resuelto por 146/186 equipos; ese dato empírico no determina por sí solo su dificultad conceptual.",
+  "difficultyReason": "Cada ruedita es independiente y tiene solo nueve estados posibles. Se puede recuperar su valor con una enumeración pequeña y resto entero, sin conocer inversos modulares; Inicial con una observación acotada.",
   "implementation": "1/5 (estimación editorial)",
-  "conceptual": "1/5 (estimación editorial)",
+  "conceptual": "2/5 (estimación editorial)",
   "ac": 146,
   "total": 186,
   "judgeUrl": "https://codeforces.com/gym/106682/problem/K",
   "sourceUrl": "https://codeforces.com/gym/106682/attachments/download/39252/TAP-2026.pdf#page=16",
   "statementUrl": "/statements/tap-2026-k.pdf",
   "chunkIds": [
-    "cpp-strings",
     "cpp-recorridos",
-    "cpp-cuentas-enteras",
-    "cpp-conversiones"
+    "cpp-condiciones",
+    "cpp-cuentas-enteras"
   ],
   "coverage": "completa",
   "missingTools": [],
   "hints": [],
   "status": "verificado",
-  "approach": "Selección editorial de herramientas de base. Cubre las operaciones del enfoque de implementación elegido; no incluye la solución.",
+  "approach": "Leer N enteros separados por espacios y procesarlos independientemente, probando los nueve valores posibles de cada ruedita. Recorridos, condiciones y resto entero cubren el enfoque de referencia; no requiere strings ni conversiones.",
   "editorialUrl": null,
-  "classificationConfidence": "Media: lectura del enunciado y análisis editorial propio; sin editorial oficial localizada. Las bandas no son ratings oficiales.",
+  "classificationConfidence": "Alta sobre las operaciones y el enfoque descritos: enunciado original revisado y modelos acotados contrastados el 11/11/2026. La banda y las puntuaciones son valoraciones del club, no oficiales.",
   "firstSolve": {
     "minute": 9,
     "teams": [

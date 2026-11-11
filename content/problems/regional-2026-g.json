@@ -9,10 +9,10 @@
     "Implementación",
     "Vectores"
   ],
-  "difficulty": "Inicial",
-  "difficultyReason": "Valoración editorial del enunciado: conceptual 1/5 e implementación 1/5. Las herramientas sugeridas corresponden al enfoque descrito.",
-  "implementation": "1/5",
-  "conceptual": "1/5",
+  "difficulty": "Consolidación",
+  "difficultyReason": "Las reglas son explícitas, pero la simulación mantiene último remitente y cantidad recibida para cada persona, con actualizaciones en el destinatario. Esa coordinación de estados indexados supera la base Inicial.",
+  "implementation": "2/5 (estimación editorial)",
+  "conceptual": "1/5 (estimación editorial)",
   "ac": 167,
   "total": 214,
   "judgeUrl": null,
@@ -27,9 +27,9 @@
   "missingTools": [],
   "hints": [],
   "status": "verificado",
-  "approach": "Simulación directa con estado por persona y contadores.",
+  "approach": "Simulación por pulsación con dos vectores indexados por persona: último remitente y cantidad de mensajes recibidos. Se determina el destinatario antes de actualizar su estado.",
   "editorialUrl": null,
-  "classificationConfidence": "Media: lectura del enunciado y análisis editorial propio; sin editorial oficial localizada para contrastar una solución completa.",
+  "classificationConfidence": "Alta sobre las operaciones y el enfoque descritos: enunciado original revisado y modelos acotados contrastados el 11/11/2026. La banda y las puntuaciones son valoraciones del club, no oficiales.",
   "firstSolve": {
     "minute": 11,
     "teams": [

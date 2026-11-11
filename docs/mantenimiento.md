@@ -22,6 +22,8 @@ Un torneo puede quedar `pendiente` con total `null`, distribución vacía y sin 
 
 La fuente del enunciado y la de resultados pueden ser distintas. En las fichas, “datos verificados” se refiere a identidad y cifras oficiales; la banda y el enfoque siguen siendo decisiones editoriales. No presentar una inferencia del enunciado como técnica oficial demostrada.
 
+Para distinguir Inicial de Consolidación, usar el [repaso de los doce Iniciales del 11/11/2026](investigacion/revision-iniciales-2026-11-11.md) como referencia de criterio y casos fronterizos. Elegir un enfoque sencillo permitido por los límites antes de recomendar herramientas: un título relacionado con texto no implica que su entrada sea un string, ni una subsecuencia equivale a una aparición contigua.
+
 ## Cambiar o agregar apuntes
 
 Cada Markdown vive en `content/apuntes/cpp/` y tiene ID, título, familia y estándar. Conserva exactamente tres secciones de nivel dos: Descripción, Funciones y operaciones, Ejemplos. Las subsecciones internas usan nivel tres.

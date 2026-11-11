@@ -14,6 +14,8 @@ El tablero dinámico de MOJ no fue necesario para extraer los datos: el reporte 
 
 ## AC y clasificación editorial inicial
 
+Actualización del 11/11/2026: en el [repaso transversal de Iniciales](revision-iniciales-2026-11-11.md), G se movió a Consolidación por la coordinación de estados por persona. La tabla siguiente conserva la clasificación de la primera incorporación.
+
 | Letra | Problema | AC / 214 | Banda | Temas del enfoque |
 |---|---|---:|---|---|
 | A | Antonia's Ants | 3 | Avanzado | Interactivo, construcción, reconstrucción |

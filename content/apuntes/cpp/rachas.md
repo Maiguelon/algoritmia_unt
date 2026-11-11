@@ -15,12 +15,16 @@ Una racha es un grupo de elementos consecutivos que cumplen la misma condición;
 
 Usá este recorrido cuando importan los bloques del orden original: letras repetidas seguidas, días consecutivos con un estado o tramos de valores iguales. Una tabla de frecuencias junta todas las apariciones de un valor, aunque estén separadas. Las rachas mantienen esa separación. Ordenar previamente los datos cambia las rachas del original.
 
+Si solo necesitás la longitud de la racha que termina en el elemento actual, alcanza un contador: aumenta cuando se cumple la condición y vuelve a cero cuando se corta. Podés actualizarlo mientras leés, sin guardar los elementos ni formar grupos.
+
 El recorrido con dos índices avanza hasta terminar un grupo y retoma desde el comienzo del siguiente. Aunque tenga un `while` dentro de otro, cada posición se recorre una sola vez en esta receta, por lo que el costo total es O(n).
 
 ## Funciones y operaciones
 
 | Paso | Expresión | Significado |
 |---|---|---|
+| Mantener la racha actual | `if (cumple) ++racha; else racha = 0;` | Aumenta al continuar; vuelve a cero cuando se corta |
+| Consultar su longitud | `racha >= k` | La racha que termina aquí alcanzó al menos k elementos |
 | Comenzar un grupo | `int j = i + 1` | i apunta al primer elemento del grupo |
 | Extenderlo | `j < n && s[j] == s[i]` | j avanza mientras el elemento pertenece al grupo |
 | Medirlo | `j - i` | Longitud del intervalo [i, j) |
@@ -30,6 +34,24 @@ El recorrido con dos índices avanza hasta terminar un grupo y retoma desde el c
 Se comprueba `j < n` antes de consultar `s[j]`. Para datos vacíos no se entra en el recorrido.
 
 ## Ejemplos
+
+### Actualizar una racha mientras leés
+
+```cpp
+int n;
+cin >> n;
+int consecutivos = 0;
+for (int i = 0; i < n; ++i) {
+    int valor;
+    cin >> valor;
+    if (valor > 0) ++consecutivos;
+    else consecutivos = 0;
+    cout << consecutivos << '\n';
+}
+// Para los valores 2, 5, 0, 3, -1, imprime 1, 2, 0, 1, 0 en líneas separadas.
+```
+
+El contador describe la racha que termina en cada posición. Podés usarlo dentro del mismo recorrido para acumular un puntaje o consultar si llegó a un umbral.
 
 ### Separar una cadena en grupos
 

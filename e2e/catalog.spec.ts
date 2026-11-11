@@ -8,6 +8,11 @@ test('filtra por URL, conserva selección oculta y muestra ficha sin abrir pista
  await expect(page.getByRole('heading',{name:'No hay coincidencias'})).toBeVisible();
  await expect(page.getByLabel('Selección de problemas')).toContainText('1 problema seleccionado');
  await page.getByRole('button',{name:'Limpiar filtros'}).click();
+ await page.getByRole('combobox',{name:'Dificultad',exact:true}).selectOption('Inicial');
+ await expect(page.locator('tbody tr')).toHaveCount(8);
+ await expect(page.getByRole('checkbox',{name:'Seleccionar Harder Horizons',exact:true})).toHaveCount(0);
+ await expect(page.getByRole('checkbox',{name:'Seleccionar Kilograms Exceeded',exact:true})).toBeVisible();
+ await expect(page.getByLabel('Selección de problemas')).toContainText('1 problema seleccionado');
  await page.setViewportSize({width:390,height:844});
  expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
  expect(errors).toEqual([]);

@@ -5,7 +5,7 @@
   "title": "Garlands",
   "summary": "Contar cuántas guirnaldas TAP o TUP pueden formarse al reordenar las letras disponibles.",
   "difficulty": "Inicial",
-  "conceptual": "1/5 (estimación editorial)",
+  "conceptual": "2/5 (estimación editorial)",
   "implementation": "1/5 (estimación editorial)",
   "topics": [
     "Strings",
@@ -13,15 +13,14 @@
   ],
   "chunkIds": [
     "cpp-strings",
-    "cpp-busqueda-conteo",
     "cpp-extremos-sumas"
   ],
   "coverage": "completa",
   "missingTools": [],
   "hints": [],
-  "classificationConfidence": "Alta: valoración propia del enunciado. No se localizó una editorial oficial de esta edición; las técnicas avanzadas requieren contraste con una solución de referencia.",
-  "difficultyReason": "Lectura editorial del enunciado: inicial. La banda no se calcula a partir de un umbral de AC.",
-  "approach": "Herramientas de un enfoque editorial de referencia; no incluye la observación ni la solución.",
+  "classificationConfidence": "Alta sobre las operaciones y el enfoque descritos: enunciado original revisado y modelos acotados contrastados el 11/11/2026. La banda y las puntuaciones son valoraciones del club, no oficiales.",
+  "difficultyReason": "Contar cuatro letras y reconocer el recurso que limita la cantidad de palabras. Es una observación acotada con cuentas simples, dentro del extremo superior de Inicial.",
+  "approach": "Contar caracteres con count, ya incluido en Strings, y comparar cantidades con min. Para este enfoque no hace falta un map, una tabla general de frecuencias ni ordenar el texto.",
   "ac": 140,
   "total": 155,
   "judgeUrl": "https://codeforces.com/gym/105321/problem/G",

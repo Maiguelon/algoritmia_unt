@@ -6,10 +6,11 @@
   "summary": "Determinar si un torneo de rondas independientes garantiza un campeón único para cualquier reparto de victorias o puede terminar empatado.",
   "topics": [
     "Observación",
-    "Aritmética"
+    "Aritmética",
+    "Paridad"
   ],
   "difficulty": "Inicial",
-  "difficultyReason": "Observación elemental y condicionales, sin una técnica especializada. Conceptual 2/5 e implementación 1/5 como valoración editorial; estadísticas del tablero oficial conservadas por separado.",
+  "difficultyReason": "Requiere distinguir garantía para todo reparto de la existencia de un empate. La observación se reduce a pocos casos y paridad, sin estructuras ni algoritmos especializados; Inicial en su extremo conceptual superior.",
   "implementation": "1/5 (estimación editorial)",
   "conceptual": "2/5 (estimación editorial)",
   "ac": 146,
@@ -25,9 +26,9 @@
   "missingTools": [],
   "hints": [],
   "status": "verificado",
-  "approach": "Selección editorial de herramientas de base. Cubre las operaciones del enfoque de implementación elegido; no incluye la solución.",
+  "approach": "Condiciones sobre los parámetros y paridad. El tamaño de los límites descarta simular rondas o enumerar repartos como enfoque de implementación.",
   "editorialUrl": null,
-  "classificationConfidence": "Media: lectura del enunciado y análisis editorial propio; sin editorial oficial localizada. Las bandas no son ratings oficiales.",
+  "classificationConfidence": "Alta sobre las operaciones y el enfoque descritos: enunciado original revisado y modelos acotados contrastados el 11/11/2026. La banda y las puntuaciones son valoraciones del club, no oficiales.",
   "firstSolve": {
     "minute": 14,
     "teams": [

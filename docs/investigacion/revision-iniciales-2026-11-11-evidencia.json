@@ -1,0 +1,518 @@
+{
+  "reviewDate": "2026-11-11",
+  "scope": "Los 12 problemas marcados Inicial al comenzar la revisión. No se evaluó la promoción de otros problemas hacia Inicial.",
+  "basis": "Enunciados originales, lectura de los bloques recomendados y contraste con oráculos de casos acotados. Sin envíos al juez. Clasificación editorial.",
+  "remainingInitial": 8,
+  "movedToConsolidation": 4,
+  "problems": [
+    {
+      "id": "regional-2024-a",
+      "title": "Append and Panic!",
+      "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2024/contest.pdf#page=3",
+      "editorialUrl": "https://scorelatam.naquadah.com.br/latam-2024/icpcla24_solution_sketches.pdf",
+      "before": {
+        "difficulty": "Inicial",
+        "conceptual": "1/5 (estimación editorial)",
+        "implementation": "1/5 (estimación editorial)",
+        "topics": [
+          "Strings",
+          "Conteo"
+        ],
+        "chunkIds": [
+          "cpp-strings",
+          "cpp-set"
+        ],
+        "coverage": "completa",
+        "classificationConfidence": "Alta. La prosa inicial de la editorial contiene una inconsistencia de notación; el enunciado y su código deben contrastarse.",
+        "approach": "Base de clasificación: editorial oficial + enunciado. Los bloques propuestos son una selección editorial de herramientas, no una solución ni un inventario de todos los enfoques. Cubren las operaciones de base del enfoque elegido; descubrir y justificar la observación sigue siendo parte del ejercicio."
+      },
+      "after": {
+        "difficulty": "Consolidación",
+        "conceptual": "2/5 (estimación editorial)",
+        "implementation": "1/5 (estimación editorial)",
+        "topics": [
+          "Strings",
+          "Conteo",
+          "Conjuntos",
+          "Observación"
+        ],
+        "chunkIds": [
+          "cpp-strings",
+          "cpp-set"
+        ],
+        "coverage": "completa",
+        "classificationConfidence": "Alta sobre las operaciones y el enfoque descritos: enunciado original revisado y modelos acotados contrastados el 11/11/2026. La banda y las puntuaciones son valoraciones del club, no oficiales.",
+        "approach": "Enfoque de referencia: contar caracteres distintos con set<char> y consultar longitudes del texto. Las herramientas cubren las operaciones; la relación que permite reconstruir el tamaño debe justificarse."
+      },
+      "reason": "Requiere reconocer qué información conserva la transformación y relacionar dos longitudes. La implementación es breve, pero la deducción no viene dada como una cuenta directa; Consolidación baja.",
+      "boundedCheck": 3279
+    },
+    {
+      "id": "regional-2025-h",
+      "title": "Harder Horizons",
+      "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2025/contest.pdf#page=13",
+      "editorialUrl": null,
+      "before": {
+        "difficulty": "Inicial",
+        "conceptual": "1/5 (estimación editorial)",
+        "implementation": "1/5 (estimación editorial)",
+        "topics": [
+          "Greedy",
+          "Implementación"
+        ],
+        "chunkIds": [
+          "cpp-recorridos",
+          "cpp-vectores",
+          "cpp-extremos-sumas"
+        ],
+        "coverage": "completa",
+        "classificationConfidence": "Alta sobre la clasificación simple por enunciado y evidencia empírica; no se presenta como técnica oficial publicada.",
+        "approach": "Base de clasificación: inferencia del enunciado. Los bloques propuestos son una selección editorial de herramientas, no una solución ni un inventario de todos los enfoques. Cubren las operaciones de base del enfoque elegido; descubrir y justificar la observación sigue siendo parte del ejercicio."
+      },
+      "after": {
+        "difficulty": "Consolidación",
+        "conceptual": "2/5 (estimación editorial)",
+        "implementation": "1/5 (estimación editorial)",
+        "topics": [
+          "Greedy",
+          "Recorridos",
+          "Máximo acumulado"
+        ],
+        "chunkIds": [
+          "cpp-recorridos",
+          "cpp-extremos-sumas"
+        ],
+        "coverage": "completa",
+        "classificationConfidence": "Alta sobre las operaciones y el enfoque descritos: enunciado original revisado y modelos acotados contrastados el 11/11/2026. La banda y las puntuaciones son valoraciones del club, no oficiales.",
+        "approach": "Recorrido en el orden de entrada, con máximo acumulado y contador. Se puede procesar cada dificultad al leerla, sin guardar el arreglo completo."
+      },
+      "reason": "El recorrido es corto, pero decidir los cortes y justificar que la cantidad de grupos es máxima exige una observación greedy. Los empates y el orden original importan; Consolidación baja.",
+      "boundedCheck": 9840
+    },
+    {
+      "id": "regional-2025-j",
+      "title": "Judgmental Crowd",
+      "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2025/contest.pdf#page=16",
+      "editorialUrl": null,
+      "before": {
+        "difficulty": "Inicial",
+        "conceptual": "1/5 (estimación editorial)",
+        "implementation": "1/5 (estimación editorial)",
+        "topics": [
+          "Strings",
+          "Implementación"
+        ],
+        "chunkIds": [
+          "cpp-strings",
+          "cpp-apariciones",
+          "cpp-busqueda-conteo"
+        ],
+        "coverage": "completa",
+        "classificationConfidence": "Alta por lectura directa del enunciado y los AC; no es una etiqueta oficial de dificultad.",
+        "approach": "Base de clasificación: inferencia del enunciado. Los bloques propuestos son una selección editorial de herramientas, no una solución ni un inventario de todos los enfoques. Cubren las operaciones de base del enfoque elegido; descubrir y justificar la observación sigue siendo parte del ejercicio."
+      },
+      "after": {
+        "difficulty": "Consolidación",
+        "conceptual": "1/5 (estimación editorial)",
+        "implementation": "2/5 (estimación editorial)",
+        "topics": [
+          "Strings",
+          "Conteo de subcadenas",
+          "Implementación"
+        ],
+        "chunkIds": [
+          "cpp-strings",
+          "cpp-apariciones"
+        ],
+        "coverage": "completa",
+        "classificationConfidence": "Alta sobre las operaciones y el enfoque descritos: enunciado original revisado y modelos acotados contrastados el 11/11/2026. La banda y las puntuaciones son valoraciones del club, no oficiales.",
+        "approach": "Contar cada subcadena con string::find repetido y acumular su peso. El bloque de apariciones cubre esta operación; std::count sobre caracteres no cuenta palabras completas."
+      },
+      "reason": "La regla de puntuación es directa, pero hay que manejar búsquedas repetidas de tres subcadenas y sus pesos. Exige más dominio de strings e índices que un ejercicio de entrada, aunque no requiere un algoritmo avanzado.",
+      "boundedCheck": 19612
+    },
+    {
+      "id": "regional-2026-g",
+      "title": "Gratitude Loop",
+      "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2026/statements/G.html",
+      "editorialUrl": null,
+      "before": {
+        "difficulty": "Inicial",
+        "conceptual": "1/5",
+        "implementation": "1/5",
+        "topics": [
+          "Simulación",
+          "Implementación",
+          "Vectores"
+        ],
+        "chunkIds": [
+          "cpp-vectores",
+          "cpp-condiciones",
+          "cpp-recorridos"
+        ],
+        "coverage": "completa",
+        "classificationConfidence": "Media: lectura del enunciado y análisis editorial propio; sin editorial oficial localizada para contrastar una solución completa.",
+        "approach": "Simulación directa con estado por persona y contadores."
+      },
+      "after": {
+        "difficulty": "Consolidación",
+        "conceptual": "1/5 (estimación editorial)",
+        "implementation": "2/5 (estimación editorial)",
+        "topics": [
+          "Simulación",
+          "Implementación",
+          "Vectores"
+        ],
+        "chunkIds": [
+          "cpp-vectores",
+          "cpp-condiciones",
+          "cpp-recorridos"
+        ],
+        "coverage": "completa",
+        "classificationConfidence": "Alta sobre las operaciones y el enfoque descritos: enunciado original revisado y modelos acotados contrastados el 11/11/2026. La banda y las puntuaciones son valoraciones del club, no oficiales.",
+        "approach": "Simulación por pulsación con dos vectores indexados por persona: último remitente y cantidad de mensajes recibidos. Se determina el destinatario antes de actualizar su estado."
+      },
+      "reason": "Las reglas son explícitas, pero la simulación mantiene último remitente y cantidad recibida para cada persona, con actualizaciones en el destinatario. Esa coordinación de estados indexados supera la base Inicial.",
+      "boundedCheck": 6678
+    },
+    {
+      "id": "tap-2024-d",
+      "title": "Duo",
+      "sourceUrl": "https://codeforces.com/gym/105321/attachments/download/26905/tap_2024.pdf#page=8",
+      "editorialUrl": null,
+      "before": {
+        "difficulty": "Inicial",
+        "conceptual": "1/5 (estimación editorial)",
+        "implementation": "1/5 (estimación editorial)",
+        "topics": [
+          "Aritmética",
+          "Condicionales"
+        ],
+        "chunkIds": [
+          "cpp-variables",
+          "cpp-condiciones",
+          "cpp-cuentas-enteras"
+        ],
+        "coverage": "completa",
+        "classificationConfidence": "Alta: valoración propia del enunciado. No se localizó una editorial oficial de esta edición; las técnicas avanzadas requieren contraste con una solución de referencia.",
+        "approach": "Herramientas de un enfoque editorial de referencia; no incluye la observación ni la solución."
+      },
+      "after": {
+        "difficulty": "Inicial",
+        "conceptual": "1/5 (estimación editorial)",
+        "implementation": "1/5 (estimación editorial)",
+        "topics": [
+          "Aritmética",
+          "Condicionales"
+        ],
+        "chunkIds": [
+          "cpp-variables",
+          "cpp-condiciones",
+          "cpp-cuentas-enteras"
+        ],
+        "coverage": "completa",
+        "classificationConfidence": "Alta sobre las operaciones y el enfoque descritos: enunciado original revisado y modelos acotados contrastados el 11/11/2026. La banda y las puntuaciones son valoraciones del club, no oficiales.",
+        "approach": "Lectura de tres enteros, sumas y condiciones. La igualdad debe seguir la regla del enunciado."
+      },
+      "reason": "Comparar tres puntajes con sumas y condiciones, respetando qué ocurre en la igualdad. No requiere estructuras ni un algoritmo especializado; Inicial de entrada.",
+      "boundedCheck": 15625
+    },
+    {
+      "id": "tap-2024-f",
+      "title": "Fixture",
+      "sourceUrl": "https://codeforces.com/gym/105321/attachments/download/26905/tap_2024.pdf#page=10",
+      "editorialUrl": null,
+      "before": {
+        "difficulty": "Inicial",
+        "conceptual": "1/5 (estimación editorial)",
+        "implementation": "1/5 (estimación editorial)",
+        "topics": [
+          "Simulación",
+          "Rachas"
+        ],
+        "chunkIds": [
+          "cpp-recorridos",
+          "cpp-rachas",
+          "cpp-cuentas-enteras"
+        ],
+        "coverage": "completa",
+        "classificationConfidence": "Alta: valoración propia del enunciado. No se localizó una editorial oficial de esta edición; las técnicas avanzadas requieren contraste con una solución de referencia.",
+        "approach": "Herramientas de un enfoque editorial de referencia; no incluye la observación ni la solución."
+      },
+      "after": {
+        "difficulty": "Inicial",
+        "conceptual": "1/5 (estimación editorial)",
+        "implementation": "2/5 (estimación editorial)",
+        "topics": [
+          "Simulación",
+          "Rachas"
+        ],
+        "chunkIds": [
+          "cpp-recorridos",
+          "cpp-condiciones",
+          "cpp-rachas",
+          "cpp-cuentas-enteras"
+        ],
+        "coverage": "completa",
+        "classificationConfidence": "Alta sobre las operaciones y el enfoque descritos: enunciado original revisado y modelos acotados contrastados el 11/11/2026. La banda y las puntuaciones son valoraciones del club, no oficiales.",
+        "approach": "Procesar los resultados al leerlos, manteniendo puntaje y longitud de la racha actual. El bloque de rachas incluye el contador que aumenta o se reinicia, sin exigir vectores ni pares."
+      },
+      "reason": "Traducción directa de las reglas en un recorrido con acumulador y contador de victorias consecutivas. Requiere reiniciar la racha y reconocer el umbral, pero no almacenar la secuencia ni optimizar decisiones.",
+      "boundedCheck": 8190
+    },
+    {
+      "id": "tap-2024-g",
+      "title": "Garlands",
+      "sourceUrl": "https://codeforces.com/gym/105321/attachments/download/26905/tap_2024.pdf#page=11",
+      "editorialUrl": null,
+      "before": {
+        "difficulty": "Inicial",
+        "conceptual": "1/5 (estimación editorial)",
+        "implementation": "1/5 (estimación editorial)",
+        "topics": [
+          "Strings",
+          "Frecuencias"
+        ],
+        "chunkIds": [
+          "cpp-strings",
+          "cpp-busqueda-conteo",
+          "cpp-extremos-sumas"
+        ],
+        "coverage": "completa",
+        "classificationConfidence": "Alta: valoración propia del enunciado. No se localizó una editorial oficial de esta edición; las técnicas avanzadas requieren contraste con una solución de referencia.",
+        "approach": "Herramientas de un enfoque editorial de referencia; no incluye la observación ni la solución."
+      },
+      "after": {
+        "difficulty": "Inicial",
+        "conceptual": "2/5 (estimación editorial)",
+        "implementation": "1/5 (estimación editorial)",
+        "topics": [
+          "Strings",
+          "Frecuencias"
+        ],
+        "chunkIds": [
+          "cpp-strings",
+          "cpp-extremos-sumas"
+        ],
+        "coverage": "completa",
+        "classificationConfidence": "Alta sobre las operaciones y el enfoque descritos: enunciado original revisado y modelos acotados contrastados el 11/11/2026. La banda y las puntuaciones son valoraciones del club, no oficiales.",
+        "approach": "Contar caracteres con count, ya incluido en Strings, y comparar cantidades con min. Para este enfoque no hace falta un map, una tabla general de frecuencias ni ordenar el texto."
+      },
+      "reason": "Contar cuatro letras y reconocer el recurso que limita la cantidad de palabras. Es una observación acotada con cuentas simples, dentro del extremo superior de Inicial.",
+      "boundedCheck": 1296
+    },
+    {
+      "id": "tap-2025-a",
+      "title": "Artifact to print",
+      "sourceUrl": "https://icpc.com.ar/wp-content/uploads/2025/08/tap2025.pdf#page=2",
+      "editorialUrl": null,
+      "before": {
+        "difficulty": "Inicial",
+        "conceptual": "1/5 (estimación editorial)",
+        "implementation": "1/5 (estimación editorial)",
+        "topics": [
+          "Strings",
+          "Recorridos"
+        ],
+        "chunkIds": [
+          "cpp-strings",
+          "cpp-recorridos",
+          "cpp-apariciones"
+        ],
+        "coverage": "completa",
+        "classificationConfidence": "Alta: valoración propia del enunciado. No se localizó una editorial oficial de esta edición; las técnicas avanzadas requieren contraste con una solución de referencia.",
+        "approach": "Herramientas de un enfoque editorial de referencia; no incluye la observación ni la solución."
+      },
+      "after": {
+        "difficulty": "Inicial",
+        "conceptual": "2/5 (estimación editorial)",
+        "implementation": "1/5 (estimación editorial)",
+        "topics": [
+          "Strings",
+          "Recorridos",
+          "Subsecuencias"
+        ],
+        "chunkIds": [
+          "cpp-strings",
+          "cpp-recorridos",
+          "cpp-condiciones"
+        ],
+        "coverage": "completa",
+        "classificationConfidence": "Alta sobre las operaciones y el enfoque descritos: enunciado original revisado y modelos acotados contrastados el 11/11/2026. La banda y las puntuaciones son valoraciones del club, no oficiales.",
+        "approach": "Comprobar tres letras en orden con string::find desde una posición, o con un cursor durante un recorrido. No se exige que sean contiguas; contar apariciones de un patrón completo no representa este enfoque."
+      },
+      "reason": "La palabra objetivo es fija y la entrada tiene diez caracteres. Basta comprobar el orden de tres letras con búsquedas sucesivas o un recorrido; Inicial, aunque distinguir subsecuencia de subcadena es parte de la lectura.",
+      "boundedCheck": 67536
+    },
+    {
+      "id": "tap-2025-g",
+      "title": "Going to the kiosk",
+      "sourceUrl": "https://icpc.com.ar/wp-content/uploads/2025/08/tap2025.pdf#page=11",
+      "editorialUrl": null,
+      "before": {
+        "difficulty": "Inicial",
+        "conceptual": "1/5 (estimación editorial)",
+        "implementation": "1/5 (estimación editorial)",
+        "topics": [
+          "Aritmética",
+          "Divisibilidad"
+        ],
+        "chunkIds": [
+          "cpp-cuentas-enteras",
+          "cpp-condiciones"
+        ],
+        "coverage": "completa",
+        "classificationConfidence": "Alta: valoración propia del enunciado. No se localizó una editorial oficial de esta edición; las técnicas avanzadas requieren contraste con una solución de referencia.",
+        "approach": "Herramientas de un enfoque editorial de referencia; no incluye la observación ni la solución."
+      },
+      "after": {
+        "difficulty": "Inicial",
+        "conceptual": "1/5 (estimación editorial)",
+        "implementation": "1/5 (estimación editorial)",
+        "topics": [
+          "Aritmética",
+          "Divisibilidad"
+        ],
+        "chunkIds": [
+          "cpp-cuentas-enteras",
+          "cpp-condiciones"
+        ],
+        "coverage": "completa",
+        "classificationConfidence": "Alta sobre las operaciones y el enfoque descritos: enunciado original revisado y modelos acotados contrastados el 11/11/2026. La banda y las puntuaciones son valoraciones del club, no oficiales.",
+        "approach": "Trabajar con el vuelto y el resto de una división entera, con divisor positivo garantizado. El bloque Cuentas enteras cubre esas operaciones."
+      },
+      "reason": "Una resta, una consulta de resto y una condición reproducen la regla del vuelto exacto. Inicial de entrada; no exige factorización ni teoría de números adicional.",
+      "boundedCheck": 9900
+    },
+    {
+      "id": "tap-2026-a",
+      "title": "At the midpoint",
+      "sourceUrl": "https://codeforces.com/gym/106682/attachments/download/39252/TAP-2026.pdf#page=3",
+      "editorialUrl": null,
+      "before": {
+        "difficulty": "Inicial",
+        "conceptual": "1/5 (estimación editorial)",
+        "implementation": "1/5 (estimación editorial)",
+        "topics": [
+          "Implementación",
+          "Aritmética"
+        ],
+        "chunkIds": [
+          "cpp-variables",
+          "cpp-condiciones",
+          "cpp-cuentas-enteras"
+        ],
+        "coverage": "completa",
+        "classificationConfidence": "Media: lectura del enunciado y análisis editorial propio; sin editorial oficial localizada. Las bandas no son ratings oficiales.",
+        "approach": "Selección editorial de herramientas de base. Cubre las operaciones del enfoque de implementación elegido; no incluye la solución."
+      },
+      "after": {
+        "difficulty": "Inicial",
+        "conceptual": "1/5 (estimación editorial)",
+        "implementation": "1/5 (estimación editorial)",
+        "topics": [
+          "Implementación",
+          "Aritmética"
+        ],
+        "chunkIds": [
+          "cpp-variables",
+          "cpp-condiciones",
+          "cpp-cuentas-enteras"
+        ],
+        "coverage": "completa",
+        "classificationConfidence": "Alta sobre las operaciones y el enfoque descritos: enunciado original revisado y modelos acotados contrastados el 11/11/2026. La banda y las puntuaciones son valoraciones del club, no oficiales.",
+        "approach": "Lectura de tres enteros, conversión de unidades con multiplicaciones y sumas, comparación e impresión de un signo."
+      },
+      "reason": "Convertir horas, minutos y segundos a una unidad y comparar con un valor fijo. Son cuentas y tres ramas directas; Inicial de entrada.",
+      "boundedCheck": 18000
+    },
+    {
+      "id": "tap-2026-i",
+      "title": "Is There a Winner?",
+      "sourceUrl": "https://codeforces.com/gym/106682/attachments/download/39252/TAP-2026.pdf#page=14",
+      "editorialUrl": null,
+      "before": {
+        "difficulty": "Inicial",
+        "conceptual": "2/5 (estimación editorial)",
+        "implementation": "1/5 (estimación editorial)",
+        "topics": [
+          "Observación",
+          "Aritmética"
+        ],
+        "chunkIds": [
+          "cpp-condiciones",
+          "cpp-cuentas-enteras"
+        ],
+        "coverage": "completa",
+        "classificationConfidence": "Media: lectura del enunciado y análisis editorial propio; sin editorial oficial localizada. Las bandas no son ratings oficiales.",
+        "approach": "Selección editorial de herramientas de base. Cubre las operaciones del enfoque de implementación elegido; no incluye la solución."
+      },
+      "after": {
+        "difficulty": "Inicial",
+        "conceptual": "2/5 (estimación editorial)",
+        "implementation": "1/5 (estimación editorial)",
+        "topics": [
+          "Observación",
+          "Aritmética",
+          "Paridad"
+        ],
+        "chunkIds": [
+          "cpp-condiciones",
+          "cpp-cuentas-enteras"
+        ],
+        "coverage": "completa",
+        "classificationConfidence": "Alta sobre las operaciones y el enfoque descritos: enunciado original revisado y modelos acotados contrastados el 11/11/2026. La banda y las puntuaciones son valoraciones del club, no oficiales.",
+        "approach": "Condiciones sobre los parámetros y paridad. El tamaño de los límites descarta simular rondas o enumerar repartos como enfoque de implementación."
+      },
+      "reason": "Requiere distinguir garantía para todo reparto de la existencia de un empate. La observación se reduce a pocos casos y paridad, sin estructuras ni algoritmos especializados; Inicial en su extremo conceptual superior.",
+      "boundedCheck": {
+        "parameters": 60,
+        "scoreVectors": 27113
+      }
+    },
+    {
+      "id": "tap-2026-k",
+      "title": "Kilograms Exceeded",
+      "sourceUrl": "https://codeforces.com/gym/106682/attachments/download/39252/TAP-2026.pdf#page=16",
+      "editorialUrl": null,
+      "before": {
+        "difficulty": "Inicial",
+        "conceptual": "1/5 (estimación editorial)",
+        "implementation": "1/5 (estimación editorial)",
+        "topics": [
+          "Implementación",
+          "Aritmética"
+        ],
+        "chunkIds": [
+          "cpp-strings",
+          "cpp-recorridos",
+          "cpp-cuentas-enteras",
+          "cpp-conversiones"
+        ],
+        "coverage": "completa",
+        "classificationConfidence": "Media: lectura del enunciado y análisis editorial propio; sin editorial oficial localizada. Las bandas no son ratings oficiales.",
+        "approach": "Selección editorial de herramientas de base. Cubre las operaciones del enfoque de implementación elegido; no incluye la solución."
+      },
+      "after": {
+        "difficulty": "Inicial",
+        "conceptual": "2/5 (estimación editorial)",
+        "implementation": "1/5 (estimación editorial)",
+        "topics": [
+          "Implementación",
+          "Aritmética",
+          "Enumeración acotada"
+        ],
+        "chunkIds": [
+          "cpp-recorridos",
+          "cpp-condiciones",
+          "cpp-cuentas-enteras"
+        ],
+        "coverage": "completa",
+        "classificationConfidence": "Alta sobre las operaciones y el enfoque descritos: enunciado original revisado y modelos acotados contrastados el 11/11/2026. La banda y las puntuaciones son valoraciones del club, no oficiales.",
+        "approach": "Leer N enteros separados por espacios y procesarlos independientemente, probando los nueve valores posibles de cada ruedita. Recorridos, condiciones y resto entero cubren el enfoque de referencia; no requiere strings ni conversiones."
+      },
+      "reason": "Cada ruedita es independiente y tiene solo nueve estados posibles. Se puede recuperar su valor con una enumeración pequeña y resto entero, sin conocer inversos modulares; Inicial con una observación acotada.",
+      "boundedCheck": 9
+    }
+  ]
+}

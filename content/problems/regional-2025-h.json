@@ -3,15 +3,16 @@
   "tournamentId": "regional-2025",
   "letter": "H",
   "title": "Harder Horizons",
-  "summary": "Dividir una lista ordenada de tareas en la mayor cantidad de días consecutivos, de modo que la tarea más difícil de cada día sea estrictamente más difícil que la del anterior.",
+  "summary": "Dividir una lista de tareas, sin cambiar su orden, en la mayor cantidad de días consecutivos, de modo que la tarea más difícil de cada día sea estrictamente más difícil que la del anterior.",
   "topics": [
     "Greedy",
-    "Implementación"
+    "Recorridos",
+    "Máximo acumulado"
   ],
-  "difficulty": "Inicial",
-  "difficultyReason": "Estimación editorial: conceptual 1/5 e implementación 1/5. Encaja con observación y recorridos de arreglos; es uno de los puntos de entrada más claros del corpus.",
+  "difficulty": "Consolidación",
+  "difficultyReason": "El recorrido es corto, pero decidir los cortes y justificar que la cantidad de grupos es máxima exige una observación greedy. Los empates y el orden original importan; Consolidación baja.",
   "implementation": "1/5 (estimación editorial)",
-  "conceptual": "1/5 (estimación editorial)",
+  "conceptual": "2/5 (estimación editorial)",
   "ac": 192,
   "total": 201,
   "judgeUrl": "https://codeforces.com/gym/106178/problem/H",
@@ -19,7 +20,6 @@
   "statementUrl": "/statements/regional-2025-h.pdf",
   "chunkIds": [
     "cpp-recorridos",
-    "cpp-vectores",
     "cpp-extremos-sumas"
   ],
   "coverage": "completa",
@@ -30,9 +30,9 @@
     "Cuidado con olvidar el caso mínimo."
   ],
   "status": "verificado",
-  "approach": "Base de clasificación: inferencia del enunciado. Los bloques propuestos son una selección editorial de herramientas, no una solución ni un inventario de todos los enfoques. Cubren las operaciones de base del enfoque elegido; descubrir y justificar la observación sigue siendo parte del ejercicio.",
+  "approach": "Recorrido en el orden de entrada, con máximo acumulado y contador. Se puede procesar cada dificultad al leerla, sin guardar el arreglo completo.",
   "editorialUrl": null,
-  "classificationConfidence": "Alta sobre la clasificación simple por enunciado y evidencia empírica; no se presenta como técnica oficial publicada.",
+  "classificationConfidence": "Alta sobre las operaciones y el enfoque descritos: enunciado original revisado y modelos acotados contrastados el 11/11/2026. La banda y las puntuaciones son valoraciones del club, no oficiales.",
   "firstSolve": {
     "minute": 4,
     "teams": [

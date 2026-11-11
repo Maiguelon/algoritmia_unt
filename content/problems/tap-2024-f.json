@@ -6,22 +6,23 @@
   "summary": "Calcular un puntaje por victorias y derrotas, incluyendo un bonus por cada victoria que prolonga una racha de al menos tres.",
   "difficulty": "Inicial",
   "conceptual": "1/5 (estimación editorial)",
-  "implementation": "1/5 (estimación editorial)",
+  "implementation": "2/5 (estimación editorial)",
   "topics": [
     "Simulación",
     "Rachas"
   ],
   "chunkIds": [
     "cpp-recorridos",
+    "cpp-condiciones",
     "cpp-rachas",
     "cpp-cuentas-enteras"
   ],
   "coverage": "completa",
   "missingTools": [],
   "hints": [],
-  "classificationConfidence": "Alta: valoración propia del enunciado. No se localizó una editorial oficial de esta edición; las técnicas avanzadas requieren contraste con una solución de referencia.",
-  "difficultyReason": "Lectura editorial del enunciado: inicial. La banda no se calcula a partir de un umbral de AC.",
-  "approach": "Herramientas de un enfoque editorial de referencia; no incluye la observación ni la solución.",
+  "classificationConfidence": "Alta sobre las operaciones y el enfoque descritos: enunciado original revisado y modelos acotados contrastados el 11/11/2026. La banda y las puntuaciones son valoraciones del club, no oficiales.",
+  "difficultyReason": "Traducción directa de las reglas en un recorrido con acumulador y contador de victorias consecutivas. Requiere reiniciar la racha y reconocer el umbral, pero no almacenar la secuencia ni optimizar decisiones.",
+  "approach": "Procesar los resultados al leerlos, manteniendo puntaje y longitud de la racha actual. El bloque de rachas incluye el contador que aumenta o se reinicia, sin exigir vectores ni pares.",
   "ac": 152,
   "total": 155,
   "judgeUrl": "https://codeforces.com/gym/105321/problem/F",

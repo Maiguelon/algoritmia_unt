@@ -94,3 +94,11 @@ Verificación: tipos sin errores y dos recorridos de navegador aprobados, con de
 Se publica la misma aplicación de `a83eb48` como proyecto Direct Upload `club-algoritmia-unt`, en https://club-algoritmia-unt.pages.dev/. La cuenta del usuario confirmó la publicación de los 280 archivos. Se probaron portada, guía inicial, ficha de Duo, selección desde la ficha, apunte recomendado y enunciados. Las tres descargas son PDF válidos de 10, 12 y 2 páginas; el apunte fijo coincide con el archivo original. La selección de prueba se vació al terminar.
 
 La nueva dirección queda abierta como entrega y se documenta el procedimiento manual de actualización. La copia anterior en Sites sigue disponible. El lector web automático de esta sesión tampoco pudo abrir la nueva dirección; el navegador sí funcionó, por lo que no se atribuye el problema de Gemini al dominio anterior como una causa demostrada.
+
+## Revisión de los doce Iniciales — 11 de noviembre
+
+Se releen los doce enunciados marcados Inicial y sus bloques. Ocho conservan la banda; Regional 2024 A, Regional 2025 H y J, y Regional 2026 G pasan a Consolidación baja. La justificación y los casos fronterizos quedan en `investigacion/revision-iniciales-2026-11-11.md`, con evidencia por ficha antes/después y contrastes de casos acotados.
+
+Se corrigen la confusión entre subsecuencia y patrón contiguo en TAP 2025 A, las recomendaciones de strings/conversiones innecesarias de TAP 2026 K y bloques redundantes de Regional 2025 H/J y TAP 2024 G. Rachas incorpora un contador durante la lectura para el enfoque de Fixture. Se aclara el orden original en el resumen de Harder Horizons. Se conservan todas las cifras del concurso y los enunciados originales.
+
+Validación: 53 pruebas unitarias, 28 recorridos de navegador, tipos sin errores, 123 fragmentos C++17 compilados y revisión visual del PDF de Rachas de dos páginas. Las puntuaciones y bandas siguen siendo valoraciones del club; no se presentan como ratings oficiales ni como envíos Accepted observados.

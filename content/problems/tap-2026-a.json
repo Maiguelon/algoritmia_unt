@@ -9,7 +9,7 @@
     "Aritmética"
   ],
   "difficulty": "Inicial",
-  "difficultyReason": "Conceptual 1/5 e implementación 1/5, estimaciones editoriales. Fue resuelto por 180/186 equipos; ese dato empírico no determina por sí solo su dificultad conceptual.",
+  "difficultyReason": "Convertir horas, minutos y segundos a una unidad y comparar con un valor fijo. Son cuentas y tres ramas directas; Inicial de entrada.",
   "implementation": "1/5 (estimación editorial)",
   "conceptual": "1/5 (estimación editorial)",
   "ac": 180,
@@ -26,9 +26,9 @@
   "missingTools": [],
   "hints": [],
   "status": "verificado",
-  "approach": "Selección editorial de herramientas de base. Cubre las operaciones del enfoque de implementación elegido; no incluye la solución.",
+  "approach": "Lectura de tres enteros, conversión de unidades con multiplicaciones y sumas, comparación e impresión de un signo.",
   "editorialUrl": null,
-  "classificationConfidence": "Media: lectura del enunciado y análisis editorial propio; sin editorial oficial localizada. Las bandas no son ratings oficiales.",
+  "classificationConfidence": "Alta sobre las operaciones y el enfoque descritos: enunciado original revisado y modelos acotados contrastados el 11/11/2026. La banda y las puntuaciones son valoraciones del club, no oficiales.",
   "firstSolve": {
     "minute": 3,
     "teams": [
