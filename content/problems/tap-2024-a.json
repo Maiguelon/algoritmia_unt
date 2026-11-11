@@ -5,26 +5,25 @@
   "title": "Advanced tic-tac-toe",
   "summary": "Determinar el resultado del ta-te-ti con restricciones de precedencia entre casillas, suponiendo que ambos jugadores eligen de forma óptima.",
   "difficulty": "Salto regional",
-  "conceptual": "3/5 (estimación editorial)",
-  "implementation": "3/5 (estimación editorial)",
+  "conceptual": "2/5 (estimación editorial)",
+  "implementation": "2/5 (estimación editorial)",
   "topics": [
     "Juegos",
     "Minimax",
-    "Estados pequeños"
+    "Backtracking"
   ],
   "chunkIds": [
     "cpp-matrices",
-    "cpp-vectores",
     "cpp-condiciones"
   ],
   "coverage": "parcial",
   "missingTools": [
-    "Búsqueda de estados de juego, minimax y representación de restricciones; faltan sus módulos de referencia."
+    "Backtracking con minimax y manejo de restricciones de precedencia al generar jugadas"
   ],
   "hints": [],
-  "classificationConfidence": "Media: valoración propia del enunciado. No se localizó una editorial oficial de esta edición; las técnicas avanzadas requieren contraste con una solución de referencia.",
-  "difficultyReason": "Lectura editorial del enunciado: salto regional. La banda no se calcula a partir de un umbral de AC.",
-  "approach": "Cobertura de operaciones de base. Requisito pendiente: Búsqueda de estados de juego, minimax y representación de restricciones; faltan sus módulos de referencia.",
+  "classificationConfidence": "Enfoque derivado del enunciado y contrastado con simulación literal de las reglas y las tres muestras.",
+  "difficultyReason": "El tablero de nueve casillas permite recorrer el árbol de juego. Hay que aplicar las restricciones al probar jugadas y resolver empates cuando nadie puede continuar.",
+  "approach": "Guardar las restricciones por casilla y explorar las jugadas habilitadas con minimax.",
   "ac": 8,
   "total": 155,
   "judgeUrl": "https://codeforces.com/gym/105321/problem/A",

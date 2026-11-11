@@ -10,9 +10,9 @@
     "Búsqueda binaria"
   ],
   "difficulty": "Salto regional",
-  "difficultyReason": "Clasificación editorial provisional por revisar con solución de referencia. Fue resuelto por 21/186 equipos; ese dato empírico no determina por sí solo su dificultad conceptual.",
-  "implementation": "Pendiente de revisión conceptual",
-  "conceptual": "Pendiente de revisión conceptual",
+  "difficultyReason": "Hay que justificar que en cada sobre conviene avanzar lo máximo posible y buscar las siguientes apariciones en ambos sentidos con la cota grande.",
+  "implementation": "3/5 (estimación editorial)",
+  "conceptual": "3/5 (estimación editorial)",
   "ac": 21,
   "total": 186,
   "judgeUrl": "https://codeforces.com/gym/106682/problem/L",
@@ -20,18 +20,15 @@
   "statementUrl": "/statements/tap-2026-l.pdf",
   "chunkIds": [
     "cpp-vectores",
-    "cpp-ordenacion",
     "cpp-busqueda-ordenada"
   ],
-  "coverage": "parcial",
-  "missingTools": [
-    "Justificación del greedy y combinación de listas de ocurrencias con búsquedas en ambas orientaciones; no hay bloque específico de esta estrategia."
-  ],
+  "coverage": "completa",
+  "missingTools": [],
   "hints": [],
   "status": "verificado",
-  "approach": "Enfoque editorial: greedy sobre secuencias con listas de posiciones y búsqueda binaria. Los bloques cubren operaciones de base; la observación y su justificación no están incluidas en el apunte.",
+  "approach": "Guardar posiciones por valor y comparar cuánto se avanza con un sobre en cada orientación mediante búsquedas ordenadas.",
   "editorialUrl": null,
-  "classificationConfidence": "Media sobre el enfoque: análisis propio del enunciado, argumento greedy y contraste exhaustivo en instancias pequeñas. No se localizó editorial oficial. La valoración de dificultad sigue provisional.",
+  "classificationConfidence": "Enfoque derivado del enunciado y contrastado con enumeración de selecciones de sobres en 3279 instancias chicas.",
   "firstSolve": {
     "minute": 37,
     "teams": [

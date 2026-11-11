@@ -5,12 +5,12 @@
   "title": "Fuzzy Factorization",
   "summary": "Producir la factorización prima de un entero suficientemente cercano al número dado, respetando el error relativo y las cotas de los factores.",
   "topics": [
-    "Aritmética",
+    "Aproximación",
     "Strings",
-    "Constructivos"
+    "Factorización prima"
   ],
   "difficulty": "Salto regional",
-  "difficultyReason": "Estimación editorial: conceptual 3/5 e implementación 2/5. Buen candidato de observación y lectura de números como strings; exige entender bien el error relativo.",
+  "difficultyReason": "El salto es aprovechar el margen de error para reducir el número a factorizar y justificar que el truncado cumple la tolerancia.",
   "implementation": "2/5 (estimación editorial)",
   "conceptual": "3/5 (estimación editorial)",
   "ac": 45,
@@ -19,23 +19,21 @@
   "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2025/contest.pdf#page=10",
   "statementUrl": "/statements/regional-2025-f.pdf",
   "chunkIds": [
-    "cpp-conversiones",
+    "cpp-strings",
     "cpp-divisibilidad",
-    "cpp-cuentas-enteras"
+    "cpp-map"
   ],
-  "coverage": "parcial",
-  "missingTools": [
-    "Aritmética de enteros muy grandes y justificación del error permitido. No desarrollado como técnica en la biblioteca básica."
-  ],
+  "coverage": "completa",
+  "missingTools": [],
   "hints": [
     "Cuidado con convertir todo el número a un entero nativo.",
     "Cuidado con confundir error absoluto con relativo.",
     "Cuidado con no combinar factores repetidos."
   ],
   "status": "verificado",
-  "approach": "Base de clasificación: inferencia del enunciado. Los bloques propuestos son una selección editorial de herramientas, no una solución ni un inventario de todos los enfoques. La técnica indicada como faltante necesita una ampliación de los apuntes; estos bloques no bastan para aprenderla.",
+  "approach": "Leer como string, convertir un prefijo corto, factorizarlo por división de prueba y ajustar los exponentes por las cifras truncadas.",
   "editorialUrl": null,
-  "classificationConfidence": "Media-alta: inferencia del enunciado, sin editorial oficial localizada. No requiere asumir factorización exacta del número gigante.",
+  "classificationConfidence": "Enfoque derivado del enunciado, corroborado en la discusión del Gym y contrastado con reconstrucción exacta de números de hasta mil cifras.",
   "firstSolve": {
     "minute": 56,
     "teams": [

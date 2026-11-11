@@ -5,11 +5,12 @@
   "title": "Forward and Backward",
   "summary": "Dado un número, listar las bases numéricas en las que su representación es un palíndromo sin ceros iniciales.",
   "topics": [
-    "Aritmética",
-    "Implementación"
+    "Teoría de números",
+    "Bases numéricas",
+    "Divisibilidad"
   ],
   "difficulty": "Salto regional",
-  "difficultyReason": "Estimación editorial: conceptual 3/5 e implementación 2/5. Aritmética y observación con implementación manejable; aspiracional si todavía no trabajan con cotas por raíz.",
+  "difficultyReason": "La cota exige separar las bases chicas de las que generan representaciones cortas y deducir candidatos para las grandes.",
   "implementation": "2/5 (estimación editorial)",
   "conceptual": "3/5 (estimación editorial)",
   "ac": 28,
@@ -20,12 +21,11 @@
   "chunkIds": [
     "cpp-cuentas-enteras",
     "cpp-divisibilidad",
-    "cpp-reales",
     "cpp-vectores"
   ],
   "coverage": "parcial",
   "missingTools": [
-    "Separación por tamaño de base No desarrollado como técnica en la biblioteca básica."
+    "Conversión posicional a una base arbitraria mediante divisiones y restos"
   ],
   "hints": [
     "Cuidado con recorrer todas las bases hasta N.",
@@ -33,9 +33,9 @@
     "Revisá especialmente: orden o duplicación de la salida."
   ],
   "status": "verificado",
-  "approach": "Base de clasificación: editorial oficial + enunciado. Los bloques propuestos son una selección editorial de herramientas, no una solución ni un inventario de todos los enfoques. La técnica indicada como faltante necesita una ampliación de los apuntes; estos bloques no bastan para aprenderla.",
+  "approach": "Separar por raíz, construir dígitos de las bases chicas y enumerar los candidatos para representaciones de dos dígitos.",
   "editorialUrl": "https://scorelatam.naquadah.com.br/latam-2023/editorial.pdf",
-  "classificationConfidence": "Alta: editorial oficial. El límite de N vuelve inviable la simulación exhaustiva de bases.",
+  "classificationConfidence": "Enunciado y editorial oficial contrastados con enumeración de todas las bases para valores chicos.",
   "firstSolve": {
     "minute": 36,
     "teams": [

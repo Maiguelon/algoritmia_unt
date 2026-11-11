@@ -3,7 +3,8 @@ test('ficha directa, selección y pistas cerradas',async({page})=>{
  await page.goto('/problemas/regional-2025-k/');
  await expect(page.getByRole('heading',{level:1})).toHaveText('Kings Conquest');
  expect(await page.locator('details[open]').count()).toBe(0);
- await expect(page.getByText('Cobertura del apunte:',{exact:false})).toContainText('parcial');
+ await expect(page.locator('.page-heading .chip[data-level]')).toHaveText('Avanzado');
+ await expect(page.getByText('Cobertura del apunte:',{exact:false})).toContainText('completa');
  await page.getByRole('button',{name:'＋ Seleccionar problema'}).click();
  await expect(page.getByRole('button',{name:'✓ En tu selección'})).toBeVisible();
  await expect(page.getByRole('region',{name:'Selección de problemas'})).toContainText('1 problema seleccionado');

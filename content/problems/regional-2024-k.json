@@ -3,14 +3,14 @@
   "tournamentId": "regional-2024",
   "letter": "K",
   "title": "Kool Strings",
-  "summary": "Cambiar la menor cantidad de bits de una cadena para que no contenga una racha de K o más caracteres iguales.",
+  "summary": "Cambiar la menor cantidad de bits para eliminar las rachas de K o más caracteres iguales y devolver el mínimo junto con una cadena que lo alcanza.",
   "topics": [
     "Strings",
     "Greedy",
     "Constructivos"
   ],
   "difficulty": "Salto regional",
-  "difficultyReason": "Estimación editorial: conceptual 3/5 e implementación 3/5. Muy alineado con su foco: implementación corta con casos borde que deciden el AC.",
+  "difficultyReason": "El desafío es construir una cadena óptima con las rachas del original, cuidar las fronteras y separar el caso de alternancia obligatoria.",
   "implementation": "3/5 (estimación editorial)",
   "conceptual": "3/5 (estimación editorial)",
   "ac": 71,
@@ -23,19 +23,17 @@
     "cpp-rachas",
     "cpp-recorridos"
   ],
-  "coverage": "parcial",
-  "missingTools": [
-    "Análisis de rachas y construcción No desarrollado como técnica en la biblioteca básica."
-  ],
+  "coverage": "completa",
+  "missingTools": [],
   "hints": [
     "Revisá especialmente: caso K=2.",
     "Cuidado con unir accidentalmente rachas vecinas.",
     "Cuidado con contar cambios sin construir una salida coherente."
   ],
   "status": "verificado",
-  "approach": "Base de clasificación: editorial oficial + enunciado. Los bloques propuestos son una selección editorial de herramientas, no una solución ni un inventario de todos los enfoques. La técnica indicada como faltante necesita una ampliación de los apuntes; estos bloques no bastan para aprenderla.",
+  "approach": "Comparar las alternancias cuando corresponda y, en los demás casos, procesar y editar cada racha con atención a sus límites.",
   "editorialUrl": "https://scorelatam.naquadah.com.br/latam-2024/icpcla24_solution_sketches.pdf",
-  "classificationConfidence": "Alta: editorial oficial. Es de los accesibles relativos del set, pero no un ejercicio automático.",
+  "classificationConfidence": "Enunciado y editorial oficial contrastados con enumeración de cadenas válidas chicas.",
   "firstSolve": {
     "minute": 20,
     "teams": [

@@ -22,9 +22,9 @@ describe('contratos del contenido editorial', () => {
 
   it('distingue estimación de dificultad y estadísticas verificadas', () => {
     const king = problems.find(p => p.id === 'regional-2025-k')!;
-    expect(king.coverage).toBe('parcial');
-    expect(king.missingTools.length).toBeGreaterThan(0);
-    expect(king.classificationConfidence).toMatch(/Media/);
+    expect(king.difficulty).toBe('Avanzado');
+    expect(king.conceptual).toMatch(/4\/5.*estimación editorial/);
+    expect(king.status).toBe('verificado');
     expect(king.ac).toBe(24);
     expect(king.total).toBe(201);
   });

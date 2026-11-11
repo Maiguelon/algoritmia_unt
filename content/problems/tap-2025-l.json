@@ -20,12 +20,12 @@
   ],
   "coverage": "parcial",
   "missingTools": [
-    "Modelo de DP, transiciones y cota de cantidad de barcos; no existe todavía un bloque de programación dinámica en la biblioteca."
+    "DP por prefijo con dos capas y cota triangular para el número de barcos"
   ],
   "hints": [],
-  "classificationConfidence": "Media: valoración propia del enunciado. No se localizó una editorial oficial de esta edición; las técnicas avanzadas requieren contraste con una solución de referencia.",
-  "difficultyReason": "Lectura editorial del enunciado: salto regional. La banda no se calcula a partir de un umbral de AC.",
-  "approach": "Cobertura de operaciones de base. Requisito pendiente: Modelo de DP, transiciones y cota de cantidad de barcos; no existe todavía un bloque de programación dinámica en la biblioteca.",
+  "classificationConfidence": "Enfoque derivado del enunciado y contrastado con enumeración de colocaciones chicas.",
+  "difficultyReason": "Hay que reducir las longitudes elegidas a un conjunto manejable y combinar una DP por prefijo con el costo de preparar cada intervalo.",
+  "approach": "Acotar el número de barcos por la suma mínima de sus longitudes y usar DP con sumas prefijas para el costo de cada franja.",
   "ac": 22,
   "total": 183,
   "judgeUrl": "https://codeforces.com/gym/106054/problem/L",

@@ -9,7 +9,7 @@
     "Caminos mínimos"
   ],
   "difficulty": "Salto regional",
-  "difficultyReason": "Estimación editorial: conceptual 3/5 e implementación 3/5. Buen siguiente escalón de grafos si ya pueden implementar Dijkstra con seguridad; no es un BFS de práctica básica.",
+  "difficultyReason": "Hay que calcular distancias en un grafo ponderado y distinguir todos los caminos mínimos que pasan por un punto de aquellos que lo pueden evitar.",
   "implementation": "3/5 (estimación editorial)",
   "conceptual": "3/5 (estimación editorial)",
   "ac": 37,
@@ -20,11 +20,11 @@
   "chunkIds": [
     "cpp-vectores",
     "cpp-pares",
-    "cpp-cola"
+    "cpp-cuentas-enteras"
   ],
   "coverage": "parcial",
   "missingTools": [
-    "Comparación de caminos mínimos No desarrollado como técnica en la biblioteca básica."
+    "Listas de adyacencia ponderadas, Dijkstra y cola de prioridad mínima"
   ],
   "hints": [
     "Revisá especialmente: distancias fuera de 32 bits.",
@@ -32,9 +32,9 @@
     "Cuidado con tratar un nodo inaccesible como distancia pequeña."
   ],
   "status": "verificado",
-  "approach": "Base de clasificación: editorial oficial + enunciado. Los bloques propuestos son una selección editorial de herramientas, no una solución ni un inventario de todos los enfoques. La técnica indicada como faltante necesita una ampliación de los apuntes; estos bloques no bastan para aprenderla.",
+  "approach": "Comparar distancias calculadas con Dijkstra en el grafo original y en el que se excluye el punto de reunión.",
   "editorialUrl": "https://scorelatam.naquadah.com.br/latam-2023/editorial.pdf",
-  "classificationConfidence": "Alta: editorial oficial. La categoría depende de que Dijkstra sea una herramienta conocida.",
+  "classificationConfidence": "Enunciado y editorial oficial contrastados con enumeración de caminos simples en grafos chicos.",
   "firstSolve": {
     "minute": 48,
     "teams": [

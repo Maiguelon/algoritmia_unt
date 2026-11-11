@@ -10,7 +10,7 @@
     "Conteo"
   ],
   "difficulty": "Salto regional",
-  "difficultyReason": "Valoración editorial del enunciado: conceptual 3/5 e implementación 3/5. Las herramientas sugeridas corresponden al enfoque descrito.",
+  "difficultyReason": "Cada rama aporta una distancia mínima y su multiplicidad. Al combinar ramas hay que evitar contar dos veces los pares y acumular en 64 bits.",
   "implementation": "3/5",
   "conceptual": "3/5",
   "ac": 35,
@@ -20,18 +20,18 @@
   "statementUrl": "/statements/regional-2026-l.pdf",
   "chunkIds": [
     "cpp-vectores",
-    "cpp-pila",
+    "cpp-cola",
     "cpp-cuentas-enteras"
   ],
   "coverage": "parcial",
   "missingTools": [
-    "Recorrido de árbol, DP de distancias y conteo de pares sin duplicarlos."
+    "Representación de árboles por adyacencia y DP en posorden que combina distancias y multiplicidades"
   ],
   "hints": [],
   "status": "verificado",
-  "approach": "DP en árboles con distancias mínimas y multiplicidades.",
+  "approach": "Construir el orden de visita con BFS, procesarlo en reversa y combinar los mejores aportes de cada rama.",
   "editorialUrl": null,
-  "classificationConfidence": "Media: lectura del enunciado y análisis editorial propio; sin editorial oficial localizada para contrastar una solución completa.",
+  "classificationConfidence": "Enfoque derivado del enunciado y contrastado con BFS desde cada torre en árboles chicos.",
   "firstSolve": {
     "minute": 48,
     "teams": [

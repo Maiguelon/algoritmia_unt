@@ -6,13 +6,13 @@
   "summary": "Contar las inversiones de una cadena obtenida al repetir muchas veces una palabra, con las restricciones y el módulo del enunciado.",
   "topics": [
     "Strings",
-    "Conteo",
-    "Aritmética"
+    "Inversiones",
+    "Aritmética modular"
   ],
   "difficulty": "Salto regional",
-  "difficultyReason": "Estimación editorial: conceptual 2/5 e implementación 2/5. Buen cruce entre strings y observación aritmética; útil para practicar productos grandes y módulo.",
+  "difficultyReason": "La cadena repetida puede ser demasiado larga para construirla. La reducción separa las inversiones dentro de cada copia de las que cruzan entre copias.",
   "implementation": "2/5 (estimación editorial)",
-  "conceptual": "2/5 (estimación editorial)",
+  "conceptual": "3/5 (estimación editorial)",
   "ac": 44,
   "total": 152,
   "judgeUrl": "https://codeforces.com/gym/104736/problem/I",
@@ -31,9 +31,9 @@
     "Cuidado con contar iguales como inversión."
   ],
   "status": "verificado",
-  "approach": "Base de clasificación: editorial oficial + enunciado. Los bloques propuestos son una selección editorial de herramientas, no una solución ni un inventario de todos los enfoques. Cubren las operaciones de base del enfoque elegido; descubrir y justificar la observación sigue siendo parte del ejercicio.",
+  "approach": "Contar inversiones con frecuencias del alfabeto y combinar aportes de copias con productos reducidos módulo.",
   "editorialUrl": "https://scorelatam.naquadah.com.br/latam-2023/editorial.pdf",
-  "classificationConfidence": "Alta: editorial oficial. La estimación supone manejo básico de aritmética modular.",
+  "classificationConfidence": "Enunciado y editorial oficial contrastados con concatenación explícita y casos de magnitud grande.",
   "firstSolve": {
     "minute": 38,
     "teams": [

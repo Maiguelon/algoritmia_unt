@@ -15,17 +15,17 @@
   "chunkIds": [
     "cpp-vectores",
     "cpp-ordenacion",
+    "cpp-busqueda-ordenada",
     "cpp-divisibilidad",
+    "cpp-reales",
     "cpp-cuentas-enteras"
   ],
-  "coverage": "parcial",
-  "missingTools": [
-    "Caracterización de los casos de unicidad y validación segura de productos de hasta 10^18; no se ofrece una receta completa para este problema."
-  ],
+  "coverage": "completa",
+  "missingTools": [],
   "hints": [],
-  "classificationConfidence": "Media: valoración propia del enunciado. No se localizó una editorial oficial de esta edición; las técnicas avanzadas requieren contraste con una solución de referencia.",
-  "difficultyReason": "Lectura editorial del enunciado: salto regional. La banda no se calcula a partir de un umbral de AC.",
-  "approach": "Cobertura de operaciones de base. Requisito pendiente: Caracterización de los casos de unicidad y validación segura de productos de hasta 10^18; no se ofrece una receta completa para este problema.",
+  "classificationConfidence": "Enfoque derivado del enunciado y contrastado con listas de divisores de enteros chicos.",
+  "difficultyReason": "El desafío está en distinguir cuándo falta el propio número, cuándo un divisor carece de pareja y cuándo la información permite varias respuestas.",
+  "approach": "Emparejar divisores, comprobar candidatos con divisiones exactas y manejar la raíz cuadrada entera sin desbordar.",
   "ac": 18,
   "total": 183,
   "judgeUrl": "https://codeforces.com/gym/106054/problem/H",

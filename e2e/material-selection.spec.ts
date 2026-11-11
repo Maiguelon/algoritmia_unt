@@ -163,7 +163,7 @@ test('cobertura parcial y Top global no prometen un apunte completo', async ({ p
   await select(page, ['tap-2026-c', 'regional-2026-k']);
   const chosen = page.getByRole('region', { name: 'Problemas seleccionados' });
   await expect(chosen).toContainText('Cobertura parcial.');
-  await expect(chosen).toContainText('no hay bloque de DP/minimax');
+  await expect(chosen).toContainText('Faltan: Minimax y DP de derecha a izquierda con extremos de sufijo.');
   await expect(chosen).toContainText('Top global · Fuera del alcance actual de los apuntes.');
   await page.getByRole('radio', { name: 'Completo', exact: true }).check();
   await expect(page.getByTestId('notes-content-count')).toHaveText('2');

@@ -3,28 +3,26 @@
   "tournamentId": "tap-2024",
   "letter": "K",
   "title": "Typographic Kaleidoscope",
-  "summary": "Contar las letras T, A y P que componen una imagen de caracteres, sin superposiciones y con formas fijas.",
+  "summary": "Contar las letras T, A y P de formas fijas que componen una imagen de caracteres sin superponerse. Si hay varias descomposiciones válidas, alcanza con una.",
   "difficulty": "Salto regional",
   "conceptual": "3/5 (estimación editorial)",
-  "implementation": "3/5 (estimación editorial)",
+  "implementation": "2/5 (estimación editorial)",
   "topics": [
     "Grillas",
-    "Reconocimiento de patrones",
-    "Observación"
+    "Strings",
+    "Greedy"
   ],
   "chunkIds": [
     "cpp-strings",
-    "cpp-matrices",
+    "cpp-vectores",
     "cpp-recorridos"
   ],
-  "coverage": "parcial",
-  "missingTools": [
-    "Algoritmo de descomposición y tratamiento de letras adyacentes; no se presupone correcto un reconocimiento local voraz."
-  ],
+  "coverage": "completa",
+  "missingTools": [],
   "hints": [],
-  "classificationConfidence": "Baja: valoración propia del enunciado. No se localizó una editorial oficial de esta edición; las técnicas avanzadas requieren contraste con una solución de referencia.",
-  "difficultyReason": "Lectura editorial del enunciado: salto regional. La banda no se calcula a partir de un umbral de AC.",
-  "approach": "Cobertura de operaciones de base. Requisito pendiente: Algoritmo de descomposición y tratamiento de letras adyacentes; no se presupone correcto un reconocimiento local voraz.",
+  "classificationConfidence": "Enfoque derivado del enunciado y contrastado con figuras válidas generadas.",
+  "difficultyReason": "Hay que hallar un orden de barrido que permita reconocer y borrar una letra incluso cuando hay otras pegadas.",
+  "approach": "Barrer la grilla desde el extremo derecho y reconocer cada forma con posiciones que distinguen su máscara.",
   "ac": 13,
   "total": 155,
   "judgeUrl": "https://codeforces.com/gym/105321/problem/K",

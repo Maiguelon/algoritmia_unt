@@ -10,20 +10,19 @@
   "topics": [
     "Juegos",
     "Sumas prefijas",
-    "Observación"
+    "Clasificación de enteros"
   ],
   "chunkIds": [
     "cpp-prefijos",
     "cpp-divisibilidad",
-    "cpp-frecuencias",
     "cpp-cuentas-enteras"
   ],
   "coverage": "completa",
   "missingTools": [],
   "hints": [],
-  "classificationConfidence": "Media: valoración propia del enunciado. No se localizó una editorial oficial de esta edición; las técnicas avanzadas requieren contraste con una solución de referencia.",
-  "difficultyReason": "Hay que reducir el juego óptimo antes de responder muchas consultas; la implementación del enfoque usa clasificación aritmética y prefijos.",
-  "approach": "Herramientas de un enfoque editorial de referencia; no incluye la observación ni la solución.",
+  "classificationConfidence": "Enfoque derivado del enunciado y contrastado contra juego óptimo con pases explícitos.",
+  "difficultyReason": "La observación de juego óptimo reduce cada consulta a contar y sumar unas pocas clases. Hay que manejar el valor que pueden elegir ambos jugadores.",
+  "approach": "Precalcular prefijos por clase y evaluar el resultado del juego con las cantidades y sumas de cada consulta.",
   "ac": 38,
   "total": 155,
   "judgeUrl": "https://codeforces.com/gym/105321/problem/L",

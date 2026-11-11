@@ -6,7 +6,7 @@
   "summary": "Reordenar una colección de valores evitando que dos vecinos sumen X, o determinar que no es posible.",
   "difficulty": "Salto regional",
   "conceptual": "3/5 (estimación editorial)",
-  "implementation": "3/5 (estimación editorial)",
+  "implementation": "2/5 (estimación editorial)",
   "topics": [
     "Construcción",
     "Frecuencias",
@@ -15,17 +15,14 @@
   "chunkIds": [
     "cpp-vectores",
     "cpp-ordenacion",
-    "cpp-frecuencias",
-    "cpp-pares"
+    "cpp-cuentas-enteras"
   ],
-  "coverage": "parcial",
-  "missingTools": [
-    "Construcción válida con valores repetidos y detección de imposibilidad; no se ha validado un enfoque completo."
-  ],
+  "coverage": "completa",
+  "missingTools": [],
   "hints": [],
-  "classificationConfidence": "Media: valoración propia del enunciado. No se localizó una editorial oficial de esta edición; las técnicas avanzadas requieren contraste con una solución de referencia.",
-  "difficultyReason": "Lectura editorial del enunciado: salto regional. La banda no se calcula a partir de un umbral de AC.",
-  "approach": "Cobertura de operaciones de base. Requisito pendiente: Construcción válida con valores repetidos y detección de imposibilidad; no se ha validado un enfoque completo.",
+  "classificationConfidence": "Construcción derivada del enunciado y contrastada contra permutaciones de multiconjuntos chicos.",
+  "difficultyReason": "Hay que construir un orden separando valores por su relación con la mitad de X y resolver los choques en la frontera, incluso con repetidos.",
+  "approach": "Separar valores en grupos, ordenar y construir una concatenación ajustando los casos de frontera.",
   "ac": 10,
   "total": 155,
   "judgeUrl": "https://codeforces.com/gym/105321/problem/J",

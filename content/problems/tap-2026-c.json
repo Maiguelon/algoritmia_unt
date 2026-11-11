@@ -9,7 +9,7 @@
     "DP"
   ],
   "difficulty": "Salto regional",
-  "difficultyReason": "Conceptual 3/5 e implementación 2/5, estimaciones editoriales. Fue resuelto por 30/186 equipos; ese dato empírico no determina por sí solo su dificultad conceptual.",
+  "difficultyReason": "Pasar o avanzar cambia el valor que queda disponible para el rival. La cota exige modelar el juego óptimo y acumular extremos de sufijo.",
   "implementation": "2/5 (estimación editorial)",
   "conceptual": "3/5 (estimación editorial)",
   "ac": 30,
@@ -23,13 +23,13 @@
   ],
   "coverage": "parcial",
   "missingTools": [
-    "Modelo de juego óptimo y recurrencia: no hay bloque de DP/minimax en la biblioteca."
+    "Minimax y DP de derecha a izquierda con extremos de sufijo"
   ],
   "hints": [],
   "status": "verificado",
-  "approach": "Selección editorial de herramientas de base. El enfoque completo está pendiente o requiere técnicas aún no incluidas en el apunte.",
+  "approach": "Resumir las opciones de avance de cada jugador mediante extremos de sufijo y evaluar los casos de pase.",
   "editorialUrl": null,
-  "classificationConfidence": "Media: lectura del enunciado y análisis editorial propio; sin editorial oficial localizada. Las bandas no son ratings oficiales.",
+  "classificationConfidence": "Enfoque derivado del enunciado y contrastado con minimax directo en 7380 instancias chicas.",
   "firstSolve": {
     "minute": 42,
     "teams": [

@@ -6,11 +6,11 @@
   "summary": "Contar secuencias de aportes de globos, con cotas por persona, tales que en cada incorporación se puedan repartir por igual todos los globos reunidos.",
   "topics": [
     "DP",
-    "Conteo",
-    "Aritmética"
+    "Sumas prefijas",
+    "Aritmética modular"
   ],
   "difficulty": "Salto regional",
-  "difficultyReason": "Estimación editorial: conceptual 3/5 e implementación 3/5. Candidato para el compañero de DP: exige comprimir el estado y evitar depender del enorme N.",
+  "difficultyReason": "Hay que usar el promedio como estado, acotar cuántos pasos pueden cambiarlo y acelerar las transiciones con sumas de rango.",
   "implementation": "3/5 (estimación editorial)",
   "conceptual": "3/5 (estimación editorial)",
   "ac": 20,
@@ -20,11 +20,12 @@
   "statementUrl": "/statements/regional-2025-b.pdf",
   "chunkIds": [
     "cpp-vectores",
+    "cpp-prefijos",
     "cpp-cuentas-enteras"
   ],
   "coverage": "parcial",
   "missingTools": [
-    "DP acotada y optimización de transiciones No desarrollado como técnica en la biblioteca básica."
+    "Programación dinámica con transiciones sobre un intervalo de estados"
   ],
   "hints": [
     "Cuidado con iterar hasta N.",
@@ -32,9 +33,9 @@
     "Revisá especialmente: límites y módulo en acumulados."
   ],
   "status": "verificado",
-  "approach": "Base de clasificación: inferencia del enunciado. Los bloques propuestos son una selección editorial de herramientas, no una solución ni un inventario de todos los enfoques. La técnica indicada como faltante necesita una ampliación de los apuntes; estos bloques no bastan para aprenderla.",
+  "approach": "Usar una DP por promedio entero, prefijos para sumar transiciones y una cota que acorta el proceso.",
   "editorialUrl": null,
-  "classificationConfidence": "Media: inferencia del enunciado y las cotas. El detalle de la optimización prevista no está confirmado por una editorial oficial.",
+  "classificationConfidence": "Enfoque derivado del enunciado y contrastado contra enumeración de secuencias chicas.",
   "firstSolve": {
     "minute": 32,
     "teams": [
