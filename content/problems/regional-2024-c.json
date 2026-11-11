@@ -8,32 +8,27 @@
     "Strings",
     "Estructuras de datos"
   ],
-  "difficulty": "Avanzado",
-  "difficultyReason": "Estimación editorial: conceptual 5/5 e implementación 5/5. Transformar la distancia de edición en consultas eficientes exige bastante derivación y cuidado de memoria.",
-  "implementation": "5/5 (estimación editorial)",
-  "conceptual": "5/5 (estimación editorial)",
+  "difficulty": "Top global",
+  "difficultyReason": "Distancia de edición bajo muchas consultas con restricciones exigentes.",
+  "implementation": "Sin valorar",
+  "conceptual": "Sin valorar",
   "ac": 0,
   "total": 187,
   "judgeUrl": "https://codeforces.com/gym/105505/problem/C",
   "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2024/contest.pdf#page=6",
   "statementUrl": "/statements/regional-2024-c.pdf",
-  "chunkIds": [
-    "cpp-strings",
-    "cpp-prefijos"
-  ],
-  "coverage": "parcial",
-  "missingTools": [
-    "Descomposición de costes y RMQ No desarrollado como técnica en la biblioteca básica."
-  ],
+  "chunkIds": [],
+  "coverage": "fuera de alcance",
+  "missingTools": [],
   "hints": [
     "Cuidado con aplicar DP cuadrática por consulta.",
     "Revisá especialmente: límites de intervalos.",
     "Revisá especialmente: memoria de múltiples estructuras."
   ],
   "status": "verificado",
-  "approach": "Base de clasificación: editorial oficial + enunciado. Los bloques propuestos son una selección editorial de herramientas, no una solución ni un inventario de todos los enfoques. La técnica indicada como faltante necesita una ampliación de los apuntes; estos bloques no bastan para aprenderla.",
+  "approach": "Ficha de referencia del torneo, fuera del recorrido actual de los apuntes.",
   "editorialUrl": "https://scorelatam.naquadah.com.br/latam-2024/icpcla24_solution_sketches.pdf",
-  "classificationConfidence": "Alta: editorial oficial. No es un ejercicio básico de distancia de edición.",
+  "classificationConfidence": "Banda editorial de alcance asignada en una revisión rápida.",
   "firstSolve": null,
   "statementPages": {
     "start": 6,

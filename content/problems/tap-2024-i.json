@@ -4,8 +4,8 @@
   "letter": "I",
   "title": "Innovations in Robotics",
   "summary": "Construir un recorrido de un robot que gire exactamente una vez en cada casilla seca, con desplazamientos rectos entre giros.",
-  "difficulty": "Avanzado",
-  "conceptual": "4/5 (estimación editorial)",
+  "difficulty": "Salto regional",
+  "conceptual": "3/5 (estimación editorial)",
   "implementation": "3/5 (estimación editorial)",
   "topics": [
     "Grafos",
@@ -15,16 +15,17 @@
   "chunkIds": [
     "cpp-matrices",
     "cpp-vectores",
-    "cpp-pares"
+    "cpp-pares",
+    "cpp-pila"
   ],
   "coverage": "parcial",
   "missingTools": [
-    "Reducción a grafo y construcción de un recorrido euleriano con control de conectividad y extremos."
+    "Grafo bipartito por filas y columnas y recorrido euleriano con Hierholzer"
   ],
   "hints": [],
-  "classificationConfidence": "Media: valoración propia del enunciado. No se localizó una editorial oficial de esta edición; las técnicas avanzadas requieren contraste con una solución de referencia.",
-  "difficultyReason": "Lectura editorial del enunciado: avanzado. La banda no se calcula a partir de un umbral de AC.",
-  "approach": "Cobertura de operaciones de base. Requisito pendiente: Reducción a grafo y construcción de un recorrido euleriano con control de conectividad y extremos.",
+  "classificationConfidence": "Enfoque derivado del enunciado y contrastado contra enumeración de órdenes de giros en 511 grillas de 3×3.",
+  "difficultyReason": "La reducción convierte las casillas secas en aristas entre filas y columnas. Una vez identificado el modelo, alcanza un recorrido euleriano estándar con reconstrucción.",
+  "approach": "Construir el grafo bipartito de las casillas secas, comprobar los grados y obtener un recorrido euleriano con identificadores de arista.",
   "ac": 1,
   "total": 155,
   "judgeUrl": "https://codeforces.com/gym/105321/problem/I",

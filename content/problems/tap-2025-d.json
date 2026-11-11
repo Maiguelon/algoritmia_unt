@@ -4,12 +4,13 @@
   "letter": "D",
   "title": "Day of rain",
   "summary": "Encontrar un palo de triunfo compatible con las rondas anotadas de un juego de cartas y con el número de victorias de cada jugador.",
-  "difficulty": "Avanzado",
-  "conceptual": "4/5 (estimación editorial)",
-  "implementation": "4/5 (estimación editorial)",
+  "difficulty": "Salto regional",
+  "conceptual": "3/5 (estimación editorial)",
+  "implementation": "3/5 (estimación editorial)",
   "topics": [
     "Simulación",
-    "Procesamiento por categorías"
+    "Sumas prefijas",
+    "Agrupación por palo"
   ],
   "chunkIds": [
     "cpp-strings",
@@ -17,14 +18,12 @@
     "cpp-vectores",
     "cpp-prefijos"
   ],
-  "coverage": "parcial",
-  "missingTools": [
-    "Algoritmo eficiente para evaluar los palos candidatos y el efecto de las rondas encadenadas; enfoque completo pendiente."
-  ],
+  "coverage": "completa",
+  "missingTools": [],
   "hints": [],
-  "classificationConfidence": "Baja: valoración propia del enunciado. No se localizó una editorial oficial de esta edición; las técnicas avanzadas requieren contraste con una solución de referencia.",
-  "difficultyReason": "Lectura editorial del enunciado: avanzado. La banda no se calcula a partir de un umbral de AC.",
-  "approach": "Cobertura de operaciones de base. Requisito pendiente: Algoritmo eficiente para evaluar los palos candidatos y el efecto de las rondas encadenadas; enfoque completo pendiente.",
+  "classificationConfidence": "Enfoque derivado del enunciado y contrastado en 4200 secuencias chicas contra la simulación por cada palo.",
+  "difficultyReason": "El salto es separar las rondas que fijan al ganador de las que lo heredan. Eso permite acumular cuánto cambia el resultado para cada palo sin repetir todo el juego.",
+  "approach": "Simular el caso base y acumular con prefijos el efecto de cada triunfo hasta la siguiente ronda que fija un ganador.",
   "ac": 2,
   "total": 183,
   "judgeUrl": "https://codeforces.com/gym/106054/problem/D",

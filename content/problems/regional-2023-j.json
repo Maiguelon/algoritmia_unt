@@ -8,32 +8,27 @@
     "Árboles",
     "Estructuras de datos"
   ],
-  "difficulty": "Avanzado",
-  "difficultyReason": "Estimación editorial: conceptual 5/5 e implementación 4/5. Recorridos básicos no alcanzan; necesita una organización avanzada de consultas de distancia.",
-  "implementation": "4/5 (estimación editorial)",
-  "conceptual": "5/5 (estimación editorial)",
+  "difficulty": "Top global",
+  "difficultyReason": "Consultas de distancia en árboles con una estructura especializada.",
+  "implementation": "Sin valorar",
+  "conceptual": "Sin valorar",
   "ac": 3,
   "total": 152,
   "judgeUrl": "https://codeforces.com/gym/104736/problem/J",
   "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2023/contest.pdf#page=23",
   "statementUrl": "/statements/regional-2023-j.pdf",
-  "chunkIds": [
-    "cpp-vectores",
-    "cpp-pares"
-  ],
-  "coverage": "parcial",
-  "missingTools": [
-    "Descomposición de centroides; alternativa por bloques No desarrollado como técnica en la biblioteca básica."
-  ],
+  "chunkIds": [],
+  "coverage": "fuera de alcance",
+  "missingTools": [],
   "hints": [
     "Revisá especialmente: desempates por identificador.",
     "Cuidado con consultar vértices no elegibles.",
     "Revisá especialmente: complejidad de repetir recorridos."
   ],
   "status": "verificado",
-  "approach": "Base de clasificación: editorial oficial + enunciado. Los bloques propuestos son una selección editorial de herramientas, no una solución ni un inventario de todos los enfoques. La técnica indicada como faltante necesita una ampliación de los apuntes; estos bloques no bastan para aprenderla.",
+  "approach": "Ficha de referencia del torneo, fuera del recorrido actual de los apuntes.",
   "editorialUrl": "https://scorelatam.naquadah.com.br/latam-2023/editorial.pdf",
-  "classificationConfidence": "Alta sobre las alternativas: editorial oficial. Las trampas son riesgos estimados, no un registro de errores de equipos.",
+  "classificationConfidence": "Banda editorial de alcance asignada en una revisión rápida.",
   "firstSolve": {
     "minute": 119,
     "teams": [

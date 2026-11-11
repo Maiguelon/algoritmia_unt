@@ -160,7 +160,7 @@ test('en celular las descargas están en un menú, funciona con teclado y no des
 });
 
 test('cobertura parcial y Top global no prometen un apunte completo', async ({ page }) => {
-  await select(page, ['tap-2026-c', 'regional-2026-k']);
+  await select(page, ['tap-2026-c', 'regional-2024-c']);
   const chosen = page.getByRole('region', { name: 'Problemas seleccionados' });
   await expect(chosen).toContainText('Cobertura parcial.');
   await expect(chosen).toContainText('Faltan: Minimax y DP de derecha a izquierda con extremos de sufijo.');

@@ -37,10 +37,11 @@ describe('contratos del contenido editorial', () => {
 
   it('mantiene Top global fuera de las sugerencias de apuntes', () => {
     const list = copyProblems();
-    list[0].difficulty = 'Top global';
+    const problem = list.find(p => p.id === 'regional-2023-a')!;
+    expect(problem.difficulty).toBe('Top global');
+    problem.chunkIds = ['cpp-vectores'];
     expect(() => validateDataset(list, tournaments)).toThrow(/fuera de alcance con apuntes/);
-    list[0].coverage = 'fuera de alcance';
-    list[0].chunkIds = [];
+    problem.chunkIds = [];
     expect(() => validateDataset(list, tournaments)).not.toThrow();
   });
 

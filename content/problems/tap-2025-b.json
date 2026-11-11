@@ -4,9 +4,9 @@
   "letter": "B",
   "title": "Block sum array",
   "summary": "Contar los arreglos de enteros no negativos compatibles con una lista de sumas de ventanas de tamaño fijo, módulo 998244353.",
-  "difficulty": "Avanzado",
-  "conceptual": "4/5 (estimación editorial)",
-  "implementation": "3/5 (estimación editorial)",
+  "difficulty": "Salto regional",
+  "conceptual": "3/5 (estimación editorial)",
+  "implementation": "2/5 (estimación editorial)",
   "topics": [
     "Conteo",
     "Combinatoria modular",
@@ -18,12 +18,12 @@
   ],
   "coverage": "parcial",
   "missingTools": [
-    "Reducción del sistema de sumas y combinatoria modular eficiente; faltan inversos y combinaciones."
+    "Combinaciones módulo primo con numerador grande y segundo argumento chico"
   ],
   "hints": [],
-  "classificationConfidence": "Media: valoración propia del enunciado. No se localizó una editorial oficial de esta edición; las técnicas avanzadas requieren contraste con una solución de referencia.",
-  "difficultyReason": "Combina restricciones entre ventanas con conteo modular para N de hasta 200000; no alcanza con calcular sumas prefijas.",
-  "approach": "Cobertura de operaciones de base. Requisito pendiente: Reducción del sistema de sumas y combinatoria modular eficiente; faltan inversos y combinaciones.",
+  "classificationConfidence": "Enfoque derivado del enunciado y contrastado contra enumeración de arreglos en 1750 instancias chicas.",
+  "difficultyReason": "Restar ventanas consecutivas determina las diferencias dentro de cada clase de índices. Después de aplicar las cotas de no negatividad queda un conteo de repartos.",
+  "approach": "Acumular diferencias y mínimos por clase de índices. Contar con un coeficiente binomial las asignaciones restantes de la primera ventana.",
   "ac": 6,
   "total": 183,
   "judgeUrl": "https://codeforces.com/gym/106054/problem/B",

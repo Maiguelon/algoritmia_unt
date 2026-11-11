@@ -8,33 +8,27 @@
     "Estructuras de datos",
     "Geometría"
   ],
-  "difficulty": "Avanzado",
-  "difficultyReason": "Estimación editorial: conceptual 5/5 e implementación 5/5. Combina una prueba de orden con una estructura especializada; queda lejos de la implementación básica de consultas.",
-  "implementation": "5/5 (estimación editorial)",
-  "conceptual": "5/5 (estimación editorial)",
+  "difficulty": "Top global",
+  "difficultyReason": "Consultas en línea con una estructura de optimización especializada.",
+  "implementation": "Sin valorar",
+  "conceptual": "Sin valorar",
   "ac": 1,
   "total": 152,
   "judgeUrl": "https://codeforces.com/gym/104736/problem/A",
   "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2023/contest.pdf#page=3",
   "statementUrl": "/statements/regional-2023-a.pdf",
-  "chunkIds": [
-    "cpp-vectores",
-    "cpp-pares",
-    "cpp-reales"
-  ],
-  "coverage": "parcial",
-  "missingTools": [
-    "Li Chao generalizado; alternativa por bloques No desarrollado como técnica en la biblioteca básica."
-  ],
+  "chunkIds": [],
+  "coverage": "fuera de alcance",
+  "missingTools": [],
   "hints": [
     "Revisá especialmente: productos grandes.",
     "Revisá especialmente: regiones de valor cero.",
     "Revisá especialmente: inserciones y consultas en orden."
   ],
   "status": "verificado",
-  "approach": "Base de clasificación: editorial oficial + enunciado. Los bloques propuestos son una selección editorial de herramientas, no una solución ni un inventario de todos los enfoques. La técnica indicada como faltante necesita una ampliación de los apuntes; estos bloques no bastan para aprenderla.",
+  "approach": "Ficha de referencia del torneo, fuera del recorrido actual de los apuntes.",
   "editorialUrl": "https://scorelatam.naquadah.com.br/latam-2023/editorial.pdf",
-  "classificationConfidence": "Alta sobre la técnica: editorial oficial. Los puntajes y la adecuación al equipo son estimaciones.",
+  "classificationConfidence": "Banda editorial de alcance asignada en una revisión rápida.",
   "firstSolve": {
     "minute": 292,
     "teams": [

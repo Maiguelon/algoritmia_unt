@@ -9,30 +9,23 @@
     "Barrido",
     "LCA"
   ],
-  "difficulty": "Avanzado",
-  "difficultyReason": "Valoración editorial del enunciado: conceptual 4/5 e implementación 5/5. Técnica y banda provisionales hasta contrastar una solución completa.",
-  "implementation": "5/5 (provisional)",
-  "conceptual": "4/5 (provisional)",
+  "difficulty": "Top global",
+  "difficultyReason": "Localización geométrica con consultas de contención y alta carga de implementación.",
+  "implementation": "Sin valorar",
+  "conceptual": "Sin valorar",
   "ac": 2,
   "total": 214,
   "judgeUrl": null,
   "sourceUrl": "https://scorelatam.naquadah.com.br/latam-2026/statements/I.html",
   "statementUrl": "/statements/regional-2026-i.pdf",
-  "chunkIds": [
-    "cpp-ordenacion",
-    "cpp-pares",
-    "cpp-vectores",
-    "cpp-cuentas-enteras"
-  ],
-  "coverage": "parcial",
-  "missingTools": [
-    "Localización de puntos, jerarquía de rectángulos y consultas sobre el árbol de contención."
-  ],
+  "chunkIds": [],
+  "coverage": "fuera de alcance",
+  "missingTools": [],
   "hints": [],
   "status": "verificado",
-  "approach": "Geometría de rectángulos anidados, localización de puntos y ancestros comunes; implementación por contrastar.",
+  "approach": "Ficha de referencia del torneo, fuera del recorrido actual de los apuntes.",
   "editorialUrl": null,
-  "classificationConfidence": "Baja/Media: lectura del enunciado y análisis editorial propio; sin editorial oficial localizada para contrastar una solución completa.",
+  "classificationConfidence": "Banda editorial de alcance asignada en una revisión rápida.",
   "firstSolve": {
     "minute": 192,
     "teams": [

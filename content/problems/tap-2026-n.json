@@ -5,13 +5,14 @@
   "title": "Number of Strings",
   "summary": "Contar palabras de largo dado que contienen exactamente cierta cantidad de subpalabras palíndromas de tres caracteres, sobre un alfabeto acotado.",
   "topics": [
-    "Combinatoria",
-    "Conteo"
+    "Combinatoria modular",
+    "Conteo",
+    "Palíndromos"
   ],
-  "difficulty": "Avanzado",
-  "difficultyReason": "Clasificación editorial provisional por revisar con solución de referencia. Fue resuelto por 11/186 equipos; ese dato empírico no determina por sí solo su dificultad conceptual.",
-  "implementation": "Pendiente de revisión conceptual",
-  "conceptual": "Pendiente de revisión conceptual",
+  "difficulty": "Salto regional",
+  "difficultyReason": "La condición de palíndromo conecta posiciones a distancia dos. Separar los índices por paridad deja un conteo de elecciones con combinaciones y potencias.",
+  "implementation": "2/5 (estimación editorial)",
+  "conceptual": "3/5 (estimación editorial)",
   "ac": 11,
   "total": 186,
   "judgeUrl": "https://codeforces.com/gym/106682/problem/N",
@@ -23,13 +24,13 @@
   ],
   "coverage": "parcial",
   "missingTools": [
-    "Conteo combinatorio eficiente; solución pendiente de contrastar."
+    "Combinaciones y exponenciación módulo primo"
   ],
   "hints": [],
   "status": "verificado",
-  "approach": "Selección editorial de herramientas de base. El enfoque completo está pendiente o requiere técnicas aún no incluidas en el apunte.",
+  "approach": "Separar las cadenas de índices pares e impares y contar qué comparaciones coinciden usando un binomial y potencias modulares.",
   "editorialUrl": null,
-  "classificationConfidence": "Baja sobre la técnica y la banda conceptual: se cuenta con enunciado y AC oficiales, pero falta contrastar una solución de referencia.",
+  "classificationConfidence": "Enfoque derivado del enunciado y contrastado por enumeración para 87 combinaciones chicas de longitud, alfabeto y cantidad de coincidencias.",
   "firstSolve": {
     "minute": 42,
     "teams": [

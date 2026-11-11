@@ -4,28 +4,21 @@
   "letter": "M",
   "title": "Balloon Market",
   "summary": "Maximizar la ganancia de vender globos durante un itinerario, considerando capacidad y aranceles por excedente en cada escala.",
-  "difficulty": "Avanzado",
-  "conceptual": "5/5 (estimación editorial)",
-  "implementation": "4/5 (estimación editorial)",
+  "difficulty": "Top global",
+  "conceptual": "Sin valorar",
+  "implementation": "Sin valorar",
   "topics": [
     "Optimización",
     "Costos por tramos",
     "Greedy"
   ],
-  "chunkIds": [
-    "cpp-vectores",
-    "cpp-pares",
-    "cpp-ordenacion",
-    "cpp-cuentas-enteras"
-  ],
-  "coverage": "parcial",
-  "missingTools": [
-    "Modelo de optimización y estructura eficiente para costos por tramos; enfoque completo pendiente de validar."
-  ],
+  "chunkIds": [],
+  "coverage": "fuera de alcance",
+  "missingTools": [],
   "hints": [],
-  "classificationConfidence": "Baja: valoración propia del enunciado. No se localizó una editorial oficial de esta edición; las técnicas avanzadas requieren contraste con una solución de referencia.",
-  "difficultyReason": "Capacidad de hasta 10^9 y hasta 200000 escalas exigen optimizar por tramos. Se conserva Avanzado provisional; sus cero AC no bastan para otra banda.",
-  "approach": "Cobertura de operaciones de base. Requisito pendiente: Modelo de optimización y estructura eficiente para costos por tramos; enfoque completo pendiente de validar.",
+  "classificationConfidence": "Banda editorial de alcance asignada en una revisión rápida.",
+  "difficultyReason": "Optimización de costos por tramos con capacidad y cantidad de escalas grandes.",
+  "approach": "Ficha de referencia del torneo, fuera del recorrido actual de los apuntes.",
   "ac": 0,
   "total": 155,
   "judgeUrl": "https://codeforces.com/gym/105321/problem/M",

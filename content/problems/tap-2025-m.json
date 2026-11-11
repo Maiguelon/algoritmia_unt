@@ -4,8 +4,8 @@
   "letter": "M",
   "title": "March and Conquer",
   "summary": "Contar los viajes que usan el mínimo número de días en un grafo, permitiendo hasta K aristas por día y repeticiones de ciudades.",
-  "difficulty": "Avanzado",
-  "conceptual": "4/5 (estimación editorial)",
+  "difficulty": "Salto regional",
+  "conceptual": "3/5 (estimación editorial)",
   "implementation": "3/5 (estimación editorial)",
   "topics": [
     "Grafos",
@@ -14,16 +14,18 @@
   ],
   "chunkIds": [
     "cpp-vectores",
+    "cpp-cola",
     "cpp-cuentas-enteras"
   ],
   "coverage": "parcial",
   "missingTools": [
-    "BFS, conteo de caminatas y distribución de pasos en días con aritmética modular; faltan los módulos correspondientes."
+    "Listas de adyacencia, BFS y DP de caminatas por longitud",
+    "Conteo de repartos y combinaciones módulo primo"
   ],
   "hints": [],
-  "classificationConfidence": "Media: valoración propia del enunciado. No se localizó una editorial oficial de esta edición; las técnicas avanzadas requieren contraste con una solución de referencia.",
-  "difficultyReason": "Lectura editorial del enunciado: avanzado. La banda no se calcula a partir de un umbral de AC.",
-  "approach": "Cobertura de operaciones de base. Requisito pendiente: BFS, conteo de caminatas y distribución de pasos en días con aritmética modular; faltan los módulos correspondientes.",
+  "classificationConfidence": "Enfoque derivado del enunciado y contrastado en 2500 grafos chicos contra simulación por días.",
+  "difficultyReason": "BFS fija la cantidad mínima de días. Esa cota deja una holgura chica para repartir los pasos y permite separar el conteo de caminatas de sus cortes en días.",
+  "approach": "Calcular la distancia con BFS, contar caminatas de cada longitud relevante con DP y combinar con la cantidad de particiones en días.",
   "ac": 5,
   "total": 183,
   "judgeUrl": "https://codeforces.com/gym/106054/problem/M",
