@@ -25,7 +25,7 @@ test('primer problema: recorrido, ayudas optativas, copia y siguiente práctica'
   await page.getByRole('button',{name:'＋ Seleccionar problema',exact:true}).click();
   await expect(page.getByRole('button',{name:'✓ En tu selección',exact:true})).toBeVisible();
   await page.getByRole('link',{name:'Ver mi selección y apunte',exact:false}).click();
-  await expect(page.getByTestId('notes-content-count')).toHaveText('3');
+  await expect(page.getByTestId('notes-content-count')).toHaveText('5');
   await expect(page.getByRole('radio',{name:'Recomendado',exact:true})).toBeChecked();
   await expect(page.getByRole('region',{name:'Descarga al final del apunte'})).toHaveCount(0);
   await page.goto('/empeza/#proba');

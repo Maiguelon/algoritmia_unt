@@ -7,9 +7,9 @@ import {
 const chunks = ['cpp-plantilla', 'cpp-set', 'cpp-find', 'cpp-map'].map(id => ({ id }));
 const off = { descripcion: false, operaciones: false, ejemplos: false };
 const problems = [
-  { chunkIds: ['cpp-set', 'cpp-find'], coverage: 'completa' as const },
-  { chunkIds: ['cpp-set'], coverage: 'parcial' as const },
-  { chunkIds: ['cpp-map'], coverage: 'fuera de alcance' as const },
+  { chunkIds: ['cpp-set', 'cpp-find'], coverage: 'completa' as const, difficulty:'Consolidación' as const },
+  { chunkIds: ['cpp-set'], coverage: 'parcial' as const, difficulty:'Consolidación' as const },
+  { chunkIds: ['cpp-map'], coverage: 'fuera de alcance' as const, difficulty:'Top global' as const },
 ];
 
 describe('modos del apunte', () => {
@@ -25,7 +25,7 @@ describe('modos del apunte', () => {
     expect(presetSelection('completo', recommendedChunkIds(problems), chunks)).not.toHaveProperty('cpp-map');
     expect(presetSelection('completo', ['cpp-antiguo', 'cpp-set', 'cpp-set', 'cpp-plantilla'], chunks)).toEqual({
       'cpp-set': { descripcion: true, operaciones: true, ejemplos: true },
-      'cpp-plantilla': { descripcion: true, operaciones: true, ejemplos: false },
+      'cpp-plantilla': { descripcion: true, operaciones: true, ejemplos: true },
     });
   });
 

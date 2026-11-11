@@ -44,6 +44,7 @@ test('una herramienta respeta partes y desmarcados al recargar', async ({ page }
   await expect(block(page, 'Set').getByRole('checkbox', { name: 'Descripción', exact: true })).toBeChecked();
   await expect(block(page, 'Set').getByRole('checkbox', { name: 'Funciones y operaciones', exact: true })).not.toBeChecked();
   await page.getByRole('checkbox', { name: 'Set', exact: true }).uncheck();
+  await page.getByRole('checkbox', {name:'Incluir plantilla de C++17'}).uncheck();
   await expect(page.getByTestId('notes-content-count')).toHaveText('0');
   await page.reload();
   await expect(page.getByTestId('notes-content-count')).toHaveText('0');

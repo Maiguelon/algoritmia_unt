@@ -2,6 +2,7 @@ import {useMemo,useState} from 'react';
 import type {Problem,Tournament} from '../lib/types';
 import {useSelection} from '../lib/selection';
 import {tournamentLabel} from '../lib/tournament-label';
+import {recommendedChunkIds,supportsAutomaticNotes} from '../lib/notes-presets';
 export default function StatementDownload({problems,tournaments,includedChunkIds=[]}:{problems:Problem[];tournaments:Tournament[];includedChunkIds?:string[]}){
   const allowed=useMemo(()=>problems.map(problem=>problem.id),[problems]);
   const {selected,remove,clear,ready}=useSelection(allowed);
@@ -14,11 +15,11 @@ export default function StatementDownload({problems,tournaments,includedChunkIds
     {!ready?<p role="status">Recuperando tus problemas…</p>:chosen.length?<>
       <ol className="material-problem-list">{chosen.map(p=>{
         const tournament=tournaments.find(t=>t.id===p.tournamentId);
-        const tools=p.chunkIds.filter(id=>id!=='cpp-plantilla');
+        const tools=recommendedChunkIds([p]).filter(id=>id!=='cpp-plantilla');
         const included=tools.filter(id=>includedChunkIds.includes(id)).length;
         return <li key={p.id}>
           <div className="material-problem-body"><small className="muted">{tournament?tournamentLabel(tournament):''}</small><a className="material-problem-title" href={`/problemas/${p.id}/`}>{p.letter} · {p.title}</a>
-            {p.coverage==='fuera de alcance'?<p className="builder-coverage">Top global · Fuera del alcance actual de los apuntes.</p>:<>
+            {p.coverage==='fuera de alcance'?<p className="builder-coverage">Top global · Fuera del alcance actual de los apuntes.</p>:!supportsAutomaticNotes(p)?<p className="builder-coverage">Apunte automático pendiente para {p.difficulty}. Podés descargar el enunciado.</p>:<>
               <p className="material-tool-count">{included}/{tools.length} herramientas sugeridas incluidas.</p>
               {p.coverage!=='completa'&&<p className="builder-coverage">Cobertura {p.coverage}.{p.missingTools.length>0&&` Faltan: ${p.missingTools.join(', ')}.`}</p>}
             </>}

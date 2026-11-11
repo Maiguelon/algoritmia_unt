@@ -1,5 +1,6 @@
 import type { Chunk } from './chunks';
 import type { Problem } from './types';
+import catalog from '../../content/apuntes/cpp/catalogo.json';
 import {
   TEMPLATE_ID, parseStoredSelection, sanitizeSelection,
   type Selection,
@@ -16,30 +17,53 @@ export interface NotesPreferences {
   custom: Selection | null;
 }
 
-export function recommendedChunkIds(problems: Pick<Problem, 'chunkIds' | 'coverage'>[]): string[] {
-  return [...new Set(problems.filter(problem => problem.coverage !== 'fuera de alcance').flatMap(problem => problem.chunkIds))];
+export const NOTES_LEVELS = ['Inicial', 'Consolidación', 'Salto regional'] as const;
+export type NotesLevel = (typeof NOTES_LEVELS)[number];
+type NotesProblem = Pick<Problem, 'chunkIds' | 'coverage' | 'difficulty'>;
+export const BASIC_CHUNK_IDS = ['cpp-variables', 'cpp-entrada-salida', 'cpp-condiciones', 'cpp-recorridos', 'cpp-cuentas-enteras'];
+const containerIds = new Set(catalog.groups.find(group => group.id === 'contenedores')!.chunks);
+
+export function supportsAutomaticNotes(problem: Pick<Problem, 'coverage' | 'difficulty'>): boolean {
+  return problem.coverage !== 'fuera de alcance' && NOTES_LEVELS.some(level => level === problem.difficulty);
 }
 
-export function presetSelection(mode: AutomaticMode, ids: string[], chunks: Pick<Chunk, 'id'>[]): Selection {
+export function notesLevel(problems: NotesProblem[]): NotesLevel | null {
+  return NOTES_LEVELS.find(level => problems.some(problem => supportsAutomaticNotes(problem) && problem.difficulty === level)) ?? null;
+}
+
+export function recommendedChunkIds(problems: NotesProblem[]): string[] {
+  const level = notesLevel(problems);
+  if (!level) return [];
+  const ids = [...new Set(problems.filter(supportsAutomaticNotes).flatMap(problem => problem.chunkIds))];
+  return level === 'Inicial'
+    ? [...new Set([...BASIC_CHUNK_IDS, ...ids])]
+    : ids.filter(id => !BASIC_CHUNK_IDS.includes(id));
+}
+
+/** Undefined level preserves free-builder defaults; null means unsupported selected problems. */
+export function presetSelection(mode: AutomaticMode, ids: string[], chunks: Pick<Chunk, 'id'>[], level?: NotesLevel | null): Selection {
   const allowed = new Set(chunks.map(chunk => chunk.id));
+  const off = { descripcion:false, operaciones:false, ejemplos:false };
+  if (level === null) return { [TEMPLATE_ID]:off };
   const selection: Selection = {};
   for (const id of ids) {
     if (id === TEMPLATE_ID || !allowed.has(id)) continue;
+    const referenceOnly = mode === 'funciones' || (mode === 'recomendado' && level === 'Salto regional' && containerIds.has(id));
     selection[id] = {
-      descripcion: mode !== 'funciones',
+      descripcion: !referenceOnly,
       operaciones: true,
-      ejemplos: mode === 'completo',
+      ejemplos: mode === 'completo' || (mode === 'recomendado' && level !== undefined && !referenceOnly),
     };
   }
-  // The template code is always included by the PDF renderer, once and first.
-  if (mode === 'completo') selection[TEMPLATE_ID] = { descripcion: true, operaciones: true, ejemplos: false };
+  const explainTemplate = mode === 'completo' || (mode === 'recomendado' && level === 'Inicial');
+  selection[TEMPLATE_ID] = level === 'Salto regional' ? off : { descripcion:explainTemplate, operaciones:explainTemplate, ejemplos:true };
   return selection;
 }
 
-export function activeNotesSelection(preferences: NotesPreferences, ids: string[], chunks: Pick<Chunk, 'id'>[]): Selection {
+export function activeNotesSelection(preferences: NotesPreferences, ids: string[], chunks: Pick<Chunk, 'id'>[], level?: NotesLevel | null): Selection {
   return preferences.mode === 'personalizado'
     ? preferences.custom ?? {}
-    : presetSelection(preferences.mode, ids, chunks);
+    : presetSelection(preferences.mode, ids, chunks, level);
 }
 
 export function switchNotesMode(preferences: NotesPreferences, mode: NotesMode, current: Selection): NotesPreferences {

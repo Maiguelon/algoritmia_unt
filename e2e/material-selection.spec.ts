@@ -28,7 +28,7 @@ test('entra con las recomendaciones actuales, muestra el resumen arriba y descar
   await other.goto('/problemas/tap-2026-k/');
   await other.getByRole('button', {name:'＋ Seleccionar problema'}).click();
   await expect(page.getByRole('radio', {name:'Recomendado',exact:true})).toBeChecked();
-  await expect(page.getByTestId('notes-content-count')).toHaveText('6');
+  await expect(page.getByTestId('notes-content-count')).toHaveText('9');
   await expect(page.getByRole('region', {name:'Descarga al final del apunte'})).toHaveCount(0);
   await page.getByRole('radio', {name:'Personalizado',exact:true}).check();
   const bottom = page.getByRole('region', {name:'Descarga al final del apunte'});
@@ -52,11 +52,11 @@ test('entra con las recomendaciones actuales, muestra el resumen arriba y descar
 test('los modos automáticos reúnen herramientas y se actualizan al quitar problemas o cambiar de pestaña', async ({ page, context }) => {
   await select(page, ['tap-2026-b', 'tap-2026-k']);
   await expect(page.getByRole('radio', { name: 'Recomendado', exact: true })).toBeChecked();
-  await expect(page.getByTestId('notes-content-count')).toHaveText('6');
+  await expect(page.getByTestId('notes-content-count')).toHaveText('9');
   await expect(page.getByRole('region', { name: 'Herramientas incluidas' }).getByRole('link', { name: 'Strings ↗', exact: true })).toHaveCount(1);
   await page.getByRole('radio', { name: 'Completo', exact: true }).check();
   await expect(page.getByRole('region', {name:'Descarga al final del apunte'})).toHaveCount(0);
-  await expect(page.getByTestId('notes-content-count')).toHaveText('6');
+  await expect(page.getByTestId('notes-content-count')).toHaveText('9');
   await page.getByRole('link', { name: 'Revisar vista previa ↓', exact: true }).click();
   await expect(page.locator('#preview-cpp-strings').getByRole('heading', { name: 'Ejemplos', exact: true })).toHaveCount(1);
   await page.getByRole('button', { name: 'Quitar Kilograms Exceeded', exact: true }).click();
@@ -67,10 +67,10 @@ test('los modos automáticos reúnen herramientas y se actualizan al quitar prob
   const other = await context.newPage();
   await other.goto('/problemas/tap-2026-k/');
   await other.getByRole('button', { name: '＋ Seleccionar problema' }).click();
-  await expect(page.getByTestId('notes-content-count')).toHaveText('6');
+  await expect(page.getByTestId('notes-content-count')).toHaveText('9');
   await page.reload();
   await expect(page.getByRole('radio', { name: 'Recomendado', exact: true })).toBeChecked();
-  await expect(page.getByTestId('notes-content-count')).toHaveText('6');
+  await expect(page.getByTestId('notes-content-count')).toHaveText('9');
   await page.getByRole('radio', { name: 'Recomendado', exact: true }).check();
   await page.screenshot({ path: 'test-results-material/seleccion-desktop.png', fullPage: true });
 });
@@ -153,7 +153,7 @@ test('en celular las descargas están en un menú, funciona con teclado y no des
   await expect(menu).not.toHaveAttribute('open', '');
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);
   await cart.getByRole('link', { name: 'Ver selección →' }).click();
-  await expect(page.getByTestId('notes-content-count')).toHaveText('3');
+  await expect(page.getByTestId('notes-content-count')).toHaveText('7');
   await page.screenshot({ path: 'test-results-material/seleccion-mobile.png', fullPage: true });
   await page.setViewportSize({ width: 320, height: 740 });
   expect(await page.evaluate(() => document.documentElement.scrollWidth <= innerWidth)).toBe(true);

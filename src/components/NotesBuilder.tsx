@@ -6,19 +6,19 @@ import { useSelection, SELECTION_KEY } from '../lib/selection';
 import { readSelected } from '../lib/catalog';
 import {
   activeNotesSelection, LEGACY_NOTES_CONFIG_KEY, NOTES_CONFIG_KEY,
-  recommendedChunkIds, restoreNotesPreferences, serializeNotesPreferences, switchNotesMode,
+  notesLevel, recommendedChunkIds, restoreNotesPreferences, serializeNotesPreferences, switchNotesMode,
   type NotesMode, type NotesPreferences,
 } from '../lib/notes-presets';
 import {
   TEMPLATE_ID, SECTION_KEYS, SECTION_LABELS, addSuggestedSelection, defaultSections,
-  hasAnySection, hasIndex, selectedContentChunks,
+  hasAnySection, hasIndex, includesTemplate, selectedContentChunks,
   suggestedPrerequisites,
   type SectionKey, type Selection,
 } from '../lib/composition';
 
 const OFF = { descripcion: false, operaciones: false, ejemplos: false };
 const MODES: Array<{ id: NotesMode; title: string; description: string }> = [
-  { id: 'recomendado', title: 'Recomendado', description: 'Descripción y funciones.' },
+  { id: 'recomendado', title: 'Recomendado', description: 'Según el nivel de tus problemas.' },
   { id: 'completo', title: 'Completo', description: 'Descripción, funciones y ejemplos.' },
   { id: 'funciones', title: 'Solo funciones', description: 'Funciones y operaciones.' },
   { id: 'personalizado', title: 'Personalizado', description: 'Elegí los bloques y sus partes.' },
@@ -49,7 +49,8 @@ export default function NotesBuilder({ chunks, problems, tournaments }: { chunks
     const url = new URL(window.location.href);
     const incoming = url.searchParams.getAll('chunk');
     if (incoming.length) {
-      const initial = restored.custom ?? activeNotesSelection(restored, recommendedChunkIds(problems.filter(problem => ids.includes(problem.id))), chunks);
+      const chosen = problems.filter(problem => ids.includes(problem.id));
+      const initial = restored.custom ?? activeNotesSelection(restored, recommendedChunkIds(chosen), chunks, chosen.length ? notesLevel(chosen) : undefined);
       restored = { mode: 'personalizado', custom: addSuggestedSelection(initial, incoming, chunks) };
       // Consume the explicit action so a later reload respects removals.
       url.searchParams.delete('chunk');
@@ -88,7 +89,17 @@ export default function NotesBuilder({ chunks, problems, tournaments }: { chunks
 
   const selectedProblems = useMemo(() => problems.filter((problem) => problemIds.includes(problem.id)), [problems, problemIds]);
   const recommendedIds = recommendedChunkIds(selectedProblems);
-  const selection = activeNotesSelection(preferences, recommendedIds, chunks);
+  const level = selectedProblems.length ? notesLevel(selectedProblems) : undefined;
+  const selection = activeNotesSelection(preferences, recommendedIds, chunks, level);
+  const withTemplate = includesTemplate(selection);
+  const hasTemplateContent = withTemplate && hasAnySection(selection[TEMPLATE_ID]);
+  const profileContext = level === 'Inicial'
+    ? 'Inicial: base, plantilla y explicación completa de las herramientas.'
+    : level === 'Consolidación'
+      ? 'Consolidación: plantilla y temas concretos con explicación, sin bloques básicos.'
+      : level === 'Salto regional'
+        ? 'Salto regional: sin plantilla ni base; contenedores con funciones y técnicas con explicación y ejemplos.'
+        : level === null ? 'Por ahora, Avanzado y Top global no aportan recomendaciones automáticas.' : 'Elegí problemas o personalizá un apunte con la biblioteca.';
   const custom = preferences.mode === 'personalizado';
   const missingRecommendations = chunks.filter((chunk) => chunk.id !== TEMPLATE_ID && recommendedIds.includes(chunk.id) && !hasAnySection(selection[chunk.id]));
   const content = selectedContentChunks(chunks, selection);
@@ -102,7 +113,7 @@ export default function NotesBuilder({ chunks, problems, tournaments }: { chunks
     setMessage('');
     setError('');
     setPreferences(previous => {
-      const active = activeNotesSelection(previous, recommendedIds, chunks);
+      const active = activeNotesSelection(previous, recommendedIds, chunks, level);
       return { mode: 'personalizado', custom: typeof next === 'function' ? next(active) : next };
     });
   }
@@ -142,7 +153,7 @@ export default function NotesBuilder({ chunks, problems, tournaments }: { chunks
 
     <section id="apuntes" className="builder-notes" aria-labelledby="notes-title">
     <div className="builder-selection-heading"><h2 id="notes-title">Apunte de herramientas</h2><span className="chip">C++17</span></div>
-    <p className="muted">Las herramientas compartidas se incluyen una sola vez. La plantilla de C++ va siempre al inicio.</p>
+    <p className="muted">Las herramientas compartidas se incluyen una sola vez. Cada bloque empieza en una página nueva; si incluís la plantilla, va primero.</p>
     <fieldset className="notes-modes" disabled={!ready}>
       <legend>Elegí el contenido del apunte</legend>
       {MODES.map(mode => <label className={`notes-mode ${preferences.mode === mode.id ? 'is-active' : ''}`} key={mode.id}>
@@ -152,20 +163,20 @@ export default function NotesBuilder({ chunks, problems, tournaments }: { chunks
     </fieldset>
     <p className="muted notes-mode-context">{custom
       ? selectedProblems.length ? 'Personalizá este apunte. Al volver a entrar o cambiar los problemas, se carga Recomendado.' : 'Tu apunte libre se conserva en este navegador.'
-      : 'Se actualiza al cambiar los problemas. Completo amplía estas herramientas, no toda la biblioteca.'}</p>
+      : profileContext}</p>
     {storageNotice && <p className="muted" role="status">{storageNotice}</p>}
     {!ready && <p role="status">Recuperando tu selección…</p>}
     <section className="panel builder-summary-card" aria-label="Resumen del apunte">
       <div className="builder-summary-heading">
-        <div><p className="eyebrow">{MODES.find(mode => mode.id === preferences.mode)?.title}</p><h3>Tu apunte lleva <span data-testid="notes-content-count">{content.length}</span> {content.length === 1 ? 'bloque' : 'bloques'} + plantilla</h3></div>
+        <div><p className="eyebrow">{MODES.find(mode => mode.id === preferences.mode)?.title}</p><h3>Tu apunte lleva <span data-testid="notes-content-count">{content.length}</span> {content.length === 1 ? 'bloque' : 'bloques'}{withTemplate ? ' + plantilla' : ''}</h3></div>
         <div className="builder-summary-actions">
-          <button type="button" className="button" disabled={!ready || working || content.length === 0} onClick={() => download('top')}>{working ? 'Preparando PDF…' : 'Descargar apunte PDF'}</button>
+          <button type="button" className="button" disabled={!ready || working || (content.length === 0 && !hasTemplateContent)} onClick={() => download('top')}>{working ? 'Preparando PDF…' : 'Descargar apunte PDF'}</button>
           {content.length > 0 && <a href="#vista-previa" onClick={() => { if (preview.current) preview.current.open = true; }}>Revisar vista previa ↓</a>}
         </div>
       </div>
       <div className="builder-included" role="region" aria-label="Herramientas incluidas">
         {content.length ? <ul>{content.map(chunk => <li key={chunk.id}><a href={`/apuntes/${chunk.id}/`} target="_blank" rel="noreferrer">{chunk.title} ↗</a></li>)}</ul>
-          : <p className="muted">{selectedProblems.length ? 'Estos problemas no tienen herramientas recomendadas disponibles. Podés armar un apunte personalizado con la biblioteca.' : 'Elegí problemas del catálogo o usá Personalizado para armar un apunte libre.'}</p>}
+          : <p className="muted">{withTemplate ? 'El apunte incluye solo la plantilla. Podés sumar herramientas en Personalizado.' : selectedProblems.length ? 'Estos problemas no tienen herramientas recomendadas disponibles. Podés armar un apunte personalizado con la biblioteca.' : 'Elegí problemas del catálogo o usá Personalizado para armar un apunte libre.'}</p>}
       </div>
       <p className="muted builder-format"><span data-testid="notes-index-status">{index ? 'Con índice de contenidos.' : 'Sin índice: se agrega a partir de dos bloques.'}</span> A4 · listo para doble faz.</p>
       {selectedProblems.some(problem => problem.coverage !== 'completa') && <p className="builder-coverage">Hay problemas con cobertura parcial o fuera de alcance. Revisá las indicaciones junto a sus nombres.</p>}
@@ -181,10 +192,11 @@ export default function NotesBuilder({ chunks, problems, tournaments }: { chunks
     <div className="builder-layout">
       {custom ? <div className="builder-controls">
         <section className="panel builder-template">
-          <p className="eyebrow">Siempre al inicio</p>
-          <h2>Plantilla de C++17</h2>
-          <p className="muted">El programa inicial se incluye completo. Podés sumar sus explicaciones.</p>
-          <div className="builder-parts">{(['descripcion', 'operaciones'] as const).map((key) => <label key={key}><input type="checkbox" disabled={!ready} checked={selection[TEMPLATE_ID]?.[key] ?? false} onChange={() => togglePart(TEMPLATE_ID, key)} />{SECTION_LABELS[key]}</label>)}</div>
+          <p className="eyebrow">Opcional · al inicio si la incluís</p>
+          <h2><label className="builder-template-toggle"><input type="checkbox" aria-label="Incluir plantilla de C++17" disabled={!ready} checked={withTemplate} onChange={() => change(previous => ({...previous,[TEMPLATE_ID]:withTemplate ? {...OFF} : {...OFF,ejemplos:true}}))}/>Plantilla de C++17</label></h2>
+          {withTemplate && <><p className="muted">El código inicial se incluye completo. Podés sumar sus explicaciones.</p>
+          <div className="builder-parts">{(['descripcion', 'operaciones'] as const).map((key) => <label key={key}><input type="checkbox" disabled={!ready} checked={selection[TEMPLATE_ID]?.[key] ?? false} onChange={() => togglePart(TEMPLATE_ID, key)} />{SECTION_LABELS[key]}</label>)}</div></>}
+
         </section>
 
         <div className="builder-selection-heading"><h2>Bloques del apunte</h2><div className="builder-bulk">
@@ -203,8 +215,8 @@ export default function NotesBuilder({ chunks, problems, tournaments }: { chunks
     </div>
     {custom && supports.length > 0 && <section className="panel builder-supports"><h3>Apoyos que podés sumar</h3><p className="muted">Si ya los conocés o tenés impresos, dejalos fuera.</p><div>{supports.map((chunk) => <button key={chunk.id} type="button" className="chip" onClick={() => change((previous) => addSuggestedSelection(previous, [chunk.id], chunks))}>+ {chunk.title}</button>)}</div></section>}
     {custom && <section className="panel builder-download-bottom" aria-label="Descarga al final del apunte">
-      <p><strong>{content.length} {content.length === 1 ? 'bloque' : 'bloques'} + plantilla de C++17</strong><br/><span className="muted">Descargá el apunte con el contenido que elegiste.</span></p>
-      <button type="button" className="button" disabled={!ready || working || content.length === 0} onClick={() => download('bottom')}>{working ? 'Preparando PDF…' : 'Descargar apunte PDF'}</button>
+      <p><strong>{content.length} {content.length === 1 ? 'bloque' : 'bloques'}{withTemplate ? ' + plantilla de C++17' : ''}</strong><br/><span className="muted">Descargá el apunte con el contenido que elegiste.</span></p>
+      <button type="button" className="button" disabled={!ready || working || (content.length === 0 && !hasTemplateContent)} onClick={() => download('bottom')}>{working ? 'Preparando PDF…' : 'Descargar apunte PDF'}</button>
       {downloadOrigin === 'bottom' && message && <p role="status">{message}</p>}
       {downloadOrigin === 'bottom' && error && <p role="alert" className="builder-error">{error}</p>}
     </section>}
@@ -213,8 +225,8 @@ export default function NotesBuilder({ chunks, problems, tournaments }: { chunks
       <summary>Vista previa del apunte</summary>
       <div className="builder-selection-heading"><h2>Vista previa</h2><span className="muted">Mismas partes que el PDF</span></div>
       {content.length > 0 && <p className="muted builder-table-help">En pantallas chicas, desplazá las tablas hacia los costados para consultar todas sus columnas.</p>}
-      {content.length > 0 ? <div className="panel builder-preview">
-        {template && <article><h2>{template.title}</h2>{(['descripcion', 'operaciones'] as const).filter((key) => selection[TEMPLATE_ID]?.[key]).map((key) => <section key={key}><h3>{SECTION_LABELS[key]}</h3><div className="prose" dangerouslySetInnerHTML={{ __html: template.html[key] }} /></section>)}<pre><code>{templateCode}</code></pre></article>}
+      {content.length > 0 || hasTemplateContent ? <div className="panel builder-preview">
+        {withTemplate && template && <article><h2>{template.title}</h2>{(['descripcion', 'operaciones'] as const).filter((key) => selection[TEMPLATE_ID]?.[key]).map((key) => <section key={key}><h3>{SECTION_LABELS[key]}</h3><div className="prose" dangerouslySetInnerHTML={{ __html: template.html[key] }} /></section>)}<pre><code>{templateCode}</code></pre></article>}
         {index && <nav aria-label="Índice de la vista previa"><h2>Índice</h2><ol>{content.map((chunk) => <li key={chunk.id}><a href={`#preview-${chunk.id}`}>{chunk.title}</a></li>)}</ol></nav>}
         {content.map((chunk) => <article id={`preview-${chunk.id}`} key={chunk.id}><h2>{chunk.title}</h2>{SECTION_KEYS.filter((key) => selection[chunk.id]?.[key]).map((key) => <section key={key}><h3>{SECTION_LABELS[key]}</h3><div className="prose" dangerouslySetInnerHTML={{ __html: chunk.html[key] }} /></section>)}</article>)}
       </div> : <div className="panel muted">La vista previa aparece cuando elegís un bloque.</div>}
@@ -237,6 +249,7 @@ export default function NotesBuilder({ chunks, problems, tournaments }: { chunks
       .builder-missing { margin-bottom:1rem; } .builder-missing p { margin-top:0; }
       .builder-layout { display:block; }
       .builder-controls { min-width:0; } .builder-template { margin-bottom:1.5rem; }
+      .builder-template-toggle { display:flex; align-items:center; gap:.65rem; cursor:pointer; }
       .builder-template h2 { margin:.25rem 0; } .builder-template .muted { font-size:.95rem; }
       .builder-selection-heading { display:flex; justify-content:space-between; align-items:center; gap:1rem; flex-wrap:wrap; margin-block:1.25rem .75rem; }
       .builder-selection-heading h2 { margin:0; }

@@ -1,7 +1,7 @@
 import type { Chunk } from './chunks';
 import type { Problem, Tournament } from './types';
-import { presetSelection, recommendedChunkIds } from './notes-presets';
-import { selectedContentChunks } from './composition';
+import { notesLevel, presetSelection, recommendedChunkIds } from './notes-presets';
+import { hasAnySection, selectedContentChunks, TEMPLATE_ID } from './composition';
 
 let catalog: Promise<{ problems: Problem[]; tournaments: Tournament[] }> | undefined;
 let notes: Promise<{ chunks: Chunk[] }> | undefined;
@@ -33,8 +33,8 @@ export async function downloadMaterial(kind: 'enunciados' | 'apunte', ids: strin
     return;
   }
   const { chunks } = await loadNotes();
-  const selection = presetSelection('recomendado', recommendedChunkIds(chosen), chunks);
-  if (!selectedContentChunks(chunks, selection).length) throw new Error('Estos problemas todavía no tienen herramientas recomendadas. Revisá su cobertura en la selección.');
+  const selection = presetSelection('recomendado', recommendedChunkIds(chosen), chunks, notesLevel(chosen));
+  if (!selectedContentChunks(chunks, selection).length && !hasAnySection(selection[TEMPLATE_ID])) throw new Error('Estos problemas todavía no tienen herramientas recomendadas. Revisá su cobertura en la selección.');
   const { downloadNotes } = await import('./pdf-notes');
   await downloadNotes(chunks, selection);
 }

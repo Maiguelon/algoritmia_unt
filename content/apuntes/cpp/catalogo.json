@@ -22,7 +22,6 @@
   "exportPolicy": {
     "template": "cpp-plantilla",
     "templateFirst": true,
-    "templateCodeAlways": true,
     "prerequisites": "suggested",
     "supportAvailableAtAllDifficulties": true,
     "index": {
@@ -30,6 +29,13 @@
       "exclude": [
         "cpp-plantilla"
       ]
+    },
+    "templateCodeWhenIncluded": true,
+    "blockStartsOnNewPage": true,
+    "templateByLevel": {
+      "Inicial": true,
+      "Consolidación": true,
+      "Salto regional": false
     }
   },
   "groups": [

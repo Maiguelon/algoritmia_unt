@@ -28,7 +28,7 @@ Cada Markdown vive en `content/apuntes/cpp/` y tiene ID, título, familia y est�
 
 El catálogo `catalogo.json` define orden, grupo y apoyos sugeridos. Un nuevo bloque debe aparecer en el catálogo y en el índice de la biblioteca. Mantener su ID al mejorar el texto evita perder configuraciones guardadas.
 
-La plantilla es un bloque independiente. Su código se incluye una vez al inicio. El índice del apunte solo aparece cuando quedan dos o más bloques distintos de contenido con alguna parte seleccionada, sin contar la plantilla. Descripción/operaciones/ejemplos de un mismo bloque no cuentan como contenidos distintos.
+La plantilla es un bloque independiente y opcional. Cuando está incluida, su código aparece una vez al inicio. Cada bloque de contenido empieza en una página nueva del PDF; no se fuerza página impar para doble faz. El índice solo aparece cuando quedan dos o más bloques distintos de contenido con alguna parte seleccionada, sin contar la plantilla. Descripción/operaciones/ejemplos de un mismo bloque no cuentan como contenidos distintos.
 
 Los apoyos no se agregan de forma recursiva. Una persona puede haberlos estudiado o impreso. Se ofrecen en Personalizado para sumarlos por decisión explícita.
 
@@ -36,10 +36,20 @@ Los apoyos no se agregan de forma recursiva. Una persona puede haberlos estudiad
 
 `/seleccion/` reúne los problemas, la descarga de enunciados y la preparación del apunte. Las rutas anteriores `/enunciados/` y `/armar/` conducen a esa página; las acciones `?chunk=` de la biblioteca se conservan y abren Personalizado.
 
-- Recomendado: descripción y funciones/operaciones de las herramientas sugeridas por los problemas.
-- Completo: las mismas herramientas con las tres partes y las explicaciones de la plantilla. No incorpora toda la biblioteca.
+- Recomendado: ajusta bloques, plantilla y partes al problema más accesible de la selección, según las reglas siguientes.
+- Completo: las herramientas de ese perfil con las tres partes y, si corresponde incluirla, las explicaciones de la plantilla. No incorpora toda la biblioteca.
 - Solo funciones: la sección existente Funciones y operaciones de esas herramientas. Esta etapa no reestructura su contenido interno.
 - Personalizado: selección por bloque y parte; conserva los cambios al probar otros modos durante la misma visita. La primera entrada copia el modo activo. Con problemas seleccionados, volver a entrar o cambiar el conjunto de problemas inicia Recomendado desde cero.
+
+El perfil automático usa la menor banda compatible, sin depender del orden de selección:
+
+| Banda mínima | Base | Plantilla | Herramientas concretas |
+|---|---|---|---|
+| Inicial | Variables, entrada/salida, condiciones, recorridos y cuentas enteras, con las tres partes | Código y explicaciones | Descripción, funciones y ejemplos |
+| Consolidación | Se omiten los cinco bloques de base | Solo código | Descripción, funciones y ejemplos |
+| Salto regional | Se omiten los cinco bloques de base | No se incluye | Contenedores: Funciones y operaciones. Los demás temas: las tres partes |
+
+Los contenedores se identifican por el grupo `contenedores` del catálogo. Avanzado y Top global no aportan recomendaciones automáticas en esta etapa ni cambian el perfil de otros problemas. Sus enunciados siguen disponibles. Personalizado permite incluir o quitar la plantilla y añadir cualquier bloque; el armador libre conserva sus valores anteriores. Los apoyos sugeridos no se agregan recursivamente.
 
 Las recomendaciones se calculan con la selección de problemas. Al entrar con problemas elegidos, las preferencias antiguas de `algoritmia:notes:v2` o del formato anterior no se restauran. Cambiar los problemas, incluso desde otra pestaña, vuelve a Recomendado. Si se usa el armador libre sin problemas, la configuración guardada se conserva y una anterior válida se migra a Personalizado. Las acciones explícitas `?chunk=` siguen abriendo Personalizado. El índice depende de la cantidad de bloques distintos, sin contar la plantilla.
 
@@ -50,6 +60,8 @@ La cobertura parcial y las técnicas faltantes se muestran junto a cada problema
 ## Cerrar un cambio
 
 Ejecutar comprobaciones de datos/tipos y las pruebas pertinentes al cambio. Para cambios de exportación, descargar PDFs reales y revisar sus páginas; para navegación y controles, probar el navegador. La guía de comandos está en el README.
+
+`node scripts/verify-notes-profiles.mjs <carpeta-absoluta>` genera cinco PDF de revisión: Inicial, Consolidación, Salto regional, mezcla de niveles y un bloque sin plantilla. Exporta también las selecciones esperadas para contrastar inclusión, índice y comienzo de bloques. Guardar estos resultados fuera del catálogo y no publicarlos como contenido.
 
 Revisar los archivos del diff y hacer un commit por unidad. Para incorporar un nuevo torneo, el commit debe identificar esa edición. Nunca incluir tokens, resultados de pruebas, caches o archivos personales de investigación en la publicación.
 

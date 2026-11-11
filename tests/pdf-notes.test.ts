@@ -39,12 +39,30 @@ describe('composición del PDF del apunte', () => {
     expect(JSON.stringify(definition)).toContain('int main()');
   });
 
+  it('omite la plantilla cuando está excluida y separa los comienzos de los bloques', () => {
+    const off={descripcion:false,operaciones:false,ejemplos:false};
+    const definition=buildNotesDefinition(chunks,{...select('cpp-set','cpp-prefijos'),'cpp-plantilla':off});
+    expect(JSON.stringify(definition)).not.toContain('int main()');
+    expect(definition.content.filter(node=>node.id==='cpp-set'||node.id==='cpp-prefijos').every(node=>node.pageBreak==='before')).toBe(true);
+    const single=buildNotesDefinition(chunks,{...select('cpp-set'),'cpp-plantilla':off});
+    expect(single.content.find(node=>node.id==='cpp-set')?.pageBreak).toBeUndefined();
+  });
+
   it('convierte tablas y código sin aplanar la estructura de Markdown', () => {
     const nodes = markdownToPdf('| Uso | Resultado |\n|---|---|\n| `v.size()` | Cantidad |\n\n```cpp\n  int n = 3;\n```');
     expect(nodes.filter((node) => 'table' in node)).toHaveLength(2);
     expect(JSON.stringify(nodes)).toContain('Mono');
     expect(JSON.stringify(nodes)).toContain('  int n = 3;');
   });
+
+  it('no deja una hoja vacía entre una tabla que llena la página y el bloque siguiente', async () => {
+    const off={descripcion:false,operaciones:false,ejemplos:false};
+    const functions={descripcion:false,operaciones:true,ejemplos:false};
+    const bytes=await createNotesPdf(chunks,{'cpp-plantilla':off,'cpp-vectores':functions,'cpp-pares':functions});
+    const document=await PDFDocument.load(bytes);
+    // Índice, vectores y pares: una página cada uno, sin hoja intermedia.
+    expect(document.getPageCount()).toBe(3);
+  },20_000);
 
   it('produce un PDF A4 válido con texto, tablas y código incorporados', async () => {
     const selection = select('cpp-set', 'cpp-vectores');

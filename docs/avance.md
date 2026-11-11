@@ -74,3 +74,11 @@ Validación: 45 pruebas unitarias, 24 recorridos de navegador y tipos sin errore
 Se conecta «Arrancá acá» con `/empeza/`: seis pasos con el A del TAP 2026, razonamiento por conversión a segundos, herramientas del apunte, plantilla incompleta, implementación explicada opcional, pruebas y envío en Codeforces. El cierre explica las dificultades y ofrece otros Iniciales y la comunidad. Fuentes y verificación del código en `primeros-pasos.md`.
 
 La implementación se comprobó localmente sobre las 18.000 entradas válidas; la plantilla pasó la comprobación de sintaxis. Tipos sin errores y revisión visual en 1280, 390 y 320 px. Los diez recorridos pertinentes de inicio, primera práctica y selección pasaron; las tres descargas de PDF también pasaron durante la validación. Se corrige además la descarga inferior: solo aparece en Personalizado, según la observación del usuario.
+
+## Apunte por nivel y bloques separados — 10 de noviembre
+
+Recomendado y la descarga rápida comparten el perfil del problema más accesible seleccionado. Inicial suma los cinco bloques de base, plantilla y explicaciones completas; Consolidación incluye plantilla y temas concretos completos sin base; Salto regional omite base y plantilla, usa solo funciones de los contenedores y las tres partes de los demás temas. Avanzado y Top global quedan fuera de la recomendación automática por ahora. Personalizado permite recuperar o quitar la plantilla.
+
+Cada bloque empieza en una página nueva del PDF. La plantilla, si está incluida, va primero; el índice conserva su regla de dos o más bloques, sin contar la plantilla. Un único bloque sin plantilla comienza en la primera página y no genera una portada vacía.
+
+Validación: 53 pruebas unitarias, 28 recorridos de navegador y comprobación de tipos sin errores. Se generaron cinco PDF reales (48 páginas), se comprobaron plantilla, destinos del índice y comienzos de bloques, y se revisaron visualmente todas las páginas sin recortes ni caracteres sustituidos. Se eliminó una hoja vacía que podía provocar el margen final de un bloque. La descarga rápida de Salto y la exclusión automática de Avanzado también se comprobaron desde el navegador.

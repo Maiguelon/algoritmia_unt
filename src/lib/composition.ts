@@ -20,6 +20,11 @@ export function hasAnySection(parts: SectionSelection | undefined): boolean {
   return Boolean(parts && SECTION_KEYS.some((key) => parts[key]));
 }
 
+/** Absent template keeps older/free-form selections compatible; explicit OFF omits it. */
+export function includesTemplate(selection: Selection): boolean {
+  return selection[TEMPLATE_ID] === undefined || hasAnySection(selection[TEMPLATE_ID]);
+}
+
 /** Preserves explicit removals, while dropping stale IDs and non-boolean values. */
 export function sanitizeSelection(value: unknown, chunks: Pick<Chunk, 'id'>[]): Selection {
   if (!value || typeof value !== 'object' || Array.isArray(value)) return {};
