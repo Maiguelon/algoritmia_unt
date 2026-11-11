@@ -1,8 +1,10 @@
 # Publicación y traslado
 
-La primera versión se publica mediante Sites, con alojamiento estático sobre Cloudflare. El origen asignado es https://algoritmia-unt.kindloom8.chatgpt.site. La publicación se confirma por su resultado y pruebas del entorno, no por la mera existencia de ese nombre.
+El alojamiento principal es [club-algoritmia-unt.pages.dev](https://club-algoritmia-unt.pages.dev/), en la cuenta de Cloudflare del usuario. Se publicó el 10 de noviembre de 2026 mediante **Pages / Direct Upload**, con el proyecto `club-algoritmia-unt`. El dominio provisorio pertenece a Pages y no usa el dominio de Sites.
 
-El ID de este alojamiento está en `.openai/hosting.json`; no contiene credenciales. La cuenta de Cloudflare Pages del club y un dominio propio no se configuraron en este proyecto.
+La versión de aplicación publicada corresponde al commit `a83eb4836eae974cf9cb2ed4f49c07beedc03058`: 280 archivos estáticos, incluido el PDF fijo de la primera práctica. Cloudflare confirmó la publicación y se comprobaron la portada, una ficha, el carrito y tres descargas reales. El apunte fijo descargado coincide byte por byte con el original.
+
+La publicación anterior en https://algoritmia-unt.kindloom8.chatgpt.site permanece como copia histórica. Su ID sigue en `.openai/hosting.json`, sin credenciales; ese archivo no configura el nuevo proyecto de Pages. No se configuraron un dominio comprado ni conexión automática a Git.
 
 ## Construir la misma versión
 
@@ -19,7 +21,16 @@ El resultado publicable es `dist/`. Incluye páginas HTML, JavaScript, fuentes y
 
 ## Cloudflare Pages o Vercel
 
-Elegir el repo y la rama que corresponda, usar Node 24, instalar con `npm ci`, construir con `npm run build` y publicar `dist/`. El sitio no necesita variables secretas ni un servidor de Node en producción. Esta guía prepara el traslado; no representa una publicación ya efectuada en la cuenta de Pages del club.
+Para actualizar el proyecto actual de Pages:
+
+1. Comprobar y construir la versión elegida con los comandos anteriores.
+2. Comprimir **el contenido** de `dist/` en ZIP: `index.html` debe quedar en la raíz del archivo, sin una carpeta `dist` contenedora. No incluir fuentes, `.git`, `.openai`, credenciales ni archivos de trabajo.
+3. Abrir Workers & Pages, elegir `club-algoritmia-unt` y crear una nueva publicación de producción mediante carga directa.
+4. Subir el ZIP, esperar la confirmación y comprobar la URL pública y las descargas.
+
+Los commits no actualizan este alojamiento por sí solos. No se agregaron tokens ni claves al repositorio. El sitio no necesita variables secretas ni un servidor de Node en producción.
+
+Para un futuro proyecto conectado a Git en Pages o Vercel, elegir el repositorio y la rama, usar Node 24, instalar con `npm ci`, construir con `npm run build` y publicar `dist/`.
 
 ## Servidor de la facultad
 

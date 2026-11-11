@@ -2,6 +2,8 @@
 
 Sitio del Club de Algoritmia para preparar TAP y Regionales. Permite explorar problemas, consultar herramientas de C++17, armar apuntes por secciones y descargar enunciados originales para practicar.
 
+Publicado en [club-algoritmia-unt.pages.dev](https://club-algoritmia-unt.pages.dev/), en la cuenta de Cloudflare del usuario. Las actualizaciones se cargan manualmente en Pages; ver [publicación y traslado](docs/publicacion.md).
+
 Inventario inicial: 51 problemas (Regionales 2023–2025 y TAP 2026), 30 bloques de apuntes y análisis de cuatro torneos. El Regional 2026 tiene solamente una ficha pendiente: sus problemas se incorporarán cuando estén publicados y puedan verificarse.
 
 ## Usar en desarrollo

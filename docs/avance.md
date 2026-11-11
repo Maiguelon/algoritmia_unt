@@ -88,3 +88,9 @@ Validación: 53 pruebas unitarias, 28 recorridos de navegador y comprobación de
 La primera práctica ofrece un PDF fijo con plantilla y cuatro bloques concretos, sin pasar por el carrito ni alterar problemas seleccionados. El archivo se incluye en la publicación y tiene su generador reproducible. Las instrucciones de ejecución se centran en Visual Studio Code: Ctrl+J, Terminal, compilar, ejecutar e ingresar los valores uno por línea.
 
 Verificación: tipos sin errores y dos recorridos de navegador aprobados, con descarga real y comparación del archivo, conservación del carrito, copia y pantallas de 1280, 390 y 320 px. Se revisaron las diez páginas del PDF, el índice y la separación de bloques, sin hojas vacías ni recortes. Los comandos indicados se ejecutaron en PowerShell y los cinco casos produjeron las respuestas esperadas.
+
+## Cloudflare Pages en la cuenta del usuario — 10 de noviembre
+
+Se publica la misma aplicación de `a83eb48` como proyecto Direct Upload `club-algoritmia-unt`, en https://club-algoritmia-unt.pages.dev/. La cuenta del usuario confirmó la publicación de los 280 archivos. Se probaron portada, guía inicial, ficha de Duo, selección desde la ficha, apunte recomendado y enunciados. Las tres descargas son PDF válidos de 10, 12 y 2 páginas; el apunte fijo coincide con el archivo original. La selección de prueba se vació al terminar.
+
+La nueva dirección queda abierta como entrega y se documenta el procedimiento manual de actualización. La copia anterior en Sites sigue disponible. El lector web automático de esta sesión tampoco pudo abrir la nueva dirección; el navegador sí funcionó, por lo que no se atribuye el problema de Gemini al dominio anterior como una causa demostrada.
