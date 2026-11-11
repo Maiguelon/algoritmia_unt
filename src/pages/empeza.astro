@@ -1,7 +1,6 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import CodeCopy from '../components/CodeCopy.astro';
-import ProblemSelect from '../components/ProblemSelect';
 import { problems } from '../lib/data';
 import { WHATSAPP_URL } from '../lib/community';
 import starter from '../tutorial/primer-ac-starter.cpp?raw';
@@ -71,7 +70,7 @@ const levels = [
       <p>Leé los tres valores con <code>cin</code>, calculá los segundos y usá <code>if / else if / else</code> para elegir el signo. Con <code>cout</code>, imprimí solo la respuesta y un salto de línea.</p>
       <p>Podés consultar <a href="/apuntes/cpp-variables/">variables</a>, <a href="/apuntes/cpp-condiciones/">condiciones</a> y <a href="/apuntes/cpp-cuentas-enteras/">cuentas enteras</a> mientras lo hacés.</p>
       <details class="guide-help"><summary>Usar una plantilla incompleta</summary><p>Guardala como <code>primer-ac.cpp</code> y completá lo que indican los comentarios. Ya lee la entrada; todavía no calcula ni imprime la respuesta.</p><CodeCopy code={starter} title="Plantilla para completar" copyLabel="Copiar plantilla"/></details>
-      <details class="guide-help"><summary>Quiero preparar un apunte con estas herramientas</summary><p>Marcá el problema y abrí tu selección. El modo Recomendado reúne sus herramientas; si tenías otros problemas marcados, también los vas a ver allí.</p><div class="actions"><ProblemSelect id={first.id} allowed={problems.map(problem => problem.id)} client:load/><a class="button secondary" href="/seleccion/#apuntes">Ver mi selección y apunte →</a></div></details>
+      <div class="guide-help beginner-handout"><p>Apunte de apoyo: plantilla, variables, entrada y salida, condiciones y cuentas enteras, con explicaciones y ejemplos.</p><a class="button secondary" href="/downloads/apunte-primer-problema.pdf" download="apunte-primer-problema.pdf">Descargar apunte de este problema (PDF) ↓</a></div>
     </section>
 
     <section class="panel beginner-step" id="proba" aria-labelledby="test-title">
@@ -79,7 +78,16 @@ const levels = [
       <p>Ejecutá tu programa una vez por cada fila. Las primeras tres son los ejemplos del enunciado; las otras dos prueban los bordes de la mitad.</p>
       <div class="table-wrap"><table class="beginner-cases"><thead><tr><th>Entrada</th><th>Salida</th><th>Qué comprobás</th></tr></thead><tbody>{cases.map(sample => <tr><td><code>{sample.input}</code></td><td><code>{sample.output}</code></td><td>{sample.reason}</td></tr>)}</tbody></table></div>
       <p>En este problema hay <strong>una sola entrada por ejecución</strong>. La salida debe ser el signo, sin mensajes como «Ingresá las horas» o «La respuesta es».</p>
-      <details class="guide-help"><summary>¿Cómo lo ejecuto desde una terminal?</summary><p>Si ya tenés el compilador <code>g++</code> instalado, abrí una terminal en la carpeta del archivo y compilá:</p><pre><code>g++ -std=c++17 primer-ac.cpp -o primer-ac</code></pre><p>Después ejecutá <code>./primer-ac</code> en Linux/macOS o <code>.\primer-ac.exe</code> en Windows. Escribí una entrada, pulsá Enter y compará la salida. Si usás un entorno con botón de ejecutar, podés hacer la misma prueba allí.</p></details>
+      <details class="guide-help beginner-terminal"><summary>Cómo probarlo en Visual Studio Code</summary>
+        <ol class="guide-list">
+          <li>Abrí en Visual la carpeta donde guardaste <code>primer-ac.cpp</code> y guardá los cambios con <kbd>Ctrl + S</kbd>.</li>
+          <li>Abrí el panel inferior con <kbd>Ctrl + J</kbd> y elegí <strong>Terminal</strong>.</li>
+          <li>Escribí este comando y pulsá Enter para preparar el programa:<pre><code>g++ -std=c++17 primer-ac.cpp -o primer-ac</code></pre></li>
+          <li>Si no aparecen errores, ejecutalo en esa misma terminal:<pre><code>./primer-ac</code></pre></li>
+          <li>Ingresá los tres valores, <strong>pulsando Enter después de cada número</strong>. Para la primera prueba:<pre><code>{'1\n2\n3'}</code></pre>El programa debería responder <code>-</code>.</li>
+        </ol>
+        <p>Para probar otra fila, volvé a ejecutar <code>./primer-ac</code> e ingresá sus tres valores. Si cambiás el código, guardalo y repetí primero el comando <code>g++</code>.</p>
+      </details>
       <details class="guide-help explained-solution"><summary>Ver una implementación explicada</summary><p>Si te trabaste o querés comparar tu versión, esta implementación sigue el razonamiento de arriba.</p><CodeCopy code={solution} title="Una implementación posible" copyLabel="Copiar implementación"/><ul class="guide-list"><li><code>transcurrido</code> reúne las tres unidades en segundos.</li><li><code>mitad</code> calcula la mitad de las cinco horas: 9000 segundos.</li><li>Las tres ramas imprimen <code>-</code>, <code>+</code> o <code>=</code>, según la comparación.</li></ul></details>
     </section>
 

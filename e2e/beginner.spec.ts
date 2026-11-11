@@ -1,5 +1,6 @@
 import {test,expect} from '@playwright/test';
 import fs from 'node:fs/promises';
+import {PDFDocument} from 'pdf-lib';
 
 test('primer problema: recorrido, ayudas optativas, copia y siguiente práctica',async({page})=>{
   const errors:string[]=[];
@@ -21,15 +22,26 @@ test('primer problema: recorrido, ayudas optativas, copia y siguiente práctica'
   await starter.getByRole('button',{name:'Copiar plantilla',exact:true}).click();
   await expect(starter.getByRole('status')).toHaveText('Código copiado.');
   expect(await page.evaluate(()=>(window as unknown as {copiedCode:string}).copiedCode)).toContain('cin >> horas >> minutos >> segundos;');
-  await page.getByText('Quiero preparar un apunte con estas herramientas',{exact:true}).click();
-  await page.getByRole('button',{name:'＋ Seleccionar problema',exact:true}).click();
-  await expect(page.getByRole('button',{name:'✓ En tu selección',exact:true})).toBeVisible();
-  await page.getByRole('link',{name:'Ver mi selección y apunte',exact:false}).click();
-  await expect(page.getByTestId('notes-content-count')).toHaveText('5');
-  await expect(page.getByRole('radio',{name:'Recomendado',exact:true})).toBeChecked();
-  await expect(page.getByRole('region',{name:'Descarga al final del apunte'})).toHaveCount(0);
+  const selected=['regional-2025-k'];
+  await page.evaluate(ids=>localStorage.setItem('algoritmia:selected',JSON.stringify(ids)),selected);
+  await page.reload();
+  const handout=page.getByRole('link',{name:'Descargar apunte de este problema (PDF)'});
+  await expect(handout).toHaveAttribute('href','/downloads/apunte-primer-problema.pdf');
+  const downloading=page.waitForEvent('download');
+  await handout.click();
+  const download=await downloading;
+  expect(await download.failure()).toBeNull();
+  expect(await fs.readFile((await download.path())!)).toEqual(await fs.readFile('public/downloads/apunte-primer-problema.pdf'));
+  const pdf=await PDFDocument.load(await fs.readFile((await download.path())!));
+  expect(pdf.getTitle()).toBe('Apunte para tu primer problema - Algoritmia UNT');
+  expect(pdf.getPageCount()).toBeGreaterThan(1);
+  expect(await page.evaluate(()=>JSON.parse(localStorage.getItem('algoritmia:selected')!))).toEqual(selected);
   await page.goto('/empeza/#proba');
   await expect(page.locator('.beginner-cases tbody tr')).toHaveCount(5);
+  await page.getByText('Cómo probarlo en Visual Studio Code',{exact:true}).click();
+  await expect(page.locator('.beginner-terminal')).toContainText('Ctrl + J');
+  await expect(page.locator('.beginner-terminal')).toContainText('pulsando Enter después de cada número');
+  await expect(page.locator('.beginner-terminal pre code')).toHaveText(['g++ -std=c++17 primer-ac.cpp -o primer-ac','./primer-ac','1\n2\n3']);
   await page.getByText('Ver una implementación explicada',{exact:true}).click();
   const complete=page.getByRole('group',{name:'Una implementación posible'});
   await expect(complete.locator('code')).toHaveText((await fs.readFile('src/tutorial/primer-ac.cpp','utf8')).trim());
@@ -52,10 +64,11 @@ test('primer problema: lectura en escritorio y celular sin desbordes',async({pag
     await page.setViewportSize({width,height:844});
     expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
     await page.screenshot({path:`test-results-beginner/inicio-${width}.png`});
-    for(const text of ['Usar una plantilla incompleta','Ver una implementación explicada']) {
+    for(const text of ['Usar una plantilla incompleta','Cómo probarlo en Visual Studio Code','Ver una implementación explicada']) {
       const summary=page.getByText(text,{exact:true});
       await summary.click();
       expect(await page.evaluate(()=>document.documentElement.scrollWidth<=innerWidth)).toBe(true);
+      if(text==='Cómo probarlo en Visual Studio Code') await page.screenshot({path:`test-results-beginner/terminal-${width}.png`});
       await summary.click();
     }
     await page.locator('#segui').scrollIntoViewIfNeeded();

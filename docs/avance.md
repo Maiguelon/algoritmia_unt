@@ -82,3 +82,9 @@ Recomendado y la descarga rápida comparten el perfil del problema más accesibl
 Cada bloque empieza en una página nueva del PDF. La plantilla, si está incluida, va primero; el índice conserva su regla de dos o más bloques, sin contar la plantilla. Un único bloque sin plantilla comienza en la primera página y no genera una portada vacía.
 
 Validación: 53 pruebas unitarias, 28 recorridos de navegador y comprobación de tipos sin errores. Se generaron cinco PDF reales (48 páginas), se comprobaron plantilla, destinos del índice y comienzos de bloques, y se revisaron visualmente todas las páginas sin recortes ni caracteres sustituidos. Se eliminó una hoja vacía que podía provocar el margen final de un bloque. La descarga rápida de Salto y la exclusión automática de Avanzado también se comprobaron desde el navegador.
+
+## Apunte fijo y práctica en Visual — 10 de noviembre
+
+La primera práctica ofrece un PDF fijo con plantilla y cuatro bloques concretos, sin pasar por el carrito ni alterar problemas seleccionados. El archivo se incluye en la publicación y tiene su generador reproducible. Las instrucciones de ejecución se centran en Visual Studio Code: Ctrl+J, Terminal, compilar, ejecutar e ingresar los valores uno por línea.
+
+Verificación: tipos sin errores y dos recorridos de navegador aprobados, con descarga real y comparación del archivo, conservación del carrito, copia y pantallas de 1280, 390 y 320 px. Se revisaron las diez páginas del PDF, el índice y la separación de bloques, sin hojas vacías ni recortes. Los comandos indicados se ejecutaron en PowerShell y los cinco casos produjeron las respuestas esperadas.
