@@ -52,10 +52,10 @@
   border: 2px solid var(--ink);
   border-radius: 16px;
   box-shadow: 5px 5px 0 var(--ink);
-  padding: clamp(1.15rem, 3.1vw, 2.35rem);
+  padding: clamp(.95rem, 1.65vw, 1.45rem) clamp(1rem, 2.6vw, 2rem);
 }
 
-.sim-hero h1 { font-size: clamp(2.3rem, 5.6vw, 4.35rem); line-height: 1.02; margin: .75rem 0 .62rem; }
+.sim-hero h1 { font-size: clamp(1.65rem, 3.3vw, 2.8rem); line-height: 1.1; margin: .48rem 0 .38rem; }
 .sim-date { display: flex; align-items: center; flex-wrap: wrap; gap: .4rem .8rem; margin: 0; font-size: .86rem; }
 .sim-date time { background: #fff0aa; color: #674718; padding: .18rem .55rem; border-radius: 5px; font-weight: 850; }
 .sim-date > span, .sim-intro { color: var(--muted); }
@@ -258,7 +258,18 @@
   .sim-preview, .sim-hero { align-items: stretch; flex-direction: column; }
   .sim-preview { gap: .35rem; }
   .sim-preview span { display: block; }
-  .sim-clock { flex: 0 1 auto; }
+  .sim-hero { gap: .85rem; }
+  .sim-clock {
+    flex: 0 1 auto;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+    gap: .15rem .6rem;
+    padding: .6rem .8rem;
+  }
+  .sim-clock-status { margin: 0; }
+  .sim-clock strong { grid-area: 1 / 2 / 3 / 3; font-size: 1.5rem; }
+  .sim-clock progress { grid-column: 1 / -1; margin-top: .35rem; }
   .sim-mobile-jump { display: inline-block; margin-top: .4rem; font-weight: 800; }
   .sim-layout { gap: 1rem; }
   .sim-side { grid-template-columns: minmax(0, 1fr); }
