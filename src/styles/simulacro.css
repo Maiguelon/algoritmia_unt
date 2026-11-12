@@ -46,13 +46,18 @@
   color: var(--blue);
 }
 
-.sim-hero {
-  gap: 1.5rem;
+.sim-hero { gap: 1.2rem; padding: .2rem 0; }
+.sim-hero[data-phase='before'] {
   background: var(--surface);
-  border: 2px solid var(--ink);
-  border-radius: 16px;
-  box-shadow: 5px 5px 0 var(--ink);
-  padding: clamp(.95rem, 1.65vw, 1.45rem) clamp(1rem, 2.6vw, 2rem);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: clamp(1rem, 1.65vw, 1.4rem);
+}
+.sim-hero:not([data-phase='before']) .sim-date time {
+  background: none;
+  color: var(--muted);
+  padding: 0;
+  font-weight: 750;
 }
 
 .sim-hero h1 { font-size: clamp(1.65rem, 3.3vw, 2.8rem); line-height: 1.1; margin: .48rem 0 .38rem; }
@@ -63,11 +68,15 @@
 .sim-mobile-jump { display: none; }
 
 .sim-clock {
-  flex: 0 0 13rem;
-  border-radius: 10px;
+  display: grid;
+  grid-template-columns: minmax(0, 1fr) auto;
+  align-items: center;
+  gap: .15rem .8rem;
+  min-width: 13rem;
+  border-radius: 9px;
   background: var(--ink);
   color: white;
-  padding: .85rem 1.15rem;
+  padding: .55rem .8rem;
 }
 
 .sim-clock-status {
@@ -76,7 +85,7 @@
   gap: .45rem;
   font-size: .79rem;
   font-weight: 800;
-  margin: 0 0 .35rem;
+  margin: 0;
   color: #dde3ff;
 }
 
@@ -85,14 +94,12 @@
   width: .47rem;
   height: .47rem;
   border-radius: 50%;
-  background: #c4cffc;
+  background: #73e9ad;
 }
 
-.sim-clock-status[data-phase='live']::before { background: #73e9ad; }
-.sim-clock-status[data-phase='before']::before { background: var(--yellow); }
-.sim-clock strong { display: block; font: 800 2.05rem/1.15 'Bricolage Grotesque', sans-serif; font-variant-numeric: tabular-nums; }
+.sim-clock strong { grid-area: 1 / 2 / 3 / 3; font: 800 1.5rem/1.15 'Bricolage Grotesque', sans-serif; font-variant-numeric: tabular-nums; }
 .sim-clock > span { font-size: .82rem; color: #dde3ff; }
-.sim-clock progress { display: block; margin-top: .6rem; width: 100%; height: .3rem; accent-color: #73e9ad; }
+.sim-clock progress { grid-column: 1 / -1; margin-top: .25rem; width: 100%; height: .25rem; accent-color: #73e9ad; }
 
 .sim-layout {
   display: grid;
@@ -102,6 +109,7 @@
   margin-top: 1.65rem;
 }
 
+.sim-layout[data-phase='before'] { grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); }
 .sim-panel { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 1.2rem; }
 .sim-panel h2 { margin: 0; font-size: clamp(1.2rem, 2vw, 1.65rem); }
 .sim-ranking { padding: 0; }
@@ -225,8 +233,16 @@
 .sim-legend span { display: flex; align-items: center; gap: .4rem; }
 .sim-legend b { color: var(--ink); font-variant-numeric: tabular-nums; }
 
-.sim-side { display: grid; gap: 1rem; }
+.sim-signup { border-top: 3px solid var(--blue); }
 .sim-signup form { display: grid; gap: .32rem; margin-top: .8rem; }
+.sim-signup input { max-width: 31rem; }
+.sim-how { color: var(--muted); margin: .65rem 0 0; padding-left: 1.2rem; font-size: .92rem; }
+.sim-how li + li { margin-top: .18rem; }
+.sim-entries { grid-column: 1 / -1; }
+.sim-entries h2 { display: flex; align-items: center; gap: .55rem; font-size: 1.18rem; }
+.sim-entries h2 span { font: 800 .8rem/1.4 'Nunito Sans', sans-serif; color: var(--blue); background: var(--soft); border-radius: 5px; padding: .14rem .38rem; }
+.sim-entries ul { display: flex; flex-wrap: wrap; gap: .45rem; margin: .7rem 0 0; padding: 0; list-style: none; }
+.sim-entries li { overflow-wrap: anywhere; font-size: .84rem; font-weight: 750; padding: .2rem .55rem; border: 1px solid var(--line); border-radius: 6px; }
 .sim-signup label { font-size: .83rem; font-weight: 850; }
 .sim-signup input { color: var(--ink); width: 100%; border: 1px solid #aab5d0; background: var(--surface); border-radius: 7px; padding: .53rem .65rem; font-size: .87rem; margin-bottom: .37rem; }
 .sim-signup input::placeholder { color: var(--muted); }
@@ -251,7 +267,6 @@
 
 @media (max-width: 940px) {
   .sim-layout { grid-template-columns: minmax(0, 1fr); }
-  .sim-side { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 }
 
 @media (max-width: 640px) {
@@ -259,20 +274,9 @@
   .sim-preview { gap: .35rem; }
   .sim-preview span { display: block; }
   .sim-hero { gap: .85rem; }
-  .sim-clock {
-    flex: 0 1 auto;
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) auto;
-    align-items: center;
-    gap: .15rem .6rem;
-    padding: .6rem .8rem;
-  }
-  .sim-clock-status { margin: 0; }
-  .sim-clock strong { grid-area: 1 / 2 / 3 / 3; font-size: 1.5rem; }
-  .sim-clock progress { grid-column: 1 / -1; margin-top: .35rem; }
   .sim-mobile-jump { display: inline-block; margin-top: .4rem; font-weight: 800; }
   .sim-layout { gap: 1rem; }
-  .sim-side { grid-template-columns: minmax(0, 1fr); }
+  .sim-layout[data-phase='before'] { grid-template-columns: minmax(0, 1fr); }
   .sim-ranking-header { flex-wrap: wrap; }
   .simulacro th:nth-child(2), .simulacro .sim-team { position: sticky; left: 0; z-index: 1; }
 }

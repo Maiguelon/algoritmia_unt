@@ -8,7 +8,7 @@ type Phase = 'before' | 'live' | 'after';
 type ProblemResult = { letter: string; minute: number | null; rejected: number };
 type Entry = { name: string; handle: string };
 type Run = { handle: string; letter: string; minute: number; accepted: boolean };
-type Material = 'statements' | 'reference' | 'set';
+type Material = 'statements' | 'notes';
 
 const phases: { id: Phase; label: string }[] = [
   { id: 'before', label: 'Antes de empezar' },
@@ -55,7 +55,6 @@ interface Props {
   problems: (Problem & { judgeUrl: string })[];
   tournaments: Tournament[];
   chunks: Chunk[];
-  referenceNotes: Selection;
   setNotes: Selection;
 }
 
@@ -97,8 +96,8 @@ function ScoreCell({ result, phase, animate }: { result: ProblemResult; phase: P
   </td>;
 }
 
-export default function SimulacroPreview({ problems, tournaments, chunks, referenceNotes, setNotes }: Props) {
-  const [phase, setPhase] = useState<Phase>('live');
+export default function SimulacroPreview({ problems, tournaments, chunks, setNotes }: Props) {
+  const [phase, setPhase] = useState<Phase>('before');
   const [entries, setEntries] = useState(demoEntries);
   const [simulated, setSimulated] = useState(0);
   const [latestEntry, setLatestEntry] = useState<Entry | null>(null);
@@ -158,7 +157,7 @@ export default function SimulacroPreview({ problems, tournaments, chunks, refere
         await downloadStatements(problems, tournaments);
       } else {
         const { downloadNotes } = await import('../lib/pdf-notes');
-        await downloadNotes(chunks, kind === 'reference' ? referenceNotes : setNotes);
+        await downloadNotes(chunks, setNotes);
       }
     } catch {
       setDownloadError('No se pudo preparar el PDF. Volvé a intentar.');
@@ -178,23 +177,38 @@ export default function SimulacroPreview({ problems, tournaments, chunks, refere
       </div>
     </div>
 
-    <header className="sim-hero">
+    <header className="sim-hero" data-phase={phase}>
       <div>
-        <p className="sim-date"><time dateTime="2026-11-18">Miércoles 18 de noviembre</time><span>16:00–18:00 · Hora argentina</span></p>
+        <p className="sim-date">
+          <time dateTime="2026-11-18">Miércoles 18 de noviembre</time>
+          {upcoming && <span>16:00–18:00 · Hora argentina</span>}
+        </p>
         <h1>Simulacro del miércoles</h1>
-        <p className="sim-intro">En la FACET o desde casa. Participá por tu cuenta o en equipo.</p>
-        {upcoming ? <a className="sim-mobile-jump" href="#inscripcion">Ir a la inscripción ↓</a> : <a className="sim-mobile-jump" href="#material">Ir a los problemas ↓</a>}
+        {upcoming && <p className="sim-intro">En la FACET o desde casa. Participá por tu cuenta o en equipo.</p>}
+        {!upcoming && <a className="sim-mobile-jump" href="#material">Ir a los problemas ↓</a>}
       </div>
-      <div className="sim-clock">
-        <p className="sim-clock-status" data-phase={phase}>{active ? 'En vivo' : upcoming ? 'Inscripción abierta' : 'Finalizado'}</p>
-        <strong>{active ? displayTime(duration - elapsed) : upcoming ? '16:00' : '2 horas'}</strong>
-        <span>{active ? 'Tiempo restante' : upcoming ? 'Hora de inicio' : 'Duración del simulacro'}</span>
-        {active && <progress max={duration} value={elapsed} aria-label="Tiempo transcurrido"/>}
-      </div>
+      {active && <div className="sim-clock">
+        <p className="sim-clock-status">En vivo</p>
+        <strong>{displayTime(duration - elapsed)}</strong>
+        <span>Tiempo restante</span>
+        <progress max={duration} value={elapsed} aria-label="Tiempo transcurrido"/>
+      </div>}
     </header>
 
-    <div className="sim-layout">
-      <section className="sim-panel sim-ranking" data-phase={phase} id="marcador" aria-labelledby="sim-ranking-title">
+    <div className="sim-layout" data-phase={phase}>
+      {upcoming && <section className="sim-panel sim-signup" id="inscripcion" aria-labelledby="sim-signup-title">
+        <h2 id="sim-signup-title">Anotate al simulacro</h2>
+        <form onSubmit={register}>
+          <label htmlFor="sim-name">Nombre para el marcador</label>
+          <input id="sim-name" name="name" placeholder="Tu nombre o el de tu equipo" maxLength={45} readOnly={checkingHandle} required/>
+          <label htmlFor="sim-handle">Usuario de Codeforces</label>
+          <input id="sim-handle" name="handle" placeholder="Usuario de quien hace los envíos" maxLength={48} autoCapitalize="none" spellCheck={false} readOnly={checkingHandle} required/>
+          <button className="button" type="submit" disabled={checkingHandle}>{checkingHandle ? 'Verificando usuario…' : 'Anotarme'} <span aria-hidden="true">→</span></button>
+        </form>
+        {registrationError && <p className="sim-error" role="alert">{registrationError}</p>}
+        {latestEntry && <p className="sim-success" role="status"><strong>{latestEntry.name}</strong> quedó anotado.</p>}
+      </section>}
+      {!upcoming && <section className="sim-panel sim-ranking" data-phase={phase} id="marcador" aria-labelledby="sim-ranking-title">
         <div className="sim-ranking-header">
           <div>
             <h2 id="sim-ranking-title">{completed ? 'Marcador final' : 'Marcador'}</h2>
@@ -211,9 +225,9 @@ export default function SimulacroPreview({ problems, tournaments, chunks, refere
               <tr>
                 <th scope="col" aria-label="Puesto">#</th><th scope="col">Participante</th>
                 {problems.map(problem => <th key={problem.id} scope="col" data-problem={problem.letter}>
-                  {upcoming ? problem.letter : <a className="sim-problem-heading" href={'#sim-problem-' + problem.letter} title={problem.title}>
+                  <a className="sim-problem-heading" href={'#sim-problem-' + problem.letter} title={problem.title}>
                     <span className="sim-balloon" aria-hidden="true"/>{problem.letter}
-                  </a>}
+                  </a>
                 </th>)}
                 <th scope="col">AC</th><th scope="col">Penal.</th>
               </tr>
@@ -226,7 +240,7 @@ export default function SimulacroPreview({ problems, tournaments, chunks, refere
                   <td className="sim-rank">
                     {medal
                       ? <span className="sim-medal" data-medal={medal} role="img" aria-label={`Puesto ${rank}, medalla de ${medal}`}>{rank}</span>
-                      : upcoming ? '–' : rank}
+                      : rank}
                   </td>
                   <th scope="row" className="sim-team">{row.name}</th>
                   {row.cells.map(cell => <ScoreCell key={cell.letter} result={cell} phase={phase}
@@ -237,51 +251,47 @@ export default function SimulacroPreview({ problems, tournaments, chunks, refere
             </tbody>
           </table>
         </div>
-        {!upcoming && <div className="sim-legend">
+        <div className="sim-legend">
           {completed ? <>
             <span><b>2/37</b> 2 intentos, AC en el minuto 37</span><span><b>2/–</b> 2 intentos sin AC</span>
           </> : <>
             <span><i className="sim-balloon" aria-hidden="true"/> Problema aceptado</span><span><b>−2</b> 2 intentos sin AC</span>
           </>}
-        </div>}
+        </div>
+      </section>}
+      <section className="sim-panel sim-material" id="material" aria-labelledby="sim-material-title">
+        <h2 id="sim-material-title">{upcoming ? 'Cómo se juega' : 'Material del simulacro'}</h2>
+        {upcoming && <ol className="sim-how">
+          <li>Descargá los enunciados al empezar.</li>
+          <li>Resolvé y probá en tu editor.</li>
+          <li>Enviá en Codeforces y seguí el marcador.</li>
+        </ol>}
+        <div className="sim-downloads">
+          {!upcoming && <button type="button" className="button" disabled={material !== null} onClick={() => download('statements')}>{material === 'statements' ? 'Preparando PDF…' : 'Descargar enunciados ↓'}</button>}
+          <button type="button" className="button secondary" disabled={material !== null} onClick={() => download('notes')}>{material === 'notes' ? 'Preparando PDF…' : 'Descargar apunte del simulacro ↓'}</button>
+        </div>
+        {downloadError && <p className="sim-error" role="alert">{downloadError}</p>}
+        {!upcoming && <>
+          <p className="sim-submit-help">Al enviar, elegí la letra del problema en Codeforces.</p>
+          <ol className="sim-problems">
+            {problems.map(problem => <li key={problem.id} id={'sim-problem-' + problem.letter}>
+              <span className="sim-letter" data-problem={problem.letter} aria-hidden="true">{problem.letter}</span>
+              <span className="sim-problem-title">{problem.title}</span>
+              <a href={problem.judgeUrl} target="_blank" rel="noreferrer" aria-label={'Enviar ' + problem.letter + '. ' + problem.title + ' en Codeforces'}>
+                Enviar <span aria-hidden="true">↗</span>
+              </a>
+            </li>)}
+          </ol>
+        </>}
       </section>
 
-      <div className="sim-side">
-        <section className="sim-panel sim-material" id="material" aria-labelledby="sim-material-title">
-          <h2 id="sim-material-title">Material del simulacro</h2>
-          {upcoming && <p>Los enunciados y los enlaces se habilitan al empezar.</p>}
-          <div className="sim-downloads">
-            {!upcoming && <button type="button" className="button" disabled={material !== null} onClick={() => download('statements')}>{material === 'statements' ? 'Preparando PDF…' : 'Descargar enunciados ↓'}</button>}
-            <button type="button" className="button secondary" disabled={material !== null} onClick={() => download('reference')}>{material === 'reference' ? 'Preparando PDF…' : 'Apunte de referencia ↓'}</button>
-            {completed && <button type="button" className="button secondary" disabled={material !== null} onClick={() => download('set')}>{material === 'set' ? 'Preparando PDF…' : 'Apunte de estos problemas ↓'}</button>}
-          </div>
-          {downloadError && <p className="sim-error" role="alert">{downloadError}</p>}
-          {!upcoming && <>
-            <p className="sim-submit-help">Al enviar, elegí la letra del problema en Codeforces.</p>
-            <ol className="sim-problems">
-              {problems.map(problem => <li key={problem.id} id={'sim-problem-' + problem.letter}>
-                <span className="sim-letter" data-problem={problem.letter} aria-hidden="true">{problem.letter}</span>
-                <span className="sim-problem-title">{problem.title}</span>
-                <a href={problem.judgeUrl} target="_blank" rel="noreferrer" aria-label={'Enviar ' + problem.letter + '. ' + problem.title + ' en Codeforces'}>
-                  Enviar <span aria-hidden="true">↗</span>
-                </a>
-              </li>)}
-            </ol>
-          </>}
-        </section>
-        {upcoming && <section className="sim-panel sim-signup" id="inscripcion" aria-labelledby="sim-signup-title">
-          <h2 id="sim-signup-title">Anotate al simulacro</h2>
-          <form onSubmit={register}>
-            <label htmlFor="sim-name">Nombre para el marcador</label>
-            <input id="sim-name" name="name" placeholder="Tu nombre o el de tu equipo" maxLength={45} readOnly={checkingHandle} required/>
-            <label htmlFor="sim-handle">Usuario de Codeforces</label>
-            <input id="sim-handle" name="handle" placeholder="Usuario de quien hace los envíos" maxLength={48} autoCapitalize="none" spellCheck={false} readOnly={checkingHandle} required/>
-            <button className="button" type="submit" disabled={checkingHandle}>{checkingHandle ? 'Verificando usuario…' : 'Anotarme'} <span aria-hidden="true">→</span></button>
-          </form>
-          {registrationError && <p className="sim-error" role="alert">{registrationError}</p>}
-          {latestEntry && <p className="sim-success" role="status"><strong>{latestEntry.name}</strong> ya aparece en el marcador.</p>}
-        </section>}
-      </div>
+      {upcoming && <section className="sim-panel sim-entries" aria-labelledby="sim-entries-title">
+        <h2 id="sim-entries-title">Participantes inscriptos <span>{entries.length}</span></h2>
+        <ul>
+          {[...entries].sort((a, b) => a.name.localeCompare(b.name, 'es-AR')).map(entry => <li key={entry.handle}
+            className={entry.handle === latestEntry?.handle ? 'sim-new-entry' : undefined}>{entry.name}</li>)}
+        </ul>
+      </section>}
     </div>
   </div>;
 }
