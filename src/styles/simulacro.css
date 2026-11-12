@@ -206,12 +206,14 @@
 .sim-downloads { display: grid; gap: .6rem; margin-top: .9rem; }
 .sim-downloads .button { text-align: center; }
 
-.sim-problems { list-style: none; padding: 0; margin: .85rem 0 -.3rem; }
+.sim-material p.sim-submit-help { margin-top: .9rem; }
+.sim-problems { list-style: none; padding: 0; margin: .4rem 0 -.3rem; }
 .sim-problems li { display: flex; align-items: baseline; gap: .55rem; padding: .45rem 0; border-bottom: 1px solid var(--line); font-size: .85rem; scroll-margin-top: 1rem; }
 .sim-problems li:last-child { border-bottom: 0; }
 .sim-problems li:target { background: var(--soft); }
 .sim-letter { display: inline-grid; place-items: center; flex: 0 0 1.4rem; background: color-mix(in srgb, var(--sim-balloon-color) 30%, white); color: var(--ink); border-radius: 4px; font-size: .79rem; font-weight: 900; }
-.sim-problems a { text-decoration: none; font-weight: 800; }
+.sim-problem-title { flex: 1; min-width: 0; font-weight: 750; }
+.sim-problems a { flex-shrink: 0; white-space: nowrap; text-decoration: none; font-weight: 800; }
 .sim-problems a:hover { text-decoration: underline; }
 .sim-problems a span { margin-left: .26rem; }
 

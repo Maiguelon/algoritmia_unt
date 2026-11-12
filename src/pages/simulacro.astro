@@ -4,13 +4,16 @@ import SimulacroPreview from '../components/SimulacroPreview';
 import { problems, tournaments } from '../lib/data';
 import { chunks } from '../lib/chunks';
 import { BASIC_CHUNK_IDS, notesLevel, presetSelection, recommendedChunkIds } from '../lib/notes-presets';
+import { codeforcesGymSubmitUrl } from '../lib/codeforces';
 import '../styles/simulacro.css';
 
 const ids = ['tap-2026-a', 'tap-2026-b', 'tap-2026-c', 'regional-2023-d', 'regional-2025-e'];
 const set = ids.map(id => {
   const problem = problems.find(item => item.id === id);
   if (!problem?.judgeUrl || !problem.statementUrl) throw new Error('Falta material del simulacro para ' + id);
-  return { ...problem, judgeUrl: problem.judgeUrl };
+  const submitUrl = codeforcesGymSubmitUrl(problem.judgeUrl);
+  if (!submitUrl) throw new Error('Falta la página de envío del Gym para ' + id);
+  return { ...problem, judgeUrl: submitUrl };
 });
 const sources = tournaments.filter(tournament => set.some(problem => problem.tournamentId === tournament.id));
 const referenceNotes = presetSelection('funciones', [...BASIC_CHUNK_IDS, 'cpp-strings', 'cpp-vectores', 'cpp-set', 'cpp-map'], chunks);

@@ -1,5 +1,6 @@
 import { useState, type SubmitEvent } from 'react';
 import type { Chunk } from '../lib/chunks';
+import { findCodeforcesHandle } from '../lib/codeforces';
 import type { Selection } from '../lib/composition';
 import type { Problem, Tournament } from '../lib/types';
 
@@ -101,6 +102,7 @@ export default function SimulacroPreview({ problems, tournaments, chunks, refere
   const [simulated, setSimulated] = useState(0);
   const [latestEntry, setLatestEntry] = useState<Entry | null>(null);
   const [registrationError, setRegistrationError] = useState('');
+  const [checkingHandle, setCheckingHandle] = useState(false);
   const [material, setMaterial] = useState<Material | null>(null);
   const [downloadError, setDownloadError] = useState('');
   const completed = phase === 'after';
@@ -111,8 +113,9 @@ export default function SimulacroPreview({ problems, tournaments, chunks, refere
   const visibleRuns = upcoming ? [] : [...demoRuns, ...nextRuns.slice(0, completed ? nextRuns.length : simulated)];
   const rows = getScoreboard(entries, visibleRuns, problems);
 
-  function register(event: SubmitEvent<HTMLFormElement>) {
+  async function register(event: SubmitEvent<HTMLFormElement>) {
     event.preventDefault();
+    if (checkingHandle) return;
     const form = event.currentTarget;
     const values = new FormData(form);
     const name = String(values.get('name') ?? '').trim();
@@ -122,15 +125,27 @@ export default function SimulacroPreview({ problems, tournaments, chunks, refere
       setRegistrationError('Revisá el nombre y escribí el usuario de Codeforces sin espacios.');
       return;
     }
-    if (entries.some(entry => entry.handle === handle)) {
+    if (entries.some(entry => entry.handle.toLowerCase() === handle)) {
       setRegistrationError('Ese usuario de Codeforces ya está anotado en este simulacro.');
       return;
     }
-    const entry = { name, handle };
-    setEntries(current => [...current, entry]);
     setRegistrationError('');
-    setLatestEntry(entry);
-    form.reset();
+    setCheckingHandle(true);
+    try {
+      const currentHandle = await findCodeforcesHandle(handle);
+      if (!currentHandle) {
+        setRegistrationError('No encontramos ese usuario en Codeforces. Revisá cómo está escrito.');
+        return;
+      }
+      const entry = { name, handle: currentHandle };
+      setEntries(current => [...current, entry]);
+      setLatestEntry(entry);
+      form.reset();
+    } catch {
+      setRegistrationError('No pudimos consultar Codeforces. Volvé a intentar en unos segundos.');
+    } finally {
+      setCheckingHandle(false);
+    }
   }
 
   async function download(kind: Material) {
@@ -235,23 +250,27 @@ export default function SimulacroPreview({ problems, tournaments, chunks, refere
             {completed && <button type="button" className="button secondary" disabled={material !== null} onClick={() => download('set')}>{material === 'set' ? 'Preparando PDF…' : 'Apunte de estos problemas ↓'}</button>}
           </div>
           {downloadError && <p className="sim-error" role="alert">{downloadError}</p>}
-          {!upcoming && <ol className="sim-problems">
-            {problems.map(problem => <li key={problem.id} id={'sim-problem-' + problem.letter}>
-              <span className="sim-letter" data-problem={problem.letter} aria-hidden="true">{problem.letter}</span>
-              <a href={problem.judgeUrl} target="_blank" rel="noreferrer" aria-label={'Abrir ' + problem.letter + '. ' + problem.title + ' en Codeforces'}>
-                {problem.title}<span aria-hidden="true">↗</span>
-              </a>
-            </li>)}
-          </ol>}
+          {!upcoming && <>
+            <p className="sim-submit-help">Al enviar, elegí la letra del problema en Codeforces.</p>
+            <ol className="sim-problems">
+              {problems.map(problem => <li key={problem.id} id={'sim-problem-' + problem.letter}>
+                <span className="sim-letter" data-problem={problem.letter} aria-hidden="true">{problem.letter}</span>
+                <span className="sim-problem-title">{problem.title}</span>
+                <a href={problem.judgeUrl} target="_blank" rel="noreferrer" aria-label={'Enviar ' + problem.letter + '. ' + problem.title + ' en Codeforces'}>
+                  Enviar <span aria-hidden="true">↗</span>
+                </a>
+              </li>)}
+            </ol>
+          </>}
         </section>
         {upcoming && <section className="sim-panel sim-signup" id="inscripcion" aria-labelledby="sim-signup-title">
           <h2 id="sim-signup-title">Anotate al simulacro</h2>
           <form onSubmit={register}>
             <label htmlFor="sim-name">Nombre para el marcador</label>
-            <input id="sim-name" name="name" placeholder="Tu nombre o el de tu equipo" maxLength={45} required/>
+            <input id="sim-name" name="name" placeholder="Tu nombre o el de tu equipo" maxLength={45} readOnly={checkingHandle} required/>
             <label htmlFor="sim-handle">Usuario de Codeforces</label>
-            <input id="sim-handle" name="handle" placeholder="Usuario de quien hace los envíos" maxLength={48} autoCapitalize="none" spellCheck={false} required/>
-            <button className="button" type="submit">Anotarme <span aria-hidden="true">→</span></button>
+            <input id="sim-handle" name="handle" placeholder="Usuario de quien hace los envíos" maxLength={48} autoCapitalize="none" spellCheck={false} readOnly={checkingHandle} required/>
+            <button className="button" type="submit" disabled={checkingHandle}>{checkingHandle ? 'Verificando usuario…' : 'Anotarme'} <span aria-hidden="true">→</span></button>
           </form>
           {registrationError && <p className="sim-error" role="alert">{registrationError}</p>}
           {latestEntry && <p className="sim-success" role="status"><strong>{latestEntry.name}</strong> ya aparece en el marcador.</p>}
