@@ -96,7 +96,7 @@ export default function SimulacroPractice() {
       </form> : <p>Vas a enviar con <strong>{handle}</strong>.</p>}
       {handleError && <p className="sim-error" role="alert">{handleError}</p>}
       <ol className="sim-how">
-        <li>En el campo del problema, escribí <strong>4A</strong> (Watermelon).</li>
+        <li>En el campo del problema, escribí <strong>4A</strong>.</li>
         <li>Elegí GNU C++17 o posterior, pegá el código y apretá <strong>Submit</strong>.</li>
         <li>Volvé a esta pestaña para ver el resultado.</li>
       </ol>

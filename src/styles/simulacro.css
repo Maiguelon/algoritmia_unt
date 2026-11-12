@@ -109,7 +109,7 @@
   margin-top: 1.65rem;
 }
 
-.sim-layout[data-phase='before'] { grid-template-columns: minmax(0, 1.25fr) minmax(0, 1fr); }
+.sim-layout[data-phase='before'] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
 .sim-panel { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 1.2rem; }
 .sim-panel h2 { margin: 0; font-size: clamp(1.2rem, 2vw, 1.65rem); }
 .sim-ranking { padding: 0; }
@@ -233,15 +233,15 @@
 .sim-legend span { display: flex; align-items: center; gap: .4rem; }
 .sim-legend b { color: var(--ink); font-variant-numeric: tabular-nums; }
 
-.sim-material-stack, .sim-practice-side { display: grid; min-width: 0; gap: .95rem; }
+.sim-registration-stack, .sim-material-stack, .sim-practice-side { display: grid; min-width: 0; gap: .95rem; }
 .sim-signup { border-top: 3px solid var(--blue); }
 .sim-handle-label { display: flex; flex-wrap: wrap; align-items: baseline; gap: .15rem .65rem; }
 .sim-handle-label a { font-size: .8rem; }
-.sim-practice-invite p, .sim-practice-invite details { color: var(--muted); font-size: .87rem; }
+.sim-practice-invite p, .sim-marker-help { color: var(--muted); font-size: .87rem; }
 .sim-practice-invite p { margin: .45rem 0 .85rem; }
-.sim-practice-invite details { border-top: 1px solid var(--line); margin-top: .95rem; padding-top: .65rem; }
-.sim-practice-invite summary { color: var(--ink); font-weight: 800; cursor: pointer; }
-.sim-practice-invite ul { margin: .55rem 0 0; padding-left: 1.2rem; }
+.sim-marker-help { border-top: 1px solid var(--line); margin-top: .95rem; padding-top: .65rem; }
+.sim-marker-help summary { color: var(--ink); font-weight: 800; cursor: pointer; }
+.sim-marker-help ul { margin: .55rem 0 0; padding-left: 1.2rem; }
 
 .sim-practice-heading { margin: .65rem 0 1.2rem; }
 .sim-practice-heading h1 { font-size: clamp(2rem, 4vw, 3.1rem); margin: .3rem 0; }
@@ -260,10 +260,8 @@
   .sim-practice-layout { grid-template-columns: minmax(0, 1fr); }
 }
 .sim-signup form { display: grid; gap: .32rem; margin-top: .8rem; }
-.sim-signup input { max-width: 31rem; }
 .sim-how { color: var(--muted); margin: .65rem 0 0; padding-left: 1.2rem; font-size: .92rem; }
 .sim-how li + li { margin-top: .18rem; }
-.sim-entries { grid-column: 1 / -1; }
 .sim-entries h2 { display: flex; align-items: center; gap: .55rem; font-size: 1.18rem; }
 .sim-entries h2 span { font: 800 .8rem/1.4 'Nunito Sans', sans-serif; color: var(--blue); background: var(--soft); border-radius: 5px; padding: .14rem .38rem; }
 .sim-entries ul { display: flex; flex-wrap: wrap; gap: .45rem; margin: .7rem 0 0; padding: 0; list-style: none; }
@@ -278,6 +276,7 @@
 .sim-material, .sim-signup { scroll-margin-top: 1rem; }
 .sim-downloads { display: grid; gap: .6rem; margin-top: .9rem; }
 .sim-downloads .button { text-align: center; }
+.sim-layout[data-phase='before'] .sim-downloads { justify-items: start; }
 
 .sim-material p.sim-submit-help { margin-top: .9rem; }
 .sim-problems { list-style: none; padding: 0; margin: .4rem 0 -.3rem; }
@@ -302,6 +301,8 @@
   .sim-mobile-jump { display: inline-block; margin-top: .4rem; font-weight: 800; }
   .sim-layout { gap: 1rem; }
   .sim-layout[data-phase='before'] { grid-template-columns: minmax(0, 1fr); }
+  .sim-registration-stack { display: contents; }
+  .sim-entries { order: 1; }
   .sim-ranking-header { flex-wrap: wrap; }
   .simulacro th:nth-child(2), .simulacro .sim-team { position: sticky; left: 0; z-index: 1; }
 }
