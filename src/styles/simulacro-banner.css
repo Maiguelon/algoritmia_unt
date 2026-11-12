@@ -3,6 +3,10 @@
   border-bottom: 1px solid #e5d499;
 }
 
+@media screen {
+  body:has(.sim-home-banner) > #contenido { padding-top: clamp(20px, 2vw, 24px); }
+}
+
 .sim-home-banner[data-live='true'] { background: #e4f6ed; border-bottom-color: #b9ddca; }
 .sim-home-banner-inner { display: flex; align-items: center; justify-content: space-between; gap: .55rem 1.25rem; padding-block: .72rem; }
 .sim-home-banner-info { display: grid; gap: .08rem; }
