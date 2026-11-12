@@ -277,6 +277,17 @@
 .sim-downloads { display: grid; gap: .6rem; margin-top: .9rem; }
 .sim-downloads .button { text-align: center; }
 .sim-layout[data-phase='before'] .sim-downloads { justify-items: start; }
+.sim-locked-download { display: flex; align-items: center; flex-wrap: wrap; gap: .28rem .65rem; }
+.sim-locked-download .button:disabled {
+  background: var(--paper);
+  border: 1px solid var(--line);
+  box-shadow: none;
+  color: var(--muted);
+  cursor: not-allowed;
+  opacity: 1;
+  transform: none;
+}
+.sim-locked-download small { color: var(--muted); font-size: .78rem; }
 
 .sim-material p.sim-submit-help { margin-top: .9rem; }
 .sim-problems { list-style: none; padding: 0; margin: .4rem 0 -.3rem; }

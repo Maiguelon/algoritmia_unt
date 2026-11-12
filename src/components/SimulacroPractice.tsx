@@ -103,7 +103,6 @@ export default function SimulacroPractice() {
       <div className="actions">
         {handle && <a className="button" href="https://codeforces.com/problemset/submit" target="_blank" rel="noreferrer"
           onClick={() => setStartedAt(current => current ?? Math.floor(Date.now() / 1000))}>Enviar en Codeforces ↗</a>}
-        <a href="https://codeforces.com/problemset/problem/4/A" target="_blank" rel="noreferrer">Ver enunciado ↗</a>
       </div>
     </section>
     <section className="sim-panel sim-ranking sim-practice-board" data-phase="live" aria-labelledby="sim-practice-board-title">

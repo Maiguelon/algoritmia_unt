@@ -275,13 +275,18 @@ export default function SimulacroPreview({ problems, tournaments, chunks, setNot
         <section className="sim-panel sim-material" id="material" aria-labelledby="sim-material-title">
           <h2 id="sim-material-title">{upcoming ? 'Cómo se juega' : 'Material del simulacro'}</h2>
           {upcoming && <ol className="sim-how">
-            <li>Descargá los enunciados al empezar.</li>
+            <li>Leé los problemas en el PDF o en el set impreso.</li>
             <li>Resolvé y probá en tu editor.</li>
             <li>Enviá en Codeforces y seguí el marcador.</li>
           </ol>}
           <div className="sim-downloads">
             {!upcoming && <button type="button" className="button" disabled={material !== null} onClick={() => download('statements')}>{material === 'statements' ? 'Preparando PDF…' : 'Descargar enunciados ↓'}</button>}
             <button type="button" className="button secondary" disabled={material !== null} onClick={() => download('notes')}>{material === 'notes' ? 'Preparando PDF…' : 'Descargar apunte del simulacro ↓'}</button>
+            {upcoming && <div className="sim-locked-download">
+              <button type="button" className="button secondary small" disabled aria-describedby="sim-statements-availability"
+                title="Los enunciados se habilitan cuando empiece el simulacro.">Descargar enunciados ↓</button>
+              <small id="sim-statements-availability">Disponibles cuando empiece el simulacro.</small>
+            </div>}
           </div>
           {downloadError && <p className="sim-error" role="alert">{downloadError}</p>}
           {upcoming && <details className="sim-marker-help">
