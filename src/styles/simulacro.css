@@ -51,7 +51,7 @@
   background: var(--surface);
   border: 1px solid var(--line);
   border-radius: 12px;
-  padding: clamp(1rem, 1.65vw, 1.4rem);
+  padding: .9rem clamp(1rem, 1.65vw, 1.4rem);
 }
 .sim-hero:not([data-phase='before']) .sim-date time {
   background: none;
@@ -63,8 +63,18 @@
 .sim-hero h1 { font-size: clamp(1.65rem, 3.3vw, 2.8rem); line-height: 1.1; margin: .48rem 0 .38rem; }
 .sim-date { display: flex; align-items: center; flex-wrap: wrap; gap: .4rem .8rem; margin: 0; font-size: .86rem; }
 .sim-date time { background: #fff0aa; color: #674718; padding: .18rem .55rem; border-radius: 5px; font-weight: 850; }
-.sim-date > span, .sim-intro { color: var(--muted); }
-.sim-intro { margin: 0; }
+.sim-date > span { color: var(--muted); }
+.sim-hero[data-phase='before'] h1 { font-size: clamp(1.65rem, 3vw, 2.4rem); margin-bottom: 0; }
+.sim-hero-details {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: clamp(.65rem, 2.2vw, 1.8rem);
+  margin: 0;
+  padding-left: clamp(.7rem, 2vw, 1.6rem);
+  border-left: 1px solid var(--line);
+}
+.sim-hero-details dt { color: var(--muted); font-size: .76rem; font-weight: 750; }
+.sim-hero-details dd { margin: 0; font-size: .92rem; font-weight: 850; }
 .sim-mobile-jump { display: none; }
 
 .sim-clock {
@@ -310,6 +320,7 @@
   .sim-preview { gap: .35rem; }
   .sim-preview span { display: block; }
   .sim-hero { gap: .85rem; }
+  .sim-hero-details { padding: .55rem 0 0; border-left: 0; border-top: 1px solid var(--line); }
   .sim-mobile-jump { display: inline-block; margin-top: .4rem; font-weight: 800; }
   .sim-layout { gap: 1rem; }
   .sim-layout[data-phase='before'] { grid-template-columns: minmax(0, 1fr); }
