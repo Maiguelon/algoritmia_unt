@@ -1,12 +1,13 @@
 import { useEffect, useState } from 'react';
 import { simulacroApi, type SimulacroAnnouncement } from '../lib/simulacro-event';
+import schedule from '../../content/simulacros/miercoles-2026-11-18.json';
 import '../styles/simulacro-banner.css';
 
 const dayFormat = new Intl.DateTimeFormat('es-AR', {
-  timeZone: 'America/Argentina/Tucuman', weekday: 'long', day: 'numeric', month: 'long',
+  timeZone: 'America/Argentina/Tucuman', weekday: 'long', day: 'numeric',
 });
 const timeFormat = new Intl.DateTimeFormat('es-AR', {
-  timeZone: 'America/Argentina/Tucuman', hour: '2-digit', minute: '2-digit',
+  timeZone: 'America/Argentina/Tucuman', hour: '2-digit', minute: '2-digit', hourCycle: 'h23',
 });
 
 export default function SimulacroBanner({ preview }: { preview: boolean }) {
@@ -45,16 +46,22 @@ export default function SimulacroBanner({ preview }: { preview: boolean }) {
 
   if (!event && !preview) return null;
   const active = event?.phase === 'live';
-  const date = event ? dayFormat.format(event.startsAt) : 'Miércoles 18 de noviembre';
-  const hours = event ? timeFormat.format(event.startsAt) + '–' + timeFormat.format(event.endsAt) : '2 horas';
+  const startsAt = new Date(event?.startsAt ?? schedule.startsAt);
+  const endsAt = new Date(event?.endsAt ?? schedule.endsAt);
+  const date = dayFormat.format(startsAt);
+  const start = timeFormat.format(startsAt).replace(/:00$/, '');
+  const end = timeFormat.format(endsAt).replace(/:00$/, '');
   const url = event ? '/simulacro/torneo/?edicion=' + encodeURIComponent(event.id) : '/simulacro/';
   return <aside className="sim-home-banner" aria-label="Simulacro del club" data-live={active}>
     <div className="container sim-home-banner-inner">
       <div className="sim-home-banner-info">
-        <strong>{event?.title ?? 'Simulacro del club'}</strong>
-        <span className="sim-home-banner-meta"><span>{date} · {hours}</span><span>En la FACET o desde casa</span></span>
+        <span className="sim-home-banner-label">{active ? 'En vivo' : 'Próximo torneo'}</span>
+        <div className="sim-home-banner-details">
+          <strong>{event?.title ?? schedule.title}</strong>
+          <span className="sim-home-banner-meta"><span>{date} de {start} a {end} hs</span><span>{schedule.location}</span></span>
+        </div>
       </div>
-      <a className="button small" href={url}>{active ? 'Entrar al simulacro' : preview ? 'Ver simulacro' : 'Anotarme'} <span aria-hidden="true">→</span></a>
+      <a className="button small" href={url}>{active ? 'Entrar al torneo' : 'Ver torneo'} <span aria-hidden="true">→</span></a>
     </div>
   </aside>;
 }

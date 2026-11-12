@@ -1,7 +1,11 @@
 import { mkdir, readFile, writeFile } from 'node:fs/promises';
 import { dirname } from 'node:path';
 
-const [edition, starts, ends, output] = process.argv.slice(2);
+const schedule = JSON.parse(await readFile(new URL('../content/simulacros/miercoles-2026-11-18.json', import.meta.url), 'utf8'));
+const [edition, first, second, third] = process.argv.slice(2);
+const [starts, ends, output] = edition === schedule.id && !second && !third
+  ? [schedule.startsAt, schedule.endsAt, first]
+  : [first, second, third];
 const isoWithZone = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(?::\d{2})?(?:Z|[+-]\d{2}:\d{2})$/;
 const start = Date.parse(starts);
 const end = Date.parse(ends);
@@ -20,7 +24,7 @@ for (const id of ids) {
     throw new Error('Falta el enunciado o el Gym de ' + id);
   }
 }
-const title = rehearsal ? 'Ensayo de inscripción' : 'Simulacro del miércoles';
+const title = rehearsal ? 'Ensayo de inscripción' : schedule.title;
 const quote = value => "'" + value.replaceAll("'", "''") + "'";
 const sql = `INSERT INTO simulacros (id, title, starts_at, ends_at, problem_ids) VALUES (${quote(edition)}, ${quote(title)}, ${start}, ${end}, ${quote(JSON.stringify(ids))});\n`;
 await mkdir(dirname(output), { recursive: true });

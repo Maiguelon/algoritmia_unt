@@ -5,7 +5,10 @@
 
 .sim-home-banner[data-live='true'] { background: #e4f6ed; border-bottom-color: #b9ddca; }
 .sim-home-banner-inner { display: flex; align-items: center; justify-content: space-between; gap: .55rem 1.25rem; padding-block: .72rem; }
-.sim-home-banner-info { display: flex; align-items: baseline; flex-wrap: wrap; gap: .05rem .9rem; }
+.sim-home-banner-info { display: grid; gap: .08rem; }
+.sim-home-banner-label { font-size: .71rem; line-height: 1.3; font-weight: 850; color: #655122; }
+.sim-home-banner[data-live='true'] .sim-home-banner-label { color: #305647; }
+.sim-home-banner-details { display: flex; align-items: baseline; flex-wrap: wrap; gap: .05rem .9rem; }
 .sim-home-banner-info strong { font-family: 'Bricolage Grotesque', sans-serif; font-size: 1.08rem; }
 .sim-home-banner-meta { display: flex; flex-wrap: wrap; column-gap: .65rem; color: #544a34; font-size: .85rem; }
 .sim-home-banner-meta span:first-child::first-letter { text-transform: uppercase; }
@@ -14,7 +17,7 @@
 .sim-home-banner .button { flex: none; }
 
 @media (max-width: 600px) {
-  .sim-home-banner-info, .sim-home-banner-meta { display: grid; }
+  .sim-home-banner-details, .sim-home-banner-meta { display: grid; }
   .sim-home-banner-meta span + span::before { content: none; }
 }
 

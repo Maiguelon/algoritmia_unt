@@ -5,6 +5,7 @@ import type { Selection } from '../lib/composition';
 import type { Tournament } from '../lib/types';
 import type { StatementProblem } from '../lib/statement-index';
 import { simulacroApi, type SimulacroEntry, type SimulacroEvent } from '../lib/simulacro-event';
+import schedule from '../../content/simulacros/miercoles-2026-11-18.json';
 
 type Phase = 'before' | 'live' | 'after';
 type ProblemResult = { letter: string; minute: number | null; rejected: number };
@@ -91,7 +92,7 @@ const argentinaDate = new Intl.DateTimeFormat('es-AR', {
   timeZone: 'America/Argentina/Tucuman', weekday: 'long', day: 'numeric', month: 'long',
 });
 const argentinaTime = new Intl.DateTimeFormat('es-AR', {
-  timeZone: 'America/Argentina/Tucuman', hour: '2-digit', minute: '2-digit',
+  timeZone: 'America/Argentina/Tucuman', hour: '2-digit', minute: '2-digit', hourCycle: 'h23',
 });
 
 function ScoreCell({ result, phase, animate }: { result: ProblemResult; phase: Phase; animate: boolean }) {
@@ -129,7 +130,8 @@ export default function SimulacroPreview({ event, receivedAt = 0, onRegistered, 
   const elapsed = lastRun?.minute ?? initialMinute;
   const visibleRuns = event || upcoming ? [] : [...demoRuns, ...nextRuns.slice(0, completed ? nextRuns.length : simulated)];
   const rows = getScoreboard(entries, visibleRuns, problems);
-  const startsAt = event ? new Date(event.startsAt) : null;
+  const startsAt = new Date(event?.startsAt ?? schedule.startsAt);
+  const endsAt = new Date(event?.endsAt ?? schedule.endsAt);
   const serverNow = event ? event.serverNow + Math.max(0, localNow - receivedAt) : 0;
   const remaining = event ? Math.max(0, Math.ceil((event.endsAt - serverNow) / 1000)) : (duration - elapsed) * 60;
   const totalSeconds = event ? Math.ceil((event.endsAt - event.startsAt) / 1000) : duration * 60;
@@ -231,13 +233,11 @@ export default function SimulacroPreview({ event, receivedAt = 0, onRegistered, 
     <header className="sim-hero" data-phase={phase}>
       <div>
         <p className="sim-date">
-          <time dateTime={startsAt?.toISOString() ?? '2026-11-18'}>{startsAt ? argentinaDate.format(startsAt) : 'Miércoles 18 de noviembre'}</time>
-          {upcoming && <span>{startsAt && event
-            ? argentinaTime.format(startsAt) + '–' + argentinaTime.format(event.endsAt)
-            : '16:00–18:00'} · Hora argentina</span>}
+          <time dateTime={startsAt.toISOString()}>{argentinaDate.format(startsAt)}</time>
+          {upcoming && <span>{argentinaTime.format(startsAt)}–{argentinaTime.format(endsAt)} · Hora argentina</span>}
         </p>
         <h1>{event?.title ?? 'Simulacro del miércoles'}</h1>
-        {upcoming && <p className="sim-intro">En la FACET o desde casa. Participá por tu cuenta o en equipo.</p>}
+        {upcoming && <p className="sim-intro">{schedule.location}. Participá por tu cuenta o en equipo.</p>}
         {!upcoming && <a className="sim-mobile-jump" href="#material">Ir a los problemas ↓</a>}
       </div>
       {active && <div className="sim-clock">
