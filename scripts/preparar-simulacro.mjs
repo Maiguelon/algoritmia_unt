@@ -5,7 +5,7 @@ const [edition, starts, ends, output] = process.argv.slice(2);
 const isoWithZone = /^\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(?::\d{2})?(?:Z|[+-]\d{2}:\d{2})$/;
 const start = Date.parse(starts);
 const end = Date.parse(ends);
-if (!edition || !/^[a-z0-9-]{1,60}$/.test(edition) || !output
+if (!edition || edition === 'proximo' || !/^[a-z0-9-]{1,60}$/.test(edition) || !output
     || !isoWithZone.test(starts) || !isoWithZone.test(ends) || !(end > start)) {
   throw new Error('Uso: node scripts/preparar-simulacro.mjs ID INICIO_ISO FIN_ISO ARCHIVO_SQL');
 }

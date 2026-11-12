@@ -1,7 +1,7 @@
 import type { D1Database, Fetcher, EventContext } from '@cloudflare/workers-types';
 import { codeforcesGymSubmitUrl, findCodeforcesHandle } from '../../../src/lib/codeforces';
 import { notesLevel, presetSelection, recommendedChunkIds } from '../../../src/lib/notes-presets';
-import { simulacroPhase, type SimulacroEntry, type SimulacroEvent } from '../../../src/lib/simulacro-event';
+import { simulacroPhase, type SimulacroAnnouncement, type SimulacroEntry, type SimulacroEvent } from '../../../src/lib/simulacro-event';
 import type { Chunk } from '../../../src/lib/chunks';
 import type { Problem, Tournament } from '../../../src/lib/types';
 
@@ -50,6 +50,21 @@ export async function onRequest({ request, env, params }: Pick<EventContext<Env,
   if (!env.SIMULACROS_DB) return json({ error: 'El registro todavía no está habilitado.' }, 503);
   const db = env.SIMULACROS_DB;
   try {
+    if (params.id === 'proximo') {
+      if (request.method !== 'GET') return json({ error: 'Método inválido.' }, 405);
+      const now = Date.now();
+      const next = await db.prepare(`
+        SELECT id, title, starts_at, ends_at FROM simulacros
+        WHERE ends_at > ? AND id NOT LIKE 'ensayo%'
+        ORDER BY starts_at, id LIMIT 1
+      `).bind(now).first<Omit<EventRow, 'problem_ids'>>();
+      if (!next) return json(null);
+      const announcement: SimulacroAnnouncement = {
+        id: next.id, title: next.title, startsAt: next.starts_at, endsAt: next.ends_at,
+        serverNow: now, phase: now < next.starts_at ? 'before' : 'live',
+      };
+      return json(announcement);
+    }
     const event = await db.prepare('SELECT * FROM simulacros WHERE id = ?').bind(params.id).first<EventRow>();
     if (!event) return json({ error: 'No encontramos esa edición del simulacro.' }, 404);
     const url = new URL(request.url);

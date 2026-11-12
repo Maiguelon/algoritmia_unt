@@ -12,6 +12,10 @@ export type SimulacroEvent = {
   entries: SimulacroEntry[];
 };
 
+export type SimulacroAnnouncement = Omit<SimulacroEvent, 'entries' | 'problemCount' | 'phase'> & {
+  phase: Exclude<SimulacroPhase, 'after'>;
+};
+
 export function simulacroPhase(startsAt: number, endsAt: number, now: number): SimulacroPhase {
   if (now < startsAt) return 'before';
   return now < endsAt ? 'live' : 'after';
