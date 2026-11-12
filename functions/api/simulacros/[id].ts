@@ -1,6 +1,6 @@
 import type { D1Database, Fetcher, EventContext } from '@cloudflare/workers-types';
 import { codeforcesGymSubmitUrl, findCodeforcesHandle } from '../../../src/lib/codeforces';
-import { notesLevel, presetSelection, recommendedChunkIds } from '../../../src/lib/notes-presets';
+import { presetSelection } from '../../../src/lib/notes-presets';
 import { simulacroPhase, type SimulacroAnnouncement, type SimulacroEntry, type SimulacroEvent } from '../../../src/lib/simulacro-event';
 import type { Chunk } from '../../../src/lib/chunks';
 import type { Problem, Tournament } from '../../../src/lib/types';
@@ -32,7 +32,7 @@ async function material(env: Env, origin: string, ids: string[], kind: string) {
 
   if (kind === 'apunte') {
     const { chunks } = await readAsset<{ chunks: Chunk[] }>(env.ASSETS, origin, '/material/apuntes.json');
-    const selection = presetSelection('recomendado', recommendedChunkIds(selected), chunks, notesLevel(selected));
+    const selection = presetSelection('funciones', selected.flatMap(problem => problem.chunkIds), chunks);
     return json({ selection, chunks: chunks.filter(chunk => chunk.id in selection) });
   }
 

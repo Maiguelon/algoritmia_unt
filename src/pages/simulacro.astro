@@ -3,7 +3,7 @@ import Layout from '../layouts/Layout.astro';
 import SimulacroPreview from '../components/SimulacroPreview';
 import { problems, tournaments } from '../lib/data';
 import { chunks } from '../lib/chunks';
-import { notesLevel, presetSelection, recommendedChunkIds } from '../lib/notes-presets';
+import { presetSelection } from '../lib/notes-presets';
 import { codeforcesGymSubmitUrl } from '../lib/codeforces';
 import '../styles/simulacro.css';
 
@@ -16,7 +16,7 @@ const set = ids.map(id => {
   return { ...problem, judgeUrl: submitUrl };
 });
 const sources = tournaments.filter(tournament => set.some(problem => problem.tournamentId === tournament.id));
-const setNotes = presetSelection('recomendado', recommendedChunkIds(set), chunks, notesLevel(set));
+const setNotes = presetSelection('funciones', set.flatMap(problem => problem.chunkIds), chunks);
 const noteChunks = chunks.filter(chunk => chunk.id in setNotes);
 ---
 <Layout title="Simulacro del miércoles" description="Vista de prueba de un simulacro del Club de Algoritmia UNT." noIndex>
