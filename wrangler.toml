@@ -1,0 +1,15 @@
+name = "club-algoritmia-unt"
+compatibility_date = "2026-11-11"
+pages_build_output_dir = "./dist"
+
+[[d1_databases]]
+binding = "SIMULACROS_DB"
+database_name = "club-algoritmia-unt-simulacros"
+database_id = "8dce4f08-d38b-4e4f-a47f-710a15a6f4e9"
+migrations_dir = "migrations"
+
+[[env.production.d1_databases]]
+binding = "SIMULACROS_DB"
+database_name = "club-algoritmia-unt-simulacros"
+database_id = "8dce4f08-d38b-4e4f-a47f-710a15a6f4e9"
+migrations_dir = "migrations"
