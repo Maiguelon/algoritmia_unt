@@ -1,7 +1,7 @@
 import { PDFDocument, StandardFonts, rgb } from 'pdf-lib';
-import type { Problem, Tournament } from './types';
+import type { Tournament } from './types';
 import { renderPdf, savePdf } from './pdf-engine';
-import { buildStatementIndex, type StatementIndexEntry } from './statement-index';
+import { buildStatementIndex, type StatementIndexEntry, type StatementProblem } from './statement-index';
 
 export type StatementBytesLoader = (url: string) => Promise<Uint8Array | ArrayBuffer>;
 
@@ -12,17 +12,18 @@ async function fetchStatement(url: string): Promise<Uint8Array> {
   return new Uint8Array(await response.arrayBuffer());
 }
 
-export function uniqueStatementProblems(problems: Problem[]): Problem[] {
+export function uniqueStatementProblems(problems: StatementProblem[]): StatementProblem[] {
   return [...new Map(problems.map(problem => [problem.id, problem])).values()];
 }
 
 /** Primero el índice con enlaces/QR; luego las páginas originales, sin portadas intermedias. */
 export async function createStatementsPdf(
-  problems: Problem[], tournaments: Tournament[], loadBytes: StatementBytesLoader = fetchStatement,
+  problems: StatementProblem[], tournaments: Tournament[], loadBytes: StatementBytesLoader = fetchStatement,
+  letters?: Readonly<Record<string, string>>,
 ): Promise<Uint8Array> {
   const selected = uniqueStatementProblems(problems);
   if (!selected.length) throw new Error('Seleccioná al menos un problema para generar los enunciados.');
-  const sources: Array<{ problem: Problem; tournament: Tournament; original: PDFDocument }> = [];
+  const sources: Array<{ problem: StatementProblem; tournament: Tournament; original: PDFDocument }> = [];
   for (const problem of selected) {
     if (!problem.statementUrl) throw new Error(`El enunciado de ${problem.letter}. ${problem.title} todavía no está disponible para descargar.`);
     const tournament = tournaments.find(item => item.id === problem.tournamentId);
@@ -39,7 +40,7 @@ export async function createStatementsPdf(
   for (let attempt = 0; attempt < 8; ++attempt) {
     let page = indexPages + 1;
     const entries: StatementIndexEntry[] = sources.map(source => {
-      const entry = { problem: source.problem, tournament: source.tournament, page };
+      const entry = { problem: source.problem, tournament: source.tournament, page, letter: letters?.[source.problem.id] };
       page += source.original.getPageCount();
       return entry;
     });
@@ -65,6 +66,6 @@ export async function createStatementsPdf(
   return output.save();
 }
 
-export async function downloadStatements(problems: Problem[], tournaments: Tournament[]): Promise<void> {
-  savePdf(await createStatementsPdf(problems, tournaments), 'enunciados-algoritmia-unt.pdf');
+export async function downloadStatements(problems: StatementProblem[], tournaments: Tournament[], letters?: Readonly<Record<string, string>>): Promise<void> {
+  savePdf(await createStatementsPdf(problems, tournaments, fetchStatement, letters), 'enunciados-algoritmia-unt.pdf');
 }

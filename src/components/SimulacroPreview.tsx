@@ -1,12 +1,14 @@
-import { useState, type SubmitEvent } from 'react';
+import { useEffect, useState, type SubmitEvent } from 'react';
 import type { Chunk } from '../lib/chunks';
 import { findCodeforcesHandle } from '../lib/codeforces';
 import type { Selection } from '../lib/composition';
-import type { Problem, Tournament } from '../lib/types';
+import type { Tournament } from '../lib/types';
+import type { StatementProblem } from '../lib/statement-index';
+import { simulacroApi, type SimulacroEntry, type SimulacroEvent } from '../lib/simulacro-event';
 
 type Phase = 'before' | 'live' | 'after';
 type ProblemResult = { letter: string; minute: number | null; rejected: number };
-type Entry = { name: string; handle: string };
+type Entry = SimulacroEntry;
 type Run = { handle: string; letter: string; minute: number; accepted: boolean };
 type Material = 'statements' | 'notes';
 
@@ -51,8 +53,13 @@ const nextRuns: Run[] = [
   { handle: 'iteradores_demo', letter: 'B', minute: 91, accepted: true },
 ];
 
+export type SimulacroProblem = StatementProblem & { judgeUrl: string; sourceLetter?: string };
+
 interface Props {
-  problems: (Problem & { judgeUrl: string })[];
+  event?: SimulacroEvent;
+  receivedAt?: number;
+  onRegistered?: () => void;
+  problems: SimulacroProblem[];
   tournaments: Tournament[];
   chunks: Chunk[];
   setNotes: Selection;
@@ -75,10 +82,17 @@ function getScoreboard(entries: Entry[], runs: Run[], problems: Props['problems'
     || a.lastAccepted - b.lastAccepted || a.name.localeCompare(b.name, 'es-AR'));
 }
 
-function displayTime(minutes: number) {
+function displayTime(seconds: number) {
   const pad = (value: number) => String(value).padStart(2, '0');
-  return [pad(Math.floor(minutes / 60)), pad(minutes % 60), '00'].join(':');
+  return [Math.floor(seconds / 3600), Math.floor(seconds / 60) % 60, seconds % 60].map(pad).join(':');
 }
+
+const argentinaDate = new Intl.DateTimeFormat('es-AR', {
+  timeZone: 'America/Argentina/Tucuman', weekday: 'long', day: 'numeric', month: 'long',
+});
+const argentinaTime = new Intl.DateTimeFormat('es-AR', {
+  timeZone: 'America/Argentina/Tucuman', hour: '2-digit', minute: '2-digit',
+});
 
 function ScoreCell({ result, phase, animate }: { result: ProblemResult; phase: Phase; animate: boolean }) {
   const { letter, minute, rejected } = result;
@@ -96,9 +110,12 @@ function ScoreCell({ result, phase, animate }: { result: ProblemResult; phase: P
   </td>;
 }
 
-export default function SimulacroPreview({ problems, tournaments, chunks, setNotes }: Props) {
-  const [phase, setPhase] = useState<Phase>('before');
-  const [entries, setEntries] = useState(demoEntries);
+export default function SimulacroPreview({ event, receivedAt = 0, onRegistered, problems, tournaments, chunks, setNotes }: Props) {
+  const [demoPhase, setPhase] = useState<Phase>('before');
+  const [previewEntries, setEntries] = useState(demoEntries);
+  const [localNow, setLocalNow] = useState(0);
+  const phase = event?.phase ?? demoPhase;
+  const entries = event?.entries ?? previewEntries;
   const [simulated, setSimulated] = useState(0);
   const [latestEntry, setLatestEntry] = useState<Entry | null>(null);
   const [registrationError, setRegistrationError] = useState('');
@@ -110,13 +127,24 @@ export default function SimulacroPreview({ problems, tournaments, chunks, setNot
   const active = phase === 'live';
   const lastRun = simulated ? nextRuns[simulated - 1] : undefined;
   const elapsed = lastRun?.minute ?? initialMinute;
-  const visibleRuns = upcoming ? [] : [...demoRuns, ...nextRuns.slice(0, completed ? nextRuns.length : simulated)];
+  const visibleRuns = event || upcoming ? [] : [...demoRuns, ...nextRuns.slice(0, completed ? nextRuns.length : simulated)];
   const rows = getScoreboard(entries, visibleRuns, problems);
+  const startsAt = event ? new Date(event.startsAt) : null;
+  const serverNow = event ? event.serverNow + Math.max(0, localNow - receivedAt) : 0;
+  const remaining = event ? Math.max(0, Math.ceil((event.endsAt - serverNow) / 1000)) : (duration - elapsed) * 60;
+  const totalSeconds = event ? Math.ceil((event.endsAt - event.startsAt) / 1000) : duration * 60;
 
-  async function register(event: SubmitEvent<HTMLFormElement>) {
-    event.preventDefault();
+  useEffect(() => {
+    if (!event || !active) return;
+    setLocalNow(Date.now());
+    const interval = window.setInterval(() => setLocalNow(Date.now()), 1000);
+    return () => window.clearInterval(interval);
+  }, [event?.id, active]);
+
+  async function register(submit: SubmitEvent<HTMLFormElement>) {
+    submit.preventDefault();
     if (checkingHandle) return;
-    const form = event.currentTarget;
+    const form = submit.currentTarget;
     const values = new FormData(form);
     const name = String(values.get('name') ?? '').trim();
     const handle = String(values.get('handle') ?? '').trim().toLowerCase();
@@ -132,17 +160,31 @@ export default function SimulacroPreview({ problems, tournaments, chunks, setNot
     setRegistrationError('');
     setCheckingHandle(true);
     try {
-      const currentHandle = await findCodeforcesHandle(handle);
-      if (!currentHandle) {
-        setRegistrationError('No encontramos ese usuario en Codeforces. Revisá cómo está escrito.');
-        return;
+      if (event) {
+        const response = await fetch(simulacroApi(event.id), {
+          method: 'POST', headers: { 'Content-Type': 'application/json' },
+          signal: AbortSignal.timeout(12000), body: JSON.stringify({ name, handle }),
+        });
+        const entry = await response.json() as Entry & { error?: string };
+        if (!response.ok) {
+          setRegistrationError(entry.error ?? 'No pudimos guardar la inscripción.');
+          return;
+        }
+        setLatestEntry(entry);
+        onRegistered?.();
+      } else {
+        const currentHandle = await findCodeforcesHandle(handle);
+        if (!currentHandle) {
+          setRegistrationError('No encontramos ese usuario en Codeforces. Revisá cómo está escrito.');
+          return;
+        }
+        const entry = { name, handle: currentHandle };
+        setEntries(current => [...current, entry]);
+        setLatestEntry(entry);
       }
-      const entry = { name, handle: currentHandle };
-      setEntries(current => [...current, entry]);
-      setLatestEntry(entry);
       form.reset();
     } catch {
-      setRegistrationError('No pudimos consultar Codeforces. Volvé a intentar en unos segundos.');
+      setRegistrationError('No pudimos completar la inscripción. Volvé a intentar en unos segundos.');
     } finally {
       setCheckingHandle(false);
     }
@@ -154,10 +196,19 @@ export default function SimulacroPreview({ problems, tournaments, chunks, setNot
     try {
       if (kind === 'statements') {
         const { downloadStatements } = await import('../lib/pdf-statements');
-        await downloadStatements(problems, tournaments);
+        const letters = Object.fromEntries(problems.map(problem => [problem.id, problem.letter]));
+        await downloadStatements(problems.map(problem => ({ ...problem, letter: problem.sourceLetter ?? problem.letter })),
+          tournaments, event ? letters : undefined);
       } else {
         const { downloadNotes } = await import('../lib/pdf-notes');
-        await downloadNotes(chunks, setNotes);
+        if (event) {
+          const response = await fetch(simulacroApi(event.id) + '?material=apunte', { signal: AbortSignal.timeout(10000) });
+          if (!response.ok) throw new Error('No se pudo cargar el apunte.');
+          const notes = await response.json() as { chunks: Chunk[]; selection: Selection };
+          await downloadNotes(notes.chunks, notes.selection);
+        } else {
+          await downloadNotes(chunks, setNotes);
+        }
       }
     } catch {
       setDownloadError('No se pudo preparar el PDF. Volvé a intentar.');
@@ -167,7 +218,7 @@ export default function SimulacroPreview({ problems, tournaments, chunks, setNot
   }
 
   return <div className="simulacro">
-    <div className="sim-preview">
+    {!event && <div className="sim-preview">
       <div>
         <strong>Vista de prueba</strong>
         <span>Horario, inscripciones y envíos de muestra.</span>
@@ -175,23 +226,25 @@ export default function SimulacroPreview({ problems, tournaments, chunks, setNot
       <div className="sim-phases" role="group" aria-label="Momento del simulacro">
         {phases.map(item => <button key={item.id} type="button" aria-pressed={phase === item.id} onClick={() => setPhase(item.id)}>{item.label}</button>)}
       </div>
-    </div>
+    </div>}
 
     <header className="sim-hero" data-phase={phase}>
       <div>
         <p className="sim-date">
-          <time dateTime="2026-11-18">Miércoles 18 de noviembre</time>
-          {upcoming && <span>16:00–18:00 · Hora argentina</span>}
+          <time dateTime={startsAt?.toISOString() ?? '2026-11-18'}>{startsAt ? argentinaDate.format(startsAt) : 'Miércoles 18 de noviembre'}</time>
+          {upcoming && <span>{startsAt && event
+            ? argentinaTime.format(startsAt) + '–' + argentinaTime.format(event.endsAt)
+            : '16:00–18:00'} · Hora argentina</span>}
         </p>
-        <h1>Simulacro del miércoles</h1>
+        <h1>{event?.title ?? 'Simulacro del miércoles'}</h1>
         {upcoming && <p className="sim-intro">En la FACET o desde casa. Participá por tu cuenta o en equipo.</p>}
         {!upcoming && <a className="sim-mobile-jump" href="#material">Ir a los problemas ↓</a>}
       </div>
       {active && <div className="sim-clock">
         <p className="sim-clock-status">En vivo</p>
-        <strong>{displayTime(duration - elapsed)}</strong>
+        <strong>{displayTime(remaining)}</strong>
         <span>Tiempo restante</span>
-        <progress max={duration} value={elapsed} aria-label="Tiempo transcurrido"/>
+        <progress max={totalSeconds} value={totalSeconds - Math.min(remaining, totalSeconds)} aria-label="Tiempo transcurrido"/>
       </div>}
     </header>
 
@@ -224,11 +277,12 @@ export default function SimulacroPreview({ problems, tournaments, chunks, setNot
         <div className="sim-ranking-header">
           <div>
             <h2 id="sim-ranking-title">{completed ? 'Marcador final' : 'Marcador'}</h2>
-            <p>{entries.length} inscripciones · {problems.length} problemas</p>
+            <p>{entries.length} inscripciones · {event?.problemCount ?? problems.length} problemas</p>
           </div>
-          {active && <button className="button secondary small" type="button" disabled={simulated === nextRuns.length} onClick={() => setSimulated(count => count + 1)}>Simular un envío</button>}
+          {active && !event && <button className="button secondary small" type="button" disabled={simulated === nextRuns.length} onClick={() => setSimulated(count => count + 1)}>Simular un envío</button>}
         </div>
-        {active && <p className="sim-update" role="status">{lastRun
+        {event && <p className="sim-update">El marcador todavía no está conectado a los envíos de Codeforces.</p>}
+        {active && !event && <p className="sim-update" role="status">{lastRun
           ? demoEntries.find(entry => entry.handle === lastRun.handle)?.name + ' resolvió ' + lastRun.letter + ' en el minuto ' + lastRun.minute + '.'
           : 'Marcador de muestra al minuto ' + initialMinute + '.'}</p>}
         <div className="sim-table-scroll" role="region" aria-label="Tabla del marcador" tabIndex={0}>
@@ -247,17 +301,17 @@ export default function SimulacroPreview({ problems, tournaments, chunks, setNot
             <tbody>
               {rows.map(row => {
                 const rank = rows.findIndex(entry => entry.solved === row.solved && entry.penalty === row.penalty && entry.lastAccepted === row.lastAccepted) + 1;
-                const medal = completed ? medals[rank - 1] : undefined;
+                const medal = completed && !event ? medals[rank - 1] : undefined;
                 return <tr key={row.handle} className={row.handle === latestEntry?.handle ? 'sim-new-entry' : undefined}>
                   <td className="sim-rank">
                     {medal
                       ? <span className="sim-medal" data-medal={medal} role="img" aria-label={`Puesto ${rank}, medalla de ${medal}`}>{rank}</span>
-                      : rank}
+                      : event ? '–' : rank}
                   </td>
                   <th scope="row" className="sim-team">{row.name}</th>
                   {row.cells.map(cell => <ScoreCell key={cell.letter} result={cell} phase={phase}
                     animate={lastRun?.handle === row.handle && lastRun.letter === cell.letter}/>)}
-                  <td className="sim-total">{row.solved}</td><td className="sim-penalty">{row.penalty}</td>
+                  <td className="sim-total">{event ? "–" : row.solved}</td><td className="sim-penalty">{event ? "–" : row.penalty}</td>
                 </tr>;
               })}
             </tbody>
@@ -280,7 +334,7 @@ export default function SimulacroPreview({ problems, tournaments, chunks, setNot
             <li>Enviá en Codeforces y seguí el marcador.</li>
           </ol>}
           <div className="sim-downloads">
-            {!upcoming && <button type="button" className="button" disabled={material !== null} onClick={() => download('statements')}>{material === 'statements' ? 'Preparando PDF…' : 'Descargar enunciados ↓'}</button>}
+            {!upcoming && <button type="button" className="button" disabled={material !== null || problems.length === 0} onClick={() => download('statements')}>{material === 'statements' ? 'Preparando PDF…' : 'Descargar enunciados ↓'}</button>}
             <button type="button" className="button secondary" disabled={material !== null} onClick={() => download('notes')}>{material === 'notes' ? 'Preparando PDF…' : 'Descargar apunte del simulacro ↓'}</button>
             {upcoming && <div className="sim-locked-download">
               <button type="button" className="button secondary small" disabled aria-describedby="sim-statements-availability"
@@ -298,11 +352,11 @@ export default function SimulacroPreview({ problems, tournaments, chunks, setNot
             </ul>
           </details>}
           {!upcoming && <>
-            <p className="sim-submit-help">Al enviar, elegí la letra del problema en Codeforces.</p>
+            <p className="sim-submit-help">{event ? 'En Codeforces, elegí la letra indicada junto a cada problema.' : 'Al enviar, elegí la letra del problema en Codeforces.'}</p>
             <ol className="sim-problems">
               {problems.map(problem => <li key={problem.id} id={'sim-problem-' + problem.letter}>
                 <span className="sim-letter" data-problem={problem.letter} aria-hidden="true">{problem.letter}</span>
-                <span className="sim-problem-title">{problem.title}</span>
+                <span className="sim-problem-title">{problem.title}{event && <small className="sim-source-letter">Codeforces {problem.sourceLetter}</small>}</span>
                 <a href={problem.judgeUrl} target="_blank" rel="noreferrer" aria-label={'Enviar ' + problem.letter + '. ' + problem.title + ' en Codeforces'}>
                   Enviar <span aria-hidden="true">↗</span>
                 </a>

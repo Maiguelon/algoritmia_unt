@@ -1,0 +1,14 @@
+{
+  // Configuración exclusiva del ensayo local. En Pages se enlaza la base del club por separado.
+  "name": "algoritmia-unt-ensayo",
+  "pages_build_output_dir": "./dist",
+  "compatibility_date": "2026-11-12",
+  "d1_databases": [
+    {
+      "binding": "SIMULACROS_DB",
+      "database_name": "simulacros-local",
+      "database_id": "30bf2982-45a2-4873-a10d-23d91a60cbd7",
+      "migrations_dir": "migrations"
+    }
+  ]
+}

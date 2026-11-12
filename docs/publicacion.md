@@ -28,7 +28,9 @@ Para actualizar el proyecto actual de Pages:
 3. Abrir Workers & Pages, elegir `club-algoritmia-unt` y crear una nueva publicación de producción mediante carga directa.
 4. Subir el ZIP, esperar la confirmación y comprobar la URL pública y las descargas.
 
-Los commits no actualizan este alojamiento por sí solos. No se agregaron tokens ni claves al repositorio. El sitio no necesita variables secretas ni un servidor de Node en producción.
+Los commits no actualizan este alojamiento por sí solos. No se agregaron tokens ni claves al repositorio. El catálogo y los PDFs del sitio funcionan con la publicación estática.
+
+La edición con inscripción compartida usa Pages Functions y una base D1. Consultá la [publicación de simulacros](simulacros.md) para esa ruta.
 
 Para un futuro proyecto conectado a Git en Pages o Vercel, elegir el repositorio y la rama, usar Node 24, instalar con `npm ci`, construir con `npm run build` y publicar `dist/`.
 

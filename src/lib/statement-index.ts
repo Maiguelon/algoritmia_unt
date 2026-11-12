@@ -2,7 +2,9 @@ import type { Problem, Tournament } from './types';
 import { tournamentLabel } from './tournament-label';
 import { baseDefinition, type PdfDefinition } from './pdf-engine';
 
-export interface StatementIndexEntry { problem: Problem; tournament: Tournament; page: number }
+export type StatementProblem = Pick<Problem, 'id' | 'tournamentId' | 'letter' | 'title' | 'statementUrl' | 'judgeUrl' | 'sourceUrl'>;
+
+export interface StatementIndexEntry { problem: StatementProblem; tournament: Tournament; page: number; letter?: string }
 
 export function buildStatementIndex(entries: StatementIndexEntry[]): PdfDefinition {
   const definition = baseDefinition('Índice de problemas');
@@ -19,8 +21,8 @@ export function buildStatementIndex(entries: StatementIndexEntry[]): PdfDefiniti
             const url = entry.problem.judgeUrl ?? entry.problem.sourceUrl;
             return [
               { stack: [
-                { text: `Problema ${index + 1} - ${entry.problem.title}`, fontSize: 11, bold: true, margin: [0, 0, 0, 7] },
-                { text: `${tournamentLabel(entry.tournament)} · ${entry.problem.letter}`, fontSize: 9, color: '#555555', margin: [0, 0, 0, 7] },
+                { text: `Problema ${entry.letter ?? index + 1} - ${entry.problem.title}`, fontSize: 11, bold: true, margin: [0, 0, 0, 7] },
+                { text: `${tournamentLabel(entry.tournament)} · ${entry.letter ? "Codeforces " : ""}${entry.problem.letter}`, fontSize: 9, color: '#555555', margin: [0, 0, 0, 7] },
                 { text: url, link: url, fontSize: 8.5, decoration: 'underline' },
               ] },
               { qr: url, fit: 64, margin: [4, 0, 0, 0] },

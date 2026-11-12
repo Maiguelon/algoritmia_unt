@@ -296,6 +296,7 @@
 .sim-problems li:target { background: var(--soft); }
 .sim-letter { display: inline-grid; place-items: center; flex: 0 0 1.4rem; background: color-mix(in srgb, var(--sim-balloon-color) 30%, white); color: var(--ink); border-radius: 4px; font-size: .79rem; font-weight: 900; }
 .sim-problem-title { flex: 1; min-width: 0; font-weight: 750; }
+.sim-source-letter { display: block; color: var(--muted); font-size: .74rem; font-weight: 650; }
 .sim-problems a { flex-shrink: 0; white-space: nowrap; text-decoration: none; font-weight: 800; }
 .sim-problems a:hover { text-decoration: underline; }
 .sim-problems a span { margin-left: .26rem; }
