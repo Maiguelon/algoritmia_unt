@@ -7,6 +7,10 @@
   body:has(.sim-home-banner) > #contenido { padding-top: clamp(20px, 2vw, 24px); }
 }
 
+@media screen and (min-width: 941px) {
+  body:has(.sim-home-banner) > #contenido { padding-top: 14px; }
+}
+
 .sim-home-banner[data-live='true'] { background: #e4f6ed; border-bottom-color: #b9ddca; }
 .sim-home-banner-inner { display: flex; align-items: center; justify-content: space-between; gap: .55rem 1.25rem; padding-block: .72rem; }
 .sim-home-banner-info { display: grid; gap: .08rem; }
