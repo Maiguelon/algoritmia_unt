@@ -237,7 +237,7 @@ export default function SimulacroPreview({ event, receivedAt = 0, onRegistered, 
           {upcoming && <span>{argentinaTime.format(startsAt)}–{argentinaTime.format(endsAt)} · Hora argentina</span>}
         </p>
         <h1>{event?.title ?? 'Simulacro del miércoles'}</h1>
-        {upcoming && <p className="sim-intro">{schedule.location}. Participá por tu cuenta o en equipo.</p>}
+        {upcoming && <p className="sim-intro">En {schedule.venue} o desde casa. Participá por tu cuenta o en equipo.</p>}
         {!upcoming && <a className="sim-mobile-jump" href="#material">Ir a los problemas ↓</a>}
       </div>
       {active && <div className="sim-clock">

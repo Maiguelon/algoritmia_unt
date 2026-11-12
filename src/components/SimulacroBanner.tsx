@@ -58,7 +58,7 @@ export default function SimulacroBanner({ preview }: { preview: boolean }) {
         <span className="sim-home-banner-label">{active ? 'En vivo' : 'Próximo torneo'}</span>
         <div className="sim-home-banner-details">
           <strong>{event?.title ?? schedule.title}</strong>
-          <span className="sim-home-banner-meta"><span>{date} de {start} a {end} hs</span><span>{schedule.location}</span></span>
+          <span className="sim-home-banner-meta"><span>{date} de {start} a {end} hs</span><span>En {schedule.venue} o en remoto</span></span>
         </div>
       </div>
       <a className="button small" href={url}>{active ? 'Entrar al torneo' : 'Ver torneo'} <span aria-hidden="true">→</span></a>
