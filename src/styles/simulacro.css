@@ -120,6 +120,11 @@
 }
 
 .sim-layout[data-phase='before'] { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+
+@media screen {
+  #contenido:has(.sim-hero[data-phase='before']) { padding-top: 1.35rem; }
+  .sim-layout[data-phase='before'] { margin-top: 1.35rem; }
+}
 .sim-panel { background: var(--surface); border: 1px solid var(--line); border-radius: 12px; padding: 1.2rem; }
 .sim-panel h2 { margin: 0; font-size: clamp(1.2rem, 2vw, 1.65rem); }
 .sim-ranking { padding: 0; }
@@ -249,7 +254,7 @@
 .sim-handle-label a { font-size: .8rem; }
 .sim-practice-invite p, .sim-marker-help { color: var(--muted); font-size: .87rem; }
 .sim-practice-invite p { margin: .45rem 0 .85rem; }
-.sim-marker-help { border-top: 1px solid var(--line); margin-top: .95rem; padding-top: .65rem; }
+.sim-marker-help { border-top: 1px solid var(--line); margin-top: .65rem; padding-top: .55rem; }
 .sim-marker-help summary { color: var(--ink); font-weight: 800; cursor: pointer; }
 .sim-marker-help ul { margin: .55rem 0 0; padding-left: 1.2rem; }
 
@@ -286,9 +291,15 @@
 .sim-material, .sim-signup { scroll-margin-top: 1rem; }
 .sim-downloads { display: grid; gap: .6rem; margin-top: .9rem; }
 .sim-downloads .button { text-align: center; }
-.sim-layout[data-phase='before'] .sim-downloads { justify-items: start; }
-.sim-locked-download { display: flex; align-items: center; flex-wrap: wrap; gap: .28rem .65rem; }
-.sim-locked-download .button:disabled {
+.sim-layout[data-phase='before'] .sim-material { padding-block: 1rem; }
+.sim-layout[data-phase='before'] .sim-downloads {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: .35rem .75rem;
+  margin-top: .7rem;
+}
+.sim-downloads .sim-statements-locked:disabled {
   background: var(--paper);
   border: 1px solid var(--line);
   box-shadow: none;
@@ -297,7 +308,7 @@
   opacity: 1;
   transform: none;
 }
-.sim-locked-download small { color: var(--muted); font-size: .78rem; }
+.sim-statements-availability { flex-basis: 100%; color: var(--muted); font-size: .78rem; }
 
 .sim-material p.sim-submit-help { margin-top: .9rem; }
 .sim-problems { list-style: none; padding: 0; margin: .4rem 0 -.3rem; }

@@ -338,12 +338,12 @@ export default function SimulacroPreview({ event, receivedAt = 0, onRegistered, 
           </ol>}
           <div className="sim-downloads">
             {!upcoming && <button type="button" className="button" disabled={material !== null || problems.length === 0} onClick={() => download('statements')}>{material === 'statements' ? 'Preparando PDF…' : 'Descargar enunciados ↓'}</button>}
-            <button type="button" className="button secondary" disabled={material !== null} onClick={() => download('notes')}>{material === 'notes' ? 'Preparando PDF…' : 'Descargar apunte del simulacro ↓'}</button>
-            {upcoming && <div className="sim-locked-download">
-              <button type="button" className="button secondary small" disabled aria-describedby="sim-statements-availability"
+            <button type="button" className={upcoming ? 'button secondary small' : 'button secondary'} disabled={material !== null} onClick={() => download('notes')}>{material === 'notes' ? 'Preparando PDF…' : 'Descargar apunte del simulacro ↓'}</button>
+            {upcoming && <>
+              <button type="button" className="button secondary small sim-statements-locked" disabled aria-describedby="sim-statements-availability"
                 title="Los enunciados se habilitan cuando empiece el simulacro.">Descargar enunciados ↓</button>
-              <small id="sim-statements-availability">Disponibles cuando empiece el simulacro.</small>
-            </div>}
+              <small id="sim-statements-availability" className="sim-statements-availability">Disponibles cuando empiece el simulacro.</small>
+            </>}
           </div>
           {downloadError && <p className="sim-error" role="alert">{downloadError}</p>}
           {upcoming && <details className="sim-marker-help">
