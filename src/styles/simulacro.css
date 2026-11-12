@@ -131,6 +131,38 @@
 
 .simulacro th[data-problem], .simulacro td[data-problem] { width: 9%; }
 .sim-rank, .sim-penalty { color: var(--muted); }
+.sim-medal {
+  --medal-surface: #ffdc72;
+  --medal-edge: #a36813;
+  --medal-ink: #5a360c;
+  position: relative;
+  display: inline-grid;
+  place-items: center;
+  width: 1.65rem;
+  height: 1.65rem;
+  margin-top: .42rem;
+  border: 1px solid var(--medal-edge);
+  border-radius: 50%;
+  background: var(--medal-surface);
+  box-shadow: inset 0 0 0 2px rgb(255 255 255 / 45%);
+  color: var(--medal-ink);
+  font-size: .83rem;
+  font-weight: 900;
+  vertical-align: middle;
+}
+.sim-medal::before {
+  content: '';
+  position: absolute;
+  top: -.49rem;
+  left: 50%;
+  width: 1.08rem;
+  height: .55rem;
+  transform: translateX(-50%);
+  background: linear-gradient(90deg, #385bb9 0 50%, #dc5664 50%);
+  clip-path: polygon(0 0, 34% 0, 50% 44%, 66% 0, 100% 0, 74% 100%, 26% 100%);
+}
+.sim-medal[data-medal='plata'] { --medal-surface: #d9e3f4; --medal-edge: #7688a5; --medal-ink: #364562; }
+.sim-medal[data-medal='bronce'] { --medal-surface: #efb591; --medal-edge: #a7613b; --medal-ink: #632f18; }
 .sim-total { font-weight: 900; color: var(--blue); }
 .sim-new-entry { background: var(--soft); }
 .sim-cell { display: inline-block; min-width: 2.1rem; padding: .15rem .25rem; border-radius: 5px; font-size: .84rem; color: var(--muted); }

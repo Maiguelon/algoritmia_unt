@@ -15,6 +15,7 @@ const phases: { id: Phase; label: string }[] = [
   { id: 'live', label: 'En vivo' },
   { id: 'after', label: 'Finalizado' },
 ];
+const medals = ['oro', 'plata', 'bronce'];
 const duration = 120;
 const initialMinute = 42;
 const demoEntries: Entry[] = [
@@ -219,9 +220,14 @@ export default function SimulacroPreview({ problems, tournaments, chunks, refere
             </thead>
             <tbody>
               {rows.map(row => {
-                const firstAtRank = rows.findIndex(entry => entry.solved === row.solved && entry.penalty === row.penalty && entry.lastAccepted === row.lastAccepted);
+                const rank = rows.findIndex(entry => entry.solved === row.solved && entry.penalty === row.penalty && entry.lastAccepted === row.lastAccepted) + 1;
+                const medal = completed ? medals[rank - 1] : undefined;
                 return <tr key={row.handle} className={row.handle === latestEntry?.handle ? 'sim-new-entry' : undefined}>
-                  <td className="sim-rank">{upcoming ? '–' : firstAtRank + 1}</td>
+                  <td className="sim-rank">
+                    {medal
+                      ? <span className="sim-medal" data-medal={medal} role="img" aria-label={`Puesto ${rank}, medalla de ${medal}`}>{rank}</span>
+                      : upcoming ? '–' : rank}
+                  </td>
                   <th scope="row" className="sim-team">{row.name}</th>
                   {row.cells.map(cell => <ScoreCell key={cell.letter} result={cell} phase={phase}
                     animate={lastRun?.handle === row.handle && lastRun.letter === cell.letter}/>)}
