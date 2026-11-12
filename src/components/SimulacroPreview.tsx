@@ -4,6 +4,7 @@ import type { Selection } from '../lib/composition';
 import type { Problem, Tournament } from '../lib/types';
 
 type Phase = 'before' | 'live' | 'after';
+type ProblemResult = { letter: string; minute: number | null; rejected: number };
 type Entry = { name: string; handle: string };
 type Run = { handle: string; letter: string; minute: number; accepted: boolean };
 type Material = 'statements' | 'reference' | 'set';
@@ -76,6 +77,22 @@ function getScoreboard(entries: Entry[], runs: Run[], problems: Props['problems'
 function displayTime(minutes: number) {
   const pad = (value: number) => String(value).padStart(2, '0');
   return [pad(Math.floor(minutes / 60)), pad(minutes % 60), '00'].join(':');
+}
+
+function ScoreCell({ result, phase, animate }: { result: ProblemResult; phase: Phase; animate: boolean }) {
+  const { letter, minute, rejected } = result;
+  const solved = minute !== null;
+  const attempts = rejected + (solved ? 1 : 0);
+  const description = solved
+    ? `Aceptado en el minuto ${minute}, ${attempts} ${attempts === 1 ? 'intento' : 'intentos'}`
+    : attempts ? `${attempts} ${attempts === 1 ? 'intento' : 'intentos'} sin AC` : 'Sin intentos';
+  const text = attempts ? (phase === 'after' ? `${attempts}/${minute ?? '–'}` : `−${attempts}`) : '–';
+
+  return <td data-problem={letter} data-result={solved ? 'ac' : attempts ? 'wa' : undefined} title={description} aria-label={description}>
+    {phase === 'live' && solved
+      ? <span className="sim-balloon" data-new={animate || undefined} aria-hidden="true"/>
+      : <span className="sim-cell">{text}</span>}
+  </td>;
 }
 
 export default function SimulacroPreview({ problems, tournaments, chunks, referenceNotes, setNotes }: Props) {
@@ -161,7 +178,7 @@ export default function SimulacroPreview({ problems, tournaments, chunks, refere
     </header>
 
     <div className="sim-layout">
-      <section className="sim-panel sim-ranking" id="marcador" aria-labelledby="sim-ranking-title">
+      <section className="sim-panel sim-ranking" data-phase={phase} id="marcador" aria-labelledby="sim-ranking-title">
         <div className="sim-ranking-header">
           <div>
             <h2 id="sim-ranking-title">{completed ? 'Marcador final' : 'Marcador'}</h2>
@@ -176,10 +193,13 @@ export default function SimulacroPreview({ problems, tournaments, chunks, refere
           <table>
             <thead>
               <tr>
-                <th scope="col" aria-label="Puesto">#</th><th scope="col">Participante</th><th scope="col">AC</th><th scope="col">Penal.</th>
-                {problems.map(problem => <th key={problem.id} scope="col">
-                  {upcoming ? problem.letter : <a href={'#sim-problem-' + problem.letter} title={problem.title}>{problem.letter}</a>}
+                <th scope="col" aria-label="Puesto">#</th><th scope="col">Participante</th>
+                {problems.map(problem => <th key={problem.id} scope="col" data-problem={problem.letter}>
+                  {upcoming ? problem.letter : <a className="sim-problem-heading" href={'#sim-problem-' + problem.letter} title={problem.title}>
+                    <span className="sim-balloon" aria-hidden="true"/>{problem.letter}
+                  </a>}
                 </th>)}
+                <th scope="col">AC</th><th scope="col">Penal.</th>
               </tr>
             </thead>
             <tbody>
@@ -188,18 +208,21 @@ export default function SimulacroPreview({ problems, tournaments, chunks, refere
                 return <tr key={row.handle} className={row.handle === latestEntry?.handle ? 'sim-new-entry' : undefined}>
                   <td className="sim-rank">{upcoming ? '–' : firstAtRank + 1}</td>
                   <th scope="row" className="sim-team">{row.name}</th>
+                  {row.cells.map(cell => <ScoreCell key={cell.letter} result={cell} phase={phase}
+                    animate={lastRun?.handle === row.handle && lastRun.letter === cell.letter}/>)}
                   <td className="sim-total">{row.solved}</td><td className="sim-penalty">{row.penalty}</td>
-                  {row.cells.map(({ letter, minute, rejected }) => <td key={letter}>
-                    {minute !== null ? <span className="sim-cell sim-cell-ac" title={rejected ? 'AC con ' + rejected + ' intentos penalizados' : 'AC al primer intento'}><b>{minute}′</b>{rejected > 0 && <small>+{rejected}</small>}</span>
-                      : rejected > 0 ? <span className="sim-cell sim-cell-wa" title={rejected + ' intentos sin AC'}>−{rejected}</span>
-                        : <span className="sim-cell sim-cell-empty">–</span>}
-                  </td>)}
                 </tr>;
               })}
             </tbody>
           </table>
         </div>
-        <div className="sim-legend"><span><i className="sim-key-ac"></i> Aceptado · minuto y fallos</span><span><i className="sim-key-wa"></i> Intentos sin AC</span></div>
+        {!upcoming && <div className="sim-legend">
+          {completed ? <>
+            <span><b>2/37</b> 2 intentos, AC en el minuto 37</span><span><b>2/–</b> 2 intentos sin AC</span>
+          </> : <>
+            <span><i className="sim-balloon" aria-hidden="true"/> Problema aceptado</span><span><b>−2</b> 2 intentos sin AC</span>
+          </>}
+        </div>}
       </section>
 
       <div className="sim-side">
@@ -214,14 +237,14 @@ export default function SimulacroPreview({ problems, tournaments, chunks, refere
           {downloadError && <p className="sim-error" role="alert">{downloadError}</p>}
           {!upcoming && <ol className="sim-problems">
             {problems.map(problem => <li key={problem.id} id={'sim-problem-' + problem.letter}>
-              <span className="sim-letter" aria-hidden="true">{problem.letter}</span>
+              <span className="sim-letter" data-problem={problem.letter} aria-hidden="true">{problem.letter}</span>
               <a href={problem.judgeUrl} target="_blank" rel="noreferrer" aria-label={'Abrir ' + problem.letter + '. ' + problem.title + ' en Codeforces'}>
                 {problem.title}<span aria-hidden="true">↗</span>
               </a>
             </li>)}
           </ol>}
         </section>
-        {!completed && <section className="sim-panel sim-signup" id="inscripcion" aria-labelledby="sim-signup-title">
+        {upcoming && <section className="sim-panel sim-signup" id="inscripcion" aria-labelledby="sim-signup-title">
           <h2 id="sim-signup-title">Anotate al simulacro</h2>
           <form onSubmit={register}>
             <label htmlFor="sim-name">Nombre para el marcador</label>
