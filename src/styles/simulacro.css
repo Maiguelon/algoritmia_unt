@@ -233,7 +233,32 @@
 .sim-legend span { display: flex; align-items: center; gap: .4rem; }
 .sim-legend b { color: var(--ink); font-variant-numeric: tabular-nums; }
 
+.sim-material-stack, .sim-practice-side { display: grid; min-width: 0; gap: .95rem; }
 .sim-signup { border-top: 3px solid var(--blue); }
+.sim-handle-label { display: flex; flex-wrap: wrap; align-items: baseline; gap: .15rem .65rem; }
+.sim-handle-label a { font-size: .8rem; }
+.sim-practice-invite p, .sim-practice-invite details { color: var(--muted); font-size: .87rem; }
+.sim-practice-invite p { margin: .45rem 0 .85rem; }
+.sim-practice-invite details { border-top: 1px solid var(--line); margin-top: .95rem; padding-top: .65rem; }
+.sim-practice-invite summary { color: var(--ink); font-weight: 800; cursor: pointer; }
+.sim-practice-invite ul { margin: .55rem 0 0; padding-left: 1.2rem; }
+
+.sim-practice-heading { margin: .65rem 0 1.2rem; }
+.sim-practice-heading h1 { font-size: clamp(2rem, 4vw, 3.1rem); margin: .3rem 0; }
+.sim-practice-heading p { color: var(--muted); margin: 0; }
+.sim-practice-layout { display: grid; grid-template-columns: minmax(0, 1.1fr) minmax(0, 1fr); gap: 1.15rem; align-items: start; }
+.sim-practice-layout code-copy pre code { background: transparent; color: inherit; padding: 0; }
+.sim-practice-form { display: grid; gap: .35rem; margin-top: .8rem; }
+.sim-practice-form label { font-weight: 800; font-size: .85rem; }
+.sim-practice-form input { width: 100%; border: 1px solid #aab5d0; border-radius: 7px; padding: .5rem .65rem; color: var(--ink); }
+.sim-practice-form button { justify-self: start; margin: .25rem 0; }
+.sim-practice-board table { min-width: 0; }
+.sim-practice-board th:first-child { text-align: left; }
+.sim-practice-board .sim-team { width: 62%; }
+.sim-practice-status { border-top: 1px solid var(--line); margin: 0; padding: .8rem 1.2rem; font-size: .9rem; }
+@media (max-width: 760px) {
+  .sim-practice-layout { grid-template-columns: minmax(0, 1fr); }
+}
 .sim-signup form { display: grid; gap: .32rem; margin-top: .8rem; }
 .sim-signup input { max-width: 31rem; }
 .sim-how { color: var(--muted); margin: .65rem 0 0; padding-left: 1.2rem; font-size: .92rem; }

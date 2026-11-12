@@ -20,3 +20,22 @@ export async function findCodeforcesHandle(handle: string): Promise<string | nul
   }
   throw new Error('Codeforces no pudo confirmar el usuario.');
 }
+
+export type CodeforcesSubmission = {
+  creationTimeSeconds: number;
+  problem: { contestId?: number; index: string };
+  verdict?: string;
+};
+
+export async function recentCodeforcesSubmissions(handle: string, signal: AbortSignal): Promise<CodeforcesSubmission[]> {
+  const url = new URL('/api/user.status', CODEFORCES_ORIGIN);
+  url.search = new URLSearchParams({ handle, from: '1', count: '30' }).toString();
+  const response = await fetch(url, {
+    credentials: 'omit',
+    cache: 'no-store',
+    signal: AbortSignal.any([signal, AbortSignal.timeout(8000)]),
+  });
+  const data = await response.json() as { status: string; result?: CodeforcesSubmission[] };
+  if (response.ok && data.status === 'OK' && Array.isArray(data.result)) return data.result;
+  throw new Error('Codeforces no devolvió los envíos.');
+}

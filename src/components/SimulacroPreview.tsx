@@ -201,12 +201,15 @@ export default function SimulacroPreview({ problems, tournaments, chunks, setNot
         <form onSubmit={register}>
           <label htmlFor="sim-name">Nombre para el marcador</label>
           <input id="sim-name" name="name" placeholder="Tu nombre o el de tu equipo" maxLength={45} readOnly={checkingHandle} required/>
-          <label htmlFor="sim-handle">Usuario de Codeforces</label>
+          <div className="sim-handle-label">
+            <label htmlFor="sim-handle">Usuario de Codeforces</label>
+            <a href="https://codeforces.com/register" target="_blank" rel="noreferrer">¿No tenés cuenta? Creá una ↗</a>
+          </div>
           <input id="sim-handle" name="handle" placeholder="Usuario de quien hace los envíos" maxLength={48} autoCapitalize="none" spellCheck={false} readOnly={checkingHandle} required/>
           <button className="button" type="submit" disabled={checkingHandle}>{checkingHandle ? 'Verificando usuario…' : 'Anotarme'} <span aria-hidden="true">→</span></button>
         </form>
         {registrationError && <p className="sim-error" role="alert">{registrationError}</p>}
-        {latestEntry && <p className="sim-success" role="status"><strong>{latestEntry.name}</strong> quedó anotado.</p>}
+        {latestEntry && <p className="sim-success" role="status"><strong>{latestEntry.name}</strong> quedó anotado. ¡No necesitás hacer nada más!</p>}
       </section>}
       {!upcoming && <section className="sim-panel sim-ranking" data-phase={phase} id="marcador" aria-labelledby="sim-ranking-title">
         <div className="sim-ranking-header">
@@ -259,31 +262,47 @@ export default function SimulacroPreview({ problems, tournaments, chunks, setNot
           </>}
         </div>
       </section>}
-      <section className="sim-panel sim-material" id="material" aria-labelledby="sim-material-title">
-        <h2 id="sim-material-title">{upcoming ? 'Cómo se juega' : 'Material del simulacro'}</h2>
-        {upcoming && <ol className="sim-how">
-          <li>Descargá los enunciados al empezar.</li>
-          <li>Resolvé y probá en tu editor.</li>
-          <li>Enviá en Codeforces y seguí el marcador.</li>
-        </ol>}
-        <div className="sim-downloads">
-          {!upcoming && <button type="button" className="button" disabled={material !== null} onClick={() => download('statements')}>{material === 'statements' ? 'Preparando PDF…' : 'Descargar enunciados ↓'}</button>}
-          <button type="button" className="button secondary" disabled={material !== null} onClick={() => download('notes')}>{material === 'notes' ? 'Preparando PDF…' : 'Descargar apunte del simulacro ↓'}</button>
-        </div>
-        {downloadError && <p className="sim-error" role="alert">{downloadError}</p>}
-        {!upcoming && <>
-          <p className="sim-submit-help">Al enviar, elegí la letra del problema en Codeforces.</p>
-          <ol className="sim-problems">
-            {problems.map(problem => <li key={problem.id} id={'sim-problem-' + problem.letter}>
-              <span className="sim-letter" data-problem={problem.letter} aria-hidden="true">{problem.letter}</span>
-              <span className="sim-problem-title">{problem.title}</span>
-              <a href={problem.judgeUrl} target="_blank" rel="noreferrer" aria-label={'Enviar ' + problem.letter + '. ' + problem.title + ' en Codeforces'}>
-                Enviar <span aria-hidden="true">↗</span>
-              </a>
-            </li>)}
-          </ol>
-        </>}
-      </section>
+      <div className="sim-material-stack">
+        <section className="sim-panel sim-material" id="material" aria-labelledby="sim-material-title">
+          <h2 id="sim-material-title">{upcoming ? 'Cómo se juega' : 'Material del simulacro'}</h2>
+          {upcoming && <ol className="sim-how">
+            <li>Descargá los enunciados al empezar.</li>
+            <li>Resolvé y probá en tu editor.</li>
+            <li>Enviá en Codeforces y seguí el marcador.</li>
+          </ol>}
+          <div className="sim-downloads">
+            {!upcoming && <button type="button" className="button" disabled={material !== null} onClick={() => download('statements')}>{material === 'statements' ? 'Preparando PDF…' : 'Descargar enunciados ↓'}</button>}
+            <button type="button" className="button secondary" disabled={material !== null} onClick={() => download('notes')}>{material === 'notes' ? 'Preparando PDF…' : 'Descargar apunte del simulacro ↓'}</button>
+          </div>
+          {downloadError && <p className="sim-error" role="alert">{downloadError}</p>}
+          {!upcoming && <>
+            <p className="sim-submit-help">Al enviar, elegí la letra del problema en Codeforces.</p>
+            <ol className="sim-problems">
+              {problems.map(problem => <li key={problem.id} id={'sim-problem-' + problem.letter}>
+                <span className="sim-letter" data-problem={problem.letter} aria-hidden="true">{problem.letter}</span>
+                <span className="sim-problem-title">{problem.title}</span>
+                <a href={problem.judgeUrl} target="_blank" rel="noreferrer" aria-label={'Enviar ' + problem.letter + '. ' + problem.title + ' en Codeforces'}>
+                  Enviar <span aria-hidden="true">↗</span>
+                </a>
+              </li>)}
+            </ol>
+          </>}
+        </section>
+
+        {upcoming && <section className="sim-panel sim-practice-invite" aria-labelledby="sim-practice-invite-title">
+          <h2 id="sim-practice-invite-title">Probá un envío</h2>
+          <p>¿Ya te anotaste? Practicá cómo enviar en Codeforces y ver tu resultado en el marcador.</p>
+          <a className="button secondary" target="_blank" rel="noreferrer" href={latestEntry ? '/simulacro/prueba/?usuario=' + encodeURIComponent(latestEntry.handle) : '/simulacro/prueba/'}>Probar un envío →</a>
+          <details>
+            <summary>Cómo leer el marcador</summary>
+            <ul>
+              <li><strong>AC</strong> significa que el juez aceptó tu solución. En vivo aparece un globo.</li>
+              <li><strong>2/37</strong> indica que el problema salió en el segundo intento, al minuto 37.</li>
+              <li>El set combina problemas de entrada con otros que piden más técnica.</li>
+            </ul>
+          </details>
+        </section>}
+      </div>
 
       {upcoming && <section className="sim-panel sim-entries" aria-labelledby="sim-entries-title">
         <h2 id="sim-entries-title">Participantes inscriptos <span>{entries.length}</span></h2>

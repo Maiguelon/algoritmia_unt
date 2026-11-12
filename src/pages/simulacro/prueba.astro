@@ -1,0 +1,33 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import CodeCopy from '../../components/CodeCopy.astro';
+import SimulacroPractice from '../../components/SimulacroPractice';
+import '../../styles/simulacro.css';
+
+const code = `#include <iostream>
+using namespace std;
+
+int main() {
+    int peso;
+    cin >> peso;
+    cout << (peso > 2 && peso % 2 == 0 ? "YES" : "NO") << '\\n';
+}
+`;
+---
+<Layout title="Probá un envío" description="Practicá un envío a Codeforces antes del simulacro del Club de Algoritmia." noIndex>
+  <div class="simulacro">
+    <a href="/simulacro/">← Volver al simulacro</a>
+    <header class="sim-practice-heading">
+      <h1>Probá un envío</h1>
+      <p>Hacé un envío real a Codeforces y mirá cómo aparece en tu marcador de práctica.</p>
+    </header>
+    <div class="sim-practice-layout">
+      <section class="sim-panel" aria-labelledby="sim-practice-code">
+        <h2 id="sim-practice-code">Copiá la solución de prueba</h2>
+        <p>Para <strong>4A · Watermelon</strong>, este programa ya está listo para enviar.</p>
+        <CodeCopy code={code} title="Solución en C++" copyLabel="Copiar código"/>
+      </section>
+      <SimulacroPractice client:load/>
+    </div>
+  </div>
+</Layout>
