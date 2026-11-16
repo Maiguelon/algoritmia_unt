@@ -2,13 +2,13 @@ import {useMemo,useState} from 'react';
 import type {Problem,Tournament} from '../lib/types';
 import {useSelection} from '../lib/selection';
 import {tournamentLabel} from '../lib/tournament-label';
-import {preferSpanishStatement,spanishStatementUrl} from '../lib/statement-language';
+import {spanishStatementUrl,usePreferSpanishStatements} from '../lib/statement-language';
 import {recommendedChunkIds,supportsAutomaticNotes} from '../lib/notes-presets';
 export default function StatementDownload({problems,tournaments,includedChunkIds=[]}:{problems:Problem[];tournaments:Tournament[];includedChunkIds?:string[]}){
   const allowed=useMemo(()=>problems.map(problem=>problem.id),[problems]);
   const {selected,remove,clear,ready}=useSelection(allowed);
   const [busy,setBusy]=useState(false),[error,setError]=useState('');
-  const [preferSpanish,setPreferSpanish]=useState(false);
+  const preferSpanish=usePreferSpanishStatements();
   const chosen=selected.map(id=>problems.find(p=>p.id===id)!).filter(Boolean);
   const missing=chosen.filter(p=>!p.statementUrl);
   const english=preferSpanish?chosen.filter(problem=>problem.statementUrl&&!spanishStatementUrl(problem)):[];
@@ -17,7 +17,7 @@ export default function StatementDownload({problems,tournaments,includedChunkIds
     setError('');
     try {
       const {downloadStatements}=await import('../lib/pdf-statements');
-      await downloadStatements(preferSpanish?chosen.map(preferSpanishStatement):chosen,tournaments);
+      await downloadStatements(chosen,tournaments);
     } catch(e) {
       setError(e instanceof Error?e.message:'No se pudo generar el PDF.');
     } finally {
@@ -42,7 +42,6 @@ export default function StatementDownload({problems,tournaments,includedChunkIds
           <button type="button" className="material-text-button" disabled={busy} aria-label={`Quitar ${p.title}`} onClick={()=>remove(p.id)}>Quitar</button>
         </li>;
       })}</ol>
-      <label className="statement-language"><input type="checkbox" checked={preferSpanish} disabled={busy} onChange={event=>setPreferSpanish(event.currentTarget.checked)}/> Preferir enunciados en español</label>
       {english.length>0&&<p className="material-tool-count">En inglés: {english.map(problem=>problem.title).join(', ')}.</p>}
       <div className="actions"><button type="button" className="button" disabled={busy||missing.length>0} onClick={download}>{busy?'Preparando PDF…':'Descargar PDF de enunciados ↓'}</button><a href="/problemas/">Agregar problemas →</a></div>
       {missing.length>0&&<p className="status-pending">Hay {missing.length} enunciados pendientes. Quitalos para descargar los disponibles.</p>}
@@ -50,7 +49,6 @@ export default function StatementDownload({problems,tournaments,includedChunkIds
     {error&&<p role="alert">{error}</p>}
     <style>{`
       .material-problems { scroll-margin-top:1.5rem; }
-      .statement-language { display:flex; align-items:center; gap:.5rem; width:fit-content; font-weight:700; }
       .material-heading { display:flex; align-items:start; justify-content:space-between; gap:1rem; }
       .material-heading h2 { margin:0; flex:1; min-width:0; }
       .material-heading h2 .chip { vertical-align:middle; margin-left:.5rem; }

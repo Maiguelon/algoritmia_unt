@@ -1,6 +1,7 @@
 import { PDFDocument, StandardFonts, rgb } from 'pdf-lib';
 import type { Tournament } from './types';
 import { renderPdf, savePdf } from './pdf-engine';
+import { preferSpanishStatement, prefersSpanishStatements } from './statement-language';
 import { buildStatementIndex, type StatementIndexEntry, type StatementProblem } from './statement-index';
 
 export type StatementBytesLoader = (url: string) => Promise<Uint8Array | ArrayBuffer>;
@@ -67,5 +68,6 @@ export async function createStatementsPdf(
 }
 
 export async function downloadStatements(problems: StatementProblem[], tournaments: Tournament[], letters?: Readonly<Record<string, string>>): Promise<void> {
-  savePdf(await createStatementsPdf(problems, tournaments, fetchStatement, letters), 'enunciados-algoritmia-unt.pdf');
+  const selected = prefersSpanishStatements() ? problems.map(preferSpanishStatement) : problems;
+  savePdf(await createStatementsPdf(selected, tournaments, fetchStatement, letters), 'enunciados-algoritmia-unt.pdf');
 }

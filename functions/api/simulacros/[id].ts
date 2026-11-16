@@ -37,8 +37,8 @@ async function material(env: Env, origin: string, ids: string[], kind: string) {
   }
 
   return json({
-    problems: selected.map(({ id, tournamentId, title, statementUrl, sourceUrl, judgeUrl, letter }, index) => ({
-      id, tournamentId, title, statementUrl, sourceUrl, judgeUrl, sourceLetter: letter,
+    problems: selected.map(({ id, tournamentId, title, statementUrl, spanishStatementUrl, sourceUrl, judgeUrl, letter }, index) => ({
+      id, tournamentId, title, statementUrl, spanishStatementUrl, sourceUrl, judgeUrl, sourceLetter: letter,
       letter: String.fromCharCode(65 + index),
     })),
     tournaments: tournaments.filter(tournament => selected.some(problem => problem.tournamentId === tournament.id)),
