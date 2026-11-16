@@ -19,6 +19,7 @@ export interface Problem {
   judgeUrl: string | null;
   sourceUrl: string;
   statementUrl: string | null;
+  spanishStatementUrl?: string;
   chunkIds: string[];
   coverage: Coverage;
   missingTools: string[];

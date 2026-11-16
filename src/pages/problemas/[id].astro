@@ -39,6 +39,7 @@ const estimate = (value: string) => value.replace(/\s*\(estimación editorial\)/
         <div class="actions">
           {p.coverage !== 'fuera de alcance' && <a class="button secondary" href="/seleccion/#apuntes">Ver selección y apuntes ↗</a>}
           {p.statementUrl && <a href={p.statementUrl} download>Descargar enunciado ↓</a>}
+          {p.spanishStatementUrl && <a href={p.spanishStatementUrl} download>Enunciado en español ↓</a>}
         </div>
       </section>
       {p.hints.length > 0 && <section class="panel"><h2>Pistas opcionales</h2><p class="muted">Abrí solo lo que necesites. Estas pistas no se agregan al apunte.</p>{p.hints.map((hint, i) => <details><summary>Pista {i + 1}</summary><p>{hint}</p></details>)}</section>}

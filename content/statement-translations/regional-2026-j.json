@@ -1,0 +1,53 @@
+{
+  "title": "Just Four Pieces",
+  "body": [
+    "Una abuela compró una tableta de chocolate para sus cuatro nietos. La tableta tiene R filas y C columnas de cuadraditos. Los cuatro tienen edades distintas y la abuela quiere que, cuanto mayor sea un nieto, más chocolate reciba. Para repartir toda la tableta, quiere dividirla en cuatro piezas rectangulares que tengan cantidades de cuadraditos distintas entre sí.",
+    "Para que los cortes queden rectos, apoya la tableta en una tabla y hace dos cortes con un cuchillo por los surcos entre los cuadraditos. El corte horizontal va entre las filas r y r + 1 (1 ≤ r < R). El corte vertical va entre las columnas c y c + 1 (1 ≤ c < C). Cada corte atraviesa la tableta de un borde al otro.",
+    "La figura muestra una tableta con R = 5 y C = 7. Al elegir r = 2 y c = 3, se obtienen piezas de 6, 8, 9 y 12 cuadraditos.",
+    "Encontrá dos enteros r y c que permitan obtener cuatro piezas con cantidades de cuadraditos distintas entre sí, o determiná que no existe tal par."
+  ],
+  "input": [
+    "La única línea contiene dos enteros R y C (2 ≤ R, C ≤ 2 × 10⁹), que indican la cantidad de filas y columnas de la tableta, respectivamente."
+  ],
+  "output": [
+    "Imprimí una sola línea con dos enteros r y c que indiquen dónde hacer los cortes para obtener cuatro piezas con cantidades de cuadraditos distintas entre sí. Si hay varias soluciones, podés imprimir cualquiera.",
+    "Si no es posible, imprimí una sola línea con `*`."
+  ],
+  "literals": [
+    "r + 1",
+    "1 ≤ r < R",
+    "c + 1",
+    "1 ≤ c < C",
+    "R = 5",
+    "C = 7",
+    "r = 2",
+    "c = 3",
+    "6, 8, 9",
+    "12",
+    "2 ≤ R, C ≤ 2 × 10⁹",
+    "*"
+  ],
+  "samples": [
+    [
+      "5 7",
+      "2 3"
+    ],
+    [
+      "5 7",
+      "2 4"
+    ],
+    [
+      "2 2",
+      "*"
+    ]
+  ],
+  "figure": {
+    "afterParagraph": 3,
+    "crop": [
+      310,
+      555,
+      470,
+      315
+    ]
+  }
+}

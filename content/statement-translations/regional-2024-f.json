@@ -1,0 +1,47 @@
+{
+  "title": "Finding Privacy",
+  "body": [
+    "Llegan K personas a un baño público que tiene N inodoros en fila, todos desocupados. Cada persona busca un inodoro que no tenga ningún inodoro ocupado inmediatamente a su lado.",
+    "Las personas eligen de a una. El inodoro elegido queda ocupado antes de que la siguiente persona pueda elegir.",
+    "Determiná si las K personas pueden elegir de manera que, cuando terminen, una persona más no pueda encontrar un inodoro desocupado que cumpla la misma condición."
+  ],
+  "input": [
+    "La única línea contiene dos enteros K y N (1 ≤ K ≤ N ≤ 10⁶), que indican el número de personas y el número de inodoros, respectivamente."
+  ],
+  "output": [
+    "Si existe una elección válida que deje a la persona adicional sin un inodoro con la privacidad requerida, imprimí una sola línea con una cadena de longitud N. Para cada posición i, el carácter debe ser `X` si se eligió el inodoro de esa posición y `-` en caso contrario. La elección debe respetar las reglas del enunciado. Si hay varias soluciones, podés imprimir cualquiera.",
+    "Si no existe ninguna elección válida, imprimí una sola línea con `*`."
+  ],
+  "literals": [
+    "1 ≤ K ≤ N ≤ 10⁶",
+    "X",
+    "-",
+    "*"
+  ],
+  "samples": [
+    [
+      "1 5",
+      "*"
+    ],
+    [
+      "2 5",
+      "-X-X-"
+    ],
+    [
+      "3 5",
+      "X-X-X"
+    ],
+    [
+      "4 5",
+      "*"
+    ],
+    [
+      "5 5",
+      "*"
+    ],
+    [
+      "2 5",
+      "-X--X"
+    ]
+  ]
+}

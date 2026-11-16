@@ -1,10 +1,15 @@
 import { DIFFICULTIES, type Problem, type Tournament } from './types';
 import catalog from '../../content/apuntes/cpp/catalogo.json';
+import { statementTranslations } from './statement-translations';
 
 const problemFiles = import.meta.glob<Problem>('../../content/problems/*.json', { eager: true, import: 'default' });
 const tournamentFiles = import.meta.glob<Tournament>('../../content/tournaments/*.json', { eager: true, import: 'default' });
 
-export const problems: Problem[] = Object.values(problemFiles).sort((a, b) => a.id.localeCompare(b.id));
+export const problems: Problem[] = Object.values(problemFiles).map(problem =>
+  Object.hasOwn(statementTranslations, problem.id)
+    ? { ...problem, spanishStatementUrl: `/statements/es/${problem.id}.pdf` }
+    : problem,
+).sort((a, b) => a.id.localeCompare(b.id));
 export const tournaments: Tournament[] = Object.values(tournamentFiles).sort((a, b) => b.year - a.year || a.id.localeCompare(b.id));
 
 const difficulties: readonly string[] = DIFFICULTIES;

@@ -1,0 +1,34 @@
+{
+  "title": "Append and Panic!",
+  "body": [
+    "Gabriel empieza un trabajo nuevo y recibe su primera tarea. Tiene que leer de un archivo una cadena de letras mayúsculas, ordenar sus letras alfabéticamente, eliminar las repetidas y escribir el resultado en el mismo archivo. Por ejemplo, si parte de `ICPC`, obtiene `CCIP` al ordenar y `CIP` al quitar las repeticiones.",
+    "Pero, en vez de reemplazar el contenido del archivo, Gabriel escribió el resultado al final. El archivo quedó con la cadena original seguida de su versión ordenada y sin letras repetidas.",
+    "A partir del contenido actual del archivo, determiná la longitud de la cadena original."
+  ],
+  "input": [
+    "La única línea contiene una cadena S de letras mayúsculas (2 ≤ |S| ≤ 2000). La cadena S se obtiene al concatenar la cadena original t con la versión ordenada y sin repeticiones de t."
+  ],
+  "output": [
+    "Imprimí una sola línea con un entero que indique la longitud de t."
+  ],
+  "literals": [
+    "2 ≤ |S| ≤ 2000",
+    "ICPC",
+    "CCIP",
+    "CIP"
+  ],
+  "samples": [
+    [
+      "ICPCCIP",
+      "4"
+    ],
+    [
+      "ABEDCCCABCDE",
+      "7"
+    ],
+    [
+      "ZZ",
+      "1"
+    ]
+  ]
+}
