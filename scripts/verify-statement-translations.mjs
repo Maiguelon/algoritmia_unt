@@ -7,7 +7,8 @@ const root = new URL('../', import.meta.url);
 const pathFromRoot = path => fileURLToPath(new URL(path, root));
 const readJson = path => JSON.parse(readFileSync(pathFromRoot(path), 'utf8'));
 const translationDir = 'content/statement-translations/';
-const canonical = value => value.normalize('NFKC').replace(/[\s`]/gu, '');
+const canonical = value => value.normalize('NFC').replace(/[\s`]/gu, '');
+const sourceText = value => canonical(value.normalize('NFKC'));
 const readPdf = file => execFileSync('pdftotext', ['-enc', 'UTF-8', '-layout', file, '-'], { encoding: 'utf8' });
 
 function samplePairs(text, language, id) {
@@ -15,7 +16,8 @@ function samplePairs(text, language, id) {
     ? ['Ejemplo de entrada', 'Ejemplo de salida']
     : ['Sample input', 'Sample output'];
   const heading = new RegExp(`^( *)(?:${input}) (\\d+) +(${output}) \\2\\s*$`);
-  const lines = text.replaceAll('\r', '').split('\n');
+  const lines = text.replaceAll('\r', '').split(/[\n\f]/);
+  const notes = language === 'es' ? 'Explicación del ejemplo' : 'Explanation of sample';
   const pairs = [];
   for (let index = 0; index < lines.length; index++) {
     const line = lines[index];
@@ -30,7 +32,8 @@ function samplePairs(text, language, id) {
     const outputLines = [];
     let sampleIndex = lines.indexOf(row, index + 1);
     while (sampleIndex < lines.length && lines[sampleIndex].trim()
-      && !lines[sampleIndex].trimStart().startsWith(input)) {
+      && !lines[sampleIndex].trimStart().startsWith(input)
+      && !lines[sampleIndex].trimStart().startsWith(notes)) {
       const data = lines[sampleIndex];
       inputLines.push(data.slice(match[1].length, split).trimEnd());
       outputLines.push(data.slice(split).trimEnd());
@@ -54,10 +57,22 @@ for (const file of readdirSync(pathFromRoot(translationDir)).filter(file => file
     assert.ok(translation[section]?.length && translation[section].every(line => typeof line === 'string' && line.trim()),
       `${id}: sección vacía o inválida (${section})`);
   }
-  const translatedProse = canonical([...translation.body, ...translation.input, ...translation.output].join('\n'));
-  const originalProse = canonical(original.split('Sample input')[0]);
+  const originalNotes = [...original.matchAll(/Explanation of sample (\d+)\s*:/g)].map(match => Number(match[1]));
+  const translatedNotes = Object.entries(translation.sampleNotes ?? {});
+  assert.deepEqual(translatedNotes.map(([index]) => Number(index)), originalNotes, `${id}: faltan explicaciones de ejemplos o sobran`);
+  for (const [index, paragraphs] of translatedNotes) {
+    assert.ok(paragraphs.length && paragraphs.every(paragraph => paragraph.trim()), `${id}: explicación vacía del ejemplo ${index}`);
+  }
+  const translatedProse = canonical([
+    ...translation.body, ...translation.input, ...translation.output, ...translatedNotes.flatMap(([, paragraphs]) => paragraphs),
+  ].join('\n'));
+  const originalProse = sourceText(original);
   for (const literal of translation.literals) {
-    assert.ok(originalProse.includes(canonical(literal)), `${id}: literal no localizado en el original: ${literal}`);
+    const sourceLiteral = sourceText(literal);
+    // Poppler escribe los índices tipográficos sin el separador «_».
+    const flattened = sourceLiteral.replace(/(?<=[A-Za-z])_(?=[0-9A-Za-z])/g, '');
+    assert.ok(originalProse.includes(sourceLiteral) || originalProse.includes(flattened),
+      `${id}: literal no localizado en el original: ${literal}`);
     assert.ok(translatedProse.includes(canonical(literal)), `${id}: literal perdido en español: ${literal}`);
   }
   const originals = samplePairs(original, 'en', id);
@@ -78,6 +93,8 @@ for (const file of readdirSync(pathFromRoot(translationDir)).filter(file => file
     const pdf = readPdf(rendered);
     assert.ok(/^\s*Entrada\s*$/m.test(pdf) && /^\s*Salida\s*$/m.test(pdf), `${id}: faltan secciones en el PDF`);
     assert.deepEqual(samplePairs(pdf, 'es', id), originals, `${id}: los ejemplos cambiaron en el PDF`);
+    const pdfNotes = [...pdf.matchAll(/^\s*Explicación del ejemplo (\d+)\s*$/gm)].map(match => Number(match[1]));
+    assert.deepEqual(pdfNotes, originalNotes, `${id}: faltan explicaciones de ejemplos en el PDF`);
     for (const literal of translation.literals) {
       assert.ok(canonical(pdf).includes(canonical(literal)), `${id}: literal ilegible o perdido en el PDF: ${literal}`);
     }

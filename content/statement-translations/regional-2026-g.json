@@ -1,0 +1,69 @@
+{
+  "title": "Gratitude Loop",
+  "body": [
+    "El torneo terminó, pero quienes organizaron y quienes compitieron todavía se están agradeciendo.",
+    "> «¡Gracias!»\n>\n> «¡No, gracias a vos!»\n>\n> «¡No, no, gracias a vos!»\n>\n> «¡No, no, no, gracias a vos!»",
+    "El intercambio podría durar para siempre. Para ahorrarles tiempo al escribir, crearon una app de mensajería con un solo botón, «¡Gracias!» (rotulado `Thanks!` en la captura). La imagen muestra que Lola fue la última persona que le mandó un mensaje a Paulo.",
+    "Usan la app N personas, numeradas de 1 a N. Al principio, nadie recibió mensajes. Cada vez que la persona s aprieta el botón, manda exactamente un mensaje a un destinatario r. La app elige r así:",
+    "- Si s ya recibió algún mensaje, r es la última persona que le mandó un mensaje a s.\n- Si s todavía no recibió mensajes, el destinatario es s + 1. Si s = N, el destinatario es 1.",
+    "El mensaje se entrega en el momento, antes de la siguiente pulsación. Desde entonces, s es la última persona que le mandó un mensaje a r.",
+    "Recibir un mensaje no dispara una respuesta automática. Enviar uno tampoco borra ni modifica los que recibió el remitente. Una persona puede apretar el botón varias veces aunque no le lleguen mensajes nuevos entre esas pulsaciones.",
+    "Dada la secuencia de pulsaciones, determiná cuántos mensajes recibe cada persona. Contá cada mensaje por separado, incluso los repetidos de una misma persona."
+  ],
+  "input": [
+    "La primera línea contiene dos enteros N (2 ≤ N ≤ 1000) y M (1 ≤ M ≤ 1000), la cantidad de personas y la cantidad de pulsaciones, respectivamente. Cada persona se identifica con un entero distinto de 1 a N.",
+    "La segunda línea contiene M enteros A_1, A_2, …, A_M (1 ≤ A_i ≤ N). A_i identifica a la persona que hace la pulsación i. Las pulsaciones ocurren en el orden dado."
+  ],
+  "output": [
+    "Imprimí una sola línea con N enteros C_1, C_2, …, C_N. C_i es la cantidad de mensajes que recibió la persona i durante las M pulsaciones."
+  ],
+  "literals": [
+    "Thanks!",
+    "s + 1",
+    "s = N",
+    "2 ≤ N ≤ 1000",
+    "1 ≤ M ≤ 1000",
+    "1 ≤ A_i ≤ N",
+    "A_1, A_2, …, A_M",
+    "C_1, C_2, …, C_N",
+    "N = 4",
+    "M = 4",
+    "N = 2",
+    "M = 3",
+    "N = 3"
+  ],
+  "samples": [
+    [
+      "4 4\n1 2 3 2",
+      "2 1 0 1"
+    ],
+    [
+      "2 3\n2 2 2",
+      "3 0"
+    ],
+    [
+      "3 4\n1 2 3 1",
+      "2 1 1"
+    ]
+  ],
+  "sampleNotes": {
+    "1": [
+      "Hay N = 4 personas y M = 4 pulsaciones. Primero, 1 le escribe a 2 porque 1 todavía no recibió mensajes. Después, 2 le escribe a 1, que fue quien le mandó el último mensaje. Luego, 3 le escribe a 4 porque 3 todavía no recibió mensajes. Por último, 2 vuelve a escribirle a 1, que sigue siendo quien le mandó el último mensaje."
+    ],
+    "2": [
+      "Hay N = 2 personas y M = 3 pulsaciones. La persona 2 nunca recibe un mensaje. Cada vez que aprieta el botón, le escribe a la persona 1."
+    ],
+    "3": [
+      "Hay N = 3 personas y M = 4 pulsaciones. Los mensajes van de 1 a 2, de 2 a 1, de 3 a 1 y de 1 a 3, en ese orden."
+    ]
+  },
+  "figure": {
+    "afterParagraph": 3,
+    "crop": [
+      443,
+      502,
+      303,
+      224
+    ]
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "title": "Deciphering WordWhiz",
+  "body": [
+    "WordWhiz es un juego en el que hay que adivinar una palabra secreta en una cantidad limitada de intentos. El juego usa un diccionario de N palabras. Cada palabra tiene cinco letras minúsculas distintas.",
+    "Al empezar, el jugador ve una grilla vacía con varias filas. En cada fila puede escribir una palabra del diccionario como intento. El juego termina cuando acierta la palabra secreta o se queda sin filas.",
+    "Después de cada intento, el juego colorea las casillas de esa fila. Cada color se representa con un símbolo:",
+    "- Gris (`X`). La letra de la casilla no aparece en la palabra secreta.\n- Amarillo (`!`). La letra aparece en la palabra secreta, en otra posición.\n- Verde (`*`). La letra aparece en la palabra secreta en esa misma posición.",
+    "Supongamos que la palabra secreta es `hotel` y el jugador prueba `blast`. La primera, la tercera y la cuarta casilla quedan grises porque `b`, `a` y `s` no aparecen en `hotel`. La segunda y la quinta quedan amarillas porque `l` y `t` sí aparecen, pero en la quinta y la tercera posición, respectivamente. La respuesta del juego es `X!XX!`.",
+    "Si después prueba `heart`, la tercera y la cuarta casilla quedan grises porque `a` y `r` no aparecen en `hotel`. La segunda y la quinta quedan amarillas: `e` va en la cuarta posición y `t`, en la tercera. La primera queda verde porque ambas palabras empiezan con `h`. La respuesta es `*!XX!`.",
+    "Si finalmente prueba `hotel`, todas las casillas quedan verdes. La respuesta es `*****`. La figura muestra los tres intentos.",
+    "Tu empresa incorporó WordWhiz a su sitio y ahora quiere mostrar partidas anteriores. Guardó la respuesta del juego para cada intento, pero no las palabras que se jugaron. Como tal vez no pueda recuperarlas con certeza, primero quiere analizar las partidas registradas.",
+    "Dados el diccionario, la palabra secreta (que pertenece al diccionario) y las respuestas del juego, determiná cuántas palabras del diccionario podrían haberse jugado en cada intento."
+  ],
+  "input": [
+    "La primera línea contiene un entero N (1 ≤ N ≤ 1000), la cantidad de palabras del diccionario.",
+    "Cada una de las N líneas siguientes contiene una palabra. Las palabras son todas distintas y cada una está formada por cinco letras minúsculas distintas. La primera palabra es la palabra secreta de la partida.",
+    "La línea siguiente contiene un entero G (1 ≤ G ≤ 10), la cantidad de intentos de la partida.",
+    "Cada una de las G líneas siguientes contiene una cadena de cinco caracteres que representa la respuesta del juego a un intento. La cadena solo contiene `X`, `!` y `*`, que representan gris, amarillo y verde, respectivamente.",
+    "Se garantiza que la entrada describe una partida válida."
+  ],
+  "output": [
+    "Imprimí G líneas. En la línea i, imprimí un entero que indique cuántas palabras del diccionario podrían haberse jugado en el intento i."
+  ],
+  "samples": [
+    [
+      "6\nhotel\nweary\nheart\nblast\npilot\nvague\n3\nX!XX!\n*!XX!\n*****",
+      "1\n1\n1"
+    ],
+    [
+      "3\nscale\ntable\nmaple\n5\nX!X**\nX!X**\nX!X**\nX!X**\nX!X**",
+      "2\n2\n2\n2\n2"
+    ],
+    [
+      "4\nscale\ntable\nmaple\nsmile\n4\nX!X**\n*XX**\nX!X**\n*****",
+      "2\n1\n2\n1"
+    ],
+    [
+      "5\nlatin\nmrica\nthink\nsolve\ndebug\n1\n*****",
+      "1"
+    ]
+  ],
+  "sampleNotes": {
+    "1": [
+      "La única posibilidad es que el jugador haya hecho los intentos en el orden que se describe en el enunciado."
+    ],
+    "2": [
+      "Tanto `table` como `maple` producen `X!X**` cuando la palabra secreta es `scale`. Por eso, cualquiera de las dos palabras podría haberse jugado en cada intento."
+    ]
+  },
+  "literals": [
+    "1 ≤ N ≤ 1000",
+    "1 ≤ G ≤ 10",
+    "hotel",
+    "blast",
+    "heart",
+    "X!XX!",
+    "*!XX!",
+    "*****",
+    "X!X**"
+  ],
+  "figure": {
+    "afterParagraph": 7,
+    "crop": [
+      451,
+      1080,
+      287,
+      243
+    ]
+  }
+}

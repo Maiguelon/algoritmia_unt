@@ -1,0 +1,45 @@
+{
+  "title": "Judgmental Crowd",
+  "body": [
+    "Después de una función de stand-up, una persona quiere medir cómo le fue a partir de los sonidos del público. El micrófono grabó las risas, los aplausos, los abucheos y todas las demás reacciones. La grabación se convirtió en una sola cadena S.",
+    "Para evaluar la función usa una calculadora llamada Instant Comedian Performance Calculator (ICPC). La herramienta analiza S y asigna un puntaje emocional a la actuación.",
+    "El puntaje se calcula a partir de las apariciones de tres subcadenas:\n\n- Cada aparición de `ha` suma 1.\n- Cada aparición de `boooo` resta 1.\n- Cada aparición de `bravo` suma 3.",
+    "Las demás subcadenas, como `ahhh` y `woohoo`, no cambian el puntaje. Calculá el puntaje emocional que devuelve el ICPC."
+  ],
+  "input": [
+    "La única línea contiene una cadena S (1 ≤ |S| ≤ 1000) de letras minúsculas, que representa los sonidos del público que captó el micrófono."
+  ],
+  "output": [
+    "Imprimí una sola línea con un entero que indique el puntaje emocional de la actuación."
+  ],
+  "literals": [
+    "ha",
+    "boooo",
+    "bravo",
+    "ahhh",
+    "woohoo",
+    "1 ≤ |S| ≤ 1000"
+  ],
+  "samples": [
+    [
+      "boooohaboooo",
+      "-1"
+    ],
+    [
+      "brhavo",
+      "1"
+    ],
+    [
+      "booo",
+      "0"
+    ],
+    [
+      "bravoooooobraboooooo",
+      "2"
+    ],
+    [
+      "buuuuuuthisshowisawfulweshallgonow",
+      "1"
+    ]
+  ]
+}

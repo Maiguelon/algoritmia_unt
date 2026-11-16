@@ -1,0 +1,43 @@
+{
+  "title": "Harder Horizons",
+  "body": [
+    "Lola tiene una lista larga de tareas pendientes. Cada tarea tiene un número que indica su dificultad: cuanto mayor es el número, más difícil es la tarea. Debe hacerlas en el orden en que aparecen.",
+    "Como casi nunca se quitan tareas, la lista sigue creciendo. Lola decidió dividirla en grupos consecutivos, uno por cada día de trabajo.",
+    "Para sentir que avanza, a partir del segundo día quiere que la tarea más difícil de cada día sea estrictamente más difícil que la más difícil del día anterior. Además, prefiere repartir el trabajo en la mayor cantidad de días que pueda.",
+    "¿En cuántos días como máximo puede repartir las tareas con estas reglas?"
+  ],
+  "input": [
+    "La primera línea contiene un entero N (1 ≤ N ≤ 10⁵), la cantidad de tareas.",
+    "La segunda línea contiene N enteros D_1, D_2, …, D_N (1 ≤ D_i ≤ 10⁵ para i = 1, 2, …, N), que indican las dificultades de las tareas en el orden de la lista."
+  ],
+  "output": [
+    "Imprimí una sola línea con la cantidad máxima de días en que Lola puede repartir las tareas, de modo que la tarea más difícil de cada día sea estrictamente más difícil que la del día anterior."
+  ],
+  "literals": [
+    "1 ≤ N ≤ 10⁵",
+    "1 ≤ D_i ≤ 10⁵",
+    "D_1, D_2, …, D_N",
+    "1|2 1|3|4",
+    "1 < 2 < 3 < 4",
+    "2 1|4 2|3 5",
+    "2 < 4 < 5"
+  ],
+  "samples": [
+    [
+      "5\n1 2 1 3 4",
+      "4"
+    ],
+    [
+      "6\n2 1 4 2 3 5",
+      "3"
+    ]
+  ],
+  "sampleNotes": {
+    "1": [
+      "Una forma óptima de repartir las tareas en 4 días es `1|2 1|3|4`. Las dificultades máximas por día aumentan estrictamente: 1 < 2 < 3 < 4."
+    ],
+    "2": [
+      "Una forma óptima de repartir las tareas en 3 días es `2 1|4 2|3 5`. Las dificultades máximas cumplen 2 < 4 < 5."
+    ]
+  }
+}

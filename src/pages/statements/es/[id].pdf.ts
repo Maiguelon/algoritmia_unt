@@ -26,12 +26,12 @@ export const GET: APIRoute = async ({ params }) => {
     { text: 'Traducción al español · Club de Algoritmia UNT', style: 'subtle', margin: [0, 0, 0, 14] },
     ...body.flatMap((paragraph, index) => [
       ...markdownToPdf(paragraph),
-      ...(figure?.afterParagraph === index + 1 ? [{ image, width: 210, alignment: 'center', margin: [0, 4, 0, 9] }] : []),
+      ...(figure?.afterParagraph === index + 1 ? [{ image, fit: [210, 140], alignment: 'center', margin: [0, 4, 0, 9] }] : []),
     ]),
-    { text: 'Entrada', style: 'sectionTitle' },
-    ...input.flatMap(markdownToPdf),
-    { text: 'Salida', style: 'sectionTitle' },
-    ...output.flatMap(markdownToPdf),
+    ...([['Entrada', input], ['Salida', output]] as const).map(([label, paragraphs]) => ({
+      unbreakable: true,
+      stack: [{ text: label, style: 'sectionTitle' }, ...paragraphs.flatMap(markdownToPdf)],
+    })),
     ...samples.flatMap(([sampleInput, sampleOutput], index) => [
       {
         margin: [0, 8, 0, 0],
@@ -45,7 +45,10 @@ export const GET: APIRoute = async ({ params }) => {
         },
         layout: 'lightHorizontalLines',
       },
-      ...(sampleNotes?.[index + 1] ?? []).flatMap(markdownToPdf),
+      ...(sampleNotes?.[index + 1] ? [
+        { text: `Explicación del ejemplo ${index + 1}`, style: 'subheading', margin: [0, 8, 0, 4], headlineLevel: 2 },
+        ...sampleNotes[index + 1].flatMap(markdownToPdf),
+      ] : []),
     ]),
     { text: 'Enunciado original', link: problem.sourceUrl, decoration: 'underline', style: 'subtle', margin: [0, 12, 0, 0] },
   ];
